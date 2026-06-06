@@ -10,7 +10,7 @@ const DATA_PATOLOGIE_3 = [
       etiology: "Virové infekce (chřipka, hepatitidy A-C, infekční mononukleóza, virová myokarditida), autoimunitní onemocnění (Hashimotova tyroiditida), chronické bakteriální infekce (syfilis - plasmatické buňky).",
       pathogenesis: "Virová replikace v buňkách aktivuje buněčnou imunitu. CD8+ cytotoxické lymfocyty rozpoznávají virové antigeny na MHC-I molekulách a vyvolávají apoptózu infikovaných buněk. Plazmatické buňky v infiltrátu lokálně produkují specifické protilátky (imunoglobuliny).",
       macroscopy: "Ložisko zánětu nevykazuje tvorbu hnisu. Orgány jsou spíše překrvené, edematózní, někdy ztuhlé (u chronického stadia s fibrotizací). Příkladem je 'šedá hepatizace' u plicních virových pneumonií nebo zvětšené lymfatické uzliny.",
-      microscopy: "Absence neutrofilů. V interstiticiu (např. v plicních septech u intersticiální pneumonie nebo v intersticiu myokardu) nacházíme husté kulatobuněčné infiltráty: lymfocyty (malé s tmavým kulatým jádrem) a plazmatické buňky (oválné s excentrickým jádrem a projasněním v oblasti Golgiho aparátu).",
+      microscopy: "Absence neutrofilů. V intersticiu (např. v plicních septech u intersticiální pneumonie nebo v intersticiu myokardu) nacházíme husté kulatobuněčné infiltráty: lymfocyty (malé s tmavým kulatým jádrem) a plazmatické buňky (oválné s excentrickým jádrem a projasněním v oblasti Golgiho aparátu).",
       clinical: "Klinický průběh bývá plíživý (u chronických forem) nebo akutní (u virových infekcí). Virové záněty mozku (encefalitidy) nebo srdce (myokarditidy) mohou mít těžké funkční následky i přes absenci hnisání."
     },
     quiz: [
@@ -34,7 +34,7 @@ const DATA_PATOLOGIE_3 = [
           "Granulomatózního zánětu"
         ],
         correct: 1,
-        explanation: "Virové infekce srdce (např. způsobené coxsackieviry) vyvolávají v interstiticiu myokardu nehnisavou lymfocytární reakci. Lymfocyty infiltrují prostor mezi kardiomyocyty a ničí infikované buňky."
+        explanation: "Virové infekce srdce (např. způsobené coxsackieviry) vyvolávají v intersticiu myokardu nehnisavou lymfocytární reakci. Lymfocyty infiltrují prostor mezi kardiomyocyty a ničí infikované buňky."
       }
     ]
   },
@@ -502,7 +502,7 @@ const DATA_PATOLOGIE_3 = [
     content: {
       definition: "Poruchy výživy zahrnují stavy způsobené buď nedostatkem živin a energie (malnutrice, podvýživa), nebo naopak jejich nadbytkem (obezita, metabolický syndrom).",
       etiology: "Chudoba, hladovění, mentální anorexie, nádorová kachexie, malabsorpční syndromy (celiakie, Crohnova choroba), nezdravý životní styl a genetická predispozice u obezity.",
-      pathogenesis: "1. Marasmus (prosté hladovění): nedostatek energie i bílkovin. Tělo odbourává tukové zásoby a kosterní svalstvo, hladina albuminu v krvi je však relativně zachována (nedochází k edémům). 2. Kwashiorkor (proteinová podvýživa): strava obsahuje kalorie (sacharidy), ale chybí v ní bílkoviny. Dochází k poklesu syntézy albuminu v játrech, což vede k poklesu onkotického tlaku krve a úniku tekutiny do intersticila (vznik edémů a ascitu). 3. Obezita: dlouhodobý přebytek energetického příjmu nad výdejem. Adipocyty hypertrofují a secernují prozánětlivé adipokiny, což vede k inzulínové rezistenci.",
+      pathogenesis: "1. Marasmus (prosté hladovění): nedostatek energie i bílkovin. Tělo odbourává tukové zásoby a kosterní svalstvo, hladina albuminu v krvi je však relativně zachována (nedochází k edémům). 2. Kwashiorkor (proteinová podvýživa): strava obsahuje kalorie (sacharidy), ale chybí v ní bílkoviny. Dochází k poklesu syntézy albuminu v játrech, což vede k poklesu onkotického tlaku krve a úniku tekutiny do intersticia (vznik edémů a ascitu). 3. Obezita: dlouhodobý přebytek energetického příjmu nad výdejem. Adipocyty hypertrofují a secernují prozánětlivé adipokiny, což vede k inzulínové rezistenci.",
       macroscopy: "Marasmus: extrémní vyhublost (kůže a kosti), vymizení podkožního tuku, atrofie svalů. Kwashiorkor: nafouklé břicho (velký ascites a hepatomegalie ze steatózy), generalizované otoky (anasarka), změny barvy kůže a vlasů. Obezita: nadměrné hromadění tuku v podkoží a kolem vnitřních orgánů (viscerální obezita).",
       microscopy: "Kwashiorkor: masivní steatóza jater (hepatocyty vyplněné tukovými vakuolami, protože chybí apoproteiny pro transport lipidů z jater v podobě VLDL). Atrofie klků tenkého střeva. Obezita: hypertrofie adipocytů, chronický mírný zánět v tukové tkáni (přítomnost věnců makrofágů kolem odumírajících adipocytů).",
       clinical: "Kwashiorkor se typicky vyvíjí u dětí v rozvojových zemích po odstavení od mateřského mléka (nahrazeno škrobovou stravou). Obezita je klíčovým rizikovým faktorem pro diabetes mellitus 2. typu, aterosklerózu, hypertenzi a některé karcinomy."
