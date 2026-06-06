@@ -323,7 +323,7 @@ const DATA_SPECIAL_1 = [
       etiology: "KMP: 1. Dilatační (nejčastější - alkohol, toxiny, genetika - 30 %, postmyokarditická), 2. Hypertrofická (genetická - mutace proteinů sarkomery, např. beta-myosinu těžkého řetězce), 3. Restrikční (amyloidóza, sarkoidóza, hemochromatóza). Myokarditidy: nejčastěji virové (Coxsackie B, adenovirus, chřipka), autoimunitní (lupus, obřízobuněčná), polékové.",
       pathogenesis: "Dilatační KMP: ochabnutí a dilatace všech srdečních dutin vede k těžké systolické dysfunkci (srdce špatně pumpuje). Hypertrofická KMP: masivní asymetrická hypertrofie (zejména komorového septa) vede k diastolické dysfunkci (srdce se špatně plní) a hrozí obstrukce výtokového traktu levé komory (HOCM). Restrikční KMP: ztuhnutí stěny brání plnění komor v diastole.",
       macroscopy: "Dilatační KMP: obrovské, ochablé srdce (hmotnost i > 600g), dilatace všech oddílů, ztenčení stěn, časté nástěnné tromby v hrotu. Hypertrofická KMP: masivní ztluštění stěny komory (přes 20 mm) a septa, dutina levé komory je zmenšená (tvar banánu). Myokarditida: srdce je ochablé, bledé, s drobnými petechiemi a skvrnitým vzhledem.",
-      microscopy: "Dilatační KMP: hypertrofie kardiomyocytů střídaná s jejich atrofií, difuzní intersticiální fibróza. Hypertrofická KMP: 'myocyte disarray' (chaotické, dezorganizované uspořádání kardiomyocytů a jejich myofibril, které normálně běží paralelně). Myokarditida: edém intersticila a hustý buněčný infiltrát (lymfocytární u virových, obřízobuněčný, nebo eosinofilní u alergických reakcí), ložiska nekrózy kardiomyocytů.",
+      microscopy: "Dilatační KMP: hypertrofie kardiomyocytů střídaná s jejich atrofií, difuzní intersticiální fibróza. Hypertrofická KMP: 'myocyte disarray' (chaotické, dezorganizované uspořádání kardiomyocytů a jejich myofibril, které normálně běží paralelně). Myokarditida: edém intersticia a hustý buněčný infiltrát (lymfocytární u virových, obřízobuněčný, nebo eosinofilní u alergických reakcí), ložiska nekrózy kardiomyocytů.",
       clinical: "Dilatační KMP se projevuje progresivním městnavým srdečním selháním. Hypertrofická KMP je nejčastější příčinou náhlé smrti mladých sportovců (arytmie při námaze). Myokarditida může probíhat nenápadně (únava, nespecifická bolest na hrudi), ale i jako akutní srdeční selhání napodobující infarkt."
     },
     quiz: [
@@ -449,7 +449,7 @@ const DATA_SPECIAL_1 = [
         options: [
           "Mechanické roztržení alveolů při kašli",
           "Nerovnováha mezi proteázami (elastázami z makrofágů) a antiproteázami (alfa-1-antitrypsinem), což vede k destrukci elastické kostry alveolárních sept",
-          "Tvorba jizev v plicním interstiticiu",
+          "Tvorba jizev v plicním intersticiu",
           "Aktivní stah hladké svaloviny v alveolech"
         ],
         correct: 1,
@@ -475,7 +475,7 @@ const DATA_SPECIAL_1 = [
     category: "Speciální",
     keywords: ["edém", "plicní", "hydrostatický", "permeabilitní", "siderofágy", "růžová"],
     content: {
-      definition: "Edém plic (plicní otok) je nadměrné hromadění tekutiny v plicním parenchymu (nejprve v interstiticiu, následně v alveolech), které vážně narušuje výměnu plynů.",
+      definition: "Edém plic (plicní otok) je nadměrné hromadění tekutiny v plicním parenchymu (nejprve v intersticiu, následně v alveolech), které vážně narušuje výměnu plynů.",
       etiology: "1. Kardiogenní (hemodynamický/hydrostatický): akutní levostranné srdeční selhání (infarkt myokardu, hypertenzní krize, mitrální stenóza). 2. Nekardiogenní (permeabilitní/toxický): přímé poškození alveolo-kapilární membrány inhalací toxických plynů, infekcemi (těžké pneumonie), sepsí, aspirací žaludečního obsahu (ARDS).",
       pathogenesis: "Kardiogenní edém: selhání levé komory zvýší tlak v plicních žilách a kapilárách. Hydrostatický tlak překročí onkotický tlak plazmy, tekutina filtruje do alveolů. Nekardiogenní edém: zánětlivé poškození endotelu kapilár a epitelu alveolů vede k masivnímu úniku proteinů a tekutiny do alveolů bez zvýšení hydrostatického tlaku.",
       macroscopy: "Plíce jsou masivně zvětšené, těžké (mohou vážit i přes 1000 g), těstovité konzistence, tmavě červené. Při tlaku na plicní řez vytéká velké množství napěněné, růžové nebo zakalené tekutiny (pěna vzniká smícháním vzduchu, tekutiny a surfaktantu).",

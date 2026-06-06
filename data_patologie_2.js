@@ -503,7 +503,7 @@ const DATA_PATOLOGIE_2 = [
       etiology: "Biologické noxy (bakterie, viry, plísně), fyzikální vlivy (trauma, teplo, chlad, záření), chemické látky (kyseliny, jedy) a imunopatologické reakce (autoimunita, alergie).",
       pathogenesis: "Základní fáze akutního zánětu: 1. Alterace (poškození buněk a tkáně). 2. Exsudace (vaskulární reakce: vazodilatace a zvýšená propustnost cév vedoucí k úniku tekutiny - exsudátu - a proteinů do intersticilního prostoru). 3. Infiltrace (extravazace/migrace zánětlivých buněk - neutrofilů u akutního zánětu, lymfocytů/makrofágů u chronického). 4. Proliferace (tvorba granulační tkáně za účelem hojení).",
       macroscopy: "Pět klasických (Celsus-Galenových) příznaků zánětu: 1. Rubor (zarudnutí - aktivní hyperémie), 2. Calor (horko - zvýšený průtok krve a metabolismus ložiska), 3. Tumor (otok - nahromadění exsudátu), 4. Dolor (bolest - dráždění nervových zakončení mediátory zánětu a tlakem exsudátu), 5. Functio laesa (porucha funkce).",
-      microscopy: "Mikroskopicky nacházíme dilatované a překrvené cévy, edém intersticila (exsudát), marginaci a diapedézu bílých krvinek cévní stěnou do okolí. U chronického zánětu dominují lymfocyty, plazmatické buňky, makrofágy a novotvořené vazivo.",
+      microscopy: "Mikroskopicky nacházíme dilatované a překrvené cévy, edém intersticia (exsudát), marginaci a diapedézu bílých krvinek cévní stěnou do okolí. U chronického zánětu dominují lymfocyty, plazmatické buňky, makrofágy a novotvořené vazivo.",
       clinical: "Akutní zánět nastupuje rychle a trvá dny až týdny. Pokud se noxu nepodaří eliminovat, zánět přechází do chronického stadia (trvá měsíce až roky), které je charakterizováno současným průběhem poškození, zánětu a hojení (reparace) s jizvením."
     },
     quiz: [
@@ -565,7 +565,7 @@ const DATA_PATOLOGIE_2 = [
           "Pouhou dilatací cév bez poškození buněk"
         ],
         correct: 1,
-        explanation: "Alterace je první fází zánětu a představuje přímé poškození buněk a intersticila působící noxou. Morfologicky se projevuje regresivními změnami, jako je hydropická či vakuolární dystrofie, nebo nekróza buněk."
+        explanation: "Alterace je první fází zánětu a představuje přímé poškození buněk a intersticia působící noxou. Morfologicky se projevuje regresivními změnami, jako je hydropická či vakuolární dystrofie, nebo nekróza buněk."
       }
     ]
   },
@@ -729,7 +729,7 @@ const DATA_PATOLOGIE_2 = [
     content: {
       definition: "Hnisavý zánět je forma exsudativního zánětu charakterizovaná tvorbou hnisu (pus) - zakalené, husté tekutiny složené z odumřelých neutrofilů, zkapalněné nekrotické tkáně a bakterií.",
       etiology: "Infekce pyogenními (hnisavými) bakteriemi: Staphylococcus aureus, Streptococcus pyogenes, Neisseria meningitidis/gonorrhoeae, Escherichia coli.",
-      pathogenesis: "Bakterie produkují chemoatraktanty, které lákají obrovské množství neutrofilů. Neutrofily uvolňují své lyzosomální enzymy (myeloperoxidázu, elastázu) do okolí, což vede k enzymatickému zkapalnění (kolikvaci) nekrotické tkáně a bakterií za vzniku hnisu. Hnisavý zánět se dělí na: 1. Ohraničený (absces - nekróza tkáně s tvorbou dutiny vyplněné hnisem), 2. Neohraničený/difuzní (flegmóna - hnisavý zánět šířící se intersticila, typicky v podkoží), 3. Empyém (hromadění hnisu v anatomických dutinách - např. empyém žlučníku, pleury).",
+      pathogenesis: "Bakterie produkují chemoatraktanty, které lákají obrovské množství neutrofilů. Neutrofily uvolňují své lyzosomální enzymy (myeloperoxidázu, elastázu) do okolí, což vede k enzymatickému zkapalnění (kolikvaci) nekrotické tkáně a bakterií za vzniku hnisu. Hnisavý zánět se dělí na: 1. Ohraničený (absces - nekróza tkáně s tvorbou dutiny vyplněné hnisem), 2. Neohraničený/difuzní (flegmóna - hnisavý zánět šířící se intersticia, typicky v podkoží), 3. Empyém (hromadění hnisu v anatomických dutinách - např. empyém žlučníku, pleury).",
       macroscopy: "Hnis: hustá, viskózní tekutina žlutavé, šedavé nebo zelenavé barvy (způsobené zeleným enzymem myeloperoxidázou v neutrofilech). Absces: dutina s hnisem obklopená pyogenní membránou (cévnaté vazivo). Flegmóna: tkáň je prosáklá žlutozeleným hnisem, neohraničená, měkká, nekróza splývá.",
       microscopy: "Masivní infiltrace neutrofilními granulocyty (segmentovaná jádra), z nichž mnohé vykazují známky rozpadu (karyorexe). Struktura původní tkáně je v místě ložiska zcela zničena kolikvaci. U abscesu je patrná okolní pyogenní membrána (granulační tkáň).",
       clinical: "Hnisavé infekce mají tendenci k celkovým projevům (horečka, leukocytóza v krvi). Abscesy se musí léčit chirurgickým vypuštěním (zásada 'Ubi pus, ibi evacua'), protože antibiotika špatně pronikají do nekrózy. Flegmóna (např. erysipel) se šíří rychle podél fascií a hrozí rozvojem sepse."
@@ -739,7 +739,7 @@ const DATA_PATOLOGIE_2 = [
         question: "Jaký je zásadní rozdíl mezi abscesem a flegmónou?",
         options: [
           "Absces je způsoben viry, flegmóna bakteriemi",
-          "Absces je ohraničený hnisavý zánět s destrukcí tkáně a tvorbou dutiny; flegmóna je difuzní, neohraničený hnisavý zánět šířící se volně intersticila (např. podkožím)",
+          "Absces je ohraničený hnisavý zánět s destrukcí tkáně a tvorbou dutiny; flegmóna je difuzní, neohraničený hnisavý zánět šířící se volně intersticia (např. podkožím)",
           "Absces se hojí bez jizev, flegmóna vždy jizvou",
           "Absces postihuje pouze plíce, flegmóna pouze kůži"
         ],

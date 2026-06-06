@@ -518,7 +518,7 @@ const DATA_SPECIAL_2 = [
       etiology: "1. Akutní pyelonefritida (infekční): ascendentní bakteriální infekce (Escherichia coli u 80 % případů) při močové stáze (těhotenství, hyperplazie prostaty, reflux). 2. Akutní neinfekční TIN: poléková hypersenzitivita (antibiotika - peniciliny, sulfonamidy; NSAID).",
       pathogenesis: "Ascendentní pyelonefritida: bakterie pronikají z močového měchýře přes močovody do ledvinné pánvičky a odtud do ledvinného parenchymu (vezikoureterální reflux je klíčový predisponující faktor). Poléková TIN: léky fungují jako hapteny, vyvolávají imunopatologickou reakci typu IV (buněčnou přecitlivělost) v intersticiu ledvin.",
       macroscopy: "Akutní pyelonefritida: ledvina je zvětšená, na povrchu i řezu nacházíme četná žlutavá ložiska (abscesy) obklopená červeným lemem, sliznice pánvičky je překrvená a pokrytá hnisem. Poléková TIN: ledviny jsou zvětšené, bledé.",
-      microscopy: "Akutní pyelonefritida: masivní infiltrace neutrofily v intersticiu a v lumen tubulů (tvorba leukocytárních válců), nekróza tubulárních buněk. Poléková TIN: edém intersticila, lymfocytární a plazmocytární infiltrát s vysokým podílem **eosinofilních granulocytů** (typické pro alergickou polékovou reakci!).",
+      microscopy: "Akutní pyelonefritida: masivní infiltrace neutrofily v intersticiu a v lumen tubulů (tvorba leukocytárních válců), nekróza tubulárních buněk. Poléková TIN: edém intersticia, lymfocytární a plazmocytární infiltrát s vysokým podílem **eosinofilních granulocytů** (typické pro alergickou polékovou reakci!).",
       clinical: "Akutní pyelonefritida se projevuje vysokou horečkou, třesavkou, bolestí v bedru (tapottement pozitivní) a dysuriickými potížemi (pálení při močení). Poléková TIN se projevuje akutním selháním ledvin s horečkou, kožní vyrážkou a eosinofilií v krvi i moči po nasazení léku."
     },
     quiz: [
@@ -789,7 +789,7 @@ const DATA_SPECIAL_2 = [
     content: {
       definition: "Edém mozku je nadměrné hromadění tekutiny v mozkovém parenchymu (v buňkách nebo v mezibuněčném prostoru), které vede ke zvýšení intrakraniálního tlaku.",
       etiology: "Traumata hlavy, ischémie (infarkt mozku), krvácení, nádory (metastázy), infekce (meningitidy, encefalitidy), akutní hyponatrémie.",
-      pathogenesis: "Dva hlavní typy: 1. Vazogenní edém (nejčastější): poškození hematoencefalické bariéry (HEB) - u tumorů, zánětů. Tekutina bohatá na bílkoviny uniká z kapilár do intersticila (hlavně v bílé hmotě). 2. Cytotoxický edém: poškození buněčného metabolismu (např. nedostatek ATP při ischemii). Selhává Na+/K+ pumpa, sodík a voda se hromadí uvnitř buněk (neurony, glie), které otečou (hlavně v šedé hmotě). Podtyp: intersticiální edém (transependymální průsak u hydrocefalu).",
+      pathogenesis: "Dva hlavní typy: 1. Vazogenní edém (nejčastější): poškození hematoencefalické bariéry (HEB) - u tumorů, zánětů. Tekutina bohatá na bílkoviny uniká z kapilár do intersticia (hlavně v bílé hmotě). 2. Cytotoxický edém: poškození buněčného metabolismu (např. nedostatek ATP při ischemii). Selhává Na+/K+ pumpa, sodík a voda se hromadí uvnitř buněk (neurony, glie), které otečou (hlavně v šedé hmotě). Podtyp: intersticiální edém (transependymální průsak u hydrocefalu).",
       macroscopy: "Mozek je zvětšený, těžký. Závity (gyry) jsou oploštělé, rýhy (sulci) jsou zúžené až vymizelé. Komory jsou stlačené. Hlavním rizikem jsou herniace (uskřinutí/kýly) mozku: subfalinní (zasunutí g. cinguli pod falx cerebri), transtentoriální/uncální (zasunutí uncus g. hippocampi pod tentorium cerebelli) a tonzilární (vtlačení tonzil mozečku do foramen magnum - stlačí mozkový kmen).",
       microscopy: "Mikroskopicky nacházíme rozvolnění neuropilu (mezibuněčného prostoru) - světlá projasnění kolem cév a neuronů (perivaskulární a perineurální edém). Buňky (zejména astrocyty) mají zvětšenou, světlou cytoplasmu (vakuolizaci).",
       clinical: "Projevuje se syndromem intrakraniální hypertenze: kruté bolesti hlavy, zvracení (bez předchozí nauzey, často proudem), edém papily zrakového nervu (stáza), bradykardie a hypertenze (Cushingův reflex). Tonzilární herniace stlačí dechové a kardiovaskulární centrum v prodloužené míše a způsobí smrt."
@@ -799,7 +799,7 @@ const DATA_SPECIAL_2 = [
         question: "Jak se liší patogeneze vazogenního a cytotoxického edému mozku?",
         options: [
           "Vazogenní edém vzniká pouze u dětí, cytotoxický u dospělých",
-          "Vazogenní edém je způsoben poškozením hematoencefalické bariéry s únikem tekutiny do intersticila; cytotoxický edém je způsoben selháním metabolických pump (nedostatkem ATP) s hromaděním vody uvnitř samotných buněk",
+          "Vazogenní edém je způsoben poškozením hematoencefalické bariéry s únikem tekutiny do intersticia; cytotoxický edém je způsoben selháním metabolických pump (nedostatkem ATP) s hromaděním vody uvnitř samotných buněk",
           "U cytotoxického edému tekutina vytéká z uší",
           "Vazogenní edém postihuje pouze mozeček"
         ],
