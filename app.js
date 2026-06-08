@@ -246,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
 
-      card.addEventListener("click", () => openQuestionDetail(q.id));
       cardsGrid.appendChild(card);
     });
   }
@@ -601,6 +600,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // 15. NASTAVENÍ EVENT LISTENERŮ
 
   // Filtry
+  cardsGrid.addEventListener("click", (e) => {
+    const card = e.target.closest(".question-card");
+    if (card) {
+      openQuestionDetail(card.getAttribute("data-id"));
+    }
+  });
+
   searchInput.addEventListener("input", (e) => {
     activeSearchQuery = e.target.value.toLowerCase().trim();
     renderQuestionsGrid();
