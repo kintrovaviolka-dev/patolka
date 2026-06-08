@@ -1,5 +1,6 @@
 // data_onco_2.js - Onkopatologie (témata 23 - 45)
 const DATA_ONCO_2 = [
+  
   {
     id: "onco-23",
     title: "Nádory tenkého a tlustého střeva",
@@ -37,8 +38,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "FAP je autozomálně dominantní onemocnění způsobené mutací tumor supresorového genu APC. Vyvolává masivní polypózu střeva. Maligní zvrat alespoň jednoho z tisíců polypů je nevyhnutelný, a proto se provádí preventivní odstranění celého tlustého střeva (kolektomie)."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá dědičný syndrom (způsobený mutací APC) projevující se tisíci polypy v tlustém střevě?",
+        type: "type-in",
+        correct: ["FAP", "familiární adenomatózní polypóza"],
+        explanation: "FAP je autozomálně dominantní onemocnění s mutací APC genu, vedoucí k polypóze střeva a nevyhnutelnému karcinomu."
+      },
+      {
+        question: "Který nádorový marker v krvi se sleduje pro záchyt recidivy kolorektálního karcinomu po operaci?",
+        type: "type-in",
+        correct: ["CEA", "karcinoembryonální antigen"],
+        explanation: "CEA (karcinoembryonální antigen) je onkofetální protein, jehož sledování v krvi pomáhá odhalit recidivu kolorektálního karcinomu."
+      }]
   },
+
   {
     id: "onco-24",
     title: "Nádory jater",
@@ -76,8 +90,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Jelikož játra filtrují krev z portálního oběhu (z celého zažívacího traktu), jsou nejčastějším místem metastáz (např. z tlustého střeva, žaludku). Tyto metastázy tvoří typické mnohočetné uzlíky 'vypadající jako terče' s propadlým středem (umbilikací) z ischemické nekrózy uprostřed rychle rostoucího uzlu."
       }
-    ]
+    ,
+      {
+        question: "Která zkratka označuje nejčastější primární maligní nádor jater vznikající v terénu cirhózy?",
+        type: "type-in",
+        correct: ["HCC", "hepatocelulární karcinom"],
+        explanation: "HCC (Hepatocelulární karcinom) vzniká v drtivé většině případů na podkladě jaterní cirhózy (alkohol, hepatitidy)."
+      },
+      {
+        question: "Který marker se stanovuje v séru při podezření na hepatocelulární karcinom?",
+        type: "type-in",
+        correct: ["AFP", "alfa-fetoprotein"],
+        explanation: "Alfa-fetoprotein (AFP) je typický onkofetální marker, jehož hladina v séru stoupá u HCC a některých germinálních nádorů."
+      }]
   },
+
   {
     id: "onco-25",
     title: "Nádory pankreatu",
@@ -115,8 +142,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Duktální adenokarcinom slinivky má silnou neurotropní aktivitu. Buňky prorůstají do peri- a intraneurálních prostor (kolem nervů), zejména do plexus celiacus v retroperitoneu, což dráždí nervová zakončení a způsobuje nesnesitelnou, fixovanou bolest zad."
       }
-    ]
+    ,
+      {
+        question: "V které části slinivky břišní (pankreatu) se nejčastěji nachází karcinom, což vyvolává Courvoisierův příznak?",
+        type: "type-in",
+        correct: ["hlava", "hlava pankreatu", "hlavě"],
+        explanation: "Karcinom hlavy pankreatu stlačuje společný žlučovod a brzy způsobuje bezbolestnou žloutenku a hmatný žlučník (Courvoisier)."
+      },
+      {
+        question: "Jak se nazývá invaze nádorových buněk podél nervových vláken, způsobující krutou bolest zad u karcinomu slinivky?",
+        type: "type-in",
+        correct: ["perineurální invaze", "perineurální"],
+        explanation: "Perineurální invaze (šíření nádorových buněk v obalech nervů) dráždí nervová zakončení plexus celiacus a působí silnou bolest."
+      }]
   },
+
   {
     id: "onco-26",
     title: "Neuroendokrinní nádory GIT a plic (NETy)",
@@ -154,8 +194,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Chromogranin A je protein obsažený v sekrečních granulech neuroendokrinních buněk a synaptofyzin je protein membrány synaptických váčků. Tyto dva markery jsou standardními diagnostickými pilíři pro všechny neuroendokrinní nádory."
       }
-    ]
+    ,
+      {
+        question: "Jak se dříve označovaly dobře diferencované neuroendokrinní nádory (NET) tenkého střeva nebo apendixu?",
+        type: "type-in",
+        correct: ["karcinoid", "karcinoidy"],
+        explanation: "Termín 'karcinoid' byl v minulosti používán pro neuroendokrinní nádory s pomalým růstem, které napodobovaly karcinom."
+      },
+      {
+        question: "Který hormon/neurotransmitér je produkován NET a jeho uvolnění do oběhu způsobuje zčervenání (flush) a průjmy?",
+        type: "type-in",
+        correct: ["serotonin"],
+        explanation: "Serotonin (5-HT) uvolňovaný funkčními NET tenkého střeva (po metastazování do jater) způsobuje typický karcinoidový syndrom."
+      }]
   },
+
   {
     id: "onco-27",
     title: "Nádory ledvin",
@@ -193,8 +246,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "RCC má výraznou tendenci k invazi do žilního systému. Nádor prorůstá stěnou drobných žil do hlavní ledvinné žíly (v. renalis) a roste jako souvislý nádorový válec (trombus) směrem do dolní duté žíly, což může mechanicky blokovat krevní návrat."
       }
-    ]
+    ,
+      {
+        question: "Který gen (lokalizovaný na 3. chromozomu) je mutován u familiární formy jasnobuněčného karcinomu ledviny?",
+        type: "type-in",
+        correct: ["VHL", "von Hippel-Lindau"],
+        explanation: "Inaktivace tumor supresorového genu VHL způsobuje syndrom von Hippel-Lindau a rozvoj jasnobuněčných karcinomů ledvin."
+      },
+      {
+        question: "Jak se nazývá maligní nádor ledviny u dětí (nefroblastom)?",
+        type: "type-in",
+        correct: ["Wilmsův tumor", "Wilmsův nádor", "nefroblastom"],
+        explanation: "Wilmsův tumor (nefroblastom) je nejčastější dětský nádor ledvin, vycházející z metanefrického blastému."
+      }]
   },
+
   {
     id: "onco-28",
     title: "Nádory močového měchýře",
@@ -232,8 +298,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Krvácení z papilárních výběžků nádoru se projeví červenou močí. Na rozdíl od zánětu močových cest nebo průchodu kamene, toto krvácení u karcinomu neprovází žádná bolest, což pacienta často vede k podcenění situace."
       }
-    ]
+    ,
+      {
+        question: "Který typ epitelu vystýlá močový měchýř a dává vznik nejčastějším karcinomům měchýře?",
+        type: "type-in",
+        correct: ["urotel", "přechodný epitel"],
+        explanation: "Urotel (přechodný epitel) je specializovaný vícevrstevný epitel močových cest, ze kterého vzniká uroteliální karcinom."
+      },
+      {
+        question: "Která chemická barviva (expozice v průmyslu) jsou klasickým rizikovým faktorem karcinomu močového měchýře?",
+        type: "type-in",
+        correct: ["anilinová barviva", "anilinová", "anilin"],
+        explanation: "Aromatické aminy (anilinová barviva) vylučované močí po expozici v průmyslu vyvolávají maligní transformaci urotelu."
+      }]
   },
+
   {
     id: "onco-29",
     title: "Nádory prostaty",
@@ -271,8 +350,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Karcinom prostaty je jedinečný tím, že jeho buňky produkují faktory (např. Wnt, BMP), které stimulují osteoblasty k novotvorbě kosti v místě metastázy. Tyto metastázy (nejčastěji v pánvi a bederní páteři) se projevují jako ložiska zvýšené density kosti, což je vidět na RTG i scintigrafii."
       }
-    ]
+    ,
+      {
+        question: "V které zóně prostaty nejčastěji vzniká adenokarcinom, což vysvětluje jeho dlouhou bezpříznakovost?",
+        type: "type-in",
+        correct: ["periferní zóna", "periferní", "zadní zóna", "zadní"],
+        explanation: "Adenokarcinom prostaty vzniká v periferní (zadní) zóně. Netlačí proto v počátku na močovou trubici a je asymptomatický."
+      },
+      {
+        question: "Který specifický marker v krvi se používá pro screening a sledování karcinomu prostaty?",
+        type: "type-in",
+        correct: ["PSA", "prostatický specifický antigen"],
+        explanation: "PSA (prostatický specifický antigen) je glykoprotein produkovaný prostatou; jeho hladina stoupá u karcinomu, zánětu i benigní hyperplazie."
+      }]
   },
+
   {
     id: "onco-30",
     title: "Nádory varlat",
@@ -310,8 +402,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Seminomy nikdy neprodukují AFP. Pokud je u pacienta s podezřením na seminom zvýšen AFP, znamená to, že se jedná o smíšený germinální nádor obsahující neseminomovou složku (yolk sac tumor), což zásadně mění léčebnou strategii (neseminomy jsou radiorezistentní a léčí se chemoterapií a chirurgicky)."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá nejčastější, dobře ohraničený a vysoce radiocitlivý germinální nádor varlete?",
+        type: "type-in",
+        correct: ["seminom"],
+        explanation: "Seminom je nejčastější maligní germinální tumor varlete. Je typický kulatými buňkami s jasnou cytoplasmou a lymfocytárními septy."
+      },
+      {
+        question: "Jak se nazývá vrozená vada nesestouplého varlete, která je hlavním rizikovým faktorem pro vznik nádorů?",
+        type: "type-in",
+        correct: ["kryptorchismus"],
+        explanation: "Kryptorchismus je porucha sestupu varlete do šourku, která až desetkrát zvyšuje riziko vzniku maligního nádoru."
+      }]
   },
+
   {
     id: "onco-31",
     title: "Nádory dělohy a děložního hrdla",
@@ -349,8 +454,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Karcinom endometria postihuje nejčastěji ženy po menopauze. Růst tumoru a jeho rozpad vede ke krvácení do děložní dutiny. Jelikož tyto ženy již nemenstruují, každé takové krvácení je alarmující a umožňuje včasnou diagnostiku kyretáží."
       }
-    ]
+    ,
+      {
+        question: "Které dva onkoproteiny produkované HPV inaktivují supresory p53 a Rb v buňkách děložního čípku?",
+        type: "type-in",
+        correct: ["E6 a E7", "E6, E7", "E6 a E7 onkoproteiny"],
+        explanation: "Onkoprotein E6 blokuje a degraduje p53, onkoprotein E7 se váže na Rb. Společně vedou k maligní transformaci buněk čípku."
+      },
+      {
+        question: "Jaký je hlavní klinický příznak karcinomu endometria u starších žen?",
+        type: "type-in",
+        correct: ["krvácení v postmenopauze", "krvácení po přechodu", "vaginální krvácení"],
+        explanation: "Každé krvácení z rodidel u ženy po menopauze (přechodu) je podezřelé a vyžaduje vyšetření k vyloučení karcinomu endometria."
+      }]
   },
+
   {
     id: "onco-32",
     title: "Nádory ovárií",
@@ -388,8 +506,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Psamomata (z řeckého psammos = písek) vznikají, když hrot papily u serózního karcinomu odumře (ischemií) a do tohoto ložiska se pasivně uloží soli vápníku (dystrofická kalcifikace). Pod mikroskopem vypadají jako růžovomodré vrstvené kuličky."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá benigní ovariální teratom (dermoidní cysta), který obsahuje zralé tkáně jako vlasy, zuby a maz?",
+        type: "type-in",
+        correct: ["dermoidní cysta", "zralý teratom", "teratom"],
+        explanation: "Zralý cystický teratom (dermoidní cysta) je benigní ovariální nádor obsahující zralé deriváty ektodermu, mezodermu a endodermu."
+      },
+      {
+        question: "Který ovariální nádor (metastáza ze žaludku) je charakterizován buňkami vzhledu pečetního prstenu?",
+        type: "type-in",
+        correct: ["Krukenbergův tumor", "Krukenbergův nádor"],
+        explanation: "Krukenbergův tumor je oboustranná ovariální metastáza hlenotvorného karcinomu žaludku (s buňkami vzhledu pečetního prstenu)."
+      }]
   },
+
   {
     id: "onco-33",
     title: "Nádory prsu",
@@ -427,8 +558,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Peau d'orange je klinickým markerem zánětlivého karcinomu nebo pokročilého stádia. Nádorové čepy ucpou lymfatickou drenáž. Kůže zduří lymfatickým otokem, ale vazivové septa kůži drží v místech pórů pevně, což vytváří důlkovaný vzhled pomerančové kůry."
       }
-    ]
+    ,
+      {
+        question: "Jak se označuje růst malých uniformních buněk v řadách za sebou u infiltrativního lobulárního karcinomu prsu?",
+        type: "type-in",
+        correct: ["indická řada", "indické řady", "indian file"],
+        explanation: "Kvůli ztrátě E-cadherinu rostou buňky lobulárního karcinomu disociovaně a řadí se ve stroma do tenkých zástupů ('indických řad')."
+      },
+      {
+        question: "Který typ karcinomu prsu vykazuje neinvazivní růst uvnitř mlékovodů a označuje se zkratkou DCIS?",
+        type: "type-in",
+        correct: ["duktální karcinom in situ", "duktální carcinoma in situ"],
+        explanation: "DCIS (Ductal Carcinoma In Situ) je preinvazivní léze ohraničená myoepiteliální vrstvou mlékovodů."
+      }]
   },
+
   {
     id: "onco-34",
     title: "Nádory trofoblastu",
@@ -466,8 +610,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Trofoblast (placenta) fyziologicky produkuje hormon hCG k udržení těhotenství. Nádory trofoblastu si tuto schopnost uchovávají a produkují hCG v obrovském množství. Sledování poklesu hCG po léčbě je zásadní pro potvrzení eliminace choriokarcinomu."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá hroznovitá neoplastická proliferace placenty bez přítomnosti plodu (kompletní forma)?",
+        type: "type-in",
+        correct: ["mola hydatidosa", "kompletní mola", "mola"],
+        explanation: "Kompletní mola hydatidosa je charakteristická hydropsickým zduřením klků placenty připomínajícím hrozny vína a absencí plodu."
+      },
+      {
+        question: "Který zhoubný nádor trofoblastu vzniká po mole, potratu či porodu a extrémně časně metastázuje do plic?",
+        type: "type-in",
+        correct: ["choriokarcinom"],
+        explanation: "Choriokarcinom je agresivní maligní nádor trofoblastu s výrazným sklonem k hematogennímu metastázování do plic."
+      }]
   },
+
   {
     id: "onco-35",
     title: "Nejčastější nádory u dětí",
@@ -505,8 +662,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Retinoblastom roste ze sítnice směrem do sklivce. Při pohledu do oka nebo na fotografii chybí normální červený reflex pozadí (vyvolaný prokrvenou choriodeou), protože světlo se odrazí od šedobílé masy nádoru sítnice, což se jeví jako bílá zornice."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá nejčastější maligní nitrooční nádor u dětí, spojený s mutací genu RB1?",
+        type: "type-in",
+        correct: ["retinoblastom"],
+        explanation: "Retinoblastom je vrozený maligní nádor sítnice u dětí, vyvolaný mutací obou alel tumor supresorového genu RB1."
+      },
+      {
+        question: "Jak se označuje bílý odlesk zornice (kočičí oko) u dětí s retinoblastomem?",
+        type: "type-in",
+        correct: ["leukokorie"],
+        explanation: "Leukokorie (bílý odlesk zornice při dopadu světla) je nejčastějším klinickým příznakem rozvíjejícího se retinoblastomu."
+      }]
   },
+
   {
     id: "onco-36",
     title: "Nádory nadledvin",
@@ -544,8 +714,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Zellballen (hnízda buněk) je typickým histologickým uspořádáním feochromocytu a paragangliomů. Polygonální buňky tvoří malé skupinky připomínající plesy, které jsou hustě opředeny sítí kapilár (což usnadňuje uvolňování hormonů do krve)."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá zhoubný nádor dřeně nadledvin (nebo sympatiku) u dětí, tvořený drobnými kulatými modrými buňkami?",
+        type: "type-in",
+        correct: ["neuroblastom"],
+        explanation: "Neuroblastom je maligní nádor z buněk sympatiku u dětí, tvořící pod mikroskopem Homer-Wrightovy rozety."
+      },
+      {
+        question: "Jak se nazývá benigní nádor kůry nadledvin, který může produkovat kortizol a způsobit Cushingův syndrom?",
+        type: "type-in",
+        correct: ["adenom kůry nadledvin", "adenom nadledviny", "adenom"],
+        explanation: "Adenom kůry nadledvin je častý benigní uzel, který při hormonální aktivitě produkuje nadbytek kortizolu."
+      }]
   },
+
   {
     id: "onco-37",
     title: "Nádory štítné žlázy",
@@ -583,8 +766,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Medulární karcinom je neuroendokrinní tumor z parafolikulárních C-buněk, které fyziologicky produkují kalcitonin (snižuje hladinu vápníku). Nadbytek prokalcitoninu se sráží v mezibuněčném prostoru za vzniku specifického ovariálního stroma bohatého na amyloid."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá nejčastější typ karcinomu štítné žlázy, mikroskopicky charakteristický jádry vzhledu 'Orphan Annie' (matné sklo)?",
+        type: "type-in",
+        correct: ["papilární karcinom", "papilární karcinom štítné žlázy"],
+        explanation: "Papilární karcinom je nejčastější zhoubný nádor štítné žlázy, charakteristický prázdnými jádry ('Orphan Annie' eyes)."
+      },
+      {
+        question: "Který karcinom štítné žlázy vychází z parafolikulárních C-buněk a produkuje calcitonin?",
+        type: "type-in",
+        correct: ["medulární karcinom", "medulární karcinom štítné žlázy"],
+        explanation: "Medulární karcinom štítné žlázy vychází z neuroendokrinních C-buněk, produkuje calcitonin a často obsahuje amyloid ve stroma."
+      }]
   },
+
   {
     id: "onco-38",
     title: "Nádory endokrinního systému (Mnohočetná endokrinní neoplazie - MEN)",
@@ -622,8 +818,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Zárodečné mutace RET (receptorové tyrosinkinázy) způsobují trvalou aktivaci receptoru bez nutnosti vazby ligandu. To vede se 100% jistotou k rozvoji medulárního karcinomu štítné žlázy. Preventivní operace zachraňuje těmto pacientům život."
       }
-    ]
+    ,
+      {
+        question: "Který hormon je nadměrně produkován u gastrinomu, což vede k rozvoji těžkých peptických vředů (Zollinger-Ellisonův syndrom)?",
+        type: "type-in",
+        correct: ["gastrin"],
+        explanation: "Gastrin produkovaný gastrinomem masivně stimuluje sekreci HCl v žaludku, což vede k tvorbě mnohočetných těžkých vředů."
+      },
+      {
+        question: "Která zkratka označuje syndrom mnohočetné endokrinní neoplazie?",
+        type: "type-in",
+        correct: ["MEN"],
+        explanation: "MEN (Multiple Endocrine Neoplasia) sdružuje familiární syndromy (MEN 1, MEN 2A/B) s výskytem nádorů různých endokrinních žláz."
+      }]
   },
+
   {
     id: "onco-39",
     title: "Nádory kůže (mimo melanom)",
@@ -661,8 +870,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Bazaliom je učebnicovým příkladem semimalignity - ničí tkáně v místě růstu, ale nezakládá vzdálená ložiska. Spinaliom je plně maligní karcinom, který po proniknutí do dermis může vniknout do lymfatických cév a metastázovat."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá nejčastější maligní nádor kůže (semimaligní, lokálně invazivní), který prakticky nemetastázuje?",
+        type: "type-in",
+        correct: ["bazaliom", "bazocelulární karcinom"],
+        explanation: "Bazaliom (bazocelulární karcinom) roste lokálně invazivně a destruktivně (např. na obličeji), ale prakticky nikdy nemetastázuje."
+      },
+      {
+        question: "Jak se nazývá zhoubný epiteliální nádor kůže vycházející z keratinocytů, který tvoří keratinové perly?",
+        type: "type-in",
+        correct: ["spinocelulární karcinom", "dlaždicobuněčný karcinom"],
+        explanation: "Spinocelulární karcinom (dlaždicobuněčný karcinom kůže) vychází z epidermis a tvoří rohovějící keratinové čepy."
+      }]
   },
+
   {
     id: "onco-40",
     title: "Melanom",
@@ -700,8 +922,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Mutace BRAF V600E vede k trvalé aktivaci MAPkinázové dráhy, která stimuluje růst a dělení melanocytů bez vnějších signálů. Specifické BRAF inhibitory (např. vemurafenib, dabrafenib) tuto dráhu blokují a dokážou rychle zmenšit i pokročilé metastatické melanomy."
       }
-    ]
+    ,
+      {
+        question: "Která zkratka (pravidlo ABCDE) reprezentuje nepravidelnost okrajů u maligního melanomu?",
+        type: "type-in",
+        correct: ["B", "border"],
+        explanation: "Písmeno B v pravidle ABCDE označuje 'Border' (okraj), který je u maligního melanomu typicky nepravidelný nebo vroubkovaný."
+      },
+      {
+        question: "Který kožní pigment (produkovaný melanocyty) je přítomen v buňkách melanomu a barví ho do černa či hněda?",
+        type: "type-in",
+        correct: ["melanin"],
+        explanation: "Melanin je přirozený kožní pigment. Jeho nadměrná produkce atypickými melanocyty dodává melanomu jeho tmavé zbarvení."
+      }]
   },
+
   {
     id: "onco-41",
     title: "Nádory periferních nervů",
@@ -739,8 +974,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Schwannom je opouzdřený uzel přisedlý k boku nervu, takže chirurg může opatrně otevřít epineurium a uzel vyloupnout (enukleovat). Neurofibrom je difuzní proces prolínající se s nervovými vlákny, jeho vyříznutí znamená trvalé přerušení nervové dráhy."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá benigní nádor ze Schwannových buněk, který je mikroskopicky charakterizován zónami Antoni A a Antoni B?",
+        type: "type-in",
+        correct: ["schwannom", "neurilemom"],
+        explanation: "Schwannom (neurilemom) je benigní, opouzdřený nádor periferního nervu složený čistě ze Schwannových buněk."
+      },
+      {
+        question: "Jak se nazývají seřazená jádra Schwannových buněk v zónách Antoni A u schwannomu?",
+        type: "type-in",
+        correct: ["Verocayova tělíska", "Verocayovy řady"],
+        explanation: "Verocayova tělíska představují palisádovité seřazení jader Schwannových buněk oddělených buněčnými výběžky v zónách Antoni A."
+      }]
   },
+
   {
     id: "onco-42",
     title: "Nádory mozku a mozkových obalů",
@@ -778,8 +1026,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Meningoteliální buňky mají přirozenou tendenci se k sobě těsně přimykat a obtáčet se. V nádoru to vytváří charakteristické mikroskopické víry. Hroty těchto vírů často podléhají hyalinizaci a kalcifikaci za vzniku psamomatózních tělísek."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá nejčastější benigní nádor mozkových obalů, který roste pomalu a stlačuje mozkovou tkáň?",
+        type: "type-in",
+        correct: ["meningiom"],
+        explanation: "Meningiom roste expanzivně z arachnoidálních buněk a stlačuje přilehlý mozek; je typický přítomností psamomatózních tělísek."
+      },
+      {
+        question: "Které mikroskopické vrstvené vápenaté struktury (kuličky) typicky nacházíme v meningiomu?",
+        type: "type-in",
+        correct: ["psamomata", "psamomatózní tělíska"],
+        explanation: "Psamomatózní tělíska (psamomata) jsou koncentricky vrstvené kalcifikované kuličky, které nacházíme v meningiomu a serózním karcinomu ovaria."
+      }]
   },
+
   {
     id: "onco-43",
     title: "Gliomy",
@@ -817,8 +1078,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "GFAP je protein intermediárních filament specifický pro astrocyty a buňky ependymu. Jeho průkaz v biopsii potvrzuje, že anaplastický nádor mozku patří do skupiny astrocytomů/glioblastomů a nejedná se např. o metastázu karcinomu plic (která by byla GFAP-negativní a cytokeratin-pozitivní)."
       }
-    ]
+    ,
+      {
+        question: "Jak se nazývá nejčastější a extrémně maligní gliový nádor u dospělých (grade IV astrocytom)?",
+        type: "type-in",
+        correct: ["glioblastom", "glioblastoma multiforme"],
+        explanation: "Glioblastom je nejagresivnější gliový nádor, charakteristický ložisky nekróz lemovaných palisádami nádorových buněk."
+      },
+      {
+        question: "Který protein cytoskeletu je standardním IHC markerem pro buňky astroglie a gliové nádory?",
+        type: "type-in",
+        correct: ["GFAP"],
+        explanation: "GFAP (Glial Fibrillary Acidic Protein) je intermediální filamentum typické pro astrocyty a gliové nádory (astrocytomy, glioblastom)."
+      }]
   },
+
   {
     id: "onco-44",
     title: "Metastatické nádory mozku",
@@ -856,8 +1130,21 @@ const DATA_ONCO_2 = [
         correct: 1,
         explanation: "Toto je klíčový rozdíl pro patologa. Karcinomové metastázy jsou 'cizí' tkáň, která se do mozku dostala zvenčí, proto roste jako expandující uzel s ostrým okrajem. Gliomy jsou nádory z vlastních mozkových buněk, které se rozlézají podél zdravých myelinových vláken hluboko do okolí, takže nemají žádnou hranici."
       }
-    ]
+    ,
+      {
+        question: "Metastázy kterého kožního nádoru jsou v mozku typicky černé nebo hnědé?",
+        type: "type-in",
+        correct: ["melanom", "maligní melanom"],
+        explanation: "Metastázy maligního melanomu si často uchovávají schopnost tvorby pigmentu, a proto se v mozku jeví jako tmavě hnědé či černé uzly."
+      },
+      {
+        question: "Jak se označuje zóna otoku mozkové tkáně v okolí metastázy?",
+        type: "type-in",
+        correct: ["perifokální edém", "edém mozku", "edém"],
+        explanation: "Rychle rostoucí metastáza vyvolává v okolní mozkové tkáni výraznou reakci a edém (perifokální edém), který zhoršuje neurologické příznaky."
+      }]
   },
+
   {
     id: "onco-45",
     title: "Nádory kosti",
@@ -895,7 +1182,19 @@ const DATA_ONCO_2 = [
         correct: 2,
         explanation: "Rychle rostoucí osteosarkom prorazí kortikální kost a tlačí na periost, který se odchlipuje od kosti. Na okrajích tohoto odchlípení periost reaguje novotvorbou kosti, což na RTG snímku vytváří charakteristický trojúhelníkový stín (Codmanův úhel/trojúhelník)."
       }
-    ]
+    ,
+      {
+        question: "Který nejčastější primární maligní nádor kosti u mladých lidí (v metafýze dlouhých kostí) přímo produkuje osteoid?",
+        type: "type-in",
+        correct: ["osteosarkom"],
+        explanation: "Osteosarkom je maligní nádor kosti u dospívajících, jehož diagnostickým kritériem je přímá tvorba osteoidu nádorovými buňkami."
+      },
+      {
+        question: "Který vysoce maligní dětský kostní nádor (v diafýze) je spojen s translokací t(11;22) a obrazem cibulových slupek?",
+        type: "type-in",
+        correct: ["Ewingův sarkom"],
+        explanation: "Ewingův sarkom je drobnokulatobuněčný nádor diafýzy kostí, charakteristický periostální reakcí připomínající slupky cibule."
+      }]
   }
 ];
 

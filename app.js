@@ -351,24 +351,38 @@ document.addEventListener("DOMContentLoaded", () => {
       const quizCard = document.createElement("div");
       quizCard.className = "quiz-card";
       
-      let optionsHTML = "";
-      q.options.forEach((opt, optIndex) => {
-        optionsHTML += `
-          <button class="quiz-option" data-qindex="${qIndex}" data-optindex="${optIndex}">
-            ${opt}
-          </button>
+      if (q.type === "type-in") {
+        quizCard.innerHTML = `
+          <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
+          <div class="quiz-type-in-container" id="type-in-container-${qIndex}">
+            <input type="text" class="quiz-type-in-input" id="type-in-input-${qIndex}" placeholder="Napište svou odpověď...">
+            <button class="btn btn-primary quiz-type-in-submit" id="type-in-submit-${qIndex}">Ověřit</button>
+          </div>
+          <div class="quiz-type-in-feedback" id="feedback-${qIndex}" style="display: none;"></div>
+          <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
+            <strong>Vysvětlení:</strong> ${q.explanation}
+          </div>
         `;
-      });
+      } else {
+        let optionsHTML = "";
+        q.options.forEach((opt, optIndex) => {
+          optionsHTML += `
+            <button class="quiz-option" data-qindex="${qIndex}" data-optindex="${optIndex}">
+              ${opt}
+            </button>
+          `;
+        });
 
-      quizCard.innerHTML = `
-        <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
-        <div class="quiz-options">
-          ${optionsHTML}
-        </div>
-        <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
-          <strong>Vysvětlení:</strong> ${q.explanation}
-        </div>
-      `;
+        quizCard.innerHTML = `
+          <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
+          <div class="quiz-options">
+            ${optionsHTML}
+          </div>
+          <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
+            <strong>Vysvětlení:</strong> ${q.explanation}
+          </div>
+        `;
+      }
 
       quizWrapper.appendChild(quizCard);
     });
@@ -410,6 +424,69 @@ document.addEventListener("DOMContentLoaded", () => {
         explanationBox.style.display = "block";
       });
     });
+
+    // Event listenery pro type-in otázky
+    const submitBtns = quizContainer.querySelectorAll(".quiz-type-in-submit");
+    submitBtns.forEach(btn => {
+      const qIndex = parseInt(btn.id.split("-").pop());
+      const inputEl = document.getElementById(`type-in-input-${qIndex}`);
+      
+      // Submit na tlačítko klik
+      btn.addEventListener("click", function() {
+        submitTypeInAnswer(qIndex);
+      });
+
+      // Submit na stisk klávesy Enter v inputu
+      if (inputEl) {
+        inputEl.addEventListener("keypress", function(e) {
+          if (e.key === "Enter") {
+            submitTypeInAnswer(qIndex);
+          }
+        });
+      }
+    });
+
+    // Společná funkce pro vyhodnocení type-in odpovědi
+    function submitTypeInAnswer(qIndex) {
+      const inputEl = document.getElementById(`type-in-input-${qIndex}`);
+      const submitBtn = document.getElementById(`type-in-submit-${qIndex}`);
+      const feedbackEl = document.getElementById(`feedback-${qIndex}`);
+      const explanationEl = document.getElementById(`explanation-${qIndex}`);
+      const quizData = activeQuestion.quiz[qIndex];
+
+      if (!inputEl || !submitBtn || submitBtn.disabled) return;
+
+      const userAnswer = inputEl.value.trim();
+      if (!userAnswer) return; // Nedělat nic, pokud je pole prázdné
+
+      // Zamezit další editaci
+      inputEl.disabled = true;
+      submitBtn.disabled = true;
+
+      // Kontrola odpovědi (case-insensitive, ořezané mezery)
+      let isCorrect = false;
+      const normalizedUserAnswer = userAnswer.toLowerCase();
+
+      if (Array.isArray(quizData.correct)) {
+        isCorrect = quizData.correct.some(ans => ans.toLowerCase().trim() === normalizedUserAnswer);
+      } else {
+        isCorrect = quizData.correct.toLowerCase().trim() === normalizedUserAnswer;
+      }
+
+      feedbackEl.style.display = "flex";
+      explanationEl.style.display = "block";
+
+      if (isCorrect) {
+        feedbackEl.className = "quiz-type-in-feedback correct";
+        feedbackEl.innerHTML = `<span>✓ Správně! Odpověď: <strong>${Array.isArray(quizData.correct) ? quizData.correct[0] : quizData.correct}</strong></span>`;
+        userProgress[activeQuestion.id].correctCount++;
+      } else {
+        feedbackEl.className = "quiz-type-in-feedback incorrect";
+        feedbackEl.innerHTML = `<span>✗ Nesprávně. Správná odpověď: <strong>${Array.isArray(quizData.correct) ? quizData.correct.join(" nebo ") : quizData.correct}</strong></span>`;
+      }
+
+      saveProgress();
+    }
   }
 
   // 14. LOGIKA PŘIŘAZOVACÍ HRY (MATCHING GAME)

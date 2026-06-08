@@ -15,7 +15,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jak se liší atrofie prostá (simplex) od atrofie numerické?",
+        question: "Z hlediska buněčného mechanismu a změn na úrovni jednotlivých buněk, jak se liší atrofie prostá (simplex) od atrofie numerické?",
         options: [
           "Prostá atrofie je vrozená, numerická získaná",
           "U prosté atrofie se zmenšuje velikost jednotlivých buněk; u numerické atrofie klesá celkový počet buněk",
@@ -26,7 +26,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "U atrofie prosté (typické např. pro kardiomyocyty či kosterní svaly) buňky zmenšují svůj objem, aby snížily energetické nároky. U numerické atrofie (typické pro dělící se tkáně) klesá počet buněk, nejčastěji mechanismem apoptózy."
       },
       {
-        question: "Co je to atrophia lipomatosa (lipomatózní atrofie)?",
+        question: "Jak se patogeneticky projevuje proces označovaný jako atrophia lipomatosa (lipomatózní atrofie) v atrofujících orgánech, jako je pankreas či lymfatické uzliny?",
         options: [
           "Zmenšení tukové tkáně u kachektických pacientů",
           "Stav, kdy je atrofovaný parenchym orgánu (např. slinivky, kostní dřeně či ledviny) nahrazen zmnoženou tukovou tkání",
@@ -53,7 +53,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co je podstatou Barrettova jícnu?",
+        question: "Která adaptivní buněčná změna (metaplazie) a na jaký typ epitelu je podstatou rozvoje Barrettova jícnu v důsledku gastroezofageálního refluxu?",
         options: [
           "Vrozená atrézie jícnu u novorozenců",
           "Metaplazie jednovrstevného dlaždicového epitelu jícnu na epitel cylindrický se střevními pohárkovými buňkami v důsledku refluxu žaludeční kyseliny",
@@ -64,7 +64,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Barrettův jícen je klasickým příkladem cylindrické (intestinální) metaplazie. Vzniká jako adaptace na chronické poleptání sliznice jícnu kyselým žaludečním obsahem. Vícevrstevný dlaždicový epitel se mění na jednovrstevný cylindrický epitel s pohárkovými buňkami, který lépe odolává kyselině, ale představuje prekancerózu."
       },
       {
-        question: "Je metaplazie reverzibilní (vratný) děj?",
+        question: "Pokud dojde k metaplazii epitelu (např. u kuřáků v průduškách), je tento adaptivní děj plně reverzibilní po odstranění vyvolávajícího dráždivého podnětu?",
         options: [
           "Ne, jakmile jednou vznikne, je trvalá a nelze ji zvrátit",
           "Ano, pokud se odstraní dráždivý podnět, tkáň se může vrátit k původnímu typu epitelu",
@@ -91,7 +91,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Proč dochází v srdci při dlouhodobé hypertenzi k hypertrofii a nikoliv k hyperplazii kardiomyocytů?",
+        question: "Na základě buněčného cyklu dospělých kardiomyocytů, proč se srdce při dlouhodobé zátěži (hypertenzi) adaptuje hypertrofií a nikoliv hyperplazií buněk?",
         options: [
           "Protože srdce nemá dostatečné cévní zásobení pro dělení buněk",
           "Protože kardiomyocyty dospělého člověka jsou permanentní buňky, které ztratily schopnost mitotického dělení, a mohou se adaptovat pouze zvětšením své velikosti",
@@ -102,7 +102,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Dospělé kardiomyocyty jsou trvale diferencované buňky (v G0 fázi buněčného cyklu) a nemohou se množit dělením (hyperplazií). Jedinou možnou adaptací na zvýšenou zátěž je hypertrofie - syntéza nových myofibril a zvětšení objemu stávajících buněk."
       },
       {
-        question: "Který z následujících příkladů představuje patologickou hyperplazii?",
+        question: "Který z následujících klinických stavů je typickým příkladem patologické hyperplazie buněk vyvolané dysregulovanou hormonální stimulací?",
         options: [
           "Zvětšení mléčné žlázy během laktace",
           "Benigní hyperplazie prostaty (BPH) a hyperplazie endometria vlivem estrogenové stimulace",
@@ -129,7 +129,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jak se hojí ischemická nekróza (infarkt) myokardu?",
+        question: "Vzhledem k tomu, že kardiomyocyty nemají schopnost regenerace, jakým specifickým procesem reparace se hojí ložisko ischemické nekrózy (infarktu) v srdci?",
         options: [
           "Kompletní regenerací kardiomyocytů a obnovením kontraktility",
           "Reparací - náhradou nekrotického ložiska nespecifickou vazivovou jizvou",
@@ -140,7 +140,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Kardiomyocyty jsou permanentní buňky bez schopnosti dělení. Po jejich odumření (infarktu) nemůže dojít k regeneraci; defekt je vyčištěn makrofágy a nahrazen vazivem (jizvou), které sice mechanicky stěnu zpevní, ale nepodílí se na stahu srdce."
       },
       {
-        question: "Které buňky řadíme mezi labilní s nejvyšší schopností regenerace?",
+        question: "Které buněčné populace v lidském těle řadíme podle jejich mitotické aktivity mezi labilní buňky s neustálou a vysokou schopností regenerace?",
         options: [
           "Neurony a buňky neuroglie",
           "Epidermis kůže, slizniční epitely GIT a buňky kostní dřeně",
@@ -167,7 +167,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co je to Hayflickův limit?",
+        question: "Jak definujeme v buněčné biologii a patologii stárnutí pojem 'Hayflickův limit' a s jakou chromozomální strukturou přímo souvisí?",
         options: [
           "Maximální tepová frekvence u starších osob",
           "Omezený počet dělení (replikační limit), kterým somatická buňka může projít před vstupem do fáze senescence, způsobený zkracováním telomer",
@@ -178,7 +178,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Hayflickův limit udává, že běžné lidské somatické buňky se mohou rozdělit pouze cca 50-70krát. Je to dáno tím, že při každé replikaci DNA se zkrátí telomery na koncích chromozomů. Jakmile dosáhnou kritické délky, aktivuje se p53 dráha a buňka se přestane dělit."
       },
       {
-        question: "Který pigment se typicky hromadí v buňkách při stárnutí (senescenci)?",
+        question: "Který nerozpustný žlutohnědý pigment se hromadí v lysosomech postmitotických buněk (neuronů, kardiomyocytů) a je markerem buněčného stárnutí?",
         options: [
           "Hemosiderin",
           "Lipofuscin",
@@ -205,7 +205,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co jsou to 'buňky srdečního selhání' (heart failure cells) v plicních alveolech?",
+        question: "Jak histologicky a patogeneticky vznikají tzv. 'buňky srdečního selhání' (siderofágy) v plicních alveolech u pacientů s levostranným srdečním selháním?",
         options: [
           "Hypertrofické kardiomyocyty, které vycestovaly do plic",
           "Alveolární makrofágy fagocytující erytrocyty, naplněné hemosiderinem, uvolněné při plicním městnání",
@@ -216,7 +216,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Při levostranném srdečním selhání stoupá tlak v plicních cévách. Kapiláry praskají a erytrocyty unikají do alveolů. Zde jsou fagocytovány alveolárními makrofágy, v nichž se hemoglobin mění na hemosiderin. Tyto buňky (siderofágy) jsou typickým znakem městnání v plicích."
       },
       {
-        question: "Jak vzniká makroskopický obraz 'muškátových jater' (hepar moschatum)?",
+        question: "Jakým hemodynamickým a metabolickým mechanismem vzniká typický makroskopický obraz 'muškátových jater' (hepar moschatum) při pravostranném srdečním selhání?",
         options: [
           "Ukládáním amyloidových vláken kolem portálních polí",
           "Střídáním tmavě červených center lalůčků (stagnace krve a nekróza při pravostranném selhání) se světle žlutou periferií (steatóza z hypoxie)",
@@ -243,7 +243,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jak se nazývá drobný, tečkovitý krevní výron do kůže nebo sliznic o velikosti do 2 mm?",
+        question: "Jak se v patologii přesně označuje drobný, tečkovitý krevní výron do kůže, sliznic či na serózní povrchy, jehož velikost nepřesahuje 2 milimetry?",
         options: [
           "Ekchymóza",
           "Petechie",
@@ -254,7 +254,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Petechie jsou drobné (tečkovité) krevní výrony o velikosti do 2 mm. Vznikají nejčastěji při nedostatku krevních destiček (trombocytopenii), poruchách jejich funkce nebo zvýšené propustnosti kapilár (vaskulitidy)."
       },
       {
-        question: "Co je to krvácení 'per diapedesin'?",
+        question: "Jakým mechanismem na úrovni cévní stěny kapilár dochází ke krvácení označovanému jako krvácení 'per diapedesin' (prolínáním)?",
         options: [
           "Krvácení z mechanicky přerušené cévy",
           "Krvácení způsobené nádorovým rozrušením cévní stěny",
@@ -281,7 +281,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Ve kterém z následujících orgánů vzniká typicky červený (hemoragický) infarkt?",
+        question: "Vzhledem k anatomickému uspořádání cévního zásobení, ve kterých lidských orgánech typicky vzniká červený (hemoragický) infarkt?",
         options: [
           "V ledvině",
           "V plicích a střevě",
@@ -292,7 +292,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Hemoragický infarkt vzniká v orgánech s dvojím krevním zásobením (např. plíce s a. pulmonalis a aa. bronchiales) nebo v tkáních s bohatou kolaterální sítí (střevo). Po uzávěru jedné cévy dochází k nekróze, ale do poškozeného ložiska stále proniká krev z druhého oběhu, která ho prosákne."
       },
       {
-        question: "Jaký tvar má typicky ložisko anemického infarktu v ledvině nebo slezině?",
+        question: "Vzhledem k větvícímu se charakteru přívodných tepen, jaký prostorový a makroskopický tvar má ložisko anemického (bílého) infarktu v ledvinách či slezině?",
         options: [
           "Pravidelně kruhový",
           "Tvar klínu (bází k povrchu orgánu, hrotem k zablokované cévě)",
@@ -318,7 +318,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co tvoří Virchowovu triádu rizikových faktorů pro vznik trombózy?",
+        question: "Které tři hlavní patofyziologické mechanismy a rizikové faktory tvoří klasickou Virchowovu triádu podmiňující vznik trombózy v cévním řečišti?",
         options: [
           "Hypotenze, anémie, trombocytopenie",
           "Poškození endotelu, poruchy proudění krve (stáza/turbulence) a hyperkoagulační stavy (trombofilie)",
@@ -329,7 +329,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Virchowova triáda popisuje tři hlavní patofyziologické mechanismy vedoucí k trombóze: poškození cévní stěny (endotelu), zpomalení či narušení toku krve (např. při imobilizaci) a změny ve složení krve vedoucí ke zvýšené srážlivosti."
       },
       {
-        question: "Jak se chová venózní (žilní) trombus z hlediska směru svého růstu (propagace)?",
+        question: "V jakém směru vzhledem k toku krve (k srdci či od srdce) roste a propaguje nově vznikající žilní (venózní) trombus?",
         options: [
           "Roste proti směru toku krve (retrográdně)",
           "Propaguje (roste) ve směru toku krve, tedy směrem k srdci",
@@ -356,7 +356,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Odkud nejčastěji pochází embolus, který způsobí plicní embolii?",
+        question: "Ze které konkrétní části cévního řečiště a z jakého typu žil nejčastěji pochází uvolněný embolus, který zapadne do plicnice a způsobí plicní embolii?",
         options: [
           "Z levé srdeční komory po infarktu",
           "Z hlubokých žil dolních končetin a pánve",
@@ -367,7 +367,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Více než 95 % případů plicní embolie je způsobeno uvolněním trombu z hlubokého žilního systému dolních končetin (hluboká žilní trombóza - HŽT) nebo pánve. Krevní proud zanese trombus přes dolní dutou žílu a pravé srdeční oddíly do plicnice."
       },
       {
-        question: "Co je to paradoxní embolie?",
+        question: "Jakým patologickým mechanismem a přes jakou srdeční anomálii dochází k rozvoji tzv. paradoxní embolie z žilního oběhu do systémových tepen?",
         options: [
           "Embolie, která nezpůsobí žádné příznaky",
           "Průchod žilního embolu do arteriálního řečiště přes patologickou komunikaci mezi pravým a levým srdcem (např. defekt septa síní)",
@@ -394,7 +394,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co je to rekanalizace trombu?",
+        question: "Jakým histologickým procesem v rámci organizace trombu fibroblasty a endoteliemi dochází k postupnému obnovení průtoku krve původně uzavřenou cévou?",
         options: [
           "Uvolnění trombu a jeho odplavení proudem krve",
           "Proces, při kterém v organizujícím se trombu vznikají nové cévní kanálky kryté endotelem, které částečně obnovují průtok krve",
@@ -405,7 +405,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Při organizaci trombu vrůstají ze stěny cévy endotelové buňky, které vytvářejí kapilární síť. Tyto kapiláry se postupně spojí a vytvoří kanálky procházející napříč trombem, což umožní alespoň částečný průtok krve původně ucpanou cévou."
       },
       {
-        question: "Který pigment je zodpovědný za žlutohnědé zbarvení ustupující modřiny (hematomu) a jak se mikroskopicky prokazuje?",
+        question: "Který specifický pigment vznikající odbouráním hemoglobinu způsobuje žlutohnědé zbarvení ustupujícího hematomu a jak se mikroskopicky prokazuje?",
         options: [
           "Lipofuscin; barvením Fontanou",
           "Hemosiderin; Perlovou reakcí (berlínská modř)",
@@ -432,7 +432,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jaký typ krvácení je typický pro koagulopatie (např. hemofilie A/B)?",
+        question: "Jaký klinický typ a lokalizace krvácení (do kterých struktur) je typický pro poruchy plazmatických koagulačních faktorů (koagulopatie)?",
         options: [
           "Drobné tečkovité krvácení (petechie) na kůži dolních končetin",
           "Krvácení do velkých kloubů (hemartros) a tvorba hlubokých svalových hematomů",
@@ -443,7 +443,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Koagulopatie představují poruchu sekundární hemostázy (tvorby fibrinu). Krvácení se typicky objevuje s latencí po traumatu a postihuje hluboké struktury - klouby (kolena, lokty) a svaly. Petechie jsou naopak typické pro poruchy destiček (trombocytopenie)."
       },
       {
-        question: "Hemofilie A je způsobena defektem kterého koagulačního faktoru?",
+        question: "Vrozený nedostatek nebo úplná absence kterého specifického koagulačního faktoru je příčinou klasické, na chromozom X vázané hemofilie A?",
         options: [
           "Faktoru IX (FIX)",
           "Faktoru VIII (FVIII)",
@@ -470,7 +470,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jak se v krevním nátěru morfologicky jeví nejčastější anémie - sideropenická (z nedostatku železa)?",
+        question: "Jaké jsou typické mikroskopické a tvarové změny erytrocytů v nátěru periferní krve u nejčastější anémie z nedostatku železa (sideropenické)?",
         options: [
           "Jako makrocytární normochromní (velké erytrocyty)",
           "Jako mikrocytární hypochromní (malé, bledé erytrocyty s velkým centrálním vyjasněním)",
@@ -481,7 +481,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Nedostatek železa znemožňuje tvorbu dostatečného množství hemoglobinu. Buňky procházejí v kostní dřeni větším počtem dělení a do oběhu se dostávají erytrocyty zmenšené (mikrocyty) a s nízkým obsahem barviva (hypochromní)."
       },
       {
-        question: "Co je příčinou perniciózní anémie?",
+        question: "Jaký autoimunitní mechanismus a v jakém orgánu (žaludku) je příčinou perniciózní anémie vedoucí k deficitu vitamínu B12?",
         options: [
           "Akutní krvácení z žaludečního vředu",
           "Autoimunitní destrukce parietálních buněk žaludku, což vede k nedostatku vnitřního faktoru (Intrinsic Factor) nutného pro vstřebávání vitamínu B12",
@@ -508,7 +508,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Kterých pět klasických lokálních příznaků charakterizuje akutní zánět?",
+        question: "Kterých pět klasických lokálních příznaků akutního zánětu popsal Celsus a Galen (v latinské terminologii) a co vyjadřují?",
         options: [
           "Horečka, zimnice, leukocytóza, splenomegalie, únava",
           "Rubor (zarudnutí), calor (horko), tumor (otok), dolor (bolest), functio laesa (porucha funkce)",
@@ -519,7 +519,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Pět klasických lokálních příznaků zánětu popsal z velké části již Celsus v 1. století n. l. (rubor, calor, tumor, dolor), pátý příznak (functio laesa) přidal později Galenos. Jsou to přímé makroskopické důsledky vaskulárních a buněčných změn v ložisku."
       },
       {
-        question: "Jaké buňky dominují v zánětlivém infiltrátu u akutního zánětu?",
+        question: "Který typ bílých krvinek (leukocytů) masivně migruje do ložiska zánětu a dominuje v infiltrátu během prvních 24–48 hodin akutní fáze?",
         options: [
           "Lymfocyty a plazmatické buňky",
           "Neutrofilní granulocyty (polymorfonukleáry)",
@@ -546,7 +546,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co způsobuje zvýšenou cévní propustnost (permeabilitu) v ložisku akutního zánětu?",
+        question: "Který hlavní vasoaktivní amin uvolňovaný z žírných buněk spouští kontrakci endotelií a zvýšení propustnosti kapilár v ložisku akutního zánětu?",
         options: [
           "Mechanické roztržení cévního řečiště",
           "Kontrakce endotelií a vznik interendotelových mezer působením mediátorů (např. histaminu)",
@@ -557,7 +557,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Působením zánětlivých mediátorů (histamin, leukotrieny, bradykinin) dochází k aktivní kontrakci endotelových buněk v postkapilárních venulách. Buňky se smrští, čímž mezi nimi vzniknou štěrbiny, kterými může unikat tekutina s velkými molekulami proteinů."
       },
       {
-        question: "Jak se mikroskopicky projevuje fáze alterace při zánětu?",
+        question: "Pokud hodnotíme zánětlivé ložisko pod mikroskopem, jaké morfologické změny v buňkách a tkáni reprezentují fázi alterace (poškození)?",
         options: [
           "Tvorbou jizvy a ukládáním kolagenu",
           "Poškozením parenchymu tkáně (od dystrofických změn až po nekrózu buněk)",
@@ -584,7 +584,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jak se liší zánětlivý exsudát od nezánětlivého transudátu?",
+        question: "Z hlediska obsahu bílkovin, přítomnosti buněk a specifické hmotnosti, jaký je zásadní rozdíl mezi zánětlivým exsudátem a transudátem?",
         options: [
           "Exsudát má nízký obsah bílkovin a chybí v něm buňky",
           "Exsudát má vysoký obsah bílkovin (> 30 g/l), vysokou aktivitu LDH a obsahuje zánětlivé buňky v důsledku zvýšené cévní propustnosti",
@@ -595,7 +595,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Exsudát doprovází zánětlivou reakci, kde je poškozená (propustná) cévní stěna, proto obsahuje proteiny (včetně velkého fibrinogenu) a buňky. Transudát vzniká mechanickým filtrováním při neporušené cévní stěně (např. u edému při srdečním selhání), a je proto na bílkoviny chudý."
       },
       {
-        question: "Která bílkovina plazmy se v exsudátu sráží na nerozpustná růžová vlákna viditelná v histologii?",
+        question: "Který plazmatický protein uniká při zánětlivém poškození cév do intersticila, kde polymeruje na nerozpustná eozinofilní (růžová) vlákna?",
         options: [
           "Albumin",
           "Fibrinogen (mění se na fibrin)",
@@ -622,7 +622,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jak se dělí exsudativní záněty podle charakteru exsudátu?",
+        question: "Na jaké čtyři základní podtypy dělíme exsudativní záněty podle převažující složky a charakteru produkovaného zánětlivého exsudátu?",
         options: [
           "Na primární a sekundární",
           "Na serózní, fibrinózní, hnisavý, katarální, hemoragický a gangrenózní",
@@ -633,7 +633,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Toto dělení je založeno na makroskopickém a mikroskopickém vzhledu zánětlivého výpotku (exsudátu), což odráží typ a intenzitu poškození cév a druh vyvolávajícího patogenu."
       },
       {
-        question: "Co je to katarální zánět?",
+        question: "Jak se v patologii definuje katarální zánět a na jakých površích lidského těla se s ním výhradně setkáváme?",
         options: [
           "Hluboký zánět kostí",
           "Serózní zánět sliznic doprovázený zvýšenou tvorbou a vylučováním hlenu (např. rýma)",
@@ -660,7 +660,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Proč se serózní exsudát na rozdíl od fibrinózního ve tkáni nesráží?",
+        question: "Z jakého biochemického důvodu nedochází ke srážení tekutiny u čistého serózního zánětu na rozdíl od zánětu fibrinózního?",
         options: [
           "Protože obsahuje protisrážlivé látky (heparin)",
           "Protože poškození cév je mírné a do exsudátu neproniká velká molekula fibrinogenu",
@@ -671,7 +671,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Při mírném zánětu (serózním) se propustnost cév zvýší jen natolik, že cévní stěnou projdou malé bílkoviny (např. albumin). Velký fibrinogen zůstává v krvi. Bez fibrinogenu se tekutina nemá jak srazit a zůstává vodnatá."
       },
       {
-        question: "Příkladem serózního zánětu na kůži je:",
+        question: "Který z následujících běžných klinických stavů na kůži je klasickým příkladem serózního zánětu s tvorbou puchýřů vyplněných exsudátem?",
         options: [
           "Kaseózní nekróza",
           "Puchýř (bula) u popálenin II. stupně nebo oparu (herpes)",
@@ -698,7 +698,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Co znamená makroskopický termín 'cor villosum' (chlupaté srdce)?",
+        question: "Které onemocnění perikardu a jaký typ exsudátu způsobují makroskopický vzhled srdce označovaný jako 'cor villosum' (chlupaté / chundelaté srdce)?",
         options: [
           "Vrozená vada s růstem vlasů na epikardu",
           "Fibrinózní perikarditida, kdy se na povrchu srdce sráží fibrin do podoby hrubých šedobílých vláken připomínajících chlupy",
@@ -709,7 +709,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Při fibrinózní perikarditidě (např. u uremie nebo revmatické horečky) se na povrchu epikardu a perikardu sráží fibrin. Pohybem srdce se tento fibrin formuje do nitkovitých struktur. Srdce pak makroskopicky vypadá 'chlupaté' (cor villosum)."
       },
       {
-        question: "Jak se liší krupózní fibrinózní zánět od diphtherického (difteroidního) na sliznici?",
+        question: "Z hlediska hloubky nekrózy a pevnosti uchycení pablán, jak se liší krupózní fibrinózní zánět od diphtherického (difteroidního) zánětu sliznic?",
         options: [
           "Krupózní zánět postihuje pouze kůži",
           "U krupózního zánětu pablána lpí volně na neporušeném epitelu a lze ji snadno sloupnout; u diphtherického zánětu pablána vrůstá do nekrotické sliznice a po jejím stržení sliznice krvácí a vzniká vřed",
@@ -736,7 +736,7 @@ const DATA_PATOLOGIE_2 = [
     },
     quiz: [
       {
-        question: "Jaký je zásadní rozdíl mezi abscesem a flegmónou?",
+        question: "Z hlediska ohraničení a šíření hnisavého zánětu ve tkáni, jaký je zásadní rozdíl mezi nově vzniklým abscesem a flegmónou?",
         options: [
           "Absces je způsoben viry, flegmóna bakteriemi",
           "Absces je ohraničený hnisavý zánět s destrukcí tkáně a tvorbou dutiny; flegmóna je difuzní, neohraničený hnisavý zánět šířící se volně intersticia (např. podkožím)",
@@ -747,7 +747,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Absces je lokalizovaný zánět, kde se kolem hnisavého ložiska vytvoří ohraničující vazivový val (pyogenní membrána). Flegmóna je neohraničená, šíří se volně tkáňovými štěrbinami a mezerami (často působením enzymů jako hyaluronidáza produkovaných streptokoky)."
       },
       {
-        question: "Co je to empyém?",
+        question: "Jak definujeme v chirurgické patologii termín 'empyém' a ve kterých částech lidského těla se nejčastěji rozvíjí?",
         options: [
           "Hnisavý zánět probíhající v kostní dřeni",
           "Nahromadění hnisu v přirozených (již existujících) tělesných dutinách nebo dutých orgánech (např. v pleurální dutině, žlučníku)",

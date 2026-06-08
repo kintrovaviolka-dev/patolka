@@ -15,7 +15,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jaký fixační prostředek je standardem v histopatologické praxi?",
+        question: "Při odesílání tkáňového vzorku k rutinnímu histopatologickému vyšetření (barvení H&E), který fixační prostředek je standardně považován za zlatou volbu k zabránění autolýzy tkáně?",
         options: [
           "96% ethanol",
           "10% neutrální pufrovaný formalin (formol)",
@@ -26,7 +26,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Standardem pro fixaci světelně-mikroskopických histologických vzorků je 10% formalin (což je vlastně 4% roztok formaldehydu), který fixuje tkáň síťováním proteinů a brání autolýze. Ethanol se užívá spíše v cytologii, glutaraldehyd pro elektronovou mikroskopii a fyziologický roztok nefixuje."
       },
       {
-        question: "Jaký je hlavní rozdíl mezi biopsií a cytologií?",
+        question: "Pokud srovnáváme histopatologickou biopsii a cytologické vyšetření z hlediska diagnostických možností a struktury vzorku, jaký je mezi nimi klíčový rozdíl?",
         options: [
           "Biopsie se provádí pouze na mrtvých, cytologie na živých",
           "Biopsie hodnotí architekturu tkáně, cytologie pouze jednotlivé buňky bez tkáňové struktury",
@@ -53,7 +53,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Proč vzniká posmrtná ztuhlost (rigor mortis)?",
+        question: "Jaký patofyziologický a biochemický mechanismus na úrovni svalových vláken (aktinu a myosinu) je zodpovědný za posmrtnou ztuhlost (rigor mortis)?",
         options: [
           "V důsledku hromadění vápníku a vyčerpání ATP, což zabrání uvolnění aktino-myosinového komplexu",
           "V důsledku dehydratace svalových vláken",
@@ -64,7 +64,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Po smrti klesá hladina ATP. Bez ATP nemůže dojít k rozpojení vazby mezi aktinem a myosinem ve svalech, což fixuje sval v kontrahovaném stavu, dokud nenastoupí autolýza proteinů."
       },
       {
-        question: "Jak lze makroskopicky odlišit posmrtné krevní koagulum (cruor) od intravitálního trombu?",
+        question: "Při pitvě zemřelého, jakými hlavními makroskopickými a mechanickými vlastnostmi lze spolehlivě odlišit posmrtně vzniklé krevní koagulum (cruor) od intravitálního trombu?",
         options: [
           "Koagulum je pevně lne k cévní stěně a je suché a drolivé",
           "Koagulum je lesklé, pružné, nelne pevně k cévní stěně a snadno se vyjme",
@@ -91,7 +91,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jak reaguje zárodek na poškození v období blastogeneze (první 2 týdny vývoje)?",
+        question: "Pokud dojde k expozici lidského zárodku škodlivému faktoru v období blastogeneze (první dva týdny po oplození), jaká je jeho typická reakce podle obecných pravidel embryopatologie?",
         options: [
           "Vznikem specifických izolovaných vad končetin",
           "Buď odumře (potrat), nebo se plně zregeneruje bez vad (pravidlo 'vše nebo nic')",
@@ -102,7 +102,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "V období blastogeneze jsou buňky zárodku ještě multipotentní. Poškození buď zahubí celý konceptus, nebo jsou poškozené buňky plně nahrazeny zbývajícími, a vývoj pokračuje normálně. Jedná se o pravidlo 'všechno nebo nic'."
       },
       {
-        question: "Co je to teratogen?",
+        question: "Jak se v obecné embryopatologii a teratologii definuje pojem 'teratogen' ve vztahu k vývoji embrya či fétu?",
         options: [
           "Látka či faktor vnějšího prostředí schopná vyvolat vrozenou vývojovou vadu",
           "Genetická mutace zděděná po otci",
@@ -129,7 +129,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jaký je rozdíl mezi agenezí a aplazií?",
+        question: "Jakým způsobem lze na embryonální úrovni přesně odlišit vrozené vývojové vady označované jako ageneze a aplazie orgánu?",
         options: [
           "Ageneze postihuje pouze končetiny, aplazie vnitřní orgány",
           "U ageneze chybí orgán i jeho embryonální základ; u aplazie je základ přítomen, ale orgán se nevyvinul",
@@ -140,7 +140,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Ageneze znamená kompletní absenci orgánu i jeho embryonálního primordia. U aplazie zárodečný základ (rudiment) vznikl, ale nedošlo k jeho dalšímu rozvoji v orgán."
       },
       {
-        question: "Jak se mikroskopicky projevuje čistá hypoplazie orgánu?",
+        question: "Pokud hodnotíme histologický preparát orgánu, u kterého došlo k čisté vrozené hypoplazii, jaký mikroskopický obraz v tkáni typicky nacházíme?",
         options: [
           "Tkáň je kompletně fibrotizovaná a chybí v ní cévy",
           "Architektonika tkáně je v zásadě normální, ale celkový objem a počet funkčních buněk je snížený",
@@ -167,7 +167,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jaký je hlavní patogenetický mechanismus poškození buněk ionizujícím zářením?",
+        question: "Jakým způsobem ionizující záření na molekulární a buněčné úrovni poškozuje buněčné struktury a indukuje zlomy v řetězcích DNA?",
         options: [
           "Přímé mechanické potrhání buněčných membrán",
           "Radiolýza vody s tvorbou reaktivních forem kyslíku (ROS) a přímé poškození DNA (zlomy)",
@@ -178,7 +178,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Ionizující záření poškozuje buňky dvěma způsoby: přímo (excitací a ionizací atomů v DNA s následnými zlomy řetězců) a nepřímo (radiolýzou vody za vzniku volných radikálů H* a OH*, které napadají membrány a makromolekuly)."
       },
       {
-        question: "Co charakterizuje popáleniny II. stupně?",
+        question: "Které klinické, makroskopické a strukturní znaky poškození kůže jsou nejvíce charakteristické pro termické popáleniny II. stupně?",
         options: [
           "Pouhý erytém (zarudnutí) bez poškození epidermis",
           "Tvorba puchýřů (buly) vyplněných exsudátem, poškození epidermis a horní dermis",
@@ -205,7 +205,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jaký typ nekrózy způsobují na sliznicích silné zásady (louhy)?",
+        question: "Při náhodném či úmyslném požití silných zásad (louhů), jaký typ nekrózy tyto korozivní látky vyvolávají na sliznici jícnu a žaludku?",
         options: [
           "Koagulační nekrózu",
           "Kolikvační (zkapalňující) nekrózu",
@@ -216,7 +216,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Zásady zmýdelňují tuky a rozpouštějí proteiny, což vede k rozbřednutí tkáně a vzniku kolikvační nekrózy. Tento proces umožňuje louhům pronikat hlouběji do tkání (např. stěny jícnu) než kyselinám, které koagulací proteinů vytvoří bariéru."
       },
       {
-        question: "Která část jaterního lalůčku je nejvíce poškozena při toxickém předávkování paracetamolem?",
+        question: "Při těžkém toxickém poškození jater v důsledku předávkování paracetamolem, která zóna jaterního lalůčku podléhá nekróze jako první a proč?",
         options: [
           "Periferní zóna (kolem portálních polí)",
           "Centrální (centrolobulární) zóna kolem v. centralis",
@@ -243,7 +243,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Co je to endotoxin a kde se nachází?",
+        question: "Co je z chemického hlediska endotoxin a v jaké buněčné struktuře se u gramnegativních bakterií přirozeně vyskytuje?",
         options: [
           "Protein secernovaný živými grampozitivními bakteriemi",
           "Lipopolysacharid (LPS), který je součástí vnější membrány gramnegativních bakterií a uvolňuje se při jejich rozpadu",
@@ -254,7 +254,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Endotoxin je lipopolysacharid (LPS) vázaný ve stěně gramnegativních bakterií. K jeho uvolnění dochází při lýze bakterií a v organismu vyvolává silnou zánětlivou reakci prostřednictvím aktivace makrofágů (hrozí septický šok)."
       },
       {
-        question: "Jak se histologicky projevují prionová onemocnění (např. Creutzfeldt-Jakobova choroba) v mozku?",
+        question: "Při mikroskopickém vyšetření mozkové kůry u pacienta s podezřením na prionové onemocnění, jaké typické histopatologické změny nacházíme?",
         options: [
           "Masivním hnisavým zánětem s infiltrací neutrofily",
           "Tvorbou spongiformních vakuol v neuronech a neuropilu bez přítomnosti zánětlivého infiltrátu",
@@ -281,7 +281,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jak se v krevním obrazu projevuje chronická otrava olovem?",
+        question: "Jaké charakteristické změny v krevním obrazu a v nátěru periferní krve provázejí chronickou otravu olovem (saturnismus)?",
         options: [
           "Makrocytární anémií s hypersegmentací neutrofilů",
           "Mikrocytární hypochromní anémií a přítomností bazofilního tečkování erytrocytů",
@@ -292,7 +292,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Olovo blokuje enzymy syntézy hemu, což vede k mikrocytární hypochromní anémii. Typickým nálezem v nátěru je bazofilní tečkování erytrocytů, které představuje agregáty ribozomální RNA vzniklé v důsledku inhibice ribonukleázy olovem."
       },
       {
-        question: "Který orgán je primárním cílem toxicity rtuťových solí (anorganické rtuti)?",
+        question: "Při expozici organismu anorganickým sloučeninám a solím rtuti, který lidský orgán a jeho konkrétní buněčné struktury jsou nejvíce poškozeny?",
         options: [
           "Srdce (kardiomyopatie)",
           "Ledviny (zejména proximální tubuly)",
@@ -319,7 +319,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jak vypadá azbestové tělísko v mikroskopickém vyšetření plicní tkáně?",
+        question: "Při histologickém vyšetření plicní tkáně u pacienta s podezřením na azbestózu, jaký specifický tvar a barvu vykazuje tzv. azbestové tělísko?",
         options: [
           "Jako koncentricky uspořádaný kolagenní uzel bez buněk",
           "Jako žlutohnědé vlákno tvaru činky obalené bílkovinným a železitým materiálem (hemosiderinem)",
@@ -330,7 +330,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Azbestová tělíska jsou tenká azbestová vlákna, která plicní makrofágy nedokážou kompletně fagocytovat. Pokryjí je proteinovým obalem s obsahem železa (hemosiderinu), což jim dává hnědavou barvu a typický tvar paličky či činky."
       },
       {
-        question: "Maligní mezoteliom pleury je typickým nádorovým následkem expozice:",
+        question: "Rozvoj vysoce agresivního maligního mezoteliomu pohrudnice (pleury) je v klinické praxi typickým karcinogenním následkem expozice kterému minerálnímu prachu?",
         options: [
           "Uhelnému prachu",
           "Azbestu",
@@ -357,7 +357,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "V jakém orgánu vzniká kolikvační (zkapalňující) nekróza při ischemickém infarktu?",
+        question: "Ve kterém z lidských orgánů dochází po uzávěru přívodné tepny (akutní ischemii) k rozvoji kolikvační (zkapalňující) nekrózy namísto koagulační?",
         options: [
           "V myokardu",
           "V mozku (encefalomalacie)",
@@ -368,7 +368,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Mozková tkáň je bohatá na lipidy a chudá na proteiny, a navíc obsahuje velké množství lyzosomálních enzymů. Při ischemii zde dochází k rychlému zkapalnění tkáně (kolikvaci) a vzniku pseudocysty (dutiny vyplněné likvorem)."
       },
       {
-        question: "Co jsou to Balserovy nekrózy?",
+        question: "Jakým patogenetickým a biochemickým mechanismem vznikají křídově bílá ložiska v tukové tkáni retroperitonea, označovaná jako Balserovy nekrózy?",
         options: [
           "Nekrózy mozkové kůry u Alzheimerovy choroby",
           "Křídově bílá ložiska nekrózy tukové tkáně vzniklá působením uvolněných pankreatických lipáz",
@@ -395,7 +395,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jak se v histologickém řezu barveném H&E standardní cestou jeví steatóza hepatocytů?",
+        question: "Pokud hodnotíme histologický řez jaterní tkání se steatózou barvený standardní metodou hematoxylin-eosin, jak se tukové kapénky v buňkách mikroskopicky jeví?",
         options: [
           "Jako intenzivně růžová (eozinofilní) zrna v cytoplasmě",
           "Jako opticky prázdné, ostře ohraničené vakuoly v cytoplasmě buňky",
@@ -406,7 +406,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Při běžném zpracování tkáně se používají organická rozpouštědla (např. xylen, alkohol), která tuky z buněk kompletně vylouží. V buňkách pak zbývají jen prázdná, kruhová místa - vakuoly."
       },
       {
-        question: "Který enzym chybí u Gaucherovy choroby a kde se hromadí jeho substrát?",
+        question: "Který konkrétní lyzosomální enzym chybí u pacientů s Gaucherovou chorobou a v jakých buňkách lidského těla se v důsledku toho hromadí jeho neštěpený substrát?",
         options: [
           "Kyselá maltáza; v kosterním svalu",
           "Glukocerebrosidáza; v makrofázích (monocyto-makrofágový systém)",
@@ -433,7 +433,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Který z typů glykogenóz postihuje primárně srdce a je způsoben defektem lyzosomálního enzymu (kyselé maltázy)?",
+        question: "Která z vrozených glykogenóz (GSD) postihuje primárně myokard a je jako jediná způsobena defektem lyzosomálního enzymu (kyselé maltázy / alfa-glukosidázy)?",
         options: [
           "Typ I (von Gierke)",
           "Typ II (Pompe)",
@@ -444,7 +444,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Glykogenóza typu II (Pompeova choroba) je jedinečná tím, že se jedná o lyzosomální střádavé onemocnění (deficit kyselé alfa-glukosidázy/kyselé maltázy). Glykogen se hromadí v lyzosomech mnoha tkání, nejvýrazněji však v myokardu, což vede k masivní kardiomegalii a srdečnímu selhání v kojeneckém věku."
       },
       {
-        question: "Jaký iontový kanál je mutován u cystické fibrózy (mukoviscidózy) a jaký je důsledek této mutace?",
+        question: "Který specifický iontový kanál na povrchu epiteliálních buněk je mutován u cystické fibrózy (mukoviscidózy) a jak se tato mutace projevuje na vlastnostech hlenu?",
         options: [
           "Sodíkový kanál ENaC; dochází k úniku sodíku do moči",
           "Chloridový kanál CFTR; dochází k sekreci hustého, dehydratovaného a vazkého hlenu exokrinními žlázami",
@@ -471,7 +471,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jak se histologicky specificky prokazuje přítomnost amyloidu ve tkáni?",
+        question: "Které speciální histologické barvení a jaký fyzikální optický jev se v polarizačním mikroskopu standardně používají k jednoznačnému průkazu amyloidu ve tkáni?",
         options: [
           "Barvením Sudanovou černí k průkazu lipidů",
           "Barvením Kongočervení, které v polarizovaném světle vykazuje jablečně zelený dvojlom",
@@ -482,7 +482,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Barvení Kongočervení se specificky váže na strukturu beta-skládaného listu amyloidu. V polarizačním mikroskopu tato vazba vyvolává charakteristický, diagnosticky klíčový jablečně zelený dvojlom (anizotropii)."
       },
       {
-        question: "U jakých stavů se typicky vyvíjí sekundární (AA) amyloidóza?",
+        question: "U jaké skupiny patologických stavů a onemocnění dochází v těle k dlouhodobé nadprodukci reaktantu akutní fáze SAA a rozvoji sekundární (AA) amyloidózy?",
         options: [
           "Při mnohočetném myelomu (nádor z plazmatických buněk)",
           "U dlouhodobě probíhajících chronických zánětlivých onemocnění (např. revmatoidní artritida, osteomyelitida, TBC)",
@@ -509,7 +509,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jaké jsou hladiny vápníku v séru u pacienta s dystrofickou kalcifikací?",
+        question: "Pokud vyšetřujeme hladinu vápníku v krevním séru u pacienta, u kterého dochází k dystrofickému zvápenatění (např. v tuberkulózním ložisku), jaké hodnoty naměříme?",
         options: [
           "Vždy extrémně zvýšené (hyperkalcémie)",
           "Normální (normokalcémie)",
@@ -520,7 +520,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Dystrofická kalcifikace probíhá u pacientů s normální kalcémií. Vápník se ukládá pasivně do poškozených, odumřelých či nekrotických tkání (např. staré jizvy, TBC ložiska, aterosklerotické pláty), které slouží jako krystalizační jádra."
       },
       {
-        question: "Proč postihuje metastatická kalcifikace přednostně ledviny, plíce a žaludeční sliznici?",
+        question: "Jaké lokální chemické a fyziologické podmínky v ledvinách, plicích a žaludeční sliznici způsobují, že tato místa přednostně podléhají metastatické kalcifikaci?",
         options: [
           "Protože tyto orgány mají nejnižší průtok krve",
           "Protože tyto orgány aktivně vylučují kyselé látky, což lokálně zvyšuje pH (alkalizuje tkáň) a usnadňuje srážení vápníku",
@@ -547,7 +547,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Který pigment je označován jako 'pigment z opotřebení' a doprovází hnědou atrofii jater a myokardu?",
+        question: "Který žlutohnědý intracytoplasmatický pigment se hromadí v buňkách při stárnutí a atrofii a je označován jako 'pigment z opotřebení' (pigmentum ex atrophy)?",
         options: [
           "Hemosiderin",
           "Lipofuscin",
@@ -558,7 +558,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Lipofuscin je pigment z opotřebení. Hromadí se v dlouho žijících buňkách (neurony, kardiomyocyty, hepatocyty) jako produkt nedokončené lyzosomální degradace peroxidovaných membránových lipidů. Při atrofii orgánů se koncentruje a dává jim hnědou barvu."
       },
       {
-        question: "Jak se liší albinismus od vitiliga?",
+        question: "Z hlediska etiopatogeneze a přítomnosti melanocytů v kůži, jaký je zásadní rozdíl mezi vrozeným albinismem a získaným vitiligem?",
         options: [
           "Albinismus je vrozená porucha syntézy melaninu (chybí tyrosináza) při zachovaném počtu melanocytů; vitiligo je získané ložiskové chybění melanocytů",
           "Albinismus postihuje pouze oči, vitiligo pouze kůži",
@@ -585,7 +585,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jakým barvením lze v histologickém řezu spolehlivě odlišit hemosiderin od lipofuscinu?",
+        question: "Které speciální barvicí metody se používají v histologii k jednoznačnému rozlišení hemosiderinu (obsahujícího železo) od lipofuscinu?",
         options: [
           "Kongočervení",
           "Perlovou reakcí (barvení berlínskou modří k průkazu Fe3+)",
@@ -596,7 +596,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Hemosiderin obsahuje železité ionty (Fe3+), které po reakci s ferrokyanidem draselným a kyselinou chlorovodíkovou (Perlsova reakce) vytvářejí intenzivně modrou sraženinu (berlínskou modř). Lipofuscin železo neobsahuje a barví se negativně."
       },
       {
-        question: "Která z následujících trojic příznaků tvoří klasickou manifestaci rozvinuté hemochromatózy (bronzového diabetu)?",
+        question: "Které tři hlavní klinické a patologické příznaky tvoří klasickou diagnostickou triádu u pacientů s plně rozvinutou vrozenou hemochromatózou?",
         options: [
           "Dna, šedý zákal, hypertenze",
           "Cirhóza jater, bronzové zbarvení kůže, diabetes mellitus",
@@ -623,7 +623,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Proč se u prehepatálního (hemolytického) ikteru bilirubin neobjevuje v moči (chubí bilirubinurie)?",
+        question: "Z jakého biochemického důvodu se u čistého prehepatálního (hemolytického) ikteru nevyskytuje bilirubin v moči, přestože je pacient žlutý?",
         options: [
           "Protože ledviny jsou při hemolýze poškozené a nefiltrují vůbec nic",
           "Protože v krvi dominuje nekonjugovaný bilirubin, který je nerozpustný ve vodě a pevně vázaný na albumin, takže neprojde glomerulárním filtrem",
@@ -634,7 +634,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Nekonjugovaný bilirubin, který dominuje u prehepatálního ikteru, není rozpustný ve vodě a v oběhu cestuje navázaný na nosný protein albumin. Tento komplex je příliš velký, než aby mohl projít přes glomerulární membránu ledvin do moči."
       },
       {
-        question: "Co je to kernikterus (jádrový ikterus)?",
+        question: "Jak definujeme patologický stav označovaný jako kernikterus (jádrový ikterus) u novorozenců a jaké buňky jsou jím poškozeny?",
         options: [
           "Zvápenatění bazálních ganglií u starších osob",
           "Toxické poškození a žluté zbarvení bazálních ganglií mozku u novorozenců volným nekonjugovaným bilirubinem při těžké hyperbilirubinémii",
@@ -661,7 +661,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Které laboratorní parametry v séru jsou nejtypičtěji zvýšené u rozvinutého intrahepatálního (hepatocelulárního) ikteru?",
+        question: "Pokud vyšetřujeme krevní sérum pacienta s akutním intrahepatálním (hepatocelulárním) ikterem, které laboratorní parametry a enzymy budou nejvíce zvýšené?",
         options: [
           "Pouze nekonjugovaný bilirubin, aminotransferázy jsou v normě",
           "Smíšený bilirubin (konjugovaný i nekonjugovaný) a výrazně zvýšené jaterní enzymy ALT a AST",
@@ -672,7 +672,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Poškození jaterních buněk vede k poruše jak konjugace (stoupá nekonjugovaný bilirubin), tak vylučování (stoupá konjugovaný bilirubin). Rozpadem hepatocytů se navíc do oběhu uvolňují nitrobuněčné enzymy, zejména alaninaminotransferáza (ALT) a aspartátaminotransferáza (AST)."
       },
       {
-        question: "Gilbertův syndrom je příkladem:",
+        question: "Do jaké skupiny patologických stavů řadíme Gilbertův syndrom a jaký je jeho vliv na celkové zdraví pacienta?",
         options: [
           "Získaného toxického poškození jater alkoholem",
           "Benigní vrozené poruchy vychytávání a konjugace bilirubinu v játrech (snížená aktivita glukuronyltransferázy)",
@@ -699,7 +699,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Jak se mění barva stolice a moči u posthepatálního (obstrukčního) ikteru?",
+        question: "Při úplném uzávěru žlučových cest (posthepatálním ikteru), jaké typické změny barvy stolice a moči pozorujeme u pacienta a proč?",
         options: [
           "Stolice je tmavě černá, moč je světlá jako voda",
           "Stolice je světlá, šedobílá (acholická) a moč je tmavě hnědá (vzhledu černého piva)",
@@ -710,7 +710,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Protože žluč nemůže téci do střeva, nevzniká sterkobilin a stolice ztrácí barvu (je acholická). Naopak konjugovaný bilirubin se hromadí v krvi, je rozpustný ve vodě a ledviny ho masivně vylučují do moči, kterou barví do tmavě hnědé barvy."
       },
       {
-        question: "Které enzymy v séru jsou nejvýrazněji zvýšené u posthepatální obstrukce žlučovodu?",
+        question: "Při posthepatální obstrukci společného žlučovodu, které dva sérové enzymy (ukazatele biliární stázy) vykazují nejvýraznější vzestup?",
         options: [
           "ALT a AST",
           "ALP (alkalická fosfatáza) a GMT (gama-glutamyltransferáza)",
@@ -737,7 +737,7 @@ const DATA_PATOLOGIE_1 = [
     },
     quiz: [
       {
-        question: "Který typ močových kamenů je nejčastější a vyznačuje se ostnatým povrchem, který snadno zraňuje sliznici a vyvolává hematurii?",
+        question: "Který typ močových konkrementů (urolitů) je v lidské populaci statisticky nejčastější a kvůli svému drsnému, ostnatému povrchu často způsobuje krvácení a koliky?",
         options: [
           "Struvitové (triplfosfátové) kameny",
           "Kameny z kalciumoxalátu (oxalátové)",
@@ -748,7 +748,7 @@ const DATA_PATOLOGIE_1 = [
         explanation: "Kameny z oxalátu vápenatého tvoří cca 70-80 % všech močových kamenů. Mají velmi tvrdou konzistenci a často ostrý, ostnatý či ježatý povrch, kterým mechanicky dráždí a poškozují sliznici močovodů, což se projevuje příměsí krve v moči (hematurií)."
       },
       {
-        question: "Co je to odlitkový konkrement (korálový kámen)?",
+        question: "Jak definujeme v urologické patologii termín 'odlitkový konkrement' (korálový kámen) ledviny a v jakých částech ledvinné pánvičky se tvoří?",
         options: [
           "Žlučový kámen, který kompletně vyplňuje žlučník a brání jeho stahování",
           "Velký močový kámen (často struvitový), který vyplňuje a kopíruje celý tvar ledvinné pánvičky a kalichů",
