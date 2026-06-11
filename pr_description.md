@@ -1,14 +1,10 @@
-# ⚡ Use event delegation for rendering study question cards
+# 🔒 Security Vulnerability Fix: DOM-based XSS
 
-## 💡 What
-This PR refactors the study question card grid to use **Event Delegation**. Instead of attaching individual `click` event listeners on every generated DOM element in the grid (which is O(N)), it replaces them with a single delegated event listener attached to the parent `cardsGrid` container.
+🎯 **What:**
+Fixed a DOM-based Cross-Site Scripting (XSS) vulnerability in `app.js` caused by directly inserting unsanitized quiz questions, explanations, and options into the DOM via `innerHTML`.
 
-## 🎯 Why
-When `renderQuestionsGrid()` runs, it destroys the inner HTML and creates/appends many individual DOM elements, attaching an anonymous function as an event listener for each element. Since there are thousands of cards, this leads to heavy garbage collection during re-renders, higher memory spikes, and slightly slower execution times due to the O(N) allocation of event handlers. Event delegation resolves this memory bottleneck by keeping a single event handler active regardless of the number of child cards generated.
+⚠️ **Risk:**
+If an attacker manages to inject malicious HTML/JavaScript into the quiz question, option, or explanation strings, those scripts would be evaluated when rendered via `innerHTML`. This could lead to a compromised user session, unintended actions taken on the user's behalf, or exposure of sensitive data in local storage.
 
-## 📊 Measured Improvement
-A node-based benchmarking script was run utilizing JSDOM to simulate rendering the study cards matrix, revealing:
-
-- **Baseline Memory Delta (O(N) handlers):** ~80 MB per 1000 renders
-- **Delegated Memory Delta (1 handler):** ~24 MB per 1000 renders
-- **Overall result:** Memory growth during grid re-renders was reduced by **~70%** (~3x more memory efficient). Memory management and GC overhead will be much lighter, especially on lower-end devices processing the full un-filtered card list.
+🛡️ **Solution:**
+Introduced an `escapeHTML` helper function at the top of `app.js` to properly sanitize inputs by escaping special HTML characters (`&`, `<`, `>`, `'`, `"`). Applied `escapeHTML` to dynamic content interpolation expressions (`q.question`, `q.explanation`, and `opt`) inside the `renderQuiz()` function before updating the DOM with `innerHTML`.

@@ -1,6 +1,19 @@
 // app.js - Aplikační logika studijního portálu Obecné Patologie
 
 document.addEventListener("DOMContentLoaded", () => {
+
+// Pomocná funkce pro zamezení XSS
+function escapeHTML(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/[&<>'"]/g, tag => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    "'": '&#39;',
+    '"': '&quot;'
+  }[tag] || tag));
+}
+
   // 1. Sloučení databází otázek
   const QUESTIONS = [
     ...(window.DATA_PATOLOGIE_1 || []).map(q => ({ ...q, category: "Obecná" })),
@@ -353,14 +366,14 @@ document.addEventListener("DOMContentLoaded", () => {
       
       if (q.type === "type-in") {
         quizCard.innerHTML = `
-          <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
+          <div class="quiz-question">${qIndex + 1}. ${escapeHTML(q.question)}</div>
           <div class="quiz-type-in-container" id="type-in-container-${qIndex}">
             <input type="text" class="quiz-type-in-input" id="type-in-input-${qIndex}" placeholder="Napište svou odpověď...">
             <button class="btn btn-primary quiz-type-in-submit" id="type-in-submit-${qIndex}">Ověřit</button>
           </div>
           <div class="quiz-type-in-feedback" id="feedback-${qIndex}" style="display: none;"></div>
           <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
-            <strong>Vysvětlení:</strong> ${q.explanation}
+            <strong>Vysvětlení:</strong> ${escapeHTML(q.explanation)}
           </div>
         `;
       } else {
@@ -368,18 +381,18 @@ document.addEventListener("DOMContentLoaded", () => {
         q.options.forEach((opt, optIndex) => {
           optionsHTML += `
             <button class="quiz-option" data-qindex="${qIndex}" data-optindex="${optIndex}">
-              ${opt}
+              ${escapeHTML(opt)}
             </button>
           `;
         });
 
         quizCard.innerHTML = `
-          <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
+          <div class="quiz-question">${qIndex + 1}. ${escapeHTML(q.question)}</div>
           <div class="quiz-options">
             ${optionsHTML}
           </div>
           <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
-            <strong>Vysvětlení:</strong> ${q.explanation}
+            <strong>Vysvětlení:</strong> ${escapeHTML(q.explanation)}
           </div>
         `;
       }
