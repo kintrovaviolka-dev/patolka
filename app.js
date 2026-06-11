@@ -1,6 +1,18 @@
 // app.js - Aplikační logika studijního portálu Obecné Patologie
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Bezpečnostní funkce pro prevenci XSS
+  function escapeHTML(str) {
+    if (str === null || str === undefined) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
   // 1. Sloučení databází otázek
   const QUESTIONS = [
     ...(window.DATA_PATOLOGIE_1 || []).map(q => ({ ...q, category: "Obecná" })),
@@ -235,12 +247,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <div class="card-top">
-          <span class="card-id">${q.id}</span>
-          <div class="card-box-indicator b-${qProgress.box}" title="Krabička ${qProgress.box}"></div>
+          <span class="card-id">${escapeHTML(q.id)}</span>
+          <div class="card-box-indicator b-${escapeHTML(qProgress.box)}" title="Krabička ${escapeHTML(qProgress.box)}"></div>
         </div>
-        <h3 class="card-title">${q.title}</h3>
+        <h3 class="card-title">${escapeHTML(q.title)}</h3>
         <div class="card-footer">
-          <span class="card-section">${q.section}</span>
+          <span class="card-section">${escapeHTML(q.section)}</span>
           ${isDue ? `<span class="due-badge">K opakování</span>` : ""}
           ${isUnstudied && !isDue ? `<span class="due-badge" style="background-color: var(--primary-light); color: var(--primary); border-color: rgba(59,130,246,0.2)">Nová</span>` : ""}
         </div>
