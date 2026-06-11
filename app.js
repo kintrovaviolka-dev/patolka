@@ -262,14 +262,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dialogTitle.textContent = activeQuestion.title;
     dialogSection.textContent = activeQuestion.section;
     
-    studyDefinition.innerHTML = activeQuestion.content.definition;
-    studyEtiology.innerHTML = activeQuestion.content.etiology;
-    studyPathogenesis.innerHTML = activeQuestion.content.pathogenesis;
+    studyDefinition.textContent = activeQuestion.content.definition;
+    studyEtiology.textContent = activeQuestion.content.etiology;
+    studyPathogenesis.textContent = activeQuestion.content.pathogenesis;
     
     // Zvýraznění makro/mikro (specifické pro patologii)
-    studyMacroscopy.innerHTML = activeQuestion.content.macroscopy;
-    studyMicroscopy.innerHTML = activeQuestion.content.microscopy;
-    studyClinical.innerHTML = activeQuestion.content.clinical;
+    studyMacroscopy.textContent = activeQuestion.content.macroscopy;
+    studyMicroscopy.textContent = activeQuestion.content.microscopy;
+    studyClinical.textContent = activeQuestion.content.clinical;
 
     // Vykreslení kvízu
     renderQuiz();
