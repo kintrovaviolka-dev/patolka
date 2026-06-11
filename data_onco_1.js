@@ -98,7 +98,7 @@ const DATA_ONCO_1 = [
         explanation: "Zachování celistvosti bazální membrány je klíčovým rozlišovacím znakem neinvazivních lézí (dysplázie, CIS) od invazivních karcinomů."
       },
       {
-        question: "Jaká zkratka označuje prekancerózu dlaždicového epitelu děložního čípku (cervikální intraepiteliální neoplazii)?",
+        question: "Jaká zkratka označuje prekancerózu dlaždicového epitelu děložního čípku?",
         type: "type-in",
         correct: ["CIN"],
         explanation: "CIN (Cervical Intraepithelial Neoplasia) se dělí do tří stupňů (CIN 1–3) podle hloubky postižení epitelu."
@@ -348,7 +348,7 @@ const DATA_ONCO_1 = [
           "Nádor z kostní tkáně"
         ],
         correct: 1,
-        explanation: "Leiomyom je benigní nádor z buněk hladké svaloviny. Je to nejčastější nádor u žen vůbec, postihuje dělohu (myometrium) u více než 70 % žen ve fertilním věku, kde způsobuje krvácení a neplodnost."
+        explanation: "Leiomyom je benigní nádor z buněk hladké svaloviny. Je to nejčastější nádor u žen vůbec, postihuje dělohu (myometrium) u žen ve fertilním věku, kde způsobuje krvácení a neplodnost."
       }
     ,
       {
@@ -424,7 +424,7 @@ const DATA_ONCO_1 = [
     category: "Onkologie",
     keywords: ["carcinoma in situ", "CIS", "bazální", "membrána", "intraepiteliální", "metaplázie", "neinvazivní"],
     content: {
-      definition: "Carcinoma in situ (CIS) neboli neinvazivní intraepiteliální karcinom je rané stadium rakoviny, kdy buňky vykazují všechny cytologické znaky malignity (anaplázii, pleomorfismus, patologické mitózy), ale **nerostou infiltrativně a nerespektují basální membránu**.",
+      definition: "Carcinoma in situ (CIS) neboli neinvazivní intraepiteliální karcinom je rané stadium rakoviny, kdy buňky vykazují všechny cytologické znaky malignity (anaplázii, pleomorfismus, patologické mitózy), ale **nerostou infiltrativně a respektují basální membránu**.",
       etiology: "Stejná jako u invazivních karcinomů: HPV infekce (děložní hrdlo), UV záření (kůže - Bowenova choroba), kouření (bronchus), chronické podráždění.",
       pathogenesis: "Představuje poslední krok v procesu karcinogeneze před vznikem invazivního karcinomu. Protože bazální membrána je celistvá a v epitelu chybí krevní a lymfatické cévy, CIS **není schopen metastázovat**. Pokud se neodstraní, buňky začnou produkovat metaloproteinázy, naruší bazální membránu a přejdou do invazivního stadia.",
       macroscopy: "Často makroskopicky nenápadný, projevuje se jen jako zhrubnutí sliznice, leukoplakie, zarudnutí (erytroplakie) nebo eroze. Na děložním čípku se detekuje jodovým testem (Schillerův test - dysplastický epitel neobsahuje glykogen a nebarví se hnědě) nebo kolposkopií.",
