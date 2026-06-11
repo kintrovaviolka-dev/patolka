@@ -17,23 +17,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Které typy mononukleárních buněk typicky dominují v zánětlivém infiltrátu u nehnisavého lymfoplazmocytárního zánětu?",
         options: [
-          "Neutrofilní granulocyty a eosinofily",
-          "Lymfocyty, plazmatické buňky a makrofágy",
           "Fibroblasty a keratinocyty",
-          "Mnohojaderné obří buňky z cizích těles"
+          "Mnohojaderné obří buňky z cizích těles",
+          "Neutrofilní granulocyty a eosinofily",
+          "Lymfocyty, plazmatické buňky a makrofágy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Lymfoplazmocytární zánět je charakteristický přítomností mononuclearů (lymfocytů a plazmocytů). Je to typický obraz virových infekcí a chronických zánětlivých stavů. Neutrofily zde chybí."
       },
       {
         question: "Do které skupiny zánětlivých reakcí řadíme virovou myokarditidu (např. vyvolanou coxsackieviry) z hlediska charakteru exsudátu?",
         options: [
-          "Hnisavého zánětu s tvorbou abscesů",
-          "Nehnisavého lymfocytárního zánětu",
           "Fibrinózního krupózního zánětu",
-          "Granulomatózního zánětu"
+          "Granulomatózního zánětu",
+          "Hnisavého zánětu s tvorbou abscesů",
+          "Nehnisavého lymfocytárního zánětu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Virové infekce srdce (např. způsobené coxsackieviry) vyvolávají v intersticiu myokardu nehnisavou lymfocytární reakci. Lymfocyty infiltrují prostor mezi kardiomyocyty a ničí infikované buňky."
       }
     ]
@@ -55,23 +55,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Které modifikované buňky imunitního systému jsou hlavní stavební jednotkou granulomů a vznikají stimulací makrofágů interferonem-gama?",
         options: [
-          "Plazmatické buňky",
-          "Epiteloidní buňky",
           "Neutrofilní granulocyty",
-          "Fibroblasty"
+          "Fibroblasty",
+          "Plazmatické buňky",
+          "Epiteloidní buňky"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Epiteloidní buňky jsou aktivované makrofágy. Mají hojnou, světle růžovou cytoplasmu a protáhlá jádra (připomínají buňky epitelu). Jsou klíčovým prvkem pro definici granulomu."
       },
       {
         question: "U kterého specifického infekčního onemocnění nacházíme typicky granulomy (tuberkuly) s centrální kaseózní (sýrovitou) nekrózou?",
         options: [
-          "Sarkoidóza",
-          "Tuberkulóza (TBC)",
           "Morbus Crohn",
-          "Silikóza"
+          "Silikóza",
+          "Sarkoidóza",
+          "Tuberkulóza (TBC)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pro tuberkulózu je typický granulom (tuberkul) s centrální kaseózní (sýrovitou) nekrózou. Sarkoidóza a Morbus Crohn mají granulomy nekaseifikující (bez centrální nekrózy)."
       }
     ]
@@ -93,23 +93,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Která anaerobní, spóry tvořící bakterie se přemnoží v tlustém střevě po širokospektré ATB terapii a vyvolá pseudomembranózní kolitidu?",
         options: [
-          "Escherichia coli",
-          "Clostridium difficile (Clostridioides difficile)",
           "Salmonella enteritidis",
-          "Shigella dysenteriae"
+          "Shigella dysenteriae",
+          "Escherichia coli",
+          "Clostridium difficile (Clostridioides difficile)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Clostridium difficile je anaerobní spórotvorná bakterie. Při potlačení normální střevní mikroflóry širokospektrými antibiotiky (např. klindamycinem) se přemnoží a svými toxiny vyvolá pseudomembranózní kolitidu."
       },
       {
         question: "Pokud se pokusíme mechanicky sloupnout pevně lpící fibrinové pablány (pseudomembrány) u záškrtu nebo pseudomembranózní kolitidy, co se stane se sliznicí pod nimi?",
         options: [
-          "Sloupnou se snadno a sliznice pod nimi je zcela nepoškozená a hladká",
-          "Pablána pevně lpí na podkladu, při jejím stržení dochází k poškození tkáně, krvácení a vzniku ulcerací",
           "Pablána se okamžitě rozpustí",
-          "Sliznice se přemění v kost"
+          "Sliznice se přemění v kost",
+          "Sloupnou se snadno a sliznice pod nimi je zcela nepoškozená a hladká",
+          "Pablána pevně lpí na podkladu, při jejím stržení dochází k poškození tkáně, krvácení a vzniku ulcerací"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pseudomembrána je pevně kotvena ve tkáni, protože fibrin polymeroval přímo uvnitř nekrotické sliznice. Její násilné stržení proto poškodí cévnatou tkáň pod ní, vyvolá krvácení a zanechá slizniční defekt (vřed)."
       }
     ]
@@ -131,23 +131,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Z hlediska přítomnosti či absence centrální tkáňové nekrózy, jak se liší mikroskopický nález granulomu u sarkoidózy od tuberkulózy?",
         options: [
-          "U sarkoidózy granulom chybí, je zde pouze hnisání",
-          "Granulom u sarkoidózy neobsahuje centrální kaseózní nekrózu (je nekaseifikující); u tuberkulózy je centrální kaseózní nekróza typická",
           "Sarkoidóza obsahuje pouze plazmatické buňky",
-          "V TBC granulomu chybí lymfocyty"
+          "V TBC granulomu chybí lymfocyty",
+          "U sarkoidózy granulom chybí, je zde pouze hnisání",
+          "Granulom u sarkoidózy neobsahuje centrální kaseózní nekrózu (je nekaseifikující); u tuberkulózy je centrální kaseózní nekróza typická"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hlavním histopatologickým rozdílem je přítomnost/absence kaseózní nekrózy. TBC granulomy mají typicky střed vyplněný bezstrukturní odumřelou hmotou (kaseózní nekróza). Sarkoidní granulomy jsou 'čisté' - tvořené pouze nakupením epiteloidních a obřích buněk bez nekrózy."
       },
       {
         question: "Které klasické histologické barvení se používá k průkazu acidorezistentních mykobakterií (M. tuberculosis) ve tkáňových řezech?",
         options: [
-          "Barvení Kongočervení",
-          "Barvení podle Ziehl-Neelsena (k průkazu acidorezistentních tyčinek)",
           "Perlsova reakce",
-          "Barvení podle Fontany"
+          "Barvení podle Fontany",
+          "Barvení Kongočervení",
+          "Barvení podle Ziehl-Neelsena (k průkazu acidorezistentních tyčinek)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Mycobacterium tuberculosis má ve své stěně vysoký obsah lipidů (kyseliny mykolové), což ztěžuje běžné barvení. Je acidorezistentní. Barvení podle Ziehl-Neelsena využívá karbolfuchsin a kyselý alkohol - mykobakteria zůstávají svítivě červená na modrém pozadí."
       }
     ]
@@ -169,23 +169,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Který specifický buněčný typ (pěnový makrofág obsahující bakterie) nacházíme v histologickém řezu u pacientů s rhinoskleromem?",
         options: [
-          "Langhansova obří buňka",
-          "Mikuliczova buňka (velký pěnový makrofág obsahující Klebsielly)",
           "Virchowova buňka",
-          "Gaucherova buňka"
+          "Gaucherova buňka",
+          "Langhansova obří buňka",
+          "Mikuliczova buňka (velký pěnový makrofág obsahující Klebsielly)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Rhinosklerom je chronický granulomatózní zánět dýchacích cest. Typickým znakem jsou Mikuliczovy buňky - makrofágy s vakuolizovanou cytoplasmou vyplněnou bakteriemi Klebsiella rhinoscleromatis."
       },
       {
         question: "Co je to guma (gumma) z hlediska své struktury a pro které stadium kterého pohlavního onemocnění je typická?",
         options: [
-          "Zápalné ložisko plic u TBC",
-          "Granulomatózní ložisko s centrální elasticko-gumovitou nekrózou a výrazným lemem plazmatických buněk, typické pro 3. stadium syfilis",
           "Nádor sliznice jícnu",
-          "Ukládání lipidů v kůži"
+          "Ukládání lipidů v kůži",
+          "Zápalné ložisko plic u TBC",
+          "Granulomatózní ložisko s centrální elasticko-gumovitou nekrózou a výrazným lemem plazmatických buněk, typické pro 3. stadium syfilis"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Gumma je specifické ložisko typické pro terciární (pozdní) stadium příjice (syfilis). Má charakteristickou konzistenci podobnou gumě v důsledku nedokonalé nekrózy tkáně a je obklopeno infiltrátem s velkým množstvím plazmatických buněk."
       }
     ]
@@ -207,23 +207,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Z hlediska čistoty rány, přítomnosti infekce, množství granulační tkáně a výsledné jizvy, jak se liší hojení per primam a per secundam?",
         options: [
-          "Per primam se hojí pouze zlomeniny",
-          "Per primam probíhá u čistých ran s přiblíženými okraji s minimem jizvení; per secundam u infikovaných ran s velkou ztrátou tkáně, které se hojí přes granulační tkáň a zanechávají velkou jizvu",
           "Per secundam nevyžaduje účast fibroblastů",
-          "Rozdíl je pouze v délce hojení, vzhled jizvy je stejný"
+          "Rozdíl je pouze v délce hojení, vzhled jizvy je stejný",
+          "Per primam se hojí pouze zlomeniny",
+          "Per primam probíhá u čistých ran s přiblíženými okraji s minimem jizvení; per secundam u infikovaných ran s velkou ztrátou tkáně, které se hojí přes granulační tkáň a zanechávají velkou jizvu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hojení per primam (primární záměr) je ideální způsob hojení (např. chirurgický řez). Per secundam (sekundární záměr) nastává tam, kde okraje rány nelze přiblížit nebo je přítomna infekce. Defekt se musí zdlouhavě vyplňovat granulační tkání odspodu, což vede k velké jizvě."
       },
       {
         question: "Podle jakého uspořádání buněčných jader v cytoplasmě lze pod mikroskopem odlišit obří buňky Langhansova typu od obřích buněk z cizích těles?",
         options: [
-          "Buňky z cizích těles nemají žádná jádra",
-          "U Langhansových buněk jsou jádra uspořádaná na periferii cytoplasmy do tvaru podkovy či věnce; u buněk z cizích těles jsou jádra nepravidelně rozptýlená po celé cytoplasmě",
           "Langhansovy buňky jsou menší než lymfocyty",
-          "Neliší se, jde o synonyma"
+          "Neliší se, jde o synonyma",
+          "Buňky z cizích těles nemají žádná jádra",
+          "U Langhansových buněk jsou jádra uspořádaná na periferii cytoplasmy do tvaru podkovy či věnce; u buněk z cizích těles jsou jádra nepravidelně rozptýlená po celé cytoplasmě"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Oba typy buněk vznikají fúzí makrofágů. U Langhansových (typických pro TBC) je uspořádání jader vysoce organizované (periferní podkova). U buněk z cizích těles (reakce na stehy, implantáty) jsou desítky jader nepravidelně shluknuté uprostřed nebo roztroušené v cytoplasmě."
       }
     ]
@@ -245,23 +245,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Jak definujeme v ortopedické patologii pojem pakloub (pseudoartróza) jako komplikaci hojení zlomeniny?",
         options: [
-          "Vrozené zdvojení končetiny",
-          "Komplikace hojení zlomeniny, kdy při nedostatečné fixaci nedojde ke kostnímu spojení úlomků, ale v místě vznikne vazivové a chrupavčité spojení s patologickou pohyblivostí",
           "Nádorové bujení kosti napodobující kloub",
-          "Zánět kloubu způsobený bakteriemi"
+          "Zánět kloubu způsobený bakteriemi",
+          "Vrozené zdvojení končetiny",
+          "Komplikace hojení zlomeniny, kdy při nedostatečné fixaci nedojde ke kostnímu spojení úlomků, ale v místě vznikne vazivové a chrupavčité spojení s patologickou pohyblivostí"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pro tvorbu kosti v kalusu je nutný klid a dobré cévní zásobení. Pokud se úlomky neustále pohybují, granulační tkáň se nemůže přeměnit v kost, ale diferencuje se ve vazivo a chrupavku, čímž vznikne falešný kloub (pseudoartróza)."
       },
       {
         question: "Který typ nezralé, chaoticky uspořádané kostní tkáně se tvoří jako první v procesu osifikace tvrdého kalusu (kostěného svalku)?",
         options: [
-          "Lamelární kost (zralá)",
-          "Pletivová kost (fibrilární / nezralá)",
           "Chrupavka hyalinní",
-          "Kompaktní kost s Haversovými systémy"
+          "Kompaktní kost s Haversovými systémy",
+          "Lamelární kost (zralá)",
+          "Pletivová kost (fibrilární / nezralá)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "První novotvořená kostní tkáň je nezralá pletivová kost. Má nepravidelné uspořádání kolagenních vláken a je mechanicky méně odolná. Teprve během remodelace (působením zátěže) je nahrazena vysoce organizovanou lamelární kostí."
       }
     ]
@@ -283,23 +283,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Jak definujeme genetickou odchylku označovanou jako aneuploidie a jaká meiotická chyba (chyba při dělení) ji nejčastěji způsobuje?",
         options: [
-          "Ztráta části chromozomu v důsledku záření",
-          "Odchylka v počtu chromozomů (např. trizomie), která nejčastěji vzniká chybou při meiotickém dělení (nondisjunkcí) - chromozomy se nerozejdou do dceřiných buněk",
           "Bodová mutace v genu pro hemoglobin",
-          "Zdvojení celé chromozomové sady (polyploidie)"
+          "Zdvojení celé chromozomové sady (polyploidie)",
+          "Ztráta části chromozomu v důsledku záření",
+          "Odchylka v počtu chromozomů (např. trizomie), která nejčastěji vzniká chybou při meiotickém dělení (nondisjunkcí) - chromozomy se nerozejdou do dceřiných buněk"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Aneuploidie znamená, že v buňce chybí nebo přebývá chromozom (např. 47 chromozomů u Downova syndromu). Vzniká nondisjunkcí - selháním separace homologních chromozomů nebo sesterských chromatid během anafáze meiózy I nebo II."
       },
       {
         question: "Která specifická reciproční translokace je příkladem strukturní chromozomové aberace spojené s rozvojem chronické myeloidní leukémie (CML)?",
         options: [
-          "Trizomie 21",
-          "Reciproční translokace t(9;22) vznikající Philadelphia chromozom u chronické myeloidní leukémie (CML)",
           "Bodová mutace v genu CFTR",
-          "Delece na chromozomu Y"
+          "Delece na chromozomu Y",
+          "Trizomie 21",
+          "Reciproční translokace t(9;22) vznikající Philadelphia chromozom u chronické myeloidní leukémie (CML)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Translokace t(9;22) je strukturní aberace. Dochází k výměně částí mezi 9. a 22. chromozomem, čímž vzniká fúzní gen BCR-ABL s vysokou tyrosinkinázovou aktivitou, což spouští nekontrolované množení bílých krvinek u CML."
       }
     ]
@@ -321,23 +321,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Která třída imunoglobulinů (protilátek) a které buňky nesoucí Fc receptory hrají klíčovou roli v anafylaktické reakci přecitlivělosti I. typu?",
         options: [
-          "IgG; neutrofily",
-          "IgE; žírné buňky (mastocyty) a basofily",
           "IgM; plazmatické buňky",
-          "IgA; pohárkové buňky"
+          "IgA; pohárkové buňky",
+          "IgG; neutrofily",
+          "IgE; žírné buňky (mastocyty) a basofily"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Reakce I. typu (anafylaktická) je zprostředkována IgE protilátkami. Ty jsou přirozeně navázány na povrchu mastocytů. Po kontaktu s alergenem mastocyty degranulují a uvolní zánětlivé mediátory (hlavně histamin)."
       },
       {
         question: "Které léčivo je lékem první volby a musí být okamžitě podáno při rozvoji život ohrožujícího anafylaktického šoku a proč?",
         options: [
-          "Podání vysokých dávek inzulínu",
-          "Intramuskulární podání adrenalinu (epinefrinu)",
           "Podání silných antibiotik",
-          "Ledové obklady na hrudník"
+          "Ledové obklady na hrudník",
+          "Podání vysokých dávek inzulínu",
+          "Intramuskulární podání adrenalinu (epinefrinu)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Adrenalin je lékem volby u anafylaktického šoku. Působí na alfa-1 receptory (vyvolá vazokonstrikci a zvýší krevní tlak) a beta-2 receptory (způsobí bronchodilataci a uvolní stažené průdušky), čímž zvrátí hlavní smrtící mechanismy anafylaxe."
       }
     ]
@@ -359,23 +359,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Která složka imunitního systému příjemce a jaké specifické protilátky spouštějí hyperakutní rejekci transplantátu během několika minut po operaci?",
         options: [
-          "Aktivace CD8+ T-lymfocytů po 2 týdnech od operace",
-          "Přítomnost preforemovaných protilátek v krvi příjemce, které okamžitě napadnou endotel cév štěpu a spustí trombózu",
           "Pomalé zarůstání cév vazivem (fibróza)",
-          "Bakteriální kontaminace štěpu během převozu"
+          "Bakteriální kontaminace štěpu během převozu",
+          "Aktivace CD8+ T-lymfocytů po 2 týdnech od operace",
+          "Přítomnost preforemovaných protilátek v krvi příjemce, které okamžitě napadnou endotel cév štěpu a spustí trombózu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hyperakutní rejekce probíhá extrémně rychle (často ještě na operačním stole). Je způsobena již existujícími (preforemovanými) protilátkami (např. po předchozích transfúzích, těhotenstvích či AB0 neshodě). Tyto protilátky spustí komplementovou kaskádu a koagulaci v cévách štěpu, který okamžitě nekrotizuje."
       },
       {
         question: "Která imunitní patologie je vyjádřena zkratkou GvHD a za jakých podmínek k ní dochází po transplantaci kostní dřeně?",
         options: [
-          "Reakce příjemce, který ničí transplantovaný orgán",
-          "Reakce štěpu proti hostiteli, kdy T-lymfocyty dárce (např. v transplantované kostní dřeni) napadají tkáně imunitně oslabeného příjemce",
           "Virová infekce přenesená transplantovaným orgánem",
-          "Uzávěr cév štěpu vzduchovou bublinou"
+          "Uzávěr cév štěpu vzduchovou bublinou",
+          "Reakce příjemce, který ničí transplantovaný orgán",
+          "Reakce štěpu proti hostiteli, kdy T-lymfocyty dárce (např. v transplantované kostní dřeni) napadají tkáně imunitně oslabeného příjemce"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "GvHD (reakce štěpu proti hostiteli) je specifická komplikace transplantace kostní dřeně nebo alogenních krvetvorných buněk. Imunitní buňky dárce (štěp) vnímají tkáně příjemce (hostitele) jako cizí a útočí na ně (nejčastěji postižena kůže, játra a sliznice střeva)."
       }
     ]
@@ -397,23 +397,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Jak definujeme v imunopatologii proces označovaný jako molekulární mimikry a jak přispívá k rozvoji autoimunitní reakce?",
         options: [
-          "Schopnost virů maskovat se před makrofágy",
-          "Podobnost mezi antigeny infekčního patogenu a vlastními proteiny hostitele, která vede k tomu, že imunitní reakce spuštěná proti infekci napadne i vlastní tkáně",
           "Změna barvy kůže u autoimunitních chorob",
-          "reprogramování buněk slinivky"
+          "reprogramování buněk slinivky",
+          "Schopnost virů maskovat se před makrofágy",
+          "Podobnost mezi antigeny infekčního patogenu a vlastními proteiny hostitele, která vede k tomu, že imunitní reakce spuštěná proti infekci napadne i vlastní tkáně"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Klasickým příkladem molekulárního mimikry je revmatická horečka. Protilátky vytvořené proti M-proteinu Streptococcus pyogenes reagují zkříženě s proteiny v myokardu a na srdečních chlopních hostitele, což vede k jejich poškození."
       },
       {
         question: "Přítomnost kterých protilátek (autoantitěles) je vysoce specifickým laboratorním markerem pro diagnózu systémového lupusu erythematodes (SLE)?",
         options: [
-          "Protilátky anti-dsDNA (a ANA)",
-          "Revmatoidní faktor (RF)",
           "Protilátky anti-neutrofilní cytoplasmy (ANCA)",
-          "Protilátky proti tyreoglobulinu"
+          "Protilátky proti tyreoglobulinu",
+          "Protilátky anti-dsDNA (a ANA)",
+          "Revmatoidní faktor (RF)"
         ],
-        correct: 0,
+        correct: 2,
         explanation: "Protilátky proti dvouvláknové DNA (anti-dsDNA) a antinukleární protilátky (ANA) jsou klíčovými markery v diagnostice SLE a přímo se podílejí na tvorbě imunokomplexů poškozujících ledviny (lupusová nefritida)."
       }
     ]
@@ -435,23 +435,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Na které pomocné buňky lidského imunitního systému (nesoucí specifický receptor) virus HIV primárně útočí a způsobuje jejich postupný zánik?",
         options: [
-          "CD8+ cytotoxické T-lymfocyty",
-          "CD4+ pomocné (helper) T-lymfocyty a makrofágy",
           "B-lymfocyty produkující protilátky",
-          "Neutrofilní granulocyty"
+          "Neutrofilní granulocyty",
+          "CD8+ cytotoxické T-lymfocyty",
+          "CD4+ pomocné (helper) T-lymfocyty a makrofágy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Virus HIV využívá pro vstup do buňky molekulu CD4, která slouží jako jeho hlavní receptor. CD4 se nachází na pomocných T-lymfocytech, makrofázích a mikrogliích. Jejich postupný zánik vede k selhání koordinace imunitní odpovědi."
       },
       {
         question: "Který zhoubný cévní nádor na kůži a sliznicích (asociovaný s virem HHV-8) je klasickou oportunní neoplazií indikující stadium AIDS?",
         options: [
-          "Maligní melanom",
-          "Kaposiho sarkom",
           "Hepatocelulární karcinom",
-          "Hodgkinův lymfom"
+          "Hodgkinův lymfom",
+          "Maligní melanom",
+          "Kaposiho sarkom"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Kaposiho sarkom je mezenchymální nádor vycházející z cévního endotelu indukovaný virem HHV-8 (KSHV). U pacientů s rozvinutým AIDS se projevuje jako červenofialové skvrny či uzly na kůži, sliznici úst a ve vnitřních orgánech."
       }
     ]
@@ -473,23 +473,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Jaký je chromozomální karyotyp ženy s Turnerovým syndromem a jaké jsou jeho hlavní fenotypové projevy a anomálie vaječníků?",
         options: [
-          "47,XXY; vysoký vzrůst, gynekomastie",
-          "45,X0 (monozomie X); malý vzrůst, pterygium colli (krční řasa), sterilita a páskovitá ovaria",
           "47,XX,+21; šikmé oči a opičí rýha",
-          "46,XX,del(5p); pláč připomínající mňoukání kočky"
+          "46,XX,del(5p); pláč připomínající mňoukání kočky",
+          "47,XXY; vysoký vzrůst, gynekomastie",
+          "45,X0 (monozomie X); malý vzrůst, pterygium colli (krční řasa), sterilita a páskovitá ovaria"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Turnerův syndrom je charakterizován nepřítomností jednoho z pohlavních chromozomů (karyotyp 45,X0). Ženy jsou malého vzrůstu, nemají funkční vaječníky (ovariální dysgeneze - páskovitá ovaria) a mají typické pterygium colli (kožní řasu na krku)."
       },
       {
         question: "Které těžké vrozené onemocnění je způsobeno trizomií 18. chromozomu a je doprovázeno malformacemi a časným úmrtím plodu?",
         options: [
-          "Patauův syndrom",
-          "Edwardsův syndrom",
           "Downův syndrom",
-          "Klinefelterův syndrom"
+          "Klinefelterův syndrom",
+          "Patauův syndrom",
+          "Edwardsův syndrom"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Edwardsův syndrom je způsoben trizomií chromozomu 18. Patauův syndrom trizomií 13 a Downův syndrom trizomií 21. Klinefelterův syndrom je trizomie gonozomů (47,XXY)."
       }
     ]
@@ -511,23 +511,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Z hlediska chybějících složek stravy (kalorie vs. proteiny), jak se patogeneticky liší prosté hladovění (marasmus) od proteinové podvýživy (kwashiorkor)?",
         options: [
-          "Marasmus je způsoben otravou, kwashiorkor nedostatkem vody",
-          "Marasmus je celkový nedostatek energie a bílkovin (vyhublost bez edémů); kwashiorkor je selektivní nedostatek bílkovin při zachovaném příjmu sacharidů, doprovázený poklesem albuminu a vznikem masivních edémů (nafouklé břicho)",
           "Kwashiorkor postihuje pouze dospělé, marasmus pouze novorozence",
-          "U marasmu jsou přítomny edémy, u kwashiorkoru chybí"
+          "U marasmu jsou přítomny edémy, u kwashiorkoru chybí",
+          "Marasmus je způsoben otravou, kwashiorkor nedostatkem vody",
+          "Marasmus je celkový nedostatek energie a bílkovin (vyhublost bez edémů); kwashiorkor je selektivní nedostatek bílkovin při zachovaném příjmu sacharidů, doprovázený poklesem albuminu a vznikem masivních edémů (nafouklé břicho)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Marasmus je vyvážené hladovění (chybí vše), tělo spotřebovává vlastní svaly a tuk, ale udržuje proteiny v séru. Kwashiorkor je nepoměr - dítě má dostatek škrobů (cukrů), ale chybí mu proteiny. Játra netvoří albumin, klesá onkotický tlak a tekutina uniká do tkání a břišní dutiny (ascites)."
       },
       {
         question: "Z jakého biochemického důvodu (vliv na syntézu lipoproteinů) dochází u dětí s kwashiorkorem k rozvoji těžké steatózy jater?",
         options: [
-          "Protože jedí příliš mnoho tučného jídla",
-          "Kvůli chybění apoproteinů (následek proteinového deficitu), což znemožňuje export triglyceridů z jater v podobě lipoproteinů (VLDL)",
           "V důsledku infekce jater bakteriemi",
-          "Žádná steatóza u kwashiorkoru nevzniká"
+          "Žádná steatóza u kwashiorkoru nevzniká",
+          "Protože jedí příliš mnoho tučného jídla",
+          "Kvůli chybění apoproteinů (následek proteinového deficitu), což znemožňuje export triglyceridů z jater v podobě lipoproteinů (VLDL)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "K uvolnění tuku z jater do těla jsou potřeba nosné bílkoviny (apoproteiny) k tvorbě VLDL částic. Při těžkém nedostatku bílkovin (kwashiorkor) játra tyto proteiny nedokážou syntetizovat. Tuk se v játrech tvoří, ale nemůže z nich být exportován, a proto se hromadí v hepatocytech (steatóza)."
       }
     ]
@@ -549,23 +549,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Který z klasických mendelovských modelů dědičnosti je typický pro většinu enzymových deficitů a metabolických chorob (např. fenylketonurie)?",
         options: [
-          "Autozomálně dominantní (AD)",
-          "Autozomálně recesivní (AR)",
           "Y-vázaná dědičnost",
-          "Mitochondriální dědičnost"
+          "Mitochondriální dědičnost",
+          "Autozomálně dominantní (AD)",
+          "Autozomálně recesivní (AR)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "AR dědičnost je typická pro enzymové vady. U heterozygotů (přenašečů) stačí 50% aktivita enzymu z jedné zdravé alely k normálnímu metabolismu, takže jsou zdraví. Nemoc se projeví až u homozygota se dvěma mutovanými alelami."
       },
       {
         question: "U autozomálně dominantního Marfanova syndromu je mutován gen pro který strukturní protein pojiva a jaké fatální cévní riziko tím vzniká na aortě?",
         options: [
-          "Kolagen typu I; zlomeniny kostí",
-          "Fibrilin-1; ruptura a disekce aorty v důsledku oslabení její stěny",
           "Dystrofin; svalová slabost",
-          "LDL receptor; infarkt myokardu v 10 letech"
+          "LDL receptor; infarkt myokardu v 10 letech",
+          "Kolagen typu I; zlomeniny kostí",
+          "Fibrilin-1; ruptura a disekce aorty v důsledku oslabení její stěny"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Marfanův syndrom je způsoben mutací genu pro fibrilin-1, což je klíčová složka mikrofibril elastické tkáně. Oslabení stěny aorty vede k její progresivní dilataci, aneurysmatu a hrozí fatální disekce (rozštěpení) nebo ruptura stěny aorty."
       }
     ]
@@ -587,23 +587,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Která buněčná dystrofie charakterizovaná edémem a hromaděním vody v cytoplasmě je považována za nejlehčí a reverzibilní poškození buňky?",
         options: [
-          "Kaseózní nekróza",
-          "Parenchymatózní (hydropická / vakuolární) dystrofie",
           "Amyloidóza ledvin",
-          "Vlhká gangréna"
+          "Vlhká gangréna",
+          "Kaseózní nekróza",
+          "Parenchymatózní (hydropická / vakuolární) dystrofie"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hydropická dystrofie je nejčasnější odpovědí buňky na poškození (např. mírnou hypoxii). Selhává Na+/K+ pumpa, sodík a voda se hromadí v buňce, která oteče. Po obnovení ATP se voda odčerpá a buňka funguje normálně."
       },
       {
         question: "Jak definujeme pojem 'bod zvratu' (point of no return) v buněčné patologii, za kterým se reverzibilní poškození buňky mění v nekrózu?",
         options: [
-          "Okamžik, kdy se pacient rozhodne navštívit lékaře",
-          "Hranici, za kterou se reverzibilní dystrofie buňky mění v ireversibilní poškození vedoucí nevyhnutelně k nekróze (smrti) buňky",
           "Fázi hojení jizvy kolagenem",
-          "Vznik metastáz u nádoru"
+          "Vznik metastáz u nádoru",
+          "Okamžik, kdy se pacient rozhodne navštívit lékaře",
+          "Hranici, za kterou se reverzibilní dystrofie buňky mění v ireversibilní poškození vedoucí nevyhnutelně k nekróze (smrti) buňky"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Bod zvratu odděluje reverzibilní změny (dystrofie) od ireversibilních. Je spojen s těžkým poškozením mitochondrií (neschopnost obnovit syntézu ATP) a hlubokým poškozením buněčných membrán (únik enzymů a influx vápníku)."
       }
     ]
@@ -625,23 +625,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Co jsou to Malloryho tělíska (Malloryho hyalin) z hlediska struktury cytoskeletu a u kterého onemocnění jater je typicky nacházíme?",
         options: [
-          "Nekrotická ložiska v plicích u astmatu",
-          "Intracytoplasmatické agregáty poškozených intermediárních filament (cytokeratinů) v hepatocytech, typické pro alkoholické poškození jater",
           "Hromadění lipidů v cévách srdce",
-          "Depozita imunoglobulinů v plazmatických buňkách"
+          "Depozita imunoglobulinů v plazmatických buňkách",
+          "Nekrotická ložiska v plicích u astmatu",
+          "Intracytoplasmatické agregáty poškozených intermediárních filament (cytokeratinů) v hepatocytech, typické pro alkoholické poškození jater"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Malloryho tělíska jsou eozinofilní nepravidelná klubíčka v cytoplasmě hepatocytů. Jsou tvořena agregáty poškozených proteinů cytoskeletu (cytokeratinů 8 a 18). Typicky doprovázejí alkoholickou hepatitidu, ale nacházejí se i u nealkoholické steatohepatitidy (NASH)."
       },
       {
         question: "Jak se mikroskopicky a strukturálně projevuje hyalinní arterioloskleróza v ledvinných cévách u pacientů s hypertenzí a diabetem?",
         options: [
-          "Tvorbou obřích mnohojaderných buněk kolem tepny",
-          "Homogenním růžovým (eozinofilním) ztluštěním stěny arteriol s výrazným zúžením jejich průsvitu (lumen)",
           "Ukládáním tmavě modrého vápníku do stěny cév",
-          "Rozpadem cévní stěny s masivním krvácením"
+          "Rozpadem cévní stěny s masivním krvácením",
+          "Tvorbou obřích mnohojaderných buněk kolem tepny",
+          "Homogenním růžovým (eozinofilním) ztluštěním stěny arteriol s výrazným zúžením jejich průsvitu (lumen)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hyalinní arterioloskleróza postihuje drobné tepny (arterioly) u pacientů s hypertenzí a diabetem. Plazmatické proteiny unikají do stěny cévy, kde se hromadí a tvoří homogenní růžový prstenec (hyalin), což cévu zužuje a činí ji nepružnou."
       }
     ]
@@ -663,23 +663,23 @@ const DATA_PATOLOGIE_3 = [
       {
         question: "Který biochemický proces (hydroxylace kolagenu) je narušen při nedostatku vitamínu C (skorbutu), což vede k fragilitě cév a špatnému hojení ran?",
         options: [
-          "Protože vitamín C přímo ničí bakterie v ústech",
-          "Protože vitamín C je nezbytným kofaktorem pro hydroxylaci aminokyselin při syntéze kolagenu; bez něj vzniká křehké vazivo a fragilní cévy, které snadno praskají",
           "Vitamín C stimuluje tvorbu trombocytů",
-          "Způsobuje zvápenatění dásní"
+          "Způsobuje zvápenatění dásní",
+          "Protože vitamín C přímo ničí bakterie v ústech",
+          "Protože vitamín C je nezbytným kofaktorem pro hydroxylaci aminokyselin při syntéze kolagenu; bez něj vzniká křehké vazivo a fragilní cévy, které snadno praskají"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Syntéza kolagenu vyžaduje enzymatickou hydroxylaci prolinu a lysinu. K tomu je zapotřebí vitamín C jako donor elektronů (udržuje železo v aktivním stavu Fe2+). Bez vitamínu C se kolagenní vlákna nemohou pevně propojit (chybí trojitá šroubovice), což dramaticky oslabuje stěny cév a vazivo."
       },
       {
         question: "Jak se nazývá onemocnění způsobené nedostatkem vitamínu D u rostoucích dětí, které vede k nedostatečné mineralizaci kostí a kosterním deformacím?",
         options: [
-          "Skorbut",
-          "Křivice (rachitida)",
           "Osteomalacie",
-          "Pellagra"
+          "Pellagra",
+          "Skorbut",
+          "Křivice (rachitida)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Nedostatek vitamínu D v období růstu (u dětí) vede k křivici (rachitidě). Kostní matrix (osteoid) se tvoří, ale nemůže dostatečně mineralizovat vápníkem a fosfátem. Kosti zůstávají měkké a pod vahou těla a tahy svalů se ohýbají a deformují. U dospělých se stejný deficit nazývá osteomalacie."
       }
     ]

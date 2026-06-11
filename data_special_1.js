@@ -18,23 +18,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Jak se mikroskopicky projevuje poškození arteriol u maligní hypertenze?",
         options: [
-          "Ukládáním amyloidu do medie cév",
-          "Hyperplastickou arteriolosklerózou (cibulovité uspořádání stěny) a fibrinoidní nekrózou cévní stěny",
           "Pouhou dilatací cév a chyběním buněk stěny",
-          "Zmnožením elastických vláken bez zúžení lumen"
+          "Zmnožením elastických vláken bez zúžení lumen",
+          "Ukládáním amyloidu do medie cév",
+          "Hyperplastickou arteriolosklerózou (cibulovité uspořádání stěny) a fibrinoidní nekrózou cévní stěny"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Maligní hypertenze (tkáňově destruktivní forma) vyvolává těžké poškození malých cév. Typickým nálezem je cibulovité ztluštění intimy (hyperplastická arterioloskleróza) a nekróza cévní stěny s depozity fibrinu (fibrinoidní nekróza), což vede k rychlé ischemii cílových orgánů."
       },
       {
         question: "Jak vypadají ledviny u pacienta s dlouhodobou benigní arteriální hypertenzí?",
         options: [
-          "Jsou masivně zvětšené, sytě červené a měkké",
-          "Jsou symetricky zmenšené, tuhé, s jemně zrnitým šedočerveným povrchem",
           "Obsahují velké množství hnisavých abscesů",
-          "Jsou přeměněny na shluk velkých tenkostěnných cyst"
+          "Jsou přeměněny na shluk velkých tenkostěnných cyst",
+          "Jsou masivně zvětšené, sytě červené a měkké",
+          "Jsou symetricky zmenšené, tuhé, s jemně zrnitým šedočerveným povrchem"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Benigní hypertenze vede k chronické ischemii glomerulů v důsledku hyalinní arteriolosklerózy. Glomeruly atrofují a zanikají, což se makroskopicky projeví zmenšením ledvin (nefroskleróza), ztuhnutím a typickým jemně zrnitým povrchem (jizvičky po zaniklých glomerulech)."
       }
     ]
@@ -57,23 +57,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co jsou to pěnové buňky (foam cells) v aterosklerotickém plátu?",
         options: [
-          "Buňky vylučující hlen na povrch plátu",
-          "Makrofágy a buňky hladké svaloviny, které v intimě naakumulovaly velké množství oxidovaných lipidů (cholesterolu)",
           "Nádorové buňky z endotelu",
-          "Odumřelé neutrofily tvořící hnis"
+          "Odumřelé neutrofily tvořící hnis",
+          "Buňky vylučující hlen na povrch plátu",
+          "Makrofágy a buňky hladké svaloviny, které v intimě naakumulovaly velké množství oxidovaných lipidů (cholesterolu)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pěnové buňky vznikají, když monocyty/makrofágy vstoupí do intimy a nekontrolovaně fagocytují oxidované LDL částice přes scavengerové receptory. Jejich cytoplasma se přeplní lipidovými vakuolami, což jim pod mikroskopem dává charakteristický pěnovitý vzhled."
       },
       {
         question: "Která komplikace aterosklerotického plátu vede bezprostředně k akutnímu infarktu myokardu?",
         options: [
-          "Pomalá kalcifikace plátu",
-          "Ruptura nebo eroze plátu s následnou aktivací hemostázy a vznikem okluzivního trombu",
           "Atrofie vazivové čepičky bez vzniku trombu",
-          "Ukládání amyloidu do plátu"
+          "Ukládání amyloidu do plátu",
+          "Pomalá kalcifikace plátu",
+          "Ruptura nebo eroze plátu s následnou aktivací hemostázy a vznikem okluzivního trombu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Stabilní plát způsobuje chronické zúžení tepny (např. angina pectoris). Akutní koronární syndrom (infarkt) vzniká tehdy, když praskne (ruptura) oslabená vazivová čepička nestabilního plátu. Obnažený kolagen a lipidové jádro spustí adhezi destiček a koagulaci, což během minut ucpe tepnu trombem."
       }
     ]
@@ -96,23 +96,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co je to disekce aorty?",
         options: [
-          "Chirurgické odstranění aorty při pitvě",
-          "Podélné rozštěpení stěny aorty krví, která vnikla trhlinou v intimě do medie a vytvořila falešný krevní kanál",
           "Zánět aorty vyvolaný plísněmi",
-          "Vrozené chybění aorty"
+          "Vrozené chybění aorty",
+          "Chirurgické odstranění aorty při pitvě",
+          "Podélné rozštěpení stěny aorty krví, která vnikla trhlinou v intimě do medie a vytvořila falešný krevní kanál"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Disekce aorty (často nesprávně označovaná jako 'ruptura aneurysmatu') vzniká tehdy, když krev pod vysokým tlakem (často u hypertoniků) pronikne trhlinou v intimě do medie. Krev se šíří podél aorty a štěpí medii na vnitřní a vnější vrstvu, což hrozí protržením ven (rupturou) nebo ucpáním větví aorty."
       },
       {
         question: "Pro které onemocnění je typický vznik aneurysmatu hrudní aorty v důsledku obliterujícího zánětu vasa vasorum?",
         options: [
-          "Diabetes mellitus",
-          "Terciární syfilis (lues)",
           "TBC",
-          "Marfanův syndrom"
+          "Marfanův syndrom",
+          "Diabetes mellitus",
+          "Terciární syfilis (lues)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Terciární syfilis má predilekci pro hrudní aortu (luetická aortitida). Treponemy vyvolávají zánět kolem drobných vyživujících cév aorty (vasa vasorum), což vede k jejich ucpání (endarteritis obliterans). Výsledkem je ischemie medie aorty, ztráta její elasticity a vznik velkého aneurysmatu hrudní aorty."
       }
     ]
@@ -135,23 +135,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Která vaskulitida postihuje typicky koronární tepny u malých dětí a hrozí vznikem jejich aneurysmat a infarktem?",
         options: [
-          "Obřízobuněčná (temporální) arteritida",
-          "Kawasakiho choroba",
           "Granulomatóza s polyangiitidou (Wegenerova)",
-          "Takayasuova arteritida"
+          "Takayasuova arteritida",
+          "Obřízobuněčná (temporální) arteritida",
+          "Kawasakiho choroba"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Kawasakiho choroba (syndrom mukokutánních lymfatických uzlin) je akutní vaskulitida postihující kojence a malé děti. Má afinitu ke koronárním tepnám. Včasné podání intravenózních imunoglobulinů (IVIG) a aspirinu dramaticky snižuje riziko srdečních komplikací."
       },
       {
         question: "Která protilátka je typickým laboratorním markerem u Granulomatózy s polyangiitidou (Wegenerovy)?",
         options: [
-          "Antinukleární protilátky (ANA)",
-          "c-ANCA (PR3-ANCA - protilátky proti proteináze 3 v cytoplasmě neutrofilů)",
           "p-ANCA (MPO-ANCA)",
-          "Revmatoidní faktor"
+          "Revmatoidní faktor",
+          "Antinukleární protilátky (ANA)",
+          "c-ANCA (PR3-ANCA - protilátky proti proteináze 3 v cytoplasmě neutrofilů)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "c-ANCA (cytoplasmatická ANCA, cíl PR3) je vysoce specifická pro Wegenerovu granulomatózu. p-ANCA (perinukleární ANCA, cíl MPO) se vyskytuje spíše u mikroskopické polyangiitidy a syndromu Churg-Straussové."
       }
     ]
@@ -174,23 +174,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Které čtyři patologické znaky definují Fallotovu tetralogii?",
         options: [
-          "Defekt síňového septa, koarktace aorty, mitrální stenóza, hypertrofie levé komory",
-          "Defekt komorového septa (VSD), nasedající aorta, stenóza plicnice (plicního kmene) a hypertrofie pravé komory",
           "Transpozice velkých tepen, otevřený ductus, atrézie trikuspidální chlopně, myokarditida",
-          "Dextrokardie, situs inversus, splenomegalie, ascites"
+          "Dextrokardie, situs inversus, splenomegalie, ascites",
+          "Defekt síňového septa, koarktace aorty, mitrální stenóza, hypertrofie levé komory",
+          "Defekt komorového septa (VSD), nasedající aorta, stenóza plicnice (plicního kmene) a hypertrofie pravé komory"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Fallotova tetralogie je nejčastější cyanotická vada. Skládá se z defektu komorového septa, nad kterým nasedá aorta, zúžení plicnice (které omezuje průtok krve plícemi a tlačí krev přes defekt do aorty) a následné hypertrofie pravé komory pracující proti vysokému tlaku."
       },
       {
         question: "Co je to Eisenmengerův syndrom?",
         options: [
-          "Náhlé protržení mezikomorové přepážky po infarktu",
-          "Obrácení původně levopravého zkratu na pravolevý (s rozvojem cyanózy) v důsledku fixované plicní hypertenze a cévních změn v plicích",
           "Vrozené zúžení plicnice u starých lidí",
-          "Ukládání vápníku do mitrální chlopně"
+          "Ukládání vápníku do mitrální chlopně",
+          "Náhlé protržení mezikomorové přepážky po infarktu",
+          "Obrácení původně levopravého zkratu na pravolevý (s rozvojem cyanózy) v důsledku fixované plicní hypertenze a cévních změn v plicích"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U levopravých zkratů (VSD, ASD, PDA) protéká plícemi nadměrné množství krve. Plicní arterie reagují na vysoký průtok a tlak zbytněním stěny (remodelací). Tím se zvýší plicní vaskulární rezistence, tlak v pravém srdci převýší tlak v levém a zkrat se obrátí. Do těla začne proudit odkysličená krev, což způsobí cyanózu (modrání)."
       }
     ]
@@ -213,23 +213,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Jak se makroskopicky projevují vegetace u infekční endokarditidy na rozdíl od revmatické?",
         options: [
-          "U infekční jsou to drobné, pevné bradavičky; u revmatické velké, křehké a destruktivní polypy",
-          "U infekční jsou vegetace velké, křehké, polypózní a způsobují destrukci chlopně (perforaci); u revmatické jsou to drobné, bradavičnaté vegetace podél okraje chlopně",
           "Vegetace u infekční endokarditidy zcela chybí",
-          "Jsou to černé skvrny na síních"
+          "Jsou to černé skvrny na síních",
+          "U infekční jsou to drobné, pevné bradavičky; u revmatické velké, křehké a destruktivní polypy",
+          "U infekční jsou vegetace velké, křehké, polypózní a způsobují destrukci chlopně (perforaci); u revmatické jsou to drobné, bradavičnaté vegetace podél okraje chlopně"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Infekční endokarditida je invazivní a destruktivní proces. Bakterie tvoří velké, drobivé (křehké) vegetace, které rozežírají chlopenní tkáň (perforují cípy nebo trhají šlašinky). Revmatická endokarditida je sterilní zánět a tvoří jen drobné bradavičky (verrucae) bez destrukce chlopně."
       },
       {
         question: "Co jsou to Aničkovovy buňky (Anitschkow cells) a kde je nacházíme?",
         options: [
-          "Pěnové buňky v jaterní cirhóze",
-          "Aktivované histiocyty s charakteristickým jádrem (vzhledu housenky) nacházející se v Aschoffových uzlících u revmatické horečky",
           "Nádorové buňky u karcinomu plic",
-          "Buňky tvořící myelin v CNS"
+          "Buňky tvořící myelin v CNS",
+          "Pěnové buňky v jaterní cirhóze",
+          "Aktivované histiocyty s charakteristickým jádrem (vzhledu housenky) nacházející se v Aschoffových uzlících u revmatické horečky"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Aničkovovy buňky jsou specificky změněné makrofágy (histiocyty) s chromatinem kondenzovaným uprostřed jádra do podélného proužku (připomíná housenku). Jsou hlavní součástí Aschoffových tělísek (granulomů) v myokardu při revmatické horečce (při zkoušce na ně často padá otázka)."
       }
     ]
@@ -252,23 +252,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Jaká je nejčastější chlopenní vada u starých lidí (nad 70 let) a co je její hlavní příčinou?",
         options: [
-          "Mitrální stenóza způsobená syfilidou",
-          "Kalcifikovaná aortální stenóza způsobená degenerativním ukládáním vápníku (dystrofickou kalcifikací)",
           "Trikuspidální insuficience způsobená revmatickou horečkou",
-          "Prolaps mitrální chlopně způsobený infarktem"
+          "Prolaps mitrální chlopně způsobený infarktem",
+          "Mitrální stenóza způsobená syfilidou",
+          "Kalcifikovaná aortální stenóza způsobená degenerativním ukládáním vápníku (dystrofickou kalcifikací)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Degenerativní kalcifikovaná aortální stenóza je nejčastější chlopenní vadou ve stáří. Vzniká opotřebením chlopně a pasivním ukládáním vápenatých solí do cípů (dystrofická kalcifikace), což vede k jejich znehybnění a stenóze ústí."
       },
       {
         question: "Vzhled chlopně připomínající 'rybí tlamu' (rybí ústa) s fúzí komisur a zkrácením šlašinek je typickým porevmatickým nálezem u:",
         options: [
-          "Aortální insuficience",
-          "Mitrální stenózy",
           "Trikuspidální stenózy",
-          "Prolapsu pulmonální chlopně"
+          "Prolapsu pulmonální chlopně",
+          "Aortální insuficience",
+          "Mitrální stenózy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Porevmatický zánět vyvolává masivní organizaci a jizvení chlopně. U mitrální chlopně dochází ke splynutí (fúzi) komisur cípů a svraštění šlašinek, což chlopeň trvale zafixuje v polootřeném stavu, který pod mikroskopem a makroskopicky připomíná rybí tlamu."
       }
     ]
@@ -291,23 +291,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Kdy je nejvyšší riziko ruptury myokardu (volné stěny levé komory) po prodělaném infarktu a proč?",
         options: [
-          "V prvních 2 hodinách z důvodu vysoké elasticity buněk",
-          "Mezi 3. a 7. dnem, protože v ložisku vrcholí infiltrace neutrofily a enzymatická kolikvace (změkčení) nekrotické tkáně",
           "Po 6 týdnech, kdy se tvoří jizva",
-          "Riziko je stejné po dobu jednoho roku"
+          "Riziko je stejné po dobu jednoho roku",
+          "V prvních 2 hodinách z důvodu vysoké elasticity buněk",
+          "Mezi 3. a 7. dnem, protože v ložisku vrcholí infiltrace neutrofily a enzymatická kolikvace (změkčení) nekrotické tkáně"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "V období 3. až 7. dne po infarktu odstraňují neutrofily a makrofágy svými enzymy nekrotický detrit. Tkáň v této fázi ztrácí pevnou strukturu a je nejměkčí (myomalacie). Pevná vazivová jizva se ještě nezačala tvořit, a proto stěna pod tlakem krve v komoře nejsnadněji praskne."
       },
       {
         question: "Jak se liší transmurální infarkt (STEMI) od subendokardiálního (NSTEMI)?",
         options: [
-          "Transmurální infarkt postihuje pouze pravou síň",
-          "Transmurální infarkt postihuje celou šířku stěny komory (subendokard až subepikard) a je způsoben úplným uzávěrem tepny; subendokardiální postihuje vnitřní 1/3 stěny, kde je nejhorší prokrvení",
           "Subendokardiální infarkt se hojí bez jizvy",
-          "Transmurální infarkt je vždy vyvolán zánětem cév"
+          "Transmurální infarkt je vždy vyvolán zánětem cév",
+          "Transmurální infarkt postihuje pouze pravou síň",
+          "Transmurální infarkt postihuje celou šířku stěny komory (subendokard až subepikard) a je způsoben úplným uzávěrem tepny; subendokardiální postihuje vnitřní 1/3 stěny, kde je nejhorší prokrvení"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Transmurální infarkt prostupuje celou stěnou komory a vzniká při náhlém a úplném ucpání koronární tepny. Subendokardiální infarkt je omezen na vnitřní třetinu stěny levé komory, která je nejvíce vzdálená od koronárních tepen (nejcitlivější k hypoxii), a vzniká např. při neúplném uzávěru nebo celkovém poklesu tlaku."
       }
     ]
@@ -330,23 +330,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co je to 'myocyte disarray' a pro kterou patologii je typický?",
         options: [
-          "Rozpad buněk u nekrózy",
-          "Chaotické, dezorganizované a větvené uspořádání kardiomyocytů (a jejich myofibril), doprovázené intersticiální fibrózou, typické pro hypertrofickou kardiomyopatii (HCM)",
           "Ukládání lipidů do cytoplasmy",
-          "Zánět cév v myokardu"
+          "Zánět cév v myokardu",
+          "Rozpad buněk u nekrózy",
+          "Chaotické, dezorganizované a větvené uspořádání kardiomyocytů (a jejich myofibril), doprovázené intersticiální fibrózou, typické pro hypertrofickou kardiomyopatii (HCM)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U hypertrofické kardiomyopatie (HCM) chybí normální paralelní uspořádání kardiomyocytů. Buňky jsou dezorganizované, kříží se a větví (myocyte disarray). To je histologickým podkladem pro vznik maligních arytmií a náhlé smrti."
       },
       {
         question: "Která skupina virů je nejčastějším infekčním původcem myokarditid v Evropě?",
         options: [
-          "Retroviry (HIV)",
-          "Enteroviry (zejména viry Coxsackie B)",
           "Rhabdoviry (virus vztekliny)",
-          "Papilomaviry"
+          "Papilomaviry",
+          "Retroviry (HIV)",
+          "Enteroviry (zejména viry Coxsackie B)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Viry Coxsackie B a adenoviry jsou nejčastějšími virovými původci akutní myokarditidy. Vykazují přímou afinitu k receptorům na kardiomyocytech (CAR receptor), do kterých vstupují a vyvolávají lymfocytární zánět."
       }
     ]
@@ -369,23 +369,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co tvoří Beckovu triádu klinických příznaků u akutní tamponády srdce?",
         options: [
-          "Horečka, kašel, dušnost",
-          "Hypotenze, distenze krčních žil a tiché (zastřené) srdeční ozvy",
           "Tachykardie, anémie, splenomegalie",
-          "Vysoký krevní tlak, bradykardie, edém papily"
+          "Vysoký krevní tlak, bradykardie, edém papily",
+          "Horečka, kašel, dušnost",
+          "Hypotenze, distenze krčních žil a tiché (zastřené) srdeční ozvy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Beckova triáda je klasický soubor příznaků u srdeční tamponády. Tlak tekutiny brání plnění komor, což vede k hypotenzi. Krev se hromadí před srdcem (stoupá venózní tlak -> distenze krčních žil). Tekutina kolem srdce tlumí přenos zvuku, ozvy jsou proto špatně slyšitelné."
       },
       {
         question: "Co je to 'pancéřové srdce' (pericarditis petrosa)?",
         options: [
-          "Nádorové postižení srdce",
-          "Pozdní stadium chronické konstriktivní perikarditidy, kdy zbytnělý perikard vazivově obliteruje a masivně zvápenatí (kalcifikuje), čímž srdce pevně sevře",
           "Hypertrofie levé komory u těžkých válečníků",
-          "Zbytnění srdce u hemochromatózy"
+          "Zbytnění srdce u hemochromatózy",
+          "Nádorové postižení srdce",
+          "Pozdní stadium chronické konstriktivní perikarditidy, kdy zbytnělý perikard vazivově obliteruje a masivně zvápenatí (kalcifikuje), čímž srdce pevně sevře"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při chronickém zánětu (např. po TBC nebo hnisavé perikarditidě) se fibrinózní exsudát zorganizuje v husté vazivo. Dochází k obliteraci (zaniknutí) perikardiální dutiny a ukládání solí vápníku (dystrofická kalcifikace). Srdce je obklopeno pevným 'pancířem' z vápníku a vaziva."
       }
     ]
@@ -408,23 +408,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Který patogen je hlavním původcem život ohrožující akutní epiglotitidy u dětí?",
         options: [
-          "Rhinovirus",
-          "Haemophilus influenzae typu B",
           "Streptococcus pneumoniae",
-          "Corynebacterium diphtheriae"
+          "Corynebacterium diphtheriae",
+          "Rhinovirus",
+          "Haemophilus influenzae typu B"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Akutní epiglotitida je bakteriální zánět vyvolaný Haemophilus influenzae B. Způsobuje rychlý edém záklopky, která může kompletně uzavřít dýchací cesty. Očkování proti Hib výrazně snížilo výskyt této závažné nemoci."
       },
       {
         question: "Jak se liší buněčné složení infiltrátu u alergické rýmy (rhinitidy) od běžné virové rýmy?",
         options: [
-          "U alergické rýmy v infiltrátu dominují eosinofilní granulocyty; u virové rýmy lymfocyty",
-          "U alergické rýmy dominují neutrofily a bakterie",
           "U alergické rýmy infiltrát zcela chybí",
-          "U virové rýmy nacházíme kaseózní nekrózu"
+          "U virové rýmy nacházíme kaseózní nekrózu",
+          "U alergické rýmy v infiltrátu dominují eosinofilní granulocyty; u virové rýmy lymfocyty",
+          "U alergické rýmy dominují neutrofily a bakterie"
         ],
-        correct: 0,
+        correct: 2,
         explanation: "Alergická rýma je reakcí I. typu zprostředkovanou IgE. Mediátory žírných buněk lákají do sliznice nosu eosinofilní granulocyty, které jsou typickým histologickým markerem alergických zánětů. U běžné virové rýmy nacházíme klasický lymfocytární infiltrát."
       }
     ]
@@ -447,23 +447,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Jaký je hlavní patogenetický mechanismus vzniku plicního emfyzému u kuřáků?",
         options: [
-          "Mechanické roztržení alveolů při kašli",
-          "Nerovnováha mezi proteázami (elastázami z makrofágů) a antiproteázami (alfa-1-antitrypsinem), což vede k destrukci elastické kostry alveolárních sept",
           "Tvorba jizev v plicním intersticiu",
-          "Aktivní stah hladké svaloviny v alveolech"
+          "Aktivní stah hladké svaloviny v alveolech",
+          "Mechanické roztržení alveolů při kašli",
+          "Nerovnováha mezi proteázami (elastázami z makrofágů) a antiproteázami (alfa-1-antitrypsinem), což vede k destrukci elastické kostry alveolárních sept"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Kouření cigaret aktivuje alveolární makrofágy a neutrofily, které uvolňují proteolytické enzymy (zejména elastázu). Pokud tyto proteázy překonají ochrannou kapacitu antiproteáz (např. v důsledku jejich inaktivace kouřem nebo vrozeného deficitu AAT), dojde k odbourání elastinu v alveolárních stěnách, jejich destrukci a vzniku rozedmy (emfyzému)."
       },
       {
         question: "Který typ emfyzému se typicky vyvíjí u pacientů s vrozeným deficitem alfa-1-antitrypsinu (AAT)?",
         options: [
-          "Centrilobulární (centriacinární) emfyzém",
-          "Panlobulární (panacinární) emfyzém",
           "Paraseptální emfyzém",
-          "Nepravidelný emfyzém kolem jizev"
+          "Nepravidelný emfyzém kolem jizev",
+          "Centrilobulární (centriacinární) emfyzém",
+          "Panlobulární (panacinární) emfyzém"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Deficit AAT vede k panlobulárnímu (panacinárnímu) emfyzému, který postihuje rovnoměrně celý acinus a je nejvýraznější v dolních lalocích plic. Centrilobulární emfyzém (postihuje hlavně proximální respirační bronchioly) je typický pro klasické kuřáky bez deficitu AAT a postihuje horní plicní laloky."
       }
     ]
@@ -486,23 +486,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Proč vytéká z řezu edematózní plíce při makroskopickém vyšetření napěněná tekutina?",
         options: [
-          "V důsledku přítomnosti plynotvorných bakterií",
-          "Smícháním edémové tekutiny, vzduchu v alveolech a plicního surfaktantu během dýchacích pohybů před smrtí",
           "Je to způsobeno rozpadem plicních cév",
-          "V plicích se tvoří mýdlo"
+          "V plicích se tvoří mýdlo",
+          "V důsledku přítomnosti plynotvorných bakterií",
+          "Smícháním edémové tekutiny, vzduchu v alveolech a plicního surfaktantu během dýchacích pohybů před smrtí"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Plicní edémová tekutina se v dýchacích cestách mísí se zbytkovým vzduchem a surfaktantem (který snižuje povrchové napětí). Dýcháním se tato směs napění. Pěna pak ucpává bronchiální strom a brání ventilaci."
       },
       {
         question: "Jaký je hlavní rozdíl v patogenezi kardiogenního a nekardiogenního (ARDS) edému plic?",
         options: [
-          "Kardiogenní edém vzniká pouze u dětí",
-          "Kardiogenní edém vzniká zvýšením hydrostatického tlaku v kapilárách při selhání levého srdce; nekardiogenní (ARDS) vzniká poškozením alveolo-kapilární membrány a zvýšením její propustnosti (permeability)",
           "U nekardiogenního edému tekutina neobsahuje žádné bílkoviny",
-          "Kardiogenní edém se neprojevuje dušností"
+          "Kardiogenní edém se neprojevuje dušností",
+          "Kardiogenní edém vzniká pouze u dětí",
+          "Kardiogenní edém vzniká zvýšením hydrostatického tlaku v kapilárách při selhání levého srdce; nekardiogenní (ARDS) vzniká poškozením alveolo-kapilární membrány a zvýšením její propustnosti (permeability)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Kardiogenní edém je hydrostatický (fyzikální přetlak v cévách). Nekardiogenní edém (ARDS) je permeabilitní (zánětlivá destrukce buněčné bariéry endotel-epitel, kudy tekutina volně teče i při normálním krevním tlaku)."
       }
     ]
@@ -525,23 +525,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co je to sedlovitý embolus (saddle embolus)?",
         options: [
-          "Embolus v cévách dolní končetiny u jezdců na koni",
-          "Velký embolus, který uvízne v bifurkaci plicního kmene (truncus pulmonalis) a zasahuje do pravé i levé plicní tepny",
           "Tuková kapénka v ledvinách",
-          "Trombus na mitrální chlopni"
+          "Trombus na mitrální chlopni",
+          "Embolus v cévách dolní končetiny u jezdců na koni",
+          "Velký embolus, který uvízne v bifurkaci plicního kmene (truncus pulmonalis) a zasahuje do pravé i levé plicní tepny"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Sedlovitý embolus je masivní krevní sraženina, která je tak velká, že se usadí přímo v místě větvení plicnice na pravou a levou větev. Zablokuje průtok krve do obou plic najednou, což způsobí okamžité pravostranné selhání a náhlou smrt."
       },
       {
         question: "Proč ucpání drobné větve plicnice u jinak zdravého mladého člověka obvykle nezpůsobí infarkt plíce?",
         options: [
-          "Protože plíce nemají žádné nervy",
-          "Díky dvojímu krevnímu zásobení plic (a. pulmonalis a aa. bronchiales z aorty) - bronchiální oběh zajistí výživu tkáně i při výpadku plicnice",
           "Protože plicní tkáň nepotřebuje kyslík",
-          "U mladých lidí se embolie nevyskytuje"
+          "U mladých lidí se embolie nevyskytuje",
+          "Protože plíce nemají žádné nervy",
+          "Díky dvojímu krevnímu zásobení plic (a. pulmonalis a aa. bronchiales z aorty) - bronchiální oběh zajistí výživu tkáně i při výpadku plicnice"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Plíce mají dvojí oběh: funkční (a. pulmonalis) a nutriční (aa. bronchiales). U zdravého člověka bronchiální tepny bez problému vyživí plicní tkáň, pokud se ucpe malá větev plicnice. Infarkt plíce vzniká spíše u pacientů, kteří již mají chronické městnání v plicích (např. při srdečním selhání), kdy je i bronchiální oběh neúčinný."
       }
     ]
@@ -564,23 +564,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Jaký tvar a barvu má plicní infarkt při makroskopickém vyšetření?",
         options: [
-          "Kruhový a křídově bílý",
-          "Klínovitý a tmavě červený až černý (hemoragický infarkt)",
           "Nepravidelný a žlutavý",
-          "Plicní infarkt nelze makroskopicky poznat"
+          "Plicní infarkt nelze makroskopicky poznat",
+          "Kruhový a křídově bílý",
+          "Klínovitý a tmavě červený až černý (hemoragický infarkt)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Plicní infarkt je klínovitý (odpovídá větvení ucpané tepny) a hemoragický (červený). Nekrotická plicní tkáň je masivně prosáklá krví z bronchiálních kolaterál a městnajících žil, což jí dává tmavě červenou až černou barvu."
       },
       {
         question: "Proč je povrch pohrudnice (pleury) nad čerstvým plicním infarktem drsný a pokrytý šedavým povlakem?",
         options: [
-          "V důsledku hromadění tuku",
-          "Dochází k reaktivnímu fibrinóznímu zánětu pohrudnice (pleuritis fibrinosa) nad ložiskem nekrózy",
           "Jde o metastázy nádoru",
-          "Je to způsobeno přítomností vápníku"
+          "Je to způsobeno přítomností vápníku",
+          "V důsledku hromadění tuku",
+          "Dochází k reaktivnímu fibrinóznímu zánětu pohrudnice (pleuritis fibrinosa) nad ložiskem nekrózy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Nekróza plicního parenchymu sahá často až pod poplicnici (viscerální pleuru). To vyvolá sterilní, reaktivní zánět pleury s exsudací fibrinogenu. Ten se srazí na fibrin a způsobí tření pleury při dýchání, což vyvolává typickou ostrou bolest."
       }
     ]
@@ -603,23 +603,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co jsou to hyalinní blány (hyaline membranes) v plicích a u jakého syndromu jsou typickým histologickým nálezem?",
         options: [
-          "Bělostná vazivová pouzdra u tuberkulózy",
-          "Růžové, homogenní povlaky lemující alveoly tvořené směsí fibrinu a proteinů z odumřelých pneumocytů; jsou typické pro akutní fázi ARDS (a RDS novorozenců)",
           "Zvápenatělá ložiska u silikózy",
-          "Nádorové struktury v průduškách"
+          "Nádorové struktury v průduškách",
+          "Bělostná vazivová pouzdra u tuberkulózy",
+          "Růžové, homogenní povlaky lemující alveoly tvořené směsí fibrinu a proteinů z odumřelých pneumocytů; jsou typické pro akutní fázi ARDS (a RDS novorozenců)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hyalinní blány vznikají při difuzním alveolárním poškození (DAD). Bílkoviny uniklé z poškozených kapilár (fibrin) se smísí s nekrotickým detritem pneumocytů I. typu a vytvoří blány pokrývající vnitřní povrch alveolů, což dramaticky blokuje difuzi kyslíku."
       },
       {
         question: "Proč dochází u ARDS ke kolapsu alveolů (atelektáze)?",
         options: [
-          "Kvůli nedostatku vzduchu v atmosféře",
-          "V důsledku poškození pneumocytů II. typu, což vede k deficitu surfaktantu a zvýšení povrchového napětí alveolů",
           "V cévách chybí erytrocyty",
-          "Způsobuje to ukládání amyloidu"
+          "Způsobuje to ukládání amyloidu",
+          "Kvůli nedostatku vzduchu v atmosféře",
+          "V důsledku poškození pneumocytů II. typu, což vede k deficitu surfaktantu a zvýšení povrchového napětí alveolů"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pneumocyty II. typu produkují surfaktant (tenziaktivní látku snižující povrchové napětí alveolů). Jejich zánětlivé poškození u ARDS vede k nedostatku surfaktantu, což způsobí, že alveoly se při výdechu smrští a slepí (zkolabují)."
       }
     ]
@@ -642,23 +642,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co vyjadřuje termín 'voštinová plíce' (honeycomb lung)?",
         options: [
-          "Plicní tkáň napadenou včelami",
-          "Konečné stadium plicní fibrózy, kdy je normální plicní parenchym nahrazen cystickými dutinkami s tuhou vazivovou stěnou",
           "Akutní plicní edém",
-          "Vzhled plic u akutní bakteriální pneumonie"
+          "Vzhled plic u akutní bakteriální pneumonie",
+          "Plicní tkáň napadenou včelami",
+          "Konečné stadium plicní fibrózy, kdy je normální plicní parenchym nahrazen cystickými dutinkami s tuhou vazivovou stěnou"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Voštinová plíce je makroskopickým i mikroskopickým obrazem terminální fáze plicních fibróz. Plicní sklípky jsou zničeny zánětem a jizvením a nahrazeny drobnými cystickými prostory (voštinami) s tuhými kolagenními stěnami."
       },
       {
         question: "Jaký poslechový nález je charakteristický pro pacienty s plicní fibrózou (intersticiálními plicními procesy)?",
         options: [
-          "Tiché dýchání bez jakýchkoliv zvuků",
-          "Inspirační krepitus (zvuk připomínající rozlepování suchého zipu) na konci nádechu",
           "Pískoty a vrzoty při výdechu",
-          "Vlhké nesouvučné chrápoty"
+          "Vlhké nesouvučné chrápoty",
+          "Tiché dýchání bez jakýchkoliv zvuků",
+          "Inspirační krepitus (zvuk připomínající rozlepování suchého zipu) na konci nádechu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Inspirační krepitace (velcro crackles) vzniká rozlepováním tuhých stěn sklípků na konci nádechu. Zvuk je suchý a velmi charakteristický pro plicní fibrózu, na rozdíl od vhkých chrapotů u edému plic."
       }
     ]
@@ -681,23 +681,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co znamená termín 'karnifikace plíce' (masovatění plíce) jako komplikace pneumonie?",
         options: [
-          "Přeměna plicní tkáně v kosterní sval",
-          "Nedostatečné vyčištění fibrinózního exsudátu z alveolů, který je následně zorganizován granulační tkání a přeměněn v nevzdušné kolagenní vazivo (tkáň vzhledem připomíná maso)",
           "Zvýšená vzdušnost plic",
-          "Nádorové bujení plic"
+          "Nádorové bujení plic",
+          "Přeměna plicní tkáně v kosterní sval",
+          "Nedostatečné vyčištění fibrinózního exsudátu z alveolů, který je následně zorganizován granulační tkání a přeměněn v nevzdušné kolagenní vazivo (tkáň vzhledem připomíná maso)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při normálním hojení (rezoluci) pneumonie enzymy makrofágů exsudát zkapalní a ten je vykašlán nebo resorbován. Pokud se tak nestane (např. při špatné imunitě), do fibrinu v alveolech vrůstá ze sept vazivo. Alveoly zanikají a plíce se mění v masitou vazivovou jizvu (karnifikuje)."
       },
       {
         question: "Které buňky tvoří hlavní složku alveolárního exsudátu ve stadiu šedé hepatizace lobární pneumonie?",
         options: [
-          "Erytrocyty a plazmatické buňky",
-          "Fibrin a odumřelé neutrofilní granulocyty",
           "Eosinofily a fibroblasty",
-          "Mnohojaderné obří buňky Langhansova typu"
+          "Mnohojaderné obří buňky Langhansova typu",
+          "Erytrocyty a plazmatické buňky",
+          "Fibrin a odumřelé neutrofilní granulocyty"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Ve stadiu šedé hepatizace (hepatisatio grisea) dochází k lýze (rozpadu) erytrocytů z předchozího stadia. V alveolech dominuje hustá síť fibrinu a záplava aktivních i odumřelých neutrofilů, což dává plíci typickou šedou barvu a suchý vzhled."
       }
     ]
@@ -720,23 +720,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Proč se virové pneumonie klinicky i morfologicky označují jako 'atypické'?",
         options: [
-          "Protože se nevyskytují v plicích, ale v ledvinách",
-          "Protože zánětlivý infiltrát (lymfocyty) a edém postihují alveolární septa (intersticium) a alveoly zůstávají vzdušné (bez hnisavého exsudátu)",
           "Protože se léčí zásadně chirurgickým odstraněním plíce",
-          "Protože je způsobují priony"
+          "Protože je způsobují priony",
+          "Protože se nevyskytují v plicích, ale v ledvinách",
+          "Protože zánětlivý infiltrát (lymfocyty) a edém postihují alveolární septa (intersticium) a alveoly zůstávají vzdušné (bez hnisavého exsudátu)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Běžná bakteriální pneumonie (typická) vyplní alveoly hnisem, což je vidět na RTG jako stín a poslechově jako chrápoty. Virová (atypická) pneumonie má exsudát v septech. Alveoly jsou volné, takže poslechový nález může být chudý (atypický) i při těžké dušnosti."
       },
       {
         question: "Jak se v histologickém řezu plic projevuje plicní pneumocystóza (typická pro pacienty s AIDS)?",
         options: [
-          "Kaseózní nekrózou celého laloku",
-          "Přítomností růžového, napěněného (voštinovitého) exsudátu v alveolech, připomínajícího včelí plástev, obsahujícího drobné cysty",
           "Tvorbou kostní tkáně v septech",
-          "Obřími nádorovými buňkami"
+          "Obřími nádorovými buňkami",
+          "Kaseózní nekrózou celého laloku",
+          "Přítomností růžového, napěněného (voštinovitého) exsudátu v alveolech, připomínajícího včelí plástev, obsahujícího drobné cysty"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pneumocystis jirovecii tvoří v alveolech charakteristický napěněný eozinofilní exsudát. Cysty jsou dobře viditelné při barvení podle Grocotta (methenamin stříbra) jako drobné černé kuličky tvaru promáčklého míčku."
       }
     ]
@@ -759,23 +759,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co je to tenzní (ventilový) pneumotorax?",
         options: [
-          "Chronický zánět pleury s usazováním vápníku",
-          "Stav, kdy vzduch při nádechu proudí trhlinou do pleurální dutiny, ale při výdechu nemůže uniknout zpět (ventil), což vede k tlaku v hrudníku, kolapsu plíce, posunu mediastina a útlaku srdce",
           "Přítomnost hnisu v pleurální dutině",
-          "Nádorové bujení na pohrudnici"
+          "Nádorové bujení na pohrudnici",
+          "Chronický zánět pleury s usazováním vápníku",
+          "Stav, kdy vzduch při nádechu proudí trhlinou do pleurální dutiny, ale při výdechu nemůže uniknout zpět (ventil), což vede k tlaku v hrudníku, kolapsu plíce, posunu mediastina a útlaku srdce"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Tenzní pneumotorax funguje jako jednosměrný ventil. Tlak vzduchu v pleurální dutině s každým nádechem stoupá. Dochází k přetlačení mediastina na zdravou stranu, což stlačí zdravou plíci a zaškrtí duté žíly ústící do srdce (hrozí rychlá zástava oběhu)."
       },
       {
         question: "Který zhoubný nádor pleury je typicky spojen s vdechováním azbestových vláken?",
         options: [
-          "Maligní mezoteliom pleury",
-          "Bronchogenní adenokarcinom",
           "Spinocelulární karcinom",
-          "Malobuněčný karcinom"
+          "Malobuněčný karcinom",
+          "Maligní mezoteliom pleury",
+          "Bronchogenní adenokarcinom"
         ],
-        correct: 0,
+        correct: 2,
         explanation: "Maligní mezoteliom pleury je primární nádor vycházející z mezotelových buněk pohrudnice. Expozice azbestu je hlavním známým rizikovým faktorem, přičemž nádor vzniká s dlouhou latencí."
       }
     ]
@@ -798,23 +798,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Co je to Stokesův límec a u jakého stavu v mediastinu vzniká?",
         options: [
-          "Zvápenatění krčních lymfatických uzlin",
-          "Otok a cyanóza obličeje, krku a horní části hrudníku vznikající při útlaku horní duté žíly (syndrom horní duté žíly) nádorem v mediastinu",
           "Zánět záklopky hrtanové",
-          "Vrozená kožní řasa na krku"
+          "Vrozená kožní řasa na krku",
+          "Zvápenatění krčních lymfatických uzlin",
+          "Otok a cyanóza obličeje, krku a horní části hrudníku vznikající při útlaku horní duté žíly (syndrom horní duté žíly) nádorem v mediastinu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Stokesův límec je klinickým projevem obstrukce v. cava superior. Nádor (např. bronchogenní karcinom nebo lymfom) stlačí tuto tenkostěnnou žílu, což zablokuje odtok krve z horní poloviny těla. Vzniká edém a cyanóza hlavy a krku."
       },
       {
         question: "Které autoimunitní neurologické onemocnění je typicky asociováno s thymomem (nádorem brzlíku)?",
         options: [
-          "Roztroušená skleróza (RS)",
-          "Myasthenia gravis (těžká svalová slabost)",
           "Alzheimerova choroba",
-          "Parkinsonova nemoc"
+          "Parkinsonova nemoc",
+          "Roztroušená skleróza (RS)",
+          "Myasthenia gravis (těžká svalová slabost)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Myasthenia gravis (způsobená protilátkami proti acetylcholinovým receptorům na nervosvalové ploténce) je přítomna u cca 30–40 % pacientů s thymomem. Odstranění thymomu (thymektomie) často vede ke zlepšení příznaků myastenie."
       }
     ]
@@ -837,23 +837,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Proč vznikají jícnové varixy a jaké je jejich hlavní riziko?",
         options: [
-          "Při nedostatku potravy; hrozí udušením",
-          "Při portální hypertenzi (např. u jaterní cirhózy) jako portokavální anastomózy; hrozí jejich prasknutím a fatálním krvácením do trávicího traktu (hematemeze)",
           "V důsledku infekce plísněmi; hrozí zúžením jícnu",
-          "Jsou to nezhoubné polypy"
+          "Jsou to nezhoubné polypy",
+          "Při nedostatku potravy; hrozí udušením",
+          "Při portální hypertenzi (např. u jaterní cirhózy) jako portokavální anastomózy; hrozí jejich prasknutím a fatálním krvácením do trávicího traktu (hematemeze)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Jícnové varixy jsou rozšířené žíly v dolní třetině jícnu, které slouží jako obtoková dráha (portokavální anastomóza) při vysokém tlaku v portální žíle. Jejich stěna je tenká a pod tlakem snadno praskne, což vyvolá masivní krvácení do GIT."
       },
       {
         question: "Který typ zhoubného nádoru jícnu vzniká v terénu Barrettova jícnu (intestinální metaplazie)?",
         options: [
-          "Spinocelulární karcinom",
-          "Adenokarcinom",
           "Leiomyosarkom",
-          "Karcinoid"
+          "Karcinoid",
+          "Spinocelulární karcinom",
+          "Adenokarcinom"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Barrettův jícen představuje přeměnu dlaždicového epitelu na žlázový cylindrický epitel (metaplazii). Z tohoto žlázového epitelu se při hromadění mutací vyvíjí adenokarcinom. Spinocelulární karcinom vzniká z původního dlaždicového epitelu (hlavně vlivem alkoholu a kouření)."
       }
     ]
@@ -876,23 +876,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "U kterého typu chronické gastritidy dochází k autoimunitní destrukci parietálních buněk těla žaludku a k rozvoji perniciózní anémie?",
         options: [
-          "U typu B (bakteriální - Helicobacter pylori)",
-          "U typu A (autoimunitní)",
           "U typu C (chemická - reflux žluči)",
-          "Gastritida nemá vliv na krevní obraz"
+          "Gastritida nemá vliv na krevní obraz",
+          "U typu B (bakteriální - Helicobacter pylori)",
+          "U typu A (autoimunitní)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Chronická gastritida typu A (autoimunitní, 'A' jako autoimunitní) postihuje tělo a klenbu žaludku, kde jsou uloženy parietální buňky tvořící HCl a vnitřní faktor. Jejich destrukce znemožní vstřebávání vit. B12 a vyvolá perniciózní (megaloblastovou) anémii."
       },
       {
         question: "Jak se Helicobacter pylori chrání před extrémně kyselým prostředím žaludku?",
         options: [
-          "Tvorbou silného voskového obalu",
-          "Produkcí enzymu ureázy, který štěpí močovinu na amoniak a oxid uhličitý; vzniklý amoniak neutralizuje kyselinu v okolí bakterie",
           "Vniknutím přímo do buněk (intracelulárně)",
-          "Helicobacter kyselé prostředí nesnáší a žije pouze ve dvanáctníku"
+          "Helicobacter kyselé prostředí nesnáší a žije pouze ve dvanáctníku",
+          "Tvorbou silného voskového obalu",
+          "Produkcí enzymu ureázy, který štěpí močovinu na amoniak a oxid uhličitý; vzniklý amoniak neutralizuje kyselinu v okolí bakterie"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Helicobacter pylori produkuje velké množství ureázy. Tento enzym štěpí ureu (močovinu) přítomnou v žaludeční šťávě na alkalický amoniak (NH3), který vytvoří kolem bakterie zásaditý mikro-mrak ('neutralizační štít'), což jí umožní přežít v žaludku."
       }
     ]
@@ -915,23 +915,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Jak se makroskopicky liší benigní peptický vřed od ulcerovaného adenokarcinomu žaludku?",
         options: [
-          "Benigní vřed je vždy větší než 10 cm",
-          "Benigní vřed je ostře ohraničený, má hladké a strmé okraje a čistou spodinu; maligní vřed má nepravidelné, navalité (vyvýšené) okraje a špinavou, nekrotickou spodinu",
           "Maligní vřed se nevyskytuje v žaludku, pouze v jícnu",
-          "Neliší se, diagnózu lze stanovit pouze posmrtně"
+          "Neliší se, diagnózu lze stanovit pouze posmrtně",
+          "Benigní vřed je vždy větší než 10 cm",
+          "Benigní vřed je ostře ohraničený, má hladké a strmé okraje a čistou spodinu; maligní vřed má nepravidelné, navalité (vyvýšené) okraje a špinavou, nekrotickou spodinu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Toto odlišení je zásadní při gastroskopii. Benigní peptický vřed vypadá jako 'vyseknutý razidlem' s čistým dnem. Karcinom roste infiltrativně, proto jsou jeho okraje vyvýšené (navalité), nepravidelné a dno je vyplněno rozpadající se nádorovou tkání. Vždy se však odebírá biopsie k potvrzení."
       },
       {
         question: "Která významná tepna bývá nejčastěji nahlodána (arozována) vředem na zadní stěně dvanáctníku, což vede k masivnímu krvácení?",
         options: [
-          "Arteria splenica",
-          "Arteria gastroduodenalis",
           "Arteria renalis dextra",
-          "Arteria mesenterica superior"
+          "Arteria mesenterica superior",
+          "Arteria splenica",
+          "Arteria gastroduodenalis"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Arteria gastroduodenalis probíhá těsně za zadní stěnou bulbu dvanáctníku (duodena). Pokud vřed na zadní stěně penetruje hluboko přes stěnu, může nahlodat (arozovat) tuto velkou tepnu, což vyvolá prudké, život ohrožující krvácení."
       }
     ]
@@ -954,23 +954,23 @@ const DATA_SPECIAL_1 = [
       {
         question: "Které tři histologické změny v tenkém střevě jsou typické pro rozvinutou celiakii (Marsh III)?",
         options: [
-          "Ukládání amyloidu, nekróza svaloviny, hnisavý infiltrát",
-          "Atrofie (vyhlazení) klků, hyperplazie krypt a zmnožení intraepiteliálních lymfocytů (IEL)",
           "Dlaždicobuněčná metaplazie, tvorba abscesů, kalcifikace",
-          "Přítomnost kaseózní nekrózy v submukóze"
+          "Přítomnost kaseózní nekrózy v submukóze",
+          "Ukládání amyloidu, nekróza svaloviny, hnisavý infiltrát",
+          "Atrofie (vyhlazení) klků, hyperplazie krypt a zmnožení intraepiteliálních lymfocytů (IEL)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Histologický obraz celiakie je charakterizován destrukcí klků (atrofie), prodloužením krypt, ze kterých buňky regenerují (hyperplazie), a přítomností zánětu - lymfocytů přímo v epitelu (intraepiteliální lymfocytóza) a v lamina propria."
       },
       {
         question: "Jakým barvením se v histologii prokazují makrofágy u Whippleovy choroby?",
         options: [
-          "Barvením Kongočervení",
-          "PAS barvením (Periodic Acid-Schiff - barví se intenzivně purpurově/červeně)",
           "Perlovou reakcí",
-          "Ziehl-Neelsenovým barvením"
+          "Ziehl-Neelsenovým barvením",
+          "Barvením Kongočervení",
+          "PAS barvením (Periodic Acid-Schiff - barví se intenzivně purpurově/červeně)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Bakterie Tropheryma whipplei, které jsou nahromaděné v cytoplasmě makrofágů, mají stěnu bohatou na glykoproteiny. Tyto glykoproteiny reagují v PAS barvení intenzivně purpurovou (červenou) barvou. PAS-pozitivní makrofágy v tenkém střevě jsou pro Whippleovu chorobu diagnostické."
       }
     ]
