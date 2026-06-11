@@ -1,14 +1,10 @@
-# ⚡ Use event delegation for rendering study question cards
+# 🔒 Fix DOM-based XSS vulnerability in study card details
 
-## 💡 What
-This PR refactors the study question card grid to use **Event Delegation**. Instead of attaching individual `click` event listeners on every generated DOM element in the grid (which is O(N)), it replaces them with a single delegated event listener attached to the parent `cardsGrid` container.
+## 🎯 What
+This PR replaces unsafe `innerHTML` assignments with secure `textContent` assignments when rendering study card details (definition, etiology, pathogenesis, macroscopy, microscopy, and clinical info) in `app.js` (lines 265-272).
 
-## 🎯 Why
-When `renderQuestionsGrid()` runs, it destroys the inner HTML and creates/appends many individual DOM elements, attaching an anonymous function as an event listener for each element. Since there are thousands of cards, this leads to heavy garbage collection during re-renders, higher memory spikes, and slightly slower execution times due to the O(N) allocation of event handlers. Event delegation resolves this memory bottleneck by keeping a single event handler active regardless of the number of child cards generated.
+## ⚠️ Risk
+Previously, properties from the study question's `content` object were directly injected into the DOM using `innerHTML` without sanitization. This created a DOM-based Cross-Site Scripting (XSS) vulnerability. If any user-controlled input, external contribution, or compromised data file managed to inject arbitrary HTML or JavaScript (e.g., `<script>` tags or `onload` handlers) into the database, it would execute automatically when the user viewed the question detail. This could lead to session hijacking, unauthorized actions on behalf of the user, or defacement.
 
-## 📊 Measured Improvement
-A node-based benchmarking script was run utilizing JSDOM to simulate rendering the study cards matrix, revealing:
-
-- **Baseline Memory Delta (O(N) handlers):** ~80 MB per 1000 renders
-- **Delegated Memory Delta (1 handler):** ~24 MB per 1000 renders
-- **Overall result:** Memory growth during grid re-renders was reduced by **~70%** (~3x more memory efficient). Memory management and GC overhead will be much lighter, especially on lower-end devices processing the full un-filtered card list.
+## 🛡️ Solution
+Replaced `innerHTML` with `textContent` for the 6 vulnerable element assignments (`studyDefinition`, `studyEtiology`, `studyPathogenesis`, `studyMacroscopy`, `studyMicroscopy`, `studyClinical`). `textContent` ensures that any HTML tags in the source data are safely encoded and rendered as plain text rather than evaluated as executable code by the browser, completely mitigating the XSS vector while preserving the intended display of the plain text data.
