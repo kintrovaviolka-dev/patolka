@@ -19,23 +19,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který z následujících genů patří mezi klíčové nádorové supresory a je označován jako 'strážce genomu'?",
         options: [
-          "KRAS",
-          "TP53 (kódující protein p53)",
           "HER2/neu",
-          "BCL2"
+          "BCL2",
+          "KRAS",
+          "TP53 (kódující protein p53)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "TP53 je nejvýznamnější nádorový supresor. Při poškození DNA zastaví buněčný cyklus v G1 fázi, aby mohla proběhnout oprava, nebo při těžkém poškození spustí apoptózu. Jeho mutace je přítomna u více než 50 % lidských nádorů."
       },
       {
         question: "Jaký biologický patogen je spojen se vznikem karcinomu žaludku a MALT lymfomu?",
         options: [
-          "Epstein-Barrové virus (EBV)",
-          "Helicobacter pylori (bakterie kolonizující žaludeční sliznici)",
           "Lidský papillomavirus (HPV)",
-          "Virus hepatitidy B (HBV)"
+          "Virus hepatitidy B (HBV)",
+          "Epstein-Barrové virus (EBV)",
+          "Helicobacter pylori (bakterie kolonizující žaludeční sliznici)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Helicobacter pylori způsobuje chronickou gastritidu, která vede k hyperplazii lymfatické tkáně (riziko MALT lymfomu) a přes intestinální metaplazii až k adenokarcinomu žaludku."
       }
     ,
@@ -71,23 +71,23 @@ const DATA_ONCO_1 = [
       {
         question: "Jaký je zásadní mikroskopický rozdíl mezi těžkou dysplázií (High-grade) a invazivním karcinomem?",
         options: [
-          "Těžká dysplázie neobsahuje žádné atypické mitózy",
-          "U těžké dysplázie jsou buňky cytologicky abnormální, ale respektují bazální membránu (nedochází k invazi); u invazivního karcinomu dochází k destrukci bazální membrány a infiltraci stroma cévami",
           "Dysplázie postihuje pouze mezenchymální tkáně",
-          "U invazivního karcinomu chybí pleomorfismus jader"
+          "U invazivního karcinomu chybí pleomorfismus jader",
+          "Těžká dysplázie neobsahuje žádné atypické mitózy",
+          "U těžké dysplázie jsou buňky cytologicky abnormální, ale respektují bazální membránu (nedochází k invazi); u invazivního karcinomu dochází k destrukci bazální membrány a infiltraci stroma cévami"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Dysplázie (i ta nejtěžší - High-grade) je intraepiteliální proces. Epitelové buňky vykazují všechny známky malignity, ale bazální membrána je celistvá. Jakmile buňky proniknou bazální membránou do přilehlého vazivového stroma (lamina propria/dermis), jedná se o invazivní karcinom."
       },
       {
         question: "Která z následujících lézí je považována za typickou obligatorní (stacionární) prekancerózu?",
         options: [
-          "Chronický žaludeční vřed",
-          "Adenomatózní (tubulární/vilózní) polyp tlustého střeva",
           "Solární (senilní) keratóza kůže",
-          "Chronická bronchitida"
+          "Chronická bronchitida",
+          "Chronický žaludeční vřed",
+          "Adenomatózní (tubulární/vilózní) polyp tlustého střeva"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Adenomatózní polyp tlustého střeva (zejména vilózní typ a s velikostí nad 2 cm) vykazuje velmi vysoké procento maligního zvratu v adenokarcinom (adenom-karcinomová sekvence), a proto je považován za obligatorní prekancerózu a kolonoskopicky se odstraňuje."
       }
     ,
@@ -123,23 +123,23 @@ const DATA_ONCO_1 = [
       {
         question: "Co je to hamartom?",
         options: [
-          "Zhoubný nádor z cévního endotelu",
-          "Vrozený pseudotumor, který představuje chaotické, nepravidelné uspořádání zralých tkání na místě, kde se tyto tkáně běžně vyskytují (např. chondrohamartom plíce)",
           "Přítomnost normální tkáně v nenormálním orgánu (např. žaludeční sliznice v Meckelově divertiklu)",
-          "Dutina vyplněná hnisem"
+          "Dutina vyplněná hnisem",
+          "Zhoubný nádor z cévního endotelu",
+          "Vrozený pseudotumor, který představuje chaotické, nepravidelné uspořádání zralých tkání na místě, kde se tyto tkáně běžně vyskytují (např. chondrohamartom plíce)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hamartom je vrozená tkáňová anomálie. Skládá se ze zralých struktur, které jsou pro daný orgán typické, ale jsou pomíchány v chaotický uzel (např. v plíci směs chrupavky, hladké svaloviny a průduškového epitelu)."
       },
       {
         question: "Co je to choristom (heterotopie)?",
         options: [
-          "Nádor vzniklý po ozáření",
-          "Vrozená přítomnost mikroskopicky normální tkáně v neobvyklé anatomické lokalizaci, kde se normálně nevyskytuje (např. okrsek pankreatu ve stěně žaludku)",
           "Jizva po popálení",
-          "Zánětlivý polyp v nose"
+          "Zánětlivý polyp v nose",
+          "Nádor vzniklý po ozáření",
+          "Vrozená přítomnost mikroskopicky normální tkáně v neobvyklé anatomické lokalizaci, kde se normálně nevyskytuje (např. okrsek pankreatu ve stěně žaludku)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Choristom (nebo heterotopie) je přítomnost normální tkáně mimo její obvyklé místo. Tkáň je histologicky zcela zralá a funkční, ale nachází se v cizím orgánu (např. buňky slinivky břišní ve stěně dvanáctníku)."
       }
     ,
@@ -175,23 +175,23 @@ const DATA_ONCO_1 = [
       {
         question: "Jak se chová semimaligní (lokálně destruktivní) nádor, jako je např. bazaliom kůže?",
         options: [
-          "Roste expanzivně a tvoří pouzdro",
-          "Roste lokálně invazivně a ničí okolní tkáně, ale zakládá metastázy jen zcela výjimečně",
           "Okamžitě metastázuje hematogenní cestou do plic a jater",
-          "Není schopen recidivy po odstranění"
+          "Není schopen recidivy po odstranění",
+          "Roste expanzivně a tvoří pouzdro",
+          "Roste lokálně invazivně a ničí okolní tkáně, ale zakládá metastázy jen zcela výjimečně"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Semimaligní nádory (např. bazocelulární karcinom kůže - bazaliom) mají invazivní charakter a lokálně ničí kůži i chrupavku pod ní, čímž napodobují maligní tumory. Jejich výhodou však je, že prakticky nikdy nezakládají vzdálené metastázy."
       },
       {
         question: "Který z následujících růstových znaků je typický pro benigní nádory?",
         options: [
-          "Infiltrativní a destruktivní růst do sousedních orgánů",
-          "Expanzivní růst, často s vytvořením vazivového pouzdra, které nádor odděluje od okolí",
           "Průnik do lymfatických cév a embolizace do uzlin",
-          "Rychlý rozpad s kolikvancí a nekrózou velké části nádoru"
+          "Rychlý rozpad s kolikvancí a nekrózou velké části nádoru",
+          "Infiltrativní a destruktivní růst do sousedních orgánů",
+          "Expanzivní růst, často s vytvořením vazivového pouzdra, které nádor odděluje od okolí"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Benigní nádory rostou pomalu a expanzivně (tlačí tkáň před sebou). Okolní zdravé vazivo se tlakem komprimuje a vytváří pouzdro (kapsulu), což usnadňuje chirurgické vyloupnutí (enukleaci) nádoru."
       }
     ,
@@ -227,23 +227,23 @@ const DATA_ONCO_1 = [
       {
         question: "Co znamená termín 'anaplázie' u nádorových buněk?",
         options: [
-          "Zvýšená citlivost na hormonální léčbu",
-          "Ztráta strukturální a funkční diferenciace buněk, kdy se buňky stávají nezralými a nepodobají se původní zdravé tkáni",
           "Ukládání vápníku do stroma nádoru",
-          "Zvětšení buněk bez poruchy jejich funkce"
+          "Zvětšení buněk bez poruchy jejich funkce",
+          "Zvýšená citlivost na hormonální léčbu",
+          "Ztráta strukturální a funkční diferenciace buněk, kdy se buňky stávají nezralými a nepodobají se původní zdravé tkáni"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Anaplázie je klasickým znakem zhoubnosti. Znamená to, že buňky ztratily svou specializaci (diferenciaci) a vrátily se do primitivního stadia. Anaplastické nádory jsou vysoce agresivní a k určení jejich původu je nutné použít imunohistochemii."
       },
       {
         question: "Který z následujících mikroskopických nálezů svědčí nejsilněji pro malignitu nádoru?",
         options: [
-          "Přítomnost velkého množství zralých kolagenních vláken ve stroma",
-          "Přítomnost atypických, vícepólových mitóz a invaze buněk do lymfatických či krevních cév",
           "Monomorfní vzhled buněk s kulatými jádry",
-          "Nahromadění tuku v cytoplasmě buněk"
+          "Nahromadění tuku v cytoplasmě buněk",
+          "Přítomnost velkého množství zralých kolagenních vláken ve stroma",
+          "Přítomnost atypických, vícepólových mitóz a invaze buněk do lymfatických či krevních cév"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Atypické mitózy (např. tripolární, kvadripolární vřeténka) svědčí o těžké instabilitě genomu. Lymfangioinvaze a angioinvaze (průnik buněk do cév) jsou přímým důkazem schopnosti nádoru metastázovat a šířit se do těla."
       }
     ,
@@ -279,23 +279,23 @@ const DATA_ONCO_1 = [
       {
         question: "Jak se nazývá zhoubný epiteliální nádor vycházející ze žlázových buněk?",
         options: [
-          "Fibrosarkom",
-          "Adenokarcinom",
           "Papilokarcinom",
-          "Leiomyom"
+          "Leiomyom",
+          "Fibrosarkom",
+          "Adenokarcinom"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Zatímco 'adenom' je benigní nádor ze žlázového epitelu, jeho zhoubný protějšek se označuje jako 'adenokarcinom'. Tvoří patologické žlázové tubuly a aciny."
       },
       {
         question: "Co jsou to 'rakovinové (keratinové) perly' v histologickém řezu?",
         options: [
-          "Ložiska vápníku v adenokarcinomu",
-          "Kulaté, růžové (eozinofilní) koncentrické formace zrohovatělých buněk (keratinu) uvnitř čepů dlaždicobuněčného (spinocelulárního) karcinomu",
           "Krystaly cholesterolu v cévách",
-          "Lymfocyty obklopující nádor"
+          "Lymfocyty obklopující nádor",
+          "Ložiska vápníku v adenokarcinomu",
+          "Kulaté, růžové (eozinofilní) koncentrické formace zrohovatělých buněk (keratinu) uvnitř čepů dlaždicobuněčného (spinocelulárního) karcinomu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U dobře a středně diferencovaného dlaždicobuněčného karcinomu se buňky snaží plnit svou původní funkci - tvorbu keratinu (rohovění). Protože však rostou v uzavřených čepech hluboko ve tkáni, keratin se hromadí uprostřed čepů a vytváří koncentrické útvary připomínající perly."
       }
     ,
@@ -331,23 +331,23 @@ const DATA_ONCO_1 = [
       {
         question: "Jakou cestou se primárně šíří (metastázují) maligní mezenchymální nádory (sarkomy)?",
         options: [
-          "Výhradně lymfogenní cestou do uzlin",
-          "Hematogenní cestou (krevním oběhem), s nejčastějším výskytem metastáz v plicích",
           "Podél nervových pochev",
-          "Pouze přímým přestupem přes pleuru"
+          "Pouze přímým přestupem přes pleuru",
+          "Výhradně lymfogenní cestou do uzlin",
+          "Hematogenní cestou (krevním oběhem), s nejčastějším výskytem metastáz v plicích"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Na rozdíl od karcinomů, které se šíří nejprve lymfatickými cestami, sarkomy mají tendenci invadovat přímo do krevního řečiště. Krevní oběh je roznáší do prvního kapilárního filtru, kterým jsou plíce."
       },
       {
         question: "Co je to leiomyom a kde se s ním v lidském těle setkáváme nejčastěji?",
         options: [
-          "Maligní nádor z kosterního svalu v končetinách",
-          "Benigní nádor z hladké svaloviny, který se extrémně často vyskytuje v děloze (uterinní myom)",
           "Zhoubný nádor z tuku",
-          "Nádor z kostní tkáně"
+          "Nádor z kostní tkáně",
+          "Maligní nádor z kosterního svalu v končetinách",
+          "Benigní nádor z hladké svaloviny, který se extrémně často vyskytuje v děloze (uterinní myom)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Leiomyom je benigní nádor z buněk hladké svaloviny. Je to nejčastější nádor u žen vůbec, postihuje dělohu (myometrium) u žen ve fertilním věku, kde způsobuje krvácení a neplodnost."
       }
     ,
@@ -383,23 +383,23 @@ const DATA_ONCO_1 = [
       {
         question: "Co jsou to Homer-Wrightovy rozety a u kterého neuroektodermálního dětského nádoru je nacházíme?",
         options: [
-          "Ložiska keratinu u spinocelulárního karcinomu",
-          "Kruhovité formace nádorových buněk obklopující centrální růžovou zónu tvořenou neurálními výběžky (neuropilem), typické pro neuroblastom a meduloblastom",
           "Pěnové buňky v ateroskleróze",
-          "Uzly v plicích u silikózy"
+          "Uzly v plicích u silikózy",
+          "Ložiska keratinu u spinocelulárního karcinomu",
+          "Kruhovité formace nádorových buněk obklopující centrální růžovou zónu tvořenou neurálními výběžky (neuropilem), typické pro neuroblastom a meduloblastom"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Homer-Wrightovy rozety jsou klasickým histologickým nálezem u primitivních neuroektodermálních nádorů (neuroblastom, meduloblastom). Nádorové buňky se uspořádají do prstence kolem centrálního ložiska tvořeného proplétajícími se výběžky těchto buněk (neuropilem)."
       },
       {
         question: "Který imunohistochemický marker je vysoce citlivým ukazatelem pro neuroektodermální nádory, zejména melanom a schwannom?",
         options: [
-          "Cytokeratin (CK)",
-          "Protein S100",
           "Prostatický specifický antigen (PSA)",
-          "Desmin"
+          "Desmin",
+          "Cytokeratin (CK)",
+          "Protein S100"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "S100 je kyselý vápník-vázající protein přítomný v buňkách odvozených z neurální lišty (melanocyty, glie, Schwannovy buňky). Imunohistochemický průkaz S100 je klíčový pro potvrzení diagnózy melanomu a schwannomu."
       }
     ,
@@ -435,23 +435,23 @@ const DATA_ONCO_1 = [
       {
         question: "Proč není Carcinoma in situ (CIS) schopen zakládat metastázy?",
         options: [
-          "Protože jeho buňky neumí přežít v krvi",
-          "Protože epitel nemá vlastní cévní ani lymfatické zásobení a buňky nepronikly přes bazální membránu do stroma, kde cévy jsou",
           "Protože roste pouze na kůži",
-          "Protože imunitní systém tyto buňky v krvi okamžitě zničí"
+          "Protože imunitní systém tyto buňky v krvi okamžitě zničí",
+          "Protože jeho buňky neumí přežít v krvi",
+          "Protože epitel nemá vlastní cévní ani lymfatické zásobení a buňky nepronikly přes bazální membránu do stroma, kde cévy jsou"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Epitel je bezcévná tkáň. Všechny cévy (krevní i lymfatické) se nacházejí pod bazální membránou v pojivovém stroma. Dokud buňky CIS neprotrhnou bazální membránu (čímž by se staly invazivním karcinomem), nemají fyzický přístup k cévám a nemohou se šířit do těla."
       },
       {
         question: "Jak se liší kolposkopický/cytologický nález u těžké dysplázie/CIS děložního čípku při Schillerově testu (potření Lugolovým roztokem)?",
         options: [
-          "Oblast s CIS se zbarví sytě černě",
-          "Oblast s CIS se nezbarví (zůstane bledá), protože dysplastické buňky ztrácejí glykogen, který Lugolův jód normálně barví mahagonově hnědě",
           "Celá sliznice se rozpustí",
-          "Sliznice začne intenzivně krvácet"
+          "Sliznice začne intenzivně krvácet",
+          "Oblast s CIS se zbarví sytě černě",
+          "Oblast s CIS se nezbarví (zůstane bledá), protože dysplastické buňky ztrácejí glykogen, který Lugolův jód normálně barví mahagonově hnědě"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Zdravé, zralé dlaždicové buňky děložního čípku obsahují hodně glykogenu. Lugolův roztok (jód) reaguje s glykogenem a barví sliznici do tmavě hnědé barvy. Nádorově změněné buňky (dysplastické/CIS) mají změněný metabolismus, glykogen neobsahují, a proto tato ložiska po potření jódem zůstávají světlá (jód-negativní zóny)."
       }
     ,
@@ -487,23 +487,23 @@ const DATA_ONCO_1 = [
       {
         question: "Co jsou to Auerovy tyčinky (Auer rods) a u kterého typu leukémie je nacházíme?",
         options: [
-          "Bakterie u tuberkulózy kostí",
-          "Jehlicovité, červenorůžové intracytoplasmatické struktury (vzniklé splynutím azurofilních granul) v blastech u Akutní myeloidní leukémie (AML)",
           "Zbytky jader u chronické lymfatické leukémie",
-          "Pigmentové inkluze u melanomu"
+          "Pigmentové inkluze u melanomu",
+          "Bakterie u tuberkulózy kostí",
+          "Jehlicovité, červenorůžové intracytoplasmatické struktury (vzniklé splynutím azurofilních granul) v blastech u Akutní myeloidní leukémie (AML)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Auerovy tyčinky jsou patognomické pro myeloidní řadu. Jejich nález v cytoplasmě blastů v nátěru periferní krve či dřeně spolehlivě odlišuje Akutní myeloidní leukémii (AML) od Akutní lymfoblastické leukémie (ALL)."
       },
       {
         question: "Který genetický nález (translokace) definuje Chronickou myeloidní leukémii (CML) a vede ke vzniku fúzního genu BCR-ABL?",
         options: [
-          "t(8;14) u Burkittova lymfomu",
-          "t(9;22) neboli Filadelfský chromozom (Philadelphia chromosome)",
           "t(11;14) u lymfomu z plášťových buněk",
-          "t(15;17) u APML"
+          "t(15;17) u APML",
+          "t(8;14) u Burkittova lymfomu",
+          "t(9;22) neboli Filadelfský chromozom (Philadelphia chromosome)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "CML je charakterizována reciprokou translokací t(9;22). Část protoonkogenu ABL z 9. chromozomu se přenese na 22. chromozom do oblasti genu BCR. Vzniká fúzní gen BCR-ABL, který kóduje trvale aktivní tyrosinkinázu stimulující nekontrolovanou produkci granulocytů."
       }
     ,
@@ -539,23 +539,23 @@ const DATA_ONCO_1 = [
       {
         question: "Jak vypadá typická buňka Reedové-Sternberga (RS buňka) pod mikroskopem?",
         options: [
-          "Je to malý, tmavý lymfocyt s rozpadlým jádrem",
-          "Je to obří, dvoujaderná nebo vícejaderná buňka, kde jádra leží vedle sebe se zrcadlovým obrazem a obsahují obrovská, růžová jadérka (vzhled sovích očí)",
           "Jde o buňku vyplněnou hlenovými vakuolami posunujícími jádro k okraji",
-          "Je to bezjaderný stín buňky"
+          "Je to bezjaderný stín buňky",
+          "Je to malý, tmavý lymfocyt s rozpadlým jádrem",
+          "Je to obří, dvoujaderná nebo vícejaderná buňka, kde jádra leží vedle sebe se zrcadlovým obrazem a obsahují obrovská, růžová jadérka (vzhled sovích očí)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "RS buňky jsou diagnostickým znakem Hodgkinova lymfomu. Jsou to obří buňky vzniklé endomitózou. Klasická dvoujaderná forma s nápadnými jadérky obklopenými světlým dvorcem připomíná oči sovy (owl-eye appearance)."
       },
       {
         question: "Co tvoří převážnou část (97-99 %) objemu nádorové uzliny u Hodgkinova lymfomu?",
         options: [
-          "Čistě nádorové RS buňky bez jiných elementů",
-          "Reaktivní, nenádorové pozadí tvořené lymfocyty, plazmatickými buňkami, histiocyty, eosinofilními granulocyty a vazivem",
           "Ložiska hnisu a nekrózy",
-          "Kaseózní nekróza a epiteloidní buňky"
+          "Kaseózní nekróza a epiteloidní buňky",
+          "Čistě nádorové RS buňky bez jiných elementů",
+          "Reaktivní, nenádorové pozadí tvořené lymfocyty, plazmatickými buňkami, histiocyty, eosinofilními granulocyty a vazivem"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hodgkinův lymfom je v patologii unikátní. Samotných nádorových buněk (Hodgkinových a RS) je v uzlině velmi málo. Tyto buňky však vylučují velké množství cytokinů a chemokinů, které do uzliny přivolají obrovské množství zdravých imunitních buněk, jež tvoří pozadí nádoru."
       }
     ,
@@ -591,23 +591,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který imunohistochemický marker (povrchový znak) je přítomen na téměř všech zralých B-lymfomech a je cílem cílené biologické léčby Rituximabem?",
         options: [
-          "CD3 (marker T-lymfocytů)",
-          "CD20",
           "CD15",
-          "S100"
+          "S100",
+          "CD3 (marker T-lymfocytů)",
+          "CD20"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "CD20 je specifický membránový protein přítomný na B-lymfocytech od stadia pre-B buňky až po zralý lymfocyt (chybí na plazmatických buňkách). Rituximab je monoklonální protilátka proti CD20, která se specificky váže na B-buňky a ničí je."
       },
       {
         question: "Proč vzniká většina lymfomů právě z B-lymfocytů a ne z T-lymfocytů?",
         options: [
-          "Protože B-lymfocytů je v těle 1000x více",
-          "Protože B-lymfocyty během zrání v zárodečném centru uzliny procházejí přirozeným genetickým štěpením a mutacemi (somatická hypermutace, VDJ rekombinace), což zvyšuje riziko chybné translokace",
           "T-lymfocyty nemohou mutovat",
-          "B-lymfocyty jsou napadány bakteriemi"
+          "B-lymfocyty jsou napadány bakteriemi",
+          "Protože B-lymfocytů je v těle 1000x více",
+          "Protože B-lymfocyty během zrání v zárodečném centru uzliny procházejí přirozeným genetickým štěpením a mutacemi (somatická hypermutace, VDJ rekombinace), což zvyšuje riziko chybné translokace"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Zrání B-lymfocytů zahrnuje aktivní procesy modifikace DNA (VDJ rekombinace, somatická hypermutace v germinálním centru a třídový přesmyk). Tyto fyziologické zlomy DNA prováděné enzymem AID (activation-induced cytidine deaminase) jsou náchylné k chybám, které mohou omylem propojit onkogen (např. BCL2 nebo MYC) s promotorem pro imunoglobuliny."
       }
     ,
@@ -643,23 +643,23 @@ const DATA_ONCO_1 = [
       {
         question: "Co je to epidermotropismus a pro který T-lymfom je typický?",
         options: [
-          "Růst nádoru v kostní dřeni",
-          "Schopnost atypických T-lymfocytů aktivně migrovat do epidermis kůže za vzniku Pautrierových mikroabscesů; typické pro Mycosis fungoides (kožní T-lymfom)",
           "Šíření nádoru podél krevních cév v plicích",
-          "Ukládání melaninu do buněk lymfomu"
+          "Ukládání melaninu do buněk lymfomu",
+          "Růst nádoru v kostní dřeni",
+          "Schopnost atypických T-lymfocytů aktivně migrovat do epidermis kůže za vzniku Pautrierových mikroabscesů; typické pro Mycosis fungoides (kožní T-lymfom)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Mycosis fungoides je primární kožní T-lymfom z pomocných CD4+ lymfocytů. Tyto buňky mají afinitu ke kůži (homing) a pronikají do epidermis (epidermotropismus), kde tvoří drobné shluky buněk (Pautrierovy mikroabscesy), což je histologický diagnostický klíč."
       },
       {
         question: "Který zralý T-lymfom vzniká jako vzácná, ale těžká komplikace u neléčené nebo refrakterní celiakie?",
         options: [
-          "Hodgkinův lymfom",
-          "Enteropatický T-lymfom asociovaný s enteropatií (EATL)",
           "Folikulární lymfom",
-          "Burkittův lymfom"
+          "Burkittův lymfom",
+          "Hodgkinův lymfom",
+          "Enteropatický T-lymfom asociovaný s enteropatií (EATL)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "EATL je agresivní T-lymfom tenkého střeva. Vyvíjí se u pacientů s celiakií (často neléčenou bezlepkovou dietou) z intraepiteliálních T-lymfocytů sliznice střeva. Způsobuje ulcerace, krvácení a nebezpečné perforace střevní stěny."
       }
     ,
@@ -695,23 +695,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který mikroskopický obraz je typický pro Burkittův lymfom?",
         options: [
-          "Nodulární (folikulární) uspořádání s jizvením",
-          "Obraz 'hvězdného nebe' (starry sky) vytvořený tmavým pozadím nádorových buněk, ve kterém jsou roztroušeny světlé makrofágy s pohlceným buněčným detritem",
           "Přítomnost obřích buněk s jádry vzhledu sovích očí",
-          "Záplava eosinofilů a plazmatických buněk"
+          "Záplava eosinofilů a plazmatických buněk",
+          "Nodulární (folikulární) uspořádání s jizvením",
+          "Obraz 'hvězdného nebe' (starry sky) vytvořený tmavým pozadím nádorových buněk, ve kterém jsou roztroušeny světlé makrofágy s pohlceným buněčným detritem"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Burkittův lymfom má extrémní buněčný obrat (všechny buňky se dělí a mnoho jich hyne apoptózou). Světlé makrofágy (hvězdy) pohlcují tyto odumřelé buňky a jsou roztroušeny v temném poli rychle se dělících nádorových lymfocytů (nebe)."
       },
       {
         question: "Co je hlavním patogenetickým důsledkem translokace t(14;18) u folikulárního lymfomu?",
         options: [
-          "Nadprodukce inzulínu",
-          "Overexprese (nadměrná tvorba) antiapoptotického proteinu BCL2, což zabraňuje přirozené smrti (apoptóze) B-lymfocytů v zárodečných centrech",
           "Okamžitá destrukce kostní dřeně",
-          "Ztráta exprese všech B-markerů"
+          "Ztráta exprese všech B-markerů",
+          "Nadprodukce inzulínu",
+          "Overexprese (nadměrná tvorba) antiapoptotického proteinu BCL2, což zabraňuje přirozené smrti (apoptóze) B-lymfocytů v zárodečných centrech"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Translokace t(14;18) přenese gen BCL2 z 18. chromozomu za promotor genu IGH (těžký řetězec imunoglobulinu) na 14. chromozomu, který je v B-buňkách trvale aktivní. Nadbytek BCL2 chrání buňky před apoptózou, takže se hromadí (indolentní růst)."
       }
     ,
@@ -747,23 +747,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který receptor/marker je typicky silně exprimován na buňkách Anaplastického velkobuněčného lymfomu (ALCL) a slouží jako diagnostický znak?",
         options: [
-          "CD20 (B-marker)",
-          "CD30 (Ki-1 antigen)",
           "CD15",
-          "PSA"
+          "PSA",
+          "CD20 (B-marker)",
+          "CD30 (Ki-1 antigen)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "CD30 je aktivovaný antigen exprimovaný na anaplastických buňkách ALCL (transmembránový receptor z rodiny TNF). CD30 je přítomen také u Hodgkinova lymfomu, ale ALCL se odlišuje chyběním reaktivního pozadí a specifickými 'hallmark' buňkami."
       },
       {
         question: "Jak se nazývá fúzní protein vznikající translokací t(2;5) u anaplastického velkobuněčného lymfomu (ALCL), jehož přítomnost značí lepší prognózu?",
         options: [
-          "BCR-ABL",
-          "NPM-ALK",
           "PML-RARA",
-          "IgH-BCL2"
+          "IgH-BCL2",
+          "BCR-ABL",
+          "NPM-ALK"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Translokace t(2;5) spojuje gen NPM (nucleophosmin) na 5. chromozomu s genem ALK (anaplastic lymphoma kinase) na 2. chromozomu. Fúzní protein NPM-ALK vykazuje stálou tyrosinkinázovou aktivitu. Nádory s tímto proteinem (ALK+) jsou lépe léčitelné než ALK- formy."
       }
     ,
@@ -799,23 +799,23 @@ const DATA_ONCO_1 = [
       {
         question: "Co je to Bence-Jonesova bílkovina?",
         options: [
-          "Bílkovina tvořící amyloid v mozku",
-          "Volné lehké řetězce (kappa nebo lambda) imunoglobulinů produkované nádorovými plazmocyty, které se pro malou velikost filtrují v glomerulech a nacházejí se v moči u pacientů s myelomem",
           "Enzym štěpící chrupavku",
-          "Nádorový marker produkovaný karcinomem prsu"
+          "Nádorový marker produkovaný karcinomem prsu",
+          "Bílkovina tvořící amyloid v mozku",
+          "Volné lehké řetězce (kappa nebo lambda) imunoglobulinů produkované nádorovými plazmocyty, které se pro malou velikost filtrují v glomerulech a nacházejí se v moči u pacientů s myelomem"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Mnohočetný myelom produkuje kompletní imunoglobuliny nebo jen jejich části. Volné lehké řetězce (Bence-Jonesova bílkovina) snadno procházejí ledvinným filtrem do moči, kde se dají detekovat (zahřívacím testem nebo imunofixací) a představují těžké riziko pro ucpání a poškození tubulů ledvin."
       },
       {
         question: "Jak se makroskopicky projevuje destrukce kostí u mnohočetného myelomu (např. na RTG lebky)?",
         options: [
-          "Tvorbou velkých kostních výrůstků (osteofytů)",
-          "Mnohočetnými ostře ohraničenými ložisky osteolýzy bez reaktivní novotvorby kosti (vzhled 'prostříleného plechu')",
           "Difuzním ztluštěním a zahuštěním kostní tkáně (osteoskleróza)",
-          "Kostí prorůstají chrupavčité uzly"
+          "Kostí prorůstají chrupavčité uzly",
+          "Tvorbou velkých kostních výrůstků (osteofytů)",
+          "Mnohočetnými ostře ohraničenými ložisky osteolýzy bez reaktivní novotvorby kosti (vzhled 'prostříleného plechu')"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Osteoklasty aktivované myelomem rozpouštějí kostní tkáň lokálně. Na RTG snímcích kostí (typicky plochých kostí jako je lebka) to vytváří charakteristická ložiska chybějící kosti, která vypadají jako čistě vyseknutá děrovačkou."
       }
     ,
@@ -851,23 +851,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který virus je přímým původcem Kaposiho sarkomu u pacientů s AIDS?",
         options: [
-          "Lidský papillomavirus (HPV)",
-          "Lidský herpesvirus 8 (HHV-8 neboli KSHV)",
           "Epstein-Barrové virus (EBV)",
-          "Virus hepatitidy C (HCV)"
+          "Virus hepatitidy C (HCV)",
+          "Lidský papillomavirus (HPV)",
+          "Lidský herpesvirus 8 (HHV-8 neboli KSHV)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "HHV-8 (herpesvirus asociovaný s Kaposiho sarkomem) infikuje endotelové buňky a buňky vřetenovité. V přítomnosti imunitního deficitu (AIDS) vir produkuje proteiny stimulující proliferaci cév a zánět, což vede ke vzniku nádorových plaků a uzlů."
       },
       {
         question: "Který specifický endoteliální marker se používá v imunohistochemii k potvrzení cévního původu nádoru (např. angiosarkomu)?",
         options: [
-          "Desmin",
-          "CD31 (nebo CD34 / von Willebrandův faktor)",
           "Cytokeratin",
-          "Chromogranin"
+          "Chromogranin",
+          "Desmin",
+          "CD31 (nebo CD34 / von Willebrandův faktor)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "CD31 je adhezivní molekula endotelových buněk (PECAM-1). Její imunohistochemický průkaz na membráně nádorových buněk spolehlivě potvrzuje, že anaplastický nádor vychází z endotelu cév."
       }
     ,
@@ -903,23 +903,23 @@ const DATA_ONCO_1 = [
       {
         question: "Kde v srdci se nejčastěji nachází benigní myxom u dospělých?",
         options: [
-          "V pravé komoře",
-          "V levé síni (přisedlý stopkou k přepážce v oblasti fossa ovalis)",
           "Na aortální chlopni",
-          "V hrotu levé komory"
+          "V hrotu levé komory",
+          "V pravé komoře",
+          "V levé síni (přisedlý stopkou k přepážce v oblasti fossa ovalis)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Myxom má výraznou predilekci pro levou síň (cca 75-80 % případů). Protože roste jako stopkatý rosolovitý polyp, může se při stahu síně pohybovat skrz mitrální chlopeň a mechanicky blokovat průtok krve."
       },
       {
         question: "Co jsou to 'pavoukovité buňky' (spider cells) a u kterého srdečního tumoru je nacházíme?",
         options: [
-          "Atypické lymfocyty u Hodgkinova lymfomu",
-          "Velké kardiomyocyty s cytoplasmou staženou do tenkých vláken vedoucích k jádru, vyplněné glykogenem; typické pro rhabdomyom u dětí",
           "Nádorové buňky cévního angiosarkomu",
-          "Buňky tvořící amyloid"
+          "Buňky tvořící amyloid",
+          "Atypické lymfocyty u Hodgkinova lymfomu",
+          "Velké kardiomyocyty s cytoplasmou staženou do tenkých vláken vedoucích k jádru, vyplněné glykogenem; typické pro rhabdomyom u dětí"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U rhabdomyomu srdce (často spojeného s tuberózní sklerózou) jsou buňky plné glykogenu, který se při zpracování rozpustí. Cytoplasmatické výběžky vybíhající z jádra k sarkolemě pak pod mikroskopem připomínají pavoučí nohy, odtud název pavoukovité buňky."
       }
     ,
@@ -955,23 +955,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který typ plicního karcinomu je typický pro nekuřáky a ženy, a roste převážně v periferii plic?",
         options: [
-          "Malobuněčný karcinom",
-          "Dlaždicobuněčný (spinocelulární) karcinom",
           "Adenokarcinom",
-          "Karcinoid"
+          "Karcinoid",
+          "Malobuněčný karcinom",
+          "Dlaždicobuněčný (spinocelulární) karcinom"
         ],
-        correct: 2,
+        correct: 0,
         explanation: "Adenokarcinom je nejčastějším typem plicního karcinomu u nekuřáků. Roste na rozdíl od centrálních karcinomů (dlaždicobuněčného a malobuněčného) v periferních částech plicního parenchymu, často v oblasti jizev."
       },
       {
         question: "Co je to Azzopardiho fenomén a u kterého vysoce maligního plicního nádoru ho nacházíme?",
         options: [
-          "Keratinizace buněk u spinocelulárního karcinomu",
-          "Inkrustace stěn cév uvolněnou bazofilní DNA z rozpadlých nádorových buněk, typická pro malobuněčný karcinom plic",
           "Ukládání amyloidu do pleury",
-          "Tvorba hlenu v adenokarcinomu"
+          "Tvorba hlenu v adenokarcinomu",
+          "Keratinizace buněk u spinocelulárního karcinomu",
+          "Inkrustace stěn cév uvolněnou bazofilní DNA z rozpadlých nádorových buněk, typická pro malobuněčný karcinom plic"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Malobuněčný karcinom má extrémně vysokou míru buněčného rozpadu. Uvolněná nukleová kyselina (DNA) z rozpadlých jader inkrustuje (potahuje) stěny přilehlých krevních cév, což se mikroskopicky projevuje intenzivním tmavě modrým (bazofilním) zbarvením cévní stěny (Azzopardiho efekt)."
       }
     ,
@@ -1007,23 +1007,23 @@ const DATA_ONCO_1 = [
       {
         question: "Která minerální noxa je hlavním rizikovým faktorem pro vznik maligního mezoteliomu pleury?",
         options: [
-          "Křemenný prach (SiO2)",
-          "Uhelný prach",
           "Azbest (azbestová vlákna)",
-          "Výpary z olova"
+          "Výpary z olova",
+          "Křemenný prach (SiO2)",
+          "Uhelný prach"
         ],
-        correct: 2,
+        correct: 0,
         explanation: "Azbest je prokázaný lidský karcinogen s afinitou k pleuře. Jehlicovitá vlákna azbestu se nedokážou v plicích odbourat, mechanicky a chemicky dráždí mezotelové buňky po desítky let, což vyústí v maligní mezoteliom."
       },
       {
         question: "Který imunohistochemický marker se používá k odlišení epiteloidního mezoteliomu pleury od metastázy adenokarcinomu plic?",
         options: [
-          "TTF-1",
-          "Calretinin (a cytokeratin 5/6)",
           "PSA",
-          "Desmin"
+          "Desmin",
+          "TTF-1",
+          "Calretinin (a cytokeratin 5/6)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Calretinin je protein vázající vápník, který je vysoce specifický pro buňky mezotelu a nádory z nich vycházející (mezoteliomy). Naopak adenokarcinom plic je calretinin-negativní a TTF-1 pozitivní, což patologovi umožňuje tyto dva strukturálně podobné nádory odlišit."
       }
     ,
@@ -1059,23 +1059,23 @@ const DATA_ONCO_1 = [
       {
         question: "Který benigní nádor slinných žláz je typický svým 'smíšeným' histologickým vzhledem, kde se epitelové struktury střídají s myxoidním a chrupavčitým stroma?",
         options: [
-          "Warthinův tumor",
-          "Pleomorfní adenom (smíšený tumor slinné žlázy)",
           "Mukoepidermoidní karcinom",
-          "Onkocytom"
+          "Onkocytom",
+          "Warthinův tumor",
+          "Pleomorfní adenom (smíšený tumor slinné žlázy)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Pleomorfní adenom je nazýván 'smíšeným' nádorem, protože myoepiteliální buňky produkují stroma, které podléhá hlenovité a chrupavčité přeměně. Pod mikroskopem tak vedle sebe vidíme epitelové žlázky a oblasti připomínající chrupavku."
       },
       {
         question: "Který nerv je v bezprostředním ohrožení při operacích nádorů glandula parotis (příušní žlázy)?",
         options: [
-          "Nervus vagus (X. hlavový nerv)",
-          "Nervus facialis (VII. hlavový nerv - lícní nerv)",
           "Nervus trigeminus (V. hlavový nerv)",
-          "Nervus phrenicus"
+          "Nervus phrenicus",
+          "Nervus vagus (X. hlavový nerv)",
+          "Nervus facialis (VII. hlavový nerv - lícní nerv)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Nervus facialis prochází přímo skrz parenchym glandula parotis a dělí ji na povrchový a hluboký list. Růst nádoru nebo neopatrná operace (parotidektomie) může nerv poškodit, což vede k paréze (ochrnutí) mimického svalstva obličeje na postižené straně."
       }
     ,
@@ -1105,29 +1105,29 @@ const DATA_ONCO_1 = [
       pathogenesis: "Žaludeční karcinom se dělí podle Laurena na: \n1. **Intestinální typ**: tvoří žlázy, předchází mu intestinální metaplazie sliznice (přeměna na střevní typ), asociace s H. pylori. \n2. **Difuzní typ**: netvoří žlázy, buňky rostou disociovaně (odděleně, chybí E-cadherin) a infiltrují stěnu žaludku, což vede k jejímu zbytnění. Buňky střádají hlen, který odsouvá jádro k okraji (buňky **prstenčitého vzhledu** / signet-ring cells).",
       macroscopy: "Karcinom jícnu: zužuje lumen (stenóza), způsobuje dysfagii. Karcinom žaludku: ulcerovaný (miskovitý vřed s navalitými okraji) nebo difuzní (**Linitis plastica** - žaludek je malý, s extrémně tlustou, tuhou kožovitou stěnou připomínající koženou lahev).",
       microscopy: "Barrettův jícen: přeměna dlaždicového epitelu jícnu na cylindrický s pohárkovými buňkami (metaplazie). Difuzní karcinom žaludku: stroma je fibrotické (desmoplazie), v něm roztroušené disociované buňky s hlenovou vakuolou v cytoplasmě a oploštělým jádrem u okraje (buňky tvaru pečetního prstenu).",
-      clinical: "Žaludeční karcinom má dlouho němý průběh (bolesti nadbřišku, hubnutí, odpor k masu). Často se manifestuje až metastázami: 1. **Virchowova uzlina** (zvětšená levá supraklavikulární uzlina), 2. **Krukenbergův tumor** (oboustranná metastáza difuzního karcinomu žaludku do vaječníků roznášená implantací po peritoneu)."
+      clinical: "Žaludeční karcinom má dlouho němý průběh (bolesti nadbřišku, hubnutí, odpor k masu). Často se manifestuje až metastázami: 1. **Virchowova uzlina** (zvětšená levá supraklavikulární uzlina), 2. **Krukenbergův tumor** (oboustranná metastáza difuzního karcinomu žaludku do vaječníků často šířící se lymfogenně nebo hematogenně)."
     },
     quiz: [
       {
         question: "Co je to Barrettův jícen a jaký nádor na jeho podkladě vzniká?",
         options: [
-          "Zánět jícnu způsobený plísněmi; vzniká po něm lymfom",
-          "Slizniční metaplazie, kdy se původní vrstevnatý dlaždicový epitel jícnu vlivem kyselého refluxu mění na jednovrstevný cylindrický epitel se žlázkami a pohárkovými buňkami; hrozí vznikem adenokarcinomu jícnu",
           "Zúžení jícnu po poleptání louhem; hrozí spinocelulární karcinom",
-          "Vrozená vývojová vada s chyběním jícnu"
+          "Vrozená vývojová vada s chyběním jícnu",
+          "Zánět jícnu způsobený plísněmi; vzniká po něm lymfom",
+          "Slizniční metaplazie, kdy se původní vrstevnatý dlaždicový epitel jícnu vlivem kyselého refluxu mění na jednovrstevný cylindrický epitel se žlázkami a pohárkovými buňkami; hrozí vznikem adenokarcinomu jícnu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Barrettův jícen je obranná reakce sliznice na chronické dráždění žaludeční kyselinou (reflux). Cylindrický (střevní) epitel lépe odolává kyselině než dlaždicový. Tato metaplazie je však nestabilní a přes dysplázii často progreduje do zhoubného adenokarcinomu spodní třetiny jícnu."
       },
       {
         question: "Co charakterizuje buňky tvaru 'pečetního prstenu' (signet-ring cells) u difuzního karcinomu žaludku?",
         options: [
-          "Jsou to buňky s mnoha jádry uspořádanými do kruhu",
-          "Jsou to jednotlivé, disociované buňky, jejichž cytoplasma je vyplněna velkou hlenovou vakuolou, která odtlačila a oploštila buněčné jádro k buněčné membráně",
           "Jsou to buňky zničené ozařováním",
-          "Jsou to buňky tvořící krystaly vápníku"
+          "Jsou to buňky tvořící krystaly vápníku",
+          "Jsou to buňky s mnoha jádry uspořádanými do kruhu",
+          "Jsou to jednotlivé, disociované buňky, jejichž cytoplasma je vyplněna velkou hlenovou vakuolou, která odtlačila a oploštila buněčné jádro k buněčné membráně"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U difuzního (Laurenova) typu karcinomu žaludku buňky neudrží kontakt a netvoří žlázy. Buňky produkují hlen (mucin), který se hromadí uvnitř cytoplasmy. Obří vakuola hlenu stlačí jádro k okraji, což buňce pod mikroskopem dává typický tvar pečetního prstenu."
       }
     ,

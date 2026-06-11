@@ -18,23 +18,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jak se mění sliznice tenkého střeva u břišního tyfu (Salmonella typhi)?",
         options: [
-          "Nedochází k žádným změnám, bakterie žije pouze v žaludku",
-          "Dochází k výraznému zduření Peyerových plaků, které následně nekrotizují a mění se v hluboké vředy orientované podél dlouhé osy střeva",
           "Sliznice je kompletně pokrytá kvasinkovými povlaky",
-          "Vznikají zde stovky drobných polypů"
+          "Vznikají zde stovky drobných polypů",
+          "Nedochází k žádným změnám, bakterie žije pouze v žaludku",
+          "Dochází k výraznému zduření Peyerových plaků, které následně nekrotizují a mění se v hluboké vředy orientované podél dlouhé osy střeva"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Salmonella typhi má afinitu k lymfatické tkáni tenkého střeva (Peyerovým plakům). Ty v první fázi zduří (hyperplazie), ve druhé nekrotizují a ve třetí se odloučí za vzniku tyfových vředů. Protože Peyerovy plaky leží podél dlouhé osy střeva, jsou i vředy orientovány podélně."
       },
       {
         question: "Co je hlavním patogenetickým mechanismem cholery (Vibrio cholerae)?",
         options: [
-          "Přímá destrukce sliznice a vznik hlubokých vředů",
-          "Produkce choleratoxinu, který se váže na buňky sliznice, trvale aktivuje adenylátcyklázu a vyvolá masivní sekreci chloridů, sodíku a vody do lumen střeva bez poškození struktury sliznice",
           "Tvorba pseudomembrán v tlustém střevě",
-          "Invaze bakterií do mozku a CNS"
+          "Invaze bakterií do mozku a CNS",
+          "Přímá destrukce sliznice a vznik hlubokých vředů",
+          "Produkce choleratoxinu, který se váže na buňky sliznice, trvale aktivuje adenylátcyklázu a vyvolá masivní sekreci chloridů, sodíku a vody do lumen střeva bez poškození struktury sliznice"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Vibrio cholerae neničí střevní sliznici (klky jsou neporušené). Choleratoxin však vyvolá masivní sekreci iontů do střeva. Voda následuje ionty osmózou, což vede k extrémním průjmům (až 20 litrů denně) a rychlé smrti z dehydratace."
       }
     ]
@@ -57,23 +57,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Který z následujících znaků je typický pro Crohnovu chorobu na rozdíl od ulcerózní kolitidy?",
         options: [
-          "Postižení je omezeno výhradně na sliznici a submukózu tlustého střeva",
-          "Transmurální zánět postihující celou šířku stěny střeva, segmentální výskyt v jakékoli části GIT a přítomnost nekaseifikujících granulomů",
           "Vždy začíná v rektu a šíří se kontinuálně",
-          "Tvorba kryptových abscesů bez postižení svalové vrstvy"
+          "Tvorba kryptových abscesů bez postižení svalové vrstvy",
+          "Postižení je omezeno výhradně na sliznici a submukózu tlustého střeva",
+          "Transmurální zánět postihující celou šířku stěny střeva, segmentální výskyt v jakékoli části GIT a přítomnost nekaseifikujících granulomů"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Crohnova choroba postihuje celou stěnu střeva (transmurální charakter, proto vznikají píštěle a perforace) a může postihnout kteroukoli část trávicí trubice (skákavé léze). Ulcerózní kolitida je povrchový zánět omezený na sliznici/submukózu a postihuje pouze tlusté střevo."
       },
       {
         question: "Co jsou to pseudopolypy u ulcerózní kolitidy?",
         options: [
-          "Nádorové adenomy v tlustém střevě",
-          "Ostrůvky relativně zdravé sliznice, které vyčnívají nad okolní rozsáhlé plochy ulcerací a erozí",
           "Paraziti přichycení na sliznici",
-          "Vrozené vývojové vady střeva"
+          "Vrozené vývojové vady střeva",
+          "Nádorové adenomy v tlustém střevě",
+          "Ostrůvky relativně zdravé sliznice, které vyčnívají nad okolní rozsáhlé plochy ulcerací a erozí"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při těžké ulcerózní kolitidě dochází k rozsáhlému odloučení sliznice (ulceracím). Zbytky sliznice, které zánět nezničil, vyčnívají nad okolní vyhlazená dnová ložiska vředů a makroskopicky připomínají polypy (proto pseudopolypy - nepravé polypy)."
       }
     ]
@@ -96,23 +96,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co je to volvulus?",
         options: [
-          "Vsunutí jednoho úseku střeva do druhého",
-          "Otočení kličky střeva (a jejího mezenteria) kolem své osy, což vede k zaškrcení cév (strangulaci) a ischemii",
           "Zánět slepého střeva",
-          "Vrozené rozšíření tlustého střeva"
+          "Vrozené rozšíření tlustého střeva",
+          "Vsunutí jednoho úseku střeva do druhého",
+          "Otočení kličky střeva (a jejího mezenteria) kolem své osy, což vede k zaškrcení cév (strangulaci) a ischemii"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Volvulus je mechanická změna polohy, kdy se střevní klička otočí kolem úchytu na mezenteriu. Tím se zaškrtí jak lumen střeva, tak vyživující cévy (arterie i žíly). Vzniká strangulační ileus s rychlým rozvojem nekrózy střeva."
       },
       {
         question: "Jak se nazývá stav, kdy se jeden úsek střeva vsune (teleskopicky) do sousedního úseku?",
         options: [
-          "Volvulus",
-          "Invaginace (intususcepce)",
           "Herniace",
-          "Divertikulóza"
+          "Divertikulóza",
+          "Volvulus",
+          "Invaginace (intususcepce)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Invaginace (intususcepce) je typická pro malé děti (často při změně stravy nebo po virové infekci zvětšující lymfatické uzliny ve střevě). Peristaltika vtáhne jeden úsek střeva do druhého jako teleskopickou anténu, což vede k ucpání a ischemii."
       }
     ]
@@ -135,23 +135,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Z jakých tří základních částí se skládá každá kýla (hernie)?",
         options: [
-          "Žaludek, jícen, dvanáctník",
-          "Kýlní branka, kýlní vak a kýlní obsah",
           "Tepna, žíla, nerv",
-          "Kůže, podkoží, fascie"
+          "Kůže, podkoží, fascie",
+          "Žaludek, jícen, dvanáctník",
+          "Kýlní branka, kýlní vak a kýlní obsah"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Kýla je definována přítomností kýlní branky (otvoru v břišní stěně), kýlního vaku (peritoneálního obalu, který se vychlipuje) a kýlního obsahu (orgánů, nejčastěji střeva či omenta, které do vaku vnikly)."
       },
       {
         question: "Proč je inkarcerace (uskřinutí) kýly nebezpečná?",
         options: [
-          "Způsobuje rychlý vznik cukrovky",
-          "Vede k zaškrcení cév (strangulaci) kýlního obsahu, což způsobí hemoragickou nekrózu a gangrénu střeva s rizikem perforace a peritonitidy",
           "Způsobuje pouze kosmetickou vadu",
-          "Kýla se při uskřinutí promění v zhoubný nádor"
+          "Kýla se při uskřinutí promění v zhoubný nádor",
+          "Způsobuje rychlý vznik cukrovky",
+          "Vede k zaškrcení cév (strangulaci) kýlního obsahu, což způsobí hemoragickou nekrózu a gangrénu střeva s rizikem perforace a peritonitidy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při uskřinutí kýly v brance dojde k mechanickému stlačení cév v mezenteriu. Tím se zablokuje odtok krve, vznikne otok a následně se zastaví přítok tepenné krve (strangulace). Bez krve střevo rychle odumírá (gangréna), může prasknout a infikovat dutinu břišní stolicí."
       }
     ]
@@ -174,23 +174,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co je to 'defense musculaire' (svalové stažení) u akutní peritonitidy?",
         options: [
-          "Křeč lýtkových svalů u sportovců",
-          "Reflexní, vůlí neovlivnitelné stažení (ztuhnutí) svalů břišní stěny vyvolané podrážděním parietálního peritonea zánětem (břicho tvrdé jako prkno)",
           "Ochrnutí břišních svalů",
-          "Tvorba jizev ve svalech břicha"
+          "Tvorba jizev ve svalech břicha",
+          "Křeč lýtkových svalů u sportovců",
+          "Reflexní, vůlí neovlivnitelné stažení (ztuhnutí) svalů břišní stěny vyvolané podrážděním parietálního peritonea zánětem (břicho tvrdé jako prkno)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Defense musculaire je klíčovým klinickým znakem podráždění pobřišnice. Zánětlivý proces dráždí senzitivní nervy parietálního peritonea, což vyvolá reflexní spasmus svalů břišní stěny k ochraně vnitřních orgánů."
       },
       {
         question: "Co je to karcinomóza peritonea?",
         options: [
-          "Vrozená vývojová vada pobřišnice",
-          "Rozsáhlý metastatický rozsev nádorových buněk (např. z karcinomu vaječníku či žaludku) po celém povrchu peritoneální dutiny v podobě četných uzlíků",
           "Zánět peritonea vyvolaný viry",
-          "Tvorba žlučových kamenů v břiše"
+          "Tvorba žlučových kamenů v břiše",
+          "Vrozená vývojová vada pobřišnice",
+          "Rozsáhlý metastatický rozsev nádorových buněk (např. z karcinomu vaječníku či žaludku) po celém povrchu peritoneální dutiny v podobě četných uzlíků"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Karcinomóza peritonea představuje pokročilé stadium intraabdominálních nádorů. Nádorové buňky se uvolní do peritoneální dutiny, usadí se na pobřišnici a tvoří zde tisíce metastatických uzlíků, což bývá doprovázeno tvorbou hemoragického ascitu."
       }
     ]
@@ -213,23 +213,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Které buňky jsou hlavními producenty kolagenu (vaziva) při rozvoji jaterní cirhózy?",
         options: [
-          "Kupfferovy buňky (makrofágy)",
-          "Hvězdicové (Itoovy) buňky Disseova prostoru, které se aktivují a transdiferencují na myofibroblasty",
           "Hepatocyty",
-          "Endotelové buňky jaterních sinusoid"
+          "Endotelové buňky jaterních sinusoid",
+          "Kupfferovy buňky (makrofágy)",
+          "Hvězdicové (Itoovy) buňky Disseova prostoru, které se aktivují a transdiferencují na myofibroblasty"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Itoovy (hvězdicové) buňky normálně slouží k ukládání vitamínu A. Při chronickém zánětu a poškození jater jsou stimulovány cytokiny (zejména TGF-beta), mění se v buňky podobné fibroblastům a produkují kolagen, což je základem jaterní fibrózy a cirhózy."
       },
       {
         question: "Jak se mikroskopicky liší regenerativní uzel (pseudolalůček) u cirhózy od zdravého jaterního lalůčku?",
         options: [
-          "Neliší se vůbec",
-          "Regenerativní uzel postrádá normální uspořádání trámců a chybí v něm centrální žíla a portální pole (typické struktury zdravého lalůčku)",
           "Uzel obsahuje pouze tukové buňky",
-          "Uzel je tvořen výhradně amyloidem"
+          "Uzel je tvořen výhradně amyloidem",
+          "Neliší se vůbec",
+          "Regenerativní uzel postrádá normální uspořádání trámců a chybí v něm centrální žíla a portální pole (typické struktury zdravého lalůčku)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Zdravý jaterní lalůček má přísnou geometrii (trámce hepatocytů směřují od portálního pole k centrální žíle). U cirhózy je tato struktura zničena. Regenerativní uzly jsou jen chaotické shluky hepatocytů obklopené vazivem bez uspořádaného cévního zásobení (proto pseudolalůčky)."
       }
     ]
@@ -252,23 +252,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co jsou to Councilmanova tělíska (Councilman bodies) v jaterní histologii?",
         options: [
-          "Bakterie u břišního tyfu",
-          "Apoptotické, scvrklé, eozinofilní (růžové) hepatocyty, které ztratily jádro, typické pro akutní virovou hepatitidu",
           "Krystaly cholesterolu v žlučníku",
-          "Jaterní buňky vyplněné tukem"
+          "Jaterní buňky vyplněné tukem",
+          "Bakterie u břišního tyfu",
+          "Apoptotické, scvrklé, eozinofilní (růžové) hepatocyty, které ztratily jádro, typické pro akutní virovou hepatitidu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Councilmanovo tělísko je morfologický projev apoptózy jednotlivých hepatocytů. Buňka se smrští, ztratí jádro a její cytoplasma se stane intenzivně eozinofilní (růžovou). Je to klasický histologický nález u virových a toxických hepatitid."
       },
       {
         question: "Jak se pod mikroskopem projevuje přítomnost hepatocytů 'vzhledu matného skla' (ground-glass hepatocytes) a pro kterou infekci jsou typické?",
         options: [
-          "Jsou vyplněny amyloidem; typické pro tuberkulózu",
-          "Jejich cytoplasma je homogenní, matně růžová v důsledku masivního nahromadění virového antigenu HBsAg v endoplazmatickém retikulu; typické pro chronickou hepatitidu B (HBV)",
           "Obsahují velké množství vápníku; typické pro stárnutí",
-          "Jsou to buňky naplněné alkoholem"
+          "Jsou to buňky naplněné alkoholem",
+          "Jsou vyplněny amyloidem; typické pro tuberkulózu",
+          "Jejich cytoplasma je homogenní, matně růžová v důsledku masivního nahromadění virového antigenu HBsAg v endoplazmatickém retikulu; typické pro chronickou hepatitidu B (HBV)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U chronické infekce HBV buňka produkuje nadbytek povrchového antigenu HBsAg, který se hromadí v hladkém endoplazmatickém retikulu. To dodává cytoplasmě specifický matný, jemně zrnitý (mléčný) vzhled, označovaný jako vzhled matného skla."
       }
     ]
@@ -291,23 +291,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co je to cholesterolóza žlučníku (jahodový žlučník)?",
         options: [
-          "Maligní nádor žlučníku rostoucí jako jahoda",
-          "Slizniční změna, kdy makrofágy v lamina propria akumulují estery cholesterolu, což na červené sliznici vytváří žlutou kresbu připomínající zrníčka jahody",
           "Zvápenatění stěny žlučníku",
-          "Ucpání žlučníku cholesterolovým kamenem"
+          "Ucpání žlučníku cholesterolovým kamenem",
+          "Maligní nádor žlučníku rostoucí jako jahoda",
+          "Slizniční změna, kdy makrofágy v lamina propria akumulují estery cholesterolu, což na červené sliznici vytváří žlutou kresbu připomínající zrníčka jahody"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Cholesterolóza je benigní metabolická změna. Mucinózní makrofágy sliznice pohlcují přebytečný cholesterol ze žluči. Hromadí se v klcích sliznice a makroskopicky to vypadá jako žlutá zrníčka na červeném podkladu (jahodový vzhled). Nemá to klinický význam a nesouvisí to s cholecystitidou."
       },
       {
         question: "Co je to hydrops žlučníku?",
         options: [
-          "Hnisavý zánět žlučníku s tvorbou píštěle",
-          "Stav, kdy po dlouhodobém mechanickém uzávěru ductus cysticus (kamenem) bez přítomnosti infekce žlučník resorbuje žlučové pigmenty a jeho sliznice produkuje čirý hlen, který žlučník masivně roztáhne",
           "Vrozená absence žlučníku",
-          "Rozpad stěny žlučníku"
+          "Rozpad stěny žlučníku",
+          "Hnisavý zánět žlučníku s tvorbou píštěle",
+          "Stav, kdy po dlouhodobém mechanickém uzávěru ductus cysticus (kamenem) bez přítomnosti infekce žlučník resorbuje žlučové pigmenty a jeho sliznice produkuje čirý hlen, který žlučník masivně roztáhne"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při ucpání vývodu žlučníku kamenem bez bakteriální infekce se žluč nemůže obnovovat. Žlučová barviva se postupně vstřebají (sliznice je resorbuje) a žlázky žlučníku dál produkují hlenový sekret. Žlučník se naplní čirou tekutinou (bílé žluči) a napne se (hydrops)."
       }
     ]
@@ -330,23 +330,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jaký patofyziologický děj je spouštěcím mechanismem akutní pankreatitidy?",
         options: [
-          "Bakteriální infekce z jícnu",
-          "Předčasná vnitrobuňková aktivace trypsinogenu na trypsin přímo v pankreatu, což spustí kaskádu autodigesce (samonatrávení) tkáně vlastními enzymy",
           "Nedostatek inzulínu v Langerhansových ostrůvcích",
-          "Ukládání železa v acinech"
+          "Ukládání železa v acinech",
+          "Bakteriální infekce z jícnu",
+          "Předčasná vnitrobuňková aktivace trypsinogenu na trypsin přímo v pankreatu, což spustí kaskádu autodigesce (samonatrávení) tkáně vlastními enzymy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Slinivka tvoří enzymy v neaktivní formě (proenzymy). Pokud dojde k jejich předčasné aktivaci (zejména trypsinu) ještě uvnitř slinivky, spustí se destruktivní proces - trypsin aktivuje další enzymy, které začnou trávit vlastní tkáň slinivky a jejích cév."
       },
       {
         question: "Jak vznikají Balserovy nekrózy u akutní pankreatitidy?",
         options: [
-          "Ukládáním cholesterolu do slzných žláz",
-          "Působením uvolněné pankreatické lipázy na tukovou tkáň; uvolněné mastné kyseliny se spojují s vápníkem za vzniku křídově bílých mýdel",
           "Kaseózní nekrózou slinivky vyvolanou TBC",
-          "Zvápenatěním cév v mozku"
+          "Zvápenatěním cév v mozku",
+          "Ukládáním cholesterolu do slzných žláz",
+          "Působením uvolněné pankreatické lipázy na tukovou tkáň; uvolněné mastné kyseliny se spojují s vápníkem za vzniku křídově bílých mýdel"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Uvolněná lipáza štěpí triglyceridy v tukových buňkách na glycerol a volné mastné kyseliny. Tyto kyseliny okamžitě reagují s ionty vápníku z okolní tekutiny (zmýdelnění). Vznikají nerozpustná vápenatá mýdla, která makroskopicky vidíme jako křídově bílé skvrny (Balserovy nekrózy) v tuku."
       }
     ]
@@ -369,23 +369,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "U kterého zhoubného onemocnění krvetvorby nacházíme nejčastěji extrémní splenomegalii (slezina vážící i několik kilogramů)?",
         options: [
-          "U akutní lymfoblastické leukémie (ALL)",
-          "U chronické myeloidní leukémie (CML) a primární myelofibrózy",
           "U Hodgkinova lymfomu",
-          "U mnohočetného myelomu"
+          "U mnohočetného myelomu",
+          "U akutní lymfoblastické leukémie (ALL)",
+          "U chronické myeloidní leukémie (CML) a primární myelofibrózy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Chronická myeloidní leukémie (CML) a primární myelofibróza jsou spojeny s masivní extramedulární hematopoézou a infiltrací sleziny. Slezina zde dosahuje gigantických rozměrů, což pacient pociťuje jako tlak v levém podžebří."
       },
       {
         question: "Co je to hypersplenismus?",
         options: [
-          "Nádorové bujení buněk sleziny",
-          "Funkční stav spojený se splenomegalií, kdy zvětšená slezina nadměrně filtruje a destruuje krevní elementy, což vede k poklesu červených krvinek, bílých krvinek a destiček v periferní krvi (pancytopenii)",
           "Vrozená přítomnost přídatných slezin",
-          "Zánět sleziny u malárie"
+          "Zánět sleziny u malárie",
+          "Nádorové bujení buněk sleziny",
+          "Funkční stav spojený se splenomegalií, kdy zvětšená slezina nadměrně filtruje a destruuje krevní elementy, což vede k poklesu červených krvinek, bílých krvinek a destiček v periferní krvi (pancytopenii)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hypersplenismus není konkrétní nemoc, ale syndrom doprovázející splenomegalii. Slezina je příliš aktivní při odbourávání krvinek. Výsledkem je anémie, náchylnost k infekcím (leukopenie) a krvácení (trombocytopenie)."
       }
     ]
@@ -408,23 +408,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Která bakterie je typicky asociována se vznikem struvitových (infekčních) odlitkových kamenů v ledvině?",
         options: [
-          "Escherichia coli",
-          "Proteus vulgaris (nebo Proteus mirabilis - štěpí močovinu na amoniak, což alkalizuje moč)",
           "Streptococcus pyogenes",
-          "Mycobacterium tuberculosis"
+          "Mycobacterium tuberculosis",
+          "Escherichia coli",
+          "Proteus vulgaris (nebo Proteus mirabilis - štěpí močovinu na amoniak, což alkalizuje moč)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Bakterie rodu Proteus produkují ureázu. Tento enzym štěpí močovinu v moči na amoniak, což výrazně zvýší pH moči (alkalizace). V zásadité moči precipituje fosforečnan amonno-hořečnatý (struvit) a tvoří velké odlitkové kameny."
       },
       {
         question: "Co je to hydronefróza ledviny?",
         options: [
-          "Nádorové bujení ledvinné pánvičky",
-          "Rozšíření ledvinné pánvičky a kalichů městnající močí při překážce v odtoku (např. zaklíněném kameni), doprovázené tlakovou atrofií funkčního parenchymu ledviny",
           "Hnisavý zánět ledviny",
-          "Vrozená cystická ledvina"
+          "Vrozená cystická ledvina",
+          "Nádorové bujení ledvinné pánvičky",
+          "Rozšíření ledvinné pánvičky a kalichů městnající močí při překážce v odtoku (např. zaklíněném kameni), doprovázené tlakovou atrofií funkčního parenchymu ledviny"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při překážce v močových cestách (kámen, nádor) moč nemůže odtékat. Tlak moči se přenáší zpět do ledviny, což roztáhne pánvičku a kalichy. Dlouhodobý tlak utlačí cévy a parenchym, ledvina atrofuje a mění se v tenkostěnný vak bez funkční tkáně."
       }
     ]
@@ -447,23 +447,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Který mikroskopický nález charakterizuje Rychle progredující glomerulonefritidu (RPGN) vyvolávající rychlé selhání ledvin?",
         options: [
-          "Pouhá steatóza tubulů",
-          "Tvorba srpků (crescents) v Bowmanově pouzdře, tvořených proliferujícím epitelem a makrofágy, které stlačují kapilární klubíčko",
           "Kompletní amyloidóza glomerulů",
-          "Absence jakýchkoliv buněk v glomerulu"
+          "Absence jakýchkoliv buněk v glomerulu",
+          "Pouhá steatóza tubulů",
+          "Tvorba srpků (crescents) v Bowmanově pouzdře, tvořených proliferujícím epitelem a makrofágy, které stlačují kapilární klubíčko"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Tvorba srpků je reakcí na těžké poškození kapilární stěny s průnikem fibrinu do Bowmanova prostoru. Fibrin stimuluje proliferaci buněk Bowmanova pouzdra a migraci makrofágů. Tyto srpky stlačí a nevratně zničí glomerulus (srpková GN)."
       },
       {
         question: "Co charakterizuje nefrotický syndrom?",
         options: [
-          "Masivní hematurie a vysoký krevní tlak bez proteinurie",
-          "Masivní proteinurie (> 3.5 g/24h), hypalbuminémie, generalizované edémy (otoky) a hyperlipidémie",
           "Přítomnost žlučových kamenů v moči",
-          "Akutní zánět močového měchýře"
+          "Akutní zánět močového měchýře",
+          "Masivní hematurie a vysoký krevní tlak bez proteinurie",
+          "Masivní proteinurie (> 3.5 g/24h), hypalbuminémie, generalizované edémy (otoky) a hyperlipidémie"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Nefrotický syndrom vzniká poškozením filtrační bariéry (podocytů), což umožní masivní únik albuminu do moči. Ztráta albuminu sníží onkotický tlak krve, což vede k úniku tekutiny do tkání (otoky). Játra se snaží kompenzovat úbytek proteinů zvýšenou syntézou lipoproteinů (hyperlipidémie)."
       }
     ]
@@ -486,23 +486,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jak se nazývá specifická nodulární léze v glomerulech u pokročilé diabetické nefropatie?",
         options: [
-          "Aschoffovo tělísko",
-          "Kimmelstiel-Wilsonovy uzly (nodulární glomeruloskleróza)",
           "Councilmanovo tělísko",
-          "Gandy-Gamnova tělíska"
+          "Gandy-Gamnova tělíska",
+          "Aschoffovo tělísko",
+          "Kimmelstiel-Wilsonovy uzly (nodulární glomeruloskleróza)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Kimmelstiel-Wilsonovy uzly jsou kulaté, eozinofilní (růžové) noduly v mezangiu glomerulu, tvořené zmnoženou matrix a glykovanými proteiny. Jsou patognomické (vysoce specifické) pro diabetickou nefropatii."
       },
       {
         question: "Který nález na cévách ledvin (arteriolách) je specifický pro diabetes a odlišuje ho od běžné arteriální hypertenze?",
         options: [
-          "Fibrinoidní nekróza a. renalis",
-          "Hyalinní arterioloskleróza postihující jak přívodnou (afferentní), tak i odvodnou (efferentní) arteriolu",
           "Obřízobuněčný zánět cévní stěny",
-          "Kalcifikace pouze v. renalis"
+          "Kalcifikace pouze v. renalis",
+          "Fibrinoidní nekróza a. renalis",
+          "Hyalinní arterioloskleróza postihující jak přívodnou (afferentní), tak i odvodnou (efferentní) arteriolu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při běžné hypertenzi postihuje hyalinní arterioloskleróza pouze arteriola afferens (přívodnou cévu). U diabetu dochází k metabolickému poškození cév oboustranně - postižena je jak přívodná (afferentní), tak odvodná (efferentní) arteriola, což je důležitý bioptický rozlišovací znak."
       }
     ]
@@ -525,23 +525,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Která buňka je typickým mikroskopickým nálezem v intersticiálním infiltrátu u akutní polékové (alergické) tubulointersticiální nefritidy?",
         options: [
-          "Obří Langhansova buňka",
-          "Eosinofilní granulocyt",
           "Pěnový makrofág",
-          "Neutrofilní granulocyt v tubulech"
+          "Neutrofilní granulocyt v tubulech",
+          "Obří Langhansova buňka",
+          "Eosinofilní granulocyt"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Poléková tubulointersticiální nefritida je alergickou reakcí na léky (např. peniciliny, NSAID). Typickým histologickým znakem v interstiticiálním infiltrátu je vysoké zastoupení eosinofilních granulocytů (eosinofilů), které doprovázejí edém a lymfocyty."
       },
       {
         question: "Jaká je nejčastější cesta vstupu infekce do ledviny u akutní pyelonefritidy?",
         options: [
-          "Hematogenní cesta (krevním oběhem ze srdce)",
-          "Ascendentní cesta (vzestupně z dolních močových cest přes močovody, často při refluxu)",
           "Přímý průnik přes kůži zad",
-          "Lymfatická cesta z tlustého střeva"
+          "Lymfatická cesta z tlustého střeva",
+          "Hematogenní cesta (krevním oběhem ze srdce)",
+          "Ascendentní cesta (vzestupně z dolních močových cest přes močovody, často při refluxu)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Akutní pyelonefritida vzniká nejčastěji vzestupem (ascendentně) bakterií (hlavně E. coli z tlustého střeva) z močového měchýře. Ulehčuje to stáza moči nebo vezikoureterální reflux (porucha chlopenního mechanismu ústí močovodu)."
       }
     ]
@@ -564,23 +564,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co je hlavní příčinou vzniku syndromu respirační tísně novorozence (RDS)?",
         options: [
-          "Vrozená srdeční vada",
-          "Nezralost plic s nedostatkem plicního surfaktantu u předčasně narozených dětí",
           "Vdechnutí cizího tělesa",
-          "Aspirace plodové vody"
+          "Aspirace plodové vody",
+          "Vrozená srdeční vada",
+          "Nezralost plic s nedostatkem plicního surfaktantu u předčasně narozených dětí"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Plicní surfaktant snižuje povrchové napětí alveolů a drží je otevřené. Syntéza surfaktantu pneumocyty II. typu vrcholí až po 35. týdnu gestace. U předčasně narozených dětí vede nedostatek surfaktantu k masivnímu kolapsu plic (atelektáze) a rozvoji RDS."
       },
       {
         question: "Jak se v histologii plic prokazuje aspirace mekonia (smolky)?",
         options: [
-          "Přítomností krystalů vápníku",
-          "Nálezem odloupaných bezjaderných kožních šupin plodu (korneocytů), chloupků (lanuga) a žlutohnědého mekonického pigmentu v alveolech a bronších",
           "Tvorbou Aschoffových uzlíků",
-          "Nálezem kolonií plísní"
+          "Nálezem kolonií plísní",
+          "Přítomností krystalů vápníku",
+          "Nálezem odloupaných bezjaderných kožních šupin plodu (korneocytů), chloupků (lanuga) a žlutohnědého mekonického pigmentu v alveolech a bronších"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Mekonium (smolka) obsahuje odloupané buňky kůže plodu a lanugo, které plod polkl a vyloučil do plodové vody. Při intrauterinním stresu a asfyxii plod začne lapavě dýchat a tuto znečištěnou plodovou vodu vdechne do plic, což histolog prokáže nálezem těchto struktur v alveolech."
       }
     ]
@@ -603,23 +603,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jak se liší gigantismus od akromegalie při nadprodukci růstového hormonu (GH) somatotropním adenomem?",
         options: [
-          "Gigantismus vzniká pouze u žen, akromegalie u mužů",
-          "Gigantismus vzniká v dětství před uzávěrem epifyzárních růstových plotének (dochází k nadměrnému růstu do výšky); akromegalie vzniká v dospělosti po uzávěru plotének (rostou pouze koncové části těla - akra, čelist, vnitřní orgány)",
           "Akromegalie je vrozená, gigantismus získaný",
-          "Akromegalie se projevuje zmenšením orgánů"
+          "Akromegalie se projevuje zmenšením orgánů",
+          "Gigantismus vzniká pouze u žen, akromegalie u mužů",
+          "Gigantismus vzniká v dětství před uzávěrem epifyzárních růstových plotének (dochází k nadměrnému růstu do výšky); akromegalie vzniká v dospělosti po uzávěru plotének (rostou pouze koncové části těla - akra, čelist, vnitřní orgány)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Růstový hormon stimuluje růst kostí do délky přes chrupavky růstových plotének. Pokud ploténky v pubertě zkostnatí (uzavřou se), růst do výšky již není možný. Nadbytek GH v dospělosti (akromegalie) proto stimuluje pouze růst plochých kostí, měkkých tkání a akrálních částí."
       },
       {
         question: "Co je to Sheehanův syndrom?",
         options: [
-          "Nádor nadledvin produkující adrenalin",
-          "Poporodní ischemická nekróza adenohypofýzy způsobená těžkým krvácením a šokem během porodu, u těhotensky zvětšené hypofýzy",
           "Vrozený nedostatek hormonů štítné žlázy",
-          "Zánět hypofýzy vyvolaný tuberkulózou"
+          "Zánět hypofýzy vyvolaný tuberkulózou",
+          "Nádor nadledvin produkující adrenalin",
+          "Poporodní ischemická nekróza adenohypofýzy způsobená těžkým krvácením a šokem během porodu, u těhotensky zvětšené hypofýzy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Během těhotenství dochází k fyziologické hyperplazii buněk tvořících prolaktin, hypofýza se zvětší téměř na dvojnásobek. Její cévní zásobení (portálí oběh) je však zranitelné. Masivní krvácení při porodu vyvolá hypotenzi a způsobí infarkt (nekrózu) této zbytnělé hypofýzy."
       }
     ]
@@ -642,23 +642,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jak se liší Cushingův syndrom od Cushingovy nemoci?",
         options: [
-          "Neliší se, jde o synonyma",
-          "Cushingův syndrom je obecný stav nadbytku kortizolu z jakékoli příčiny (např. iatrogenní, adenom nadledviny); Cushingova nemoc je specifická podskupina způsobená ACTH-produkujícím adenomem hypofýzy",
           "Cushingova nemoc postihuje pouze muže",
-          "U Cushingovy nemoci je hladina kortizolu nízká"
+          "U Cushingovy nemoci je hladina kortizolu nízká",
+          "Neliší se, jde o synonyma",
+          "Cushingův syndrom je obecný stav nadbytku kortizolu z jakékoli příčiny (např. iatrogenní, adenom nadledviny); Cushingova nemoc je specifická podskupina způsobená ACTH-produkujícím adenomem hypofýzy"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Cushingův syndrom je střešní pojem pro klinické projevy hyperkortizolismu. Pokud je příčinou tohoto stavu přímo nádor v podvěsku mozkovém (hypofýze) secernující hormon ACTH, který nadledviny k produkci kortizolu stimuluje, označuje se to jako Cushingova nemoc (Cushing's disease)."
       },
       {
         question: "Co je hlavním klinickým projevem Connova syndromu (primárního hyperaldosteronismu)?",
         options: [
-          "Extrémní hubnutí a hypoglykémie",
-          "Arteriální hypertenze spojená s hypokalémií (svalová slabost, parestezie, křeče)",
           "Bronzové zbarvení kůže a hypotenze",
-          "Porucha růstu kostí"
+          "Porucha růstu kostí",
+          "Extrémní hubnutí a hypoglykémie",
+          "Arteriální hypertenze spojená s hypokalémií (svalová slabost, parestezie, křeče)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Aldosteron zvyšuje zpětné vstřebávání sodíku (Na+) a vody (čímž roste objem krve a tlak -> hypertenze) a zároveň nutí ledviny vylučovat draslík (K+) do moči. Nedostatek draslíku (hypokalémie) mění elektrickou dráždivost membrán, což vede k typické svalové slabosti a křečím."
       }
     ]
@@ -681,23 +681,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co tvoří klasickou Merseburgskou triádu u Graves-Basedowovy tyreotoxikózy?",
         options: [
-          "Horečka, kašel, dušnost",
-          "Struma (zvětšení štítné žlázy), tachykardie (bušení srdce) a exoftalmus (vystoupení očí z orbit)",
           "Hypertenze, obezita, strie",
-          "Ikterus, splenomegalie, ascites"
+          "Ikterus, splenomegalie, ascites",
+          "Horečka, kašel, dušnost",
+          "Struma (zvětšení štítné žlázy), tachykardie (bušení srdce) a exoftalmus (vystoupení očí z orbit)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Merseburgská triáda je typickým klinickým obrazem Graves-Basedowovy choroby. Exoftalmus (ophthalmopathia) vzniká autoimunitním zánětem retroorbitálního tuku a okohybných svalů, které otékají a tlačí oční bulby dopředu."
       },
       {
         question: "Co jsou to Hürthleovy buňky (onkocyty) typické pro Hashimotovu tyroiditidu?",
         options: [
-          "Apoptotické lymfocyty v uzlinách",
-          "Metaplasticky změněné folikulární buňky štítné žlázy s bohatou, granulární, výrazně růžovou (eozinofilní) cytoplasmou, která je přeplněná mitochondriemi",
           "Nádorové buňky produkující kalcitonin",
-          "Buňky tvořící koloid"
+          "Buňky tvořící koloid",
+          "Apoptotické lymfocyty v uzlinách",
+          "Metaplasticky změněné folikulární buňky štítné žlázy s bohatou, granulární, výrazně růžovou (eozinofilní) cytoplasmou, která je přeplněná mitochondriemi"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Hürthleovy (onkocytární/oxyfilní) buňky vznikají jako reakce na chronický stres a poškození folikulů. Zmnožení mitochondrií v jejich cytoplasmě jim dává specifický růžový a granulární vzhled. Jsou typickým diagnostickým znakem v biopsii u Hashimotovy tyroiditidy."
       }
     ]
@@ -720,23 +720,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co je to parakeratóza v histologickém obraze kůže?",
         options: [
-          "Ztráta buněčných jader v bazální vrstvě kůže",
-          "Abnormální rohovění charakterizované přítomností (perzistencí) buněčných jader v buňkách stratum corneum (rohovité vrstvy), spojené se zrychlenou keratinizací",
           "Úplné chybění pigmentu melanin",
-          "Edém mezi buňkami epidermis"
+          "Edém mezi buňkami epidermis",
+          "Ztráta buněčných jader v bazální vrstvě kůže",
+          "Abnormální rohovění charakterizované přítomností (perzistencí) buněčných jader v buňkách stratum corneum (rohovité vrstvy), spojené se zrychlenou keratinizací"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Normálně buňky při průchodu do stratum corneum ztrácejí jádra a mění se v rohovité šupiny. Pokud je proces zrychlený (např. u lupénky/psoriázy), buňky nestihnou jádra odbourat a ta přetrvávají v rohovité vrstvě (parakeratóza)."
       },
       {
         question: "Jak se definuje pojem akantolýza?",
         options: [
-          "Ztluštění rohovité vrstvy kůže",
-          "Ztráta soudržnosti mezi epidermálními buňkami (rozpad desmosomů), což vede k separaci buněk a tvorbě nitrobuněčných puchýřů (např. u pemphigusu)",
           "Prorůstání vaziva do epidermis",
-          "Zánět cév v dermis"
+          "Zánět cév v dermis",
+          "Ztluštění rohovité vrstvy kůže",
+          "Ztráta soudržnosti mezi epidermálními buňkami (rozpad desmosomů), což vede k separaci buněk a tvorbě nitrobuněčných puchýřů (např. u pemphigusu)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Akantolýza je rozpad spojů (desmosomů) mezi keratinocyty. Buňky se zakulatí, oddělí se od sebe a v epidermis vzniká trhlina a následně puchýř. Je to typický znak autoimunitního pemphigusu."
       }
     ]
@@ -759,23 +759,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Které histologické znaky jsou klíčové pro diagnózu lupénky (psoriázy) v kožní biopsii?",
         options: [
-          "Spongióza a masivní edém dermis",
-          "Výrazná parakeratóza (šupiny s jádry), akantóza s pravidelným prodloužením epidermálních čepů, chybění stratum granulosum a Munroovy mikroabscesy (neutrofily v rohovině)",
           "Intraepidermální suprabazální puchýř z akantolýzy",
-          "Tvorba granulomů s kaseózní nekrózou"
+          "Tvorba granulomů s kaseózní nekrózou",
+          "Spongióza a masivní edém dermis",
+          "Výrazná parakeratóza (šupiny s jádry), akantóza s pravidelným prodloužením epidermálních čepů, chybění stratum granulosum a Munroovy mikroabscesy (neutrofily v rohovině)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Psoriáza se vyznačuje hyperproliferací. Zrychlený růst buněk vede k ztluštění epidermis (akantóza) s typickým protáhnutím čepů, parakeratóze (buňky si ponechávají jádra) a akumulaci neutrofilů v rohovité vrstvě (Munroovy mikroabscesy)."
       },
       {
         question: "Medově žluté krusty (honey-colored crusts) na obličeji dětí jsou typickým klinickým nálezem u:",
         options: [
-          "Alergického ekzému",
-          "Impetiga (bakteriální infekce kůže)",
           "Lupénky",
-          "Pásového oparu"
+          "Pásového oparu",
+          "Alergického ekzému",
+          "Impetiga (bakteriální infekce kůže)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Impetigo je vysoce nakažlivé bakteriální onemocnění kůže (způsobené stafylokoky či streptokoky). Tvoří puchýřky, které praskají, a zasychající exsudát vytváří pro impetigo zcela charakteristické medově žluté krusty."
       }
     ]
@@ -798,23 +798,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jak se liší patogeneze vazogenního a cytotoxického edému mozku?",
         options: [
-          "Vazogenní edém vzniká pouze u dětí, cytotoxický u dospělých",
-          "Vazogenní edém je způsoben poškozením hematoencefalické bariéry s únikem tekutiny do intersticia; cytotoxický edém je způsoben selháním metabolických pump (nedostatkem ATP) s hromaděním vody uvnitř samotných buněk",
           "U cytotoxického edému tekutina vytéká z uší",
-          "Vazogenní edém postihuje pouze mozeček"
+          "Vazogenní edém postihuje pouze mozeček",
+          "Vazogenní edém vzniká pouze u dětí, cytotoxický u dospělých",
+          "Vazogenní edém je způsoben poškozením hematoencefalické bariéry s únikem tekutiny do intersticia; cytotoxický edém je způsoben selháním metabolických pump (nedostatkem ATP) s hromaděním vody uvnitř samotných buněk"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Vazogenní edém je extracelulární (tekutina je v mezibuněčném prostoru kvůli poruše těsných spojů kapilár). Cytotoxický edém je intracelulární (buňky otečou zevnitř, protože kvůli ischemii nemají energii na odčerpávání sodíku)."
       },
       {
         question: "Která mozková herniace (kýla) je nejnebezpečnější a bezprostředně ohrožuje život pacienta zástavou dechu?",
         options: [
-          "Subfalinní herniace (gyrus cinguli pod falx)",
-          "Tonzilární herniace (vtlačení tonzil mozečku do foramen magnum, což stlačí prodlouženou míchu)",
           "Transtentoriální herniace uncu",
-          "Herniace přes trepanační otvor v lebce"
+          "Herniace přes trepanační otvor v lebce",
+          "Subfalinní herniace (gyrus cinguli pod falx)",
+          "Tonzilární herniace (vtlačení tonzil mozečku do foramen magnum, což stlačí prodlouženou míchu)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při tonzilární herniaci jsou mozečkové tonzily vtlačeny do týlního otvoru (foramen magnum). V tomto prostoru prochází prodloužená mícha, kde sídlí životně důležitá centra pro řízení dýchání a krevního oběhu. Jejich stlačení vyvolá okamžitou zástavu dechu."
       }
     ]
@@ -837,23 +837,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jaký je rozdíl mezi komunikujícím a nekomunikujícím (obstrukčním) hydrocefalem?",
         options: [
-          "Komunikující hydrocefalus postihuje pouze děti",
-          "U komunikujícího hydrocefalu likvor volně protéká komorovým systémem, ale je porušeno jeho vstřebávání; u nekomunikujícího je překážka přímo v komorách (likvor se nedostane do subarachnoidálního prostoru)",
           "Nekomunikující hydrocefalus nemá žádné příznaky",
-          "Komunikující hydrocefalus je vyvolán alkoholem"
+          "Komunikující hydrocefalus je vyvolán alkoholem",
+          "Komunikující hydrocefalus postihuje pouze děti",
+          "U komunikujícího hydrocefalu likvor volně protéká komorovým systémem, ale je porušeno jeho vstřebávání; u nekomunikujícího je překážka přímo v komorách (likvor se nedostane do subarachnoidálního prostoru)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Nekomunikující (obstrukční) hydrocefalus vzniká tehdy, když blokáda (nádor, vrozené zúžení) leží uvnitř komor (např. ucpání průchodu mezi III. a IV. komorou). Komory před překážkou se roztáhnou, ale s prostorem kolem mozku nekomunikují. U komunikujícího je tok volný, ale likvor se nevstřebává v klcích do krve."
       },
       {
         question: "Co je to hydrocephalus ex vacuo?",
         options: [
-          "Akutní hromadění likvoru po úrazu",
-          "Kompensatorní zvětšení mozkových komor, které pasivně zaplňuje prostor vzniklý úbytkem (atrofií) mozkové tkáně (např. u demencí), bez zvýšení tlaku likvoru",
           "Hydrocefalus způsobený ucpáním cév",
-          "Vrozené chybění mozkových komor"
+          "Vrozené chybění mozkových komor",
+          "Akutní hromadění likvoru po úrazu",
+          "Kompensatorní zvětšení mozkových komor, které pasivně zaplňuje prostor vzniklý úbytkem (atrofií) mozkové tkáně (např. u demencí), bez zvýšení tlaku likvoru"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "U hydrocephalus ex vacuo (doslova 'z prázdnoty') není problém v tvorbě či toku likvoru. Mozek atrofuje (zmenšuje se např. věkem či degenerací) a uvolněné místo v lebce se pasivně vyplní větším množstvím likvoru a roztažením komor. Tlak v lebce zůstává normální."
       }
     ]
@@ -876,23 +876,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co jsou to 'zrníčkové buňky' (gitter cells / lipofágy) v histologickém obraze hojícího se mozkového infarktu?",
         options: [
-          "Nádorové buňky z neuroglie",
-          "Aktivované makrofágy (mikroglie), které fagocytovaly rozpadlý myelin (lipidy) z nekrotické mozkové tkáně, a získaly tak pěnivou cytoplasmu",
           "Krystaly vápníku v mozku",
-          "Neurony poškozené alkoholem"
+          "Neurony poškozené alkoholem",
+          "Nádorové buňky z neuroglie",
+          "Aktivované makrofágy (mikroglie), které fagocytovaly rozpadlý myelin (lipidy) z nekrotické mozkové tkáně, a získaly tak pěnivou cytoplasmu"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Při encefalomalacii dochází k rozpadu myelinu (který je bohatý na lipidy). Kolem 3. až 4. dne se v ložisku objevují makrofágy (mikroglie). Ty myelin pohltí a jejich cytoplasma se naplní tukovými kapénkami, což jim dává zrnitý (pěnový) vzhled (lipofágy)."
       },
       {
         question: "Jak se nazývá glie-vazivová jizva a dutina, která vzniká jako konečné stadium hojení mozkového infarktu?",
         options: [
-          "Fibrotická jizva",
-          "Pseudocysta (postmalatická dutina) ohraničená lemem reaktivních astrocytů (glióza)",
           "Kaseózní kaverna",
-          "Neurom"
+          "Neurom",
+          "Fibrotická jizva",
+          "Pseudocysta (postmalatická dutina) ohraničená lemem reaktivních astrocytů (glióza)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "V mozku chybí klasické vazivové stroma, a proto se zde netvoří pevná kolagenní jizva jako v srdci. Defekt se hojí kolikvaci (zkapalněním), rozpadlý materiál je odklizen a na jeho místě vzniká dutina (pseudocysta) ohraničená reaktivně zmnoženými astrocyty (gliová jizva)."
       }
     ]
@@ -915,23 +915,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Která céva je nejčastějším zdrojem krvácení u akutního epidurálního hematomu a jaký má hematom tvar na CT vyšetření?",
         options: [
-          "Přemosťující žíly; srpkovitý tvar",
-          "Arteria meningea media (často po fraktuře spánkové kosti); bikonvexní (čočkovitý) tvar",
           "Aneurysma a. cerebri media; difuzní postižení rýh",
-          "Vena magna Galeni; kruhový tvar"
+          "Vena magna Galeni; kruhový tvar",
+          "Přemosťující žíly; srpkovitý tvar",
+          "Arteria meningea media (často po fraktuře spánkové kosti); bikonvexní (čočkovitý) tvar"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Epidurální hematom vzniká natržením a. meningea media (arteriální krvácení). Krev se hromadí pod tlakem a odtlačuje duru od kosti. Protože dura mater je k lebce pevně přichycena v místech lebečních švů, krev se nemůže volně šířit a vytváří ohraničený čočkovitý (bikonvexní) tvar."
       },
       {
         question: "Co je nejčastější příčinou netraumatického subarachnoidálního krvácení (SAK)?",
         options: [
-          "Ruptura jícnových varixů",
-          "Ruptura vrozeného vakovitého (berry) aneurysmatu na Willisově arteriálním okruhu (nejčastěji v oblasti a. communicans anterior)",
           "Natržení přemosťujících žil",
-          "Těžký chronický zánět uší"
+          "Těžký chronický zánět uší",
+          "Ruptura jícnových varixů",
+          "Ruptura vrozeného vakovitého (berry) aneurysmatu na Willisově arteriálním okruhu (nejčastěji v oblasti a. communicans anterior)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Subarachnoidální krvácení vzniká rupturou tepny v subarachnoidálním prostoru, kde protéká likvor. Nejčastější netraumatickou příčinou je prasknutí vrozeného vakovitého aneurysmatu na cévním okruhu na spodině mozku (Willisově okruhu)."
       }
     ]
@@ -954,23 +954,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Jak se mění biochemický a cytologický nález v mozkomíšním moku (likvoru) u akutní bakteriální hnisavé meningitidy?",
         options: [
-          "Likvor je čirý, chybí v něm buňky, glukóza je zvýšená",
-          "Likvor je zakalený/hnisavý, obsahuje tisíce neutrofilních granulocytů, hladina bílkoviny je výrazně zvýšená a glukóza je kriticky snížená",
           "Likvor se mění v krev",
-          "Nález je zcela normální"
+          "Nález je zcela normální",
+          "Likvor je čirý, chybí v něm buňky, glukóza je zvýšená",
+          "Likvor je zakalený/hnisavý, obsahuje tisíce neutrofilních granulocytů, hladina bílkoviny je výrazně zvýšená a glukóza je kriticky snížená"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Bakterie a neutrofily způsobí zakalení likvoru. Zánětlivá exsudace zvýší množství bílkovin. Bakterie pro svůj metabolismus masivně spotřebovávají glukózu z likvoru, proto její hladina (glykorachie) prudce klesá, což je klíčový rozdíl oproti virovým meningitidám (kde je glukóza v normě)."
       },
       {
         question: "Který patogen je nejčastějším původcem novorozenecké hnisavé meningitidy?",
         options: [
-          "Neisseria meningitidis",
-          "Streptococcus agalactiae (GBS - streptokok skupiny B) a Escherichia coli",
           "Streptococcus pneumoniae",
-          "Virus chřipky"
+          "Virus chřipky",
+          "Neisseria meningitidis",
+          "Streptococcus agalactiae (GBS - streptokok skupiny B) a Escherichia coli"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Novorozenci se infikují při průchodu porodním kanálem matky. Nejčastějšími patogeny jsou proto bakterie kolonizující vagínu a konečník matky - Streptococcus agalactiae (GBS) a E. coli. Prevencí je screening GBS u těhotných."
       }
     ]
@@ -993,23 +993,23 @@ const DATA_SPECIAL_2 = [
       {
         question: "Co jsou to Negriho tělíska (Negri bodies) a pro kterou infekci jsou patognomickým nálezem?",
         options: [
-          "Bakteriální shluky u syfilis",
-          "Eozinofilní intracytoplasmatické inkluze (tvořené virovými proteiny a nukleokapsidami) v neuronech hippocampu a mozečku, typické pro vzteklinu (rabies)",
           " amyloidové plaky u Alzheimerovy choroby",
-          "Zvápenatělé uzlíky v plicích"
+          "Zvápenatělé uzlíky v plicích",
+          "Bakteriální shluky u syfilis",
+          "Eozinofilní intracytoplasmatické inkluze (tvořené virovými proteiny a nukleokapsidami) v neuronech hippocampu a mozečku, typické pro vzteklinu (rabies)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "Negriho tělíska jsou specifické virové inkluze v cytoplasmě velkých neuronů. Jejich průkaz v mozku zvířete (např. lišky, psa) potvrzuje vzteklinu. Jsou lokalizovány hlavně v pyramidových buňkách hippocampu (Ammonova rohu) a Purkyňových buňkách mozečku."
       },
       {
         question: "Který virus způsobuje těžkou, asymetrickou nekrotizující a hemoragickou encefalitidu s predilekcí pro spánkové (temporální) laloky?",
         options: [
-          "Virus klíšťové encefalitidy",
-          "Herpes simplex virus typ 1 (HSV-1)",
           "Poliovirus (virus dětské obrny)",
-          "Virus spalniček"
+          "Virus spalniček",
+          "Virus klíšťové encefalitidy",
+          "Herpes simplex virus typ 1 (HSV-1)"
         ],
-        correct: 1,
+        correct: 3,
         explanation: "HSV-1 encefalitida je nejčastější sporadická fatální encefalitida. Má typickou afinitu k temporálním a frontálním lalokům, kde způsobuje rozsáhlou nekrózu a krvácení. Vyžaduje okamžitou léčbu intravenózním acyklovirem."
       }
     ]
