@@ -11,21 +11,21 @@ const DATA_ONCO_2 = [
       definition: "Kolorektální karcinom (KRK) je jedním z nejčastějších zhoubných nádorů v ČR. Vychází z epiteliální výstelky tlustého střeva nebo konečníku. Nádory tenkého střeva jsou naopak velmi vzácné.",
       etiology: "Strava s vysokým obsahem červeného masa, živočišných tuků a nedostatkem vlákniny, kouření, obezita, chronické záněty (ulcerózní kolitida). Dědičné syndromy: FAP (Familiární adenomatózní polypóza - mutace genu APC), Lynchův syndrom (HNPCC - mutace v MMR genech opravujících chyby párování bází).",
       pathogenesis: "Rozvíjí se převážně cestou **adenom-karcinomové sekvence** (polypózní adenom progreduje přes dysplázii do invazivního karcinomu, trvá to 10–15 let; mutace APC -> KRAS -> TP53). U Lynchova syndromu vzniká přes mutace mikrosatelitové nestability (MSI path).",
-      macroscopy: "1. Pravé kolono (cékum, ascendens): roste exofyticky (jako květák), krvácí (způsobuje anémii), stolička je tekutá, proto nevede k obstrukci. 2. Levé kolono (descendens, sigmoideum): roste cirkulárně, infiltruje stěnu a zužuje lumen (stenóza - tvar **kousnutého jablka** na rentgenu), vede k poruchám pasáže stoličky (zácpa střídaná s průjmem) až k ileu.",
+      macroscopy: "1. Pravé colon (cékum, ascendens): roste exofyticky (jako květák), krvácí (způsobuje anémii), stolice je tekutá, proto nevede k obstrukci. 2. Levé colon (descendens, sigmoideum): roste cirkulárně, infiltruje stěnu a zužuje lumen (stenóza - tvar **kousnutého jablka** na rentgenu), vede k poruchám pasáže (zácpa střídaná s průjmem) až k ileu.",
       microscopy: "Převážnou většinu (95 %) tvoří **adenokarcinomy**. Vidíme nepravidelné žlázové tubuly infiltrující stěnu (tunicu muscularis propria) obklopené reaktivním fibrotickým stroma (desmoplazií). Nádorové buňky vykazují jaderné atypie, hyperchromazii a patologické mitózy. U mucinózní formy jsou buňky uloženy v jezírkách hlenu.",
-      clinical: "Projevuje se krví ve stolici (enteroragie u levého, okultní krvácení u pravého střeva), únavou z anémie a hubnutím. Screening v ČR: test na okultní krvácení do stolice (TOKS) od 50 let a screeningová kolonoskopie. Nádorový marker sledovaný po operaci pro záchyt recidivy je **CEA** (karcinoembryonální antigen)."
+      clinical: "Projevuje se krví ve stolici (enteroragie u levého, okultní krvácení u pravého colon), únavou z anémie a hubnutím. Screening v ČR: test na okultní krvácení do stolice (TOKS) od 50 let a screeningová kolonoskopie. Nádorový marker sledovaný po operaci pro záchyt recidivy je **CEA** (karcinoembryonální antigen)."
     },
     quiz: [
       {
         question: "Jak se liší makroskopický růst a klinické projevy karcinomu pravého tlustého střeva (cékum, vzestupný tračník) od levého tlustého střeva?",
         options: [
-          "V pravém střevě roste nádor vždy difuzně, v levém vůbec nevzniká",
-          "V pravém střevě roste převážně exofyticky (polypózně) a projevuje se plíživým krvácením a anémií; v levém roste cirkulárně (stenotizujícím způsobem) a projevuje se střídáním zácpy a průjmu či střevní neprůchodností",
-          "V pravém střevě nádory neobstruují, protože pravé střevo nemá svalovinu",
-          "V levém střevě nádory nikdy nekrvácí"
+          "V pravém colon roste nádor vždy difuzně, v levém vůbec nevzniká",
+          "V pravém colon roste převážně exofyticky (polypózně) a projevuje se plíživým krvácením a anémií; v levém roste cirkulárně (stenotizujícím způsobem) a projevuje se střídáním zácpy a průjmu či střevní neprůchodností",
+          "V pravém colon nádory neobstruují, protože pravé střevo nemá svalovinu",
+          "V levém colon nádory nikdy nekrvácí"
         ],
         correct: 1,
-        explanation: "Pravé kolono má široké lumen a kašovitý obsah. Karcinomy zde rostou jako květákovité masy, které spíše exulcerují a chronicky krvácejí (anémie). Levé kolono má úzké lumen a stolička je zahuštěná. Kruhový (prstencovitý) růst karcinomu zde proto rychle způsobí zúžení střeva a střevní potíže."
+        explanation: "Pravé colon má široké lumen a kašovitý obsah. Karcinomy zde rostou jako květákovité masy, které spíše exulcerují a chronicky krvácejí (anémie). Levé kolono má úzké lumen a stolička je zahuštěná. Kruhový (prstencovitý) růst karcinomu zde proto rychle způsobí zúžení střeva a střevní potíže."
       },
       {
         question: "Který genetický syndrom je charakterizován vznikem tisíců adenomatózních polypů v tlustém střevě již v mladém věku s téměř 100% jistotou maligního zvratu před 40. rokem života bez preventivní kolektomie?",
