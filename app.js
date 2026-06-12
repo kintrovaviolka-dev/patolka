@@ -13,6 +13,425 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/'/g, "&#039;");
   }
 
+  // Pomocná funkce pro formátování textu (převod ** na <strong>, * na <em>, \n na <br>)
+  function formatText(str) {
+    if (str === null || str === undefined) return "";
+    let escaped = escapeHTML(str);
+    return escaped
+      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.*?)\*/g, "<em>$1</em>")
+      .replace(/\n/g, "<br>");
+  }
+
+  // Databáze eponymních pojmů a jejich definic
+  const EPONYMS_DB = [
+    {
+      name: "Auerovy tyčinky",
+      def: "Intracytoplasmatické jehlicovité struktury vzniklé splynutím azurofilních granul v myeloidních blastech (typické pro AML).",
+      patterns: [/Auer/i]
+    },
+    {
+      name: "Gumprechtovy stíny",
+      def: "Křehké, rozpadlé lymfocyty v nátěru periferní krve (typické pro chronickou lymfocytární leukémii - CLL).",
+      patterns: [/Gumprecht/i]
+    },
+    {
+      name: "Burkittův lymfom",
+      def: "Extrémně agresivní B-buněčný nehodgkinský lymfom spojený s translokací t(8;14) a infekcí EBV.",
+      patterns: [/Burkitt/i]
+    },
+    {
+      name: "Hodgkinův lymfom",
+      def: "Maligní lymfoproliferativní onemocnění charakterizované přítomností Reed-Sternbergových buněk a reaktivním buněčným pozadím.",
+      patterns: [/Hodgkin/i]
+    },
+    {
+      name: "Reed-Sternbergovy buňky",
+      def: "Velké vícejaderné nádorové B-buňky se zrcadlovými jádry a výraznými jadérky (vzhled „sovích očí“) u Hodgkinova lymfomu.",
+      patterns: [/Reed[- ]Sternberg/i]
+    },
+    {
+      name: "Balserovy nekrózy",
+      def: "Enzymatické nekrózy tukové tkáně (liponekrózy) u akutní pankreatitidy způsobené uvolněním lipáz s tvorbou vápenatých mýdel (křídově bílá ložiska).",
+      patterns: [/Balser/i]
+    },
+    {
+      name: "Gaucherova choroba",
+      def: "Nejčastější lyzosomální střádavé onemocnění ze skupiny lipidóz, způsobené deficitem glukocerebrosidázy.",
+      patterns: [/Gaucher/i]
+    },
+    {
+      name: "Pompeova choroba",
+      def: "Glykogenóza typu II, lyzosomální střádavé onemocnění způsobené deficitem kyselé alfa-glukosidázy.",
+      patterns: [/Pompe/i]
+    },
+    {
+      name: "Gilbertův syndrom",
+      def: "Benigní dědičná porucha konjugace bilirubinu způsobená sníženou aktivitou UDP-glukuronosyltransferázy.",
+      patterns: [/Gilbert/i]
+    },
+    {
+      name: "Crigler-Najjarův syndrom",
+      def: "Dědičná nekonjugovaná hyperbilirubinémie způsobená těžkým deficitem (typ II) nebo úplným chyběním (typ I) UDP-glukuronosyltransferázy.",
+      patterns: [/Crigler/i]
+    },
+    {
+      name: "Dubin-Johnsonův syndrom",
+      def: "Dědičná konjugovaná hyperbilirubinémie s poruchou vylučování bilirubinu do žluče, projevující se černým zbarvením jater.",
+      patterns: [/Dubin/i]
+    },
+    {
+      name: "Lynchův syndrom (HNPCC)",
+      def: "Dědičný nepolypózní kolorektální karcinom způsobený zárodečnou mutací v MMR genech (oprava nesprávně spárovaných bází).",
+      patterns: [/Lynch/i]
+    },
+    {
+      name: "Peutz-Jeghersův syndrom",
+      def: "Autozomálně dominantní syndrom s hamartomovou polypózou v GIT a typickými pigmentovými skvrnami na sliznicích a rtech.",
+      patterns: [/Peutz/i]
+    },
+    {
+      name: "Courvoisierův příznak",
+      def: "Hmatný zvětšený nebolestivý žlučník doprovázený žloutenkou, typicky způsobený nádorem hlavy pankreatu utlačujícím žlučové cesty.",
+      patterns: [/Courvoisier/i]
+    },
+    {
+      name: "Grawitzův tumor",
+      def: "Tradiční a historický název pro světlobuněčný (jasnobuněčný) karcinom ledviny (RCC).",
+      patterns: [/Grawitz/i]
+    },
+    {
+      name: "Wilmsův tumor (nefroblastom)",
+      def: "Maligní embryonální nádor ledvin u dětí vykazující trifázickou strukturu (blastém, stroma, epitel).",
+      patterns: [/Wilms/i]
+    },
+    {
+      name: "Schiller-Duvalova tělíska",
+      def: "Histologické struktury napodobující primitivní glomeruly s centrální cévou, patognomické pro nádor ze žloutkového váčku.",
+      patterns: [/Schiller[- ]Duval/i]
+    },
+    {
+      name: "Krukenbergův tumor",
+      def: "Oboustranná ovariální metastáza hlenotvorného (mucinózního) karcinomu, nejčastěji ze žaludku, tvořená buňkami tvaru pečetního prstenu.",
+      patterns: [/Krukenberg/i]
+    },
+    {
+      name: "Homer-Wrightovy rozety",
+      def: "Uspořádání nádorových buněk do kruhu kolem centrální růžové fibrilární zóny bez centrálního lumina (typické pro neuroblastom, meduloblastom).",
+      patterns: [/Homer[- ]Wright/i]
+    },
+    {
+      name: "Cushingův syndrom",
+      def: "Klinický stav vyvolaný dlouhodobým nadbytkem glukokortikoidů (kortizolu), např. v důsledku adenomu nadledviny nebo hypofýzy.",
+      patterns: [/Cushing/i]
+    },
+    {
+      name: "Connův syndrom",
+      def: "Primární hyperaldosteronismus způsobený adenomem kůry nadledvin produkujícím aldosteron, projevující se hypertenzí a hypokalémií.",
+      patterns: [/Conn/i]
+    },
+    {
+      name: "Crohnova nemoc",
+      def: "Nespecifický zánět postihující diskontinuálně jakoukoli část trávicího traktu, typicky transmurálně a s přítomností nesýřících granulomů.",
+      patterns: [/Crohn/i]
+    },
+    {
+      name: "Barrettův jícen",
+      def: "Metaplazie dlaždicového epitelu jícnu na cylindrický epitel střevního typu jako následek refluxní ezofagitidy (prekanceróza).",
+      patterns: [/Barrett/i]
+    },
+    {
+      name: "Ghonův infekt",
+      def: "Primární ložisko plicní tuberkulózy, které spolu s postiženou regionální lymfatickou uzlinou tvoří tzv. primární komplex.",
+      patterns: [/Ghon/i]
+    },
+    {
+      name: "Aschoffova tělíska",
+      def: "Charakteristické granulomatózní uzlíky ve stěně srdce (myokardu) u revmatické horečky obsahující Anitschkowovy buňky.",
+      patterns: [/Aschoff/i]
+    },
+    {
+      name: "Anitschkowovy buňky",
+      def: "Aktivované histiocyty s charakteristickým uspořádáním chromatinu v jádře připomínajícím housenku, typické pro revmatickou horečku.",
+      patterns: [/Anitschkow/i]
+    },
+    {
+      name: "Russellova tělíska",
+      def: "Intracytoplasmatické akumulace nadbytečně syntetizovaných imunoglobulinů v plazmatických buňkách.",
+      patterns: [/Russell/i]
+    },
+    {
+      name: "Virchowova uzlina",
+      def: "Zvětšená levá supraklavikulární lymfatická uzlina, která je častým místem metastáz nádorů žaludku a jiných břišních orgánů.",
+      patterns: [/Virchow/i]
+    },
+    {
+      name: "Trousseauův syndrom",
+      def: "Spontánní a migrující žilní tromboflebitida spojená s viscerálními malignitami, nejčastěji karcinomem pankreatu (paraneoplastický projev).",
+      patterns: [/Trousseau/i]
+    },
+    {
+      name: "Bence-Jonesova bílkovina",
+      def: "Monoklonální lehké řetězce imunoglobulinů vylučované močí u pacientů s mnohočetným myelomem (Kahlerovou chorobou).",
+      patterns: [/Bence[- ]Jones/i]
+    },
+    {
+      name: "Kahlerova choroba",
+      def: "Alternativní a klinicky používaný název pro mnohočetný myelom - maligní nádor z plazmatických buněk.",
+      patterns: [/Kahler/i]
+    },
+    {
+      name: "Kaposiho sarkom",
+      def: "Maligní mezenchymální nádor vycházející z endotelu cév, vyvolaný virem HHV-8 a silně spojený s infekcí HIV (AIDS).",
+      patterns: [/Kaposi/i]
+    },
+    {
+      name: "Downův syndrom",
+      def: "Vrozená chromozomální aberace způsobená trizomií 21. chromozomu, spojená s typickými dysmorfickými rysy a mentální retardací.",
+      patterns: [/Down/i]
+    },
+    {
+      name: "Turnerův syndrom",
+      def: "Vrozená chromozomální aberace u žen s karyotypem 45,X, projevující se gonádovou dysgenezí, neplodností a nižším vzrůstem.",
+      patterns: [/Turner/i]
+    },
+    {
+      name: "Klinefelterův syndrom",
+      def: "Vrozená chromozomální aberace u mužů s karyotypem 47,XXY, projevující se hypogonadismem, sterilitou a gynekomastií.",
+      patterns: [/Klinefelter/i]
+    },
+    {
+      name: "Marfanův syndrom",
+      def: "Dědičná autozomálně dominantní porucha pojivové tkáně způsobená mutací genu pro fibrilin-1, s rizikem disekce aorty.",
+      patterns: [/Marfan/i]
+    },
+    {
+      name: "Ehlers-Danlosův syndrom",
+      def: "Skupina dědičných syndromů charakterizovaných poruchou syntézy kolagenu, projevující se hyperelasticitou kůže a kloubní hypermobilitou.",
+      patterns: [/Ehlers/i]
+    },
+    {
+      name: "Breslowova tloušťka",
+      def: "Prognostická klasifikace kožního melanomu určující hloubku invaze v milimetrech vertikální tloušťky nádoru.",
+      patterns: [/Breslow/i]
+    },
+    {
+      name: "Clarkův level",
+      def: "Klasifikace melanomu kůže hodnotící hloubku invaze podle zasažených anatomických vrstev kůže (epidermis až subkutis).",
+      patterns: [/Clark/i]
+    },
+    {
+      name: "Malloryho tělíska",
+      def: "Eozinofilní intracytoplasmatické inkluze agregovaných intermediárních filament (cytokeratinů) v hepatocytech, typické pro alkoholické poškození jater.",
+      patterns: [/Mallory/i]
+    },
+    {
+      name: "Zenkerův divertikl",
+      def: "Pulsní divertikl stěny jícnu a hltanu v Kilianově trojúhelníku nad horním jícnovým svěračem.",
+      patterns: [/Zenker/i]
+    },
+    {
+      name: "Whippleova choroba",
+      def: "Systémové infekční onemocnění vyvolané bakterií Tropheryma whipplei, projevující se malabsorpcí, průjmy a přítomností PAS-pozitivních makrofágů.",
+      patterns: [/Whipple/i]
+    },
+    {
+      name: "Hirschsprungova nemoc",
+      def: "Vrozené megakolon způsobené poruchou migrace buněk neurální lišty, což vede k aganglionóze distálního tlustého střeva.",
+      patterns: [/Hirschsprung/i]
+    },
+    {
+      name: "Meckelův divertikl",
+      def: "Pravý divertikl ilea vzniklý nedokonalým uzávěrem ductus omphalomesentericus, často obsahuje ektopickou žaludeční sliznici.",
+      patterns: [/Meckel/i]
+    },
+    {
+      name: "Wilsonova choroba",
+      def: "Dědičná porucha vylučování mědi do žluče, vedoucí k jejímu střádání v játrech, mozku (lentikulární degenerace) a rohovce.",
+      patterns: [/Wilson/i]
+    },
+    {
+      name: "Goodpastureův syndrom",
+      def: "Autoimunitní onemocnění vyvolané protilátkami proti bazální membráně (anti-GBM) plicních alveolů a glomerulů ledvin.",
+      patterns: [/Goodpasture/i]
+    },
+    {
+      name: "Alportův syndrom",
+      def: "Dědičná nefritida způsobená mutací genů pro kolagen typu IV, spojená s hematurií, progresivním selháním ledvin a hluchotou.",
+      patterns: [/Alport/i]
+    },
+    {
+      name: "Wegenerova granulomatóza",
+      def: "Systémová nekrotizující vaskulitida postihující horní a dolní dýchací cesty a ledviny, asociovaná s protilátkami c-ANCA (PR3-ANCA).",
+      patterns: [/Wegener/i]
+    },
+    {
+      name: "Takayasuova arteritida",
+      def: "Granulomatózní vaskulitida velkých tepen (zejména aorty a jejích větví), typická pro mladé ženy (bezpulzní nemoc).",
+      patterns: [/Takayasu/i]
+    },
+    {
+      name: "Buergerova choroba",
+      def: "Thromboangiitis obliterans, segmentální zánětlivé a trombotické postižení malých a středních cév končetin, typicky u mladých kuřáků.",
+      patterns: [/Buerger/i]
+    },
+    {
+      name: "Kawasakiho nemoc",
+      def: "Akutní febrilní vaskulitida středně velkých tepen u malých dětí, s predilekčním postižením koronárních tepen (riziko aneurysmat).",
+      patterns: [/Kawasaki/i]
+    },
+    {
+      name: "Libman-Sacksova endokarditida",
+      def: "Nesterilní verukózní endokarditida u systémového lupus erythematodes (SLE), s depozity na obou stranách chlopně.",
+      patterns: [/Libman/i]
+    },
+    {
+      name: "Rothovy skvrny",
+      def: "Krvácení do sítnice s bledým středem (tvořeným fibrinovým koagulem), typicky u infekční endokarditidy.",
+      patterns: [/Roth/i]
+    },
+    {
+      name: "Janewayovy léze",
+      def: "Nebolestivé erytematózní či hemoragické makuly na dlaních a ploskách u infekční endokarditidy (způsobené septickými emboly).",
+      patterns: [/Janeway/i]
+    },
+    {
+      name: "Oslerovy uzly",
+      def: "Bolestivé imunokomplexové uzlíky na prstech rukou či nohou, typické pro infekční endokarditidu.",
+      patterns: [/Osler/i]
+    },
+    {
+      name: "Langhansovy obrovské buňky",
+      def: "Vícejaderné obrovské buňky vznikající fúzí epiteloidních makrofágů u specifických zánětů (typické pro tuberkulózní granulomy).",
+      patterns: [/Langhans/i]
+    },
+    {
+      name: "Langerhansovy buňky / Langerhansovy ostrůvky",
+      def: "Dendritické buňky v kůži (místo původu histiocytózy) nebo endokrinní buňky pankreatu (Langerhansovy ostrůvky).",
+      patterns: [/Langerhans/i]
+    },
+    {
+      name: "Wermerův syndrom (MEN 1)",
+      def: "Syndrom mnohočetné endokrinní neoplazie postihující příštítná tělíska (hyperplazie/adenom), pankreas (NETy) a hypofýzu (adenom).",
+      patterns: [/Wermer/i]
+    },
+    {
+      name: "Sippleův syndrom (MEN 2A)",
+      def: "Syndrom mnohočetné endokrinní neoplazie postihující medulární karcinom štítné žlázy, feochromocytom a příštítná tělíska.",
+      patterns: [/Sipple/i]
+    },
+    {
+      name: "Cowdryho inkluze",
+      def: "Intranukleární eozinofilní virové inkluze typické pro infekci viry ze skupiny Herpesviridae.",
+      patterns: [/Cowdry/i]
+    },
+    {
+      name: "Negriho tělíska",
+      def: "Eozinofilní intracytoplasmatické inkluze v neuronech (zejména Purkyňových buňkách a hippokampu), patognomické pro vzteklinu.",
+      patterns: [/Negri/i]
+    },
+    {
+      name: "Lewyho tělíska",
+      def: "Intracytoplasmatické eozinofilní inkluze tvořené alfa-synukleinem v neuronech u Parkinsonovy choroby a demence s Lewyho tělísky.",
+      patterns: [/Lewy/i]
+    },
+    {
+      name: "Burtonův lem",
+      def: "Modrošedý lem na dásních způsobený usazováním sulfidu olovnatého při chronické otravě olovem.",
+      patterns: [/Burton/i]
+    },
+    {
+      name: "Hedingerův syndrom",
+      def: "Pravostranná srdeční endokarditida s fibrózou chlopní u pacientů s karcinoidovým syndromem vyvolaným serotoninem.",
+      patterns: [/Hedinger/i]
+    },
+    {
+      name: "Meigsův syndrom",
+      def: "Koexistence benigního ovariálního fibromu, ascitu a hydrothoraxu, mizící po odstranění tumoru.",
+      patterns: [/Meigs/i]
+    },
+    {
+      name: "Aschoffovo-Rokitanské sinusy",
+      def: "Divertikly sliznice žlučníku pronikající do svalové vrstvy, spojené s chronickou cholecystitidou.",
+      patterns: [/Rokitansk/i]
+    },
+    {
+      name: "Crookeovy buňky",
+      def: "Bazofilní buňky adenohypofýzy vykazující hyalinní změnu v důsledku chronického nadbytku glukokortikoidů (u Cushingova syndromu).",
+      patterns: [/Crooke/i]
+    },
+    {
+      name: "Kimmelstiel-Wilsonova glomeruloskleróza",
+      def: "Nodulární interkapilární glomeruloskleróza, patognomický histologický nález u diabetické nefropatie.",
+      patterns: [/Kimmelstiel/i]
+    },
+    {
+      name: "Lichtenbergovy obrazce",
+      def: "Stromovité zarudnutí kůže vznikající po zásahu bleskem v důsledku dilatace podkožních kapilár.",
+      patterns: [/Lichtenberg/i]
+    },
+    {
+      name: "Carneyův komplex",
+      def: "Dědičný syndrom charakterizovaný myxomy (srdečními i kožními), skvrnitou pigmentací kůže a endokrinní hyperaktivitou.",
+      patterns: [/Carney/i]
+    },
+    {
+      name: "Lightova kritéria",
+      def: "Sada biochemických kritérií sloužící k rozlišení pleurálního exsudátu od transudátu.",
+      patterns: [/Light/i]
+    },
+    {
+      name: "Löfgrenův syndrom",
+      def: "Akutní forma sarkoidózy charakterizovaná triádou: erythema nodosum, bilaterální hilová lymfadenopatie a polyartritida.",
+      patterns: [/Lofgren/i, /Löfgren/i]
+    },
+    {
+      name: "Munroovy mikroabscesy",
+      def: "Drobné nahromadění neutrofilů v rohovité vrstvě epidermis (stratum corneum) u lupénky (psoriázy).",
+      patterns: [/Munro/i]
+    },
+    {
+      name: "Pautrierovy mikroabscesy",
+      def: "Intraepiteliální shluky atypických T-lymfocytů v epidermis, typické pro mycosis fungoides (kožní T-lymfom).",
+      patterns: [/Pautrier/i]
+    },
+    {
+      name: "Stokesův límec",
+      def: "Otok krku, hlavy a horních končetin doprovázený cyanózou v důsledku syndromu horní duté žíly (útlak nádorem v mediastinu).",
+      patterns: [/Stokes/i]
+    },
+    {
+      name: "Zahnovy linie / Zahnova infarkt",
+      def: "Zahnovy linie: střídající se světlé a tmavé vrstvy v intravitálním trombu. Zahnovy infarkty: pseudo-infarkty jater způsobené trombózou v. portae.",
+      patterns: [/Zahn/i]
+    },
+    {
+      name: "Zollinger-Ellisonův syndrom",
+      def: "Gastrinom (nejčastěji pankreatu nebo duodena) produkující nadbytek gastrinu, což vede k těžké hyperaciditě a mnohočetným peptickým vředům.",
+      patterns: [/Zollinger/i]
+    }
+  ];
+
+  // Získání eponymních pojmů pro otázku
+  function getEponymsForQuestion(q) {
+    if (!q || !q.content) return [];
+    const textToSearch = [
+      q.title || "",
+      q.section || "",
+      (q.keywords || []).join(" "),
+      q.content.definition || "",
+      q.content.etiology || "",
+      q.content.pathogenesis || "",
+      q.content.macroscopy || "",
+      q.content.microscopy || "",
+      q.content.clinical || ""
+    ].join(" ").toLowerCase();
+
+    return EPONYMS_DB.filter(ep => {
+      return ep.patterns.some(pattern => pattern.test(textToSearch));
+    });
+  }
+
   // 1. Sloučení databází otázek
   const QUESTIONS = [
     ...(window.DATA_PATOLOGIE_1 || []).map(q => ({ ...q, category: "Obecná" })),
@@ -65,6 +484,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeSearchQuery = "";
   
   // Herní stav pro přiřazovačku
+  let gameMode = "normal"; // "normal" nebo "eponyms"
   let gameSelectedTerm = null;
   let gameSelectedDesc = null;
   let gamePairsLeft = 0;
@@ -119,6 +539,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Elementy hry
   const gameDialog = document.getElementById("game-dialog");
   const gameOpenBtn = document.getElementById("matching-game-open-btn");
+  const gameOpenEponymsBtn = document.getElementById("matching-game-eponyms-open-btn");
   const gameCloseBtn = document.getElementById("game-close");
   const gameColLeft = document.getElementById("game-column-left");
   const gameColRight = document.getElementById("game-column-right");
@@ -245,12 +666,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const isDue = isCardDue(q.id);
       const isUnstudied = qProgress.lastReviewed === null;
 
+      const eponyms = getEponymsForQuestion(q);
+      let eponymsHTML = "";
+      if (eponyms.length > 0) {
+        eponymsHTML = `
+          <div class="card-eponyms-badges">
+            ${eponyms.map(ep => `<span class="card-eponym-badge" title="${escapeHTML(ep.def)}">${escapeHTML(ep.name)}</span>`).join("")}
+          </div>
+        `;
+      }
+
       card.innerHTML = `
         <div class="card-top">
           <span class="card-id">${escapeHTML(q.id)}</span>
           <div class="card-box-indicator b-${escapeHTML(qProgress.box)}" title="Krabička ${escapeHTML(qProgress.box)}"></div>
         </div>
         <h3 class="card-title">${escapeHTML(q.title)}</h3>
+        ${eponymsHTML}
         <div class="card-footer">
           <span class="card-section">${escapeHTML(q.section)}</span>
           ${isDue ? `<span class="due-badge">K opakování</span>` : ""}
@@ -274,14 +706,32 @@ document.addEventListener("DOMContentLoaded", () => {
     dialogTitle.textContent = activeQuestion.title;
     dialogSection.textContent = activeQuestion.section;
     
-    studyDefinition.textContent = activeQuestion.content.definition;
-    studyEtiology.textContent = activeQuestion.content.etiology;
-    studyPathogenesis.textContent = activeQuestion.content.pathogenesis;
+    studyDefinition.innerHTML = formatText(activeQuestion.content.definition);
+    studyEtiology.innerHTML = formatText(activeQuestion.content.etiology);
+    studyPathogenesis.innerHTML = formatText(activeQuestion.content.pathogenesis);
     
     // Zvýraznění makro/mikro (specifické pro patologii)
-    studyMacroscopy.textContent = activeQuestion.content.macroscopy;
-    studyMicroscopy.textContent = activeQuestion.content.microscopy;
-    studyClinical.textContent = activeQuestion.content.clinical;
+    studyMacroscopy.innerHTML = formatText(activeQuestion.content.macroscopy);
+    studyMicroscopy.innerHTML = formatText(activeQuestion.content.microscopy);
+    studyClinical.innerHTML = formatText(activeQuestion.content.clinical);
+
+    // Zobrazení a naplnění eponymních pojmů
+    const eponymsContainer = document.getElementById("study-eponyms-container");
+    const eponymsList = document.getElementById("study-eponyms-list");
+    if (eponymsContainer && eponymsList) {
+      const eponyms = getEponymsForQuestion(activeQuestion);
+      if (eponyms.length > 0) {
+        eponymsList.innerHTML = eponyms.map(ep => `
+          <div class="eponym-item">
+            <div class="eponym-name">${escapeHTML(ep.name)}</div>
+            <div class="eponym-def">${escapeHTML(ep.def)}</div>
+          </div>
+        `).join("");
+        eponymsContainer.style.display = "block";
+      } else {
+        eponymsContainer.style.display = "none";
+      }
+    }
 
     // Vykreslení kvízu
     renderQuiz();
@@ -365,14 +815,14 @@ document.addEventListener("DOMContentLoaded", () => {
       
       if (q.type === "type-in") {
         quizCard.innerHTML = `
-          <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
+          <div class="quiz-question">${qIndex + 1}. ${formatText(q.question)}</div>
           <div class="quiz-type-in-container" id="type-in-container-${qIndex}">
             <input type="text" class="quiz-type-in-input" id="type-in-input-${qIndex}" placeholder="Napište svou odpověď...">
             <button class="btn btn-primary quiz-type-in-submit" id="type-in-submit-${qIndex}">Ověřit</button>
           </div>
           <div class="quiz-type-in-feedback" id="feedback-${qIndex}" style="display: none;"></div>
           <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
-            <strong>Vysvětlení:</strong> ${q.explanation}
+            <strong>Vysvětlení:</strong> ${formatText(q.explanation)}
           </div>
         `;
       } else {
@@ -380,18 +830,18 @@ document.addEventListener("DOMContentLoaded", () => {
         q.options.forEach((opt, optIndex) => {
           optionsHTML += `
             <button class="quiz-option" data-qindex="${qIndex}" data-optindex="${optIndex}">
-              ${opt}
+              ${formatText(opt)}
             </button>
           `;
         });
 
         quizCard.innerHTML = `
-          <div class="quiz-question">${qIndex + 1}. ${q.question}</div>
+          <div class="quiz-question">${qIndex + 1}. ${formatText(q.question)}</div>
           <div class="quiz-options">
             ${optionsHTML}
           </div>
           <div class="quiz-explanation" id="explanation-${qIndex}" style="display: none;">
-            <strong>Vysvětlení:</strong> ${q.explanation}
+            <strong>Vysvětlení:</strong> ${formatText(q.explanation)}
           </div>
         `;
       }
@@ -490,11 +940,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isCorrect) {
         feedbackEl.className = "quiz-type-in-feedback correct";
-        feedbackEl.innerHTML = `<span>✓ Správně! Odpověď: <strong>${Array.isArray(quizData.correct) ? quizData.correct[0] : quizData.correct}</strong></span>`;
+        feedbackEl.innerHTML = `<span>✓ Správně! Odpověď: <strong>${escapeHTML(Array.isArray(quizData.correct) ? quizData.correct[0] : quizData.correct)}</strong></span>`;
         userProgress[activeQuestion.id].correctCount++;
       } else {
         feedbackEl.className = "quiz-type-in-feedback incorrect";
-        feedbackEl.innerHTML = `<span>✗ Nesprávně. Správná odpověď: <strong>${Array.isArray(quizData.correct) ? quizData.correct.join(" nebo ") : quizData.correct}</strong></span>`;
+        feedbackEl.innerHTML = `<span>✗ Nesprávně. Správná odpověď: <strong>${escapeHTML(Array.isArray(quizData.correct) ? quizData.correct.join(" nebo ") : quizData.correct)}</strong></span>`;
       }
 
       saveProgress();
@@ -503,81 +953,149 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 14. LOGIKA PŘIŘAZOVACÍ HRY (MATCHING GAME)
   function openMatchingGame() {
-    // Výběr 4 náhodných otázek s vyplněnou definicí
-    const validQuestions = QUESTIONS.filter(q => q.content && q.content.definition);
-    if (validQuestions.length < 4) {
-      alert("Nedostatek dat pro přiřazovačku.");
-      return;
-    }
+    const gameTitleEl = document.getElementById("game-title");
+    const gameDescEl = document.getElementById("game-description");
 
-    // Náhodné promíchání a výběr 4 unikátních otázek
-    const shuffled = [...validQuestions].sort(() => 0.5 - Math.random());
-    gameCurrentPairs = shuffled.slice(0, 4);
+    if (gameMode === "eponyms") {
+      if (gameTitleEl) gameTitleEl.textContent = "Přiřazování eponymních pojmů";
+      if (gameDescEl) gameDescEl.textContent = "Spojuj správné dvojice: Eponymní název vlevo a jeho stručná definice/kontext vpravo.";
 
-    gameSelectedTerm = null;
-    gameSelectedDesc = null;
-    gameErrorsCount = 0;
-    gamePairsLeft = 4;
-
-    gameErrorsEl.textContent = "0";
-    gameLeftCountEl.textContent = "4";
-
-    // Vytvoření seznamu termínů a popisů
-    const terms = gameCurrentPairs.map(q => ({
-      id: q.id,
-      text: q.title
-    }));
-
-    const descriptions = gameCurrentPairs.map(q => {
-      // Použijeme zkrácenou verzi makro- nebo mikro- nálezu, aby to byla opravdová patologická zkouška
-      let shortText = q.content.definition;
-      
-      // Pokusíme se vzít zajímavou větu z makroskopie nebo mikroskopie, pokud existuje
-      if (q.content.macroscopy && q.content.macroscopy.length > 20) {
-        shortText = q.content.macroscopy;
-      } else if (q.content.microscopy && q.content.microscopy.length > 20) {
-        shortText = q.content.microscopy;
-      }
-      
-      // Zkrácení na max 120 znaků pro karty
-      if (shortText.length > 130) {
-        shortText = shortText.substring(0, 125) + "...";
+      if (EPONYMS_DB.length < 4) {
+        alert("Nedostatek dat pro přiřazovačku.");
+        return;
       }
 
-      return {
+      // Výběr 4 náhodných eponym z EPONYMS_DB
+      const shuffled = [...EPONYMS_DB].sort(() => 0.5 - Math.random());
+      gameCurrentPairs = shuffled.slice(0, 4);
+
+      gameSelectedTerm = null;
+      gameSelectedDesc = null;
+      gameErrorsCount = 0;
+      gamePairsLeft = 4;
+
+      gameErrorsEl.textContent = "0";
+      gameLeftCountEl.textContent = "4";
+
+      // Vytvoření seznamu termínů a popisů
+      const terms = gameCurrentPairs.map((ep, idx) => ({
+        id: idx.toString(),
+        text: ep.name
+      }));
+
+      const descriptions = gameCurrentPairs.map((ep, idx) => ({
+        id: idx.toString(),
+        text: ep.def
+      }));
+
+      // Náhodně promíchat sloupce nezávisle na sobě
+      const shuffledTerms = [...terms].sort(() => 0.5 - Math.random());
+      const shuffledDescs = [...descriptions].sort(() => 0.5 - Math.random());
+
+      // Vykreslení do UI
+      gameColLeft.innerHTML = "";
+      gameColRight.innerHTML = "";
+
+      shuffledTerms.forEach(t => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.setAttribute("data-id", t.id);
+        card.innerHTML = formatText(t.text);
+        card.addEventListener("click", () => selectTerm(card));
+        gameColLeft.appendChild(card);
+      });
+
+      shuffledDescs.forEach(d => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.setAttribute("data-id", d.id);
+        card.innerHTML = formatText(d.text);
+        card.addEventListener("click", () => selectDesc(card));
+        gameColRight.appendChild(card);
+      });
+
+      gameDialog.showModal();
+      document.body.style.overflow = "hidden";
+    } else {
+      if (gameTitleEl) gameTitleEl.textContent = "Přiřazování patologických pojmů";
+      if (gameDescEl) gameDescEl.textContent = "Spojuj správné dvojice: Termín vlevo a jeho odpovídající histologický/makroskopický popis vpravo.";
+
+      // Výběr 4 náhodných otázek s vyplněnou definicí
+      const validQuestions = QUESTIONS.filter(q => q.content && q.content.definition);
+      if (validQuestions.length < 4) {
+        alert("Nedostatek dat pro přiřazovačku.");
+        return;
+      }
+
+      // Náhodné promíchání a výběr 4 unikátních otázek
+      const shuffled = [...validQuestions].sort(() => 0.5 - Math.random());
+      gameCurrentPairs = shuffled.slice(0, 4);
+
+      gameSelectedTerm = null;
+      gameSelectedDesc = null;
+      gameErrorsCount = 0;
+      gamePairsLeft = 4;
+
+      gameErrorsEl.textContent = "0";
+      gameLeftCountEl.textContent = "4";
+
+      // Vytvoření seznamu termínů a popisů
+      const terms = gameCurrentPairs.map(q => ({
         id: q.id,
-        text: shortText
-      };
-    });
+        text: q.title
+      }));
 
-    // Náhodně promíchat sloupce nezávisle na sobě
-    const shuffledTerms = [...terms].sort(() => 0.5 - Math.random());
-    const shuffledDescs = [...descriptions].sort(() => 0.5 - Math.random());
+      const descriptions = gameCurrentPairs.map(q => {
+        // Použijeme zkrácenou verzi makro- nebo mikro- nálezu, aby to byla opravdová patologická zkouška
+        let shortText = q.content.definition;
+        
+        // Pokusíme se vzít zajímavou větu z makroskopie nebo mikroskopie, pokud existuje
+        if (q.content.macroscopy && q.content.macroscopy.length > 20) {
+          shortText = q.content.macroscopy;
+        } else if (q.content.microscopy && q.content.microscopy.length > 20) {
+          shortText = q.content.microscopy;
+        }
+        
+        // Zkrácení na max 120 znaků pro karty
+        if (shortText.length > 130) {
+          shortText = shortText.substring(0, 125) + "...";
+        }
 
-    // Vykreslení do UI
-    gameColLeft.innerHTML = "";
-    gameColRight.innerHTML = "";
+        return {
+          id: q.id,
+          text: shortText
+        };
+      });
 
-    shuffledTerms.forEach(t => {
-      const card = document.createElement("div");
-      card.className = "game-card";
-      card.setAttribute("data-id", t.id);
-      card.textContent = t.text;
-      card.addEventListener("click", () => selectTerm(card));
-      gameColLeft.appendChild(card);
-    });
+      // Náhodně promíchat sloupce nezávisle na sobě
+      const shuffledTerms = [...terms].sort(() => 0.5 - Math.random());
+      const shuffledDescs = [...descriptions].sort(() => 0.5 - Math.random());
 
-    shuffledDescs.forEach(d => {
-      const card = document.createElement("div");
-      card.className = "game-card";
-      card.setAttribute("data-id", d.id);
-      card.textContent = d.text;
-      card.addEventListener("click", () => selectDesc(card));
-      gameColRight.appendChild(card);
-    });
+      // Vykreslení do UI
+      gameColLeft.innerHTML = "";
+      gameColRight.innerHTML = "";
 
-    gameDialog.showModal();
-    document.body.style.overflow = "hidden";
+      shuffledTerms.forEach(t => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.setAttribute("data-id", t.id);
+        card.innerHTML = formatText(t.text);
+        card.addEventListener("click", () => selectTerm(card));
+        gameColLeft.appendChild(card);
+      });
+
+      shuffledDescs.forEach(d => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.setAttribute("data-id", d.id);
+        card.innerHTML = formatText(d.text);
+        card.addEventListener("click", () => selectDesc(card));
+        gameColRight.appendChild(card);
+      });
+
+      gameDialog.showModal();
+      document.body.style.overflow = "hidden";
+    }
   }
 
   function selectTerm(card) {
@@ -631,7 +1149,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Pokud jsou všechny dvojice spárovány
       if (gamePairsLeft === 0) {
         setTimeout(() => {
-          alert(`Gratulujeme! Úspěšně jsi přiřadila všechny patologické pojmy s počtem chyb: ${gameErrorsCount}.`);
+          const msg = gameMode === "eponyms" 
+            ? `Gratulujeme! Úspěšně jsi přiřadila všechny eponymní pojmy s počtem chyb: ${gameErrorsCount}.`
+            : `Gratulujeme! Úspěšně jsi přiřadila všechny patologické pojmy s počtem chyb: ${gameErrorsCount}.`;
+          alert(msg);
           openMatchingGame(); // Automaticky spustit další kolo
         }, 500);
       }
@@ -751,9 +1272,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Event listenery pro Přiřazovací hru
-  gameOpenBtn.addEventListener("click", openMatchingGame);
+  gameOpenBtn.addEventListener("click", () => {
+    gameMode = "normal";
+    openMatchingGame();
+  });
+  gameOpenEponymsBtn.addEventListener("click", () => {
+    gameMode = "eponyms";
+    openMatchingGame();
+  });
   gameCloseBtn.addEventListener("click", closeMatchingGame);
-  gameResetBtn.addEventListener("click", openMatchingGame);
+  gameResetBtn.addEventListener("click", () => {
+    openMatchingGame();
+  });
 
   // 16. SPRÁVA TÉMATU (TMÁVÝ / SVĚTLÝ REŽIM)
   const savedTheme = localStorage.getItem("patologie_theme") || "dark-theme";

@@ -30,6 +30,11 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
           Spustit přiřazovačku
         </button>
+
+        <button id="matching-game-eponyms-open-btn" class="btn btn-primary btn-game btn-game-eponyms">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          Přiřazovačka eponym
+        </button>
         
         <!-- Přepínač motivu -->
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Přepnout tmavý/světlý režim">
@@ -223,6 +228,12 @@
               <h3>Definice a Kontext</h3>
               <p id="study-definition"></p>
             </div>
+
+            <!-- Eponymní pojmy (vložené dynamicky přes JS) -->
+            <div id="study-eponyms-container" class="study-card study-eponyms" style="display: none;">
+              <h3>Eponymní pojmy</h3>
+              <div id="study-eponyms-list"></div>
+            </div>
             
             <div class="study-two-cols">
               <!-- Etiologie -->
@@ -306,8 +317,8 @@
     <div class="game-content">
       <header class="game-header">
         <div class="game-header-text">
-          <h2>Přiřazování patologických pojmů</h2>
-          <p>Spojuj správné dvojice: Termín vlevo a jeho odpovídající histologický/makroskopický popis vpravo.</p>
+          <h2 id="game-title">Přiřazování patologických pojmů</h2>
+          <p id="game-description">Spojuj správné dvojice: Termín vlevo a jeho odpovídající histologický/makroskopický popis vpravo.</p>
         </div>
         <button class="game-close-btn" id="game-close" aria-label="Zavřít hru">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
