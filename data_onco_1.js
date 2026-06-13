@@ -688,7 +688,7 @@ const DATA_ONCO_1 = [
       etiology: "Chromozomální translokace: t(14;18) u folikulárního lymfomu; t(8;14) u Burkittova lymfomu; t(11;14) u lymfomu z plášťových buněk.",
       pathogenesis: "1. **DLBCL** (Difuzní velkobuněčný B-lymfom): nejčastější agresivní B-NHL. Rychlý růst, mutace BCL6. \n2. **Folikulární lymfom**: nejčastější indolentní B-NHL. Translokace t(14;18) spojuje protoonkogen **BCL2** s promotorem IGH, což vede k nadprodukci proteinu BCL2. BCL2 blokuje apoptózu, takže buňky neumíratelně přežívají. \n3. **Burkittův lymfom**: extrémně agresivní. Translokace t(8;14) aktivuje onkogen **MYC** (regulátor buněčného cyklu), což vede k nejrychlejšímu dělení buněk u lidských nádorů (mitotický index 100 %). Spojen s EBV.",
       macroscopy: "Zvětšené uzliny splývající do masivních konglomerátů (paketů). V GIT (časté u DLBCL) tvoří velké tumorózní masy, které mohou způsobit střevní obstrukci nebo ulcerace.",
-      microscopy: "DLBCL: difuzní růst velkých buněk (3-4x větších než normální lymfocyt) s atypickými jádry a jadérky. Folikulární l.: nodulární (folikulární) uspořádání, chybí polarizace folikulů a chybí makrofágy (rozdíl od reaktivní hyperplazie). Burkittův l.: difuzní infiltrace středně velkých buněk s vysokou mitotickou aktivitou a četnými makrofágy fagocytujícími apoptotické buňky, což pod mikroskopem při slabém zvětšení vytváří obraz **hvězdného nebe** (starry sky appearance).",
+      microscopy: "DLBCL: difuzní růst velkých buněk (3-4x větších než normální lymfocyt) s atypickými jádry a jadérky. Folikulární l.: nodulární (folikulární) uspořádání, chybí polarizace folikulů a chybí makrofágy (rozdíl od reaktivní hyperplazie). Burkittův l.: difuzní infiltrace středně velkých buněk s extrémně vysokou proliferační aktivitou (Ki-67 proliferační index blížící se 100 %) a četnými makrofágy fagocytujícími apoptotické buňky, což pod mikroskopem při slabém zvětšení vytváří obraz **hvězdného nebe** (starry sky appearance).",
       clinical: "Indolentní lymfomy (folikulární) jsou v době diagnózy často generalizované, rostou pomalu, jsou nevyléčitelné, ale pacienti s nimi žijí řadu let. Agresivní lymfomy (DLBCL, Burkitt) rostou rychle, bez léčby zabíjejí během měsíců, ale jsou citlivé na chemoterapii a lze je vyléčit. Burkittův lymfom se v Africe manifestuje nádory čelisti (endemický typ), v Evropě abdominální masou (sporadický typ)."
     },
     quiz: [
@@ -726,6 +726,17 @@ const DATA_ONCO_1 = [
         type: "type-in",
         correct: ["Burkittův lymfom", "Burkittův"],
         explanation: "Burkittův lymfom je charakteristický extrémně rychlou proliferací a přítomností makrofágů tvořících obraz 'hvězdného nebe'."
+      },
+      {
+        question: "Který z lymfomů je typický proliferačním indexem Ki-67 blížícím se 100 % a je poháněn mutací onkogenu MYC?",
+        options: [
+          "Folikulární lymfom",
+          "Burkittův lymfom",
+          "Hodgkinův lymfom",
+          "Mantle cell lymfom (lymfom plášťové zóny)"
+        ],
+        correct: 1,
+        explanation: "Burkittův lymfom je jeden z nejrychleji rostoucích lidských nádorů. Translokace t(8;14) aktivuje onkogen MYC, což vede k extrémně rychlému buněčnému dělení, reflektovanému proliferačním indexem Ki-67 téměř 100 %."
       }]
   },
 
@@ -1053,7 +1064,7 @@ const DATA_ONCO_1 = [
       pathogenesis: "1. **Benigní**: \n- *Pleomorfní adenom* (smíšený tumor): nejčastější tumor slinných žláz (vychází z myoepiteliálních a duktálních buněk). Roste pomalu, ale může malignizovat. \n- *Warthinův tumor* (cystadenolymphoma): postihuje téměř výhradně glandula parotis starších mužů-kuřáků. \n2. **Maligní**: \n- *Mukoepidermoidní karcinom*: nejčastější maligní nádor slinných žláz, tvořen směsí hlenotvorných a dlaždicových buněk. \n- *Adenoidně cystický karcinom* (cylindrom): roste infiltrující podél nervů, má vysoké riziko pozdních metastáz.",
       macroscopy: "Pleomorfní adenom: kulatý, tuhý, laločnatý uzel s hladkým povrchem, na řezu šedobílý s chrupavčitými a rosolovitými ložisky. Warthinův tumor: měkký, často cystický uzel vyplněný hnědavou tekutinou (jako čokoláda). Cylindrom: neohraničený, šedavý, tuhý.",
       microscopy: "Pleomorfní adenom: **pleomorfní (smíšený) vzhled** - epitelové žlázky a myoepiteliální buňky rozptýlené v myxoidním, chrupavčitém (chondroidním) a sklovitém (hyalinním) stroma. Warthinův tumor: cystické prostory vystlané dvouvrstevným onkocytárním epitelem (růžový epitel), pod nímž je masivní reaktivní lymfatická tkáň s germinálními centry. Adenoidně cystický k.: buňky tvoří hnízda s prázdnými okrouhlými prostory (vzhled **švýcarského sýra** nebo cylindrů).",
-      clinical: "Pleomorfní adenom se musí vyoperovat s lemem zdravé tkáně (parotidektomie), protože má mikroskopické prstovité výběžky prorůstající pouzdrem. Při nedbalém vyloupnutí hrozí recidiva a poškození **nervus facialis** (lícního nervu), který prochází glandula parotis."
+      clinical: "Pleomorfní adenom se musí vyoperovat s dostatečným lemem zdravé tkáně (parotidektomie), protože vytváří mikroskopické prstovité výběžky (pseudopodie) prorůstající pouzdrem do okolí. Pouhé vyloupnutí (enukleace) nádoru je hrubou chybou, po které téměř vždy následuje **lokální recidiva**. Při operaci existuje vysoké riziko poškození **nervus facialis** (lícního nervu), který prochází středem glandula parotis."
     },
     quiz: [
       {
@@ -1101,8 +1112,9 @@ const DATA_ONCO_1 = [
     keywords: ["žaludek", "jícen", "karcinom", "adenokarcinom", "Barrett", "prstenčitý", "Linitis", "Krukenberg"],
     content: {
       definition: "Nádory jícnu a žaludku jsou vysoce maligní epiteliální tumory s nepříznivou prognózou.",
-      etiology: "Jícen: 1. Spinocelulární karcinom (kouření, alkohol, horké nápoje, poleptání), 2. Adenokarcinom (vzniká na podkladě **Barrettova jícnu** při refluxní chorobě). Žaludek: Helicobacter pylori, uzená jídla (nitrosaminy), genetika (mutace genu CDH1 pro E-cadherin - dědičný difuzní karcinom žaludku).",
+      etiology: "Jícen: 1. **Spinocelulární karcinom** (asociován s kouřením a alkoholem, typicky postihuje horní a střední třetinu jícnu), 2. **Adenokarcinom** (vzniká na podkladě **Barrettova jícnu** při těžkém chronickém refluxu - GERD, postihuje výhradně dolní třetinu jícnu). Žaludek: Helicobacter pylori, uzená jídla (nitrosaminy), genetika (mutace genu CDH1 pro E-cadherin - dědičný difuzní karcinom žaludku).",
       pathogenesis: "Žaludeční karcinom se dělí podle Laurena na: \n1. **Intestinální typ**: tvoří žlázy, předchází mu intestinální metaplazie sliznice (přeměna na střevní typ), asociace s H. pylori. \n2. **Difuzní typ**: netvoří žlázy, buňky rostou disociovaně (odděleně, chybí E-cadherin) a infiltrují stěnu žaludku, což vede k jejímu zbytnění. Buňky střádají hlen, který odsouvá jádro k okraji (buňky **prstenčitého vzhledu** / signet-ring cells).",
+
       macroscopy: "Karcinom jícnu: zužuje lumen (stenóza), způsobuje dysfagii. Karcinom žaludku: ulcerovaný (miskovitý vřed s navalitými okraji) nebo difuzní (**Linitis plastica** - žaludek je malý, s extrémně tlustou, tuhou kožovitou stěnou připomínající koženou lahev).",
       microscopy: "Barrettův jícen: přeměna dlaždicového epitelu jícnu na cylindrický s pohárkovými buňkami (metaplazie). Difuzní karcinom žaludku: stroma je fibrotické (desmoplazie), v něm roztroušené disociované buňky s hlenovou vakuolou v cytoplasmě a oploštělým jádrem u okraje (buňky tvaru pečetního prstenu).",
       clinical: "Žaludeční karcinom má dlouho němý průběh (bolesti nadbřišku, hubnutí, odpor k masu). Často se manifestuje až metastázami: 1. **Virchowova uzlina** (zvětšená levá supraklavikulární uzlina), 2. **Krukenbergův tumor** (oboustranná metastáza difuzního karcinomu žaludku do vaječníků roznášená implantací po peritoneu)."
