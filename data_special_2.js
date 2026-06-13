@@ -397,7 +397,7 @@ const DATA_SPECIAL_2 = [
     category: "Speciální",
     keywords: ["nefrolitiáza", "ledviny", "oxalát", "struvit", "odlitkový", "kolika", "hydronefróza"],
     content: {
-      definition: "Nefrolithiáza (urolithiáza) je přítomnost močových konkrétů (kamenů) v pánvičce ledvinné nebo kalichách. Pokud se kámen posune do močových cest, mluvíme o urolitiáze.",
+      definition: "Nefrolithiáza (urolithiáza) je přítomnost močových konkrementů (kamenů) v pánvičce ledvinné nebo kališích. Pokud se kámen posune do močových cest, mluvíme o urolitiáze.",
       etiology: "Dehydratace (koncentrovaná moč), metabolické poruchy (hyperkalciurie u hyperparatyreózy, hyperoxalurie, hyperurikémie u dny), změny pH moči, infekce močových cest (bakterie produkující ureázu, např. Proteus).",
       pathogenesis: "Vysrážení solí při nasycení moči. Krystaly rostou na organické matrix (nidus). Kyselá moč (pH < 5.5) podporuje tvorbu kamenů z kyseliny močové (urátové). Zásaditá moč (pH > 7.2) podporuje vznik fosfátových a struvitových kamenů (infekční kameny).",
       macroscopy: "Kameny mohou být drobné (písek) nebo velké. 1. Kalciumoxalátové: tmavé, ježaté, tvrdé. 2. Urátové: žlutohnědé, hladké. 3. Struvitové (triplfosfátové): šedobílé, drolivé, tvoří odlitkové kameny (staghorn calculi) kopírující tvar pánvičky ledvinné.",
