@@ -116,7 +116,8 @@ const DATA_ONCO_2 = [
       etiology: "Kouření (hlavní ovlivnitelný faktor), chronická pankreatitida, diabetes mellitus, obezita a genetické mutace (např. BRCA2, CDKN2A).",
       pathogenesis: "Vzniká přes prekurzorové léze zvané PanIN (pankreatická intraepiteliální neoplazie). Téměř 95 % karcinomů pankreatu má mutaci v onkogenu **KRAS**. Rychle infiltruje okolní nervové pleteně a metastázuje do jater a peritonea.",
       macroscopy: "Nádor se nejčastěji (60 %) nachází v **hlavě pankreatu**. Tvoří neostře ohraničený, extrémně tuhý, šedobílý uzel, který utlačuje společný žlučovod (ductus choledochus) a hlavní pankreatický vývod. To vede k dilataci žlučových cest a k atrofii těla a ocasu slinivky.",
-      microscopy: "Nejčastější (90 %) je **duktální adenokarcinom**. Tvoří nepravidelné, deformované žlázové struktury vystlané atypickým epitelem, které infiltrují vazivo. Charakteristická je masivní vazivová reakce stroma (**desmoplazie**), která dodává nádoru jeho extrémní tvrdost. Typická je **perineurální invaze** (nádorové buňky obklopují a prorůstají do nervových pochev).",
+      microscopy: "Nejčastější (90 %) je **duktální adenokarcinom**. Tvoří nepravidelné, deformované žlázové struktury vystlané atypickým epitelem, které infiltrují vazivo. Charakteristická je masivní vazivová reakce stroma (**desmoplazie** - výrazná novotvorba kolagenního vaziva stimulovaná nádorovými buňkami), která makroskopicky dodává nádoru jeho extrémní (až kamennou) tvrdost. Typická je **perineurální invaze** (nádorové buňky obklopují a prorůstají do nervových pochev, což způsobuje silné bolesti).",
+
       clinical: "Časná stadia jsou zcela bezpříznaková. Karcinom hlavy se projevuje **bezbolestným progresivním ikterem** (žloutenkou) z ucpání žlučovodu, doprovázeným **Courvoisierovým příznakem** (hmatný, zvětšený, ale nebolestivý žlučník). Karcinomy těla a ocasu se projeví až bolestmi v zádech z infiltrace nervů a hubnutím. Sleduje se marker **CA 19-9**."
     },
     quiz: [
@@ -221,7 +222,7 @@ const DATA_ONCO_2 = [
       pathogenesis: "Jasnobuněčný karcinom (nejčastější subtyp RCC, 75 %) vychází z buněk proximálního tubulu. Ztráta genu VHL vede k akumulaci faktoru HIF-1a, což stimuluje masivní tvorbu **VEGF** a růst cév. Nádor je proto extrémně prokrvený. Má sklon prorůstat do **vena renalis** a šířit se jako nádorový trombus až do vena cava inferior.",
       macroscopy: "Nádor tvoří velký, kulatý, pestrý uzel na pólu ledviny. Je charakteristicky **svítivě žlutý** (kvůli vysokému obsahu lipidů a cholesterolu v buňkách), střídaný s tmavě červenými okrsky krvácení, šedavými nekrózami a cystickými dutinami. Ostré ohraničení proti zdravé kůře.",
       microscopy: "Jasnobuněčný karcinom: buňky s **opticky prázdnou (jasnou) cytoplasmou** (lipidy a glykogen se při zpracování rozpustí), s dobře definovanými buněčnými hranicemi (vzhled rostlinných buněk). Jsou uspořádány do hnízd obklopených hustou sítí tenkostěnných kapilár.",
-      clinical: "Klasická triáda příznaků (která se však vyskytuje jen u 10 % pacientů v pozdním stadiu): **hematurie** (krev v moči), **bolest v boku** a **hmatná rezistence**. Často se projevuje paraneoplastickými syndromy (erytrocytóza z produkce erythropoetinu, hyperkalcémie z produkce PTHrP). Metastázuje hematogenně, typické jsou **pulzující metastázy v kostech** a plicích (vzhled 'dělových koulí')."
+      clinical: "Klasická triáda příznaků (která se však vyskytuje jen u 10 % pacientů v pozdním stadiu): **hematurie** (krev v moči), **bolest v boku** a **hmatná rezistence**. Často se projevuje paraneoplastickými syndromy (erytrocytóza z produkce erythropoetinu, hyperkalcémie z produkce PTHrP). Má silný sklon k hematogennímu metastazování, a to zejména do plic (vzhled 'dělových koulí') a do kostí, kde vytváří charakteristické **osteolytické, pulzující metastázy** (bohatě prokrvené nádorové masy bourající kost, které se často projeví jako první příznak onemocnění ve formě patologické zlomeniny)."
     },
     quiz: [
       {
@@ -377,7 +378,7 @@ const DATA_ONCO_2 = [
       pathogenesis: "Všechny germinální nádory (kromě spermatocytárního seminomu) vznikají z prekurzoru zvaného GCNIS (germ cell neoplasia in situ). \n1. **Seminom**: nejčastější (50 %), pomalejší růst, velmi radiocitlivý. \n2. **Neseminomy** (agresivnější, sklon k časnému metastázování): \n- *Embryonální karcinom*: anaplastický, tvoří žlázy a papily. \n- *Nádor ze žloutkového váčku* (yolk sac tumor): nejčastější u malých dětí (do 3 let). \n- *Choriokarcinom*: vysoce maligní, tvořen syncytiotrofoblastem a cytotrofoblastem, krvácí. \n- *Teratom*: obsahuje tkáně všech 3 zárodečných listů (u dospělých mužů je na rozdíl od žen považován vždy za maligní!).",
       macroscopy: "Seminom: homogenní, laločnatý, šedobílý, masitý uzel, který zvětšuje varle, bez krvácení a nekróz. Embryonální karcinom a Choriokarcinom: pestrý vzhled, masivní nekrózy, prokrvácení, neostré ohraničení.",
       microscopy: "Seminom: velké, uniformní, polygonální buňky s jasnou cytoplasmou (glykogen) a kulatým jádrem s nápadným jadérkem, uspořádané do okrsků oddělených vazivovými septy s výrazným **lymfocytárním infiltrátem**. Yolk sac tumor: síťovité (retikulární) uspořádání, přítomnost **Schiller-Duvalových tělísek** (struktura připomínající glomerulus - céva obklopená nádorovými buňkami v dutině). Choriokarcinom: dvoufázový růst syncytiotrofoblastu (obří vícejaderné buňky) a cytotrofoblastu (jednojaderné buňky).",
-      clinical: "Projevuje se jako nebolestivé zvětšení a ztuhnutí varlete. Sledují se sérové markery: **hCG** (lidský choriový gonadotropin, produkován syncytiotrofoblastem u choriokarcinomu a seminomu), **AFP** (alfa-fetoprotein, produkován yolk sac tumorem; seminom AFP NIKDY neprodukuje!), **LDH** (odráží masu nádoru)."
+      clinical: "Projevuje se jako nebolestivé zvětšení a ztuhnutí varlete. Sledují se sérové markery: **hCG** (lidský choriový gonadotropin, produkován syncytiotrofoblastem u choriokarcinomu a seminomu), **AFP** (alfa-fetoprotein, produkován yolk sac tumorem) a **LDH** (odráží masu nádoru). Je zcela zásadní, že čistý seminom **NIKDY neprodukuje AFP**. Pokud je u pacienta s histologickou diagnózou seminomu zjištěna zvýšená hladina AFP, znamená to, že se ve skutečnosti jedná o smíšený germinální nádor s neseminomovou složkou (yolk sac tumor). Toto zjištění dramaticky mění léčbu, protože čisté seminomy jsou vysoce citlivé na radioterapii, zatímco neseminomy nikoliv."
     },
     quiz: [
       {
@@ -1052,7 +1053,8 @@ const DATA_ONCO_2 = [
       etiology: "Většina je sporadická. Roli hrají mutace v genech IDH1/2 (důležité pro prognózu a klasifikaci) a inaktivace p53.",
       pathogenesis: "Astrocytární gliomy se dělí podle stupně malignity (WHO Grade I–IV): \n1. **Pilocystický astrocytom** (WHO Grade I): benigní, u dětí, dobře ohraničený. \n2. **Difuzní astrocytom** (WHO Grade II): infiltrativní, pomalý, ale časem progreduje do vyšších stupňů. \n3. **Anaplastický astrocytom** (WHO Grade III): agresivní, vysoká mitotická aktivita. \n4. **Glioblastom** (dříve glioblastoma multiforme, WHO Grade IV): nejčastější a nejvíce zhoubný primární tumor mozku u dospělých.",
       macroscopy: "Glioblastom: velká, neohraničená, pestrá masa uvnitř hemisféry. Obsahuje žlutavá ložiska nekróz, červené hemoragie a cysty. Často přechází přes corpus callosum do druhé hemisféry, což na řezu vytváří obraz **motýlovitého glioblastomu** (butterfly glioma).",
-      microscopy: "Glioblastom se vyznačuje čtyřmi klíčovými histologickými znaky: 1. Těžký buněčný pleomorfismus, 2. Četné patologické mitózy, 3. Hadovité (serpentinní) **ložiskové nekrózy** lemované nádorovými buňkami (tzv. **pseudopalisádování** / pseudopalisading of tumor cells), 4. Výrazná **proliferace cévního endotelu** (tvorba glomeruloidních cévních struktur vlivem VEGF). Nádorové buňky jsou silně pozitivní v markeru **GFAP** (glial fibrillary acidic protein).",
+      microscopy: "Glioblastom se vyznačuje čtyřmi klíčovými histologickými znaky: 1. Těžký buněčný pleomorfismus, 2. Četné patologické mitózy, 3. Hadovité (serpentinní) **ložiskové nekrózy** lemované nádorovými buňkami (tzv. **pseudopalisádování** / pseudopalisading of tumor cells), 4. Výrazná **mikrovaskulární (či glomeruloidní) proliferace cévního endotelu** (nádor produkuje nadměrné množství VEGF, což nutí cévy tvořit zmnožená klubíčka připomínající ledvinné glomeruly). Nádorové buňky jsou silně pozitivní v markeru **GFAP** (glial fibrillary acidic protein).",
+
       clinical: "Glioblastom roste extrémně rychle (příznaky se rozvinou během týdnů). Má fatální prognózu; i přes chirurgickou resekci, radioterapii a chemoterapii (Temozolomid) většina pacientů umírá do 12–15 měsíců. Infiltrativní charakter znemožňuje kompletní chirurgické odstranění (buňky jsou rozptýleny hluboko v makroskopicky zdravém mozku)."
     },
     quiz: [
@@ -1090,6 +1092,17 @@ const DATA_ONCO_2 = [
         type: "type-in",
         correct: ["GFAP"],
         explanation: "GFAP (Glial Fibrillary Acidic Protein) je intermediální filamentum typické pro astrocyty a gliové nádory (astrocytomy, glioblastom)."
+      },
+      {
+        question: "Které dva patognomické mikroskopické znaky posouvají diagnózu astrocytomu na nejvyšší stupeň malignity - Glioblastom (WHO Grade IV)?",
+        options: [
+          "Přítomnost Rosenthalových vláken a eozinofilních granulárních tělísek",
+          "Kalcitové sférokrystaly (psammomatozní tělíska) a whorly (víry) buněk",
+          "Hadovité nekrózy lemované pseudopalisádami buněk a mikrovaskulární (glomeruloidní) proliferace cév",
+          "Homer-Wrightovy rozety a masivní tvorba retikulinu"
+        ],
+        correct: 2,
+        explanation: "Glioblastom roste rychleji, než jej stihnou cévy vyživovat. To vede ke vzniku hadovitých nekróz. Nádorové buňky utíkají před hypoxií a řadí se na okraj nekrózy do tzv. pseudopalisád. Zároveň nádor vylučuje extrémní množství VEGF, které stimuluje růst endotelu do bizarních, zbytnělých klubíček (mikrovaskulární/glomeruloidní proliferace)."
       }]
   },
 
@@ -1152,11 +1165,13 @@ const DATA_ONCO_2 = [
     category: "Onkologie",
     keywords: ["osteosarkom", "kost", "Ewing", "sarkom", "chondrosarkom", "osteoid", "Codman", "cibule"],
     content: {
-      definition: "Nádory kostí se dělí na primární (velmi vzácné) a sekundární (metastázy karcinomů prsu, prostaty, plic - nejčastější). Primární zhoubné kostní nádory postihují převážně děti a mladé dospělé.",
+      definition: "Nádory kostí se dělí na primární (velmi vzácné) a sekundární (metastázy karcinomů prsu, prostaty, plic - nejčastější). Primární zhoubné kostní nádory postihují převážně děti a mladé dospělé. Pro diagnózu osteosarkomu je absolutním předpokladem **přímá produkce atypického osteoidu (nezralé kostní matrix) maligními osteoblasty**.",
+
       etiology: "Osteosarkom: mutace genů RB1 (asociace s retinoblastomem), TP53 (Li-Fraumeni), Pagetova kostní choroba u starších. Ewingův sarkom: specifická chromozomální translokace t(11;22) vytvářející fúzní gen **EWS-FLI1**.",
       pathogenesis: "1. **Osteosarkom**: nejčastější primární maligní nádor kosti u mladých (10–20 let). Vzniká v metafýzách dlouhých kostí (kolem kolene - distální femur, proximální tibie). \n2. **Ewingův sarkom**: vysoce agresivní, u dětí do 15 let. Roste v diafýzách dlouhých kostí. \n3. **Chondrosarkom**: maligní nádor z chrupavky, u starších dospělých.",
       macroscopy: "Osteosarkom: velká, destruktivní masa v metafýze, která prorůstá kortikalis a nadzdvihuje periost (okostici). To na rentgenu vytváří **Codmanův trojúhelník** (úhel mezi nadzdvihnutým periostem a kostí) a obraz **slunečních paprsků** (spikuly kosti). Ewingův sarkom: destruuje dřeňovou dutinu, periost reaguje tvorbou koncentrických vrstev kosti připomínajících **slupky cibule**.",
-      microscopy: "Osteosarkom: anaplastické vřetenovité mezenchymální buňky vykazující těžký pleomorfismus a bizarní mitózy, které **přímo produkují osteoid** (nezralou kostní matrix - růžová homogenní hmota). Ewingův sarkom: drobnokulatobuněčný modrý nádor (small round blue cell tumor), buňky jsou bohaté na glykogen (PAS pozitivní).",
+      microscopy: "Osteosarkom: anaplastické vřetenovité mezenchymální buňky vykazující těžký pleomorfismus a bizarní mitózy. Zcela diagnostickým kritériem je, že tyto buňky **přímo produkují atypický osteoid** (nezralou kostní matrix - růžová homogenní hmota odkládaná jako krajkovitá síť mezi nádorovými buňkami). Ewingův sarkom: drobnokulatobuněčný modrý nádor (small round blue cell tumor), buňky jsou bohaté na glykogen (PAS pozitivní).",
+
       clinical: "Projevují se bolestí kosti (často mylně připisovanou růstu nebo úrazu při sportu) a zduřením. Typické jsou patologické zlomeniny při minimálním násilí. Osteosarkom a Ewingův sarkom metastázují velmi časně hematogenně do plic. Léčba vyžaduje předoperační (neoadjuvantní) chemoterapii a radikální chirurgický výkon (resekce kosti se zachováním končetiny - náhradou endoprotézou)."
     },
     quiz: [
@@ -1194,6 +1209,17 @@ const DATA_ONCO_2 = [
         type: "type-in",
         correct: ["Ewingův sarkom"],
         explanation: "Ewingův sarkom je drobnokulatobuněčný nádor diafýzy kostí, charakteristický periostální reakcí připomínající slupky cibule."
+      },
+      {
+        question: "Co je definitivním a absolutně nezbytným histologickým kritériem pro to, aby mohl patolog diagnostikovat nádor jako osteosarkom (a odlišit ho tak například od fibrosarkomu rostoucího v kosti)?",
+        options: [
+          "Přítomnost vícejaderných obrovských buněk typu osteoklastů",
+          "Přímá produkce atypického osteoidu (nezralé kostní matrix) samotnými maligními nádorovými buňkami",
+          "Nález Codmanova trojúhelníku na rentgenu",
+          "Záplava malých kulatých modrých buněk s vysokým obsahem glykogenu"
+        ],
+        correct: 1,
+        explanation: "Klíčovým diagnostickým znakem osteosarkomu je, že samotné anaplastické nádorové buňky mají částečně zachovanou osteoblastickou diferenciaci a jsou schopny přímo (bez preexistující chrupavky) tvořit novou nezralou kostní hmotu (osteoid). Pokud patolog v mikroskopu nevidí nádorovými buňkami tvořený osteoid, nemůže diagnózu osteosarkomu stanovit."
       }]
   }
 ];
