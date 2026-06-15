@@ -58,7 +58,7 @@ const DATA_ONCO_1 = [
     title: "Prekancerózy a dysplázie",
     section: "Obecná onkologie",
     category: "Onkologie",
-    keywords: ["prekanceróza", "dysplázie", "CIN", "metaplazie", "fakultativní", "obligatorní", "atipie"],
+    keywords: ["prekanceróza", "dysplázie", "CIN", "metaplazie", "fakultativní", "obligatorní", "atypie"],
     content: {
       definition: "Prekanceróza (premaligní léze) je patologický stav tkáně, který vykazuje statisticky významně zvýšené riziko vzniku maligního nádoru. Dysplázie je porucha uspořádání, velikosti a tvaru buněk v rámci tkáně (nejčastěji epitelu), která nepředstavuje invazivní růst.",
       etiology: "Chronické dráždění (chemické, fyzikální), virové infekce (HPV), chronické záněty (ulcerozní kolitida, Barrettův jícen) a genetické predispozice.",
@@ -189,7 +189,7 @@ const DATA_ONCO_1 = [
           "Infiltrativní a destruktivní růst do sousedních orgánů",
           "Expanzivní růst, často s vytvořením vazivového pouzdra, které nádor odděluje od okolí",
           "Průnik do lymfatických cév a embolizace do uzlin",
-          "Rychlý rozpad s kolikvancí a nekrózou velké části nádoru"
+          "Rychlý rozpad s kolikvací a nekrózou velké části nádoru"
         ],
         correct: 1,
         explanation: "Benigní nádory rostou pomalu a expanzivně (tlačí tkáň před sebou). Okolní zdravé vazivo se tlakem komprimuje a vytváří pouzdro (kapsulu), což usnadňuje chirurgické vyloupnutí (enukleaci) nádoru."
@@ -585,7 +585,7 @@ const DATA_ONCO_1 = [
       pathogenesis: "B-lymfocyty během svého zrání v zárodečných (germinálních) centrech uzlin procházejí procesem **somatické hypermutace** a **třídového přesmyku** imunoglobulinových genů. Tyto procesy vyžadují cílené štěpení DNA. Pokud dojde k chybě v opravách, vznikají typické onkogenní translokace (např. připojení protoonkogenů pod silný promotor pro těžký řetězec imunoglobulinů IGH). B-lymfomy představují více než 85–90 % všech non-Hodgkinových lymfomů.",
       macroscopy: "Difuzní zvětšení lymfatických uzlin, které často splývají do velkých paketů. Uzliny jsou elastické nebo měkké, na řezu homogenní, rybího vzhledu, šedavé barvy. Postižení mimouzlinových (extragonadálních) orgánů - slezina, játra, zažívací trakt (zejména žaludek).",
       microscopy: "Mikroskopicky dochází k setření normální architektury uzliny (mizí sinusy a zárodečná centra). Nádorové buňky mohou růst **nodulárně** (napodobují folikuly) nebo **difuzně** (homogenní masa buněk). Všechny B-lymfomy vykazují pozitivitu v B-markerech: **CD19, CD20, CD79a** a vykazují klonalitu (exprese pouze lehkého řetězce kappa nebo lambda).",
-      clinical: "Projevují se lymfadenopatií (zvětšením uzlin), hepatosplenomegalií a B-příznaky. Diagnostika vyžaduje celou exirpovanou uzlinu (cytologická punkce je pro určení typu lymfomu nedostatečná). Hlavním terapeutickým standardem je imunochemoterapie (např. režim CHOP s protilátkou proti CD20 - **Rituximab**)."
+      clinical: "Projevují se lymfadenopatií (zvětšením uzlin), hepatosplenomegalií a B-příznaky. Diagnostika vyžaduje celou exstirpovanou uzlinu (cytologická punkce je pro určení typu lymfomu nedostatečná). Hlavním terapeutickým standardem je imunochemoterapie (např. režim CHOP s protilátkou proti CD20 - **Rituximab**)."
     },
     quiz: [
       {
