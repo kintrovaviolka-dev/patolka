@@ -232,13 +232,74 @@ const DATA_PATOLOGIE_3 = [
     id: "pat-47",
     title: "Hojení kostních zlomenin",
     section: "Adaptace a hojení",
-    keywords: ["zlomenina", "fraktura", "svalek", "kalus", "osteoblast", "hematom", "remodelace"],
+    keywords: ["zlomenina", "fraktura", "svalek", "kalus", "osteoblast", "hematom", "remodelace", "osteoporóza", "osteomyelitida", "sekvestr", "involucrum"],
     content: {
-      definition: "Hojení kostních zlomenin je specifický regenerační a reparační proces kosti, který po zlomenině obnovuje integritu a mechanickou pevnost skeletu.",
-      etiology: "Mechanické trauma převyšující pevnost kosti, nebo patologická zlomenina v místě oslabení kosti (osteoporóza, kostní metastáza).",
-      pathogenesis: "Fáze hojení: 1. Fáze zánětu a hematomu (0.-2. den): v místě zlomeniny vzniká krevní výron (hematom) z roztržených cév periostu a dřeně, dochází k ischemické nekróze konců úlomků kosti a zánětlivé reakci. 2. Vazivově-chrupavčitý svalek / měkký kalus (do 2-3 týdnů): makrofágy odstraňují detrit, granulační tkáň prorůstá hematomem, fibroblasty a chondroblasty tvoří vazivovou a chrupavčitou tkáň spojující úlomky. 3. Kostěný svalek / tvrdý kalus (do 2-3 měsíců): osteoblasty z periostu a endostu tvoří osteoid, který mineralizuje a mění se v pletivovou (fibrilární) kost. 4. Remodelace kosti (měsíce až roky): pletivová kost je odbourávána osteoklasty a osteoblasty tvoří pevnou lamelární kost uspořádanou podle mechanického zatížení (zákon transformace kosti).",
-      macroscopy: "V místě zlomeniny vzniká zpočátku měkké zduření (měkký kalus), které postupně tvrdne v kostěný uzel (tvrdý kalus) spojující konce kostí. Postupně se uzel zmenšuje a zarovnává s tvarem kosti.",
-      microscopy: "Mikroskopicky prokazujeme novotvorbu osteoidu (nemineralizovaná kostní matrix), pletivovou kost (nepravidelná osteocytární lacuna, chaotické uspořádání kolagenu) a aktivitu osteoklastů (vícejaderné buňky v Howshipových lakunách) odbourávajících přebytečnou kost.",
+      definition: "Hojení kostních zlomenin je specifický regenerační a reparační proces kosti, který po zlomenině obnovuje integritu a mechanickou pevnost skeletu. Hojení je ovlivněno systémovými stavy (např. **osteoporóza**) a místními komplikacemi (např. infekční **osteomyelitida**).",
+      etiology: "Mechanické trauma převyšující pevnost kosti, nebo patologická zlomenina v místě oslabení kosti. **Osteoporóza**: systémové onemocnění skeletu charakterizované kvantitativním úbytkem kostní hmoty se zachováním mineralizace (senilní, postmenopauzální), vedoucí k vysokému riziku zlomenin krčku stehenní kosti či obratlů. **Osteomyelitida**: hnisavý zánět kosti a kostní dřeně vyvolaný bakteriemi (nejčastěji *Staphylococcus aureus* hematogenní cestou nebo přímou inokulací při otevřené fraktuře).",
+      pathogenesis: "Fáze hojení: 1. Fáze zánětu a hematomu (0.-2. den): v místě zlomeniny vzniká krevní výron (hematom), dochází k ischemické nekróze konců úlomků kosti a zánětlivé reakci. 2. Vazivově-chrupavčitý svalek / měkký kalus (do 2-3 týdnů): makrofágy odstraňují detrit, granulační tkáň prorůstá hematomem, fibroblasty a chondroblasty tvoří vazivovou a chrupavčitou tkáň spojující úlomky. 3. Kostěný svalek / tvrdý kalus (do 2-3 měsíců): osteoblasty tvoří osteoid, který mineralizuje a mění se v pletivovou (fibrilární) kost. 4. Remodelace kosti (měsíce až roky): pletivová kost je nahrazována pevnou lamelární kostí. U **osteomyelitidy** zánětlivý exsudát v uzavřené kosti vyvolá ischemii, což vede k odumření části kosti - vzniká cévně nezásobený **sekvestr** (ložisko nekrózy), kolem kterého periost tvoří novou kostní schránku - **involucrum**.",
+      macroscopy: "Měkké zduření (měkký kalus) postupně tvrdne v kostěný uzel (tvrdý kalus). Osteomyelitida: zduření kosti, píštěle vytékající hnis z kostní dřeně, přítomnost šedavých fragmentů odumřelé kosti (sekvestrů) uvnitř reaktivního kostního involucra.",
+      microscopy: "Mikroskopicky: novotvorba osteoidu, pletivová kost (nepravidelná osteocytární lacuna, chaotické kolagenní vlákna) a osteoklasty v Howshipových lakunách. Osteomyelitida: ložiska nekrózy kosti (prázdné lacuny bez osteocytů = sekvestr) s masivní infiltrací polymorfonukleárními leukocyty (neutrofily), na okrajích tvorba reaktivní pletivové kosti (involucrum).",
+      clinical: "Komplikace hojení zlomenin: pakloub (pseudoartróza), opožděné hojení. Osteoporóza probíhá dlouho klinicky němě, až do vzniku fraktury. Osteomyelitida je závažný stav hrozící sepsí, vyžadující chirurgické odstranění sekvestru (sekvestrektomii) a dlouhodobou nitrožilní aplikaci antibiotik."
+    },
+    quiz: [
+      {
+        question: "Jak definujeme v ortopedické patologii pojem pakloub (pseudoartróza) jako komplikaci hojení zlomeniny?",
+        options: [
+          "Vrozené zdvojení končetiny",
+          "Komplikace hojení zlomeniny, kdy při nedostatečné fixaci nedojde ke kostnímu spojení úlomků, ale v místě vznikne vazivové a chrupavčité spojení s patologickou pohyblivostí",
+          "Nádorové bujení kosti napodobující kloub",
+          "Zánět kloubu způsobený bakteriemi"
+        ],
+        correct: 1,
+        explanation: "Pro tvorbu kosti v kalusu je nutný klid a dobré cévní zásobení. Pokud se úlomky neustále pohybují, granulační tkáň se nemůže přeměnit v kost, ale diferencuje se ve vazivo a chrupavku, čímž vznikne falešný kloub (pseudoartróza)."
+      },
+      {
+        question: "Který typ nezralé, chaoticky uspořádané kostní tkáně se tvoří jako první v procesu osifikace tvrdého kalusu (kostěného svalku)?",
+        options: [
+          "Lamelární kost (zralá)",
+          "Pletivová kost (fibrilární / nezralá)",
+          "Chrupavka hyalinní",
+          "Kompaktní kost s Haversovými systémy"
+        ],
+        correct: 1,
+        explanation: "První novotvořená kostní tkáň je nezralá pletivová kost. Má nepravidelné uspořádání kolagenních vláken a je mechanicky méně odolná. Teprve během remodelace (působením zátěže) je nahrazena vysoce organizovanou lamelární kostí."
+      },
+      {
+        question: "Jak se v patologii kosti definuje osteoporóza a jaký je její vliv na hojení zlomenin?",
+        options: [
+          "Zvýšená mineralizace kosti vedoucí k její křehkosti",
+          "Úbytek celkového množství kostní hmoty (organické matrix i minerálů) se zachovaným poměrem mineralizace, což vede k oslabení mikroarchitektury a vysokému riziku patologických zlomenin",
+          "Zánětlivé odbourávání kosti bakteriemi",
+          "Nádorové bujení chrupavky"
+        ],
+        correct: 1,
+        explanation: "Osteoporóza (řídnutí kostí) je charakterizována kvantitativním úbytkem kostní tkáně, nikoli kvalitativní poruchou mineralizace (jako u osteomalacie). Kost je křehká a dochází k častým patologickým frakturám (např. krčku femuru), které se kvůli snížené osteoblastické aktivitě hojí pomaleji."
+      },
+      {
+        question: "Které dva termíny popisují klasické nálezy u chronické hnisavé osteomyelitidy: odumřelou část kosti bez cévního zásobení a novotvořenou reaktivní kostní schránku kolem ní?",
+        options: [
+          "Osteoid a osteoklast",
+          "Sekvestr (odumřelá kost) a involucrum (nová kostní schránka)",
+          "Pannus a kloubní ankylóza",
+          "Kalus a hematom"
+        ],
+        correct: 1,
+        explanation: "U hnisavé osteomyelitidy hnisavý zánět přeruší cévní zásobení kosti, což vede k ischemické nekróze. Odumřelý fragment se oddělí a nazývá se sekvestr (působí jako cizí těleso udržující zánět). Periost kolem něj reaguje tvorbou nové kosti, která sekvestr opouzdří - involucrum."
+      },
+      {
+        question: "Jak se nazývá odumřelý fragment kosti u osteomyelitidy, který slouží jako rezervoár infekce?",
+        type: "type-in",
+        correct: ["sekvestr", "sequestrum"],
+        explanation: "Sekvestr je ložisko nekrotické kosti oddělené od živé tkáně, které postrádá cévní zásobení a udržuje chronický zánět."
+      },
+      {
+        question: "Jak se nazývá reaktivní novotvořené kostní pouzdro obklopující sekvestr u chronické osteomyelitidy?",
+        type: "type-in",
+        correct: ["involucrum"],
+        explanation: "Involucrum je pouzdro z reaktivní kosti, které se tvoří pod periostem kolem ložiska nekrózy (sekvestru)."
+      }
+    ]
+  },v Howshipových lakunách) odbourávajících přebytečnou kost.",
       clinical: "Komplikace hojení zlomenin: pakloub (pseudoartróza - pokud není zlomenina znehybněna, v místě kalusu vznikne chrupavka a vazivový kloub), opožděné hojení, infekce (osteomyelitida u otevřených zlomenin)."
     },
     quiz: [
@@ -384,14 +445,14 @@ const DATA_PATOLOGIE_3 = [
     id: "pat-51",
     title: "Autoimunitní onemocnění (principy, příklady)",
     section: "Imunopatologie",
-    keywords: ["autoimunita", "tolerance", "lupus", "artritida", "Sjögren", "ANA", "mimikry"],
+    keywords: ["autoimunita", "tolerance", "lupus", "artritida", "Sjögren", "ANA", "mimikry", "pannus", "revmatoidní", "ankylóza", "spondylartritida"],
     content: {
       definition: "Autoimunitní onemocnění jsou stavy, při kterých imunitní systém reaguje patologicky proti vlastním tkáním a buňkám v důsledku selhání mechanismů imunotolerance (schopnosti tolerovat vlastní antigeny).",
       etiology: "Multifaktoriální: genetická dispozice (např. vazba na určité HLA alely - HLA-B27 u Bechtěreva), vlivy prostředí (infekce spouštějící molekulární mimikry, UV záření u lupusu, kouření u revmatoidní artritidy), hormonální vlivy (častější výskyt u žen).",
-      pathogenesis: "Mechanismy selhání tolerance: 1. Molekulární mimikry (patogen má antigeny podobné vlastním proteinům, např. Streptococcus pyogenes a chlopně u revmatické horečky). 2. Odhalení sekvestrovaných (skrytých) antigenů (oční čočka, myelin, spermie). 3. Porucha regulace (deficit Treg lymfocytů). Poškození tkání probíhá imunopatologickými reakcemi typu II (protilátky proti receptorům - Gravesova choroba), typu III (ukládání imunokomplexů - lupus) nebo typu IV (buněčná destrukce - diabetes I. typu).",
-      macroscopy: "Systémový lupus erythematodes (SLE): motýlovitý exantém na obličeji, kloubní deformity, zbytnění perikardu. Revmatoidní artritida (RA): symetrické otoky kloubů rukou, deformace prstů (ulnární deviace), revmatické uzly v podkoží.",
-      microscopy: "SLE: lupusová nefritida v ledvinách (zbytnění glomerulární membrány - vzhled drátěných kliček), cévní změny (fibrinoidní nekróza arterií). RA: chronická synovitida s tvorbou pannusu (granulační tkáň s lymfocyty prorůstající chrupavku), revmatický uzel (centrální palisádující histiocyty kolem fibrinoidní nekrózy).",
-      clinical: "SLE se projevuje multiorgánovým postižením (ledviny, klouby, kůže, srdce), v diagnostice se stanovují antinukleární protilátky (ANA, anti-dsDNA). RA vede k destrukci kloubů, diagnostikuje se revmatoidní faktor (RF) nebo anti-CCP protilátky."
+      pathogenesis: "Mechanismy selhání tolerance: 1. Molekulární mimikry (Streptococcus pyogenes a chlopně u revmatické horečky). 2. Odhalení sekvestrovaných antigenů (oční čočka, myelin). 3. Porucha regulace (deficit Treg lymfocytů). Poškození tkání probíhá imunopatologickými reakcemi typu II (Gravesova choroba), typu III (lupus - SLE) nebo typu IV (diabetes I. typu). **Revmatoidní artritida (RA)** je chronické systémové zánětlivé onemocnění postihující klouby, zprostředkované převážně typem IV (T-buňky) a doprovázené typem III (autoantitěla RF a anti-CCP). **Seronegativní spondylartritidy** (např. **ankylosující spondylitida / Morbus Bechtěrev**) představují skupinu autoimunitních chorob postihujících páteř, spojených s HLA-B27 alelou a nepřítomností revmatoidního faktoru.",
+      macroscopy: "SLE: motýlovitý exantém na obličeji, kloubní deformity. RA: symetrické otoky a deformity drobných kloubů rukou (ulnární deviace prstů), podkožní revmatické uzly. V pozdních stadiích dochází k destrukci kloubní chrupavky a srůstu kloubních konců kostí vazivem nebo kostí - vzniká **ankylóza** (ztuhnutí a nehybnost kloubu). Morbus Bechtěrev: osifikace páteřních vazů (páteř vzhledu bambusové tyče).",
+      microscopy: "SLE: lupusová nefritida (zbytnění glomerulární membrány - drátěné kličky), fibrinoidní nekróza cév. RA: chronická synovitida s tvorbou **pannusu** - hyperplastické synoviální tkáně bohaté na fibroblasty, novotvořené kapiláry, lymfocyty a plasmatické buňky, která přerůstá přes kloubní chrupavku a rozežírá ji. Revmatický uzel: palisádující histiocyty kolem centrální fibrinoidní nekrózy.",
+      clinical: "SLE: multiorgánové postižení, diagnostika autoantitěl (ANA, anti-dsDNA). RA: chronická bolest kloubů, ranní ztuhlost, diagnostikuje se revmatoidní faktor (RF) nebo anti-CCP protilátky. Seronegativní spondylartritidy (např. Bechtěrev) způsobují bolesti zad v mladém věku a ztuhlost páteře, jsou asociovány s HLA-B27."
     },
     quiz: [
       {
@@ -415,6 +476,34 @@ const DATA_PATOLOGIE_3 = [
         ],
         correct: 0,
         explanation: "Protilátky proti dvouvláknové DNA (anti-dsDNA) a antinukleární protilátky (ANA) jsou klíčovými markery v diagnostice SLE a přímo se podílejí na tvorbě imunokomplexů poškozujících ledviny (lupusová nefritida)."
+      },
+      {
+        question: "Jak se nazývá patologická granulační tkáň bohatá na cévy, zánětlivé buňky a fibroblasty, která se tvoří v kloubu u revmatoidní artritidy a destruuje chrupavku?",
+        options: [
+          "Osteoid",
+          "Pannus",
+          "Sekvestr",
+          "Aschoffovo tělísko"
+        ],
+        correct: 1,
+        explanation: "Pannus je hyperplastická synoviální granulační tkáň, která se tvoří u revmatoidní artritidy. Roste přes povrch kloubní chrupavky, uvolňuje kolagenázy a jiné proteolytické enzymy a vede k destrukci chrupavky a subchondrální kosti."
+      },
+      {
+        question: "Která HLA alela je silně asociována z rozvojem seronegativních spondylartritid, zejména s ankylosující spondylitidou (Morbus Bechtěrev)?",
+        options: [
+          "HLA-DR4",
+          "HLA-B27",
+          "HLA-DQ8",
+          "HLA-A3"
+        ],
+        correct: 1,
+        explanation: "HLA-B27 vykazuje extrémně silnou asociaci s Morbus Bechtěrev (více než 90 % pacientů je HLA-B27 pozitivních). Patří mezi seronegativní spondylartritidy, které se vyznačují postižením axiálního skeletu a nepřítomností revmatoidního faktoru v séru."
+      },
+      {
+        question: "Jak se nazývá vazivový nebo kostěný srůst kloubních ploch vedoucí k úplné nehybnosti kloubu?",
+        type: "type-in",
+        correct: ["ankylóza", "ankyloza", "ankylosis"],
+        explanation: "Ankylóza je kloubní ztuhlost způsobená spojením kloubních konců kostí vazivem nebo kostní tkání, což je konečné stadium destrukce kloubu u neléčené revmatoidní artritidy."
       }
     ]
   },

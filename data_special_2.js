@@ -356,14 +356,14 @@ const DATA_SPECIAL_2 = [
     title: "Splenomegalie – nádorové a nenádorové příčiny",
     section: "Hepatobiliární a pankreas",
     category: "Speciální",
-    keywords: ["splenomegalie", "slezina", "portální", "leukémie", "amyloidóza", "hyperplazie", "městnání"],
+    keywords: ["splenomegalie", "slezina", "portální", "leukémie", "amyloidóza", "hyperplazie", "městnání", "anémie", "cytopenie", "pancytopenie"],
     content: {
-      definition: "Splenomegalie je patologické zvětšení sleziny (nad fyziologických cca 150 g a délku 12 cm). Extrémní splenomegalie označuje stav, kdy slezina váží více než 1000 g.",
+      definition: "Splenomegalie je patologické zvětšení sleziny (nad fyziologických cca 150 g a délku 12 cm). Extrémní splenomegalie označuje stav, kdy slezina váží více než 1000 g. Je často spojena se syndromem **hypersplenismu**, který vede ke zvýšenému vychytávání a destrukci krevních buněk, což ústí v periferní cytopenie.",
       etiology: "1. Nenádorové: portální hypertenze (jaterní cirhóza - městnavá splenomegalie), infekce (infekční mononukleóza, sepse - splenitis acuta, malárie), střádavé choroby (Gaucherova choroba, amyloidóza), autoimunitní (Feltyho syndrom). 2. Nádorové: myeloproliferativní neoplazie (chronická myeloidní leukémie - CML, primární myelofibróza), lymfomy (lymfom ze slezinné marginální zóny), leukémie.",
-      pathogenesis: "Městnání: vysoký tlak ve v. lienalis brání odtoku krve, krev stagnuje v červené pulpě, což vede k hypertrofii a fibróze stroma sleziny. Infekce: zmnožení lymfocytů v bílé pulpě a aktivace makrofágů (hyperplazie). Myeloproliferace: slezina slouží jako místo extramedulární hematopoézy (krvetvorby) nebo je přímo infiltrována nádorovými buňkami.",
+      pathogenesis: "Městnání: vysoký tlak ve v. lienalis brání odtoku krve, krev stagnuje v červené pulpě, což vede k hypertrofii a fibróze stroma sleziny. Infekce: zmnožení lymfocytů v bílé pulpě a aktivace makrofágů (hyperplazie). Myeloproliferace: slezina slouží jako místo extramedulární hematopoézy (krvetvorby) nebo je přímo infiltrována nádorovými buňkami. U hypersplenismu dochází k hyperaktivitě makrofágů červené pulpy, které nadměrně zadržují (sekvestrují) a degradují krevní elementy.",
       macroscopy: "Městnavá slezina: zvětšená, tuhá, na řezu tmavě červená (kyanozní), pouzdro je ztluštělé. Akutní splenitis (u sepse): slezina je zvětšená, extrémně měkká, blátivá konzistence, na řezu se pulpa stírá a vytéká (tzv. septická slezina). Leukemická slezina: gigantické rozměry (může vyplnit celé břicho), tuhá, na řezu mohou být patrné infarkty (světlé klínovité oblasti z relativní ischemie).",
-      microscopy: "Městnání: dilatace sinusů červené pulpy přeplněných erytrocyty, zbytnění retikulárních vláken (fibróza), přítomnost Gandy-Gamnových tělísek (ložiska fibrózy a kalcifikace s hemosiderinem). Leukémie: masivní infiltrace červené nebo bílé pulpy atypickými leukemickými buňkami.",
-      clinical: "Zvětšená slezina je náchylná k ruptuře při traumatu břicha (hrozí život ohrožující krvácení). Může vést k hypersplenismu - stavu, kdy zvětšená slezina nadměrně zachycuje a ničí krevní buňky, což vede k cytopenii (anémie, leukopenie, trombocytopenie)."
+      microscopy: "Městnání: dilatace sinusů červené pulpy přeplněných erytrocyty, zbytnění retikulárních vláken (fibróza), přítomnost Gandy-Gamnových tělísek (ložiska fibrózy a kalcifikace s hemosiderinem). Leukémie: masivní infiltrace červené nebo bílé pulpy atypickými leukemickými buňkami. Hypersplenismus: hyperplazie a zmnožení makrofágů (histiocytů) v červené pulpě s aktivní fagocytózou krevních elementů.",
+      clinical: "Zvětšená slezina je náchylná k ruptuře při traumatu břicha (hrozí život ohrožující krvácení). Může vyústit v **hypersplenismus**, což způsobuje **cytopenie** - buď izolované (např. **anémie** vedoucí k únavě, **leukopenie** způsobující infekce, **trombocytopenie** zvyšující krvácivost), nebo kombinované, vedoucí až k celkové **pancytopenii**."
     },
     quiz: [
       {
@@ -387,6 +387,23 @@ const DATA_SPECIAL_2 = [
         ],
         correct: 1,
         explanation: "Hypersplenismus není konkrétní nemoc, ale syndrom doprovázející splenomegalii. Slezina je příliš aktivní při odbourávání krvinek. Výsledkem je anémie, náchylnost k infekcím (leukopenie) a krvácení (trombocytopenie)."
+      },
+      {
+        question: "Jak se označuje stav spojený se splenomegalií, kdy dochází k poklesu počtu všech tří hlavních buněčných řad v periferní krvi (erytrocytů, leukocytů i trombocytů) v důsledku jejich nadměrné destrukce ve slezině?",
+        options: [
+          "Polycytémie",
+          "Pancytopenie",
+          "Leukocytóza",
+          "Trombocytémie"
+        ],
+        correct: 1,
+        explanation: "Pancytopenie (pokles červených krvinek, bílých krvinek a krevních destiček) doprovází závažné formy hypersplenismu při splenomegalii. Slezina funguje jako filtr, který v patologických stavech zachycuje a předčasně ničí zdravé krvinky."
+      },
+      {
+        question: "Jaký odborný termín označuje pokles všech typů krevních buněk (erytrocytů, leukocytů a trombocytů) v krvi?",
+        type: "type-in",
+        correct: ["pancytopenie", "pancytopenia"],
+        explanation: "Pancytopenie je současný nedostatek červených krvinek (anémie), bílých krvinek (leukopenie) a destiček (trombocytopenie)."
       }
     ]
   },

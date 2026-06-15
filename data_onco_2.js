@@ -423,14 +423,14 @@ const DATA_ONCO_2 = [
     title: "Nádory dělohy a děložního hrdla",
     section: "Gynekologická onkopatologie a prs",
     category: "Onkologie",
-    keywords: ["děloha", "čípek", "karcinom", "endometrioidní", "HPV", "leiomyom", "CIN", "dlaždicový"],
+    keywords: ["děloha", "čípek", "karcinom", "endometrioidní", "HPV", "leiomyom", "CIN", "dlaždicový", "adenomyóza"],
     content: {
-      definition: "Tato témata zahrnují dvě odlišné malignity: karcinom děložního hrdla (cervixu - převážně dlaždicobuněčný) a karcinom těla děložního (endometria - převážně adenokarcinom).",
-      etiology: "Karcinom cervixu: infekce vysoce rizikovými typy **HPV** (zejména **16 a 18**), časný začátek sexuálního života, střídání partnerů, kouření. Karcinom endometria: **hyperestrogenismus** (nadbytek estrogenů neoponovaný gestageny - obezita, anovulační cykly, hormonální léčba).",
-      pathogenesis: "1. **Karcinom cervixu**: HPV proteiny E6 (blokuje p53) a E7 (blokuje Rb) inaktivují buněčné supresory. Vzniká dysplázie (CIN 1–3) progredující do invazivního dlaždicobuněčného karcinomu. \n2. **Karcinom endometria**: typ I (endometrioidní, 80 %): vzniká na podkladě hyperplazie endometria stimulované estrogeny, mutace PTEN. Typ II (serózní, 20 %): starší ženy, vzniká v atrofickém endometriu, agresivní, mutace TP53.",
-      macroscopy: "Karcinom cervixu: exofytický (květákovitý tumor čípku) nebo endofytický (infiltruje stěnu děložního hrdla, mění ho v tuhou hlaveň). Karcinom endometria: polypózní, křehká, šedavá masa vyplňující děložní dutinu a infiltrující myometrium (svalovinu).",
-      microscopy: "Karcinom cervixu: dlaždicobuněčný karcinom (rohovějící nebo nerohovějící), méně často adenokarcinom cervixu (rovněž spojen s HPV). Karcinom endometria typ I: endometrioidní adenokarcinom (atypické, natěsnané žlázky bez stroma). Typ II: serózní karcinom (papilární struktury, těžké atypie, častá **psamomata** - vrstevnatá tělíska vápníku).",
-      clinical: "Karcinom čípku se screenuje cytologicky (PAP stěr) a kolposkopicky. Projevuje se kontaktním krvácením (po styku). Karcinom endometria se typicky projevuje **krvácením v postmenopauze** (každé krvácení u ženy po přechodu vyžaduje abrazi dělohy - kyretáž k vyloučení karcinomu!)."
+      definition: "Tato témata zahrnují dvě odlišné malignity: karcinom děložního hrdla (cervixu - převážně dlaždicobuněčný) a karcinom těla děložního (endometria - převážně adenokarcinom). Patří sem také benigní nádory (leiomyomy) a reaktivní stavy, jako je **adenomyóza dělohy** (přítomnost endometriálních žlázek a stroma v myometriu).",
+      etiology: "Karcinom cervixu: infekce vysoce rizikovými typy **HPV** (zejména **16 a 18**), časný začátek sexuálního života, střídání partnerů, kouření. Karcinom endometria: **hyperestrogenismus** (nadbytek estrogenů neoponovaný gestageny - obezita, anovulační cykly, hormonální léčba). Adenomyóza: invaze bazální vrstvy endometria do myometria za přispění narušení zóny junctional zone.",
+      pathogenesis: "1. **Karcinom cervixu**: HPV proteiny E6 (blokuje p53) a E7 (blokuje Rb) inaktivují buněčné supresory. Vzniká dysplázie (CIN 1–3) progredující do invazivního dlaždicobuněčného karcinomu. \n2. **Karcinom endometria**: typ I (endometrioidní, 80 %): vzniká na podkladě hyperplazie endometria stimulované estrogeny, mutace PTEN. Typ II (serózní, 20 %): starší ženy, vzniká v atrofickém endometriu, agresivní, mutace TP53. \n3. **Adenomyóza**: proliferace bazálního endometria prorůstajícího do myometria, které reaguje kompenzatorní hypertrofií hladké svaloviny.",
+      macroscopy: "Karcinom cervixu: exofytický (květákovitý tumor čípku) nebo endofytický (infiltruje stěnu děložního hrdla, mění ho v tuhou hlaveň). Karcinom endometria: polypózní, křehká, šedavá masa vyplňující děložní dutinu a infiltrující myometrium (svalovinu). Adenomyóza: děloha je difuzně zvětšená, kulovitá (globózní), na řezu je myometrium ztluštělé s drobnými šedohnědými ložisky nebo drobnými cystičkami s krví.",
+      microscopy: "Karcinom cervixu: dlaždicobuněčný karcinom (rohovějící nebo nerohovějící), méně často adenokarcinom cervixu. Karcinom endometria typ I: endometrioidní adenokarcinom (atypické, natěsnané žlázky bez stroma). Typ II: serózní karcinom (papilární struktury, těžké atypie, častá **psamomata**). Adenomyóza: ostrůvky endometriálních žlázek a buněčného stroma v myometriu, obklopené hyperplastickou hladkou svalovinou.",
+      clinical: "Karcinom čípku se screenuje cytologicky (PAP stěr) a kolposkopicky. Projevuje se kontaktním krvácením (po styku). Karcinom endometria se typicky projevuje **krvácením v postmenopauze** (vyžaduje abrazi dělohy - kyretáž k vyloučení karcinomu!). Adenomyóza se klinicky projevuje **menoragií** (silné krvácení), **dysmenoreou** (bolestivá menstruace) a chronickou pánevní bolestí."
     },
     quiz: [
       {
@@ -454,8 +454,18 @@ const DATA_ONCO_2 = [
         ],
         correct: 1,
         explanation: "Karcinom endometria postihuje nejčastěji ženy po menopauze. Růst tumoru a jeho rozpad vede ke krvácení do děložní dutiny. Jelikož tyto ženy již nemenstruují, každé takové krvácení je alarmující a umožňuje včasnou diagnostiku kyretáží."
-      }
-    ,
+      },
+      {
+        question: "Jak se nazývá benigní stav dělohy, při kterém dochází k prorůstání endometriálních žlázek a stroma do děložní svaloviny (myometria)?",
+        options: [
+          "Endometrioidní adenokarcinom",
+          "Adenomyóza dělohy",
+          "Leiomyom dělohy",
+          "Atypická hyperplazie endometria"
+        ],
+        correct: 1,
+        explanation: "Adenomyóza je benigní invaze bazální vrstvy endometria do myometria. Vede k reaktivní hyperplazii hladké svaloviny, difuznímu zvětšení dělohy a projevuje se bolestivým a silným menstruačním krvácením."
+      },
       {
         question: "Které dva onkoproteiny produkované HPV inaktivují supresory p53 a Rb v buňkách děložního čípku?",
         type: "type-in",
@@ -466,8 +476,15 @@ const DATA_ONCO_2 = [
         question: "Jaký je hlavní klinický příznak karcinomu endometria u starších žen?",
         type: "type-in",
         correct: ["krvácení v postmenopauze", "krvácení po přechodu", "vaginální krvácení"],
-        explanation: "Každé krvácení z rodidel u ženy po menopauze (přechodu) je podezřelé a vyžaduje vyšetření k vyloučení karcinomu endometria."
-      }]
+        explanation: "Každé krvácení z rodidel u ženy po menopauze (přechodu) is podezřelé a vyžaduje vyšetření k vyloučení karcinomu endometria."
+      },
+      {
+        question: "Jaký benigní stav dělohy je charakterizován přítomností endometriálních žlázek a stroma uvnitř myometria?",
+        type: "type-in",
+        correct: ["adenomyóza", "adenomyóza dělohy", "adenomyosa"],
+        explanation: "Adenomyóza (někdy označovaná jako vnitřní endometrióza) představuje přítomnost děložní sliznice hluboko v myometriu."
+      }
+    ]
   },
 
   {
@@ -475,14 +492,14 @@ const DATA_ONCO_2 = [
     title: "Nádory ovárií",
     section: "Gynekologická onkopatologie a prs",
     category: "Onkologie",
-    keywords: ["ovaria", "cystadenom", "teratom", "Krukenberg", "CA125", "serózní", "mucinosní"],
+    keywords: ["ovaria", "cystadenom", "teratom", "Krukenberg", "CA125", "serózní", "mucinosní", "endometrióza"],
     content: {
-      definition: "Nádory vaječníků vykazují obrovskou histologickou různorodost. Dělí se na epitelové (nejčastější), germinální, nádory ze zárodečného stroma a metastázy.",
-      etiology: "U epitelových karcinomů: vysoký počet ovulací (bez těhotenství a kojení - traumatizace povrchu ovaria), genetické mutace BRCA1/2, Lynchův syndrom.",
-      pathogenesis: "1. **Epitelové nádory** (65–70 %, dělí se na benigní cystadenom, borderline a maligní cystadenokarcinom): \n- *Serózní*: nejčastější, často oboustranný, serózní obsah. \n- *Mucinózní*: vyplněn hlenem, může dosáhnout obřích rozměrů. \n2. **Germinální nádory**: \n- *Dermoidní cysta* (zralý cystický teratom): nejčastější benigní tumor u mladých žen. \n3. **Nádory ze stroma**: *Fibrom* (spojen s Meigsovým syndromem), *Granulózový tumor* (produkuje estrogeny). \n4. **Metastázy**: *Krukenbergův tumor* (z difuzního karcinomu žaludku).",
-      macroscopy: "Cystadenomy: velké, tenkostěnné cysty naplněné čirou tekutinou (serózní) nebo hustým hlenem (mucinózní). Karcinomy: solidně-cystické, s papilárními výrůstky na vnitřní i vnější stěně cysty. Teratom (dermoidní cysta): cysta vyplněná mazem, vlasy, zuby a chrupavkou.",
-      microscopy: "Serózní karcinom: papily kryté atypickým cylindrickým epitelem, přítomnost **psamomatózních tělísek** (kulaté kalcifikované kuličky s koncentrickým vrstvením). Teratom: přítomnost struktur kůže (epidermis, mazové žlázy), mozkové tkáně, štítné žlázy, chrupavky a střeva.",
-      clinical: "Ovariální karcinom je přezdíván **tichý zabiják**, protože roste dlouho bezpříznakově v břišní dutině a odhalí se až v pozdním stadiu (šíří se implantací po peritoneu - ascites, karcinomatóza peritonea). Sleduje se tumorózní marker **CA-125**. Meigsův syndrom u fibromu ovaria: triáda fibrom ovaria, hydrothorax (tekutina v pohrudnici) a ascites."
+      definition: "Nádory vaječníků vykazují obrovskou histologickou různorodost. Dělí se na epitelové (nejčastější), germinální, nádory ze zárodečného stroma a metastázy. Častým nenádorovým procesem s rizikem cystické transformace vaječníku je **endometrióza** (přítomnost endometria mimo děložní dutinu).",
+      etiology: "U epitelových karcinomů: vysoký počet ovulací (bez těhotenství a kojení - traumatizace povrchu ovaria), genetické mutace BRCA1/2, Lynchův syndrom. Endometrióza vzniká např. retrográdní menstruací přes vejcovody, metaplazií coelomového epitelu či lymfogenním šířením.",
+      pathogenesis: "1. **Epitelové nádory** (65–70 %, dělí se na benigní cystadenom, borderline a maligní cystadenokarcinom): \n- *Serózní*: nejčastější, často oboustranný, serózní obsah. \n- *Mucinózní*: vyplněn hlenem, může dosáhnout obřích rozměrů. \n2. **Germinální nádory**: \n- *Dermoidní cysta* (zralý cystický teratom): nejčastější benigní tumor u mladých žen. \n3. **Nádory ze stroma**: *Fibrom* (spojen s Meigsovým syndromem), *Granulózový tumor* (produkuje estrogeny). \n4. **Metastázy**: *Krukenbergův tumor* (z difuzního karcinomu žaludku). \n5. **Endometrióza ovaria**: cyklické krvácení ektopického endometria v ovariu vede k hromadění krve a vzniku pseudocyst.",
+      macroscopy: "Cystadenomy: velké, tenkostěnné cysty naplněné čirou tekutinou (serózní) nebo hustým hlenem (mucinózní). Karcinomy: solidně-cystické, s papilárními výrůstky na vnitřní i vnější stěně cysty. Teratom (dermoidní cysta): cysta vyplněná mazem, vlasy, zuby a chrupavkou. Endometrióza ovaria: ovariální **čokoládové cysty** (endometriomy) o velikosti až několika cm, vyplněné tmavohnědou hustou tekutinou (rozpadlá krev), se svraštělým, fibrotickým pouzdrem.",
+      microscopy: "Serózní karcinom: papily kryté atypickým cylindrickým epitelem, přítomnost **psamomatózních tělísek** (kulaté kalcifikované kuličky s koncentrickým vrstvením). Teratom: přítomnost struktur kůže (epidermis, mazové žlázy), mozkové tkáně, štítné žlázy, chrupavky a střeva. Endometrióza: ložiska endometriálních žlázek a stroma ve stěně cysty, doprovázená hojnou přítomností makrofágů s hemosiderinem (**siderofágy**).",
+      clinical: "Ovariální karcinom je přezdíván **tichý zabiják**, protože roste dlouho bezpříznakově v břišní dutině a odhalí se až v pozdním stadiu (šíří se implantací po peritoneu - ascites, karcinomatóza peritonea). Sleduje se tumorózní marker **CA-125**. Meigsův syndrom u fibromu ovaria: triáda fibrom ovaria, hydrothorax a ascites. Endometrióza se projevuje dysmenoreou, chronickou pánevní bolestí, dyspareunií (bolest při styku) a je častou příčinou sterility."
     },
     quiz: [
       {
@@ -500,14 +517,24 @@ const DATA_ONCO_2 = [
         question: "Co jsou to psamomata (psamomatózní tělíska) a u kterého ovariálního nádoru jsou typickým mikroskopickým nálezem?",
         options: [
           "Bakteriální shluky v tubě",
-          "Drobné, kulaté, koncentricky vrstvené kalcifikace (vápenaté kuličky) vzniklé nekrotizací a zvápenatěním papilárních struktur, typické pro serózní ovariální karcinom (a meningiom)",
+          "Drobné, kulaté, koncentricky vrstvené kalcifikace (vápenateté kuličky) vzniklé nekrotizací a zvápenatěním papilárních struktur, typické pro serózní ovariální karcinom (a meningiom)",
           "Tukové buňky v myometriu",
           "Odlitky proteinů v ledvině"
         ],
         correct: 1,
         explanation: "Psamomata (z řeckého psammos = písek) vznikají, když hrot papily u serózního karcinomu odumře (ischemií) a do tohoto ložiska se pasivně uloží soli vápníku (dystrofická kalcifikace). Pod mikroskopem vypadají jako růžovomodré vrstvené kuličky."
-      }
-    ,
+      },
+      {
+        question: "Jak se nazývá přítomnost endometriálních žlázek a stroma mimo děložní dutinu (např. na ovariu, kde tvoří tzv. čokoládové cysty)?",
+        options: [
+          "Hyperplazie endometria",
+          "Krukenbergův tumor",
+          "Endometrióza",
+          "Adenomyóza"
+        ],
+        correct: 2,
+        explanation: "Endometrióza je definována jako přítomnost děložní sliznice (žlázek i stroma) mimo děložní dutinu. Ovárium je nejčastější lokalizací, kde cyklické krvácení vede k tvorbě pseudocyst naplněných hnědavou, rozpadlou krví (tzv. čokoládové cysty neboli endometriomy)."
+      },
       {
         question: "Jak se nazývá benigní ovariální teratom (dermoidní cysta), který obsahuje zralé tkáně jako vlasy, zuby a maz?",
         type: "type-in",
@@ -515,11 +542,18 @@ const DATA_ONCO_2 = [
         explanation: "Zralý cystický teratom (dermoidní cysta) je benigní ovariální nádor obsahující zralé deriváty ektodermu, mezodermu a endodermu."
       },
       {
-        question: "Který ovariální nádor (metastáza ze žaludku) je charakterizován buňkami vzhledu pečetního prstenu?",
+        question: "Který ovariální nádor (metastáza ze žaludku) is charakterizován buňkami vzhledu pečetního prstenu?",
         type: "type-in",
         correct: ["Krukenbergův tumor", "Krukenbergův nádor"],
         explanation: "Krukenbergův tumor je oboustranná ovariální metastáza hlenotvorného karcinomu žaludku (s buňkami vzhledu pečetního prstenu)."
-      }]
+      },
+      {
+        question: "Jak se nazývají cysty na vaječnících u endometriózy vyplněné rozpadlou starou krví?",
+        type: "type-in",
+        correct: ["čokoládové cysty", "čokoládová cysta", "endometriomy", "endometriom"],
+        explanation: "Čokoládové cysty (endometriomy) vznikají cyklickým krvácením ektopického endometria na ovariu. Obsahují tmavohnědou tekutinu bohatou na hemosiderin z rozpadlých červených krvinek."
+      }
+    ]
   },
 
   {

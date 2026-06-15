@@ -736,6 +736,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Vykreslení kvízu
     renderQuiz();
 
+    // Zobrazení odkazu na mikroskopický preparát
+    const oldPrepBtn = document.getElementById("open-preparat-btn-from-card");
+    if (oldPrepBtn) oldPrepBtn.remove();
+
+    const matchingPrep = findMatchingSlide(activeQuestion);
+    if (matchingPrep) {
+      const prepBtn = document.createElement("button");
+      prepBtn.id = "open-preparat-btn-from-card";
+      prepBtn.className = "btn-open-preparat-from-card";
+      prepBtn.innerHTML = `🔬 Zobrazit preparát zkoušky: <strong>${escapeHTML(matchingPrep.title)}</strong>`;
+      prepBtn.onclick = () => {
+        detailDialog.close();
+        document.body.style.overflow = "";
+        openPreparatyDialogAndSelect(matchingPrep.id);
+      };
+      document.querySelector(".study-content").appendChild(prepBtn);
+    }
+
     // Zobrazení dialogu
     detailDialog.showModal();
     document.body.style.overflow = "hidden"; // Zamezení rolování na pozadí
@@ -1300,6 +1318,248 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("patologie_theme", "dark-theme");
     }
   });
+
+  // ==========================================================================
+  // LOGIKA PROHLÍŽEČE PREPARÁTŮ
+  // ==========================================================================
+  const preparatyDialog = document.getElementById("preparaty-dialog");
+  const preparatyOpenBtn = document.getElementById("preparaty-open-btn");
+  const preparatyCloseBtn = document.getElementById("preparaty-close");
+  const preparatySearchInput = document.getElementById("preparaty-search-input");
+  const preparatyList = document.getElementById("preparaty-list");
+  const preparatyViewerContent = document.getElementById("preparaty-viewer-content");
+  const preparatyNoSelection = document.getElementById("preparaty-no-selection");
+  const preparatyDetailTitle = document.getElementById("preparaty-detail-title");
+  const preparatyDetailBadge = document.getElementById("preparaty-detail-badge");
+  const preparatyDetailDesc = document.getElementById("preparaty-detail-desc");
+  const preparatyCarouselImg = document.getElementById("preparaty-carousel-img");
+  const preparatyCarouselPrev = document.getElementById("preparaty-carousel-prev");
+  const preparatyCarouselNext = document.getElementById("preparaty-carousel-next");
+  const preparatyCarouselCounter = document.getElementById("preparaty-carousel-counter");
+  const preparatyLinkQuestionBtn = document.getElementById("preparaty-link-question-btn");
+  const preparatyFilterTabs = document.querySelectorAll(".prep-tab");
+
+  // Lightbox elements
+  const lightbox = document.getElementById("preparaty-lightbox");
+  const lightboxImg = document.getElementById("preparaty-lightbox-img");
+  const lightboxClose = document.getElementById("preparaty-lightbox-close");
+  const lightboxCaption = document.getElementById("preparaty-lightbox-caption");
+
+  let activePrep = null;
+  let activePrepImageIndex = 0;
+  let preparatyFilter = "all";
+  let preparatySearchQuery = "";
+
+  const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() : "";
+
+  function findMatchingSlide(question) {
+    if (!window.PREPARATY_DATA) return null;
+    const normQ = normalizeString(question.title);
+    
+    // Title match
+    for (const prep of window.PREPARATY_DATA) {
+      const normP = normalizeString(prep.title);
+      if (normP === normQ || normQ.includes(normP) || normP.includes(normQ)) {
+        return prep;
+      }
+    }
+    // Keyword match
+    for (const prep of window.PREPARATY_DATA) {
+      const normP = normalizeString(prep.title);
+      for (const kw of question.keywords) {
+        const normKw = normalizeString(kw);
+        if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
+          return prep;
+        }
+      }
+    }
+    return null;
+  }
+
+  function findMatchingQuestion(prep) {
+    const normP = normalizeString(prep.title);
+    for (const q of QUESTIONS) {
+      const normQ = normalizeString(q.title);
+      if (normQ === normP || normQ.includes(normP) || normP.includes(normQ)) {
+        return q;
+      }
+    }
+    for (const q of QUESTIONS) {
+      for (const kw of q.keywords) {
+        const normKw = normalizeString(kw);
+        if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
+          return q;
+        }
+      }
+    }
+    return null;
+  }
+
+  function renderPreparatyList() {
+    if (!window.PREPARATY_DATA) return;
+    preparatyList.innerHTML = "";
+    
+    const filtered = window.PREPARATY_DATA.filter(prep => {
+      if (preparatyFilter === "zkouskove" && !prep.is_zkouskove) return false;
+      if (preparatyFilter === "nezkouskove" && prep.is_zkouskove) return false;
+      
+      if (preparatySearchQuery) {
+        const normQuery = normalizeString(preparatySearchQuery);
+        const normTitle = normalizeString(prep.title);
+        const normDesc = normalizeString(prep.description);
+        return normTitle.includes(normQuery) || normDesc.includes(normQuery);
+      }
+      return true;
+    });
+
+    if (filtered.length === 0) {
+      preparatyList.innerHTML = "<p class='text-center text-secondary' style='font-size: 0.85rem; margin-top: 1rem;'>Žádné preparáty nenalezeny</p>";
+      return;
+    }
+
+    filtered.forEach(prep => {
+      const card = document.createElement("div");
+      card.className = `preparaty-list-card${activePrep && activePrep.id === prep.id ? ' active' : ''}`;
+      card.innerHTML = `
+        <h4>${escapeHTML(prep.title)}</h4>
+        <div class="preparaty-card-meta">
+          <span class="prep-badge ${prep.is_zkouskove ? 'zkouskovy' : 'nezkouskovy'}">
+            ${prep.is_zkouskove ? 'Zkouškový' : 'Doplňující'}
+          </span>
+          <span class="img-count">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline; vertical-align:middle; margin-right:2px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            ${prep.images.length}
+          </span>
+        </div>
+      `;
+      card.onclick = () => selectPreparat(prep);
+      preparatyList.appendChild(card);
+    });
+  }
+
+  function selectPreparat(prep) {
+    activePrep = prep;
+    activePrepImageIndex = 0;
+    
+    renderPreparatyList();
+
+    preparatyNoSelection.style.display = "none";
+    preparatyViewerContent.style.display = "flex";
+
+    preparatyDetailTitle.textContent = prep.title;
+    if (prep.is_zkouskove) {
+      preparatyDetailBadge.textContent = "Zkouškový preparát";
+      preparatyDetailBadge.className = "prep-badge zkouskovy";
+    } else {
+      preparatyDetailBadge.textContent = "Doplňující";
+      preparatyDetailBadge.className = "prep-badge nezkouskovy";
+    }
+    
+    preparatyDetailDesc.textContent = prep.description || "K tomuto preparátu není k dispozici žádný popis.";
+
+    updateCarousel();
+
+    const matchingQ = findMatchingQuestion(prep);
+    if (matchingQ) {
+      preparatyLinkQuestionBtn.style.display = "block";
+      preparatyLinkQuestionBtn.textContent = `Zobrazit otázku: ${matchingQ.id} 📖`;
+      preparatyLinkQuestionBtn.onclick = () => {
+        preparatyDialog.close();
+        document.body.style.overflow = "";
+        openQuestionDetail(matchingQ.id);
+      };
+    } else {
+      preparatyLinkQuestionBtn.style.display = "none";
+    }
+  }
+
+  function updateCarousel() {
+    if (!activePrep || activePrep.images.length === 0) {
+      preparatyCarouselImg.src = "";
+      preparatyCarouselCounter.textContent = "0 / 0";
+      return;
+    }
+
+    const imgName = activePrep.images[activePrepImageIndex];
+    preparatyCarouselImg.src = `preparaty/images/${imgName}`;
+    preparatyCarouselCounter.textContent = `${activePrepImageIndex + 1} / ${activePrep.images.length}`;
+  }
+
+  preparatyCarouselPrev.onclick = (e) => {
+    e.stopPropagation();
+    if (!activePrep) return;
+    activePrepImageIndex = (activePrepImageIndex - 1 + activePrep.images.length) % activePrep.images.length;
+    updateCarousel();
+  };
+
+  preparatyCarouselNext.onclick = (e) => {
+    e.stopPropagation();
+    if (!activePrep) return;
+    activePrepImageIndex = (activePrepImageIndex + 1) % activePrep.images.length;
+    updateCarousel();
+  };
+
+  preparatyCarouselImg.onclick = () => {
+    if (!preparatyCarouselImg.src || !preparatyCarouselImg.src.includes('paste-')) return;
+    lightbox.style.display = "block";
+    lightboxImg.src = preparatyCarouselImg.src;
+    lightboxCaption.textContent = activePrep ? `${activePrep.title} (Snímek ${activePrepImageIndex + 1}/${activePrep.images.length})` : "";
+  };
+
+  lightboxClose.onclick = () => {
+    lightbox.style.display = "none";
+  };
+
+  lightbox.onclick = (e) => {
+    if (e.target !== lightboxImg && e.target !== lightboxCaption) {
+      lightbox.style.display = "none";
+    }
+  };
+
+  if (preparatyOpenBtn) {
+    preparatyOpenBtn.addEventListener("click", () => {
+      preparatyDialog.showModal();
+      document.body.style.overflow = "hidden";
+      renderPreparatyList();
+    });
+  }
+
+  if (preparatyCloseBtn) {
+    preparatyCloseBtn.addEventListener("click", () => {
+      preparatyDialog.close();
+      document.body.style.overflow = "";
+    });
+  }
+
+  if (preparatySearchInput) {
+    preparatySearchInput.addEventListener("input", (e) => {
+      preparatySearchQuery = e.target.value;
+      renderPreparatyList();
+    });
+  }
+
+  preparatyFilterTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      preparatyFilterTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      preparatyFilter = tab.getAttribute("data-filter");
+      renderPreparatyList();
+    });
+  });
+
+  function openPreparatyDialogAndSelect(prepId) {
+    preparatyDialog.showModal();
+    document.body.style.overflow = "hidden";
+    
+    if (window.PREPARATY_DATA) {
+      const prep = window.PREPARATY_DATA.find(p => p.id === prepId || p.id == prepId);
+      if (prep) {
+        selectPreparat(prep);
+      } else {
+        renderPreparatyList();
+      }
+    }
+  }
 
   // 17. PRVNÍ SPUŠTĚNÍ - INICIALIZACE STRÁNKY
   updateDashboard();
