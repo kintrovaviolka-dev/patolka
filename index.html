@@ -36,6 +36,11 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
           Přiřazovačka eponym
         </button>
+
+        <button id="preparaty-open-btn" class="btn btn-primary btn-preparaty" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); border: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+          Prohlížeč preparátů
+        </button>
         
         <!-- Přepínač motivu -->
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Přepnout tmavý/světlý režim">
@@ -349,6 +354,89 @@
     </div>
   </dialog>
 
+  <!-- PROHLÍŽEČ PREPARÁTŮ (SLIDE VIEWER) -->
+  <dialog id="preparaty-dialog" class="preparaty-dialog">
+    <div class="preparaty-content">
+      <header class="preparaty-header">
+        <div class="preparaty-header-text">
+          <h2>Mikroskopický prohlížeč preparátů</h2>
+          <p>Studuj reálné makroskopické a mikroskopické snímky zkouškových i doplňujících histologických preparátů.</p>
+        </div>
+        <button class="preparaty-close-btn" id="preparaty-close" aria-label="Zavřít prohlížeč">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+
+      <div class="preparaty-body">
+        <!-- Levý panel: Seznam preparátů a hledání -->
+        <aside class="preparaty-sidebar">
+          <div class="preparaty-search-wrapper">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="preparaty-search-input" placeholder="Hledat preparát...">
+          </div>
+          
+          <div class="preparaty-filter-tabs">
+            <button class="prep-tab active" data-filter="all">Všechny (170)</button>
+            <button class="prep-tab" data-filter="zkouskove">Zkouškové (89)</button>
+            <button class="prep-tab" data-filter="nezkouskove">Nezkouškové (81)</button>
+          </div>
+          
+          <div class="preparaty-list" id="preparaty-list">
+            <!-- Dynamicky generováno přes JS -->
+          </div>
+        </aside>
+
+        <!-- Pravý panel: Detail aktivního preparátu -->
+        <main class="preparaty-viewer-area" id="preparaty-viewer-area">
+          <div class="preparaty-no-selection" id="preparaty-no-selection">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3; margin-bottom: 1rem;"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="2" y1="12" x2="4" y2="12"></line></svg>
+            <p>Vyber preparát ze seznamu pro zobrazení detailních mikroskopických snímků a popisu.</p>
+          </div>
+
+          <div class="preparaty-viewer-content" id="preparaty-viewer-content" style="display: none;">
+            <div class="preparaty-detail-header">
+              <div class="preparaty-title-box">
+                <span id="preparaty-detail-badge" class="prep-badge">Zkouškový</span>
+                <h3 id="preparaty-detail-title">Název preparátu</h3>
+              </div>
+              <button id="preparaty-link-question-btn" class="btn btn-secondary btn-link-question">
+                Zobrazit související otázku 📖
+              </button>
+            </div>
+
+            <!-- Carousel obrázků -->
+            <div class="preparaty-carousel">
+              <div class="carousel-track-container">
+                <img id="preparaty-carousel-img" src="" alt="Snímek preparátu">
+              </div>
+              <button class="carousel-control prev" id="preparaty-carousel-prev" aria-label="Předchozí">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button class="carousel-control next" id="preparaty-carousel-next" aria-label="Další">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="carousel-counter" id="preparaty-carousel-counter">1 / 1</div>
+              <div class="carousel-zoom-hint">Klikni pro celoobrazovkové zvětšení 🔍</div>
+            </div>
+
+            <!-- Popis a Histologie -->
+            <div class="preparaty-description-card">
+              <h4>Klíčové histologické znaky a popis</h4>
+              <p id="preparaty-detail-desc">Zde bude podrobný popis preparátu...</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- LIGHTBOX PRO CELOOBRAZOVKOVÝ DETAIL OBRÁZKU -->
+  <div id="preparaty-lightbox" class="preparaty-lightbox">
+    <span class="lightbox-close" id="preparaty-lightbox-close">&times;</span>
+    <img class="lightbox-content" id="preparaty-lightbox-img" src="" alt="Zvětšený snímek">
+    <div id="preparaty-lightbox-caption" class="lightbox-caption">Název snímku</div>
+  </div>
+
   <!-- Skripty databází -->
   <script src="data_patologie_1.js"></script>
   <script src="data_patologie_2.js"></script>
@@ -357,6 +445,7 @@
   <script src="data_special_2.js"></script>
   <script src="data_onco_1.js"></script>
   <script src="data_onco_2.js"></script>
+  <script src="preparaty_data.js"></script>
   <!-- Aplikační skript -->
   <script src="app.js"></script>
 </body>
