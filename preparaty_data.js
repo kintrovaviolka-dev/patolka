@@ -2061,3 +2061,8 @@ const PREPARATY_DATA = [
     "description": ""
   }
 ];
+
+// Export database parts into window namespace
+if (typeof window !== 'undefined') {
+  window.PREPARATY_DATA = PREPARATY_DATA;
+}
