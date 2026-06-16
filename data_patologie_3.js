@@ -299,35 +299,9 @@ const DATA_PATOLOGIE_3 = [
         explanation: "Involucrum je pouzdro z reaktivní kosti, které se tvoří pod periostem kolem ložiska nekrózy (sekvestru)."
       }
     ]
-  },v Howshipových lakunách) odbourávajících přebytečnou kost.",
-      clinical: "Komplikace hojení zlomenin: pakloub (pseudoartróza - pokud není zlomenina znehybněna, v místě kalusu vznikne chrupavka a vazivový kloub), opožděné hojení, infekce (osteomyelitida u otevřených zlomenin)."
     },
-    quiz: [
-      {
-        question: "Jak definujeme v ortopedické patologii pojem pakloub (pseudoartróza) jako komplikaci hojení zlomeniny?",
-        options: [
-          "Vrozené zdvojení končetiny",
-          "Komplikace hojení zlomeniny, kdy při nedostatečné fixaci nedojde ke kostnímu spojení úlomků, ale v místě vznikne vazivové a chrupavčité spojení s patologickou pohyblivostí",
-          "Nádorové bujení kosti napodobující kloub",
-          "Zánět kloubu způsobený bakteriemi"
-        ],
-        correct: 1,
-        explanation: "Pro tvorbu kosti v kalusu je nutný klid a dobré cévní zásobení. Pokud se úlomky neustále pohybují, granulační tkáň se nemůže přeměnit v kost, ale diferencuje se ve vazivo a chrupavku, čímž vznikne falešný kloub (pseudoartróza)."
-      },
-      {
-        question: "Který typ nezralé, chaoticky uspořádané kostní tkáně se tvoří jako první v procesu osifikace tvrdého kalusu (kostěného svalku)?",
-        options: [
-          "Lamelární kost (zralá)",
-          "Pletivová kost (fibrilární / nezralá)",
-          "Chrupavka hyalinní",
-          "Kompaktní kost s Haversovými systémy"
-        ],
-        correct: 1,
-        explanation: "První novotvořená kostní tkáň je nezralá pletivová kost. Má nepravidelné uspořádání kolagenních vláken a je mechanicky méně odolná. Teprve během remodelace (působením zátěže) je nahrazena vysoce organizovanou lamelární kostí."
-      }
-    ]
-  },
-  {
+
+{
     id: "pat-48",
     title: "Genetické příčiny - přehled",
     section: "Genetické poruchy",
