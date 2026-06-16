@@ -25,7 +25,7 @@ const DATA_ONCO_2 = [
           "V levém colon nádory nikdy nekrvácí"
         ],
         correct: 1,
-        explanation: "Pravé colon má široké lumen a kašovitý obsah. Karcinomy zde rostou jako květákovité masy, které spíše exulcerují a chronicky krvácejí (anémie). Levé kolono má úzké lumen a stolička je zahuštěná. Kruhový (prstencovitý) růst karcinomu zde proto rychle způsobí zúžení střeva a střevní potíže."
+        explanation: "Pravé colon má široké lumen a kašovitý obsah. Karcinomy zde rostou jako květákovité masy, které spíše exulcerují a chronicky krvácejí (anémie). Levé colon má úzké lumen a stolice je zahuštěná. Kruhový (prstencovitý) růst karcinomu zde proto rychle způsobí zúžení střeva a střevní potíže."
       },
       {
         question: "Který genetický syndrom je charakterizován vznikem tisíců adenomatózních polypů v tlustém střevě již v mladém věku s téměř 100% jistotou maligního zvratu před 40. rokem života bez preventivní kolektomie?",
@@ -63,7 +63,7 @@ const DATA_ONCO_2 = [
       definition: "Nádory jater se dělí na primární (benigní a maligní) a sekundární (metastázy - mnohonásobně častější). Nejdůležitějším primárním zhoubným nádorem je hepatocelulární karcinom (HCC).",
       etiology: "HCC vzniká v 80–90 % případů na podkladě **jaterní cirhózy** (hlavní příčiny: chronická hepatitida B a C, alkoholismus, nealkoholická steatohepatitida - NASH, expozice aflatoxinu B1 z plísní). Benigní hepatocelulární adenom je spojen s užíváním **perorální antikoncepce** u mladých žen.",
       pathogenesis: "Chronická nekróza a regenerace hepatocytů u cirhózy vede k akumulaci mutací (např. v genu TP53). Cholangiokarcinom (karcinom žlučovodů) je asociován s chronickou biliární stázu a infekcí motolicemi v Asii.",
-      macroscopy: "HCC roste buď solárně (jeden velký, prokrvácený a nekrotický uzel), multinodulárně (mnohočetné uzly), nebo difuzně (infiltruje celá játra, splývá s cirhózou). Játra jsou zvětšená, těžká. Nádor má často **zelenavý nádech** (nádorové buňky tvoří žluč, kterou nemají kam vyloučit). Metastázy v játrech: mnohočetné, kulaté uzly s centrálním vtažením (**umbilikací** z nekrózy).",
+      macroscopy: "HCC roste buď solitárně (jeden velký, prokrvácený a nekrotický uzel), multinodulárně (mnohočetné uzly), nebo difuzně (infiltruje celá játra, splývá s cirhózou). Játra jsou zvětšená, těžká. Nádor má často **zelenavý nádech** (nádorové buňky tvoří žluč, kterou nemají kam vyloučit). Metastázy v játrech: mnohočetné, kulaté uzly s centrálním vtažením (**umbilikací** z nekrózy).",
       microscopy: "HCC: buňky podobné hepatocytům uspořádané do trámců širokých více než 3 buňky (zdravá játra mají trámce široké 1-2 buňky) nebo tvořící pseudoglandulární struktury. V cytoplasmě nacházíme žlučový pigment. Cholangiokarcinom: typický adenokarcinom, tvoří žlázky s produkcí hlenu, obklopené masivním vazivem.",
       clinical: "Projevuje se zhoršením jaterních funkcí u cirhotika (náhlý vznik ascitu, ikteru, hubnutí). V krvi stoupá hladina tumorózního markeru **AFP** (alfa-fetoprotein). HCC má sklon k invazi do jaterních žil a v. portae (riziko portální trombózy). Léčba: resekce, transplantace jater nebo chemoembolizace (TACE)."
     },
