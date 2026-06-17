@@ -4,106 +4,117 @@ const DATA_ONCO_2 = [
   {
     id: "onco-23",
     title: "Nádory tenkého a tlustého střeva",
-    section: "Nádory GIT a slinných žláz",
+    section: "Nádory zažívacího traktu",
     category: "Onkologie",
-    keywords: ["kolorektální", "karcinom", "adenom", "polyp", "FAP", "Lynch", "CEA", "stenóza"],
+    keywords: ["kolorektální", "karcinom", "adenom", "polyp", "APC", "Lynch", "MSI", "tenké", "střevo", "CEA"],
     content: {
-      definition: "Kolorektální karcinom (KRK) je jedním z nejčastějších zhoubných nádorů v ČR. Vychází z epiteliální výstelky tlustého střeva nebo konečníku. Nádory tenkého střeva jsou naopak velmi vzácné.",
-      etiology: "Strava s vysokým obsahem červeného masa, živočišných tuků a nedostatkem vlákniny, kouření, obezita, chronické záněty (ulcerózní kolitida). Dědičné syndromy: FAP (Familiární adenomatózní polypóza - mutace genu APC), Lynchův syndrom (HNPCC - mutace v MMR genech opravujících chyby párování bází).",
-      pathogenesis: "Rozvíjí se převážně cestou **adenom-karcinomové sekvence** (polypózní adenom progreduje přes dysplázii do invazivního karcinomu, trvá to 10–15 let; mutace APC -> KRAS -> TP53). U Lynchova syndromu vzniká přes mutace mikrosatelitové nestability (MSI path).",
-      macroscopy: "1. Pravé colon (cékum, ascendens): roste exofyticky (jako květák), krvácí (způsobuje anémii), stolice je tekutá, proto nevede k obstrukci. 2. Levé colon (descendens, sigmoideum): roste cirkulárně, infiltruje stěnu a zužuje lumen (stenóza - tvar **kousnutého jablka** na rentgenu), vede k poruchám pasáže (zácpa střídaná s průjmem) až k ileu.",
-      microscopy: "Převážnou většinu (95 %) tvoří **adenokarcinomy**. Vidíme nepravidelné žlázové tubuly infiltrující stěnu (tunicu muscularis propria) obklopené reaktivním fibrotickým stroma (desmoplazií). Nádorové buňky vykazují jaderné atypie, hyperchromazii a patologické mitózy. U mucinózní formy jsou buňky uloženy v jezírkách hlenu.",
-      clinical: "Projevuje se krví ve stolici (enteroragie u levého, okultní krvácení u pravého colon), únavou z anémie a hubnutím. Screening v ČR: test na okultní krvácení do stolice (TOKS) od 50 let a screeningová kolonoskopie. Nádorový marker sledovaný po operaci pro záchyt recidivy je **CEA** (karcinoembryonální antigen)."
+      definition: "Kolorektální karcinom (KRK) je jedním z nejčastějších zhoubných nádorů. Vychází z epiteliální výstelky tlustého střeva nebo konečníku. Nádory tenkého střeva jsou naopak velmi vzácné (tvoří < 5 % všech GIT tumorů).",
+      etiology: "Strava s vysokým obsahem červeného masa, živočišných tuků, uzenin a nedostatkem vlákniny, obezita, alkoholismus, kouření. Chronické záněty: ulcerózní kolitida, Crohnova choroba. Dědičné syndromy: FAP (Familiární adenomatózní polypóza - mutace APC), Lynchův syndrom (HNPCC - mutace v MMR genech).",
+      pathogenesis: "1. **Benigní epiteliální nádory (Adenomy)**: polypózní afekce, které se dělí na **tubulární** (nejčastější, nejméně rizikové), **tubulovilózní** a **vilózní** (nejvyšší riziko maligního zvratu, často přisedlé, produkují hlen). Prekanceróza pro karcinom.\n2. **Molekulární dráhy vzniku karcinomu**:\n- *Adenom-karcinomová sekvence (85 %)*: dráha chromozomální instability. Postupná akumulace mutací: ztráta tumor supresoru **APC** (hyperproliferace) -> mutace onkogenu **KRAS** (vznik adenomu) -> ztráta supresorů **TP53** a SMAD4 (vznik invazivního karcinomu). Trvá 10–15 let.\n- *Dráha mikrosatelitové nestability (MSI, 15 %)*: Lynchův syndrom. Defekt v genech pro mismatch repair (**MMR geny**: MLH1, MSH2, MSH6, PMS2) vede k neopraveným chybám v replikaci DNA (mikrosatelitech).",
+      macroscopy: "Nádory vykazují výraznou dualitu podle lokalizace:\n- *Pravé kolon (cékum, colon ascendens)*: roste exofyticky (jako květák nebo polyp), je měkký, prokrvácený. Střevní lumen je zde široké a stolice tekutá, proto nevede k časné obstrukci. Projevuje se chronickým okultním krvácením.\n- *Levé kolon (colon descendens, sigmoideum, rektum)*: roste endofyticky, cirkulárně infiltruje stěnu a zužuje lumen (stenóza - na RTG obraz 'kousnutého jablka'). Způsobuje časné poruchy pasáže.",
+      microscopy: "Převládá **adenokarcinom** (95 %). Vidíme nepravidelné žlázové tubuly infiltrující přes muscularis mucosae do submukózy a muscularis propria, obklopené desmoplastickým vazivovým stromatem. Nádorové buňky mají protáhlá hyperchromní jádra, četné mitózy. U **mucinózního adenokarcinomu** (> 50 % hlenu) jsou buňky rozptýleny v extracelulárních jezírkách hlenu; u varianty z **prstencovitých buněk** (signet-ring cells) hlen tlačí jádro k periferii.",
+      clinical: "Pravostranné karcinomy: únava, slabost z mikrocytární sideropenické anémie. Levostranné karcinomy: změna rytmu stolice (zácpa střídaná s průjmy), čerstvá krev ve stolici (enteroragie), tužkovitá stolice, střevní neprůchodnost (ileus). Diagnostika: kolonoskopie s biopsií. Sledování recidivy: tumor marker **CEA** (karcinoembryonální antigen). Screening v ČR: test na okultní krvácení (TOKS/FIT) od 50 let, nebo screeningová kolonoskopie každých 10 let."
     },
     quiz: [
       {
-        question: "Jak se liší makroskopický růst a klinické projevy karcinomu pravého tlustého střeva (cékum, vzestupný tračník) od levého tlustého střeva?",
+        question: "Který subtyp polypózního adenomu tlustého střeva má nejvyšší riziko maligního zvratu do karcinomu?",
         options: [
-          "V pravém colon roste nádor vždy difuzně, v levém vůbec nevzniká",
-          "V pravém colon roste převážně exofyticky (polypózně) a projevuje se plíživým krvácením a anémií; v levém roste cirkulárně (stenotizujícím způsobem) a projevuje se střídáním zácpy a průjmu či střevní neprůchodností",
-          "V pravém colon nádory neobstruují, protože pravé střevo nemá svalovinu",
-          "V levém colon nádory nikdy nekrvácí"
+          "Tubulární adenom",
+          "Vilózní adenom (villous adenoma)",
+          "Tubulovilózní adenom",
+          "Hyperplastický polyp"
         ],
         correct: 1,
-        explanation: "Pravé colon má široké lumen a kašovitý obsah. Karcinomy zde rostou jako květákovité masy, které spíše exulcerují a chronicky krvácejí (anémie). Levé colon má úzké lumen a stolice je zahuštěná. Kruhový (prstencovitý) růst karcinomu zde proto rychle způsobí zúžení střeva a střevní potíže."
+        explanation: "Vilózní adenomy jsou často větší, přisedlé (přisedle rostoucí na sliznici) a vykazují mikroskopicky prstovité výběžky (vily). Mají až 50% riziko přechodu v invazivní karcinom, což je výrazně více než u malých tubulárních adenomů."
       },
       {
-        question: "Který genetický syndrom je charakterizován vznikem tisíců adenomatózních polypů v tlustém střevě již v mladém věku s téměř 100% jistotou maligního zvratu před 40. rokem života bez preventivní kolektomie?",
+        question: "Jak se liší typický klinický obraz a makroskopický růst karcinomu pravého a levého kolonu?",
         options: [
+          "V pravém kolon roste stenozující prstenec způsobující zácpu; v levém kolon roste květákovitý tumor způsobující masivní krvácení",
+          "V pravém kolon roste květákovitý exofytický tumor, který neucpává lumen a způsobuje sideropenickou anémii; v levém kolon roste cirkulárně infiltrující tumor vedoucí k zúžení lumenu (stenóze) a poruchám pasáže",
+          "Oba typy rostou zcela identicky a neliší se",
+          "Pravostranný karcinom se projevuje výhradně masivním zvracením krve"
+        ],
+        correct: 1,
+        explanation: "Pravé kolon má široké lumen a tekutý obsah sliznice, proto se zde exofytické nádory projevují spíše plíživou anémií z okultního krvácení. Levé kolon má užší lumen a stolice je zahuštěná, takže cirkulární růst (stenóza) vede k zácpě, kolikám a riziku ileu."
+      },
+      {
+        question: "Který dědičný syndrom (způsobený mutací MMR genů pro opravu chyb DNA) je spojen s rozvojem kolorektálního karcinomu bez předchozí masivní polypózy?",
+        options: [
+          "FAP (Familiární adenomatózní polypóza)",
           "Lynchův syndrom (HNPCC)",
-          "Familiární adenomatózní polypóza (FAP - mutace APC genu)",
-          "Li-Fraumeni syndrom",
+          "Gardnerův syndrom",
           "Peutz-Jeghersův syndrom"
         ],
         correct: 1,
-        explanation: "FAP je autozomálně dominantní onemocnění způsobené mutací tumor supresorového genu APC. Vyvolává masivní polypózu střeva. Maligní zvrat alespoň jednoho z tisíců polypů je nevyhnutelný, a proto se provádí preventivní odstranění celého tlustého střeva (kolektomie)."
-      }
-    ,
-      {
-        question: "Jak se nazývá dědičný syndrom (způsobený mutací APC) projevující se tisíci polypy v tlustém střevě?",
-        type: "type-in",
-        correct: ["FAP", "familiární adenomatózní polypóza"],
-        explanation: "FAP je autozomálně dominantní onemocnění s mutací APC genu, vedoucí k polypóze střeva a nevyhnutelnému karcinomu."
+        explanation: "Lynchův syndrom (HNPCC - Hereditary Non-Polyposis Colorectal Cancer) vzniká mutací MMR genů (např. MSH2, MLH1). Nádory vznikají rychleji (přes MSI dráhu) bez stadií tisíců polypů, které nacházíme u FAP."
       },
       {
-        question: "Který nádorový marker v krvi se sleduje pro záchyt recidivy kolorektálního karcinomu po operaci?",
+        question: "Který tumor marker se standardně vyšetřuje v krvi u pacientů po resekci kolorektálního karcinomu pro časný záchyt případné recidivy či metastáz?",
         type: "type-in",
         correct: ["CEA", "karcinoembryonální antigen"],
-        explanation: "CEA (karcinoembryonální antigen) je onkofetální protein, jehož sledování v krvi pomáhá odhalit recidivu kolorektálního karcinomu."
-      }]
-  },
+        explanation: "CEA (karcinoembryonální antigen) je onkofetální antigen. Jeho pooperační vzestup v séru spolehlivě signalizuje návrat onemocnění."
+      },
+      {
+        question: "Jaká zkratka označuje dědičný syndrom charakterizovaný mutací genu APC a výskytem stovek až tisíců adenomatózních polypů v tlustém střevě, u kterého je 100% riziko maligního zvratu?",
+        type: "type-in",
+        correct: ["FAP", "Familiární adenomatózní polypóza"],
+        explanation: "Familiární adenomatózní polypóza (FAP) je autozomálně dominantní onemocnění způsobené mutací genu APC, vyžadující preventivní kolektomii."
+      }
+    ]
+},
 
   {
     id: "onco-24",
     title: "Nádory jater",
-    section: "Nádory GIT a slinných žláz",
+    section: "Nádory zažívacího traktu",
     category: "Onkologie",
-    keywords: ["hepatocelulární", "karcinom", "cirhóza", "metastázy", "adenom", "cholangiokarcinom", "AFP"],
+    keywords: ["jaterní", "cirhóza", "hepatocelulární", "adenom", "hemangiom", "cholangiokarcinom", "metastázy", "AFP", "umbilikace"],
     content: {
-      definition: "Nádory jater se dělí na primární (benigní a maligní) a sekundární (metastázy - mnohonásobně častější). Nejdůležitějším primárním zhoubným nádorem je hepatocelulární karcinom (HCC).",
-      etiology: "HCC vzniká v 80–90 % případů na podkladě **jaterní cirhózy** (hlavní příčiny: chronická hepatitida B a C, alkoholismus, nealkoholická steatohepatitida - NASH, expozice aflatoxinu B1 z plísní). Benigní hepatocelulární adenom je spojen s užíváním **perorální antikoncepce** u mladých žen.",
-      pathogenesis: "Chronická nekróza a regenerace hepatocytů u cirhózy vede k akumulaci mutací (např. v genu TP53). Cholangiokarcinom (karcinom žlučovodů) je asociován s chronickou biliární stázu a infekcí motolicemi v Asii.",
-      macroscopy: "HCC roste buď solitárně (jeden velký, prokrvácený a nekrotický uzel), multinodulárně (mnohočetné uzly), nebo difuzně (infiltruje celá játra, splývá s cirhózou). Játra jsou zvětšená, těžká. Nádor má často **zelenavý nádech** (nádorové buňky tvoří žluč, kterou nemají kam vyloučit). Metastázy v játrech: mnohočetné, kulaté uzly s centrálním vtažením (**umbilikací** z nekrózy).",
-      microscopy: "HCC: buňky podobné hepatocytům uspořádané do trámců širokých více než 3 buňky (zdravá játra mají trámce široké 1-2 buňky) nebo tvořící pseudoglandulární struktury. V cytoplasmě nacházíme žlučový pigment. Cholangiokarcinom: typický adenokarcinom, tvoří žlázky s produkcí hlenu, obklopené masivním vazivem.",
-      clinical: "Projevuje se zhoršením jaterních funkcí u cirhotika (náhlý vznik ascitu, ikteru, hubnutí). V krvi stoupá hladina tumorózního markeru **AFP** (alfa-fetoprotein). HCC má sklon k invazi do jaterních žil a v. portae (riziko portální trombózy). Léčba: resekce, transplantace jater nebo chemoembolizace (TACE)."
+      definition: "Nádory jater se dělí na primární (benigní a maligní) a sekundární (metastázy). Metastázy solidních tumorů jsou v játrech mnohonásobně (až 30x) častější než primární jaterní neoplazie.",
+      etiology: "Cirhóza jater (jakékoliv etiologie) je hlavním rizikovým faktorem primárního karcinomu (HCC) – přítomna v 80–90 % případů. Klíčovými faktory jsou: chronická hepatitida B a C, alkoholismus, nealkoholická steatohepatitida (NASH) a aflatoxin B1 (toxin plísní). Užívání perorální antikoncepce u mladých žen je spojeno s rizikem hepatocelulárního adenomu.",
+      pathogenesis: "1. **Benigní nádory**:\n- *Kavernózní hemangiom*: nejčastější benigní nádor jater, tvořen velkými krevními splavy. Riziko krvácení při biopsii jehlou.\n- *Fokální nodulární hyperplazie (FNH)*: nodulární leze s centrální vazivovou jizvou, nejde o pravý nádor, ale hyperplastickou odpověď na cévní anomálii.\n- *Hepatocelulární adenom*: benigní epitelový nádor z hepatocytů, hrozí spontánním prasknutím (rupturou) a masivním krvácením do dutiny břišní.\n2. **Maligní nádory**:\n- *Hepatocelulární karcinom (HCC)*: maligní tumor z hepatocytů. Vzniká maligní transformací v regeneračních uzlech u cirhózy.\n- *Cholangiokarcinom*: maligní tumor ze žlučovodů. Asociace s primární sklerozující cholangitidou (PSC), chronickou stázu žluči a infekcí jaterními motolicemi (Clonorchis sinensis) v Asii.\n- *Hepatoblastom*: vzácný embryonální tumor jater u dětí do 3 let.",
+      macroscopy: "HCC: roste buď solitárně (jeden velký, prokrvácený a nekrotický uzel), multinodulárně (mnohočetné uzly u cirhózy), nebo difuzně. Nádorová tkáň má často **zelenavý nádech** (nádorové buňky produkují žluč). Cholangiokarcinom: tuhý, šedobílý uzel (neprodukuje žluč). Metastázy: mnohočetná, šedobílá ložiska s centrální nekrózou vedoucí k vtažení povrchu ložiska (**umbilikace**).",
+      microscopy: "- *HCC*: nádorové buňky připomínají hepatocyty (polygonalní buňky s granularní eosinofilní cytoplasmou), které jsou uspořádány do trámců širších než 3 buňky (normální jaterní trámce mají 1-2 buňky) nebo tvoří pseudoglandulární struktury. V cytoplasmě je patrná tvorba žluči nebo Malloryho-Denkův hyalin.\n- *Cholangiokarcinom*: vykazuje strukturu adenokarcinomu (žlázové struktury s hlenem) obklopeného masivním desmoplastickým vazivovým stromatem.\n- *Metastázy*: zachovávají strukturu primárního nádoru (např. žlázky u kolorektálního adenokarcinomu).",
+      clinical: "HCC: projevuje se náhlým zhoršením stavu u stabilního cirhotika (nově vzniklý ascites, ikterus, hubnutí). V krvi stoupá onkofetální tumor marker **AFP** (alfa-fetoprotein). HCC má výrazný sklon k **angioinvazi** (prorůstá do jaterních žil a portální žíly - riziko portální trombózy). Metastázy do jater pocházejí nejčastěji z GIT (kolorektální karcinom - šíření v. portae), prsu a plic."
     },
     quiz: [
       {
-        question: "Který tumorózní marker je v krvi typicky zvýšen u pacientů s hepatocelulárním karcinomem (HCC)?",
+        question: "Který benigní nádor jater vykazuje úzkou souvislost s užíváním perorální antikoncepce a představuje riziko život ohrožujícího nitrobřišního krvácení?",
         options: [
-          "PSA",
-          "Alfa-fetoprotein (AFP)",
-          "CEA",
-          "CA-125"
+          "Kavernózní hemangiom",
+          "Hepatocelulární adenom (hepatocellular adenoma)",
+          "Fokální nodulární hyperplazie (FNH)",
+          "Cholangiokarcinom"
         ],
         correct: 1,
-        explanation: "AFP je fetální protein. Jeho hladina po narození klesá k nule. Při zhoubné přeměně hepatocytů (dediferenciaci) buňky začnou AFP opět masivně syntetizovat, což slouží jako významný diagnostický marker."
+        explanation: "Hepatocelulární adenom je benigní epitelový nádor úzce spojený s estrogeny v antikoncepci. Má sklon k hemoragickým nekrózám a při ruptuře hrozí vykrvácením do břišní dutiny (hemoperitoneum)."
       },
       {
-        question: "Jak lze při pitvě nebo na makroskopickém preparátu jater spolehlivě odlišit primární hepatocelulární karcinom od jaterních metastáz?",
+        question: "Jak se makroskopicky projevují vícečetné metastázy v játrech, které je odlišuje od primárního hepatocelulárního karcinomu?",
         options: [
-          "HCC tvoří vždy jen černé uzly na kůži",
-          "HCC bývá spojen s cirhózou a tvoří často jeden dominantní, nazelenalý uzel; jaterní metastázy jsou typicky mnohočetné, bílošedé uzly roztroušené v obou lalocích, vykazující centrální vtažení (umbilikaci) z nekrózy",
-          "Metastázy v játrech nikdy neobsahují nekrózy",
-          "Játra s metastázami jsou vždy zmenšená na 500g"
+          "Jsou vždy jasně zelené kvůli produkci žluči",
+          "Tvoří vícečetné, ostře ohraničené šedobílé uzly s centrálním vtažením (umbilikací) v důsledku nekrózy",
+          "Rostou výhradně difuzně bez tvorby uzlů",
+          "Postihují pouze žlučové cesty"
         ],
         correct: 1,
-        explanation: "Jelikož játra filtrují krev z portálního oběhu (z celého zažívacího traktu), jsou nejčastějším místem metastáz (např. z tlustého střeva, žaludku). Tyto metastázy tvoří typické mnohočetné uzlíky 'vypadající jako terče' s propadlým středem (umbilikací) z ischemické nekrózy uprostřed rychle rostoucího uzlu."
-      }
-    ,
-      {
-        question: "Která zkratka označuje nejčastější primární maligní nádor jater vznikající v terénu cirhózy?",
-        type: "type-in",
-        correct: ["HCC", "hepatocelulární karcinom"],
-        explanation: "HCC (Hepatocelulární karcinom) vzniká v drtivé většině případů na podkladě jaterní cirhózy (alkohol, hepatitidy)."
+        explanation: "Metastázy rostou v játrech jako vícečetné uzly. Protože rostou rychle, centrum uzlu trpí nedostatkem kyslíku a podléhá nekróze, která se svraští a vytvoří na povrchu jater typické pupkovité vtažení - umbilikaci."
       },
       {
-        question: "Který marker se stanovuje v séru při podezření na hepatocelulární karcinom?",
+        question: "Který specifický onkofetální tumor marker se stanovuje ze séra při podezření na vznik hepatocelulárního karcinomu (HCC) u pacienta s jaterní cirhózou?",
         type: "type-in",
         correct: ["AFP", "alfa-fetoprotein"],
-        explanation: "Alfa-fetoprotein (AFP) je typický onkofetální marker, jehož hladina v séru stoupá u HCC a některých germinálních nádorů."
-      }]
-  },
+        explanation: "Alfa-fetoprotein (AFP) je hlavní marker HCC. U dospělých je jeho zvýšená hladina (mimo těhotenství) vysoce podezřelá z HCC nebo germinálních nádorů."
+      },
+      {
+        question: "Jak se nazývá maligní epitelový nádor vycházející z intrahepatálních nebo extrahepatálních žlučovodů?",
+        type: "type-in",
+        correct: ["cholangiokarcinom"],
+        explanation: "Cholangiokarcinom je druhý nejčastější primární maligní nádor jater. Vychází z epitelu žlučových cest a neprodukuje žluč."
+      }
+    ]
+},
 
   {
     id: "onco-25",
@@ -369,54 +380,65 @@ const DATA_ONCO_2 = [
   {
     id: "onco-30",
     title: "Nádory varlat",
-    section: "Nádory urogenitální",
+    section: "Nádory urogenitálního traktu",
     category: "Onkologie",
-    keywords: ["seminom", "varle", "nádor", "embryonální", "choriokarcinom", "hCG", "yolk", "kryptorchismus"],
+    keywords: ["varle", "seminom", "neseminom", "kryptorchismus", "AFP", "hCG", "yolk sac", "choriokarcinom", "Schiller-Duval"],
     content: {
-      definition: "Nádory varlat postihují převážně mladé muže (20–40 let). Více než 95 % z nich vychází ze zárodečných buněk (germinalní nádory). Dělí se na seminomy a neseminomy.",
-      etiology: "Hlavním rizikovým faktorem je **kryptorchismus** (nesestouplé varle - riziko stoupá 4–10x), syndrom testikulární dysgeneze, rodinná anamnéza.",
-      pathogenesis: "Všechny germinální nádory (kromě spermatocytárního seminomu) vznikají z prekurzoru zvaného GCNIS (germ cell neoplasia in situ). \n1. **Seminom**: nejčastější (50 %), pomalejší růst, velmi radiocitlivý. \n2. **Neseminomy** (agresivnější, sklon k časnému metastázování): \n- *Embryonální karcinom*: anaplastický, tvoří žlázy a papily. \n- *Nádor ze žloutkového váčku* (yolk sac tumor): nejčastější u malých dětí (do 3 let). \n- *Choriokarcinom*: vysoce maligní, tvořen syncytiotrofoblastem a cytotrofoblastem, krvácí. \n- *Teratom*: obsahuje tkáně všech 3 zárodečných listů (u dospělých mužů je na rozdíl od žen považován vždy za maligní!).",
-      macroscopy: "Seminom: homogenní, laločnatý, šedobílý, masitý uzel, který zvětšuje varle, bez krvácení a nekróz. Embryonální karcinom a Choriokarcinom: pestrý vzhled, masivní nekrózy, prokrvácení, neostré ohraničení.",
-      microscopy: "Seminom: velké, uniformní, polygonální buňky s jasnou cytoplasmou (glykogen) a kulatým jádrem s nápadným jadérkem, uspořádané do okrsků oddělených vazivovými septy s výrazným **lymfocytárním infiltrátem**. Yolk sac tumor: síťovité (retikulární) uspořádání, přítomnost **Schiller-Duvalových tělísek** (struktura připomínající glomerulus - céva obklopená nádorovými buňkami v dutině). Choriokarcinom: dvoufázový růst syncytiotrofoblastu (obří vícejaderné buňky) a cytotrofoblastu (jednojaderné buňky).",
-      clinical: "Projevuje se jako nebolestivé zvětšení a ztuhnutí varlete. Sledují se sérové markery: **hCG** (lidský choriový gonadotropin, produkován syncytiotrofoblastem u choriokarcinomu a seminomu), **AFP** (alfa-fetoprotein, produkován yolk sac tumorem) a **LDH** (odráží masu nádoru). Je zcela zásadní, že čistý seminom **NIKDY neprodukuje AFP**. Pokud je u pacienta s histologickou diagnózou seminomu zjištěna zvýšená hladina AFP, znamená to, že se ve skutečnosti jedná o smíšený germinální nádor s neseminomovou složkou (yolk sac tumor). Toto zjištění dramaticky mění léčbu, protože čisté seminomy jsou vysoce citlivé na radioterapii, zatímco neseminomy nikoliv."
+      definition: "Nádory varlat postihují převážně mladé muže (ve věku 20–40 let). Více než 95 % z nich vychází ze zárodečných (germinálních) buněk a označují se jako germinální nádory. Dělí se na seminomy (50 %) a neseminomy (50 %).",
+      etiology: "Hlavním rizikovým faktorem je **kryptorchismus** (nesestouplé varle - zvyšuje riziko 4–10x, a to i po chirurgické orchiopexi), syndrom testikulární dysgeneze (porucha vývoje varlat) a rodinná anamnéza.",
+      pathogenesis: "Téměř všechny germinální nádory u dospělých (kromě spermatocytárního seminomu starších mužů) vznikají z prekurzorové léze zvané **GCNIS** (germ cell neoplasia in situ - atypické zárodečné buňky uvnitř semenotvorných kanálků).\n1. **Seminom**: nejčastější, roste pomaleji, vysoce radiocitlivý a chemocitlivý. **Zásadně nikdy neprodukuje AFP!**\n2. **Neseminomy** (agresivnější chování, časně metastázují hematogenně):\n- *Embryonální karcinom*: vysoce anaplastický, roste v pruzích a papilách, s častým krvácením a nekrózami.\n- *Nádor ze žloutkového váčku (Yolk sac tumor)*: nejčastější germinální tumor u dětí (do 3 let, benigní průběh), u dospělých je součástí smíšených neseminomů. **Charakteristicky produkuje AFP**.\n- *Choriokarcinom*: nejagresivnější, tvořen buňkami trofoblastu, vysoce prokrvácený, **produkuje hCG**. Metastázuje hematogenně do plic a mozku extrémně časně (často se manifestuje hemoptýzou před odhalením testikulárního ložiska).\n- *Teratom*: obsahuje tkáně všech tří zárodečných listů (chrupavka, podkoží, zuby). U postpubertálních mužů se teratom **vždy chová jako maligní nádor** (na rozdíl od žen, kde jsou zralé teratomy benigní!).",
+      macroscopy: "Seminom: homogenní, šedobílý, masitý, laločnatý uzel zvětšující varle, bez ložisek nekróz a krvácení. Neseminomy (embryonální k., choriokarcinom): pestrý vzhled, neostře ohraničená, prokrvácená ložiska s masivními žlutavými nekrózami. Teratom: cystická struktura vyplněná rohovými hmotami, chrupavkou a vlasy.",
+      microscopy: "- *Seminom*: velké, uniformní, polygonální buňky s jasnou cytoplasmou (bohatou na glykogen) a kulatým jádrem. Jsou uspořádány do hnízd oddělených vazivovými septy s výraznou **lymfocytární infiltrací** (někdy i s granulomy).\n- *Yolk sac tumor*: síťovité (retikulární) uspořádání, přítomnost **Schiller-Duvalových tělísek** (struktury připomínající glomeruly - centrální kapilára krytá vrstvou nádorových buněk v prázdném prostoru). Eosinofilní hyalinní kapičky v cytoplasmě (obsahují AFP).\n- *Choriokarcinom*: dimorfní struktura – syncytiotrofoblast (obří vícejaderné buňky produkující hCG) a cytotrofoblast (mononukleární buňky).\n- *Leydigův tumor* (ze zárodečného stroma): polygonální buňky s růžovou cytoplasmou obsahující tyčinkovité **Reinkeho krystaly**.",
+      clinical: "Nebolestivé zvětšení a ztuhnutí varlete. Sérové markery jsou zásadní pro diagnostiku a staging: **hCG** (lidský choriový gonadotropin), **AFP** (alfa-fetoprotein) a **LDH** (odráží tumorózní nálož). **Klinické pravidlo**: Čistý seminom nesmí produkovat AFP. Zvýšení AFP u histologicky diagnostikovaného seminomu znamená přítomnost neseminomové složky (smíšený tumor) a vyžaduje agresivnější chemoterapii (režim BEP). Chirurgie: orhiektomie se provádí zásadně **transinguinálním přístupem** (nikdy ne skrotálně kvůli riziku rozsevu nádorových buněk do skrotální kůže a změny lymfatické drenáže)."
     },
     quiz: [
       {
-        question: "U kterého germinálního nádoru varlete nacházíme pod mikroskopem Schiller-Duvalova tělíska (struktury napodobující primitivní glomeruly)?",
+        question: "Pacientovi byl histologicky diagnostikován čistý seminom varlete, ale v krvi byla zjištěna vysoká hladina AFP (alfa-fetoproteinu). Co tento nález znamená klinicky?",
         options: [
-          "Seminom",
-          "Nádor ze žloutkového váčku (yolk sac tumor)",
-          "Teratom",
-          "Leydigom"
+          "Nález je normální, čistý seminom produkuje AFP běžně",
+          "Pacient má ve skutečnosti smíšený germinální nádor obsahující neseminomovou složku (např. yolk sac tumor), což vylučuje diagnózu čistého seminomu a mění léčbu",
+          "Pacient má doprovodnou hepatitidu",
+          "Nádor metastazoval do kostí"
         ],
         correct: 1,
-        explanation: "Schiller-Duvalova tělíska jsou patognomickým histologickým znakem nádoru ze žloutkového váčku. Skládají se z centrální krevní cévy lemované nádorovým epitelem, která vyčnívá do malého prostoru vystlaného rovněž nádorovým epitelem (napodobuje to glomerulární klubíčko v Bowmanově pouzdře)."
+        explanation: "Čistý seminom nikdy neprodukuje AFP. Přítomnost zvýšeného AFP v séru znamená, že v nádoru je přítomna neseminomová složka (nejčastěji yolk sac tumor). Nádor se musí léčit jako neseminom (který je radiorezistentní a vyžaduje chemoterapii)."
       },
       {
-        question: "Který z nádorových markerů je typicky zvýšen u neseminomových nádorů (konkrétně yolk sac tumoru), ale jeho přítomnost v krvi spolehlivě vylučuje čistý seminom?",
+        question: "Jak se nazývá specifické mikroskopické tělísko patognomické pro yolk sac tumor, které připomíná primitivní ledvinný glomerulus s centrální cévou?",
         options: [
-          "hCG",
-          "Alfa-fetoprotein (AFP)",
-          "PSA",
-          "S100"
+          "Call-Exnerovo tělísko",
+          "Schiller-Duvalovo tělísko",
+          "Psamomatózní tělísko",
+          "Aschoffovo tělísko"
         ],
         correct: 1,
-        explanation: "Seminomy nikdy neprodukují AFP. Pokud je u pacienta s podezřením na seminom zvýšen AFP, znamená to, že se jedná o smíšený germinální nádor obsahující neseminomovou složku (yolk sac tumor), což zásadně mění léčebnou strategii (neseminomy jsou radiorezistentní a léčí se chemoterapií a chirurgicky)."
+        explanation: "Schiller-Duvalova tělíska jsou typická pro yolk sac tumor (nádor ze žloutkového váčku). Jde o kapilární kličku obklopenou nádorovými buňkami ležící v prostoru vystlaném plochými buňkami."
+      },
+      {
+        question: "Který přístup (chirurgická cesta) se volí při orchiektomii (odstranění varlete) z důvodu podezření na maligní tumor a proč?",
+        options: [
+          "Přes skrotum, protože je to nejrychlejší cesta",
+          "Zásadně transinguinální přístup (přes tříslo), aby se zabránilo rozsevu nádorových buněk do skrotální kůže s jinou lymfatickou drenáží a vzniku lokální recidivy",
+          "Laparoskopický přístup přes dutinu břišní",
+          "Transrektální přístup"
+        ],
+        correct: 1,
+        explanation: "Lymfatická drenáž varlete jde podél vasa testicularia retroperitoneálně do paraaortálních uzlin. Lymfa ze skrota jde do tříselných uzlin. Skrotální přístup by mohl kontaminovat kůži skrota nádorovými buňkami a změnit směr metastazování, proto se operuje výhradně z tříselného řezu."
+      },
+      {
+        question: "Která zkratka označuje prekurzorovou lézi, ze které vzniká většina testikulárních germinálních nádorů u dospělých?",
+        type: "type-in",
+        correct: ["GCNIS", "germ cell neoplasia in situ"],
+        explanation: "GCNIS (germ cell neoplasia in situ) je prekurzorová léze lokalizovaná v semenotvorných kanálcích varlete."
+      },
+      {
+        question: "Které krystaly (název podle objevitele) se nacházejí v cytoplasmě Leydigových buněk a pomáhají potvrdit diagnózu Leydigova tumoru?",
+        type: "type-in",
+        correct: ["Reinkeho krystaly", "Reinkeho", "Reinke"],
+        explanation: "Reinkeho krystaly jsou specifické proteinové tyčinkovité inkluze v cytoplasmě buněk Leydigova tumoru."
       }
-    ,
-      {
-        question: "Jak se nazývá nejčastější, dobře ohraničený a vysoce radiocitlivý germinální nádor varlete?",
-        type: "type-in",
-        correct: ["seminom"],
-        explanation: "Seminom je nejčastější maligní germinální tumor varlete. Je typický kulatými buňkami s jasnou cytoplasmou a lymfocytárními septy."
-      },
-      {
-        question: "Jak se nazývá vrozená vada nesestouplého varlete, která je hlavním rizikovým faktorem pro vznik nádorů?",
-        type: "type-in",
-        correct: ["kryptorchismus"],
-        explanation: "Kryptorchismus je porucha sestupu varlete do šourku, která až desetkrát zvyšuje riziko vzniku maligního nádoru."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-31",
@@ -490,71 +512,65 @@ const DATA_ONCO_2 = [
   {
     id: "onco-32",
     title: "Nádory ovárií",
-    section: "Gynekologická onkopatologie a prs",
+    section: "Nádory urogenitálního traktu",
     category: "Onkologie",
-    keywords: ["ovaria", "cystadenom", "teratom", "Krukenberg", "CA125", "serózní", "mucinosní", "endometrióza"],
+    keywords: ["vaječník", "cystadenom", "cystadenokarcinom", "teratom", "Meigs", "Krukenberg", "Call-Exner", "CA-125", "endometrióza"],
     content: {
-      definition: "Nádory vaječníků vykazují obrovskou histologickou různorodost. Dělí se na epitelové (nejčastější), germinální, nádory ze zárodečného stroma a metastázy. Častým nenádorovým procesem s rizikem cystické transformace vaječníku je **endometrióza** (přítomnost endometria mimo děložní dutinu).",
-      etiology: "U epitelových karcinomů: vysoký počet ovulací (bez těhotenství a kojení - traumatizace povrchu ovaria), genetické mutace BRCA1/2, Lynchův syndrom. Endometrióza vzniká např. retrográdní menstruací přes vejcovody, metaplazií coelomového epitelu či lymfogenním šířením.",
-      pathogenesis: "1. **Epitelové nádory** (65–70 %, dělí se na benigní cystadenom, borderline a maligní cystadenokarcinom): \n- *Serózní*: nejčastější, často oboustranný, serózní obsah. \n- *Mucinózní*: vyplněn hlenem, může dosáhnout obřích rozměrů. \n2. **Germinální nádory**: \n- *Dermoidní cysta* (zralý cystický teratom): nejčastější benigní tumor u mladých žen. \n3. **Nádory ze stroma**: *Fibrom* (spojen s Meigsovým syndromem), *Granulózový tumor* (produkuje estrogeny). \n4. **Metastázy**: *Krukenbergův tumor* (z difuzního karcinomu žaludku). \n5. **Endometrióza ovaria**: cyklické krvácení ektopického endometria v ovariu vede k hromadění krve a vzniku pseudocyst.",
-      macroscopy: "Cystadenomy: velké, tenkostěnné cysty naplněné čirou tekutinou (serózní) nebo hustým hlenem (mucinózní). Karcinomy: solidně-cystické, s papilárními výrůstky na vnitřní i vnější stěně cysty. Teratom (dermoidní cysta): cysta vyplněná mazem, vlasy, zuby a chrupavkou. Endometrióza ovaria: ovariální **čokoládové cysty** (endometriomy) o velikosti až několika cm, vyplněné tmavohnědou hustou tekutinou (rozpadlá krev), se svraštělým, fibrotickým pouzdrem.",
-      microscopy: "Serózní karcinom: papily kryté atypickým cylindrickým epitelem, přítomnost **psamomatózních tělísek** (kulaté kalcifikované kuličky s koncentrickým vrstvením). Teratom: přítomnost struktur kůže (epidermis, mazové žlázy), mozkové tkáně, štítné žlázy, chrupavky a střeva. Endometrióza: ložiska endometriálních žlázek a stroma ve stěně cysty, doprovázená hojnou přítomností makrofágů s hemosiderinem (**siderofágy**).",
-      clinical: "Ovariální karcinom je přezdíván **tichý zabiják**, protože roste dlouho bezpříznakově v břišní dutině a odhalí se až v pozdním stadiu (šíří se implantací po peritoneu - ascites, karcinomatóza peritonea). Sleduje se tumorózní marker **CA-125**. Meigsův syndrom u fibromu ovaria: triáda fibrom ovaria, hydrothorax a ascites. Endometrióza se projevuje dysmenoreou, chronickou pánevní bolestí, dyspareunií (bolest při styku) a je častou příčinou sterility."
+      definition: "Nádory vaječníků představují vysoce heterogenní skupinu neoplazií. Vycházejí z různých buněčných komponent ovaria: povrchového epitelu, zárodečných (germinálních) buněk, nebo buněk zárodečného stroma. Významným benigním procesem v ovariu je **endometrióza** (přítomnost ložisek endometria mimo děložní dutinu).",
+      etiology: "Rizikové faktory u epitelových karcinomů: vysoký počet ovulací (nuliparita - ženy bez dětí, absence kojení a antikoncepce, kdy dochází k opakovanému traumatizování povrchového epitelu), genetické mutace **BRCA1/2**, Lynchův syndrom. Endometrióza vzniká retrográdní menstruací přes vejcovody, metaplazií coelomového epitelu nebo cévním šířením.",
+      pathogenesis: "1. **Epitelové nádory (70 %)**: dělí se na benigní, borderline (hraniční malignita, bez invaze do stroma) a maligní (karcinomy):\n- *Serózní (nejčastější)*: papilární architektura. Dělí se na LGSC (low-grade, mutace KRAS/BRAF) and HGSC (high-grade, 95 % mutací TP53, agresivní, často vychází z vejcovodu).\n- *Mucinózní*: vyplněné hlenem, mohou dosáhnout obřích rozměrů. Při ruptuře a rozsevu buněk vzniká **pseudomyxom peritonei** (gelatinózní břicho).\n- *Endometrioidní* and *jasnobuněčný*: úzká patogenetická vazba na endometriózu ovaria.\n- *Brennerův tumor*: vzácný benigní tumor obsahující hnízda uroteliálních buněk.\n2. **Germinální nádory (15 %)**:\n- *Zralý teratom (dermoidní cysta)*: nejčastější benigní ovariální tumor mladých žen. Obsahuje diferencované tkáně.\n- *Dysgerminom*: ženský ekvivalent seminomu, maligní, citlivý na radioterapii.\n- *Yolk sac tumor* (produkuje AFP) and *choriokarcinom* (produkuje hCG).\n3. **Nádory ze zárodečného stroma (10 %)**:\n- *Granulózový tumor*: low-grade maligní, produkuje estrogeny (vede k hyperplazii endometria a krvácení u postmenopauzálních žen).\n- *Fibrom-Thekom*: benigní, thekomy produkují estrogeny, fibromy jsou hormonálně inaktivní a jsou asociovány s **Meigsovým syndromem**.\n4. **Metastázy**: **Krukenbergův tumor** – bilaterální metastáza mucinózního karcinomu z prstencovitých buněk žaludku do ovarií.\n5. **Endometrióza ovaria**: ektopická sliznice reaguje na hormonální cyklus. Opakované cyklické krvácení do uzavřeného prostoru vede ke vzniku ovariálních **čokoládových cyst** (endometriomů) s hemosiderinovým pigmentem.",
+      macroscopy: "Cystadenomy: velké, tenkostěnné jednokomorové či vícekomorové cysty s čirou tekutinou (serózní) nebo hustým hlenem (mucinózní). Karcinomy: solidně-cystické, s papilárními výrůstky (vegetacemi) na stěně, ložisky nekróz. Dermoidní cysta: cysta obsahující ložisko loje, vlasů, zubů. Čokoládová cysta: naplněna hustou, tmavě hnědou tekutinou (rozpadlá krev), stěna je fibrotická a svraštělá.",
+      microscopy: "- *Serózní karcinom*: papilární struktury kryté atypickým epitelem, přítomnost koncentricky vrstvených kalcifikovaných kuliček - **psamomatózních tělísek**.\n- *Teratom*: zralé tkáně všech 3 zárodečných listů (chrupavka, epidermis, glie, bronchus, štítná žláza - *struma ovarii*).\n- *Granulózový tumor*: buňky s jádry vzhledu **kávového zrna** (rýha v jádře), tvořící primitivní folikuly vyplněné eosinofilním materiálem – **Call-Exnerova tělíska**.\n- *Krukenbergův tumor*: hnízda **prstencovitých buněk** (signet-ring cells) infiltrující ovariální stroma.\n- *Endometrióza*: ložiska endometriálních žlázek a stromatu ve stěně cysty doprovázená siderofágy (makrofágy s hemosiderinem).",
+      clinical: "Ovariální karcinomy jsou přezdívány **tichý zabiják**, protože rostou bezpříznakově v pánvi. V době diagnózy jsou často generalizované implantacemi na peritoneum (**karcinomatóza peritonea** s ascitem). Sleduje se tumorózní marker **CA-125**. **Meigsův syndrom** je triáda: benigní fibrom ovaria, ascites a hydrothorax (fluidotorax), které po odstranění fibromu spontánně vymizí. Endometrióza se klinicky projevuje dysmenoreou, chronickou pánevní bolestí, dyspareunií a je častou příčinou neplodnosti."
     },
     quiz: [
       {
-        question: "Co je to dermoidní cysta (zralý cystický teratom) ovaria a co typicky obsahuje?",
+        question: "Který ovariální tumor je spojen s Meigsovým syndromem a co tvoří klinickou triádu tohoto syndromu?",
         options: [
-          "Zhoubný nádor z buněk žloutkového váčku produkující AFP",
-          "Benigní germinální nádor tvořený zralými tkáněmi ze všech tří zárodečných listů, makroskopicky se projevující jako cysta vyplněná kožním mazem, vlasy, zuby, chrupavkou či okrsky mozkové tkáně",
-          "Metastáza karcinomu plic",
-          "Jednoduchá cysta vyplněná čistou vodou"
+          "Granulózový tumor; triáda: tumor, hyperestrogenismus, karcinom endometria",
+          "Ovariální fibrom (benigní stromální tumor); triáda: fibrom ovaria, ascites a hydrothorax (fluidotorax)",
+          "Serózní cystadenokarcinom; triáda: tumor, ascites, pleurální výpotek",
+          "Krukenbergův tumor; triáda: tumor žaludku, tumor vaječníku, ascites"
         ],
         correct: 1,
-        explanation: "Dermoidní cysta je nejčastější ovariální nádor u mladých žen. Vychází ze zárodečné buňky, která se začne vyvíjet a diferencovat do různých zralých tkání těla (nejčastěji ektodermu - kůže, vlasy, zuby, glie), které se hromadí v cystické dutině."
+        explanation: "Meigsův syndrom je charakterizován přítomností benigního fibromu ovaria, nahromaděním tekutiny v břiše (ascites) a v hrudníku (hydrothorax). Po chirurgickém vyříznutí fibromu oba výpotky kompletně a trvale ustoupí."
       },
       {
-        question: "Co jsou to psamomata (psamomatózní tělíska) a u kterého ovariálního nádoru jsou typickým mikroskopickým nálezem?",
+        question: "Co jsou to Call-Exnerova tělíska a pro který ovariální nádor jsou mikroskopicky specifická?",
         options: [
-          "Bakteriální shluky v tubě",
-          "Drobné, kulaté, koncentricky vrstvené kalcifikace (vápenateté kuličky) vzniklé nekrotizací a zvápenatěním papilárních struktur, typické pro serózní ovariální karcinom (a meningiom)",
-          "Tukové buňky v myometriu",
-          "Odlitky proteinů v ledvině"
+          "Kalcifikované kuličky u serózního karcinomu",
+          "Drobné dutinky vyplněné růžovým sekretem obklopené nádorovými buňkami s jádry vzhledu kávových zrn; specifická pro granulózový tumor",
+          "Hlenové buňky u Krukenbergova tumoru",
+          "Zralé tkáně u teratomu"
         ],
         correct: 1,
-        explanation: "Psamomata (z řeckého psammos = písek) vznikají, když hrot papily u serózního karcinomu odumře (ischemií) a do tohoto ložiska se pasivně uloží soli vápníku (dystrofická kalcifikace). Pod mikroskopem vypadají jako růžovomodré vrstvené kuličky."
+        explanation: "Call-Exnerova tělíska jsou typická pro granulózový tumor (nádor z buněk granulózy). Buňky secernují materiál podobný folikulární tekutině, což pod mikroskopem napodobuje primitivní Graafovy folikuly."
       },
       {
-        question: "Jak se nazývá přítomnost endometriálních žlázek a stroma mimo děložní dutinu (např. na ovariu, kde tvoří tzv. čokoládové cysty)?",
+        question: "Jak se nazývá ovariální metastáza mucinózního karcinomu z prstencovitých buněk žaludku, která je typicky oboustranná a solidní?",
         options: [
-          "Hyperplazie endometria",
+          "Brennerův tumor",
           "Krukenbergův tumor",
-          "Endometrióza",
-          "Adenomyóza"
+          "Dysgerminom",
+          "Struma ovarii"
         ],
-        correct: 2,
-        explanation: "Endometrióza je definována jako přítomnost děložní sliznice (žlázek i stroma) mimo děložní dutinu. Ovárium je nejčastější lokalizací, kde cyklické krvácení vede k tvorbě pseudocyst naplněných hnědavou, rozpadlou krví (tzv. čokoládové cysty neboli endometriomy)."
+        correct: 1,
+        explanation: "Krukenbergův tumor je klasický příklad metastatického postižení vaječníků. Vychází z difuzního karcinomu žaludku, kdy se buňky šíří lymfogenně nebo transperitoneálně do obou vaječníků."
       },
       {
-        question: "Jak se nazývá benigní ovariální teratom (dermoidní cysta), který obsahuje zralé tkáně jako vlasy, zuby a maz?",
+        question: "Který onkologický marker se standardně vyšetřuje ze séra pro sledování aktivity a recidivy ovariálních epiteliálních karcinomů?",
         type: "type-in",
-        correct: ["dermoidní cysta", "zralý teratom", "teratom"],
-        explanation: "Zralý cystický teratom (dermoidní cysta) je benigní ovariální nádor obsahující zralé deriváty ektodermu, mezodermu a endodermu."
+        correct: ["CA-125", "CA125"],
+        explanation: "CA-125 (Cancer Antigen 125) je glykoproteinový marker používaný u ovariálních karcinomů."
       },
       {
-        question: "Který ovariální nádor (metastáza ze žaludku) is charakterizován buňkami vzhledu pečetního prstenu?",
+        question: "Jak se nazývá ovariální cysta vzniklá v důsledku endometriózy, která je vyplněná hustou tmavohnědou tekutinou z rozpadlé krve?",
         type: "type-in",
-        correct: ["Krukenbergův tumor", "Krukenbergův nádor"],
-        explanation: "Krukenbergův tumor je oboustranná ovariální metastáza hlenotvorného karcinomu žaludku (s buňkami vzhledu pečetního prstenu)."
-      },
-      {
-        question: "Jak se nazývají cysty na vaječnících u endometriózy vyplněné rozpadlou starou krví?",
-        type: "type-in",
-        correct: ["čokoládové cysty", "čokoládová cysta", "endometriomy", "endometriom"],
-        explanation: "Čokoládové cysty (endometriomy) vznikají cyklickým krvácením ektopického endometria na ovariu. Obsahují tmavohnědou tekutinu bohatou na hemosiderin z rozpadlých červených krvinek."
+        correct: ["čokoládová cysta", "čokoládové cysty", "endometriom"],
+        explanation: "Čokoládové cysty (endometriomy) vznikají cyklickým krvácením ektopického endometria v ovariu."
       }
     ]
-  },
+},
 
   {
     id: "onco-33",
@@ -663,54 +679,65 @@ const DATA_ONCO_2 = [
   {
     id: "onco-35",
     title: "Nejčastější nádory u dětí",
-    section: "Pediatrická onkopatologie",
+    section: "Pediatrická patologie",
     category: "Onkologie",
-    keywords: ["děti", "blastom", "nefroblastom", "neuroblastom", "retinoblastom", "leukémie", "Wilms"],
+    keywords: ["děti", "blastom", "leukémie", "neuroblastom", "Wilms", "retinoblastom", "leukokorie", "rozeta", "WT1", "RB1"],
     content: {
-      definition: "Nádory dětského věku se zásadně liší od nádorů dospělých. Převažují nádory hematopoetické (leukémie, lymfomy) a nádory embryonální (označované jako **blastomy**), které vycházejí z nezralých zárodečných tkání.",
-      etiology: "Genetické faktory (vrozené mutace tumor supresorů, např. genů WT1, RB1), poruchy embryogeneze. Vlivy vnějšího prostředí hrají u dětí minimální roli (krátká doba expozice).",
-      pathogenesis: "1. **Leukémie**: nejčastější dětské neoplazie (ALL tvoří 30 % všech dětských rakovin). \n2. **Neuroblastom**: nejčastější solidní mimolební tumor dětí (vychází ze sympatických ganglií nebo dřeně nadledvin). \n3. **Nefroblastom (Wilmsův tumor)**: nejčastější nádor ledviny u dětí (mutace WT1). \n4. **Meduloblastom**: maligní nádor mozečku dětí. \n5. **Retinoblastom**: vrozený nádor sítnice oka (mutace genu **RB1**).",
-      macroscopy: "Nefroblastom: velká, měkká, šedavá masa v břiše dítěte, která deformuje ledvinu, s ložisky nekróz. Retinoblastom: bělavá masa uvnitř očního bulbu, která způsobuje bělavý odlesk zornice (leukokorii).",
-      microscopy: "Většina embryonálních dětských nádorů patří do skupiny **drobnokulatobuněčných modrých nádorů** (small round blue cell tumors) - buňky jsou malé, uniformní, s minimem cytoplasmy a tmavými jádry. Wilmsův tumor je charakteristický **trifázickou strukturou**: obsahuje blastemovou složku (husté modré okrsky), epiteliální složku (primitivní žlázky a glomeruly) a stromální složku (vřetenovité buňky, hladký sval).",
-      clinical: "Retinoblastom se klinicky manifestuje jako **kočičí oko** (leukokoria - zornice při osvětlení bleskem nečervená, ale svítí bíle). Wilmsův tumor se projevuje jako asymptomatické zvětšení bříška dítěte (hmatná rezistence, kterou matka nahmatá při koupání, nesmí se palpovat silou kvůli riziku ruptury pouzdra)."
+      definition: "Nádory dětského věku se zásadně liší od nádorů dospělých. Vzácně vycházejí z epitelu (karcinomy jsou u dětí extrémně vzácné), převažují nádory hematopoetické (leukémie, lymfomy), nádory CNS a maligní embryonální nádory (označované jako **blastomy**), které vycházejí z nezralých zárodečných tkání organogeneze.",
+      etiology: "Vnější karcinogeny (strava, kouření) hrají minimální roli. Hlavní jsou genetické faktory: vrozené mutace tumor supresorových genů (např. **WT1, RB1, TP53**), chromozomální abnormality (Downův syndrom zvyšuje riziko leukémií 20x) and poruchy embryonálního vývoje.",
+      pathogenesis: "1. **Akutní leukémie**: vůbec nejčastější dětské nádory (ALL tvoří 30 % dětských malignit).\n2. **Nádory CNS (druhé nejčastější)**: **Meduloblastom** (vysoce maligní neuroepiteliální tumor mozečku u dětí), **Pilocystický astrocytom** (benigní, Grade I mozečku, spojen s NF-1), **Ependymom** (ve 4. komoře).\n3. **Neuroblastom**: nejčastější mimolební solidní tumor dětí, vychází z buněk neurální lišty (sympatických ganglií nebo dřeně nadledvin). Vykazuje amplifikaci onkogenu **N-myc** (prognostický marker).\n4. **Nefroblastom (Wilmsův tumor)**: nejčastější dětský nádor ledviny (věk 2-5 let). Spojen s mutací genu **WT1**. Může být součástí syndromů (WAGR syndrom, Beckwith-Wiedemannův s.).\n5. **Retinoblastom**: vrozený (bilaterální, mutace zárodečné alely RB1) nebo sporadický (unilaterální) maligní nádor sítnice. Mutace genu **RB1** (klasický příklad Knudsonovy 'two-hit' hypotézy).\n6. **Rhabdomyosarkom**: nejčastější sarkom měkkých tkání u dětí (subtypy embryonální a alveolární). Buňky vykazují kosterně-svalovou diferenciaci.",
+      macroscopy: "Nefroblastom: velký, měkký, laločnatý, šedobílý tumor, který roste z ledviny, stlačuje zbylý parenchym a má ložiska nekróz. Neuroblastom: neohraničená, měkká masa v retroperitoneu (nadledvině), často přechází přes střední čáru těla. Retinoblastom: bělavá uzlovitá masa na sítnici vyplňující sklivec.",
+      microscopy: "Většina dětských solidních nádorů (neuroblastom, meduloblastom, Ewingův sarkom, rhabdomyosarkom) patří histologicky do skupiny **drobnokulatobuněčných modrých nádorů** (small round blue cell tumors) - buňky jsou malé, mají kulatá hyperchromní jádra a minimum cytoplasmy.\n- *Neuroblastom / Meduloblastom*: buňky tvoří **Homer-Wrightovy rozety** (buňky uspořádané do kruhu kolem centrální růžové zóny tvořené neuropilem - buněčnými výběžky, bez lumenu).\n- *Wilmsův tumor*: vykazuje **trifázickou strukturu** – obsahuje blastemovou složku (husté modré okrsky), epiteliální složku (primitivní tubuly a glomeruly) a stromální složku (vřetenovité buňky, myxoidní tkáň, příčně pruhovaný sval).\n- *Retinoblastom*: tvoří **Flexner-Wintersteinerovy rozety** (buňky kolem centrálního lumenu - primitivní fotoreceptory).\n- *Rhabdomyosarkom*: přítomnost podlouhlých **strap cells** (řemínkovitých buněk) s příčném pruhováním v cytoplasmě.",
+      clinical: "Retinoblastom se klinicky manifestuje jako **leukokorie** (tzv. 'kočičí oko' – bílý odlesk zornice při fotografování s bleskem) a šilháním (strabismus). Wilmsův tumor se projevuje jako velké asymptomatické zvětšení břicha (hmatný tumor, který matka najde při koupání – **kontraindikace silné palpace** kvůli riziku ruptury pouzdra a rozsevu). Neuroblastom secernuje katecholaminy, což vede k hypertenzi, a v moči nacházíme zvýšenou hladinu **VMA** (kyseliny vanilmandlové) a **HVA** (kyseliny homovanilové)."
     },
     quiz: [
       {
-        question: "Jak se v histologickém řezu projevuje typická 'trifázická' struktura Wilmsova tumoru (nefroblastomu) u dětí?",
+        question: "Jak se klinicky projevuje retinoblastom u dětí a jaký je genetický mechanismus jeho vzniku?",
         options: [
-          "Přítomností keratinu, tuku a chrupavky",
-          "Směsí blastemové složky (husté okrsky modrých buněk), epiteliální složky (primitivní tubuly a glomeruly) a stromální složky (vřetenobuněčné vazivo)",
-          "Ukládáním amyloidu, vápníku a žluči",
-          "Přítomností zralých nervů, cév a svalů"
+          "Projevuje se žloutnutím spojivky; mutace genu WT1",
+          "Manifestuje se jako leukokorie (bílý odlesk zornice místo červeného reflexu) a šilháním; vzniká mutací obou alel tumor supresorového genu RB1 (Knudsonova hypotéza)",
+          "Způsobuje slepotu a krvácení z nosu; mutace genu TP53",
+          "Projevuje se zeleným zákalem; mutace genu APC"
         ],
         correct: 1,
-        explanation: "Wilmsův tumor napodobuje embryonální vývoj ledviny. Skládá se ze tří složek: nejméně zralé blastemy (tmavé buňky), pokusů o tvorbu ledvinných struktur (epitelové tubuly) a doprovodného nezralého stroma (stromální komponenta)."
+        explanation: "Leukokorie (bílá zornice) je způsobena tím, že světlo se odráží od bílé masy nádoru sítnice. Retinoblastom vzniká ztrátou obou alel genu RB1. U dědičné formy je první mutace vrozená (všechny buňky těla) a druhá somatická (v sítnici, často oboustranně)."
       },
       {
-        question: "Co je to leukokoria (příznak 'kočičího oka') a u kterého dětského nádoru je typickým klinickým projevem?",
+        question: "Která histologická struktura definuje trifázický vzhled nefroblastomu (Wilmsova tumoru) pod mikroskopem?",
         options: [
-          "Zelené zbarvení duhovky u melanomu oka",
-          "Bělavý odlesk zornice při osvětlení (např. při fotografování s bleskem), způsobený odrazem světla od bělavé masy nádoru sítnice; typické pro retinoblastom",
-          "Krvácení do přední komory oční u leukémie",
-          "Ztráta zraku u meduloblastomu"
+          "Serózní buňky, mucinózní buňky a chrupavka",
+          "Blastemová složka (husté modré buňky), epiteliální složka (primitivní žlázky/glomeruly) a stromální složka (vřetenovité buňky, svalovina)",
+          "Pouze zralé adipocyty, cévy a hladký sval",
+          "Homer-Wrightovy rozety, Pautrierovy mikroabscesy a psamomatózní tělíska"
         ],
         correct: 1,
-        explanation: "Retinoblastom roste ze sítnice směrem do sklivce. Při pohledu do oka nebo na fotografii chybí normální červený reflex pozadí (vyvolaný prokrvenou choriodeou), protože světlo se odrazí od šedobílé masy nádoru sítnice, což se jeví jako bílá zornice."
+        explanation: "Wilmsův tumor napodobuje vývoj ledviny. Obsahuje tři složky: nediferencovaný blastem (modré buňky), primitivní epitelové tubuly/glomeruly a mezenchymální stroma (které může obsahovat i kosterní sval)."
+      },
+      {
+        question: "Pacient má diagnostikován neuroblastom. Které metabolity se standardně stanovují z moči pro potvrzení diagnózy a sledování úspěšnosti léčby?",
+        options: [
+          "Bence-Jonesova bílkovina a albumin",
+          "Kyselina vanilmandlová (VMA) a kyselina homovanilová (HVA) - produkty metabolismu katecholaminů",
+          "Hladina glukózy a kreatininu",
+          "Kyselina močová a bilirubin"
+        ],
+        correct: 1,
+        explanation: "Neuroblastomy vycházejí ze sympatické nervové soustavy a produkují katecholaminy (adrenalin, noradrenalin, dopamin). Ty jsou v těle odbourávány na VMA a HVA, které se vylučují močí. Jejich detekce je klíčovým diagnostickým testem."
+      },
+      {
+        question: "Jak se nazývá bílý odlesk zornice (absence červeného reflexu) pozorovaný u dětí s retinoblastomem?",
+        type: "type-in",
+        correct: ["leukokorie", "leukokoria"],
+        explanation: "Leukokorie je medicínský termín označující bílou zornici, způsobenou odrazem světla od bělavého retinálního nádoru."
+      },
+      {
+        question: "Jak se nazývají rozety s centrálním neuropilem (bez lumenu), typické pro neuroblastom a meduloblastom?",
+        type: "type-in",
+        correct: ["Homer-Wrightovy rozety", "Homer-Wrightovy", "Homer-Wright", "Homer Wrightovy rozety"],
+        explanation: "Homer-Wrightovy rozety jsou tvořeny nádorovými buňkami uspořádanými kolem růžové zóny tvořené neuropilem."
       }
-    ,
-      {
-        question: "Jak se nazývá nejčastější maligní nitrooční nádor u dětí, spojený s mutací genu RB1?",
-        type: "type-in",
-        correct: ["retinoblastom"],
-        explanation: "Retinoblastom je vrozený maligní nádor sítnice u dětí, vyvolaný mutací obou alel tumor supresorového genu RB1."
-      },
-      {
-        question: "Jak se označuje bílý odlesk zornice (kočičí oko) u dětí s retinoblastomem?",
-        type: "type-in",
-        correct: ["leukokorie"],
-        explanation: "Leukokorie (bílý odlesk zornice při dopadu světla) je nejčastějším klinickým příznakem rozvíjejícího se retinoblastomu."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-36",
@@ -871,106 +898,106 @@ const DATA_ONCO_2 = [
   {
     id: "onco-39",
     title: "Nádory kůže (mimo melanom)",
-    section: "Nádory kůže a melanom",
+    section: "Dermatopatologie",
     category: "Onkologie",
-    keywords: ["bazaliom", "spinaliom", "kůže", "keratóza", "perly", "palisádování", "ulcus"],
+    keywords: ["bazaliom", "spinaliom", "keratóza", "keratin", "palisádování", "ulcus rodens", "seboroická"],
     content: {
-      definition: "Nádory kůže jsou nejčastějšími lidskými nádory vůbec. Dělí se na benigní (seboroická keratóza, histiocytom) a maligní, z nichž nejčastější jsou bazocelulární karcinom (bazaliom) a dlaždicobuněčný karcinom (spinaliom).",
-      etiology: "Chronické vystavení slunečnímu záření (UV záření), světlý fototyp (blond vlasy, modré oči, neschopnost opálení), expozice arsenu, chronické nehojící se rány.",
-      pathogenesis: "1. **Bazocelulární karcinom** (bazaliom): nejčastější. Vychází z bazálních buněk epidermis. Roste lokálně destruktivně, ale **prakticky nikdy nemetastázuje** (semimaligní chování). Mutace v dráze Hedgehog (gen PTCH). \n2. **Dlaždicobuněčný karcinom** (spinaliom): vychází z keratinocytů stratum spinosum. Předchází mu prekanceróza **solární (aktinická) keratóza**. Roste invazivně a **může metastázovat** do lymfatických uzlin.",
-      macroscopy: "Bazaliom: perleťový uzlík (nodulus) s drobnými rozšířenými cévkami (teleangiektáziemi) na povrchu, který se později uprostřed rozpadá a tvoří nehojící se vřed s lesklým lemem (**ulcus rodens**). Nejčastěji na obličeji. Spinaliom: tuhá, vyvýšená, šupinatá, často rohovějící nebo ulcerovaná plocha na místech vystavených slunci (uši, čelo, hřbety rukou).",
-      microscopy: "Bazaliom: čepy a hnízda tmavých buněk s velkým jádrem připomínajících bazální buňky. Na okrajích hnízd jsou buňky seřazeny paralelně vedle sebe jako plot (**palisádování buněk** / peripheral palisading). Stroma vykazuje retrakční artefakty (odchlípnutí stroma od nádoru při fixaci). Spinaliom: atypické dlaždicové buňky, rohovění (keratinové perly), mezibuněčné můstky.",
-      clinical: "Bazaliom se řeší prostým chirurgickým vyříznutím (excizí). Pokud se neléčí, může způsobit rozsáhlou destrukci obličeje (poničení nosu, očnice - ulcus rodens). Spinaliom vyžaduje důslednější excizi a sledování regionálních uzlin."
+      definition: "Nádory kůže jsou vůbec nejčastějšími lidskými nádory. Dělí se na benigní (např. seboroická keratóza, dermatofibrom), prekancerózy (aktinická keratóza, Bowenova choroba) and maligní (bazocelulární a dlaždicobuněčný karcinom).",
+      etiology: "Sluneční záření – zejména ultrafialové záření (UV, především UVB, které způsobuje tyminové dimery v DNA). Světlý kožní fototyp (I a II - neschopnost opálení), chronická expozice arsenu, imunosuprese, chronické nehojící se rány (Marjolinův vřed u jizev po popáleninách), genetický albinismus.",
+      pathogenesis: "1. **Benigní léze**: *Seboroická keratóza* (stařecká bradavice) – velmi častá benigní léze starších lidí, není spojená s UV. Mutace FGFR3.\n2. **Prekancerózy**:\n- *Aktinická (solární) keratóza*: prekurzor spinaliomu na osluněných místech. Vyvolaná UV. Dysplazie postihuje dolní třetinu epidermis.\n- *Bowenova choroba*: představuje dlaždicobuněčný karcinom *in situ* (dysplazie v celé šíři epidermis, ale neproniká přes bazální membránu).\n3. **Bazocelulární karcinom (bazaliom, 70-80 % malignit kůže)**: vychází z pluripotentních buněk bazální vrstvy. Roste infiltrujícím a lokálně destruktivním způsobem. Je **semimaligní** – vysoce destruktivní lokálně, ale **téměř nikdy nemetastázuje** (méně než 0,1 % případů). Mutace v dráze Hedgehog (gen PTCH1).\n4. **Dlaždicobuněčný karcinom (spinaliom, 20 %)**: vychází z keratinocytů stratum spinosum. Roste invazivně a **může metastázovat** do regionálních lymfatických uzlin. Předchází mu aktinická keratóza.",
+      macroscopy: "Seboroická keratóza: ostře ohraničený, žlutohnědý až černý, vyvýšený drsný uzlík, který vypadá jako **nalepený na kůži**. Bazaliom: zpočátku lesklý perleťový uzlík s jemnými teleangiektáziemi (rozšířenými cévkami). Později se centrum rozpadá a tvoří vřed s vyvýšeným lesklým perleťovým lemem (**ulcus rodens**), nejčastěji na obličeji. Spinaliom: tuhé, vyvýšené, červené ložisko pokryté rohovými šupinami nebo ulcerující uzel na místech vystavených slunci.",
+      microscopy: "- *Seboroická keratóza*: hyperplazie bazaloidních buněk, výrazná hyperkeratóza a tvorba pseudocyst vyplněných rohovinou (**rohovinové cysty** / horn cysts).\n- *Bazaliom*: čepy a hnízda tmavých bazaloidních buněk rostoucích z epidermis do dermis. Na okrajích hnízd jsou buňky seřazeny rovnoběžně vedle sebe jako plot (**periferní palisádování**). Při zpracování vzniká retrakční artefakt (odchlípení nádorových buněk od stroma).\n- *Spinocelulární karcinom*: atypické dlaždicové buňky infiltrující dermis. Nacházíme mezibuněčné můstky (desmosomy) a ložiska výrazného rohovění – růžové **keratinové perly** (keratin pearls).",
+      clinical: "Bazaliom roste pomalu, léčbou je kompletní chirurgická excize. Pokud se neléčí, může způsobit rozsáhlou destrukci obličeje (poničení nosu, očnice - ulcus rodens). Spinaliom vyžaduje důslednější excizi a sledování regionálních uzlin. Prognóza je u obou při včasném záchytu vynikající."
     },
     quiz: [
       {
-        question: "Který mikroskopický znak na okrajích nádorových čepů je charakteristický pro bazaliom (bazocelulární karcinom) kůže?",
+        question: "Jak se mikroskopicky projevuje bazocelulární karcinom (bazaliom) na okrajích nádorových čepů?",
         options: [
-          "Tvorba rakovinových perel",
-          "Palisádování buněk (paralelní seřazení sloupcovitých buněk na periferii čepů) a retrakční artefakty",
-          "Přítomnost Homer-Wrightových rozet",
-          "Ukládání melaninu do vaziva"
+          "Tvorbou keratinových perel a desmosomů",
+          "Charakteristickým periferním palisádováním jader (buňky jsou seřazeny paralelně vedle sebe jako plot) a retrakčními artefakty stroma",
+          "Přítomností Pautrierových mikroabscesů",
+          "Hnízdy melanocytů s pigmentem"
         ],
         correct: 1,
-        explanation: "Při okrajích hnízd bazaliomu se buňky orientují kolmo k hranici stroma, což pod mikroskopem vypadá jako řada kůlů v plotě (palisáda). Při zpracování se navíc vazivové stroma smrští více než nádorové čepy, což vytvoří charakteristické štěrbiny (retrakční zářezy)."
+        explanation: "Periferní palisádování buněk na okrajích hnízd a přítomnost štěrbiny mezi nádorem a vazivem (retrakční artefakt) jsou klíčové mikroskopické znaky bazaliomu. Keratinové perly jsou naopak typické pro spinaliom."
       },
       {
-        question: "Jak se liší biologické chování bazaliomu od spinaliomu (dlaždicobuněčného karcinomu) kůže?",
+        question: "Jak se liší biologické chování bazocelulárního karcinomu (bazaliomu) od dlaždicobuněčného karcinomu (spinaliomu)?",
         options: [
-          "Bazaliom je benigní a spinaliom semimaligní",
-          "Bazaliom roste lokálně destruktivně, ale téměř nikdy nemetastázuje; spinaliom roste rovněž destruktivně a má schopnost metastázovat (zejména lymfogenně do regionálních uzlin)",
-          "Spinaliom nikdy neinvaduje do škáry (dermis)",
-          "Bazaliom roste výhradně u dětí"
+          "Bazaliom metastázuje velmi časně; spinaliom nemetastázuje vůbec",
+          "Bazaliom je semimaligní – roste lokálně agresivně a destruktivně (ulcus rodens), ale prakticky nikdy nemetastázuje; spinaliom je plně maligní, roste rychleji a má schopnost metastázovat do regionálních uzlin",
+          "Oba nádory jsou benigní",
+          "Oba nádory jsou vysoce metastatické a vyžadují systémovou chemoterapii"
         ],
         correct: 1,
-        explanation: "Bazaliom je učebnicovým příkladem semimalignity - ničí tkáně v místě růstu, ale nezakládá vzdálená ložiska. Spinaliom je plně maligní karcinom, který po proniknutí do dermis může vniknout do lymfatických cév a metastázovat."
+        explanation: "Bazaliom je považován za semimaligní nádor. Ničí okolní tkáně (může prožírat chrupavky uší, nosu), ale jeho metastatický potenciál je extrémně nízký. Spinaliom (spinocelulární karcinom) má reálné riziko lymfogenního metastázování."
+      },
+      {
+        question: "Jak se nazývá velmi častá benigní léze kůže starších lidí (stařecká bradavice), která má drsný, žlutohnědý až černý povrch a vypadá jako nalepená na kůži?",
+        type: "type-in",
+        correct: ["seboroická keratóza", "seboroická keratoza"],
+        explanation: "Seboroická keratóza (verruca seborrheica) je benigní epidermální léze bez maligního potenciálu, histologicky charakterizovaná rohovými cystami."
+      },
+      {
+        question: "Jak se nazývá nehojící se destruktivní vřed vznikající uprostřed rostoucího bazaliomu na obličeji?",
+        type: "type-in",
+        correct: ["ulcus rodens"],
+        explanation: "Ulcus rodens je označení pro ulcerovaný bazaliom, který se šíří do hloubky a destruuje okolní tkáně."
       }
-    ,
-      {
-        question: "Jak se nazývá nejčastější maligní nádor kůže (semimaligní, lokálně invazivní), který prakticky nemetastázuje?",
-        type: "type-in",
-        correct: ["bazaliom", "bazocelulární karcinom"],
-        explanation: "Bazaliom (bazocelulární karcinom) roste lokálně invazivně a destruktivně (např. na obličeji), ale prakticky nikdy nemetastázuje."
-      },
-      {
-        question: "Jak se nazývá zhoubný epiteliální nádor kůže vycházející z keratinocytů, který tvoří keratinové perly?",
-        type: "type-in",
-        correct: ["spinocelulární karcinom", "dlaždicobuněčný karcinom"],
-        explanation: "Spinocelulární karcinom (dlaždicobuněčný karcinom kůže) vychází z epidermis a tvoří rohovějící keratinové čepy."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-40",
     title: "Melanom",
-    section: "Nádory kůže a melanom",
+    section: "Dermatopatologie",
     category: "Onkologie",
-    keywords: ["melanom", "kůže", "melanocyty", "Breslow", "Clark", "S100", "ABCDE", "melanin"],
+    keywords: ["melanom", "melanocyt", "Breslow", "Clark", "BRAF", "ABCDE", "S100", "HMB-45"],
     content: {
-      definition: "Maligní melanom je vysoce zhoubný nádor vycházející z melanocytů (pigmentových buněk kůže, oka či sliznic). Patří mezi nejagresivnější lidské nádory s extrémním metastatickým potenciálem.",
-      etiology: "Akutní, intermitentní slunění vedoucí k spálení kůže (zejména v dětství), solária, vysoký počet mateřských znamének (atypických névů), rodinná anamnéza.",
-      pathogenesis: "UV záření poškozuje DNA melanocytů. Časté jsou mutace v onkogenu **BRAF** (mutace V600E u cca 50 % kožních melanomů - cíl biologické léčby Vemurafenibem) nebo genu NRAS. Nádor roste nejprve horizontálně (radiální fáze růstu v epidermis - bez rizika metastáz) a následně vertikálně (prorůstá do škáry - dermis, kde získává přístup k cévám a metastázuje).",
-      macroscopy: "Klinické hodnocení podle **pravidla ABCDE**: \n- **A** (Asymmetry): asymetrie tvaru, \n- **B** (Border): neostré, nepravidelné okraje, \n- **C** (Color): barevná pestrost (černá, hnědá, červená, bílá), \n- **D** (Diameter): průměr větší než 6 mm, \n- **E** (Evolution): vývoj, změna v čase (svědění, krvácení, růst).",
-      microscopy: "Atypické, velké melanocyty s hyperchromními jádry a nápadnými eozinofilními jadérky. Mohou obsahovat hnědý pigment melanin. Pro hodnocení prognózy je nejdůležitější **tloušťka nádoru podle Breslowa** (měří se v milimetrech od stratum granulosum po nejhlubší nádorovou buňku). Clarkova klasifikace hodnotí zásah do anatomických vrstev kůže (I–V). Imunohistochemie: pozitivita **S100, HMB-45, Melan-A**.",
-      clinical: "Melanom velmi časně a nepředvídatelně metastázuje lymfogenně (regionální uzliny) i hematogenně (plíce, játra, mozek, kůže). Léčba: radikální chirurgická excize s bezpečnostním lemem kůže a biopsie sentinelové uzliny. U pokročilých se užívá imunoterapie (checkpoint inhibitory - pembrolizumab) a cílená léčba (BRAF inhibitory)."
+      definition: "Maligní melanom je vysoce zhoubný nádor vycházející z pigmentových buněk – melanocytů. Vyskytuje se nejčastěji na kůži, ale může vzniknout i v oku (uveální melanom), na sliznicích (dutina ústní, anus) nebo v mozkových obalech. Patří k nejagresivnějším lidským nádorům.",
+      etiology: "Akutní, intenzivní, intermitentní expozice slunci vedoucí k spálení kůže (zejména v dětství a dospívání), používání solárií. Vysoký počet mateřských znamének (atypických névů), světlý fototyp, genetická mutace CDKN2A (rodinný výskyt).",
+      pathogenesis: "UV záření poškozuje DNA melanocytů a indukuje mutace. Klíčové genetické změny: aktivující mutace onkogenu **BRAF** (nejčastěji **BRAF V600E** v cca 50 % kožních melanomů, což vede k trvalé aktivaci MAPK dráhy), nebo mutace NRAS a KIT. Růst se dělí na dvě fáze:\n1. **Radiální (horizontální) fáze růstu**: buňky proliferují v epidermis podél bazální membrány. V této fázi nádor nemetastázuje.\n2. **Vertikální fáze růstu**: buňky prorůstají přes bazální membránu dolů do dermis (škáry). Zde získávají přístup k lymfatickým a krevním cévám, což umožňuje metastázování.",
+      macroscopy: "Klinické vyšetření podle **pravidla ABCDE**:\n- **A** (Asymmetry): asymetrie tvaru léze.\n- **B** (Border): neostré, nepravidelné, zubaté okraje.\n- **C** (Color): barevná pestrost (odstíny hnědé, černé, červené, modré až bílé ložiska regrese).\n- **D** (Diameter): průměr léze > 6 mm.\n- **E** (Evolution): vývoj v čase (změna barvy, svědění, krvácení, růst).\nČtyři hlavní makroskopické subtypy:\n- *SSM (povrchově se šířící, 70 %)*: ploché pestré ložisko, dlouhá radiální fáze.\n- *Nodulární melanom (NM, 15 %)*: tmavý vyvýšený uzel, **chybí radiální fáze** (od počátku roste vertikálně, velmi agresivní).\n- *Lentigo maligna melanom (LMM)*: na obličeji starých osob, pomalý růst.\n- *Akrolentiginózní melanom (ALM)*: na dlaních, ploskách nohou a pod nehty (častý u tmavé rasy, není spojen s UV).",
+      microscopy: "Atypické, pleomorfní, velké melanocyty s velkými hyperchromními jádry a nápadnými eozinofilními jadérky (často vzhledu 'třešně'). V cytoplasmě může (ale nemusí - *amelanotický melanom*) být hnědý pigment melanin. Nádorové buňky vykazují pagetoidní šíření (migrují do horních vrstev epidermis). Imunohistochemie: pozitivita markers **S100, HMB-45, Melan-A, SOX10**.",
+      clinical: "Prognóza a staging jsou kriticky závislé na histologickém zhodnocení:\n- **Tloušťka podle Breslowa**: nejdůležitější prognostický faktor. Měří se v milimetrech od stratum granulosum epidermis po nejhlubší nádorovou buňku v dermis (T1: < 0,8 mm; T4: > 4 mm).\n- **Clarkovo hodnocení**: stupeň invaze do anatomických vrstev kůže (Level I: pouze v epidermis; Level V: do podkožního tuku).\nMelanom metastázuje velmi časně a nepředvídatelně: lymfogenně (sentinelová uzlina) i hematogenně (plíce, mozek, játra, kůže, srdce). Léčba: radikální excize s bezpečnostním lemem kůže (1-2 cm) + biopsie sentinelové uzliny. U pokročilých se užívá imunoterapie (anti-PD1: pembrolizumab) and cílená léčba (BRAF inhibitory: vemurafenib)."
     },
     quiz: [
       {
-        question: "Co je to klasifikace podle Breslowa u maligního melanomu a proč je klinicky tak důležitá?",
+        question: "Který mikroskopický parametr je podle mezinárodních standardů nejdůležitějším prognostickým faktorem u kožního melanomu a jak se měří?",
         options: [
-          "Hodnocení počtu mitóz v lymfatických uzlinách",
-          "Měření tloušťky (hloubky) invaze melanomu v milimetrech od stratum granulosum po nejhlubší bod infiltrace; je to nejdůležitější prognostický faktor určující riziko metastáz a šíři chirurgického lemu",
-          "Hodnocení barvy melanomu na stupnici 1 až 10",
-          "Měření průměru skvrny pravítkem"
+          "Clarkovo hodnocení invaze do anatomických vrstev kůže",
+          "Tloušťka nádoru podle Breslowa (měřená v milimetrech od stratum granulosum po nejhlubší nádorovou buňku)",
+          "Celkový objem tumoru v centimetrech",
+          "Počet ložisek melaninu v cytoplasmě"
         ],
         correct: 1,
-        explanation: "Breslowova tloušťka přímo koreluje s přežitím pacienta. Melanomy s tloušťkou pod 0.8 mm (tenké) mají vynikající prognózu, zatímco melanomy s tloušťkou nad 4 mm (tlusté) mají vysoké riziko mikrometastáz v těle a vyžadují agresivní léčbu."
+        explanation: "Breslowova tloušťka v mm is nejsilnějším prediktorem přežití a rizika metastáz. Clarkovo schéma (úroveň I-V) se dnes používá jako doplňkový údaj u tenkých melanomů."
       },
       {
-        question: "Která genová mutace (přítomná u cca 50 % kožních melanomů) je hlavním cílem moderní cílené léčby Vemurafenibem?",
+        question: "Jak se liší radiální a vertikální fáze růstu u maligního melanomu z hlediska rizika metastáz?",
         options: [
-          "Mutace genu APC",
-          "Mutace genu BRAF (konkrétně V600E)",
-          "Mutace fúzního genu BCR-ABL",
-          "Mutace genu BRCA1"
+          "V radiální fázi nádor roste do hloubky a metastázuje; ve vertikální fázi se šíří pouze po povrchu",
+          "V radiální fázi roste nádor horizontálně v epidermis bez přístupu k cévám (nulové riziko metastáz); ve vertikální fázi buňky prorůstají do dermis, kde pronikají do lymfatických a krevních cév a metastázují",
+          "Obě fáze mají stejné riziko metastáz",
+          "Melanom nikdy nemá radiální fázi růstu"
         ],
         correct: 1,
-        explanation: "Mutace BRAF V600E vede k trvalé aktivaci MAPkinázové dráhy, která stimuluje růst a dělení melanocytů bez vnějších signálů. Specifické BRAF inhibitory (např. vemurafenib, dabrafenib) tuto dráhu blokují a dokážou rychle zmenšit i pokročilé metastatické melanomy."
+        explanation: "Dokud je melanom v radiální fázi (šíření intraepidermálně), je vyléčitelný prostou excizí, protože v epidermis nejsou cévy. Přechod do vertikální fáze (invaze do dermis) představuje vznik rizika metastáz."
+      },
+      {
+        question: "Která specifická genová mutace (způsobující trvalou aktivaci MAPK dráhy) se vyskytuje u přibližně 50 % kožních melanomů a slouží jako cíl pro moderní biologickou léčbu (např. vemurafenibem)?",
+        type: "type-in",
+        correct: ["BRAF V600E", "BRAF"],
+        explanation: "Mutace BRAF V600E je nejčastější mutací u kožního melanomu, vedoucí k nekontrolované buněčné proliferaci."
+      },
+      {
+        question: "Jaké je znění akronymu (zkratky pěti písmen ABCDE) používaného pro klinické hodnocení rizikovosti pigmentových névů?",
+        type: "type-in",
+        correct: ["Asymmetry, Border, Color, Diameter, Evolution", "asymetrie, ohraničení, barva, průměr, vývoj"],
+        explanation: "Pravidlo ABCDE pomáhá odlišit benigní névus od maligního melanomu na základě asymetrie, okrajů, barvy, průměru a vývoje v čase."
       }
-    ,
-      {
-        question: "Která zkratka (pravidlo ABCDE) reprezentuje nepravidelnost okrajů u maligního melanomu?",
-        type: "type-in",
-        correct: ["B", "border"],
-        explanation: "Písmeno B v pravidle ABCDE označuje 'Border' (okraj), který je u maligního melanomu typicky nepravidelný nebo vroubkovaný."
-      },
-      {
-        question: "Který kožní pigment (produkovaný melanocyty) je přítomen v buňkách melanomu a barví ho do černa či hněda?",
-        type: "type-in",
-        correct: ["melanin"],
-        explanation: "Melanin je přirozený kožní pigment. Jeho nadměrná produkce atypickými melanocyty dodává melanomu jeho tmavé zbarvení."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-41",
@@ -1195,68 +1222,65 @@ const DATA_ONCO_2 = [
   {
     id: "onco-45",
     title: "Nádory kosti",
-    section: "Epiteliální a mezenchymální nádory",
+    section: "Nádory pohybového aparátu",
     category: "Onkologie",
-    keywords: ["osteosarkom", "kost", "Ewing", "sarkom", "chondrosarkom", "osteoid", "Codman", "cibule"],
+    keywords: ["kost", "osteosarkom", "Ewing", "chondrosarkom", "osteoid", "Codman", "t(11;22)"],
     content: {
-      definition: "Nádory kostí se dělí na primární (velmi vzácné) a sekundární (metastázy karcinomů prsu, prostaty, plic - nejčastější). Primární zhoubné kostní nádory postihují převážně děti a mladé dospělé. Pro diagnózu osteosarkomu je absolutním předpokladem **přímá produkce atypického osteoidu (nezralé kostní matrix) maligními osteoblasty**.",
-
-      etiology: "Osteosarkom: mutace genů RB1 (asociace s retinoblastomem), TP53 (Li-Fraumeni), Pagetova kostní choroba u starších. Ewingův sarkom: specifická chromozomální translokace t(11;22) vytvářející fúzní gen **EWS-FLI1**.",
-      pathogenesis: "1. **Osteosarkom**: nejčastější primární maligní nádor kosti u mladých (10–20 let). Vzniká v metafýzách dlouhých kostí (kolem kolene - distální femur, proximální tibie). \n2. **Ewingův sarkom**: vysoce agresivní, u dětí do 15 let. Roste v diafýzách dlouhých kostí. \n3. **Chondrosarkom**: maligní nádor z chrupavky, u starších dospělých.",
-      macroscopy: "Osteosarkom: velká, destruktivní masa v metafýze, která prorůstá kortikalis a nadzdvihuje periost (okostici). To na rentgenu vytváří **Codmanův trojúhelník** (úhel mezi nadzdvihnutým periostem a kostí) a obraz **slunečních paprsků** (spikuly kosti). Ewingův sarkom: destruuje dřeňovou dutinu, periost reaguje tvorbou koncentrických vrstev kosti připomínajících **slupky cibule**.",
-      microscopy: "Osteosarkom: anaplastické vřetenovité mezenchymální buňky vykazující těžký pleomorfismus a bizarní mitózy. Zcela diagnostickým kritériem je, že tyto buňky **přímo produkují atypický osteoid** (nezralou kostní matrix - růžová homogenní hmota odkládaná jako krajkovitá síť mezi nádorovými buňkami). Ewingův sarkom: drobnokulatobuněčný modrý nádor (small round blue cell tumor), buňky jsou bohaté na glykogen (PAS pozitivní).",
-
-      clinical: "Projevují se bolestí kosti (často mylně připisovanou růstu nebo úrazu při sportu) a zduřením. Typické jsou patologické zlomeniny při minimálním násilí. Osteosarkom a Ewingův sarkom metastázují velmi časně hematogenně do plic. Léčba vyžaduje předoperační (neoadjuvantní) chemoterapii a radikální chirurgický výkon (resekce kosti se zachováním končetiny - náhradou endoprotézou)."
+      definition: "Nádory kostí se dělí na primární (velmi vzácné) a sekundární (metastázy - mnohonásobně častější). Primární zhoubné kostní nádory postihují převážně děti a mladé dospělé.",
+      etiology: "U osteosarkomu: mutace tumor supresorových genů **RB1** (častý výskyt u pacientů, kteří přežili retinoblastom) and **TP53** (Li-Fraumeni syndrom). U starších pacientů vzniká na podkladě Pagetovy kostní choroby. U Ewingova sarkomu: specifická reciproké translokace **t(11;22)**.",
+      pathogenesis: "1. **Nádory tvořící kost (Osteogenní)**:\n- *Osteoidní osteom*: benigní, malý tumor (< 2 cm) v kůře dlouhých kostí. Způsobuje výrazné noční bolesti vyvolané prostaglandiny, které **typicky mizí po podání salicylátů (aspirinu)**.\n- *Osteoblastom*: benigní, větší než 2 cm, nejčastěji v obratlích, bolest nemizí po aspirinu.\n- *Osteosarkom*: nejčastější primární maligní kostní nádor (mimo hematopoetické). Vrchol výskytu v 10–20 letech. Vzniká v metafýzách dlouhých kostí (50 % v okolí kolene – distální femur, proximální tibie).\n2. **Nádory tvořící chrupavku (Chondrogenní)**:\n- *Osteochondrom (exostóza)*: nejčastější benigní kostní leze, stopkatý výběžek krytý chrupavčitou čepičkou.\n- *Chondrom (Enchondrom)*: benigní, roste uvnitř dřeně krátkých kostí rukou a nohou.\n- *Chondrosarkom*: maligní nádor z chrupavky, postihuje starší dospělé (nad 50 let), lokalizován v pánvi, žebrech, rameni.\n3. **Ewingův sarkom**: vysoce maligní, extrémně agresivní neuroektodermální tumor dětí a dospívajících (do 20 let). Roste v diafýze dlouhých kostí. Charakterizován fúzním genem **EWS-FLI1** vzniklým translokací t(11;22).\n4. **Obrovskobuněčný kostní tumor (Osteoklastom)**: lokálně agresivní, u mladých dospělých (20-40 let) v epifýzách dlouhých kostí. Obsahuje reaktivní mnohojaderné obří buňky (osteoklasty).",
+      macroscopy: "Osteosarkom: velká, neohraničená šedobílá masa infiltrující dřeňovou dutinu, destruující kortikalis kosti a nadzdvihující periost (okostici). Toto nadzdvihnutí periostu vyvolává reaktivní novotvorbu kosti, což na RTG snímku vytváří **Codmanův trojúhelník** (úhel periostu a kosti) a obraz **slunečních paprsků** (sunburst - spikuly kosti rostoucí kolmo k povrchu). Ewingův sarkom: šedobílá, měkká ložiska v diafýze, periost reaguje tvorbou koncentrických lamel, což dává na RTG obraz **slupky cibule** (onion-skin).\n- *Osteoklastom*: masivní hnědočervený tumor epifýzy, často cysticky změněný a prokrvácený.",
+      microscopy: "- *Osteosarkom*: vysoce pleomorfní vřetenobuněčný mezenchymální tumor s bizarními mitózami. Zcela diagnostickým kritériem je **přímá produkce atypického osteoidu** (nezralé kostní matrix - růžová homogenní hmota tvořící krajkovitou síť) nádorovými buňkami.\n- *Chondrosarkom*: atypické chondrocyty v lakunách s vícečetnými jádry infiltrující kostní trámce.\n- *Ewingův sarkom*: monomorfní drobnokulatobuněčný modrý nádor (small round blue cells), buňky obsahují glykogen (jsou **PAS pozitivní**).\n- *Osteoklastom*: uniformní jednojaderné buňky stroma proložené obřími mnohojadernými osteoklastickými buňkami (obsahují i > 100 jader).",
+      clinical: "Projevují se lokální bolestí kosti (často zpočátku připisovanou úrazu při sportu nebo růstu) a zduřením. Typické jsou patologické zlomeniny při minimálním násilí. Osteosarkom a Ewingův sarkom metastázují velmi časně hematogenně do plic. Léčba u maligních forem vyžaduje neoadjuvantní (předoperační) chemoterapii, radikální chirurgický výkon (resekce s náhradou endoprotézou) a adjuvantní chemoterapii. Ewingův sarkom je navíc vysoce radiocitlivý."
     },
     quiz: [
       {
-        question: "Který histologický nález je nezbytnou podmínkou pro diagnózu osteosarkomu?",
+        question: "Co je absolutním a zcela diagnostickým histologickým kritériem pro potvrzení diagnózy osteosarkomu?",
         options: [
-          "Přítomnost zralé hyalinní chrupavky",
-          "Přímá produkce osteoidu (nezralé kostní matrix) anaplastickými nádorovými buňkami",
-          "Přítomnost Pautrierových mikroabscesů",
-          "Tvorba žlázových struktur produkujících hlen"
+          "Přítomnost chrupavky v nádoru",
+          "Přímá produkce atypického osteoidu (nezralé kostní matrix) maligními nádorovými buňkami",
+          "Přítomnost mnohojaderných osteoklastů",
+          "Pozitivita na keratinové markery"
         ],
         correct: 1,
-        explanation: "Osteoid je růžová proteinová hmota, která se později mineralizuje na kost. Pouze osteosarkomové buňky mají schopnost tvořit osteoid samy (osteogeneze). Nález atypického osteoidu obklopeného bizarními maligními buňkami je pro diagnózu rozhodující."
+        explanation: "Pro diagnózu osteosarkomu je klíčové prokázat, že anaplastické nádorové buňky samy přímo tvoří osteoid (kostní matrix). Pokud tumor kost netvoří (i když v ní roste a ničí ji), nejedná se o osteosarkom."
       },
       {
-        question: "Co je to Codmanův trojúhelník a u kterého kostního nádoru se s ním typicky setkáváme na rentgenu?",
+        question: "Který benigní nádor kosti způsobuje intenzivní noční bolesti, které typicky kompletně mizí po podání salicylátů (např. aspirinu)?",
         options: [
-          "Zlomenina kyčelního kloubu",
-          "Stín na RTG plic",
-          "Rentgenový obraz vzniklý nadzdvihnutím periostu (okostice) rychle rostoucím nádorem, kdy se periost v místě odchlípení snaží tvořit novou kost, typický pro osteosarkom",
-          "Tvar nádoru na lebce"
+          "Osteoblastom",
+          "Osteoidní osteom (osteoid osteoma)",
+          "Osteochondrom",
+          "Enchondrom"
         ],
-        correct: 2,
-        explanation: "Rychle rostoucí osteosarkom prorazí kortikální kost a tlačí na periost, který se odchlipuje od kosti. Na okrajích tohoto odchlípení periost reaguje novotvorbou kosti, což na RTG snímku vytváří charakteristický trojúhelníkový stín (Codmanův úhel/trojúhelník)."
+        correct: 1,
+        explanation: "Osteoidní osteom produkuje vysoké množství prostaglandinů PGE2, což stimuluje nervová zakončení v periostu a způsobuje silnou bolest. Salicyláty (inhibitory COX) tuto produkci zablokují a bolest okamžitě ustoupí."
+      },
+      {
+        question: "Jaké typické radiologické (RTG) nálezy periostální reakce doprovázejí osteosarkom a Ewingův sarkom?",
+        options: [
+          "Oba nádory nevykazují na RTG žádné změny",
+          "Osteosarkom vykazuje Codmanův trojúhelník a obraz slunečních paprsků (sunburst); Ewingův sarkom vykazuje periostální vrstvení vzhledu slupky cibule (onion-skin)",
+          "Osteosarkom vykazuje vzhled mýdlových bublin; Ewingův sarkom vyseknuté otvory",
+          "Oba se projevují jako sklerotická ložiska"
+        ],
+        correct: 1,
+        explanation: "Rychlý růst těchto maligních nádorů nadzdvihuje periost. U osteosarkomu periost tvoří kosti podél cév (sluneční paprsky) a na okrajích (Codmanův trojúhelník). U Ewingova sarkomu periost tvoří soustředné vrstvy (slupka cibule)."
+      },
+      {
+        question: "Která specifická chromozomální translokace (a z ní vzniklý fúzní gen EWS-FLI1) definuje Ewingův sarkom?",
+        type: "type-in",
+        correct: ["t(11;22)", "t(11,22)", "translokace t(11;22)"],
+        explanation: "Translokace t(11;22)(q24;q12) je přítomna u více než 90 % Ewingových sarkomů a fúzuje gen EWS na 22. chromozomu s genem FLI1 na 11. chromozomu."
+      },
+      {
+        question: "Jak se nazývá lokálně agresivní kostní tumor typický pro epifýzy dlouhých kostí, který obsahuje obří buňky s desítkami jader a na RTG snímku má vzhled 'mýdlových bublin'?",
+        type: "type-in",
+        correct: ["obrovskobuněčný kostní tumor", "osteoklastom", "obrovskobuněčný nádor kostí", "obrovskobuněčný tumor"],
+        explanation: "Obrovskobuněčný kostní tumor (osteoklastom) postihuje epifýzy dlouhých kostí a je tvořen jednojaderným stromatem proloženým reaktivními osteoklastickými obřími buňkami."
       }
-    ,
-      {
-        question: "Který nejčastější primární maligní nádor kosti u mladých lidí (v metafýze dlouhých kostí) přímo produkuje osteoid?",
-        type: "type-in",
-        correct: ["osteosarkom"],
-        explanation: "Osteosarkom je maligní nádor kosti u dospívajících, jehož diagnostickým kritériem je přímá tvorba osteoidu nádorovými buňkami."
-      },
-      {
-        question: "Který vysoce maligní dětský kostní nádor (v diafýze) je spojen s translokací t(11;22) a obrazem cibulových slupek?",
-        type: "type-in",
-        correct: ["Ewingův sarkom"],
-        explanation: "Ewingův sarkom je drobnokulatobuněčný nádor diafýzy kostí, charakteristický periostální reakcí připomínající slupky cibule."
-      },
-      {
-        question: "Co je definitivním a absolutně nezbytným histologickým kritériem pro to, aby mohl patolog diagnostikovat nádor jako osteosarkom (a odlišit ho tak například od fibrosarkomu rostoucího v kosti)?",
-        options: [
-          "Přítomnost vícejaderných obrovských buněk typu osteoklastů",
-          "Přímá produkce atypického osteoidu (nezralé kostní matrix) samotnými maligními nádorovými buňkami",
-          "Nález Codmanova trojúhelníku na rentgenu",
-          "Záplava malých kulatých modrých buněk s vysokým obsahem glykogenu"
-        ],
-        correct: 1,
-        explanation: "Klíčovým diagnostickým znakem osteosarkomu je, že samotné anaplastické nádorové buňky mají částečně zachovanou osteoblastickou diferenciaci a jsou schopny přímo (bez preexistující chrupavky) tvořit novou nezralou kostní hmotu (osteoid). Pokud patolog v mikroskopu nevidí nádorovými buňkami tvořený osteoid, nemůže diagnózu osteosarkomu stanovit."
-      }]
-  }
-];
+    ]
+}];
 
 // Export database parts into window namespace
 if (typeof window !== 'undefined') {

@@ -543,66 +543,83 @@ const DATA_ONCO_1 = [
     title: "Hodgkinův lymfom",
     section: "Hematopatologie",
     category: "Onkologie",
-    keywords: ["Hodgkin", "lymfom", "Reed", "Sternberg", "Hodgkinovy", "bimodální", "uzliny", "skleróza"],
+    keywords: ["Hodgkin", "lymfom", "Reed", "Sternberg", "Hodgkinovy", "bimodální", "uzliny", "skleróza", "CD30", "CD15", "Ann Arbor"],
     content: {
-      definition: "Hodgkinův lymfom (HL) je specifický maligní lymfom, který postihuje lymfatické uzliny a vyznačuje se přítomností obřích nádorových buněk (buněk Reedové-Sternberga a buněk Hodgkinových) obklopených reaktivním, nenádorovým zánětlivým doprovodem.",
-      etiology: "Silná asociace s infekcí virem Epstein-Barrové (EBV) v cca 40–50 % případů, imunodeficity.",
-      pathogenesis: "Nádorové buňky (RS buňky) jsou monoklonální B-lymfocyty, které ztratily schopnost exprese imunoglobulinů a unikají apoptóze. Produkují cytokiny (IL-5, IL-6), které lákají reaktivní buňky (lymfocyty, eosinofily, histiocyty, plazmatické buňky). Zánětlivý infiltrát tvoří 99 % hmoty nádoru, vlastní nádorové buňky tvoří pouze 1–3 %.",
-      macroscopy: "Zvětšené, nebolestivé lymfatické uzliny (nejčastěji krční a mediastinální). Uzliny jsou tuhé, na řezu šedobílé, u nodulární sklerózy rozdělené vazivovými zářezy do uzlovitých ložisek. Uzliny nesplývají v jeden paket tak snadno jako u jiných lymfomů.",
-      microscopy: "Klíčové nádorové buňky: \n1. **Hodgkinova buňka**: velká, jednojaderná, s obřím eozinofilním jadérkem. \n2. **Buňka Reedové-Sternberga (RS buňka)**: obří, vícejaderná (nebo dvoujaderná), s jádry zrcadlově proti sobě (vzhled **sovích očí**). \n3. **Lakunární buňky** (u typu nodulární skleróza): cytoplasma se při fixaci smrští a buňka vypadá, že leží v prázdné lakuně. \nHlavní subtypy HL: Nodulární skleróza (nejčastější), Smíšená buněčnost, Bohatý na lymfocyty, Lymfocytární deplece (nejhorší prognóza).",
-      clinical: "Vyskytuje se v bimodálním věkovém rozložení (vrchol mezi 20.–30. rokem a pak po 60. roce). Projevuje se nebolestivým zvětšením uzlin a **B-příznaky** (horečka, noční pocení, úbytek hmotnosti > 10 %). Má vynikající prognózu, většina pacientů se vyléčí chemoterapií ABVD a radioterapií."
+      definition: "Hodgkinův lymfom (HL) je specifická maligní lymfoproliferace postihující lymfatické uzliny. Je charakteristický přítomností obřích maligních buněk (Hodgkinových a Reedové-Sternberga) obklopených hojným reaktivním zánětlivým doprovodem (97–99 % masy nádoru). Dělí se na klasický Hodgkinův lymfom (CHL, 95 %) and nodulární lymfocytárně predominantní Hodgkinův lymfom (NLPHL, 5 %).",
+      etiology: "Silná asociace s infekcí virem Epstein-Barrové (EBV) v cca 40–50 % případů klasického HL (zejména u typu smíšené buněčnosti a lymfocytární deplece), imunodeficity (HIV, po transplantacích).",
+      pathogenesis: "Nádorové buňky (RS buňky) jsou monoklonální B-lymfocyty pocházející z buněk zárodečného centra, které v důsledku somatických mutací ztratily schopnost exprese imunoglobulinů a unikly apoptóze. Tyto buňky secernují řadu cytokinů a chemokinů (IL-5, IL-6, IL-13, TNF-alfa, TGF-beta), které aktivně rekrutují a udržují nenádorové reaktivní pozadí (T a B lymfocyty, eozinofily, plazmocyty, makrofágy, fibroblasty).",
+      macroscopy: "Zvětšené, nebolestivé, gumovité lymfatické uzliny (typicky krční, supraklavikulární a mediastinální). Roste unicentricky a šíří se anatomicky souvisle do sousedních uzlinových skupin. Na řezu je tkáň šedobílá, u nodulární sklerózy je rozdělena tuhými bílými vazivovými proužky do uzlovitých ložisek. Uzliny obvykle nesplývají v paket tak snadno jako u non-Hodgkinových lymfomů.",
+      microscopy: "1. **Nádorové buňky**: \n- *Hodgkinova buňka*: velká mononukleární buňka s velkým eosinofilním jadérkem. \n- *Reedové-Sternberga (RS) buňka*: obří multinukleární (nebo dvoujaderná) buňka s jadérky vzhledu 'sovích očí'. \n- *Lakunární buňky* (typ nodulární skleróza): smrštěním cytoplasmy při fixaci vzniká opticky prázdný prostor (lakuna) kolem buňky. \n- *Popcorn buňky (L&H buňky)* (u NLPHL): laločnaté jádro připomínající vypukanou kukuřici. \n2. **Imunofenotyp**: \n- *Klasický HL*: **CD30+, CD15+**, CD45-, CD20- (většinou). \n- *NLPHL*: **CD20+, CD45+**, CD30-, CD15-. \n3. **Subtypy klasického HL**: \n- *Nodulární skleróza (NS, 70 %)*: mladé ženy, kolagenní pruhy, lakunární buňky. \n- *Smíšená buněčnost (MC)*: starší věk, silná asociace s EBV, hojné eozinofily a RS buňky. \n- *Bohatý na lymfocyty (LR)*: nejlepší prognóza CHL, reaktivní pozadí tvoří převážně zralé lymfocyty. \n- *Lymfocytární deplece (LD)*: nejvzácnější, nejhorší prognóza, chudé na reaktivní buňky, masivní přítomnost atypických RS buněk (u HIV).",
+      clinical: "Bimodální věková křivka (vrchol mezi 20.–30. rokem a pak po 60. roce). Projevuje se nebolestivou lymfadenopatií a systémovými **B-příznaky** (horečka > 38 °C, noční pocení, pokles hmotnosti o > 10 % za 6 měsíců). Staging se hodnotí podle **klasifikace Ann Arbor** (stadium I: jedna uzlinová oblast; II: dvě a více na jedné straně bránice; III: obě strany bránice; IV: mimouzlinové orgány - kostní dřeň, plíce). Prognóza je vynikající (přes 80–90 % pacientů se vyléčí pomocí režimu ABVD ± radioterapie)."
     },
     quiz: [
       {
-        question: "Jak vypadá typická buňka Reedové-Sternberga (RS buňka) pod mikroskopem?",
+        question: "Jak se liší imunofenotyp nádorových buněk u klasického Hodgkinova lymfomu (CHL) od nodulárního lymfocytárně predominantního Hodgkinova lymfomu (NLPHL)?",
         options: [
-          "Je to malý, tmavý lymfocyt s rozpadlým jádrem",
-          "Je to obří, dvoujaderná nebo vícejaderná buňka, kde jádra leží vedle sebe se zrcadlovým obrazem a obsahují obrovská, růžová jadérka (vzhled sovích očí)",
-          "Jde o buňku vyplněnou hlenovými vakuolami posunujícími jádro k okraji",
-          "Je to bezjaderný stín buňky"
+          "Maligní buňky u CHL jsou CD20+ a CD45+, zatímco u NLPHL vyjadřují CD30 a CD15",
+          "Maligní buňky u CHL jsou CD30+ a CD15+ (přičemž jsou CD20- a CD45-), zatímco u NLPHL jsou pozitivní na B-buněčné markery CD20+ a leukocytární antigen CD45+ (a negativní na CD30 a CD15)",
+          "U obou typů jsou buňky výhradně CD3+ a CD8+",
+          "U klasického HL chybí jakákoliv membránová exprese receptorů"
         ],
         correct: 1,
-        explanation: "RS buňky jsou diagnostickým znakem Hodgkinova lymfomu. Jsou to obří buňky vzniklé endomitózou. Klasická dvoujaderná forma s nápadnými jadérky obklopenými světlým dvorcem připomíná oči sovy (owl-eye appearance)."
+        explanation: "Toto rozlišení je kritické. Nádorové buňky klasického HL (Hodgkinovy a RS buňky) ztratily typické B-markery a nesou CD30 a CD15. Nádorové buňky NLPHL (L&H popkornové buňky) si naopak zachovávají plný B-buněčný fenotyp (CD20+, CD45+)."
       },
       {
-        question: "Co tvoří převážnou část (97-99 %) objemu nádorové uzliny u Hodgkinova lymfomu?",
+        question: "Který subtyp klasického Hodgkinova lymfomu je nejčastější v západních zemích, postihuje zejména mladé ženy a projevuje se mediastinální masou a přítomností kolagenních proužků na řezu uzlinou?",
         options: [
-          "Čistě nádorové RS buňky bez jiných elementů",
-          "Reaktivní, nenádorové pozadí tvořené lymfocyty, plazmatickými buňkami, histiocyty, eosinofilními granulocyty a vazivem",
-          "Ložiska hnisu a nekrózy",
-          "Kaseózní nekróza a epiteloidní buňky"
+          "Subtyp se smíšenou buněčností (mixed cellularity)",
+          "Nodulární skleróza (nodular sclerosis)",
+          "Subtyp bohatý na lymfocyty (lymphocyte-rich)",
+          "Subtyp s lymfocytární deplecí (lymphocyte-depleted)"
         ],
         correct: 1,
-        explanation: "Hodgkinův lymfom je v patologii unikátní. Samotných nádorových buněk (Hodgkinových a RS) je v uzlině velmi málo. Tyto buňky však vylučují velké množství cytokinů a chemokinů, které do uzliny přivolají obrovské množství zdravých imunitních buněk, jež tvoří pozadí nádoru."
+        explanation: "Nodulární skleróza tvoří až 70 % všech případů Hodgkinova lymfomu. Pod mikroskopem se vyznačuje vazivovými kolagenními septy ohraničujícími nádorové noduly a typickými lakunárními buňkami."
+      },
+      {
+        question: "Co vyjadřují písmena 'A' a 'B' u stagingu Hodgkinova lymfomu (např. stadium IIB) podle Ann Arbor klasifikace?",
+        options: [
+          "A značí mladý věk pacienta, B starší věk",
+          "A znamená nepřítomnost celkových (systémových) příznaků; B znamená přítomnost tzv. B-příznaků (horečka, noční pocení, úbytek na váze)",
+          "A znamená postižení nad bránicí, B pod bránicí",
+          "A označuje postižení pouze kostní dřeně"
+        ],
+        correct: 1,
+        explanation: "B-příznaky mají zásadní prognostický význam a ovlivňují intenzitu léčby. Zahrnují nevysvětlitelné horečky nad 38 °C, profúzní noční pocení a neúmyslný úbytek hmotnosti o více než 10 % za posledních 6 měsíců."
+      },
+      {
+        question: "Jak se nazývá specifická varianta nádorových buněk typická pro nodulární lymfocytárně predominantní Hodgkinův lymfom (NLPHL), která má laločnaté jádro?",
+        type: "type-in",
+        correct: ["popcorn buňka", "popcorn buňky", "L&H buňka", "L&H buňky", "popcorn"],
+        explanation: "Popcorn buňky (L&H buňky - Lymphocytic and Histiocytic) jsou charakteristické pro NLPHL. Mají laločnaté jádro připomínající popcorn a jsou CD20+."
+      },
+      {
+        question: "Které dvě CD zkratky (např. CDXX a CDYY) definují klasický imunofenotyp nádorových buněk u klasického Hodgkinova lymfomu?",
+        type: "type-in",
+        correct: ["CD30 a CD15", "CD15 a CD30", "CD30+ a CD15+", "CD15+ a CD30+"],
+        explanation: "Maligní Reedové-Sternberga a Hodgkinovy buňky u klasického HL jsou charakteristicky CD30 pozitivní a CD15 pozitivní."
+      },
+      {
+        question: "Který stagingový systém (název podle města v USA) se používá k určení klinického stadia I až IV u Hodgkinova lymfomu?",
+        type: "type-in",
+        correct: ["Ann Arbor", "Ann Arbor klasifikace", "Ann Arbor systém"],
+        explanation: "Staging Hodgkinova i non-Hodgkinových lymfomů se standardně provádí podle Ann Arbor klasifikace na základě počtu postižených uzlinových skupin a jejich vztahu k bránici."
       }
-    ,
-      {
-        question: "Jak se nazývají diagnostické obří dvoujaderné buňky s jádry vzhledu 'sovích očí' u Hodgkinova lymfomu?",
-        type: "type-in",
-        correct: ["Reedové-Sternberga buňky", "Reed-Sternbergovy buňky", "RS buňky"],
-        explanation: "Buňky Reedové-Sternberga (RS buňky) jsou diagnostické obří buňky Hodgkinova lymfomu, vzniklé endomitózou B-lymfocytů."
-      },
-      {
-        question: "Který virus je silně asociován s rozvojem Hodgkinova lymfomu a Burkittova lymfomu?",
-        type: "type-in",
-        correct: ["EBV", "Epstein-Barrové virus", "Epstein-Barrové"],
-        explanation: "Epstein-Barrové virus (EBV) je onkogenní herpesvirus, který hraje roli v patogenezi několika lymfomů."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-12",
     title: "Lymfomy z B řady (obecný přehled a patogeneze)",
     section: "Hematopatologie",
     category: "Onkologie",
-    keywords: ["B-lymfom", "imunoglobulin", "diferenciace", "folikul", "centrum", "somatické", "translokace"],
+    keywords: ["B-lymfom", "imunoglobulin", "diferenciace", "folikul", "centrum", "somatické", "translokace", "AID"],
     content: {
-      definition: "Lymfomy z B řady jsou maligní neoplazie vycházející z různých vývojových stadií B-lymfocytů (od prekurzorů v kostní dřeni až po zralé paměťové B-buňky a plazmatické buňky v periferních lymfatických tkáních).",
-      etiology: "Poruchy imunitního systému (autoimunity - Sjögren, celiakie; imunodeficity - HIV), chronické antigení stimulace (H. pylori, virus EBV, virus HCV) a translokace genů.",
-      pathogenesis: "B-lymfocyty během svého zrání v zárodečných (germinálních) centrech uzlin procházejí procesem **somatické hypermutace** a **třídového přesmyku** imunoglobulinových genů. Tyto procesy vyžadují cílené štěpení DNA. Pokud dojde k chybě v opravách, vznikají typické onkogenní translokace (např. připojení protoonkogenů pod silný promotor pro těžký řetězec imunoglobulinů IGH). B-lymfomy představují více než 85–90 % všech non-Hodgkinových lymfomů.",
-      macroscopy: "Difuzní zvětšení lymfatických uzlin, které často splývají do velkých paketů. Uzliny jsou elastické nebo měkké, na řezu homogenní, rybího vzhledu, šedavé barvy. Postižení mimouzlinových (extragonadálních) orgánů - slezina, játra, zažívací trakt (zejména žaludek).",
-      microscopy: "Mikroskopicky dochází k setření normální architektury uzliny (mizí sinusy a zárodečná centra). Nádorové buňky mohou růst **nodulárně** (napodobují folikuly) nebo **difuzně** (homogenní masa buněk). Všechny B-lymfomy vykazují pozitivitu v B-markerech: **CD19, CD20, CD79a** a vykazují klonalitu (exprese pouze lehkého řetězce kappa nebo lambda).",
-      clinical: "Projevují se lymfadenopatií (zvětšením uzlin), hepatosplenomegalií a B-příznaky. Diagnostika vyžaduje celou exirpovanou uzlinu (cytologická punkce je pro určení typu lymfomu nedostatečná). Hlavním terapeutickým standardem je imunochemoterapie (např. režim CHOP s protilátkou proti CD20 - **Rituximab**)."
+      definition: "Lymfomy z B řady jsou maligní neoplazie vycházející z různých vývojových stadií B-lymfocytů. Tyto stádia sahají od nejranějších prekurzorů v kostní dřeni (představujících lymfoblasty) až po zralé, antigenem stimulované B-buňky (v zárodečných centrech) a terminální plazmatické buňky.",
+      etiology: "Poruchy imunitního systému (autoimunitní choroby jako Sjögrenův syndrom, revmatoidní artritida; vrozené či získané imunodeficity, např. HIV/AIDS), chronické antigenní stimulace (Helicobacter pylori v žaludku, virus hepatitidy C - HCV, EBV, borélie) a specifické genetické translokace.",
+      pathogenesis: "B-lymfocyty procházejí během svého vývoje procesy, které přirozeně pozměňují jejich DNA: VDJ rekombinace, **somatická hypermutace** v zárodečných (germinálních) centrech a **třídový přesmyk** imunoglobulinových genů. Tyto fyziologické zlomy v DNA vyžadují působení enzymu **AID** (activation-induced cytidine deaminase). Pokud dojde k chybě v opravách, může být onkogen (např. BCL2, MYC, CCND1) připojen k vysoce aktivnímu promotoru pro těžký řetězec imunoglobulinů (IGH). B-lymfomy představují 85–90 % všech non-Hodgkinových lymfomů (NHL).",
+      macroscopy: "Difuzní zvětšení lymfatických uzlin, které často splývají do velkých, nebolestivých balíků (paketů). Uzliny jsou elastické nebo měkké, na řezu homogenní, šedorůžové, vzhledu rybího masa. Může dojít k postižení extranodálních (mimouzlinových) tkání, např. sleziny, jater, kostní dřeně a gastrointestinálního traktu (žaludek).",
+      microscopy: "Setření normální architektury uzliny (mizí marginální sinusy a folikuly). Růst je buď **nodulární** (folikulární), nebo **difuzní** (homogenní buněčný infiltrát). Všechny B-lymfomy vykazují pozitivitu v B-specifických markerech: **CD19, CD20, CD22, CD79a, PAX-5**. Charakteristická je **klonální restrikce lehkých řetězců** (buňky produkují buď pouze kappa, nebo pouze lambda řetězce; fyziologický poměr je cca 2:1, posun k výhradní produkci jednoho typu značí klonalitu/malignitu).",
+      clinical: "Lymfadenopatie, splenomegalie, hepatomegalie a celkové příznaky (horečky, hubnutí, noční pocení). Pro diagnózu je nutná celá exstirpovaná uzlina (cytologická punkce nepostačuje). Hlavním terapeutickým standardem u CD20+ lymfomů je imunochemoterapie s přidáním protilátky **Rituximab** (anti-CD20)."
     },
     quiz: [
       {
@@ -626,8 +643,18 @@ const DATA_ONCO_1 = [
         ],
         correct: 1,
         explanation: "Zrání B-lymfocytů zahrnuje aktivní procesy modifikace DNA (VDJ rekombinace, somatická hypermutace v germinálním centru a třídový přesmyk). Tyto fyziologické zlomy DNA prováděné enzymem AID (activation-induced cytidine deaminase) jsou náchylné k chybám, které mohou omylem propojit onkogen (např. BCL2 nebo MYC) s promotorem pro imunoglobuliny."
-      }
-    ,
+      },
+      {
+        question: "Který jev se používá v imunohistochemii k průkazu klonality a tím maligního charakteru B-lymfoproliferace?",
+        options: [
+          "Ztráta exprese všech B-markerů",
+          "Klonální restrikce lehkých řetězců (nádorové buňky vyjadřují výhradně jen řetězec kappa, nebo jen lambda, zatímco reaktivní zánět je polyklonální a obsahuje směs obou v poměru cca 2:1)",
+          "Přítomnost proteinu p53",
+          "Exprese markeru CD3"
+        ],
+        correct: 1,
+        explanation: "Klonální restrikce je klíčovým důkazem neoplazie. Reaktivní zduření uzliny obsahuje směs buněk tvořících kappa i lambda řetězce. Pokud v uzlině dominují buňky s jedním typem lehkého řetězce, jde o klonální (nádorovou) populaci."
+      },
       {
         question: "Který membránový receptor na zralých B-lymfocytech je hlavním cílem terapeutické protilátky Rituximab?",
         type: "type-in",
@@ -637,229 +664,251 @@ const DATA_ONCO_1 = [
       {
         question: "Jak se nazývá enzym, který spouští somatickou hypermutaci a zlomy DNA v germinálním centru B-buněk, což zvyšuje riziko translokací?",
         type: "type-in",
-        correct: ["AID"],
+        correct: ["AID", "activation-induced cytidine deaminase"],
         explanation: "Enzym AID (activation-induced cytidine deaminase) je nezbytný pro somatickou hypermutaci a přesmyk řetězců u B-lymfocytů."
-      }]
-  },
+      }
+    ]
+},
 
   {
     id: "onco-13",
     title: "Lymfomy z T řady (obecný přehled a patogeneze)",
     section: "Hematopatologie",
     category: "Onkologie",
-    keywords: ["T-lymfom", "timus", "lymfocyty", "epidermotropismus", "sezary", "fungoides", "CD3"],
+    keywords: ["T-lymfom", "extranodální", "angioinvazivita", "celiakie", "EATL", "HTLV-1", "Sézary"],
     content: {
-      definition: "Lymfomy z T řady a NK buněk jsou heterogenní skupina maligních neoplazií vycházejících z prekurzorů T-lymfocytů (v thymu) nebo ze zralých periferních T-lymfocytů či NK buněk.",
-      etiology: "Infekce virem HTLV-1 (asociace s T-leukémií/lymfomem dospělých), virus EBV (asociace s extranodálním NK/T-lymfomem), celiakie (asociace s enteropatickým T-lymfomem EATL).",
-      pathogenesis: "T-lymfomy představují cca 10–15 % non-Hodgkinových lymfomů. Vycházejí z různých subpopulací T-buněk (pomocné CD4+, cytotoxické CD8+, NK buňky). Často vykazují extranodální lokalizaci s afinitou ke kůži (kožní T-lymfomy), zažívacímu traktu nebo nosní dutině. Vykazují agresivní biologické chování s rychlou infiltrací stěn cév (angiodestrukce) a tkáňovou nekrózou.",
-      macroscopy: "Extranodální postižení: \n- *Kožní T-lymfomy* (Mycosis fungoides): suchá šupinatá ložiska (plaky) na kůži napodobující ekzém, která přecházejí v uzlovité tumory, které ulcerují. \n- *Enteropatický T-lymfom* (EATL): mnohočetné vředy a perforace v tenkém střevě u celiaků.",
-      microscopy: "Setření struktury uzliny s infiltrací pleomorfními T-buňkami (často s nepravidelnými, laločnatými či cerebriformními - vzhled mozku - jádry). U Mycosis fungoides je typický **epidermotropismus** (nádorové T-lymfocyty migrují do epidermis kůže, kde tvoří intraepidermální shluky - **Pautrierovy mikroabscesy**). Imunohistochemické markery T-řady: **CD3, CD2, CD5, CD7, CD4, CD8**.",
-      clinical: "Lymfomy z T-řady mají obecně podstatně **horší prognózu** než B-lymfomy a hůře odpovídají na standardní chemoterapii. Sezaryho syndrom je leukemická varianta kožního T-lymfomu (triáda: erytrodermie - zčervenání celého těla, lymfadenopatie a přítomnost Sezaryho buněk s cerebriformními jádry v krvi)."
+      definition: "Lymfomy z T řady a NK buněk jsou heterogenní skupina maligních neoplazií vycházejících buď z nezralých prekurzorů T-lymfocytů (v thymu), nebo ze zralých periferních T-lymfocytů a NK buněk.",
+      etiology: "Infekce retrovirem **HTLV-1** (asociován s T-leukémií/lymfomem dospělých - ATLL), virus **EBV** (asociace s extranodálním NK/T-lymfomem, nosním typem), chronické poškození sliznice tenkého střeva glutenem u neléčené celiakie (asociace s enteropatickým T-lymfomem - EATL).",
+      pathogenesis: "Představují cca 10–15 % všech NHL. Vycházejí z funkčních subpopulací T-buněk (helpery CD4+, cytotoxické CD8+, NK buňky). Typické je agresivní biologické chování, vysoká afinita k extranodálním tkáním (kůže, zažívací trakt, nosní dutina), sklon k infiltraci stěn cév s jejich následnou destrukcí (**angioinvazivita** / angiodestrukce) a rozsáhlým ischemickým nekrózám.",
+      macroscopy: "Extranodální postižení: \n1. *Kožní T-lymfomy* (Mycosis fungoides): nejprve ekzémovité skvrny (patche), pak vyvýšené plaky a nakonec velké uzlovité, rozpadající se tumory. \n2. *EATL*: mnohočetné ulcerace a vředy ve sliznici tenkého střeva u pacientů s celiakií, vedoucí k perforaci střeva. \n3. *Nasal type NK/T-lymphoma*: destruktivní léze střední čáry obličeje (nekrotizující destrukce nosní přepážky a patra).",
+      microscopy: "Infiltrace uzlin či tkání pleomorfními, atypickými T-buňkami, které mají nepravidelná, laločnatá či zářezovitá jádra. U Mycosis fungoides je typický **epidermotropismus** (nádorové buňky migrují do epidermis, kde tvoří drobné shluky - **Pautrierovy mikroabscesy**). Imunohistochemický profil zralých T-lymfomů vykazuje pan-T markery: **CD2, CD3, CD5, CD7** (některé markery mohou nádorové buňky ztratit) a CD4 nebo CD8.",
+      clinical: "Obecně mají **podstatně horší prognózu** a slabší odpověď na standardní chemoterapii než B-lymfomy. Sézaryho syndrom je leukemická varianta kožního T-lymfomu charakterizovaná triádou: **erytrodermie** (zčervenání celého těla, intenzivní svědění), **lymfadenopatie** a **Sézaryho buňky** s cerebriformními (mozku podobnými) jádry v periferní krvi."
     },
     quiz: [
       {
-        question: "Co je to epidermotropismus a pro který T-lymfom je typický?",
+        question: "Které onemocnění zažívacího traktu je spojeno s rizikem vzniku enteropatického T-lymfomu (EATL)?",
         options: [
-          "Růst nádoru v kostní dřeni",
-          "Schopnost atypických T-lymfocytů aktivně migrovat do epidermis kůže za vzniku Pautrierových mikroabscesů; typické pro Mycosis fungoides (kožní T-lymfom)",
-          "Šíření nádoru podél krevních cév v plicích",
-          "Ukládání melaninu do buněk lymfomu"
+          "Crohnova choroba",
+          "Celiakie (gluten-senzitivní enteropatie)",
+          "Ulcerózní kolitida",
+          "Gastritida vyvolaná H. pylori"
         ],
         correct: 1,
-        explanation: "Mycosis fungoides je primární kožní T-lymfom z pomocných CD4+ lymfocytů. Tyto buňky mají afinitu ke kůži (homing) a pronikají do epidermis (epidermotropismus), kde tvoří drobné shluky buněk (Pautrierovy mikroabscesy), což je histologický diagnostický klíč."
+        explanation: "U pacientů s dlouhodobě neléčenou nebo na bezlepkovou dietu nereagující (refrakterní) celiakií dochází k maligní transformaci intraepiteliálních T-lymfocytů tenkého střeva a rozvoji EATL, který často komplikuje perforace střeva."
       },
       {
-        question: "Který zralý T-lymfom vzniká jako vzácná, ale těžká komplikace u neléčené nebo refrakterní celiakie?",
+        question: "Co tvoří klinickou triádu Sézaryho syndromu?",
         options: [
-          "Hodgkinův lymfom",
-          "Enteropatický T-lymfom asociovaný s enteropatií (EATL)",
-          "Folikulární lymfom",
-          "Burkittův lymfom"
+          "Anémie, trombocytopenie, leukocytóza",
+          "Erytrodermie (zčervenání celého těla), lymfadenopatie a přítomnost Sézaryho buněk s cerebriformními jádry v krvi",
+          "Splenomegalie, hepatomegalie, horečka",
+          "Kašel, dušnost, mediastinální masa"
         ],
         correct: 1,
-        explanation: "EATL je agresivní T-lymfom tenkého střeva. Vyvíjí se u pacientů s celiakií (často neléčenou bezlepkovou dietou) z intraepiteliálních T-lymfocytů sliznice střeva. Způsobuje ulcerace, krvácení a nebezpečné perforace střevní stěny."
+        explanation: "Sézaryho syndrom je leukemická fáze kožního T-lymfomu. Projevuje se celotělovým erytémem a svěděním (erytrodermie), zvětšením uzlin (lymfadenopatie) a vyplavením nádorových T-buněk se zářezy v jádře (cerebriformní tvar) do krve."
+      },
+      {
+        question: "Která vlastnost růstu T-lymfomů vysvětluje častý nález rozsáhlých nekróz a ulcerací v postižených tkáních?",
+        options: [
+          "Tvorba velkého množství kolagenu",
+          "Angioinvazivita (nádorové buňky prorůstají stěnou cév a ničí je, což vede k ischemii a nekróze tkáně)",
+          "Neschopnost dělení",
+          "Tvorba amyloidu"
+        ],
+        correct: 1,
+        explanation: "T-lymfomy a NK-lymfomy (např. extranodální NK/T lymfom obličeje) mají typicky angioinvazivní růst. Infiltrují a destruují stěny cév (angiodestrukce), což vede k infarktům, nekrózám a rozpadu tkání."
+      },
+      {
+        question: "Jak se nazývá mikroskopický nález u Mycosis fungoides, kdy nádorové T-buňky tvoří shluky v epidermis?",
+        type: "type-in",
+        correct: ["Pautrierovy mikroabscesy", "Pautrierův mikroabsces", "Pautrierovy mikroabscesy"],
+        explanation: "Pautrierovy mikroabscesy jsou intraepidermální shluky atypických T-lymfocytů s cerebriformními jádry, typické pro kožní T-lymfomy."
       }
-    ,
-      {
-        question: "Který CD marker je základním histologickým a imunohistochemickým ukazatelem přítomnosti T-lymfocytů?",
-        type: "type-in",
-        correct: ["CD3"],
-        explanation: "CD3 je antigen asociovaný s T-buněčným receptorem (TCR) a je univerzálním markerem pro zralé T-lymfocyty."
-      },
-      {
-        question: "Který virus je původcem T-leukémie/lymfomu dospělých (ATLL)?",
-        type: "type-in",
-        correct: ["HTLV-1", "HTLV 1"],
-        explanation: "HTLV-1 (Human T-cell Leukemia Virus type 1) je retrovirus spojený s rozvojem endemické leukémie/lymfomu z T-buněk."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-14",
     title: "Non-Hodgkinovy lymfomy z B řady",
     section: "Hematopatologie",
     category: "Onkologie",
-    keywords: ["NHL", "DLBCL", "folikulární", "Burkitt", "starry", "sky", "CLL", "BCL2", "MYC"],
+    keywords: ["NHL", "B-lymfom", "DLBCL", "folikulární", "Burkitt", "starry sky", "t(14;18)", "MALT", "Richter"],
     content: {
-      definition: "Non-Hodgkinovy lymfomy (NHL) z B řady jsou různorodá skupina B-lymfoproliferativních onemocnění s vyloučením Hodgkinova lymfomu. Dělí se na indolentní (pomalé) a agresivní (rychle progredující).",
-      etiology: "Chromozomální translokace: t(14;18) u folikulárního lymfomu; t(8;14) u Burkittova lymfomu; t(11;14) u lymfomu z plášťových buněk.",
-      pathogenesis: "1. **DLBCL** (Difuzní velkobuněčný B-lymfom): nejčastější agresivní B-NHL. Rychlý růst, mutace BCL6. \n2. **Folikulární lymfom**: nejčastější indolentní B-NHL. Translokace t(14;18) spojuje protoonkogen **BCL2** s promotorem IGH, což vede k nadprodukci proteinu BCL2. BCL2 blokuje apoptózu, takže buňky neumíratelně přežívají. \n3. **Burkittův lymfom**: extrémně agresivní. Translokace t(8;14) aktivuje onkogen **MYC** (regulátor buněčného cyklu), což vede k nejrychlejšímu dělení buněk u lidských nádorů (mitotický index 100 %). Spojen s EBV.",
-      macroscopy: "Zvětšené uzliny splývající do masivních konglomerátů (paketů). V GIT (časté u DLBCL) tvoří velké tumorózní masy, které mohou způsobit střevní obstrukci nebo ulcerace.",
-      microscopy: "DLBCL: difuzní růst velkých buněk (3-4x větších než normální lymfocyt) s atypickými jádry a jadérky. Folikulární l.: nodulární (folikulární) uspořádání, chybí polarizace folikulů a chybí makrofágy (rozdíl od reaktivní hyperplazie). Burkittův l.: difuzní infiltrace středně velkých buněk s extrémně vysokou proliferační aktivitou (Ki-67 proliferační index blížící se 100 %) a četnými makrofágy fagocytujícími apoptotické buňky, což pod mikroskopem při slabém zvětšení vytváří obraz **hvězdného nebe** (starry sky appearance).",
-      clinical: "Indolentní lymfomy (folikulární) jsou v době diagnózy často generalizované, rostou pomalu, jsou nevyléčitelné, ale pacienti s nimi žijí řadu let. Agresivní lymfomy (DLBCL, Burkitt) rostou rychle, bez léčby zabíjejí během měsíců, ale jsou citlivé na chemoterapii a lze je vyléčit. Burkittův lymfom se v Africe manifestuje nádory čelisti (endemický typ), v Evropě abdominální masou (sporadický typ)."
+      definition: "Non-Hodgkinovy lymfomy (NHL) z B řady tvoří široké spektrum klonálních neoplazií zralých B-lymfocytů. Zásadní klinicko-patologické dělení je na lymfomy **indolentní** (pomalý růst, obtížně léčitelné, ale dlouhé přežití) a **agresivní** (rychlý růst, bez léčby fatální, ale vysoce citlivé na chemoterapii).",
+      etiology: "Specifické chromozomální translokace: t(14;18) u folikulárního lymfomu; t(8;14) u Burkittova lymfomu; t(11;14) u lymfomu z plášťových buněk. Chronické stimulace: Helicobacter pylori u žaludečního MALT lymfomu.",
+      pathogenesis: "1. **DLBCL** (Difuzní velkobuněčný B-lymfom): nejčastější agresivní B-NHL. Roste de novo nebo transformací z indolentních lymfomů (např. z CLL či FL - tzv. Richterova transformace). Mutace/reuspořádání BCL6.\n2. **Folikulární lymfom (FL)**: nejčastější indolentní B-NHL. Translokace t(14;18) spojuje onkogen **BCL2** s promotorem těžkého řetězce imunoglobulinů (IGH). BCL2 je anti-apoptotický protein, jeho nadprodukce blokuje apoptózu a buňky přežívají. Grading 1-3 podle počtu centroblastů.\n3. **Burkittův lymfom**: extrémně agresivní (nejrychleji rostoucí lidský tumor), translokace t(8;14) aktivuje onkogen **MYC** (řídí buněčný cyklus), proliferační index Ki-67 se blíží 100 %.\n4. **Lymfom z plášťových buněk (MCL)**: t(11;14) vede k nadprodukci **cyklinu D1** (regulátor buněčného cyklu), CD5+, CD23-. Často postihuje GIT (lymfomatoidní polypóza).\n5. **MALT lymfom**: roste extranodálně v žaludku, spojen s H. pylori. Eradikace H. pylori může vést k úplné regresi nádoru.",
+      macroscopy: "Výrazná lymfadenopatie (uzliny splývají do paketů). U extranodálních forem v GIT (časté u DLBCL, MALT a MCL) nacházíme polypózní masy, vředy či difuzní ztluštění stěny žaludku nebo střeva, které mohou vést k ileu.",
+      microscopy: "- *DLBCL*: difuzní infiltrát velkých buněk (velikosti makrofágu) s velkými vezikulárními jádry.\n- *Folikulární lymfom*: nodulární růst tvořící neostře ohraničené folikuly, chybí polarizace a makrofágy (rozdíl od reaktivní hyperplazie).\n- *Burkittův lymfom*: difuzní pole středně velkých buněk s vysokou mitotickou aktivitou. Četné makrofágy fagocytující buněčný detritus vytvářejí při slabém zvětšení vzhled **hvězdného nebe** (starry sky).\n- *MALT*: infiltrace marginální zóny s tvorbou **lymfoepiteliálních lézí** (nádorové buňky invadují a ničí žlázky sliznice).",
+      clinical: "Indolentní lymfomy (FL, MALT, CLL) postihují starší, rostou pomalu, často v době diagnózy generalizované do kostní dřeně, ale mají dlouhé přežití. Agresivní lymfomy (DLBCL, Burkitt, MCL) vyžadují okamžitou terapii (chemoterapie CHOP + Rituximab). Burkittův lymfom se dělí na endemický (africký, postihuje čelisti dětí, asociace s EBV) a sporadický (abdominální tumor)."
     },
     quiz: [
       {
-        question: "Který mikroskopický obraz je typický pro Burkittův lymfom?",
+        question: "Která chromozomální translokace a gen jsou spojeny se vznikem folikulárního lymfomu a blokádou apoptózy?",
         options: [
-          "Nodulární (folikulární) uspořádání s jizvením",
-          "Obraz 'hvězdného nebe' (starry sky) vytvořený tmavým pozadím nádorových buněk, ve kterém jsou roztroušeny světlé makrofágy s pohlceným buněčným detritem",
-          "Přítomnost obřích buněk s jádry vzhledu sovích očí",
-          "Záplava eosinofilů a plazmatických buněk"
+          "t(8;14) a gen MYC",
+          "t(14;18) a gen BCL2",
+          "t(11;14) a gen CCND1 (cyklin D1)",
+          "t(9;22) a gen BCR-ABL"
         ],
         correct: 1,
-        explanation: "Burkittův lymfom má extrémní buněčný obrat (všechny buňky se dělí a mnoho jich hyne apoptózou). Světlé makrofágy (hvězdy) pohlcují tyto odumřelé buňky a jsou roztroušeny v temném poli rychle se dělících nádorových lymfocytů (nebe)."
+        explanation: "Translokace t(14;18) u folikulárního lymfomu přenáší gen BCL2 pod promotor pro těžký řetězec imunoglobulinů (IGH). To vede k nadměrné tvorbě proteinu BCL2, který brání buňkám vstoupit do apoptózy, takže se hromadí."
       },
       {
-        question: "Co je hlavním patogenetickým důsledkem translokace t(14;18) u folikulárního lymfomu?",
+        question: "Co pod mikroskopem vytváří vzhled 'hvězdného nebe' (starry sky appearance) u Burkittova lymfomu?",
         options: [
-          "Nadprodukce inzulínu",
-          "Overexprese (nadměrná tvorba) antiapoptotického proteinu BCL2, což zabraňuje přirozené smrti (apoptóze) B-lymfocytů v zárodečných centrech",
-          "Okamžitá destrukce kostní dřeně",
-          "Ztráta exprese všech B-markerů"
+          "Ukládání krystalů vápníku v nádoru",
+          "Difuzní pole tmavých, rychle se dělících nádorových B-buněk proložené světlými makrofágy požírajícími apoptotická tělíska",
+          "Kombinace folikulů a cév",
+          "Zbytky kolagenních vláken"
         ],
         correct: 1,
-        explanation: "Translokace t(14;18) přenese gen BCL2 z 18. chromozomu za promotor genu IGH (těžký řetězec imunoglobulinu) na 14. chromozomu, který je v B-buňkách trvale aktivní. Nadbytek BCL2 chrání buňky před apoptózou, takže se hromadí (indolentní růst)."
-      }
-    ,
-      {
-        question: "Jak se nazývá nejčastější non-Hodgkinův B-lymfom u dospělých, charakteristický rychlým agresivním růstem a velkými buňkami?",
-        type: "type-in",
-        correct: ["DLBCL", "difuzní velkobuněčný B-lymfom"],
-        explanation: "DLBCL (Diffuse Large B-Cell Lymphoma) představuje nejčastější agresivní non-Hodgkinův lymfom dospělého věku."
+        explanation: "Burkittův lymfom má extrémně vysokou proliferaci i buněčný rozpad. Reaktivní makrofágy odstraňují apoptotické buňky a pod mikroskopem vypadají jako světlé skvrny (hvězdy) na tmavém pozadí nádorových buněk (noční obloha)."
       },
       {
-        question: "Jak se nazývá vysoce agresivní dětský B-lymfom spojený s translokací t(8;14) a histologickým obrazem 'hvězdného nebe'?",
-        type: "type-in",
-        correct: ["Burkittův lymfom", "Burkittův"],
-        explanation: "Burkittův lymfom je charakteristický extrémně rychlou proliferací a přítomností makrofágů tvořících obraz 'hvězdného nebe'."
-      },
-      {
-        question: "Který z lymfomů je typický proliferačním indexem Ki-67 blížícím se 100 % a je poháněn mutací onkogenu MYC?",
+        question: "Který zralý B-lymfom je spojen s Helicobacter pylori v žaludku a může po eradikaci této bakterie kompletně regredovat?",
         options: [
-          "Folikulární lymfom",
+          "DLBCL",
+          "MALT lymfom (extranodální lymfom z marginální zóny)",
           "Burkittův lymfom",
-          "Hodgkinův lymfom",
-          "Mantle cell lymfom (lymfom plášťové zóny)"
+          "Lymfom z plášťových buněk"
         ],
         correct: 1,
-        explanation: "Burkittův lymfom je jeden z nejrychleji rostoucích lidských nádorů. Translokace t(8;14) aktivuje onkogen MYC, což vede k extrémně rychlému buněčnému dělení, reflektovanému proliferačním indexem Ki-67 téměř 100 %."
-      }]
-  },
+        explanation: "MALT lymfom vzniká v žaludeční sliznici na podkladě chronického zánětu vyvolaného H. pylori. V časném stadiu je nádor závislý na antigenní stimulaci touto bakterií, proto jeho odstranění (antibiotiky) vede k vyléčení lymfomu."
+      },
+      {
+        question: "Jak se nazývá proces, kdy se indolentní lymfom (např. CLL nebo folikulární lymfom) transformuje do agresivního difuzního velkobuněčného B-lymfomu (DLBCL)?",
+        type: "type-in",
+        correct: ["Richterova transformace", "Richterův syndrom", "Richterova"],
+        explanation: "Richterova transformace (Richterův syndrom) je transformace CLL/SLL nebo jiného indolentního B-lymfomu do agresivního DLBCL, doprovázená špatnou prognózou."
+      },
+      {
+        question: "Který protein (regulátor buněčného cyklu) je nadměrně produkován u lymfomu z plášťových buněk (MCL) v důsledku translokace t(11;14)?",
+        type: "type-in",
+        correct: ["cyklin D1", "cyclin D1"],
+        explanation: "Translokace t(11;14) u MCL vede k trvalé aktivaci genu CCND1 a nadprodukci proteinu cyklinu D1, který urychluje průchod buněčným cyklem."
+      }
+    ]
+},
 
   {
     id: "onco-15",
     title: "Non-Hodgkinovy lymfomy z T řady",
     section: "Hematopatologie",
     category: "Onkologie",
-    keywords: ["T-NHL", "periferní", "anaplastický", "ALK", "mycosis", "erytrodermie", "cerebriformní"],
+    keywords: ["T-NHL", "ALCL", "ALK", "Mycosis fungoides", "Sézary", "epidermotropismus", "hallmark buňky"],
     content: {
-      definition: "Non-Hodgkinovy lymfomy z T řady (T-NHL) představují maligní klonální proliferace zralých (periferních) T-lymfocytů.",
-      etiology: "Většina příčin je neznámá. Některé asociace s retroviry (HTLV-1) nebo chronickým poškozením sliznic (celiakie).",
-      pathogenesis: "1. **Periferní T-lymfom, blíže neurčený** (PTCL-NOS): nejčastější zralý T-NHL u dospělých. Vysoce agresivní. \n2. **Anaplastický velkobuněčný lymfom** (ALCL): charakterizován přítomností 'hallmark' buněk a často translokací t(2;5) vedoucí k fúzi genu **ALK** (anaplastic lymphoma kinase). ALK+ varianta má u mladých lepší prognózu než ALK-. \n3. **Mycosis fungoides**: primárně kožní T-lymfom postihující epidermis.",
-      macroscopy: "PTCL-NOS: generalizovaná lymfadenopatie, splenomegalie, postižení kůže a plic. ALCL: zvětšení uzlin, často kožní uzly. Mycosis fungoides: kožní plaky a nádory, které se rozpadají.",
-      microscopy: "PTCL-NOS: výrazný pleomorfismus buněk (malé, střední, obří), reaktivní zánětlivé pozadí (může napodobovat Hodgkinův lymfom). ALCL: velké, pleomorfní buňky s podkovovitými nebo ledvinovitými jádry a světlou zónou u jádra ('hallmark' buňky), imunohistochemicky **CD30 pozitivní** a často ALK pozitivní. Mycosis fungoides: cerebriformní jádra lymfocytů, epidermotropismus.",
-      clinical: "T-NHL lymfomy mívají závažný průběh. ALK+ anaplastický lymfom postihuje mladší pacienty a má dobrou šanci na vyléčení chemoterapií. PTCL-NOS má velmi špatnou prognózu s rychlým relapsem. Kožní formy mohou probíhat řadu let indolentně, ale v tumorózním stadiu jsou špatně léčitelné."
+      definition: "Non-Hodgkinovy lymfomy z T řady (T-NHL) představují klonální neoplazie vycházející ze zralých, post-thymových T-lymfocytů. Jsou méně časté než B-lymfomy a klinicky se chovají agresivněji.",
+      etiology: "Většina je neznámá. Některé typy jsou úzce spjaty s specifickými podněty: chronické poškození sliznice tenkého střeva (celiakie u EATL), retrovirus HTLV-1.",
+      pathogenesis: "1. **Periferní T-lymfom, blíže neurčený (PTCL-NOS)**: nejčastější uzlinový T-NHL, diagnóza per exclusionem, vysoce agresivní.\n2. **Anaplastický velkobuněčný lymfom (ALCL)**: t(2;5) translokace vede k fúzi genu **ALK** (anaplastic lymphoma kinase). ALK pozitivní forma se vyskytuje u mladých a má dobrou prognózu; ALK negativní forma postihuje starší a má špatnou prognózu.\n3. **Mycosis fungoides**: primárně kožní T-lymfom (CTCL) s dlouhodobým indolentním průběhem v epidermis, který se v pozdních stadiích může šířit do uzlin a vnitřních orgánů.\n4. **EATL**: vzniká u pacientů s refrakterní celiakií z intraepiteliálních T-lymfocytů, vede k nekrózám a ulceracím tenkého střeva.",
+      macroscopy: "PTCL-NOS: masivní lymfadenopatie, hepatosplenomegalie. ALCL: zvětšení uzlin, často kožní tumory. Mycosis fungoides: v prvním stadiu červená suchá ložiska (ekzematoidní patche), ve druhém stadiu vyvýšené plaky a ve třetím stadiu velké, infiltrující a ulcerující uzly.",
+      microscopy: "- *PTCL-NOS*: výrazný buněčný pleomorfismus (směs malých, středních a velkých buněk) s reaktivním zánětlivým pozadím.\n- *ALCL*: velké anaplastické buňky s ledvinovitými či podkovovitými jádry a prosvětlením v cytoplasmě (**hallmark cells**). Jsou **CD30+** a často vyjadřují protein ALK.\n- *Mycosis fungoides*: v epidermis nacházíme atypické T-lymfocyty s cerebriformními jádry migrující do pokožky (**epidermotropismus**) a tvořící **Pautrierovy mikroabscesy**.",
+      clinical: "Agresivní chování. ALK+ ALCL je dobře léčitelný chemoterapií. PTCL-NOS má velmi nepříznivou prognózu s rychlým relapsem. Sézaryho syndrom (leukemická fáze kožního T-lymfomu) se projevuje erytrodermií, lymfadenopatií a cirkulujícími cerebriformními buňkami."
     },
     quiz: [
       {
-        question: "Který receptor/marker je typicky silně exprimován na buňkách Anaplastického velkobuněčného lymfomu (ALCL) a slouží jako diagnostický znak?",
+        question: "Jak se nazývají typické buňky s ledvinovitým jádrem a světlou zónou u jádra nacházející se u anaplastického velkobuněčného lymfomu (ALCL)?",
         options: [
-          "CD20 (B-marker)",
-          "CD30 (Ki-1 antigen)",
-          "CD15",
-          "PSA"
+          "Reedové-Sternberga buňky",
+          "Hallmark buňky (hallmark cells)",
+          "Popcorn buňky",
+          "Sézaryho buňky"
         ],
         correct: 1,
-        explanation: "CD30 je aktivovaný antigen exprimovaný na anaplastických buňkách ALCL (transmembránový receptor z rodiny TNF). CD30 je přítomen také u Hodgkinova lymfomu, ale ALCL se odlišuje chyběním reaktivního pozadí a specifickými 'hallmark' buňkami."
+        explanation: "Hallmark buňky jsou typické pro ALCL. Mají excentrické, ledvinovité nebo podkovovité jádro s eosinofilní paranukleární zónou (odpovídající Golgiho aparátu)."
       },
       {
-        question: "Jak se nazývá fúzní protein vznikající translokací t(2;5) u anaplastického velkobuněčného lymfomu (ALCL), jehož přítomnost značí lepší prognózu?",
+        question: "Který protein, zjišťovaný imunohistochemicky, je klíčovým prognostickým markerem u ALCL?",
         options: [
-          "BCR-ABL",
-          "NPM-ALK",
-          "PML-RARA",
-          "IgH-BCL2"
+          "CD20",
+          "ALK (anaplastická lymfomová kináza)",
+          "BCL2",
+          "CD3"
         ],
         correct: 1,
-        explanation: "Translokace t(2;5) spojuje gen NPM (nucleophosmin) na 5. chromozomu s genem ALK (anaplastic lymphoma kinase) na 2. chromozomu. Fúzní protein NPM-ALK vykazuje stálou tyrosinkinázovou aktivitu. Nádory s tímto proteinem (ALK+) jsou lépe léčitelné než ALK- formy."
+        explanation: "ALK pozitivní ALCL (spojený s translokací t(2;5)) postihuje mladší pacienty a vykazuje výbornou odpověď na léčbu s 5letým přežitím přes 80 %. ALK negativní forma postihuje starší a má výrazně horší prognózu."
+      },
+      {
+        question: "Jak se nazývá kožní T-lymfom charakterizovaný intraepidermálními shluky atypických T-buněk (Pautrierovými mikroabscesy) a dlouhodobým vývojem skvrn a plaků na kůži?",
+        options: [
+          "Sézaryho syndrom",
+          "Mycosis fungoides",
+          "EATL",
+          "PTCL-NOS"
+        ],
+        correct: 1,
+        explanation: "Mycosis fungoides je nejčastější primárně kožní T-lymfom. Je charakterizován epidermotropismem (nádorové buňky migrují do epidermis) a tvorbou Pautrierových mikroabscesů."
+      },
+      {
+        question: "Která slizniční komplikace zažívacího traktu je typická pro EATL a bezprostředně ohrožuje život pacienta?",
+        type: "type-in",
+        correct: ["perforace střeva", "perforace tenkého střeva", "perforace"],
+        explanation: "EATL (enteropatický T-lymfom) způsobuje hluboké vředy ve sliznici tenkého střeva, které často vedou k perforaci střeva a peritonitidě."
       }
-    ,
-      {
-        question: "Jak se nazývá nejčastější kožní T-lymfom projevující se ekzémovými plaky a epidermotropismem?",
-        type: "type-in",
-        correct: ["mycosis fungoides"],
-        explanation: "Mycosis fungoides je primární kožní T-lymfom, u kterého atypické CD4+ buňky migrují do epidermis."
-      },
-      {
-        question: "Jak se nazývají shluky nádorových T-lymfocytů v epidermis kůže u mycosis fungoides?",
-        type: "type-in",
-        correct: ["Pautrierovy mikroabscesy", "Pautrierovy"],
-        explanation: "Pautrierovy mikroabscesy jsou intraepidermální shluky nádorových T-buněk, typické pro histologický obraz mycosis fungoides."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-16",
     title: "Plazmocytom, myelom",
     section: "Hematopatologie",
     category: "Onkologie",
-    keywords: ["myelom", "plazmocytom", "kost", "osteolýza", "Bence", "Jones", "monoklonální", "M-gradient"],
+    keywords: ["myelom", "Kahler", "paraprotein", "Bence-Jones", "osteolýza", "CRAB", "MGUS", "IL-6"],
     content: {
-      definition: "Mnohočetný myelom (Kahlerova choroba) je maligní tumorózní proliferace plazmatických buněk v kostní dřeni, která produkuje monoklonální imunoglobulin (tzv. M-protein / paraprotein) a vede k destrukci kostí.",
-      etiology: "Neznámá. Roli hrají genetické změny (translokace genu IGH) a stimulace růstovým faktorem IL-6 (hlavní přežívací faktor plazmatických buněk).",
-      pathogenesis: "Nádorové plazmatické buňky v kostní dřeni produkují cytokiny (MIP-1a), které stimulují osteoklasty (buňky odbourávající kost) a inhibují osteoblasty (tvorbu kosti). Dochází k masivní **osteolýze** (rozpouštění kosti), což uvolňuje vápník do krve (hyperkalcémie). Nadbytek lehkých řetězců imunoglobulinů (paraproteinu) poškozuje ledviny - vylučují se močí jako **Bence-Jonesova bílkovina**.",
-      macroscopy: "Kosti (lebka, páteř, žebra) obsahují mnohočetná ložiska osteolýzy, která vypadají jako ostře vyseknuté, kruhové otvory (vzhled **prostříleného plechu** / punched-out lesions). Hrozí patologické zlomeniny obratlů. Ledviny jsou bledé, zvětšené (myelomová ledvina).",
-      microscopy: "Kostní dřeň je infiltrována plazmatickými buňkami (plazmocyty s excentricky uloženým kulatým jádrem s chromatinem uspořádaným jako loukoťové kolo a širokou bazofilní cytoplasmou s prosvětlením - Golgiho zónou). Vyskytují se atypické formy (vícejaderné). V ledvinných tubulech nacházíme tvrdé, eosinofilní (růžové) proteinové odlitky (paraprotein) obklopené obřími buňkami z cizích těles (**myelomová nefróza**).",
-      clinical: "Klinické projevy (akronym **CRAB**): \n- **C** (Calcium): hyperkalcémie (zácpa, zmatenost), \n- **R** (Renal): selhání ledvin (tubulární poškození paraproteinem), \n- **A** (Anemia): selhání dřeně infiltrátem, \n- **B** (Bone): bolesti kostí a patologické fraktury. V elektroforéze séra nacházíme vysoký úzký pík - **M-gradient**."
+      definition: "Mnohočetný myelom (Kahlerova choroba) je maligní nádorové onemocnění vycházející z plazmatických buněk v kostní dřeni. Charakteristickým rysem je produkce monoklonálního imunoglobulinu nebo jeho lehkých řetězců (tzv. **paraproteinu** / M-proteinu).",
+      etiology: "Neznámá. Roli hrají genetické translokace postihující gen pro těžký řetězec imunoglobulinu (IGH) a zvýšená stimulace interleukinem 6 (**IL-6**), který je klíčovým růstovým a přežívacím faktorem pro myelomové buňky.",
+      pathogenesis: "Nádorové plazmatické buňky kolonizují kostní dřeň a secernují faktory (např. **RANKL**, MIP-1a), které stimulují osteoklasty k odbourávání kosti a inhibují osteoblasty (přes DKK1). Výsledkem je masivní **osteolýza** (rozpouštění kostní tkáně), která uvolňuje vápník do krevního oběhu. Dále buňky produkují nadbytek lehkých řetězců imunoglobulinů (kappa nebo lambda), které se filtrují v ledvinách, ucpávají tubuly a poškozují je (tzv. **Bence-Jonesova bílkovina**).",
+      macroscopy: "V kostech skeletu (lebka, obratle, žebra) nacházíme mnohočetná, ostře ohraničená ložiska osteolýzy, která na RTG snímcích vypadají jako otvory ve sklenici (vzhled **prostříleného plechu** / punched-out lesions). Ledviny jsou zvětšené, bledé, tuhé. Solitární ložisko v kosti se označuje jako **solitární plazmocytom**.",
+      microscopy: "Kostní dřeň je infiltrována klonálními plazmatickými buňkami (plazmocyty s excentricky uloženým kulatým jádrem s loukoťovitým uspořádáním chromatinu a bazofilní cytoplasmou s perinukleárním prosvětlením). V ledvinách nacházíme **myelomovou nefrózu**: v distálních tubulech a sběracích kanálcích jsou uloženy tvrdé, růžové (eosinofilní) proteinové odlitky (paraprotein) obklopené reaktivními obřími buňkami z cizích těles.",
+      clinical: "Klinická manifestace se shrnuje pod akronym **CRAB**: \n- **C** (Calcium): hyperkalcémie (zácpa, zmatenost, polyurie), \n- **R** (Renal insufficiency): renální selhání způsobené toxickým účinkem lehkých řetězců na tubuly, \n- **A** (Anemia): chudokrevnost z útlaku krvetvorby v kostní dřeni (myelofthíza), \n- **B** (Bone lesions): bolesti kostí (zejména v zádech), patologické zlomeniny obratlů a žeber. \nPrekurzorovým stadiem je **MGUS** (monoklonální gamapatie nejasného významu), která má stabilní hladinu paraproteinu a **chybí u ní příznaky CRAB**."
     },
     quiz: [
       {
-        question: "Co je to Bence-Jonesova bílkovina?",
+        question: "Co znamená akronym CRAB používaný pro klinické projevy mnohočetného myelomu?",
         options: [
-          "Bílkovina tvořící amyloid v mozku",
-          "Volné lehké řetězce (kappa nebo lambda) imunoglobulinů produkované nádorovými plazmocyty, které se pro malou velikost filtrují v glomerulech a nacházejí se v moči u pacientů s myelomem",
-          "Enzym štěpící chrupavku",
-          "Nádorový marker produkovaný karcinomem prsu"
+          "Cardiac failure, Renal failure, Anemia, Bone pain",
+          "Calcium elevation (hyperkalcémie), Renal insufficiency (selhání ledvin), Anemia (chudokrevnost), Bone lesions (osteolytická ložiska kostí)",
+          "Congestive heart, Respiratory distress, Ascites, Bleeding",
+          "Cellular lysis, Radiotherapy, Alkylating agents, Bence-Jones"
         ],
         correct: 1,
-        explanation: "Mnohočetný myelom produkuje kompletní imunoglobuliny nebo jen jejich části. Volné lehké řetězce (Bence-Jonesova bílkovina) snadno procházejí ledvinným filtrem do moči, kde se dají detekovat (zahřívacím testem nebo imunofixací) a představují těžké riziko pro ucpání a poškození tubulů ledvin."
+        explanation: "Akronym CRAB definuje orgánové poškození způsobené myelomem. Hyperkalcémie vzniká z osteolýzy, renální selhání z obstrukce tubulů paraproteinem, anémie z myelofthízy a kostní destrukce (lytická ložiska) ze stimulace osteoklastů."
       },
       {
-        question: "Jak se makroskopicky projevuje destrukce kostí u mnohočetného myelomu (např. na RTG lebky)?",
+        question: "Jak se nazývá stav (prekurzor), který se vyznačuje přítomností monoklonálního paraproteinu v séru (< 30 g/l) a klonálních plazmocytů v kostní dřeni (< 10 %), ale pacient nemá žádné příznaky ze skupiny CRAB?",
         options: [
-          "Tvorbou velkých kostních výrůstků (osteofytů)",
-          "Mnohočetnými ostře ohraničenými ložisky osteolýzy bez reaktivní novotvorby kosti (vzhled 'prostříleného plechu')",
-          "Difuzním ztluštěním a zahuštěním kostní tkáně (osteoskleróza)",
-          "Kostí prorůstají chrupavčité uzly"
+          "Solitární plazmocytom",
+          "MGUS (monoklonální gamapatie nejasného významu)",
+          "Kahlerova choroba",
+          "Smoldering myelom"
         ],
         correct: 1,
-        explanation: "Osteoklasty aktivované myelomem rozpouštějí kostní tkáň lokálně. Na RTG snímcích kostí (typicky plochých kostí jako je lebka) to vytváří charakteristická ložiska chybějící kosti, která vypadají jako čistě vyseknutá děrovačkou."
+        explanation: "MGUS (Monoclonal Gammopathy of Undetermined Significance) je stabilní prekurzor myelomu. Nemá žádné klinické projevy orgánového poškození. Ročně jich cca 1 % přechází do manifestního myelomu."
+      },
+      {
+        question: "Jaký je hlavní mechanismus vzniku osteolytických ložisek (vzhledu prostříleného plechu) u pacientů s myelomem?",
+        options: [
+          "Nádorové buňky samy požírají kost enzymy",
+          "Nádorové buňky produkují RANKL (a další faktory), což stimuluje osteoklasty k odbourávání kosti, a zároveň inhibují aktivitu osteoblastů",
+          "Kyselá moč rozpouští kosti",
+          "Kosti praskají pod tlakem svalů"
+        ],
+        correct: 1,
+        explanation: "Myelomové buňky aktivují přirozené buňky odbourávající kost (osteoklasty) přes signalizaci RANKL. Současně secernují inhibitory (DKK1), které blokují tvorbu nové kosti osteoblasty. Kost se tak odbourává, ale netvoří."
+      },
+      {
+        question: "Jak se nazývají lehké řetězce imunoglobulinů vylučované močí u pacientů s myelomem, které ucpávají tubuly a poškozují ledvinu?",
+        type: "type-in",
+        correct: ["Bence-Jonesova bílkovina", "Bence Jonesova bílkovina", "Bence-Jones", "Bence Jones"],
+        explanation: "Bence-Jonesova bílkovina jsou volné lehké řetězce (kappa/lambda), které se filtrují v glomerulech, precipitují v tubulech a vyvolávají myelomovou nefrózu."
+      },
+      {
+        question: "Který cytokin (interleukin) je nejdůležitějším růstovým a přežívacím faktorem pro plazmatické buňky v kostní dřeni?",
+        type: "type-in",
+        correct: ["IL-6", "interleukin 6", "interleukin-6"],
+        explanation: "IL-6 (interleukin-6) je klíčový růstový faktor produkovaný buňkami stromatu dřeně, který podporuje přežívání a dělení myelomových buněk."
       }
-    ,
-      {
-        question: "Jak se nazývá protein (volné lehké řetězce Ig) vylučovaný do moči u pacientů s mnohočetným myelomem?",
-        type: "type-in",
-        correct: ["Bence-Jonesova bílkovina", "Bence-Jonesův protein", "Bence Jones protein"],
-        explanation: "Bence-Jonesova bílkovina představuje monoklonální volné lehké řetězce imunoglobulinů (kappa/lambda), které mohou poškodit tubuly ledvin."
-      },
-      {
-        question: "Jak se označuje ložiskové prořídnutí kostí u myelomu na rentgenu lebky (vzhled prostřílené lebky)?",
-        type: "type-in",
-        correct: ["osteolýza", "osteolytická ložiska", "osteolytické ložisko"],
-        explanation: "Nádorové plazmatické buňky produkují faktory aktivující osteoklasty, což vede k rozpadu kosti (osteolýze)."
-      }]
-  },
+    ]
+},
 
   {
     id: "onco-17",
@@ -970,14 +1019,14 @@ const DATA_ONCO_1 = [
     title: "Nádory plic",
     section: "Nádory hrudníku a srdce",
     category: "Onkologie",
-    keywords: ["karcinom", "plíce", "malobuněčný", "nemalobuněčný", "kouření", "epidermoidní", "adenokarcinom"],
+    keywords: ["karcinom", "plíce", "malobuněčný", "nemalobuněčný", "hamartom", "epidermoidní", "adenokarcinom", "karcinoid", "TTF-1", "EGFR", "ALK", "Pancoast", "Azzopardi"],
     content: {
-      definition: "Karcinomy plic (bronchogenní karcinom) jsou jedny z nejčastějších a nejsmrtelnějších malignit na světě. Dělí se na dvě hlavní skupiny: malobuněčný karcinom (SCLC, 15 %) a nemalobuněčné karcinomy (NSCLC, 85 %).",
-      etiology: "Kouření tabáku (způsobuje 85–90 % případů, riziko stoupá s počtem vykouřených cigaret), expozice radonu, azbestu a znečištěné ovzduší.",
-      pathogenesis: "1. **Malobuněčný karcinom** (SCLC): vychází z neuroendokrinních buněk bronchů. Extrémně agresivní, rychle metastázuje, silná asociace s kouřením. Produkuje hormony (paraneoplastické syndromy). \n2. **Nemalobuněčné karcinomy** (NSCLC): \n- *Dlaždicobuněčný (epidermoidní) karcinom*: roste centrálně v hlavních bronších, předchází mu dlaždicová metaplazie epitelu u kuřáků. \n- *Adenokarcinom*: roste periferně v plicním parenchymu, nejčastější karcinom u nekuřáků a u žen.",
-      macroscopy: "Centrální karcinomy (dlaždicobuněčný, malobuněčný): tuhá, šedobílá masa vycházející z bronchu u hilu, zužuje lumen (atelektáza za překážkou), prorůstá do mediastina a uzlin. Periferní (adenokarcinom): uzel pod pleurou, často vtahuje pleuru dovnitř (pleurální svraštění).",
-      microscopy: "Spinocelulární k.: keratinizace (perly), mezibuněčné můstky. Adenokarcinom: žlázové formace, mucinózně pozitivní, často pozitivní marker **TTF-1**. Malobuněčný k.: drobné buňky (2-3x větší než lymfocyt) s minimem cytoplasmy, tmavými jádry bez jadérek (vzhled **ovesných zrn** / oat cells), typický fenomén **Azzopardiho** (inkrustace cévních stěn DNA z rozpadlých buněk).",
-      clinical: "Projevuje se chronickým kašlem (změna charakteru kašle u kuřáka), hemoptýzou (vykašlávání krve), dušností a syndromem horní duté žíly (útlak mediastina). Malobuněčný karcinom se v době diagnózy považuje za generalizovaný, neléčí se chirurgicky, ale chemoterapií. NSCLC se v časném stadiu operují."
+      definition: "Nádory plic se dělí na benigní (vzácné, např. chondroidní hamartom) a maligní, z nichž 90–95 % tvoří bronchogenní karcinom. Ten se klinicko-patologicky dělí na dvě zásadní skupiny: nemalobuněčný karcinom (NSCLC, cca 85 %) a malobuněčný karcinom (SCLC, cca 15 %). Samostatnou skupinu neuroendokrinních tumorů tvoří plicní karcinoidy.",
+      etiology: "Kouření tabáku (způsobuje 85–90 % všech případů karcinomů plic, riziko koreluje s počtem vykouřených cigaret a dobou kouření), expozice radonu, azbestu (synergický účinek s kouřením), znečištěné ovzduší, průmyslové noxy (arsen, nikl, chrom).",
+      pathogenesis: "1. **Benigní nádory**: *Chondroidní hamartom* – nejčastější, jde o benigní afekci obsahující směs tkání plicní stěny (chrupavka, tuk, vazivo, epitel).\n2. **Nemalobuněčný karcinom (NSCLC)**:\n- *Adenokarcinom (nejčastější, 40 %)*: roste periferně (často v plicních jizvách), častý u žen a nekuřáků. Prekurzory: Atypická adenomatózní hyperplazie (AAH) -> Adenocarcinoma in situ (AIS, dříve bronchoalveolární karcinom - šíří se lepidicky podél alveolárních sept). Časté jsou řidičské (driver) mutace: **EGFR, ALK translokace, KRAS, ROS1**.\n- *Dlaždicobuněčný (spinocelulární) karcinom (30 %)*: roste centrálně v hlavních bronších. Předchází mu dlaždicová metaplazie a dysplazie epitelu u kuřáků. Má sklon k centrální nekróze a kavitaci (tvorbě dutin). Produkuje protein podobný parathormonu (**PTHrP**), což vede k paraneoplastické hyperkalcémii.\n- *Velkobuněčný karcinom (10 %)*: špatně diferencovaný, anaplastický, diagnóza per exclusionem.\n3. **Malobuněčný karcinom (SCLC, 15 %)**: centrálně rostoucí, neuroendokrinní malignita s extrémně vysokou mitotickou aktivitou. Silná asociace s kouřením. Typická produkce hormonů (paraneoplastické syndromy: **SIADH** – nadbytek ADH vedoucí k hyponatrémii, **Cushingův syndrom** – nadbytek ACTH, **Lambert-Eatonův myastenický syndrom** – autoprotilátky proti vápníkovým kanálům).\n4. **Karcinoid (Neuroendokrinní tumor)**: *typický karcinoid* (low-grade, benigní/nízce maligní, roste polypózně do lumenu bronchu) a *atypický karcinoid* (intermediate-grade). Může vyvolat karcinoidový syndrom (produkce serotoninu).",
+      macroscopy: "Centrální karcinomy (SCLC, spinocelulární k.): tuhá, šedobílá masa vycházející z velkých bronchů v oblasti hilu, zužující lumen (vede k atelektáze a poststenotické pneumonii za překážkou), šíří se do mediastina a uzlin. Periferní karcinomy (adenokarcinom): solitární uzel pod pleurou, často vtahuje pleuru dovnitř (pleurální svraštění). Hamartom: ostře ohraničený, tvrdý, laločnatý uzel (vzhled 'bílého mramoru').",
+      microscopy: "- *Adenokarcinom*: žlázové formace, tvorba mucinu (hlenu), imunohistochemická pozitivita markers **TTF-1** a **Napsin A**.\n- *Dlaždicobuněčný k.*: čepy atypických buněk s mezibuněčnými můstky (desmosomy) a keratinizací (keratinové / rakovinové perly).\n- *Malobuněčný k.*: drobné uniformní buňky s minimem cytoplasmy a tmavými jádry bez patrných jadérek (vzhled **ovesných zrn** / oat cells). Typický **Azzopardiho fenomén** (modré zbarvení cévních stěn způsobené inkrustací DNA z rozpadlých nádorových buněk). Pozitivita neuroendokrinních markerů: **CD56, chromogranin, synaptofysin**.\n- *Hamartom*: ložiska zralé hyalinní chrupavky, tuku, vaziva a štěrbiny vystlané plicním epitelem.",
+      clinical: "Projevuje se kašlem (zejména změna charakteru kašle u kuřáka), hemoptýzou, dušností, úbytkem hmotnosti. Lokální šíření může způsobit **syndrom horní duté žíly** (útlak v. cava superior – edém obličeje a krku, dilatace povrchových cév), Pancoastův tumor (karcinom apexu plíce utlačující plexus brachialis a sympatikus – Hornerova triáda: mióza, ptóza, enoftalmus, anhidróza). Malobuněčný karcinom je v době záchytu téměř vždy generalizovaný a neléčí se resekcí, ale chemoterapií. NSCLC v časném stadiu podstupují resekci (lobektomie, pneumonektomie) a u adenokarcinomů se vyšetřují driver mutace pro cílenou biologickou léčbu."
     },
     quiz: [
       {
@@ -1001,8 +1050,18 @@ const DATA_ONCO_1 = [
         ],
         correct: 1,
         explanation: "Malobuněčný karcinom má extrémně vysokou míru buněčného rozpadu. Uvolněná nukleová kyselina (DNA) z rozpadlých jader inkrustuje (potahuje) stěny přilehlých krevních cév, což se mikroskopicky projevuje intenzivním tmavě modrým (bazofilním) zbarvením cévní stěny (Azzopardiho efekt)."
-      }
-    ,
+      },
+      {
+        question: "Který paraneoplastický syndrom je spojen s produkcí parathormonu podobného proteinu (PTHrP) a u kterého typu plicního karcinomu ho nacházíme?",
+        options: [
+          "SIADH (hyponatrémie) u malobuněčného karcinomu",
+          "Hyperkalcémie u dlaždicobuněčného karcinomu",
+          "Cushingův syndrom u adenokarcinomu",
+          "Lambert-Eatonův syndrom u velkobuněčného karcinomu"
+        ],
+        correct: 1,
+        explanation: "Dlaždicobuněčný karcinom plic často produkuje protein podobný parathormonu (PTHrP), což vede k patologické resorpci vápníku z kostí a vzniku hyperkalcémie."
+      },
       {
         question: "Který typ karcinomu plic je nejsilněji spojen s kouřením a má neuroendokrinní diferenciaci a velmi špatnou prognózu?",
         type: "type-in",
@@ -1014,8 +1073,15 @@ const DATA_ONCO_1 = [
         type: "type-in",
         correct: ["adenokarcinom", "adenokarcinom plic"],
         explanation: "Adenokarcinom plic je dnes nejčastějším histologickým typem plicního karcinomu, typicky lokalizovaným v periferii."
-      }]
-  },
+      },
+      {
+        question: "Jak se nazývá nádor plicního apexu (hrotu), který může utlačovat krční sympatikus a způsobit Hornerův syndrom?",
+        type: "type-in",
+        correct: ["Pancoastův tumor", "Pancoastův", "Pancoast"],
+        explanation: "Pancoastův tumor roste v plicním hrotu a způsobuje destrukci žeber, útlak plexus brachialis (bolest paže) a krčního sympatiku (Hornerův syndrom: mióza, ptóza, enoftalmus)."
+      }
+    ]
+},
 
   {
     id: "onco-20",
