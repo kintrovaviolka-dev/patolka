@@ -1744,43 +1744,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
-    let buffer = "";
-
+    let text = "";
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
+      text += decoder.decode(value, { stream: true });
+    }
 
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split("\n");
-      buffer = lines.pop(); // Keep partial line
+    // Check if the response is a simple JSON object or SSE format
+    try {
+      const parsed = JSON.parse(text);
+      if (parsed.text) {
+        onChunk(parsed.text);
+        return;
+      }
+    } catch (e) {
+      // Not a simple JSON object, try processing as SSE
+    }
 
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed.startsWith("data: ")) continue;
-        const jsonStr = trimmed.substring(6);
-        try {
-          const parsed = JSON.parse(jsonStr);
-          if (parsed.text) {
-            onChunk(parsed.text);
-          }
-        } catch (e) {
-          // Ignore partial chunk parsing errors
+    const lines = text.split("\n");
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith("data: ")) continue;
+      const jsonStr = trimmed.substring(6);
+      try {
+        const parsed = JSON.parse(jsonStr);
+        if (parsed.text) {
+          onChunk(parsed.text);
         }
+      } catch (e) {
+        // Ignore partial chunk parsing errors
       }
     }
 
-    // Process remaining buffer
-    if (buffer.length > 0) {
-      const trimmed = buffer.trim();
-      if (trimmed.startsWith("data: ")) {
-        try {
-          const parsed = JSON.parse(trimmed.substring(6));
-          if (parsed.text) {
-            onChunk(parsed.text);
-          }
-        } catch (e) {}
-      }
-    }
   };
 
   // Send request directly to Gemini API with streaming
