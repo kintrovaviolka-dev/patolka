@@ -531,6 +531,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const studyMacroscopy = document.getElementById("study-macroscopy");
   const studyMicroscopy = document.getElementById("study-microscopy");
   const studyClinical = document.getElementById("study-clinical");
+  const studyAdditionalInfoContainer = document.getElementById("study-additional-info-container");
+  const studyAdditionalInfoContent = document.getElementById("study-additional-info-content");
+  const studyAdditionalInfoToggle = document.getElementById("study-additional-info-toggle");
   const leitnerBtns = document.querySelectorAll(".leitner-btn");
   
   // Kvízové elementy
@@ -714,6 +717,19 @@ document.addEventListener("DOMContentLoaded", () => {
     studyMacroscopy.innerHTML = formatText(activeQuestion.content.macroscopy);
     studyMicroscopy.innerHTML = formatText(activeQuestion.content.microscopy);
     studyClinical.innerHTML = formatText(activeQuestion.content.clinical);
+
+    // Zobrazení a naplnění doplňujících podrobností
+    if (activeQuestion.content.additionalInfo) {
+      studyAdditionalInfoContainer.style.display = "block";
+      studyAdditionalInfoContent.style.display = "none";
+      studyAdditionalInfoToggle.classList.remove("expanded");
+      const icon = studyAdditionalInfoToggle.querySelector(".toggle-icon");
+      if (icon) icon.textContent = "▼";
+      studyAdditionalInfoContent.innerHTML = formatText(activeQuestion.content.additionalInfo);
+    } else {
+      studyAdditionalInfoContainer.style.display = "none";
+      studyAdditionalInfoContent.innerHTML = "";
+    }
 
     // Zobrazení a naplnění eponymních pojmů
     const eponymsContainer = document.getElementById("study-eponyms-container");
@@ -1303,6 +1319,24 @@ document.addEventListener("DOMContentLoaded", () => {
     openMatchingGame();
   });
 
+  // Tlačítko pro doplňující podrobnosti
+  if (studyAdditionalInfoToggle && studyAdditionalInfoContent) {
+    studyAdditionalInfoToggle.addEventListener("click", () => {
+      const isHidden = studyAdditionalInfoContent.style.display === "none" || studyAdditionalInfoContent.style.display === "";
+      if (isHidden) {
+        studyAdditionalInfoContent.style.display = "block";
+        studyAdditionalInfoToggle.classList.add("expanded");
+        const icon = studyAdditionalInfoToggle.querySelector(".toggle-icon");
+        if (icon) icon.textContent = "▲";
+      } else {
+        studyAdditionalInfoContent.style.display = "none";
+        studyAdditionalInfoToggle.classList.remove("expanded");
+        const icon = studyAdditionalInfoToggle.querySelector(".toggle-icon");
+        if (icon) icon.textContent = "▼";
+      }
+    });
+  }
+
   // 16. SPRÁVA TÉMATU (TMÁVÝ / SVĚTLÝ REŽIM)
   const savedTheme = localStorage.getItem("patologie_theme") || "dark-theme";
   document.body.className = savedTheme;
@@ -1744,39 +1778,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
-    let text = "";
+    let buffer = "";
+
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
-      text += decoder.decode(value, { stream: true });
-    }
 
-    // Check if the response is a simple JSON object or SSE format
-    try {
-      const parsed = JSON.parse(text);
-      if (parsed.text) {
-        onChunk(parsed.text);
-        return;
-      }
-    } catch (e) {
-      // Not a simple JSON object, try processing as SSE
-    }
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop(); // Keep partial line
 
-    const lines = text.split("\n");
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (!trimmed.startsWith("data: ")) continue;
-      const jsonStr = trimmed.substring(6);
-      try {
-        const parsed = JSON.parse(jsonStr);
-        if (parsed.text) {
-          onChunk(parsed.text);
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed.startsWith("data: ")) continue;
+        const jsonStr = trimmed.substring(6);
+        try {
+          const parsed = JSON.parse(jsonStr);
+          if (parsed.text) {
+            onChunk(parsed.text);
+          }
+        } catch (e) {
+          // Ignore partial chunk parsing errors
         }
-      } catch (e) {
-        // Ignore partial chunk parsing errors
       }
     }
 
+    // Process remaining buffer
+    if (buffer.length > 0) {
+      const trimmed = buffer.trim();
+      if (trimmed.startsWith("data: ")) {
+        try {
+          const parsed = JSON.parse(trimmed.substring(6));
+          if (parsed.text) {
+            onChunk(parsed.text);
+          }
+        } catch (e) {}
+      }
+    }
   };
 
   // Send request directly to Gemini API with streaming
