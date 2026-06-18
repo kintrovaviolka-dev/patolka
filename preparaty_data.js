@@ -266,7 +266,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740829638758,
-    "title": "Sideroza - hnědá indukace plic",
+    "title": "Sideroza - hnědá indurace plic",
     "is_zkouskove": true,
     "images": [
       "part2/paste-28301930e5faa4a049679e463d32f558095ee2f4.jpg",
@@ -310,7 +310,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740830495233,
-    "title": "CHOPN, plicní empfyzém",
+    "title": "CHOPN, plicní emfyzém",
     "is_zkouskove": false,
     "images": [
       "part5/paste-9e5ce7cde500048f636a678092f11bb417472cbf.jpg",
@@ -322,7 +322,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740830713624,
-    "title": "Embolie Kostní dřeně",
+    "title": "Embolie kostní dřeně",
     "is_zkouskove": false,
     "images": [
       "part1/paste-1730853e07f97c2a19cd157c917ae9acc9a3aa4c.jpg",
@@ -362,7 +362,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740831626854,
-    "title": "ARDS dospělých (covid",
+    "title": "ARDS dospělých (covid)",
     "is_zkouskove": false,
     "images": [
       "part5/paste-855bca0903b43d32cc31908e72e2132ac2b83b61.jpg",
@@ -401,7 +401,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740832243304,
-    "title": "Intesticiální pneumonie",
+    "title": "Intersticiální pneumonie",
     "is_zkouskove": false,
     "images": [
       "part7/paste-d44d5197a8055c6f41214bf8cebeacffdc6d6717.jpg",
@@ -602,7 +602,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740835993105,
-    "title": "Barretův jícen",
+    "title": "Barrettův jícen",
     "is_zkouskove": false,
     "images": [
       "part4/paste-6d4f7ec0869b060a0a7b55e86705c1f517fd702f.jpg",
@@ -844,7 +844,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740839661484,
-    "title": "Abscedující changoitis",
+    "title": "Abscedující cholangitida",
     "is_zkouskove": false,
     "images": [
       "part6/paste-a1ab0f61859fb128ca32467a888eeea327bc103e.jpg",
@@ -951,7 +951,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740841029151,
-    "title": "karcinom žlučníku",
+    "title": "Karcinom žlučníku",
     "is_zkouskove": true,
     "images": [
       "part6/paste-a627e34481705f48d2c6b7364f04cce31e4390ae.jpg",
@@ -1090,7 +1090,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744007941292,
-    "title": "Světlobuňečný karcinom ledviny",
+    "title": "Světlobuněčný karcinom ledviny",
     "is_zkouskove": true,
     "images": [
       "part4/paste-707715087e5ed52dac4d7ed1a9ada750ca9a4b02.jpg",
@@ -1219,7 +1219,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744010312720,
-    "title": "Dlařdicobuněčná metaplazie děl. čípku",
+    "title": "Dlaždicobuněčná metaplazie děl. čípku",
     "is_zkouskove": false,
     "images": [
       "part5/paste-8d7684fd55408baac4553c7f7a4bf7914d661161.jpg",
@@ -1306,7 +1306,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744011942220,
-    "title": "Cystycký zralý teratom (dermoidní cysta)",
+    "title": "Cystický zralý teratom (dermoidní cysta)",
     "is_zkouskove": false,
     "images": [
       "part1/paste-11e94a906908f360e9a8e9f58734c7fd6a499c89.jpg",
@@ -1317,7 +1317,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744012035794,
-    "title": "teratom - struma ovárií)",
+    "title": "Teratom - struma ovarii",
     "is_zkouskove": false,
     "images": [
       "part2/paste-3b6736bdb7fab129a21afab2ba331990ef45ee19.jpg",
@@ -1327,7 +1327,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744012116283,
-    "title": "Granulosa cell tumor)",
+    "title": "Granulosa cell tumor",
     "is_zkouskove": false,
     "images": [
       "part5/paste-96c77e9228bd569911bc4ea8d0e22bf62b790816.jpg",
@@ -1337,7 +1337,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744012240468,
-    "title": "Rhabdomyosarkom embryonální cervix)",
+    "title": "Rhabdomyosarkom (embryonální cervix)",
     "is_zkouskove": false,
     "images": [
       "part6/paste-ba5a6c827e422056491de4a03664cea7ed9965a4.jpg",
@@ -1511,7 +1511,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744313536886,
-    "title": "Mucinózní karcinom (metastáza v plicích))",
+    "title": "Mucinózní karcinom (metastáza v plicích)",
     "is_zkouskove": false,
     "images": [
       "part4/paste-671f3541e0af7e0176a62e583681026c5872f08f.jpg",
@@ -1623,7 +1623,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744315093098,
-    "title": "Melanoakontotická seboroická veruka",
+    "title": "Melanoakantotická seboroická veruka",
     "is_zkouskove": true,
     "images": [
       "part1/paste-19af437267245f9895de11837adc069abcf84d56.jpg",
@@ -1766,7 +1766,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744317540078,
-    "title": "Neurinom - Schwanom",
+    "title": "Neurinom - Schwannom",
     "is_zkouskove": true,
     "images": [
       "part4/paste-6ffc1d0dee00515c8969faea3dbb26bdeb2cb21a.jpg",
