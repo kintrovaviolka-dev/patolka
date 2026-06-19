@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html lang="cs" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Kit: Patologie Nádorů</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0b0f19',
+                        cardbg: '#131b2e',
+                        accentNeon: '#a855f7', // Keep neon purple for the survival vibe
+                        accentWarm: '#f59e0b',
+                        accentRed: '#ef4444',
+                        accentGreen: '#10b981',
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e294b', // matches --bg-tertiary / borders
+                            900: '#131b2e', // matches --bg-secondary
+                            950: '#0b0f19'  // matches --bg-primary
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        .mono-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Card Flip animation */
+        .flip-card {
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-darkbg text-slate-100 min-h-screen flex flex-col selection:bg-purple-500/30">
+
+    <!-- Horní lišta s "Lazy-O-Meterem" a stavem vyhoření -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">🧠</span>
+                <div>
+                    <h1
+                        class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-amber-300">
+                        Survival Kit: Patologie Nádorů</h1>
+                    <p class="text-xs text-slate-400">Poslední záchrana před zápočtem/zkouškou pro totálně vyčerpané
+                        lidi</p>
+                </div>
+            </div>
+
+            <!-- Lazy-O-Meter -->
+            <div
+                class="flex items-center gap-3 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800 w-full md:w-auto">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Úroveň vyhoření:</span>
+                <input type="range" id="burnoutSlider" min="0" max="100" value="80"
+                    class="accent-purple-500 cursor-pointer h-2 bg-slate-700 rounded-lg appearance-none w-32">
+                <span id="burnoutVal" class="text-sm font-extrabold text-purple-400 mono-font">80%</span>
+                <span id="moodIcon" class="text-lg">🤯</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hlavní obsah -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Levý panel: Navigace modulů a vyhledávání -->
+        <section class="lg:col-span-4 flex flex-col gap-4">
+            <!-- Vyhledávač -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Rychlá záchrana: vyhledej termín,
+                    gen či buňku</label>
+                <div class="relative">
+                    <input type="text" id="searchTerm" placeholder="Zadej např. t(9;22), GIST, Reed, BRCA..."
+                        class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 text-slate-100 placeholder-slate-500">
+                    <span class="absolute right-3 top-3 text-slate-500 text-xs">🔍</span>
+                </div>
+                <div id="searchSuggestions" class="mt-2 flex flex-wrap gap-1">
+                    <!-- Rychlá tlačítka pro hledání -->
+                </div>
+            </div>
+
+            <!-- Seznam modulů (Syllabus) -->
+            <div
+                class="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex-1 overflow-y-auto max-h-[60vh] lg:max-h-[calc(100vh-280px)]">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-xs font-bold text-slate-400 uppercase">Syllabus Otázek (30 témat)</span>
+                    <span id="progressStats" class="text-xs text-purple-400 font-bold mono-font">0/30 hotovo</span>
+                </div>
+                <div class="space-y-1" id="modulesList">
+                    <!-- Generováno JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Střední/Pravý panel: Hlavní učební prostor a simulace -->
+        <section class="lg:col-span-8 flex flex-col gap-6">
+
+            <!-- Vtipná uvítací hláška / Podpora od Anči z patoly -->
+            <div id="advisorWidget"
+                class="bg-gradient-to-r from-purple-950/40 to-slate-900 border border-purple-500/20 rounded-2xl p-4 flex items-start gap-4 shadow-lg">
+                <span class="text-3xl" id="advisorEmoji">🩺</span>
+                <div>
+                    <p class="text-xs text-slate-300 italic mt-1" id="advisorText">
+                        "Tak co, jedeme?"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tabs: Výuka vs Zkoušková Aréna vs Rychlé Karty -->
+            <div class="flex bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+                <button onclick="switchTab('study')" id="tab-study"
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all bg-purple-600 text-white">
+                    📖 Interaktivní Výuka
+                </button>
+                <button onclick="switchTab('cards')" id="tab-cards"
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
+                    📇 Kartičky do kapsy
+                </button>
+                <button onclick="switchTab('arena')" id="tab-arena"
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
+                    ⚔️ Aréna s Profesorem
+                </button>
+            </div>
+
+            <!-- OBSAH STUDY TABU -->
+            <div id="content-study" class="space-y-6">
+                <!-- Karta vybraného tématu -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl relative overflow-hidden"
+                    id="studyCard">
+                    <!-- Pozadí efekt pro premium look -->
+                    <div
+                        class="absolute -right-16 -top-16 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span
+                                class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 uppercase tracking-wider mono-font"
+                                id="topicCategory">Obecná patologie</span>
+                            <h2 class="text-xl md:text-2xl font-black mt-2 text-slate-100" id="topicTitle">Příčiny
+                                vzniku nádorů</h2>
+                        </div>
+                        <button onclick="toggleTopicRead()" id="readBtn"
+                            class="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-xl border border-slate-700 bg-slate-950 hover:bg-slate-800 transition-all text-slate-300">
+                            <span>❌ Nezaškrtnuto</span>
+                        </button>
+                    </div>
+
+                    <!-- ZDE SE ZOBRAZUJE INTERAKTIVNÍ VIZUALIZACE NÁDORU / STRUKTURY -->
+                    <div id="interactiveCanvasContainer"
+                        class="mb-6 bg-slate-950 rounded-2xl border border-slate-800/80 p-4 relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-2">
+                            <span
+                                class="text-[10px] uppercase font-bold text-slate-500 tracking-wider flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span> Mikroskopická
+                                interaktivní schémata
+                            </span>
+                            <span class="text-[10px] text-purple-400 font-mono" id="canvasHint">Kliknutím stimuluješ
+                                buňky</span>
+                        </div>
+                        <div class="h-32 flex items-center justify-center relative bg-slate-950/50"
+                            id="customVisualArea">
+                            <!-- Dynamicky generovaná visualizace v JS (SVG/Canvas) -->
+                        </div>
+                    </div>
+
+                    <!-- REŽIM VYHOŘENÍ: "LAZY BRO SUMMARY" (Zobrazeno pokud burnout > 40%) -->
+                    <div id="lazySummaryContainer"
+                        class="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-4 mb-6">
+                        <h3
+                            class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-2">
+                            <span>⚡</span> Lazy-Student Překlad (Žádné blbosti, rovnou k jádru):
+                        </h3>
+                        <ul class="space-y-2 text-sm text-slate-200 leading-relaxed" id="lazyList">
+                            <!-- Generováno JS -->
+                        </ul>
+                    </div>
+
+                    <!-- PLNÝ AKADEMICKÝ VÝKLAD (Skrytý/Zobrazený podle burnout score) -->
+                    <div id="academicContainer" class="border-t border-slate-800 pt-6">
+                        <button onclick="toggleAcademicView()"
+                            class="w-full flex justify-between items-center text-xs font-bold text-slate-400 uppercase tracking-widest hover:text-slate-200 transition-all">
+                            <span>📖 Kompletní zkoušková teorie</span>
+                            <span id="academicChevron">👇</span>
+                        </button>
+                        <div id="academicBody" class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+                            <!-- Generováno JS -->
+                        </div>
+                    </div>
+
+                    <!-- RYCHLOTEST (Zkušební otázka na konci tématu) -->
+                    <div class="border-t border-slate-800 mt-6 pt-6">
+                        <h4
+                            class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-3 flex items-center gap-1">
+                            <span>🎯</span> Rychlý testík na zapamatování
+                        </h4>
+                        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4">
+                            <p class="text-sm font-semibold mb-3 text-slate-200" id="quizQuestion">Otázka se načítá...
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="quizOptions">
+                                <!-- Generováno JS -->
+                            </div>
+                            <div id="quizFeedback" class="mt-3 text-xs font-bold hidden p-2.5 rounded-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OBSAH FLASHCARDS TABU -->
+            <div id="content-cards" class="hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl text-center">
+                    <h2 class="text-lg font-extrabold text-slate-100">Taháky a asociace na zkoušku</h2>
+                    <p class="text-xs text-slate-400 mt-1">Ty nejdůležitější mnemotechnické karty, co se tě zeptají na
+                        ústním.</p>
+
+                    <div class="my-8 flex justify-center">
+                        <!-- Interaktivní karta -->
+                        <div onclick="flipCard()" id="flashcard"
+                            class="flip-card w-full max-w-sm h-64 cursor-pointer select-none">
+                            <div
+                                class="flip-card-inner relative w-full h-full text-center transition-transform duration-500 transform-style-preserve-3d">
+                                <!-- Přední strana -->
+                                <div
+                                    class="flip-card-front absolute w-full h-full bg-slate-950 border-2 border-purple-500/40 rounded-2xl p-6 flex flex-col justify-between items-center shadow-2xl">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Pojem /
+                                        Marker</span>
+                                    <h3 class="text-xl font-black text-slate-100" id="cardFrontText">...</h3>
+                                    <span class="text-[10px] text-slate-500">Klikni pro otočení a odhalení
+                                        vysvětlení</span>
+                                </div>
+                                <!-- Zadní strana -->
+                                <div
+                                    class="flip-card-back absolute w-full h-full bg-purple-950 border-2 border-purple-400 rounded-2xl p-6 flex flex-col justify-between items-center shadow-2xl">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-purple-300">Co to
+                                        znamená pro zkoušejícího</span>
+                                    <p class="text-sm font-bold text-slate-100 leading-relaxed" id="cardBackText">...
+                                    </p>
+                                    <span class="text-[10px] text-purple-300">Kliknutím se vrať zpět</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-3">
+                        <button onclick="prevCard()"
+                            class="px-4 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs font-bold hover:bg-slate-800 transition-all">◀️
+                            Předchozí</button>
+                        <button onclick="nextCard()"
+                            class="px-4 py-2 bg-purple-600 rounded-xl text-xs font-bold hover:bg-purple-500 transition-all">Další
+                            ▶️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OBSAH ARENA TABU -->
+            <div id="content-arena" class="hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl relative overflow-hidden">
+                    <div
+                        class="absolute -right-20 -bottom-20 w-40 h-40 bg-red-500/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <h2 class="text-xl font-black text-slate-100">Boj s Profesorem Patologie ⚔️</h2>
+                        <p class="text-xs text-slate-400">Odpovídej správně a poraz profesora v souboji o zápočet!</p>
+                    </div>
+
+                    <!-- Bojové UI -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <!-- Student Status -->
+                        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-bold text-slate-300">Tvoje duševní zdraví:</span>
+                                <span id="playerHpText" class="text-xs font-mono font-bold text-purple-400">100/100
+                                    HP</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                <div id="playerHpBar"
+                                    class="bg-gradient-to-r from-purple-500 to-purple-400 h-full transition-all duration-300"
+                                    style="width: 100%;"></div>
+                            </div>
+                            <div class="text-[10px] text-slate-500 mt-1">Uzdrav se správnou odpovědí.</div>
+                        </div>
+
+                        <!-- Profesor Status -->
+                        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-bold text-slate-300">Trpělivost profesora:</span>
+                                <span id="bossHpText" class="text-xs font-mono font-bold text-red-400">100/100 HP</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                <div id="bossHpBar"
+                                    class="bg-gradient-to-r from-red-500 to-red-400 h-full transition-all duration-300"
+                                    style="width: 100%;"></div>
+                            </div>
+                            <div class="text-[10px] text-slate-500 mt-1">Sraz mu ego přesnou vědeckou odpovědí!</div>
+                        </div>
+                    </div>
+
+                    <!-- Bojová scéna -->
+                    <div
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 text-center relative min-h-[220px] flex flex-col justify-center items-center">
+                        <div id="arenaGameStatus">
+                            <span class="text-5xl" id="bossGraphic">👴</span>
+                            <h3 class="font-bold text-sm text-red-300 mt-2" id="bossDialogue">"Tak mě přesvědčte, že
+                                víte, co je to Azzopardiho fenomén, kolego..."</h3>
+
+                            <p class="text-sm font-semibold mt-6 mb-4 text-slate-100" id="arenaQuestion">Boj se
+                                načítá...</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-left w-full" id="arenaOptions">
+                                <!-- Možnosti generované v JS -->
+                            </div>
+                        </div>
+
+                        <div id="arenaResultArea" class="hidden">
+                            <!-- Výsledek hry (výhra/prohra) -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-4 px-4 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <p>© 2026 Patologický Survival Kit. Vytvořeno pro unavené duše s láskou k vědě a kofeinu.</p>
+            <p>Všechny klinické informace vycházejí přesně z tvé zkouškové osnovy.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase / Logic Script -->
+    <script>
+        // DATABÁZE VŠECH 28 TÉMAT SE VŠEMI KLÍČOVÝMI BODY A DETAILY Z TEXTU UŽIVATELE
+        const database = [
+            {
+                id: 1,
+                title: "Příčiny vzniku nádorů",
+                category: "Obecná onkologie",
+                lazy: [
+                    "<strong>Fyzikální:</strong> Ionizující záření (alfa, beta, gama...) ničí přímo DNA nebo tvoří kyslíkové radikály. <strong>Deterministické účinky</strong> (daná dávka = jistý průšvih) vs <strong>stochastické</strong> (každá dávka nese riziko). UV záření tvoří pyrimidinové dimery (karcinomy kůže, chrání melanin). Azbest zase pleurální mezoteliom.",
+                    "<strong>Chemické:</strong> Dělí se na <strong>genotoxické</strong> (iniciátory, mění DNA) a <strong>negenotoxické</strong> (promotory, podporují buněčné bujení už poškozených buněk).",
+                    "<strong>Genotoxické kancerogeny:</strong> Jsou buď <strong>přímé</strong>, nebo <strong>nepřímé</strong> (potřebují metabolickou biotransformaci přes Cytochrom P450). Patří sem aromatické uhlovodíky (cigarety, tabák -> plíce), azobarviva (problém v jaterním metabolismu nebo ledvinách/měchýři při vylučování) a nitrosaminy (konzervované maso -> žaludek/GIT)."
+                ],
+                academic: `
+                    <p>Příčiny karcinogeneze lze dělit na fyzikální, chemické, biologické a genetické.</p>
+                    <p><strong>Fyzikální faktory:</strong> Ionizující záření (alfa, beta, gama, neutronové) působí přímým poškozením DNA nebo nepřímo ionizací vody a tvorbou reaktivních forem kyslíku (kyslíkových radikálů). Účinky dělíme na deterministické (prahové, poškození buněk stoupá s dávkou) a stochastické (bezprahové, každé ozáření zvyšuje pravděpodobnost maligní transformace). UV záření způsobuje vznik pyrimidinových dimerů v epidermis (dlaždicobuněčný a bazocelulární karcinom, melanom). Azbest způsobuje pleurální mezoteliom a plicní adenokarcinom.</p>
+                    <p><strong>Chemické faktory:</strong> Genotoxické kancerogeny (iniciátory) přímo mění strukturu DNA. Mohou být přímé nebo nepřímé (vyžadují aktivaci biotransformací, např. cytochromem P450). Patří sem polycyklické aromatické uhlovodíky (smog, cigaretový kouř), azobarviva (dnes zakázaná, metabolizují se v játrech, vylučují močí - karcinom močového měchýře) a nitrosaminy/nitrosamidy v uzeninách. Negenotoxické kancerogeny (promotory) nepoškozují DNA přímo, ale stimulují proliferaci již iniciovaných buněk.</p>
+                `,
+                visualType: "dna_damage",
+                quiz: {
+                    q: "Jaký je zásadní rozdíl mezi genotoxickým iniciátorem a negenotoxickým promotorem?",
+                    options: [
+                        "Iniciátor přímo mění DNA, promotor pouze podporuje proliferaci již změněných buněk.",
+                        "Iniciátor vyžaduje přeměnu cytochromem P450, promotor reaguje přímo.",
+                        "Promotor vyvolává deterministické účinky, iniciátor stochastické.",
+                        "Mezi nimi není žádný biologický rozdíl."
+                    ],
+                    correct: 0,
+                    explain: "Přesně tak! Genotoxický iniciátor započne mutaci v DNA. Negenotoxický promotor pak už jen 'přilévá olej do ohně' a nutí ty mutované potvory množit se."
+                }
+            },
+            {
+                id: 2,
+                title: "Prekancerózy a dysplázie",
+                category: "Obecná onkologie",
+                lazy: [
+                    "<strong>Dysplázie:</strong> Nejčastěji na úrovni epitelu (intraepiteliální neoplázie) - dělí se do 3 stupňů. Stupeň III zahrnuje <strong>Carcinoma in situ (CIS)</strong>: buňky vypadají zhoubně, ale jsou 'v mezích' - <strong>neporušují bazální membránu</strong> a nelezou do stromatu.",
+                    "Lokalizace CIS: <strong>CIN</strong> (cervikální), <strong>PeIN</strong> (penilní), <strong>VaIN</strong> (vaginální), <strong>VIN</strong> (vulvární), <strong>PIN</strong> (prostatická).",
+                    "<strong>Metaplázie a záněty:</strong> Chronický zánět vyvolá metaplázii (dlaždicobuněčná v dýchacích cestách kuřáka; intestinální v jícnu - <strong>Barrettův jícen</strong>). Pokud dráždění pokračuje, zvrtne se v dysplázii a pak karcinom.",
+                    "<strong>Hyperplázie a benigní tumory:</strong> Hyperplázie endometria (z nadbytku estrogenů) je prekanceróza, ale <strong>hyperplázie prostaty prekancerózou není!</strong> Z benigních tumorů jsou rizikové adenomatózní polypy střeva a folikulární adenom štítné žlázy."
+                ],
+                academic: `
+                    <p>Prekancerózy (premaligní léze) vznikají na podkladě dysplastických změn, chronických zánětů, hormonálních hyperplázií či některých benigních nádorů.</p>
+                    <p><strong>Dysplázie a CIS:</strong> Intraepiteliální neoplázie se dělí na stupně I-III. Stupeň III (konkrétně III B) představuje Carcinoma in situ (CIS) – stav vykazující cytologické znaky malignity, avšak bez invaze přes bazální membránu do okolního stromatu.</p>
+                    <p><strong>Chronické dráždění:</strong> Způsobuje metaplázii. V jícnu vede reflux ke vzniku Barrettova jícnu (intestinální metaplázie), z něhož se rozvíjí adenokarcinom. V dýchacích cestách způsobuje cigaretový kouř dlaždicobuněčnou metaplázii a následně spinocelulární karcinom.</p>
+                    <p><strong>Hormonální vlivy:</strong> Hyperplázie endometria z hyperestrogenismu je jasnou prekancerózou. Naproti tomu nodulární hyperplázie prostaty není prekancerózou acinárního karcinomu.</p>
+                `,
+                visualType: "cis_membrane",
+                quiz: {
+                    q: "Které z následujících tvrzení je stoprocentně pravdivé u Carcinoma in situ (CIS)?",
+                    options: [
+                        "Vždy již prorůstá do lymfatických cév.",
+                        "Vykazuje buněčné atypie, ale neporušuje bazální membránu.",
+                        "Vyskytuje se pouze v prostatě jako PIN.",
+                        "Způsobuje okamžitou destrukci okolního stromatu."
+                    ],
+                    correct: 1,
+                    explain: "Správně! CIS má všechny morfologické znaky rakoviny, ale chybí mu to nejzásadnější - schopnost invaze. Bazální membrána ho drží jako zámek."
+                }
+            },
+            {
+                id: 3,
+                title: "Nepravé nádory (Pseudotumory)",
+                category: "Obecná onkologie",
+                lazy: [
+                    "<strong>Hyperplastické procesy:</strong> Nodulární hyperplázie prostaty nebo <strong>pseudoepiteliomatózní hyperplázie</strong> kůže kolem vředu (napodobuje karcinom, ale nemá jaderné atypie!).",
+                    "<strong>Hamartom:</strong> Normální tkáň, která je v daném orgánu doma, ale je totálně chaoticky uspořádaná. Příklad: <strong>plicní chondrohamartom</strong> (kousek bronchiální chrupavky v plicním parenchymu).",
+                    "<strong>Heterotopie (ektopie):</strong> Normální tkáň na špatném místě. Třeba tkáň nadledviny ve vaječníku, nebo retrosternální struma (štítná žláza za hrudní kostí).",
+                    "<strong>Cysty:</strong> Pravé (mají epitelovou výstelku) vs pseudocysty (bez výstelky, např. postnekrotická pseudocysta). Časté jsou retenční cysty (ucpání vývodu -> dilatace -> atrofie výstelky tlakem), např. <strong>aterom</strong> (mazová žláza), <strong>Ovula Nabothi</strong> na děložním hrdle, nebo implantační cysty vyžívající <strong>thigmotaxi</strong> (vhojený epitel si vystele dutinu hluboko v kůži)."
+                ],
+                academic: `
+                    <p>Pseudotumory jsou léze, které makroskopicky imitují nádor, ale chybí jim autonomní nekontrolovaný růst.</p>
+                    <p><strong>Hamartom:</strong> Představuje ložiskový nadbytek zralých tkání, které jsou sice v dané lokalizaci přirozené, ale jejich architektonika je chybná (např. plicní chondrohamartom).</p>
+                    <p><strong>Heterotopie (ektopie):</strong> Přítomnost histologicky normální tkáně v orgánu, kde se normálně nevyskytuje (např. ektopická štítná žláza v mediastinu).</p>
+                    <p><strong>Cysty:</strong> Duté útvary. Pravé cysty mají vnitřní výstelku (např. retenční aterom, mukocelek, Ovula Nabothi z metaplastického přerůstání dlaždicového epitelu přes děložní žlázky, či implantační cysty s thigmotaxí). Pseudocysty výstelku postrádají (posthemoragická ložiska).</p>
+                `,
+                visualType: "cyst_draw",
+                quiz: {
+                    q: "Co je to plicní chondrohamartom?",
+                    options: [
+                        "Maligní nádor plic metastázující z chrupavek.",
+                        "Ektopická chrupavka, která uvízla v játrech.",
+                        "Normální bronchiální chrupavka chybně zapojená do plicní struktury.",
+                        "Pseudocysta bez epitelové výstelky."
+                    ],
+                    correct: 2,
+                    explain: "Jasný hamartom! Tkáň tam patří, chrupavka v plicích je normální, ale je špatně prostorově zapojená."
+                }
+            },
+            {
+                id: 4,
+                title: "Biologická povaha nádorů",
+                category: "Obecná onkologie",
+                lazy: [
+                    "<strong>Benigní:</strong> Rostou pomalu, exofyticky, mají pouzdro, dobře ohraničené, zachovávají si strukturu a funkci tkáně (např. lipom, adenom). Nemetastázují, nízká mitotická aktivita.",
+                    "<strong>Maligní:</strong> Rostou rychle, infiltrativně/invazivně (boří a nahrazují okolí), nemají pouzdro, vysoká mitotická aktivita (atypické mitózy). Mají dopad na tělo: <strong>kachexie</strong> a paraneoplastické syndromy. Často vykazují regresivní změny (nekrózy).",
+                    "<strong>Borderline:</strong> Nejisté biologické chování. Rostou infiltrativně, ale nemetastázují. Lepší prognóza než maligní (např. serózní borderline tumor ovaria, GIST)."
+                ],
+                academic: `
+                    <p>Biologické chování dělí neoplázie do tří hlavních kategorií:</p>
+                    <p><strong>Benigní nádory:</strong> Expanzivní, ohraničený růst, často opouzdřené. Vykazují vysoký stupeň diferenciace a nízkou mitotickou aktivitu. Nemetastázují a nezpůsobují destrukci okolí, mohou však utlačovat okolní struktury.</p>
+                    <p><strong>Maligní nádory:</strong> Infiltrativní a invazivní růst s destrukcí okolní tkáně. Hranice jsou neostré, chybí pouzdro. Vykazují buněčnou anaplázii, buněčné atypie, vysokou mitotickou aktivitu s atypickými formami mitóz a zakládají metastázy. Často vedou ke kachexii a paraneopláziím.</p>
+                    <p><strong>Borderline (hraniční) nádory:</strong> Mají rysy obou skupin – vykazují lokální infiltrativní růst, ale obvykle nemají schopnost zakládat vzdálené metastázy (např. GIST, serózní borderline nádor ovaria).</p>
+                `,
+                visualType: "growth_patterns",
+                quiz: {
+                    q: "Jak se chová borderline (hraniční) nádor?",
+                    options: [
+                        "Roste pouze exofyticky a nikdy nepenetruje do tkání.",
+                        "Roste infiltrativně, ale typicky nezakládá vzdálené metastázy.",
+                        "Je to histologicky benigní nádor s vysokou mitotickou aktivitou.",
+                        "Chová se agresivněji než plně maligní sarkom."
+                    ],
+                    correct: 1,
+                    explain: "Přesně tak! Borderline je takový biologický hybrid - infiltraci zvládá, ale metastazování naštěstí moc ne."
+                }
+            },
+            {
+                id: 5,
+                title: "Kritéria benignity a malignity",
+                category: "Obecná onkologie",
+                lazy: [
+                    "<strong>Cytologické známky anaplazie:</strong> 1) <strong>Pleomorfie</strong> (buňky mají různý tvar a velikost). 2) <strong>Vyšší N/C poměr</strong> (obří jádro, málo cytoplazmy; typické pro 'small blue cells' jako meduloblastom, lymfomy, SCLC). 3) <strong>Anizonukleóza</strong> (různá jádra). 4) <strong>Hyperchromázie jader</strong> (jsou tmavá, plná hrubého chromatinu). 5) Zvětšená jadérka. 6) Ztráta polarity (jádra skáčou nahoru a dolů).",
+                    "<strong>Mitózy:</strong> Vysoká aktivita. Typické (bipolární) vs <strong>atypické mitózy</strong> (tripolární ve tvaru 'Y', kvadrupolární 'X' - známka těžké anaplazie).",
+                    "<strong>Metastázování:</strong> <strong>Lymfogenní</strong> (hlavně epitelové nádory; sentinelová uzlina je první na ráně), <strong>hematogenní</strong> (hlavně mezenchymální; přes ductus thoracicus nebo přímo do krve), <strong>porogenní</strong> (prorůstání na serózu a odlamování do dutin -> karcinomatóza pleury)."
+                ],
+                academic: `
+                    <p>Rozlišení benignity a malignity stojí na histologické architektonice, cytologických znacích anaplázie, mitotické aktivitě a přítomnosti metastáz.</p>
+                    <p><strong>Cytologické znaky anaplázie:</strong> Pleomorfie (variabilita tvaru a velikosti buněk), vysoký nukleoplasmový (N/C) poměr (např. u "small blue round cells" tumorů), anizonukleóza, hyperchromázie jader (způsobená hrubým chromatinem), zvětšená, atypická jadérka a ztráta buněčné polarity.</p>
+                    <p><strong>Mitózy:</strong> U malignit nacházíme nejen četné typické mitózy, ale i patologické, atypické mitotické figury (tripolární "Y", kvadrupolární "X").</p>
+                    <p><strong>Metastázování:</strong> Lymfogenní cesta (typická pro karcinomy, první je sentinelová uzlina), hematogenní cesta (typická pro sarkomy, plíce a kosti jako hlavní cíle) a porogenní implantace (karcinomatóza pleury a peritonea po porušení serózy orgánu).</p>
+                `,
+                visualType: "mitosis_types",
+                quiz: {
+                    q: "Co znamená nález tripolární mitózy (tvaru Y) v histologickém vzorku?",
+                    options: [
+                        "Jde o fyziologickou regeneraci tkáně.",
+                        "Je to jednoznačný cytologický znak malignity (atypická mitóza).",
+                        "Značí to přítomnost parazitární infekce.",
+                        "Jedná se o negenotoxický efekt stochastického záření."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Normální buňka se dělí na dvě (bipolární mitóza). Tripolární 'Y' dělení svědčí o těžkém rozvratu chromozomů a malignitě."
+                }
+            },
+            {
+                id: 6,
+                title: "Benigní a maligní epitelové nádory",
+                category: "Obecná onkologie",
+                lazy: [
+                    "<strong>Původ:</strong> Povrchový epitel (benigní = <strong>papilom</strong>, maligní = <strong>karcinom</strong>) vs žlázový epitel (benigní = <strong>adenom</strong>, maligní = <strong>adenokarcinom</strong>).",
+                    "<strong>Chování:</strong> Adenomy rostou expanzivně, utlačují okolí, způsobují tlakovou atrofii a fibrotizaci (tím si tvoří pouzdro), ale neinfiltrují. Maligní karcinomy prorůstají, metastázují, nízce diferencované formy mohou vypadat jako vřetenobuněčné sarkomy (<strong>sarkomatoidní karcinom</strong>). Často v nich vznikají nekrózy -> ulcerace -> jizvení a stenózy (např. v jícnu).",
+                    "<strong>Dlaždicobuněčný papilom:</strong> Benigní, exofytický na sliznicích (ústa, hlasivky). Často HPV asociovaný (<strong>koilocyty</strong> = buňky s projasněným haló kolem jádra). Může patologicky rohovět (leukoplakie).",
+                    "<strong>Aktinická keratóza & Bowenova choroba:</strong> Keratóza je prekanceróza kůže z UV záření (rohovění, kožní rohy). Bowenova choroba je čistý <strong>Carcinoma in situ (CIS)</strong> projevující se jako červené plaky."
+                ],
+                academic: `
+                    <p>Epiteliální nádory vycházejí z povrchového nebo žlázového epitelu.</p>
+                    <p><strong>Diferenciace chování:</strong> Benigní formy (papilom, adenom) rostou exofyticky či expanzivně. Adenomy v hloubce orgánů utlačují okolí, čímž iniciují reaktivní fibrotizaci a tvorbu vazivového pouzdra bez infiltrace. Maligní formy (karcinom, adenokarcinom) infiltrují okolí, metastázují a nízce diferencované formy mohou morfologicky imitovat sarkomy (tzv. sarkomatoidní karcinomy). V důsledku rychlého růstu podléhají nekróze, ulcerují, což vede k jizvení a stenózám lumen dutých orgánů.</p>
+                    <p><strong>Dlaždicobuněčný papilom:</strong> Benigní léze s exofytickým papilárním růstem, často asociovaná s infekcí HPV (morfologicky přítomny koilocyty – buňky s perinukleárním halo). Na sliznicích se hyperkeratóza klinicky projevuje jako leukoplakie.</p>
+                    <p><strong>Prekancerózy:</strong> Aktinická keratóza vzniká vlivem UV záření a vykazuje hyperkeratózu (může tvořit kožní rohy). Bowenova choroba představuje intraepidermální Carcinoma in situ (CIS).</p>
+                `,
+                visualType: "koilocyte_visual",
+                quiz: {
+                    q: "Co jsou to koilocyty a kde je najdeme?",
+                    options: [
+                        "Buňky s perinukleárním haló typické pro HPV infekci v dlaždicovém epitelu.",
+                        "Nádorové buňky pečetního prstence v žaludku.",
+                        "Buňky v kostech produkující osteoidní matrix.",
+                        "Světlé buňky v ledvině s mutací VHL."
+                    ],
+                    correct: 0,
+                    explain: "Výborně! Koilocyty mají typické 'haló' (prázdný prostor) kolem zmačkaného jádra - je to jasný podpis HPV infekce."
+                }
+            },
+            {
+                id: 7,
+                title: "Spinocelulární a bazocelulární karcinom",
+                category: "Karcinomy",
+                lazy: [
+                    "<strong>Spinocelulární (dlaždicobuněčný) karcinom:</strong> Vychází z buněk stratum spinosum. Vzniká tam, kde dlaždicový epitel je, nebo tam, kde vznikl metaplázií (bronchy u kuřáků).",
+                    "Dobře diferencovaný má: 1) exofytickou složku (bazofilní báze, eozinofilní povrch s rohověním), 2) endofytickou složku (inverze papil, nádorové čepy). Pokud v centru čepu buňky rohovatí, vznikají <strong>keratinové perly</strong>. Vysoce diferencovaná bradavčitá varianta je <strong>verukózní karcinom</strong>.",
+                    "<strong>Bazocelulární karcinom (bazaliom):</strong> Nejobvyklejší kožní malignita. Roste pomalu, lokálně agresivně, ale <strong>téměř nikdy nemetastázuje (jen cca 0,5%)</strong>. Makroskopicky tvoří uzlík, který vředovatí (<strong>ulcus rodens</strong> - hlodající vřed).",
+                    "Mikroskopicky: Je bazofilní (méně zralý než spinocelulární), tvoří invazivní čepy, kde buňky na periferii stojí jako vojáci v řadě - tzv. <strong>palisádovité uspořádání (obraz náhrobního kamene)</strong>, v centru jsou buňky chaotické."
+                ],
+                academic: `
+                    <p>Dva nejběžnější maligní nádory kůže se zásadně liší svým biologickým chováním.</p>
+                    <p><strong>Spinocelulární karcinom:</strong> Vychází ze stratum spinosum. Nachází se na kůži i sliznicích (často po metaplázii). Dobře diferencovaný tumor vykazuje známky keratinizace – endofytické čepy tvoří v centru vrstvený keratin, tzv. keratinové perly. Velmi dobře diferencovanou formou je exofytický, bradavčitý verukózní karcinom. Metastázuje lymfogenně.</p>
+                    <p><strong>Bazocelulární karcinom (bazaliom):</strong> Nejčastější kožní tumor z buněk bazální vrstvy. Je lokálně destruktivní, ale metastázuje raritně (0,5 %). Klinicky začíná jako uzlík, který se mění v ulcerující ulcus rodens. Histologicky tvoří hnízda bazaloidních (bazofilních) buněk, které vykazují na periferii čepů charakteristické palisádování ("obraz náhrobních kamenů").</p>
+                `,
+                visualType: "keratin_pearls",
+                quiz: {
+                    q: "Jak vypadá typický histologický obraz bazocelulárního karcinomu (bazaliomu)?",
+                    options: [
+                        "Obří keratinové perly uprostřed hlubokých stromálních zářezů.",
+                        "Vakuolizované buňky pečetního prstence rozeseté v hlenu.",
+                        "Čepy bazofilních buněk s palisádovitým uspořádáním na periferii (náhrobní kameny).",
+                        "Jednotvárná masa popcorn buněk s infiltrací lymfocytů."
+                    ],
+                    correct: 2,
+                    explain: "Skvěle! Palisádování na okrajích čepů (vojáci v řadě / náhrobní kameny) je naprosto klasická zkoušková otázka na bazaliom."
+                }
+            },
+            {
+                id: 8,
+                title: "Adenom a Adenokarcinom",
+                category: "Karcinomy",
+                lazy: [
+                    "<strong>Adenom:</strong> Benigní žlázový tumor. Zachovává si žlázovou strukturu i funkci (může produkovat hormony). Pokud se v něm ucpou vývody a nahromadí sekret, vzniká <strong>cystadenom</strong>.",
+                    "<strong>Prekancerózy:</strong> Dysplázie žlázového epitelu vykazuje atypie (N/C poměr, hyperchromázie, vyskakování jader). <strong>Adenokarcinom in situ</strong> má vzhled rakoviny, ale neprochází bazální membránou.",
+                    "<strong>Adenokarcinom:</strong> Maligní žlázový tumor. Podle stroma se dělí na <strong>medulární</strong> (mnoho buněk, málo stroma -> měkký) a <strong>skirhus</strong> (bohaté vazivové stroma -> tuhý, tvrdý).",
+                    "Dobře diferencovaný tvoří žlázové tubuly. Horší stupně splývají v <strong>kribriformní struktury</strong> (řešeto), až lumen mizí úplně (<strong>solidifikace</strong>). Pokud si buňky zachovají hlenotvorbu, ale hlen se hromadí v nich, odtlačí jádro na okraj a vzniká typická <strong>buňka pečetního prstence</strong> (typické pro difúzní typ žaludečního karcinomu)."
+                ],
+                academic: `
+                    <p>Žlázové neoplázie vykazují široké spektrum od benigních adenomů po vysoce invazivní adenokarcinomy.</p>
+                    <p><strong>Adenom:</strong> Benigní léze rostoucí expanzivně. Pokud dochází k cystické dilataci žlázek hromaděním sekretu, hovoříme o cystadenomu.</p>
+                    <p><strong>Adenokarcinom:</strong> Maligní ekvivalent. Podle poměru parenchymu a stroma rozlišujeme karcinom medulární (převažují buňky, stroma je měkké) a skirhotický (převažuje vazivová produkce, nádor je tuhý). Diferenciace určuje histologický vzhled: dobře diferencované formy tvoří aciny a tubuly, středně diferencované kribriformní (sítovité) struktury, nízce diferencované rostou v solidních čepech (solidifikace). Při difúzním šíření a zachovalé intracelulární hlenotvorbě vznikají buňky pečetního prstence (mucin vytlačí jádro k buněčné membráně).</p>
+                `,
+                visualType: "signet_ring",
+                quiz: {
+                    q: "Co určuje, že je adenokarcinom označen jako 'skirhus'?",
+                    options: [
+                        "Obsahuje velké množství hlenových vakuol v cytoplazmě.",
+                        "Vyznačuje se hojným vazivovým stromatem, které činí nádor tuhým.",
+                        "Má stoprocentní mitotickou aktivitu s tripolárními figurami.",
+                        "Roste výhradně na povrchu sliznice bez invaze."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Skirhus = tvrdý, tuhý. Je to dáno desmoplastickou reakcí - nádor stimuluje tvorbu vazivového stroma."
+                }
+            },
+            {
+                id: 9,
+                title: "Benigní a maligní mezenchymální nádory",
+                category: "Mezenchymální nádory",
+                lazy: [
+                    "<strong>Původ:</strong> Vycházejí z mezenchymu (fibroblasty, adipocyty, svalové buňky). Benigní bývají spíše na povrchu, maligní (<strong>sarkomy</strong>) v hloubce a <strong>metastázují zásadně hematogenně</strong> (plíce, kosti).",
+                    "<strong>Nádory z fibroblastů:</strong> <strong>Nodulární fascitida</strong> (benigní uzel na fasciích trupu/končetin). <strong>Fibromatózy</strong> vyvolávají stažení vaziva: <strong>palmární fibromatóza</strong> způsobí flekční kontrakturu prstů (drápovitá ruka). <strong>Fibrosarkom</strong> je maligní tumor v hloubce končetin, dává metastázy do plic.",
+                    "<strong>Fibrohistiocytární:</strong> <strong>Dermatofibrom</strong> (benigní uzlík v kůži) vs <strong>Dermatofibrosarcoma protuberans</strong> (low-grade maligní hrbolatý nádor kůže).",
+                    "<strong>Tuková tkáň:</strong> <strong>Lipom</strong> (benigní, ohraničený, měkký) vs <strong>Liposarkom</strong> (vychází ze zralých tukových buněk, ale najdeme v něm <strong>lipoblasty</strong> = nezralé buňky s tukovými kapkami narušujícími jádro). Může se zvrhnout v dediferencovaný liposarkom."
+                ],
+                academic: `
+                    <p>Mezenchymální nádory vycházejí z pojivových tkání, tuku, svalů a cév.</p>
+                    <p><strong>Obecné vlastnosti:</strong> Benigní formy bývají lokalizovány superficiálně, zatímco maligní (sarkomy) postihují hluboké struktury a šíří se primárně hematogenní cestou do plic a skeletu.</p>
+                    <p><strong>Fibroblastické léze:</strong> Nodulární fascitida je reaktivní benigní proliferace na fasciích. Fibromatózy vykazují lokálně agresivní infiltrativní růst; palmární forma (Dupuytrenova kontraktura) vede k flexi prstů. Fibrosarkom je vysoce maligní hluboký nádor tvořený vřetenitými buňkami uspořádanými do struktury "rybí kostry". Dermatofibrosarcoma protuberans je kožní low-grade maligní tumor.</p>
+                    <p><strong>Lipogenní nádory:</strong> Lipom je benigní ohraničený lalůčkovitý tumor. Liposarkom je maligní tumor, jehož diagnostickým znakem je přítomnost lipoblastů (atypické buňky s vakuolami tuku utlačujícími jádro).</p>
+                `,
+                visualType: "lipoblast_visual",
+                quiz: {
+                    q: "Která buňka je klíčovým diagnostickým znakem liposarkomu?",
+                    options: [
+                        "Zralý kulatý adipocyt bez atypií.",
+                        "Lipoblast (atypická buňka s vícečetnými tukovými vakuolami v cytoplazmě, které deformují jádro).",
+                        "Koilocyt s perinukleárním haló.",
+                        "Popcorn buňka s jedním zmačkaným jádrem."
+                    ],
+                    correct: 1,
+                    explain: "Správně! Lipoblast je nezralý, ošklivý a plný tuku, který tlačí na jádro z různých stran. Bez něj liposarkom těžko diagnostikuješ."
+                }
+            },
+            {
+                id: 10,
+                title: "Nádory svalové tkáně",
+                category: "Mezenchymální nádory",
+                lazy: [
+                    "<strong>Hladká svalovina:</strong> <strong>Leiomyom</strong> (benigní, velmi častý v děloze, estrogen-dependentní - v těhotenství roste, v přechodu mizí, může zvápenatět na děložní kámen). <strong>Leiomyosarkom</strong> (maligní, vzniká <strong>vždy de novo!</strong>, nikdy se nezvrhne z leiomyomu, metastázy do plic).",
+                    "<strong>Kosterní svalovina:</strong> <strong>Rhabdomyom</strong> (benigní, extrémně vzácný, často v myokardu u dětí).",
+                    "<strong>Rhabdomyosarkom:</strong> Maligní, dělí se na: 1) <strong>Embryonální</strong> (u dětí v oblasti hlavy/krku, urogenitálu. V dutých orgánech roste jako hroznové víno -> <strong>sarcoma botryoides</strong>). 2) <strong>Alveolární</strong> (v hlubokých svalech končetin adolescentů). 3) <strong>Pleomorfní</strong> (nejagresivnější forma u dospělých)."
+                ],
+                academic: `
+                    <p>Nádory svalového původu se dělí podle typu svaloviny na leiomyogenní a rhabdomyogenní.</p>
+                    <p><strong>Leiomyom:</strong> Benigní, ostře ohraničený tumor z hladkých svalových buněk. Typicky v myometriu dělohy, kde podléhá hormonální regulaci. Může prodělat dystrofickou kalcifikaci za vzniku "děložního kamene".</p>
+                    <p><strong>Leiomyosarkom:</strong> Maligní varianta. Klíčové zkouškové pravidlo: vzniká vždy de novo, nikoli maligním zvratem děložního leiomyomu.</p>
+                    <p><strong>Rhabdomyosarkom:</strong> Maligní nádor s diferenciací směrem ke kosterní svalovině. Embryonální typ postihuje malé děti; v močovém měchýři či vagíně tvoří polypózní hroznovité masy – sarcoma botryoides. Alveolární typ má typickou kribriformní/alveolární histologii. Pleomorfní typ představuje extrémně anaplastický tumor dospělých.</p>
+                `,
+                visualType: "rhabdo_grape",
+                quiz: {
+                    q: "Z čeho se vyvíjí maligní leiomyosarkom v děloze?",
+                    options: [
+                        "Maligním zvratem z již existujícího benigního leiomyomu.",
+                        "Vzniká vždy de novo (přímo z mezenchymu), nikoli z leiomyomu.",
+                        "Metastatickým rozsevem ze žloutkového váčku.",
+                        "Způsobuje ho výhradně virus HHV-8 při AIDS."
+                    ],
+                    correct: 1,
+                    explain: "Přesně tak! To je obrovský chyták u zkoušky. Leiomyosarkom vzniká VŽDY de novo. Starý leiomyom je v tom nevinně."
+                }
+            },
+            {
+                id: 11,
+                title: "Nádory cév a srdce",
+                category: "Kardiovaskulární",
+                lazy: [
+                    "<strong>Vaskulární ektázie:</strong> Pouhé rozšíření cév (např. naevus flammeus - oheň na kůži).",
+                    "<strong>Hemangiom:</strong> Benigní cévní tumor. <strong>Kapilární</strong> (tenkostěnné cévy, u dětí jako jahodová skvrna - do 7 let sama zmizí) vs <strong>kavernózní</strong> (velké dilatované cévy s vazivovými septy, v játrech, kůži. Obří kavernózní hemangiomy mohou vychytávat trombocyty a způsobit krvácení -> <strong>Kasabach-Merrittové syndrom</strong>).",
+                    "<strong>Lymfangiom:</strong> Obdoba hemangiomu. Kavernózní lymfangiom krku novorozenců (<strong>cystický hygrom</strong>) je typicky spojen s <strong>Turnerovým syndromem</strong>.",
+                    "<strong>Glomus tumor:</strong> Extrémně bolestivý malý benigní modravý uzlík pod nehtem. Vychází z termoregulačních tělísek.",
+                    "<strong>Maligní cévy:</strong> <strong>Kaposiho sarkom</strong> (low-grade, způsoben virem <strong>HHV-8 u pacientů s AIDS</strong>, červenofialové fleky na kůži, patře, GIT) a <strong>Angiosarkom</strong> (high-grade, vysoce agresivní fialové uzly v játrech, prsu, kůži).",
+                    "<strong>Nádory srdce:</strong> Většinou sekundární (metastázy na perikardu vyvolají karcinomatózní perikarditidu). Primární jsou raritní: benigní <strong>Myxom</strong> (roste na stopce z mezisíňového septa, hrozí utržení a embolizace nebo ucpání chlopně) a <strong>Rhabdomyom</strong> (pavoukovitý vzhled kvůli glykogenu v buňkách)."
+                ],
+                academic: `
+                    <p>Cévní nádory tvoří spektrum od ektázií po vysoce agresivní angiosarkomy.</p>
+                    <p><strong>Benigní léze:</strong> Kapilární hemangiom (např. juvenilní jahodová skvrna s tendencí k regresi) a kavernózní hemangiom (dilatované kaverny, v játrech subkapsulárně – hrozí ruptura s hemoperitoneem; Kasabach-Merrittův syndrom vyvolává spotřební trombocytopenii v cévních prostorech). Cystický hygrom (kavernózní lymfangiom) krku je asociován s Turnerovým syndromem. Glomus tumor je bolestivý subunguální uzlík z glomových buněk.</p>
+                    <p><strong>Maligní cévní nádory:</strong> Kaposiho sarkom je asociován s virem HHV-8 a imunodeficiencí (AIDS), tvoří vřetenobuněčné štěrbiny vyplněné erytrocyty. Angiosarkom je vysoce maligní, postihuje kůži, prsa či játra.</p>
+                    <p><strong>Nádory srdce:</strong> Primární myxom levé síně roste na stopce z mezisíňového septa, histologicky v myxoidním stroma nacházíme hvězdicovité buňky. Rhabdomyom vykazuje "pavoukovité buňky" plné glykogenu. Cystický nádor AV uzlu je vrozená léze hrozící náhlou srdeční smrtí.</p>
+                `,
+                visualType: "heart_myxoma",
+                quiz: {
+                    q: "Co je to cystický hygrom a s jakým syndromem je často spojen?",
+                    options: [
+                        "Maligní kostní nádor spojený s Ewingovým sarkomem.",
+                        "Kavernózní lymfangiom krku novorozenců, často spojený s Turnerovým syndromem.",
+                        "Benigní tumor srdce způsobující náhlou smrt.",
+                        "Pleurální mezoteliom vyvolaný azbestem."
+                    ],
+                    correct: 1,
+                    explain: "Přesně tak! Cystický hygrom je vlastně obrovský lymfangiom na krku u miminek s Turnerovým syndromem (karyotyp 45,X)."
+                }
+            },
+            {
+                id: 12,
+                title: "Nádory plic a pleury",
+                category: "Respirační onkologie",
+                lazy: [
+                    "<strong>Příznaky:</strong> Centrální (kašel, vykašlávání krve, škytavka při tlaku na n. phrenicus) vs periferní (prorůstání do hrudní stěny). V apexu plic roste <strong>Pancoastův tumor</strong>, který ničí sympatikus a vyvolá <strong>Hornerovu trias</strong> (ptóza víčka, mióza zornice, enoftalmus).",
+                    "<strong>Malobuněčný karcinom plic (SCLC):</strong> Agresivní, spojen s kouřením. Vychází z neuroendokrinních Kulchitského buněk. Produkuje hormony -> <strong>paraneoplastické syndromy</strong> (Cushing z ACTH, SIADH z ADH) a <strong>Lambert-Eatonův syndrom</strong> (protilátky proti nádoru omylem zničí kalciové kanály na nervech -> svalová slabost). Histologicky: 'small blue cells', drcený chromatin se lepí na stěny cév (<strong>Azzopardiho fenomén</strong>).",
+                    "<strong>Nemalobuněčné karcinomy (NSCLC):</strong> 1) <strong>Adenokarcinom</strong> (nejčastější u nekuřáků, na periferii plic). Prekancerózou je atypická adenomatózní hyperplázie. 2) <strong>Spinocelulární karcinom</strong> (spojen s kouřením, v bronchiálním stromu po metaplázii, keratinové perly).",
+                    "<strong>Nádory pleury:</strong> <strong>Mezoteliom</strong> (90% z expozice azbestu, bílý tuhý pancéřový obal kolem plíce, brání dýchání, dělí se na epiteloidní a sarkomatoidní). Metastázy na pleuře dělají <strong>karcinomatózu pleury</strong> (uzlíky v dutině) nebo <strong>lymfangiopatii</strong> (jemné žilkování)."
+                ],
+                academic: `
+                    <p>Plicní neoplázie dělíme na bronchogenní karcinomy a nádory pleury.</p>
+                    <p><strong>Topografie a symptomy:</strong> Centrální tumory vedou k hemoptýze a bronchostenóze. Apikální Pancoastův tumor infiltruje plexus brachialis a krční sympatikus, což vyvolává Hornerovu triádu (ptóza, mióza, enoftalmus).</p>
+                    <p><strong>Malobuněčný karcinom (SCLC):</strong> Vysoce maligní neuroendokrinní tumor z Kulchitského buněk. Vyvolává paraneoplázie (SIADH, Cushingův syndrom) a Lambert-Eatonův myastenický syndrom. Histologicky vykazuje vzhled malých modrých kulatých buněk s Azzopardiho fenoménem (bazofilní inkrustace cévních stěn nukleovými kyselinami z rozpadlých buněk).</p>
+                    <p><strong>Nemalobuněčné karcinomy (NSCLC):</strong> Plicní adenokarcinom (častý u nekuřáků, periferní, vychází z atypické adenomatózní hyperplázie) a dlaždicobuněčný karcinom (centrální, vzniká na podkladě dlaždicobuněčné metaplázie epitelu bronchu, produkuje keratin).</p>
+                    <p><strong>Nádory pleury:</strong> Solitární fibrózní tumor (benigní/borderline na stopce) a maligní mezoteliom (asociace s azbestem, difúzní pleurální tumor formující tuhý krunýř, dělí se na epiteloidní, sarkomatoidní a bifázický). Karcinomatóza pleury vzniká porogenním šířením.</p>
+                `,
+                visualType: "azzopardi_visual",
+                quiz: {
+                    q: "Co je to Azzopardiho fenomén u malobuněčného karcinomu plic?",
+                    options: [
+                        "Metastázování nádoru do nehtového lůžka.",
+                        "Inkrustace stěn cév bazofilní DNA z rozpadlých nádorových buněk.",
+                        "Přítomnost popcorn buněk s jedním jádrem.",
+                        "Ucpání dýchacích cest hlenovými buňkami."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! DNA z rozpadlých jader se uvolní do stěn cév a pod mikroskopem to vypadá jako tmavě fialové (bazofilní) lemování cév. Klasický tahák na SCLC!"
+                }
+            },
+            {
+                id: 13,
+                title: "Nádory slinných žláz",
+                category: "Gastrointestinální onkologie",
+                lazy: [
+                    "<strong>Pleomorfní adenom:</strong> Nejčastější benigní tumor parotidy (90%). Je 'pleomorfní' (smíšený) - má epitelovou složku a <strong>myxoidní/chondroidní stroma</strong> (vypadá jako chrupavka). Je ohraničený, ale chirurgicky se blbě vyřezává kvůli blízkosti k <strong>lícnímu nervu (n. VII)</strong>, proto často recidivuje.",
+                    "<strong>Warthinův tumor (papilární cystadenom):</strong> Benigní, spojen s kouřením a EBV. Vychází z epitelových inkluzí v uzlinách parotidy. Tvořen cystami s eozinofilní tekutinou a papilami vystlanými dvouřadým epitelem.",
+                    "<strong>Mukoepidermoidní karcinom:</strong> Maligní, tvořen směsí hlenotvorných a dlaždicových buněk. Low-grade (cysty, hlen) vs high-grade (solidní dlaždicové čepy).",
+                    "<strong>Adenoidně cystický karcinom:</strong> Maligní, roste pomalu, ale záludně. Má **kribriformní struktury** (vypadá jako řešeto/švýcarský sýr) a má extrémní tendenci k <strong>perineurálnímu šíření</strong> (leze podél nervů, hrozně to bolí a paralyzuje lícní nerv)."
+                ],
+                academic: `
+                    <p>Nádory slinných žláz postihují nejčastěji gl. parotis a vykazují pestrou histologii.</p>
+                    <p><strong>Pleomorfní adenom:</strong> Benigní, nejběžnější. Obsahuje duktální a myoepiteliální buňky v myxoidním či chondroidním stroma. Jeho resekce je riziková pro n. facialis (n. VII); neúplná excize vede k recidivám.</p>
+                    <p><strong>Warthinův tumor (adenolymfom):</strong> Benigní léze u kuřáků. Skládá se z cystických prostorů vyplněných eozinofilním sekretem, lemovaných dvouřadým onkocytárním epitelem s bohatým lymfoidním stromatem.</p>
+                    <p><strong>Mukoepidermoidní karcinom:</strong> Nejčastější maligní tumor slinných žláz. Skládá se z mucinózních, intermediárních a epidermoidních buněk.</p>
+                    <p><strong>Adenoidně cystický karcinom:</strong> Vysoce invazivní maligní tumor s typickým kribriformním (švýcarský sýr) uspořádáním. Vyznačuje se perineurální propagací (šíření v pochvách nervů), což vede k časné paréze n. VII a silným bolestem.</p>
+                `,
+                visualType: "cribriform_gland",
+                quiz: {
+                    q: "Který tumor slinných žláz vykazuje kribriformní vzhled a má silnou tendenci k bolestivému perineurálnímu šíření?",
+                    options: [
+                        "Warthinův tumor",
+                        "Pleomorfní adenom",
+                        "Adenoidně cystický karcinom",
+                        "Mukoepidermoidní karcinom"
+                    ],
+                    correct: 2,
+                    explain: "Správně! Adenoidně cystický karcinom je záludný lump. Vypadá jako řešeto (kribriformní) a leze po nervech, což pacientovi způsobuje kruté bolesti."
+                }
+            },
+            {
+                id: 14,
+                title: "Nádory jícnu a žaludku",
+                category: "Gastrointestinální onkologie",
+                lazy: [
+                    "<strong>Jícen:</strong> 1) <strong>Dlaždicobuněčný karcinom</strong> (alkohol, kouření, horní 2/3 jícnu). 2) <strong>Adenokarcinom</strong> (dolní třetina, vzniká na podkladě <strong>Barrettova jícnu</strong> z refluxu).",
+                    "<strong>Žaludek (Laurenova klasifikace adenokarcinomů):</strong> 1) <strong>Intestinální typ</strong> (má jasnou prekancerózu: chronická gastritida -> atrofie -> intestinální metaplázie -> dysplázie -> karcinom. Tvoří tubuly/žlázky). 2) <strong>Difúzní typ</strong> (nemá prekancerózu, buňky rostou rozsetě, produkují hlen a tvoří <strong>buňky pečetního prstence</strong>. Žaludek je celý tuhý, stěna zesílená - tzv. linitis plastica).",
+                    "Žaludeční karcinom metastazuje lymfaticky do nadklíčkové uzliny (<strong>Virchowova uzlina</strong>) a do vaječníků (<strong>Krukenbergův tumor</strong>).",
+                    "<strong>GIST (Gastrointestinální stromální tumor):</strong> Vychází z <strong>Cajalových pacemakerových buněk</strong> střeva. Většinou je <strong>KIT+ (CD117)</strong>.",
+                    "Dělí se podle enzymu sukcinát-dehydrogenázy na: 1) <strong>SDH+ (adultní typ)</strong> - má mutace KIT/PDGFRA (tyrosinkinázy), proto skvěle reaguje na biologickou léčbu (imatinib). 2) <strong>SDH- (dětský typ)</strong> - enzym chybí, hromadí se onkometabolit sukcinát, na biologickou léčbu nereaguje."
+                ],
+                academic: `
+                    <p>Karcinomy jícnu a žaludku představují zásadní malignity GIT s odlišnou patogenezí.</p>
+                    <p><strong>Nádory jícnu:</strong> Spinocelulární karcinom (asociace s alkoholem a kouřením v horní/střední části) a adenokarcinom (v distální části, rozvíjí se na podkladě Barrettova jícnu při gastroezofageálním refluxu).</p>
+                    <p><strong>Nádory žaludku:</strong> Laurenova klasifikace dělí adenokarcinomy na: 1) Intestinální typ (dobře diferencovaný, tvoří žlázky, vzniká z intestinální metaplázie při H. pylori asociované gastritidě). 2) Difúzní typ (morfologicky tvořený buňkami pečetního prstence infiltrujícími difúzně stěnu žaludku bez tvorby žlázek). Šíří se do sentinelové Virchowovy uzliny a oboustranně do ovarií (Krukenbergův tumor).</p>
+                    <p><strong>GIST:</strong> Mezenchymální tumor z Cajalových buněk. Diagnostickým znakem je exprese KIT (CD117). SDH-pozitivní forma (adultní) vykazuje mutace KIT/PDGFRA a reaguje na inhibitory tyrosinkináz (imatinib). SDH-negativní forma (pediatrická) na tuto léčbu nereaguje kvůli akumulaci sukcinátu.</p>
+                `,
+                visualType: "gist_kit",
+                quiz: {
+                    q: "Který imunohistochemický marker je klíčový pro diagnostiku GISTu (Gastrointestinálního stromálního tumoru)?",
+                    options: [
+                        "S100",
+                        "E-cadherin",
+                        "KIT (CD117)",
+                        "Calcitonin"
+                    ],
+                    correct: 2,
+                    explain: "Přesně tak! KIT (CD117) je zlatý standard. Pokud je GIST CD117 pozitivní, u dospělých se dá výborně léčit moderními tyrosinkinázovými inhibitory."
+                }
+            },
+            {
+                id: 15,
+                title: "Nádory tenkého a tlustého střeva",
+                category: "Gastrointestinální onkologie",
+                lazy: [
+                    "<strong>Polypy (Adenom):</strong> Jsou prekancerózy. Dělí se na: 1) <strong>Konvenční:</strong> tubulární (stopka), vilózní (přisedlé, huňaté, horší), tubulovilózní. 2) <strong>Pilovité (Serrated):</strong> sesilní pilovitý (pravý tračník), tradiční pilovitý (levý tračník).",
+                    "<strong>Polypózy (Genetika):</strong> <strong>FAP (Familiární adenomatózní polypóza)</strong>: autozomálně dominantní mutace genu APC. Pacient má ve střevě tisíce polypů, do 40 let má karcinom 100% jistý. <strong>MUTYH polypóza</strong> (reparace DNA, autozomálně recesivní). <strong>Peutz-Jeghersův syndrom</strong> (polypy + pigmentové skvrny na rtech).",
+                    "<strong>Lynchův syndrom (HNPCC):</strong> Autozomálně dominantní. Nemá polypózu (prvním příznakem je rovnou nádor). Obrovské riziko rakoviny tlustého střeva, endometria, ovarií.",
+                    "<strong>Kolorektální karcinom (CRC):</strong> 1) <strong>Levostranný:</strong> roste dovnitř, zužuje střevo (anulární růst) -> střídání zácpy/průjmu, krev ve stolici, anémie, ucpání střeva (ileus). 2) <strong>Pravostranný:</strong> roste ven (exofyticky), neucpává střevo -> tiché krvácení, těžká chudokrevnost (anémie), hubnutí."
+                ],
+                academic: `
+                    <p>Nádory střev představují jednu z nejčastějších malignit v ČR, kde klíčovou roli hraje sekvence adenom-karcinom.</p>
+                    <p><strong>Adenomové polypy:</strong> Dělí se na konvenční (tubulární, vilózní s vysokým rizikem malignizace, tubulovilózní) a pilovité (serrated) léze (sesilní serrated adenom v pravém tračníku a tradiční v levém).</p>
+                    <p><strong>Hereditární syndromy:</strong> FAP je autozomálně dominantní onemocnění s mutací genu APC způsobující stovky až tisíce polypů s nevyhnutelným přechodem v karcinom. Lynchův syndrom (HNPCC) vzniká mutací mismatch repair genů a vyznačuje se absencí premorbidního polypózního fenotypu (nádor vzniká de novo v pravém tračníku, asociace s karcinomy endometria a ovarií).</p>
+                    <p><strong>Kolorektální karcinom:</strong> Levostranné nádory rostou cirkulárně (stenotizující růst) a projevují se poruchami pasáže stolice až ileem, tenesmy a čerstvou krví ve stolici. Pravostranné tumory rostou exofyticky do lumen slepého střeva a vzestupného tračníku, klinicky dominují okultní krvácení a sideropenická anémie.</p>
+                `,
+                visualType: "fap_colon",
+                quiz: {
+                    q: "Který syndrom se vyznačuje vznikem kolorektálního karcinomu bez předchozího masivního výskytu polypů (absence premorbidního fenotypu)?",
+                    options: [
+                        "FAP (Familiární adenomatózní polypóza)",
+                        "Lynchův syndrom (HNPCC)",
+                        "Peutz-Jeghersův syndrom",
+                        "Kasabach-Merrittové syndrom"
+                    ],
+                    correct: 1,
+                    explain: "Výborně! U Lynchova syndromu nevznikají tisíce polypů jako u FAP, ale nádor vyskočí de novo. O to těžší je včasný záchyt."
+                }
+            },
+            {
+                id: 16,
+                title: "Nádory jater, žlučníku a pankreatu",
+                category: "Gastrointestinální onkologie",
+                lazy: [
+                    "<strong>Játra:</strong> Většinou sekundární (metastázy). Z primárních: benigní <strong>Hepatocelulární adenom</strong> (riziko: hormonální antikoncepce, anabolika, subkapsulární může prasknout a způsobit krvácení do břicha). Maligní <strong>Hepatocelulární karcinom (HCC)</strong>: vzniká v terénu jaterní cirhózy (hepatitida B, C, alkohol).",
+                    "<strong>Žlučové cesty:</strong> <strong>Cholangiocelulární karcinom</strong> (bílý, tuhý). <strong>Klatskinův tumor</strong> roste přímo v místě spojení pravého a levého žlučovodu v jaterním hilu (extrahepatální), utlačuje vývody -> <strong>posthepatální ikterus (žloutenka)</strong>.",
+                    "<strong>Pankreas (Exokrinní):</strong> <strong>Duktální adenokarcinom</strong> (prekurzor PanIN). Riziko: kouření, alkohol, chronická pankreatitida. Roste nejčastěji v hlavě pankreatu -> ucpává žlučovod -> žloutenka. Má strašnou prognózu, šíří se perineurálně a metastazuje lymfaticky.",
+                    "<strong>Pankreas (Endokrinní - NETy):</strong> 1) <strong>Inzulinom</strong> (benigní, produkuje inzulin -> záchvaty hypoglykémie). 2) <strong>Gastrinom</strong> (vyvolá <strong>Zollinger-Ellisonův syndrom</strong> -> obří nadbytek kyseliny HCl -> vředy žaludku a duodena). 3) <strong>VIPom</strong> (vyvolá <strong>WDHA syndrom</strong> = vodnaté průjmy, hypokalémie, achlorhydrie)."
+                ],
+                academic: `
+                    <p>Onkologické léze hepatopankreatobiliárního traktu mají nepříznivou prognózu a úzký vztah k obstrukci žlučových cest.</p>
+                    <p><strong>Nádory jater:</strong> Hepatocelulární adenom (asociován s užíváním antikoncepce, hrozí život ohrožujícím hemoperitoneem při ruptuře). Hepatocelulární karcinom (HCC) vzniká nejčastěji v cirhotickém terénu při chronické hepatitidě B či C. Charakteristická je invaze do jaterních žil a časný hematogenní rozsev.</p>
+                    <p><strong>Nádory žlučových cest:</strong> Cholangiocelulární karcinom je tuhý, desmoplastický adenokarcinom. Klatskinův tumor lokalizovaný v jaterním hilu (bifurkace žlučovodů) způsobuje časnou obstrukci a mechanický ikterus.</p>
+                    <p><strong>Duktální adenokarcinom pankreatu:</strong> Lokalizován hlavně v hlavě pankreatu, infiltruje ductus choledochus (Courvoisierovo znamení). Vyznačuje se perineurální invazí a časnou diseminací do peritonea.</p>
+                    <p><strong>Neuroendokrinní tumory pankreatu (PanNET):</strong> Inzulinom (typické hypoglykemické ataky při lačnění), Gastrinom (Zollinger-Ellisonův syndrom s refrakterními peptickými vředy z hypersekrece HCl), VIPom (syndrom WDHA – vodnaté průjmy, ztráta draslíku, ztráta žaludeční kyseliny).</p>
+                `,
+                visualType: "panc_head",
+                quiz: {
+                    q: "Jak se klinicky projevuje VIPom (neuroendokrinní tumor pankreatu)?",
+                    options: [
+                        "Cushingovým syndromem a obezitou.",
+                        "Syndromem WDHA (masivní vodnaté průjmy, nedostatek draslíku, absence HCl v žaludku).",
+                        "Tyreotoxikózou a gynekomastií.",
+                        "Osteolytickými ložisky v kostech."
+                    ],
+                    correct: 1,
+                    explain: "Přesně tak! VIP (vazoaktivní intestinální peptid) nutí střeva divoce vylučovat vodu a ionty, z čehož vzniká syndrom WDHA. Velmi těžké na iontový rozvrat."
+                }
+            },
+            {
+                id: 17,
+                title: "Nádory ledvin a močového měchýře",
+                category: "Urogenitální onkologie",
+                lazy: [
+                    "<strong>Světlobuněčný renální karcinom (Grawitzův tumor):</strong> Nejčastější nádor ledviny. Vychází z proximálního tubulu, spojen s <strong>mutací genu VHL (von Hippel-Lindau)</strong>.",
+                    "Vzhled: Žlutavý, prokrvácený s nekrózami, roste expanzivně a tlačí na okolí (tvoří si pseudopouzdro). <strong>Rád leze do ledvinné žíly</strong> a roste jako had až do dolní duté žíly! Extrémně rychle zakládá hematogenní metastázy (plíce, kosti - často se na něj přijde kvůli patologické zlomenině). Buňky jsou v mikroskopu světlé, protože jsou plné glykogenu a lipidů.",
+                    "<strong>Močový měchýř:</strong> <strong>Uroteliální karcinom</strong> (97%). Hlavní riziko: <strong>kouření</strong> a chemikálie (anilínové barvy).",
+                    "Dvě cesty vzniku: 1) <strong>Papilární cesta:</strong> roste jako keříček do lumen (neinvazivní papilární karcinom, lepší prognóza). 2) <strong>Nepapilární cesta:</strong> plochá dysplázie (Carcinoma in situ - CIS) přecházející rovnou v invazivní karcinom.",
+                    "<strong>Dlaždicobuněčný karcinom měchýře:</strong> Vzácný, spojen s chronickým drážděním (metaplázie) vyvolaným parazitem <strong>Schistosoma haematobium</strong>."
+                ],
+                academic: `
+                    <p>Urogenitální malignity postihují parenchym ledvin a přechodný epitel (urotel) močových cest.</p>
+                    <p><strong>Světlobuněčný renální karcinom (RCC):</strong> Vychází z proximálního tubulu. Je asociován s inaktivací tumor-supresorového genu VHL. Makroskopicky je pestrý (žlutý s nekrózami a hemoragiemi). Má výraznou tendenci k angioinvazi – prorůstá do v. renalis a v. cava inferior. Metastázuje hematogenně do plic a kostí (osteolytická ložiska způsobující patologické fraktury).</p>
+                    <p><strong>Uroteliální karcinom:</strong> Nejběžnější tumor měchýře. Silná asociace s kouřením. Vyvíjí se dvěma patogenetickými cestami: papilární cestou (exofytické neinvazivní papilární tumory) a nepapilární plochou cestou (počínaje plochým Carcinoma in situ s rychlou invazí do detruzoru). Dlaždicobuněčný karcinom měchýře je vyvolán schistosomózou.</p>
+                `,
+                visualType: "rcc_cell",
+                quiz: {
+                    q: "Který gen je nejčastěji mutován u světlobuněčného karcinomu ledviny (Grawitzova tumoru)?",
+                    options: [
+                        "APC gen",
+                        "VHL gen (von Hippel-Lindau)",
+                        "BCL-6 gen",
+                        "RET protoonkogen"
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Mutace VHL genu vede k poruše degradace HIF faktoru, což spustí divokou angiogenezi a růst tohoto žlutého cévami nabitého tumoru."
+                }
+            },
+            {
+                id: 18,
+                title: "Nádory prostaty a varlat",
+                category: "Urogenitální onkologie",
+                lazy: [
+                    "<strong>Prostata (Acinární adenokarcinom):</strong> Vzniká v periferní (zadní) zóně -> dá se vyhmatat per rectum. Tvořen malými žlázkami těsně u sebe (<strong>back-to-back</strong>), chybí jim bazální vrstva buněk. Pro hodnocení závažnosti slouží <strong>Gleasonovo skóre</strong> (G1-G5 podle uspořádání žlázek).",
+                    "Metastázuje lymfaticky a hematogenně do kostí (křížová kost, žebra), kde dělá <strong>osteoplastické metastázy</strong> (kosti netlejí, ale naopak houstnou a tvoří tvrdé kostní uzly). Diagnostický marker: <strong>PSA</strong> (prostatický specifický antigen) v krvi.",
+                    "<strong>Varlata (Germinální nádory):</strong> Rizikový faktor: nesestouplé varle (kryptorchismus). Dělí se na: 1) <strong>Seminom:</strong> solidní, světlé buňky s glykogenem, skvěle reaguje na ozařování, dobrá prognóza. 2) <strong>Neseminomy:</strong>",
+                    "• <strong>Embryonální karcinom:</strong> ošklivý, nekrotický, nezralé buňky.",
+                    "• <strong>Nádor ze žloutkového váčku (Yolk sac tumor):</strong> nejčastější u dětí. Vykazuje **Schillerova-Duvalova tělíska** (céva obklopená nádorovými buňkami v mikrocystě) a produkuje <strong>Alfa-1-fetoprotein (AFP)</strong>.",
+                    "• <strong>Choriokarcinom:</strong> produkuje <strong>hCG</strong>. Vysoké hladiny hCG mohou způsobit tyreotoxikózu (reaguje s TSH receptory) a gynekomastii (estrogenní přesmyk z Leydigových buněk).",
+                    "• <strong>Teratom:</strong> tkáně ze všech 3 zárodečných listů (zuby, vlasy, kosti). Zralý (u dětí benigní) vs nezralý (maligní)."
+                ],
+                academic: `
+                    <p>Urogenitální tumory mužů postihují prostatu a varlata.</p>
+                    <p><strong>Acinární adenokarcinom prostaty:</strong> Vychází z periferní zóny. Histologicky vykazuje chybění vnější myoepiteliální/bazální vrstvy a uspořádání žlázek těsně na sebe (back-to-back). Gleasonovo skóre sčítá dva nejčastější architektonické vzory (stupně 1-5). Charakteristické jsou osteoplastické (sklerotizující) metastázy do páteře a pánve. PSA slouží jako sérový marker.</p>
+                    <p><strong>Germinální nádory varlat:</strong> Seminom (dobře diferencovaný, uniformní buňky se světlou cytoplazmou oddělené vazivovými septy s lymfocyty). Embryonální karcinom (vysoce atypický solidní/alveolární růst s nekrózami). Nádor ze žloutkového váčku (typický pro malé kluky, přítomnost Schiller-Duvalových tělísek a elevace AFP). Choriokarcinom (bifázický syncytio- a cytotrofoblastický tumor s masivním uvolňováním hCG, které vyvolává tyreotoxikózu a gynekomastii). Teratom (zralý, nezralý, monodermální).</p>
+                `,
+                visualType: "schiller_duval",
+                quiz: {
+                    q: "Která histologická struktura je patognomická pro dětský nádor ze žloutkového váčku (Yolk sac tumor)?",
+                    options: [
+                        "Verocayova tělíska",
+                        "Schillerova-Duvalova tělíska (glomeruloidní struktury s cévou v centru)",
+                        "Psammomatózní tělíska",
+                        "Keratinové perly"
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Schillerova-Duvalova tělíska vypadají trochu jako ledvinová glomerula - je to céva lemovaná nádorovým epitelem uprostřed volného prostoru. Jasný marker Yolk sac tumoru."
+                }
+            },
+            {
+                id: 19,
+                title: "Nádory dělohy a děložního hrdla",
+                category: "Gynekologická onkologie",
+                lazy: [
+                    "<strong>Děložní hrdlo:</strong> Prekancerózy jsou <strong>CIN I-III</strong> (cervikální intraepiteliální neoplázie). CIN III je již Carcinoma in situ (CIS).",
+                    "Vzniká v důsledku infekce vysoce rizikovými HPV kmeny 16 a 18. Nejčastěji jde o dlaždicobuněčný karcinom (pod mikroskopem vidíme <strong>koilocyty</strong> - buňky s virovými inkluzemi a světlým dvorcem kolem jádra).",
+                    "Klinika: krvácení mimo cyklus, v pokročilých fázích prorůstá do měchýře nebo konečníku a vytváří píštěle (vesikovaginální, rektovaginální píštěl).",
+                    "<strong>Endometrium:</strong> 1) <strong>Endometriální karcinom</strong> (nejčastější, hormonálně závislý na estrogenu, dobře imituje normální žlázy). 2) <strong>Serózní karcinom</strong> (vzniká v polypu, je agresivní, nezávislý na estrogenu). 3) <strong>Müllerianský nádor</strong> (smíšený epiteliální a mezenchymální tumor z embryonálních zbytků).",
+                    "<strong>Myometrium:</strong> 1) <strong>Leiomyom</strong> (benigní svalový uzel, roste s estrogenem, může zvápenatět na děložní kámen). 2) <strong>Leiomyosarkom</strong> (maligní, vzniká <strong>vždy de novo</strong>, nikdy se nezvrhne ze starého leiomyomu, dává metastázy do plic)."
+                ],
+                academic: `
+                    <p>Malignity ženského genitálu postihují děložní hrdlo, endometrium a myometrium.</p>
+                    <p><strong>Karcinomy cervixu:</strong> Úzce spjaté s high-risk kmeny HPV 16 a 18. Prekurzory jsou dlaždicové dysplázie CIN I-III. Nejčastější je dlaždicobuněčný karcinom cervixu s koilocytární atypií. Pozdní invaze způsobuje destrukci stěn sousedních orgánů a vznik píštělí.</p>
+                    <p><strong>Karcinomy endometria:</strong> Endometrioidní karcinom (asociace s estrogenní stimulací a hyperplázií endometria, tvoří žlázové struktury). Serózní karcinom endometria (estrogen-independentní, vysoce agresivní, vzniká u starších žen v atrofickém endometriu). Karcinosarkom (smíšený maligní Müllerianský tumor).</p>
+                    <p><strong>Nádory myometria:</strong> Leiomyom je benigní, estrogen-dependentní vřetenobuněčný tumor, který může zvápenatět (děložní kámen). Leiomyosarkom je vysoce maligní tumor vznikající vždy de novo s hematogenní propagací.</p>
+                `,
+                visualType: "fistula_cervix",
+                quiz: {
+                    q: "Jaký závažný klinický stav hrozí v pokročilém stádiu karcinomu děložního hrdla při invazi do sousedních orgánů?",
+                    options: [
+                        "Kasabach-Merrittové syndrom s trombocytopenií.",
+                        "Vznik vesikovaginální a rektovaginální píštěle.",
+                        "Zollinger-Ellisonův syndrom s vředy.",
+                        "Osteoplastické metastázy do křížové kosti."
+                    ],
+                    correct: 1,
+                    explain: "Přesně tak. Nádor prožírá stěnu mezi vagínou a močovým měchýřem nebo konečníkem, což vede k úniku moči nebo stolice vagínou (píštěle). Strašná komplikace."
+                }
+            },
+            {
+                id: 20,
+                title: "Nádory ovarií",
+                category: "Gynekologická onkologie",
+                lazy: [
+                    "<strong>Epitelové nádory:</strong> Serózní, mucinózní, endometriální. Dělí se na benigní (cystadenomy), borderline a maligní (karcinomy).",
+                    "• <strong>Borderline serózní tumor:</strong> papilární výrůstky bez destruktivní invaze do stroma. Může se rozsekat po peritoneu (neinvazivní implantáty). Pokud začne destruktivně invadovat, je to low-grade serózní karcinom.",
+                    "• <strong>High-grade serózní karcinom:</strong> solidní, agresivní nádor s obřími atypiemi a diseminací po břiše (omentum) a ascitem.",
+                    "• <strong>Mucinózní cystadenom:</strong> obří jednostranné cysty (klidně až 30 cm) vystlané hlenovými buňkami (často vzniká na podkladě Walthardových hnízd).",
+                    "<strong>Sex-cord nádory (ze zárodečných provazců/stromatu):</strong>",
+                    "• <strong>Ovariální fibrom:</strong> benigní, tuhý, bílý.",
+                    "• <strong>Thékom:</strong> produkuje <strong>estrogen</strong> -> hyperplázie endometria.",
+                    "• <strong>Nádor z Leydigových buněk:</strong> žlutý (lipidy), obsahuje v cytoplazmě **Reinkeho krystaly**.",
+                    "• <strong>Nádor z buněk granulózy:</strong> 1) Adultní (produkuje estrogen, spojen s hyperplázií dělohy), 2) Juvenilní (způsobuje předčasnou pseudopubertu u holčiček - pseudopubertas praecox).",
+                    "<strong>Germinální nádory:</strong> <strong>Dysgerminom</strong> (světlé buňky s glykogenem), <strong>Teratom</strong> (zralý - benigní dermoidní cysta s vlasy a zuby; nezralý - maligní; monodermální - <strong>ovariální struma</strong> tvořená tkání štítné žlázy).",
+                    "<strong>Sekundární:</strong> <strong>Krukenbergův tumor</strong> (metastáza z žaludku plná buněk pečetního prstence)."
+                ],
+                academic: `
+                    <p>Ovariální neoplázie vykazují mimořádnou histologickou pestrost pramenící z komplexní embryogeneze vaječníku.</p>
+                    <p><strong>Epitelové nádory:</strong> Serózní (benigní cystadenofibrom, borderline serózní tumor s neinvazivními implantáty na peritoneu, low-grade a high-grade serózní karcinom omenta s ascitem). Mucinózní (benigní mucinózní cystadenom dosahující obřích rozměrů, spojený s Walthardovými hnízdy, a mucinózní karcinom).</p>
+                    <p><strong>Nádory ze zárodečných provazců a stromatu (Sex-Cord Stromal):</strong> Ovariální fibrom (tuhý, benigní vřetenitý tumor). Thékom (hormonálně aktivní, estrogenní). Nádor z Leydigových buněk (obsahuje Reinkeho krystaly, produkuje androgeny). Nádor z buněk granulózy (adultní forma s rizikem hyperplázie endometria a juvenilní forma vyvolávající pseudopubertas praecox).</p>
+                    <p><strong>Germinální nádory:</strong> Dysgerminom (ženský ekvivalent seminomu). Teratom (zralý cystický teratom – dermoidní cysta obsahující ektodermální deriváty; nezralý teratom s primitivní neuroektodermální tkání; monodermální struma ovarii z tyreoidální tkáně s rizikem hypertyreózy).</p>
+                    <p><strong>Sekundární tumory:</strong> Krukenbergův tumor (bilaterální metastáza hlenotvorného adenokarcinomu GIT, typicky žaludku, s buňkami pečetního prstence).</p>
+                `,
+                visualType: "granulosa_cell",
+                quiz: {
+                    q: "Co je to ovariální struma (struma ovarii) a z jakého typu nádoru vychází?",
+                    options: [
+                        "Maligní metastáza karcinomu plic do ovaria.",
+                        "Monodermální zralý teratom (germinální nádor) tvořený funkční tkání štítné žlázy.",
+                        "Sex-cord tumor z Leydigových buněk s Reinkeho krystaly.",
+                        "Epitelový mucinózní cystadenom."
+                    ],
+                    correct: 1,
+                    explain: "Skvěle! Ovariální struma je monodermální teratom. Obsahuje pouze tkáň štítné žlázy, která dokonce může produkovat hormony a způsobit tyreotoxikózu."
+                }
+            },
+            {
+                id: 21,
+                title: "Nádory prsu",
+                category: "Gynekologická onkologie",
+                lazy: [
+                    "<strong>Benigní:</strong> <strong>Fibroadenom</strong> (nejčastější, bifázický - tvořen epitelem a vazivem. Roste intrakanalikulárně nebo perikanalikulárně, je kulatý, nebolestivý, volně pohyblivý). <strong>Papilom prsu</strong> (intraduktální keříček, roste ve vývodech, vyvolává krvavý sekrét z bradavky).",
+                    "<strong>Prekancerózy (Carcinoma in situ):</strong> Růst je omezen na dukty nebo lobuly, nepronikají přes bazální membránu. Pro rozlišení pomáhá barvení na **E-cadherin**: <strong>Duktální (DCIS)</strong> je E-cadherin pozitivní. <strong>Lobulární (LCIS)</strong> je E-cadherin negativní (buňky ztratily spojení, sypou se).",
+                    "• <strong>DCIS:</strong> hrozí přechodem v invazivní karcinom. Může se šířit uvnitř duktů až na bradavku, kde ničí kůži a způsobuje <strong>Pagetovu chorobu bradavky</strong> (nehojící se strupovatý ekzém).",
+                    "<strong>Invazivní karcinomy prsu:</strong> 1) <strong>Duktální karcinom (NST)</strong>: nejčastější, tvoří žlázky. 2) <strong>Lobulární karcinom</strong>: buňky bez E-cadherinu rostou v řádcích za sebou jako kačenky -> tzv. <strong>husí pochod (řádkování)</strong>.",
+                    "<strong>Mužské prso:</strong> Nemá lobuly! Dochází zde ke <strong>gynekomastii</strong> (zbytnění žlázy z hyperestrogenismu při cirhóze nebo choriokarcinomu varlat s hCG). Maligní karcinom u mužů je téměř vždy invazivní duktální karcinom."
+                ],
+                academic: `
+                    <p>Patologie prsu zahrnuje benigní bifázické léze, neinvazivní intraepiteliální neoplázie a invazivní adenokarcinomy.</p>
+                    <p><strong>Benigní nádory:</strong> Fibroadenom (nejčastější benigní tumor mladých žen, bifázický s proliferací epitelu a stroma, dělí se na intrakanalikulární a perikanalikulární typ). Intraduktální papilom (způsobuje serosangvinolentní sekreci z bradavky).</p>
+                    <p><strong>Carcinoma in situ:</strong> DCIS (duktální in situ karcinom, hrozí rozvojem invaze, šíří se intraepiteliálně do kůže areoly za vzniku Pagetovy choroby bradavky). LCIS (lobulární in situ karcinom, vykazuje ztrátu exprese E-cadherinu, buňky jsou dyskohezivní). E-cadherin imunohistochemie spolehlivě odliší duktální (+) od lobulárního (-) typu.</p>
+                    <p><strong>Invazivní karcinomy:</strong> Invazivní duktální karcinom NST (nespecifický typ, nejběžnější). Invazivní lobulární karcinom (morfologicky charakterizovaný infiltrací jednotlivých buněk v jedné řadě za sebou – tzv. "obraz indických skautů" nebo "husí pochod/řádkování" v důsledku chybění E-cadherinu).</p>
+                    <p><strong>Patologie mužského prsu:</strong> Gynekomastie (hyperplázie duktů bez lobulů z hyperestrogenismu). Karcinom mužského prsu je téměř výhradně duktální typ NST.</p>
+                `,
+                visualType: "lobular_breast",
+                quiz: {
+                    q: "Jak rostou buňky invazivního lobulárního karcinomu prsu a proč?",
+                    options: [
+                        "Rostou v kribriformních strukturách jako řešeto.",
+                        "Rostou dyskohezivně v řádcích za sebou ('husí pochod'), protože ztratily expresi E-cadherinu.",
+                        "Tvoří obří cysty vyplněné vlasy a zuby.",
+                        "Rostou jako keříčkovité intraduktální papilomy."
+                    ],
+                    correct: 1,
+                    explain: "Naprosto správně! Ztráta E-cadherinu znamená, že buňky nedrží pohromadě v hnízdech, ale trousí se stroma v řádcích jako 'husí pochod' (Indian filing)."
+                }
+            },
+            {
+                id: 22,
+                title: "Nádory trofoblastu",
+                category: "Gynekologická onkologie",
+                lazy: [
+                    "<strong>Původ:</strong> Vycházejí z trofoblastu (placentární buňky). Produkují obří množství <strong>hCG</strong>.",
+                    "<strong>Mola hydatidóza (Zásněť hroznová):</strong>",
+                    "• <strong>Kompletní mola:</strong> vzniká, když prázdné vajíčko (bez mateřské DNA) oplodní dvě spermie (nebo jedna, co se zdvojí). Vzniká karyotyp 46,XX s čistě otcovskou DNA. Plod se vůbec nevyvíjí, placentární klky otékají do tvaru hroznů (na ultrazvuku obraz sněžení). Roste destruktivně a hrozí zvrhnutím v choriokarcinom.",
+                    "<strong>Gestační choriokarcinom:</strong> Super maligní bifázický tumor z cytotrofoblastu a syncytiotrofoblastu. Roste agresivně, prožírá se do cév a zakládá bleskové hematogenní metastázy (plíce, mozek, vagína, játra).",
+                    "<strong>Biochemie & Klinika:</strong> Produkuje extrémní hladiny <strong>hCG</strong>. Tyto hladiny vyvolají tyreotoxikózu (hCG stimuluje TSH receptory) a u mužů (v případě non-gestačního choriokarcinomu varlete) gynekomastii."
+                ],
+                academic: `
+                    <p>Trofoblastické nádory představují unikátní neoplázie s genetickým příspěvkem otcovského genomu.</p>
+                    <p><strong>Mola hydatidosa:</strong> Kompletní mola vzniká oplozením "prázdného" vajíčka (karyotyp diploidní, ale čistě paternální). Placentární klky jsou edematózní, bezcévné, makroskopicky připomínají hrozny vína (na ultrazvuku "obraz sněhové bouře"). Nevzniká embryo. Parciální mola obsahuje triploidní karyotyp, vyvíjí se fetální tkáň.</p>
+                    <p><strong>Gestační choriokarcinom:</strong> Vysoce maligní epiteliální tumor trofoblastu s bifázickou strukturou (syncytio- a cytotrofoblast bez přítomnosti choriových klků). Roste invazivně s destrukcí cév, což vede k profúznímu krvácení a časným metastázám do plic a mozku.</p>
+                    <p><strong>Symptomatické interakce hCG:</strong> Extrémní hladiny hCG mohou aktivovat TSH receptor a vyvolat tyreotoxikózu. U mužů hCG stimuluje Leydigovy buňky k produkci androgenů, které se periferně konvertují na estrogeny (gynekomastie).</p>
+                `,
+                visualType: "mola_snow",
+                quiz: {
+                    q: "Jaký je karyotyp a genetický původ u mola hydatidosa completa (kompletní moly)?",
+                    options: [
+                        "Triploidní karyotyp obsahující mateřskou i otcovskou DNA.",
+                        "Diploidní karyotyp (nejčastěji 46,XX), ale veškerá DNA je otcovského původu (paternální).",
+                        "Monosomie X (45,X) s čistě mateřskou DNA.",
+                        "Tento stav nemá genetický podklad."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Kompletní mola je čistě otcovská záležitost. Vajíčko bylo prázdné a spermie si tam udělala duplicitu své DNA. Proto nevznikne plod, ale jen divoká placenta."
+                }
+            },
+            {
+                id: 23,
+                title: "Nejčastější nádory u dětí",
+                category: "Pediatrická onkologie",
+                lazy: [
+                    "<strong>Přehled:</strong> Nejčastější u dětí jsou <strong>leukémie (ALL, AML)</strong> a lymfomy. Druhé jsou nádory CNS (embryonalní, meduloblastom). Z měkkých tkání dominují <strong>rhabdomyosarkomy</strong> a <strong>juvenilní hemangiom</strong>.",
+                    "<strong>Nefroblastom (Wilmsův tumor):</strong> Typický nádor ledviny u dětí (8-15 cm). Skládá se ze 3 složek (tripartitní vzhled): 1) <strong>nediferencovaný blastém</strong> (small blue cells, obří mitotická aktivita), 2) <strong>diferencující se epitel</strong> (primitivní žlázky/tubuly), 3) <strong>mezenchymální stroma</strong> (vazivo, svaly). Prekancerózou jsou **nefrogenní rezidua** (nezralé buňky v ledvině).",
+                    "<strong>Retinoblastom:</strong> Maligní nádor oka u dětí. Roste z retiny do sklivce (endofyticky), obsahuje nekrózy a vápník. Skládá se ze 'small blue cells', prorůstá podél zrakového nervu přímo do mozku. Projevuje se bílým odleskem zornice (leukokorie).",
+                    "<strong>Hepatoblastom:</strong> Nejobvyklejší dětský nádor jater. Spojen s <strong>FAP syndromem</strong>. Dělí se na fetální (trámce s glykogenem) a embryonální (primitivní buňky)."
+                ],
+                academic: `
+                    <p>Dětská onkologie se zásadně liší od dospělé – dominují embryonální a blastémové tumory z nezralých tkání.</p>
+                    <p><strong>Nefroblastom (Wilmsův tumor):</strong> Maligní embryonální tumor ledviny. Histologicky vykazuje klasickou trifázickou strukturu: nediferencovaný buněčný blastém (malé modré buňky), epitelové struktury (primitivní tubuly a glomerula) a mezenchymální stroma. Prekancerózami jsou nefrogenní rezidua (perilobulární či intralobulární perzistující embryonální tkáň).</p>
+                    <p><strong>Retinoblastom:</strong> Maligní neuroektodermální tumor sítnice u dětí. Často spojen s mutací genu RB1. Roste endofyticky či exofyticky, vykazuje rozsáhlé kalcifikace a nekrózy. Buňky jsou typu "small blue round cells" s vysokým N/C poměrem a sklonem k infiltraci n. opticus.</p>
+                    <p><strong>Hepatoblastom:</strong> Primární tumor jater kojenců a batolat, asociován s FAP. Dělí se na čistě epiteliální (fetální typ se zralými hepatocyty plnými glykogenu, embryonální typ s primitivními buňkami) a smíšený epiteliálně-mezenchymový typ.</p>
+                `,
+                visualType: "wilms_tri",
+                quiz: {
+                    q: "Z jakých tří histologických složek se skládá klasický dětský nefroblastom (Wilmsův tumor)?",
+                    options: [
+                        "Dlaždicový epitel, keratin a koilocyty.",
+                        "Nediferencovaný blastém, primitivní epitelové struktury a mezenchymální stroma.",
+                        "Zralá chrupavka, tuková tkáň a osteoidní matrix.",
+                        "Antoni A oblasti, Antoni B oblasti a Verocayova tělíska."
+                    ],
+                    correct: 1,
+                    explain: "Správně! To je tzv. trifázický (tripartitní) vzhled Wilmsova tumoru: blastém, epitel, stroma. Klasická otázka dětské patologie."
+                }
+            },
+            {
+                id: 24,
+                title: "Nádory nadledvin a štítné žlázy",
+                category: "Endokrinní onkologie",
+                lazy: [
+                    "<strong>Kůra nadledvin:</strong> 1) <strong>Adrenokortikální adenom</strong>: benigní, zářivě žlutý kvůli lipidům v buňkách (<strong>spongiocyty</strong>). Produkuje hormony -> <strong>Cushingův syndrom</strong> (kortizol) nebo <strong>Connův syndrom</strong> (aldosteron -> hypertenze). 2) <strong>Myelolipom</strong>: benigní, směs tuku a krvetvorby, neprodukuje hormony (náhodný nález).",
+                    "<strong>Dřeň nadledvin:</strong> 1) <strong>Feochromocytom</strong>: benigní chromafinní uzel, který po vložení do fixace hnědne (oxidace katecholaminů). Způsobuje divokou <strong>paroxysmální (záchvatovitou) hypertenzi</strong> (tlak klidně 240/140 mmHg, bušení srdce, pocení). Buňky tvoří hnízda obklopená cévami - tzv. **Zellballen**.",
+                    "2) <strong>Neuroblastom</strong>: super maligní dětský nádor dřeně. Skládá se ze 'small blue cells' tvořících **Homer-Wrightovy rozety** (buňky dokola kolem růžové sítě výběžků).",
+                    "<strong>Štítná žláza (Karcinomy):</strong>",
+                    "• <strong>Papilární:</strong> nejčastější. Buňky mají prázdná **maticová jádra** (vypadají jako oči rotvajlera / 'Orphan Annie eyes') a **psammomatózní tělíska** (kruhové kalcifikace). Metastázuje lymfaticky do krčních uzlin.",
+                    "• <strong>Folikulární:</strong> prorůstá celé pouzdro (<strong>transkapsulární invaze</strong>) a leze do cév (angioinvaze). Metastázy dává hematogenně (kosti, plíce).",
+                    "• <strong>Medulární:</strong> vychází z parafolikulárních C-buněk. Produkuje **kalcitonin**, který se sráží ve stroma jako **amyloid**.",
+                    "• <strong>Anaplastický:</strong> bleskový zabiják starších lidí (smrt do 5 měsíců udušením/dysfagií)."
+                ],
+                academic: `
+                    <p>Endokrinní onkologie zahrnuje vysoce specifické tumory nadledvin a štítné žlázy.</p>
+                    <p><strong>Kůra nadledvin:</strong> Adrenokortikální adenom (žlutý uzlík tvořený spongiocyty bohatými na lipidy, klinicky vyvolává Cushingův syndrom ze zvýšeného kortizolu či Connův syndrom z aldosteronu). Myelolipom (benigní, hormonálně němý tumor z tukové tkáně s ložisky hematopoézy).</p>
+                    <p><strong>Dřeň nadledvin:</strong> Feochromocytom (nádor z chromafinních buněk produkující katecholaminy, histologicky tvoří hnízda "Zellballen"; klinicky vyvolává život ohrožující záchvatovitou hypertenzi). Neuroblastom (maligní dětský tumor ze sympatických prekurzorů s přítomností Homer-Wrightových rozet).</p>
+                    <p><strong>Štítná žláza:</strong> Papilární karcinom (matná jádra s marginací chromatinu, intranukleární inkluze a psammomatózní tělíska; lymfogenní metastázování). Folikulární karcinom (vykazuje transkapsulární a angioinvazi, hematogenní metastázování). Medulární karcinom (z parafolikulárních C-buněk, produkuje kalcitonin tvořící amyloidní depozita ve stroma). Anaplastický karcinom (extrémně agresivní, nediferencovaný).</p>
+                `,
+                visualType: "papillary_thyroid",
+                quiz: {
+                    q: "Co jsou to 'Zellballen' a u kterého nádoru je najdeme?",
+                    options: [
+                        "Hnízda chromafinních buněk obklopená cévami u feochromocytomu.",
+                        "Vrstvy keratinu uprostřed spinocelulárního karcinomu.",
+                        "Kapsuly s vápníkem u papilárního karcinomu štítné žlázy.",
+                        "Vakuly s glykogenem v buňkách seminomu."
+                    ],
+                    correct: 0,
+                    explain: "Skvěle! Zellballen (buněčné balóny/hnízda) jsou typická pro feochromocytom dřeně nadledvin. Jsou to hnízda buněk protkaná bohatou cévní sítí."
+                }
+            },
+            {
+                id: 25,
+                title: "Nádory endokrinního systému (MEN)",
+                category: "Endokrinní onkologie",
+                lazy: [
+                    "<strong>Příštítná tělíska:</strong> Adenom (produkuje <strong>parathormon - PTH</strong> -> hyperparatyreóza -> uvolňování vápníku z kostí -> <strong>metastatické kalcifikace</strong> v ledvinách, žaludku). Karcinom je vzácný, od adenomu se liší jen invazí do okolí.",
+                    "<strong>MEN (Mnohočetná endokrinní neoplázie):</strong> Dědičné autozomálně dominantní syndromy způsobující nádory ve více endokrinních orgánech najednou:",
+                    "• <strong>MEN 1 (Wermerův syndrom):</strong> mutace genu MEN1 (menin). Způsobuje 3P: <strong>P</strong>říštítná tělíska (hyperplázie), <strong>P</strong>ankreas (NETy - gastrinom, inzulinom), <strong>P</strong>řední lalok hypofýzy (prolaktinom).",
+                    "• <strong>MEN 2 (Sippleův syndrom):</strong> mutace protoonkogenů **RET**. Způsobuje hyperplázii dřeně nadledvin (<strong>feochromocytomy</strong>) a medulární karcinom štítné žlázy.",
+                    "• <strong>MEN 2A:</strong> medulární karcinom + feochromocytom + hyperplázie příštítných tělísek.",
+                    "• <strong>MEN 2B:</strong> medulární karcinom + feochromocytom + slizniční neuromy (rty, jazyk) + marfanoidní vzhled (bez postižení příštítných tělísek)."
+                ],
+                academic: `
+                    <p>Syndromy mnohočetné endokrinní neoplázie (MEN) představují autozomálně dominantní onemocnění s mutacemi supresorových genů či protoonkogenů.</p>
+                    <p><strong>Adenom příštítného tělíska:</strong> Solitární ohraničená léze s nadprodukcí PTH. Způsobuje primární hyperparatyreózu s hyperkalcémií, což vede k metastatické kalcifikaci měkkých tkání (např. v ledvinách – nefrokalcinóza).</p>
+                    <p><strong>MEN 1 (Wermerův syndrom):</strong> Mutace supresorového genu MEN1 (11q). Postihuje typicky tři lokace ("3P"): Příštítná tělíska (hyperplázie), Pankreas (funkční PanNETy – gastrinom, inzulinom), Přední lalok hypofýzy (adenom).</p>
+                    <p><strong>MEN 2 (Sippleův syndrom):</strong> Mutace protoonkogenu RET. Charakterizován výskytem medulárního karcinomu štítné žlázy a bilaterálních feochromocytomů. MEN 2A zahrnuje navíc hyperparatyreózu. MEN 2B hyperparatyreózu postrádá, ale vykazuje mnohočetné ganglioneuromy sliznic a marfanoidní habitus.</p>
+                `,
+                visualType: "men_3p",
+                quiz: {
+                    q: "Které tři orgány jsou typicky postiženy u syndromu MEN 1 (Wermerova syndromu) - pravidlo 3P?",
+                    options: [
+                        "Plíce, prostata, pleura.",
+                        "Příštítná tělíska, pankreas, přední lalok hypofýzy.",
+                        "Perikard, periost, penis.",
+                        "Prs, pobřišnice, průdušky."
+                    ],
+                    correct: 1,
+                    explain: "Trefa! Pravidlo '3P': Příštítná tělíska (Parathyroid), Pankreas, Přední lalok hypofýzy (Pituitary). Skvělý zkouškový tahák!"
+                }
+            },
+            {
+                id: 26,
+                title: "Nádory kůže",
+                category: "Dermatopatologie",
+                lazy: [
+                    "<strong>Benigní:</strong> <strong>Seboroická keratóza</strong> (tmavě pigmentovaný vyvýšený 'přilepený' pupen u starších lidí, obsahuje rohové pseudocysty). <strong>Cornu cutaneum</strong> (kožní roh z nahromaděného keratinu). <strong>Keratoakantom</strong> (krátkodobý bleskový kráterovitý nádor kůže s keratinovou zátkou, vypadá jako spinocelulární karcinom, ale po čase sám zmizí).",
+                    "<strong>Prekancerózy:</strong> <strong>Aktinická keratóza</strong> (z UV záření, hrubé šupinaté plošky) a <strong>Bowenova choroba</strong> (Carcinoma in situ s chronickým zánětem pod ním).",
+                    "<strong>Maligní:</strong> <strong>Bazocelulární karcinom</strong> (bazofilní, palisády, ulcus rodens, nemetastazuje) a <strong>Spinocelulární karcinom</strong> (keratinové perly, metastazuje do uzlin).",
+                    "<strong>Mezenchymální kožní:</strong> <strong>Dermatofibrom</strong> (benigní, tuhý uzlík v kůži, z fibroblastů a histiocytů) a <strong>Dermatofibrosarcoma protuberans</strong> (low-grade maligní pomalý uzel kůže/podkoží)."
+                ],
+                academic: `
+                    <p>Kožní neoplázie představují nejčastější skupinu nádorů u člověka díky expozici UV záření.</p>
+                    <p><strong>Benigní epiteliální léze:</strong> Seboroická keratóza (verukózní, hyperpigmentovaný uzlík u starších lidí s přítomností rohových pseudocyst). Keratoakantom (rychle rostoucí benigní kráterovitá léze vyplněná keratinem, spontánně regreduje, ale morfologicky imituje spinocelulární karcinom).</p>
+                    <p><strong>Prekancerózy:</strong> Aktinická keratóza (vyvolaná UV zářením, vykazuje dysplázii bazální epidermis a hyperkeratózu) a Bowenova choroba (intraepidermální Carcinoma in situ).</p>
+                    <p><strong>Maligní léze:</strong> Bazocelulární karcinom (bazofilní buňky, periferní palisádování, ulcus rodens) a spinocelulární karcinom (keratinizující invazivní čepy spinózních buněk).</p>
+                    <p><strong>Fibrohistiocytární tumory:</strong> Dermatofibrom (benigní reaktivní uzlík v dermis) a Dermatofibrosarcoma protuberans (morfologicky charakterizovaný vřetenitými buňkami uspořádanými do rohožovitého/storiformního vzoru).</p>
+                `,
+                visualType: "seborrheic_keratosis",
+                quiz: {
+                    q: "Co je to keratoakantom?",
+                    options: [
+                        "Maligní metastáza melanomu do mozkových plen.",
+                        "Rychle rostoucí benigní kožní tumor s keratinovou zátkou, který může sám spontánně vymizet.",
+                        "Pravá cysta s epitelovou výstelkou na děložním hrdle.",
+                        "Retenční cysta mazové žlázy."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Keratoakantom roste jako šílený, vypadá jako zhoubný spinocelulární karcinom, ale je benigní a po několika měsících se sám odhojí a zmizí. Velká záludnost pro patology."
+                }
+            },
+            {
+                id: 27,
+                title: "Melanom",
+                category: "Dermatopatologie",
+                lazy: [
+                    "<strong>Definice:</strong> Vysoce maligní nádor z melanocytů (neuroektodermový původ). Pokročilý melanom má katastrofální prognózu (přežití 8-10 měsíců).",
+                    "<strong>Lokalizace:</strong> Kůže, sliznice (ústa, jícen, řiť), sítnice oka, mozkové pleny. Vzniká buď de novo, nebo z dysplastického névu.",
+                    "<strong>Růstové fáze:</strong> 1) <strong>Časná/Radiální:</strong> horizontální šíření v epidermis (lepší prognóza). 2) <strong>Pozdní/Vertikální:</strong> invaze hluboko do koria (koreluje s agresivitou a rizikem metastáz).",
+                    "<strong>Čtyři typy melanomu:</strong>",
+                    "1) <strong>Superficiálně se šířící (SSM):</strong> nejčastější, hnízda atypických buněk v epidermis.",
+                    "2) <strong>Lentigo maligna melanom:</strong> vzniká na slunci u starých lidí na obličeji (Hutchinsonova skvrna), roste horizontálně klidně 10-15 let jako tmavý flek.",
+                    "3) <strong>Nodulární:</strong> roste rovnou vertikálně dolů, extrémně agresivní s bleskovými metastázami.",
+                    "4) <strong>Akrální lentiginózní:</strong> na dlaních, ploskách a pod nehty. Tmavý pruh pod nehtem lezoucí na kůži se nazývá **Hutchinsonův znak**.",
+                    "<strong>Staging:</strong> **Breslow** (měří tloušťku nádoru v mm od stratum granulosum - určuje i šířku chirurgického vyříznutí). **Clark** (podle anatomických vrstev kůže).",
+                    "<strong>Diferenciální diagnostika (ABCDE):</strong> **A**symetrie, **B**order (okraj), **C**olour (barva), **D**iameter (průměr > 6 mm), **E**levation/Evolution (vývoj v čase).",
+                    "<strong>Markery:</strong> S100, Melan A, HMB-45, Ki-67."
+                ],
+                academic: `
+                    <p>Melanom je vysoce maligní, agresivní tumor z melanocytů vykazující rané lymfogenní i hematogenní metastázování.</p>
+                    <p><strong>Patogeneze a lokalizace:</strong> Vzniká de novo či malignizací dysplastického névu. Kromě kůže se vyskytuje v uvey oka, sliznicích GIT a na meningách.</p>
+                    <p><strong>Kinetika růstu:</strong> Rozlišujeme horizontální (radiální) fázi růstu, která je omezena na epidermis, a vertikální fázi charakterizovanou invazí do dermis s rizikem metastáz.</p>
+                    <p><strong>Klinicko-patologické typy:</strong> SSM (superficiálně se šířící, nejčastější), Lentigo maligna melanom (na obličeji senilní kůže, pomalý průběh), Nodulární melanom (chybí radiální fáze, roste vertikálně, nepříznivá prognóza) a Akrální lentiginózní melanom (dlaně, plosky, subunguálně s Hutchinsonovým znaménkem – pigmentací nehtového valu).</p>
+                    <p><strong>Staging a klasifikace:</strong> Klasifikace dle Breslowa měří vertikální tloušťku tumoru v milimetrech; je hlavním prognostickým faktorem. Klasifikace dle Clarka hodnotí invazi do anatomických vrstev kůže (I-V). Diagnostické markery v patologii: S100, Melan A, HMB-45 a proliferační marker Ki-67.</p>
+                `,
+                visualType: "melanoma_abcde",
+                quiz: {
+                    q: "Co hodnotí klasifikace dle Breslowa u maligního melanomu a proč je tak důležitá?",
+                    options: [
+                        "Počet tripolárních mitóz v zorném poli.",
+                        "Vertikální tloušťku nádoru v milimetrech od stratum granulosum (určuje prognózu a rozsah resekce).",
+                        "Přítomnost koilocytů v nehtovém lůžku.",
+                        "Úroveň exprese E-cadherinu."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Breslow je svatý grál melanomů. Změří se tloušťka v mm a podle toho chirurg ví, jestli musí vzít 1 cm, nebo 2 cm zdravé kůže okolo."
+                }
+            },
+            {
+                id: 28,
+                title: "Nádory periferních nervů a mozku",
+                category: "Neuropatologie",
+                lazy: [
+                    "<strong>Schwannom (neurinom):</strong> Benigní, roste excentricky na boku nervu. Pokud je oboustranný na sluchovém nervu (vestibulární schwannom), je to **neurofibromatóza II. typu** (způsobí parézu n. VII, V a mozečku v mostomozečkovém úhlu).",
+                    "• Mikroskopie: střídání hustých **Antoni A** oblastí (vřetenité buňky řadí jádra v řadách vedle sebe -> **Verocayova tělíska**) a řídkých **Antoni B** oblastí (edém, myxoidní stroma).",
+                    "<strong>Neurofibrom:</strong> Benigní, leze přímo skrz nerv (nedá se z něj vyloupnout). Četné neurofibromy + skvrny **café au lait** + Lischovy uzlíky na duhovce = **neurofibromatóza I. typu (von Recklinghausen)**. Hrozí zvratem v maligní MPNST.",
+                    "<strong>Meningiom:</strong> Benigní tumor mozkových plen, roste z arachnotelu a lpí na dura mater. Tlačí na mozek (neinvaduje). Mikroskopicky: vírovité uspořádání buněk (**whorls / cibule**) a **psammomatózní tělíska**.",
+                    "<strong>Gliomy (Difúzní astrocytom):</strong> 1) Astrocytom grade II (hvězdicovité buňky, gemistocyty). 2) Grade III (anaplastický astrocytom). 3) Grade IV (**Glioblastom** - bleskový zabiják, nekrózy, prorůstá přes corpus callosum do obou hemisfér jako <strong>motýlový nádor</strong>). Lepší prognózu mají pacienti s **mutací IDH1/IDH2**.",
+                    "<strong>Oligodendrogliom:</strong> Grade II-III, buňky mají perinukleární vyjasnění (vzhled **volských ok / fried eggs**), vykazují **kodeleci 1p/19q** (skvěle reagují na chemoterapii).",
+                    "<strong>Meduloblastom:</strong> Super maligní dětský nádor mozečku (grade IV). Skládá se ze 'small blue cells' tvořících řádky nebo rozety."
+                ],
+                academic: `
+                    <p>Neuropatologie zahrnuje tumory periferního nervového systému a primární/sekundární tumory CNS.</p>
+                    <p><strong>Schwannom:</strong> Benigní, opouzdřený tumor z Schwannových buněk rostoucí excentricky na nervu (S100 pozitivní). Bilaterální vestibulární schwannom je diagnostický pro NF2. Histologicky vykazuje Antoni A zóny s Verocayovými tělísky (palisádování jader vřetenitých buněk) a Antoni B myxoidní hypocelulární zóny.</p>
+                    <p><strong>Neurofibrom:</strong> Neopouzdřený tumor prorůstající nervem. Asociován s NF1 (von Recklinghausenova choroba se skvrnami café-au-lait a Lischovými uzlíky). Hrozí maligním zvratem v MPNST.</p>
+                    <p><strong>Meningiom:</strong> Extraaxiální benigní tumor z arachnotelu lpící na dura mater. Morfologicky typické vírovité (whorled) uspořádání buněk a četná vrstvená kalcifikovaná psammomatózní tělíska.</p>
+                    <p><strong>Difúzní astrocytom a Glioblastom:</strong> Astrocytomy vykazují tendenci k maligní progresi (grade II -> anaplastický grade III -> glioblastom grade IV). Glioblastom vykazuje pseudopalisádující nekrózy a mikrovaskulární proliferace; roste infiltrativně přes corpus callosum ("motýlový gliom"). Mutace IDH1/2 značí příznivější průběh.</p>
+                    <p><strong>Oligodendrogliom:</strong> Infiltrativní tumor s buňkami vzhledu "volských ok" (arteficiální perinukleární halo). Přítomnost kodelece 1p/19q indikuje výbornou citlivost na chemo- a radioterapii.</p>
+                    <p><strong>Meduloblastom:</strong> Vysoce maligní embryonální tumor mozečku u dětí (grade IV) vrůstající do IV. komory s rizikem hydrocefalu. Tvořen malými modrými buňkami s Homer-Wrightovými rozetami.</p>
+                `,
+                visualType: "schwannoma_verocay",
+                quiz: {
+                    q: "Co jsou to Verocayova tělíska a u kterého tumoru je najdeme?",
+                    options: [
+                        "Keratinová ložiska u dlaždicobuněčného karcinomu.",
+                        "Glomeruloidní útvary s cévou v centru u yolk sac tumoru.",
+                        "Palisádovitě seřazená jádra vřetenitých buněk v Antoni A oblastech schwannomu.",
+                        "Kruhové kalcifikace u meningiomu."
+                    ],
+                    correct: 2,
+                    explain: "Trefa! Verocayova tělíska jsou tvořena rovnoběžnými řadami jader Schwannových buněk v Antoni A zónách schwannomu. Krásná vizuální diagnostika."
+                }
+            },
+            {
+                id: 29,
+                title: "Nádory kostí",
+                category: "Kostní onkopatologie",
+                lazy: [
+                    "<strong>Osteosarkom:</strong> Nejčastější primární zhoubný nádor kosti u mladých lidí. Roste v metafýzách dlouhých kostí (kolem kolene - femur/tibie). Maligní osteoblasty tvoří <strong>nádorový osteoid</strong>. Roste agresivně, ničí trámce kosti, zvedá periost (vzniká tzv. **Codmanův trojúhelník**) a prorůstá do svalů. Často metastazuje do plic.",
+                    "<strong>Ewingův sarkom:</strong> Druhý nejčastější zhoubný dětský nádor kosti. Roste v diafýzách (středu) dlouhých kostí a v pánvi. Skládá se z uniformních 'small blue round cells'. Infiltrace je kašovitá a na řezu <strong>imituje hnis</strong> (připomíná osteomyelitidu!). Způsobuje kruté bolesti a horečky. Rychle tvoří reaktivní vrstvy periostu (obraz **cibulové slupky**).",
+                    "<strong>Chondrosarkom:</strong> Zhoubný nádor z chrupavky (produkuje chrupavčitou matrix). Vyskytuje se spíše u dospělých v kostech trupu a pánve. Dediferencovaný typ je vysoce zhoubný a totálně rezistentní na chemoterapii a radioterapii.",
+                    "<strong>Benigní nádory kosti:</strong> <strong>Osteom</strong> (zralá kost na lebce, asociace s Gardnerovým syndromem), <strong>Osteoidní osteom</strong> (vyvolává kruté noční bolesti, které okamžitě ustoupí po aspirinu/salicylátech, na rentgenu ohraničené ložisko s lemem sklerotické kosti), <strong>Osteochondrom</strong> (výrůstek s chrupavčitou čepičkou u kolene na stopce), <strong>Obrovskobuněčný nádor kosti (osteoklastom)</strong> (v epifýzách u dospělých, lokálně agresivní, obsahuje obří mnohojaderné buňky jako osteoklasty)."
+                ],
+                academic: `
+                    <p>Kostní onkologie se dělí na primární kostní tumory (osteogenní, chondrogenní, Ewingův sarkom) a sekundární metastatické postižení.</p>
+                    <p><strong>Osteosarkom:</strong> Vysoce maligní mezenchymální tumor, jehož buňky přímo produkují nádorový osteoid (kostní matrix). Typicky postihuje adolescenty v metafýzách dlouhých kostí (distální femur, proximální tibie). Agresivní růst destruuje kortikalis, nadzdvihává periost (Codmanův trojúhelník) a šíří se do měkkých tkání. Hlavní cesta šíření je hematogenní do plic.</p>
+                    <p><strong>Ewingův sarkom:</strong> Vysoce maligní neuroektodermální tumor (skupina PNET) s typickou translokací t(11;22) fúzující geny EWSR1-FLI1. Morfologicky se skládá z malých kulatých modrých buněk bohatých na glykogen. Nádorová hmota podléhá nekróze a kolkvaci, čímž makroskopicky připomíná hnisavou osteomyelitidu (klinicky doprovázenou horečkami a leukocytózou).</p>
+                    <p><strong>Chondrosarkom:</strong> Maligní chondrocytární tumor produkující chrupavčitou matrix. Vyskytuje se v dospělém a starším věku (pánev, žebra, femur). Dediferencovaný chondrosarkom je vysoce agresivní anaplastický nádor s chemo- a radiorezistencí.</p>
+                    <p><strong>Benigní léze:</strong> Osteoidní osteom (nidus <2 cm obklopený sklerotickou kostí, noční bolesti ustupující po NSAID), osteochondrom (exostóza s chrupavčitou čepičkou na stopce komunikující s dřeňovou dutinou) a obrovskobuněčný nádor kosti (epifyzární lokalizace, destruktivní růst, fúze buněk do obřích mnohojaderných elementů osteoklastického typu).</p>
+                `,
+                visualType: "bone_tumor",
+                quiz: {
+                    q: "Který zhoubný kostní nádor je typický pro dětský věk, roste v diafýze a makroskopicky napodobuje hnisavou osteomyelitidu?",
+                    options: [
+                        "Konvenční osteosarkom",
+                        "Ewingův sarkom",
+                        "Chondrosarkom",
+                        "Osteochondrom"
+                    ],
+                    correct: 1,
+                    explain: "Skvěle! Ewingův sarkom tvořený malými modrými buňkami podléhá nekróze a makroskopicky připomíná hnis. Bývá zaměňován za zánět kosti (osteomyelitidu) kvůli doprovodným horečkám."
+                }
+            },
+            {
+                id: 30,
+                title: "Metastatické nádory mozku",
+                category: "Neuropatologie",
+                lazy: [
+                    "<strong>Epidemiologie:</strong> Až 50 % všech nádorů v mozku jsou ve skutečnosti <strong>metastázy</strong> odjinud, nikoliv primární gliomy! Mozek je oblíbený cíl pro hematogenní rozsev.",
+                    "<strong>Primární zdroje:</strong> Nejčastěji sem metastazuje <strong>karcinom plic</strong> (malobuněčný i nemalobuněčný), <strong>karcinom prsu</strong>, <strong>maligní melanom</strong>, <strong>karcinom ledviny</strong> (hypernefrom) a karcinomy GIT (kolorektální).",
+                    "<strong>Lokalizace:</strong> Jsou typicky <strong>ostře ohraničené, kulovité</strong> a nejčastěji uvíznou na <strong>rozhraní šedé a bílé hmoty</strong> (tam se zužují kapiláry a nádorové buňky se zachytí). Mohou být solitární, ale častěji jsou vícečetné.",
+                    "<strong>Perifokální edém:</strong> Kolem metastatických ložisek vzniká obrovský otok (edém) kvůli poškození hematoencefalické bariéry a produkci VEGF. Otok utlačuje mozek a vyvolává příznaky.",
+                    "<strong>Klinické projevy:</strong> Tlak v hlavě, bolesti, zvracení, parézy, kognitivní deficit. Někdy je prvním příznakem <strong>epileptický záchvat</strong> de novo u dospělého člověka! Na CT/MRI se ložiska s nekrózou typicky sytí jako prstenec (**ring-enhancing lesion**)."
+                ],
+                academic: `
+                    <p>Sekundární (metastatické) novotvary jsou nejčastějšími intrakraniálními nádory dospělého věku, překonávající incidenci primárních gliomů.</p>
+                    <p><strong>Hematogenní rozsev:</strong> Nádorové buňky se šíří krevní cestou. Nejčastějšími zdroji jsou bronchogenní karcinom (cca 50 %), karcinom prsu (15 %), maligní melanom (10 %), karcinom ledviny a kolorektální adenokarcinom. Melanom a choriokarcinom mají sklon k metastázování s výrazným krvácením do ložisek.</p>
+                    <p><strong>Patologická anatomie:</strong> Uzly se zachycují typicky na rozhraní šedé a bílé hmoty hemisfér v místech terminální mikrocirkulace. Makroskopicky jsou ostře demarkované, kulovité, s častými zónami centrální nekrózy a krvácení.</p>
+                    <p><strong>Edém a intrakraniální hypertenze:</strong> Narušení endotelové bariéry a exprese VEGF vede k masivnímu vasogennímu edému v okolní bílé hmotě. Tento edém je hlavním zdrojem klinických symptomů. Zobrazovací metody (CT a MRI s kontrastem) odhalují charakteristický obraz prstencovitého sycení (ring enhancement) s výrazným hypodenzním lemem edému.</p>
+                    <p><strong>Klinická symptomatologie:</strong> Projevuje se syndromem intrakraniální hypertenze (bolesti hlavy, edém papily, městnání), fokálními motorickými či senzorickými deficity a náhlým rozvojem epileptických záchvatů u pacientů bez předchozí anamnézy.</p>
+                `,
+                visualType: "brain_metastasis",
+                quiz: {
+                    q: "Která lokalizace v mozku je typická pro uvíznutí metastatických embolů a co je hlavním důvodem neurologických příznaků?",
+                    options: [
+                        "Mostomozečkový úhel; růst Antoni A struktur.",
+                        "Rozhraní šedé a bílé hmoty; masivní perifokální edém v okolí.",
+                        "Uvnitř postranních komor; obstrukce likvorových cest.",
+                        "Podél optického nervu; atrofie zrakové dráhy."
+                    ],
+                    correct: 1,
+                    explain: "Přesně! Cévy se zužují na rozhraní šedé a bílé hmoty, kde se buňky zachytí. Doprovodný vasogenní otok (edém) je pak zodpovědný za útlak mozku a příznaky."
+                }
+            }
+        ];
+
+        // POMOCNÝ FLASHCARD SYSTÉM (Témata převedená na rychlé tahákové kartičky)
+        const flashcards = [
+            { front: "Verocayova tělíska", back: "Schwannom (Antoni A zóna - jádra seřazená vedle sebe jako vojáci)." },
+            { front: "Azzopardiho fenomén", back: "Malobuněčný karcinom plic (SCLC - rozpadlý bazofilní chromatin nalepený na stěnách cév)." },
+            { front: "Schillerova-Duvalova tělíska", back: "Nádor ze žloutkového váčku / Yolk sac tumor (vypadá jako primitivní glomerulus s cévou v centru)." },
+            { front: "Koilocyty", back: "HPV infekce (CIN, dlaždicobuněčný karcinom cervixu/penisu - buňky s perinukleárním haló)." },
+            { front: "Hvězdné nebe (Starry sky)", back: "Burkittův lymfom (tmavé bazofilní B-buňky tvoří nebe, světlé makrofágy s apoptotickými tělísky tvoří hvězdy)." },
+            { front: "Zellballen", back: "Feochromocytom (hnízda chromafinních buněk dřeně nadledvin obklopená cévami)." },
+            { front: "Filadelfský chromozom t(9;22)", back: "Chronická myeloidní leukémie (CML - fúzní gen BCR/ABL, obří aktivita tyrosinkinázy)." },
+            { front: "Popcorn cells", back: "Nodulární lymfocytární predominantní Hodgkinův lymfom (atypické buňky se zmačkaným jedním jádrem)." },
+            { front: "Buňky pečetního prstence", back: "Difúzní adenokarcinom žaludku / Krukenbergův ovariální tumor (hlen vakuoly vytlačí jádro k okraji)." },
+            { front: "Reinkeho krystaly", back: "Nádor z Leydigových buněk (ovarium / varle - tyčinkovité inkluze v cytoplazmě)." },
+            { front: "Psammomatózní tělíska", back: "Papilární karcinom štítné žlázy / Meningiom / Serózní karcinom ovaria (vrstvené kalcifikace po odumřelých papilách)." },
+            { front: "Orphan Annie eyes (Maticová jádra)", back: "Papilární karcinom štítné žlázy (chromatin natlačený na okraj jádra, vnitřek je opticky prázdný)." },
+            { front: "Codmanův trojúhelník", back: "Osteosarkom (rychlým růstem zvednutý periost z kosti, v úhlu se tvoří reaktivní nová kost)." },
+            { front: "Obraz cibulové slupky (Onion skin)", back: "Ewingův sarkom (vrstvené ukládání novotvořené kosti podél diafýzy kosti)." },
+            { front: "Ring-enhancing lesion", back: "Metastáza v mozku (prstencovité sycení kontrastní látky s otokem a tmavým středem nekrózy na CT/MRI)." }
+        ];
+
+        // STATE APLIKACE
+        let currentTopicIndex = 0;
+        let currentCardIndex = 0;
+        let isCardFlipped = false;
+        let readTopics = new Set(JSON.parse(localStorage.getItem('readTopics') || '[]'));
+        let selectedTab = 'study';
+        let burnoutLevel = 80;
+
+        // ARENA STATE
+        let playerHp = 100;
+        let bossHp = 100;
+        let currentArenaQuestion = null;
+
+        // ELEMENTY DOM
+        const burnoutSlider = document.getElementById('burnoutSlider');
+        const burnoutVal = document.getElementById('burnoutVal');
+        const moodIcon = document.getElementById('moodIcon');
+        const modulesList = document.getElementById('modulesList');
+        const searchTerm = document.getElementById('searchTerm');
+        const searchSuggestions = document.getElementById('searchSuggestions');
+        const progressStats = document.getElementById('progressStats');
+        const readBtn = document.getElementById('readBtn');
+
+        // ADVISOR TEXTS BASED ON BURNOUT
+        const advisorComments = {
+            low: "Kolego, vidím, že máte spoustu energie. Pojďme probrat histogenezi a molekulární biologii do hloubky!",
+            medium: "Trochu únava, co? Rozumím. Zvýrazním klíčové zkouškové chytáky, ať neztrácíme čas.",
+            high: "Totální vyhoření! Kašli na omáčky. Tady máš drsný medický překlad a ty nejdůležitější taháky, co zachrání zadek u zkoušky. Hlavně dýchej."
+        };
+
+        // INICIACE APLIKACE
+        window.onload = function () {
+            initSlider();
+            initSearch();
+            renderModules();
+            loadTopic(0);
+            updateProgress();
+            renderVisual();
+        }
+
+        // SLIDER EVENTS
+        function initSlider() {
+            burnoutSlider.oninput = function () {
+                burnoutLevel = parseInt(this.value);
+                burnoutVal.innerText = burnoutLevel + "%";
+
+                let mood = "🤠";
+                let advisorKey = "low";
+                if (burnoutLevel > 30 && burnoutLevel < 70) {
+                    mood = "🤨";
+                    advisorKey = "medium";
+                } else if (burnoutLevel >= 70) {
+                    mood = "🤯";
+                    advisorKey = "high";
+                }
+                moodIcon.innerText = mood;
+
+                // Změna textu poradce
+                document.getElementById('advisorEmoji').innerText = mood === "🤯" ? "☠️" : "🩺";
+                document.getElementById('advisorText').innerHTML = `"${advisorComments[advisorKey]}"`;
+
+                // Překreslení výkladu tématu podle úrovně vyhoření
+                applyBurnoutUI();
+            };
+            burnoutSlider.dispatchEvent(new Event('input'));
+        }
+
+        function applyBurnoutUI() {
+            const academicBody = document.getElementById('academicBody');
+            const academicChevron = document.getElementById('academicChevron');
+            const lazySummaryContainer = document.getElementById('lazySummaryContainer');
+
+            if (burnoutLevel >= 70) {
+                // Skrýt akademické texty ve výchozím nastavení
+                academicBody.classList.add('hidden');
+                academicChevron.innerText = "👉 Ukázat vědecké řeči (klinický žargon)";
+                lazySummaryContainer.style.display = "block";
+            } else if (burnoutLevel < 30) {
+                // Zobrazit akademické texty hned
+                academicBody.classList.remove('hidden');
+                academicChevron.innerText = "👇 Skrýt vědecké řeči";
+                lazySummaryContainer.style.display = "none";
+            } else {
+                // Střední cesta
+                academicBody.classList.add('hidden');
+                academicChevron.innerText = "👉 Ukázat vědecké řeči";
+                lazySummaryContainer.style.display = "block";
+            }
+        }
+
+        // TOGGLE ACADEMIC EXPANSION
+        function toggleAcademicView() {
+            const academicBody = document.getElementById('academicBody');
+            const academicChevron = document.getElementById('academicChevron');
+            if (academicBody.classList.contains('hidden')) {
+                academicBody.classList.remove('hidden');
+                academicChevron.innerText = "👇 Skrýt vědecké řeči";
+            } else {
+                academicBody.classList.add('hidden');
+                academicChevron.innerText = "👉 Ukázat vědecké řeči";
+            }
+        }
+
+        // RENDER MODULES (SYLLABUS NAVIGACE)
+        function renderModules() {
+            modulesList.innerHTML = "";
+            database.forEach((item, index) => {
+                const isRead = readTopics.has(item.id);
+                const button = document.createElement('button');
+                button.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex justify-between items-center transition-all ${index === currentTopicIndex
+                        ? 'bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-inner'
+                        : 'text-slate-400 hover:bg-slate-800 border border-transparent'
+                    }`;
+                button.onclick = () => loadTopic(index);
+
+                const statusMarker = isRead ? "✅" : "⭕";
+
+                button.innerHTML = `
+                    <div class="flex items-center gap-2 overflow-hidden">
+                        <span class="text-slate-500 text-[10px] font-mono">${String(index + 1).padStart(2, '0')}.</span>
+                        <span class="truncate block max-w-[200px]">${item.title}</span>
+                    </div>
+                    <span class="text-[10px] flex items-center gap-1">
+                        <span class="text-slate-500">${item.category.split(' ')[0]}</span>
+                        <span>${statusMarker}</span>
+                    </span>
+                `;
+                modulesList.appendChild(button);
+            });
+        }
+
+        // SEARCH ENGINE
+        function initSearch() {
+            const highYieldKeywords = ["GIST", "t(9;22)", "BRCA", "VHL", "Reed-Sternberg", "Azzopardi", "Schiller-Duval", "CLL", "Burkitt", "Zellballen"];
+            searchSuggestions.innerHTML = "";
+            highYieldKeywords.forEach(word => {
+                const btn = document.createElement('button');
+                btn.className = "text-[10px] font-mono font-bold px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg text-slate-400 hover:text-purple-300 transition-all";
+                btn.innerText = word;
+                btn.onclick = () => {
+                    searchTerm.value = word;
+                    filterTopics(word);
+                };
+                searchSuggestions.appendChild(btn);
+            });
+
+            searchTerm.oninput = function () {
+                filterTopics(this.value);
+            };
+        }
+
+        function filterTopics(query) {
+            query = query.toLowerCase().trim();
+            if (!query) {
+                renderModules();
+                return;
+            }
+
+            modulesList.innerHTML = "";
+            let matchCount = 0;
+
+            database.forEach((item, index) => {
+                // Hledáme v názvu, akademickém textu nebo lazy summary
+                const contentText = (item.title + " " + item.academic + " " + item.lazy.join(" ") + " " + item.category).toLowerCase();
+                if (contentText.includes(query)) {
+                    const isRead = readTopics.has(item.id);
+                    const button = document.createElement('button');
+                    button.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex justify-between items-center transition-all ${index === currentTopicIndex
+                            ? 'bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-inner'
+                            : 'text-slate-400 hover:bg-slate-800 border border-transparent'
+                        }`;
+                    button.onclick = () => loadTopic(index);
+
+                    const statusMarker = isRead ? "✅" : "⭕";
+
+                    button.innerHTML = `
+                        <div class="flex items-center gap-2 overflow-hidden">
+                            <span class="text-slate-500 text-[10px] font-mono">${String(index + 1).padStart(2, '0')}.</span>
+                            <span class="truncate block max-w-[200px]">${item.title}</span>
+                        </div>
+                        <span class="text-[10px] flex items-center gap-1">
+                            <span class="text-purple-400 font-bold">Shoda</span>
+                            <span>${statusMarker}</span>
+                        </span>
+                    `;
+                    modulesList.appendChild(button);
+                    matchCount++;
+                }
+            });
+
+            if (matchCount === 0) {
+                modulesList.innerHTML = `<p class="text-xs text-slate-500 text-center py-4">Žádná shoda v osnovách. Zkus zadat něco jiného...</p>`;
+            }
+        }
+
+        // LOAD SELECTED TOPIC
+        function loadTopic(index) {
+            currentTopicIndex = index;
+            const topic = database[index];
+
+            // Název a Kategorie
+            document.getElementById('topicCategory').innerText = topic.category;
+            document.getElementById('topicTitle').innerText = topic.title;
+
+            // Lazy Summary
+            const lazyList = document.getElementById('lazyList');
+            lazyList.innerHTML = "";
+            topic.lazy.forEach(bullet => {
+                const li = document.createElement('li');
+                li.className = "flex gap-2 items-start";
+                li.innerHTML = `<span class="text-amber-400 mt-0.5">•</span> <span>${bullet}</span>`;
+                lazyList.appendChild(li);
+            });
+
+            // Academic Text
+            document.getElementById('academicBody').innerHTML = topic.academic;
+
+            // Update tlačítka splněno
+            updateReadButtonState();
+
+            // Rychlotest
+            loadQuiz(topic);
+
+            // Zvýraznění aktivního modulu v levém menu
+            renderModules();
+
+            // Vizualizace tématu
+            renderVisual();
+
+            // Použít aktuální UI podle burnoutu
+            applyBurnoutUI();
+
+            // Scroll nahoru na study card
+            document.getElementById('studyCard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // READ TOPICS PERSISTENCE
+        function updateReadButtonState() {
+            const topic = database[currentTopicIndex];
+            const isRead = readTopics.has(topic.id);
+            if (isRead) {
+                readBtn.innerHTML = `<span>✅ Hotovo</span>`;
+                readBtn.className = "flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-xl border border-emerald-500/40 bg-emerald-950/20 text-emerald-400";
+            } else {
+                readBtn.innerHTML = `<span>❌ Nezaškrtnuto</span>`;
+                readBtn.className = "flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-xl border border-slate-700 bg-slate-950 hover:bg-slate-800 transition-all text-slate-300";
+            }
+        }
+
+        function toggleTopicRead() {
+            const topic = database[currentTopicIndex];
+            if (readTopics.has(topic.id)) {
+                readTopics.delete(topic.id);
+            } else {
+                readTopics.add(topic.id);
+            }
+            localStorage.setItem('readTopics', JSON.stringify(Array.from(readTopics)));
+            updateReadButtonState();
+            updateProgress();
+            renderModules();
+        }
+
+        function updateProgress() {
+            progressStats.innerText = `${readTopics.size}/${database.length} hotovo`;
+        }
+
+        // LOAD QUIZ FOR STUDY CARD
+        function loadQuiz(topic) {
+            const q = topic.quiz;
+            document.getElementById('quizQuestion').innerText = q.q;
+
+            const optionsContainer = document.getElementById('quizOptions');
+            optionsContainer.innerHTML = "";
+
+            const feedback = document.getElementById('quizFeedback');
+            feedback.classList.add('hidden');
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left text-xs bg-slate-900 hover:bg-slate-850 border border-slate-800 rounded-xl p-3 font-semibold transition-all hover:border-purple-500/50";
+                btn.innerText = opt;
+                btn.onclick = () => {
+                    // Kontrola správné odpovědi
+                    if (idx === q.correct) {
+                        feedback.innerText = "🏆 Správně! " + q.explain;
+                        feedback.className = "mt-3 text-xs font-bold p-2.5 rounded-xl bg-emerald-950/40 text-emerald-400 border border-emerald-500/20";
+                    } else {
+                        feedback.innerText = "❌ Nesprávně. Zkus to znovu, zkoušející by tě vyhodil.";
+                        feedback.className = "mt-3 text-xs font-bold p-2.5 rounded-xl bg-red-950/40 text-red-400 border border-red-500/20";
+                    }
+                    feedback.classList.remove('hidden');
+                };
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        // SWITCH TAB (STUDY VS CARDS VS ARENA)
+        function switchTab(tabId) {
+            selectedTab = tabId;
+            const tabs = ['study', 'cards', 'arena'];
+
+            tabs.forEach(t => {
+                const content = document.getElementById(`content-${t}`);
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === tabId) {
+                    content.classList.remove('hidden');
+                    btn.className = "flex-1 py-2 text-xs font-bold rounded-lg transition-all bg-purple-600 text-white shadow-lg shadow-purple-500/20";
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = "flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white";
+                }
+            });
+
+            if (tabId === 'cards') {
+                loadCard(0);
+            } else if (tabId === 'arena') {
+                resetArena();
+            }
+        }
+
+        // TAB 2: FLASHCARDS SYSTEM
+        function loadCard(index) {
+            currentCardIndex = index;
+            isCardFlipped = false;
+            document.getElementById('flashcard').classList.remove('flipped');
+
+            const card = flashcards[index];
+            document.getElementById('cardFrontText').innerText = card.front;
+            document.getElementById('cardBackText').innerText = card.back;
+        }
+
+        function flipCard() {
+            isCardFlipped = !isCardFlipped;
+            const card = document.getElementById('flashcard');
+            if (isCardFlipped) {
+                card.classList.add('flipped');
+            } else {
+                card.classList.remove('flipped');
+            }
+        }
+
+        function nextCard() {
+            let nextIdx = (currentCardIndex + 1) % flashcards.length;
+            loadCard(nextIdx);
+        }
+
+        function prevCard() {
+            let prevIdx = (currentCardIndex - 1 + flashcards.length) % flashcards.length;
+            loadCard(prevIdx);
+        }
+
+        // TAB 3: ZOUNKŠKOVÁ ARÉNA (BATTLE WITH PROFESSOR)
+        function resetArena() {
+            playerHp = 100;
+            bossHp = 100;
+            updateArenaBars();
+            document.getElementById('arenaResultArea').classList.add('hidden');
+            document.getElementById('arenaGameStatus').classList.remove('hidden');
+            document.getElementById('bossGraphic').innerText = "👴";
+            document.getElementById('bossDialogue').innerText = '"Tak se ukažte, kolego. Tady končí legrace. Dám vám pár otázek z histopatologie!"';
+
+            generateArenaQuestion();
+        }
+
+        function updateArenaBars() {
+            document.getElementById('playerHpText').innerText = playerHp + "/100 HP";
+            document.getElementById('playerHpBar').style.width = playerHp + "%";
+
+            document.getElementById('bossHpText').innerText = bossHp + "/100 HP";
+            document.getElementById('bossHpBar').style.width = bossHp + "%";
+        }
+
+        function generateArenaQuestion() {
+            // Náhodný výběr tématu a jeho kvízu
+            const randomTopic = database[Math.floor(Math.random() * database.length)];
+            currentArenaQuestion = randomTopic.quiz;
+
+            document.getElementById('arenaQuestion').innerText = currentArenaQuestion.q;
+
+            const optionsContainer = document.getElementById('arenaOptions');
+            optionsContainer.innerHTML = "";
+
+            currentArenaQuestion.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left text-xs bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 font-semibold transition-all hover:border-red-500/30";
+                btn.innerText = opt;
+                btn.onclick = () => submitArenaAnswer(idx);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function submitArenaAnswer(selectedIdx) {
+            const correct = currentArenaQuestion.correct;
+            const bossDialogues = [
+                '"Uspokojivé, ale neslavte předčasně!"',
+                '"To byla snadná otázka. Teď přitvrdíme."',
+                '"Hm, vidím, že jste nespal zbytečně."',
+                '"Zatím procházíte, ale záludné otázky teprve přijdou..."'
+            ];
+            const bossAngryDialogues = [
+                '"Co to melete, kolego? To je naprostý nesmysl!"',
+                '"Vy snad neznáte ani základy! Okamžitě si sedněte!"',
+                '"Tento omyl by pacienta stál život!"',
+                '"S tímto přístupem se patologii nenaučíte ani za rok!"'
+            ];
+
+            if (selectedIdx === correct) {
+                // Poškození bosse
+                bossHp -= 25;
+                if (bossHp < 0) bossHp = 0;
+
+                document.getElementById('bossGraphic').innerText = "😨";
+                document.getElementById('bossDialogue').innerText = bossDialogues[Math.floor(Math.random() * bossDialogues.length)];
+
+                // Uzdravení hráče
+                playerHp += 10;
+                if (playerHp > 100) playerHp = 100;
+            } else {
+                // Poškození hráče
+                playerHp -= 25;
+                if (playerHp < 0) playerHp = 0;
+
+                document.getElementById('bossGraphic').innerText = "😡";
+                document.getElementById('bossDialogue').innerText = bossAngryDialogues[Math.floor(Math.random() * bossAngryDialogues.length)];
+            }
+
+            updateArenaBars();
+
+            // Kontrola konce hry
+            if (playerHp <= 0) {
+                endArenaGame(false);
+            } else if (bossHp <= 0) {
+                endArenaGame(true);
+            } else {
+                // Další otázka
+                setTimeout(() => {
+                    if (playerHp > 0 && bossHp > 0) {
+                        document.getElementById('bossGraphic').innerText = "👴";
+                        generateArenaQuestion();
+                    }
+                }, 1500);
+            }
+        }
+
+        function endArenaGame(isWin) {
+            document.getElementById('arenaGameStatus').classList.add('hidden');
+            const resultArea = document.getElementById('arenaResultArea');
+            resultArea.classList.remove('hidden');
+
+            if (isWin) {
+                resultArea.innerHTML = `
+                    <span class="text-6xl">🎓</span>
+                    <h3 class="text-xl font-black text-emerald-400 mt-3">Zkouška Splněna! Gratuluji!</h3>
+                    <p class="text-sm text-slate-300 mt-2 max-w-md mx-auto">
+                        Porazil jsi profesora svými skvělými znalostmi a získáváš virtuální zápočet z patologie. Teď už tě nic nezastaví! Jdi se vyspat.
+                    </p>
+                    <button onclick="resetArena()" class="mt-6 px-5 py-2.5 bg-emerald-600 rounded-xl text-xs font-bold hover:bg-emerald-500 transition-all">Hrát znovu ⚔️</button>
+                `;
+            } else {
+                resultArea.innerHTML = `
+                    <span class="text-6xl">😢</span>
+                    <h3 class="text-xl font-black text-red-500 mt-3">Vyhozen ze zkoušky! (F)</h3>
+                    <p class="text-sm text-slate-300 mt-2 max-w-md mx-auto">
+                        Profesor tě nachytal na švestkách a tvé duševní zdraví kleslo na nulu. Nevadí, přečti si pár Lazy taháků a zkus to znovu.
+                    </p>
+                    <button onclick="resetArena()" class="mt-6 px-5 py-2.5 bg-purple-600 rounded-xl text-xs font-bold hover:bg-purple-500 transition-all">Zkusit opravný termín 🔄</button>
+                `;
+            }
+        }
+
+        // MIKRO-VIZUALIZACE HISTOLOGIE (DYNAMIC SVG PATHS)
+        function renderVisual() {
+            const area = document.getElementById('customVisualArea');
+            const topic = database[currentTopicIndex];
+            const type = topic.visualType;
+            let html = "";
+
+            if (type === "dna_damage") {
+                // Interaktivní poškození DNA ionizací
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <defs>
+                            <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#a855f7" />
+                                <stop offset="100%" stop-color="#ec4899" />
+                            </linearGradient>
+                        </defs>
+                        <!-- DNA Helix -->
+                        <path d="M 50 60 Q 100 20 150 60 T 250 60 T 350 60" fill="none" stroke="url(#dnaGrad)" stroke-width="4" stroke-dasharray="2,2"/>
+                        <path d="M 50 60 Q 100 100 150 60 T 250 60 T 350 60" fill="none" stroke="#f59e0b" stroke-width="4"/>
+                        <!-- Radikály / paprsky -->
+                        <g class="animate-bounce">
+                            <line x1="180" y1="10" x2="200" y2="50" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+                            <text x="145" y="25" fill="#ef4444" class="text-[10px] font-bold">Ionizující záření!</text>
+                        </g>
+                        <!-- Bod poškození -->
+                        <circle cx="200" cy="60" r="8" fill="#ef4444" class="animate-ping"/>
+                        <circle cx="200" cy="60" r="5" fill="#ef4444"/>
+                    </svg>
+                `;
+            } else if (type === "cis_membrane") {
+                // Carcinoma in situ vs invazivní karcinom
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Epitel s buňkami -->
+                        <rect x="10" y="40" width="380" height="30" fill="#3b82f6" fill-opacity="0.1" rx="5"/>
+                        <!-- Bazální membrána -->
+                        <line x1="10" y1="75" x2="390" y2="75" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
+                        <text x="15" y="90" fill="#10b981" class="text-[9px] font-mono">Neporušená Bazální Membrána (CIS)</text>
+                        
+                        <!-- Atypické buňky (nahoře, neprochází pod membránu) -->
+                        <circle cx="100" cy="55" r="8" fill="#a855f7" class="animate-pulse"/>
+                        <circle cx="100" cy="55" r="3" fill="#000"/>
+                        
+                        <circle cx="200" cy="55" r="9" fill="#a855f7"/>
+                        <circle cx="200" cy="55" r="4" fill="#000"/>
+                        
+                        <circle cx="300" cy="55" r="7" fill="#a855f7"/>
+                        <circle cx="300" cy="55" r="3" fill="#000"/>
+                        
+                        <text x="130" y="30" fill="#a855f7" class="text-[10px] font-bold">Maligní buňky uzamčené v epitelu</text>
+                    </svg>
+                `;
+            } else if (type === "cyst_draw") {
+                // Retenční cysta
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Ucpaný vývod -->
+                        <path d="M 50 30 L 150 30 Q 200 10 250 50 Q 280 90 200 100 L 50 100" fill="none" stroke="#475569" stroke-width="3"/>
+                        <circle cx="150" cy="65" r="25" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+                        <line x1="85" y1="65" x2="115" y2="65" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+                        <text x="70" y="50" fill="#ef4444" class="text-[10px] font-bold">UCPÁNÍ (Konkrement)</text>
+                        <text x="140" y="115" fill="#f59e0b" class="text-[10px] font-bold">Dilatace & Sekret (Aterom)</text>
+                    </svg>
+                `;
+            } else if (type === "growth_patterns") {
+                // Benigní (opouzdřený) vs Maligní (infiltrativní)
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Benigní strana -->
+                        <g>
+                            <circle cx="100" cy="60" r="30" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="3" stroke-dasharray="3,3"/>
+                            <circle cx="100" cy="60" r="26" fill="#10b981" fill-opacity="0.3"/>
+                            <text x="55" y="20" fill="#10b981" class="text-[10px] font-bold">Expanzivní (Opouzdřený)</text>
+                        </g>
+                        <!-- Maligní strana -->
+                        <g>
+                            <circle cx="280" cy="60" r="10" fill="#ef4444" fill-opacity="0.8"/>
+                            <path d="M 280 60 L 250 40 M 280 60 L 310 80 M 280 60 L 260 90 M 280 60 L 310 30" stroke="#ef4444" stroke-width="3" stroke-linecap="round" class="animate-pulse"/>
+                            <text x="245" y="20" fill="#ef4444" class="text-[10px] font-bold">Infiltrativní & Invazivní</text>
+                        </g>
+                    </svg>
+                `;
+            } else if (type === "mitosis_types") {
+                // Atypická mitóza (tripolární Y)
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Tripolární Y mitóza -->
+                        <circle cx="200" cy="60" r="35" fill="none" stroke="#a855f7" stroke-width="2"/>
+                        <!-- Tři póly vřeténka -->
+                        <circle cx="200" cy="35" r="4" fill="#ef4444"/>
+                        <circle cx="170" cy="80" r="4" fill="#ef4444"/>
+                        <circle cx="230" cy="80" r="4" fill="#ef4444"/>
+                        <!-- Chromozomy seřazené do Y -->
+                        <path d="M 200 45 L 200 60 L 180 70 M 200 60 L 220 70" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" class="animate-pulse"/>
+                        <text x="135" y="20" fill="#ef4444" class="text-[10px] font-bold">Atypická tripolární mitóza (Y)</text>
+                    </svg>
+                `;
+            } else if (type === "koilocyte_visual") {
+                // Koilocyty (HPV podpis)
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Koilocyt -->
+                        <circle cx="200" cy="60" r="30" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+                        <!-- Perinukleární vyjasnění (haló) -->
+                        <circle cx="200" cy="60" r="18" fill="#020617" stroke="#a855f7" stroke-width="1" stroke-dasharray="2,2"/>
+                        <!-- Zmačkané hyperchromní jádro -->
+                        <path d="M 195 55 Q 190 60 200 65 Q 205 55 200 55 Z" fill="#a855f7" stroke="#c084fc" stroke-width="2"/>
+                        <text x="140" y="20" fill="#a855f7" class="text-[10px] font-bold">Koilocyt (Perinukleární haló & zmačkané jádro)</text>
+                    </svg>
+                `;
+            } else if (type === "keratin_pearls") {
+                // Keratinová perla u spinoceluláru
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Koncentrické vrstvy keratinu -->
+                        <circle cx="200" cy="60" r="35" fill="none" stroke="#f59e0b" stroke-width="3" stroke-opacity="0.5"/>
+                        <circle cx="200" cy="60" r="25" fill="none" stroke="#f59e0b" stroke-width="3" stroke-opacity="0.7"/>
+                        <circle cx="200" cy="60" r="15" fill="none" stroke="#f59e0b" stroke-width="3" stroke-opacity="0.9"/>
+                        <circle cx="200" cy="60" r="5" fill="#f59e0b"/>
+                        <text x="120" y="20" fill="#f59e0b" class="text-[10px] font-bold">Keratinová perla (Koncentrické rohovění)</text>
+                    </svg>
+                `;
+            } else if (type === "signet_ring") {
+                // Buňka pečetního prstence
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <circle cx="200" cy="60" r="30" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="2"/>
+                        <!-- Velká hlenová vakuola -->
+                        <circle cx="195" cy="58" r="22" fill="#38bdf8" fill-opacity="0.3" stroke="#0284c7" stroke-width="1"/>
+                        <!-- Vytlačené jádro na periferii -->
+                        <ellipse cx="222" cy="72" rx="6" ry="4" fill="#a855f7" stroke="#c084fc" stroke-width="1"/>
+                        <text x="110" y="20" fill="#38bdf8" class="text-[10px] font-bold">Buňka pečetního prstence (Hlen tlačí jádro k okraji)</text>
+                    </svg>
+                `;
+            } else if (type === "lipoblast_visual") {
+                // Lipoblast (atypický adipocyt)
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <path d="M 180 40 Q 220 30 230 60 Q 220 90 180 80 Q 150 70 180 40 Z" fill="#eab308" fill-opacity="0.2" stroke="#eab308" stroke-width="2"/>
+                        <!-- Vícečetné lipidové kapky -->
+                        <circle cx="180" cy="55" r="8" fill="#eab308" fill-opacity="0.6"/>
+                        <circle cx="195" cy="65" r="6" fill="#eab308" fill-opacity="0.6"/>
+                        <circle cx="178" cy="70" r="5" fill="#eab308" fill-opacity="0.6"/>
+                        <!-- Jádro deformované kapkami -->
+                        <path d="M 215 50 Q 210 65 212 60" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+                        <text x="140" y="20" fill="#eab308" class="text-[10px] font-bold">Lipoblast s vakuolami tísnícími jádro</text>
+                    </svg>
+                `;
+            } else if (type === "rhabdo_grape") {
+                // Sarcoma botryoides - hroznovitý růst
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Hrozen buněk -->
+                        <g fill="#a855f7" fill-opacity="0.7" stroke="#c084fc" stroke-width="1">
+                            <circle cx="170" cy="50" r="12" />
+                            <circle cx="185" cy="45" r="10" />
+                            <circle cx="195" cy="55" r="14" />
+                            <circle cx="180" cy="65" r="11" />
+                            <circle cx="210" cy="48" r="10" />
+                            <circle cx="215" cy="62" r="12" />
+                            <circle cx="200" cy="72" r="13" />
+                            <circle cx="230" cy="58" r="9" />
+                        </g>
+                        <text x="135" y="25" fill="#c084fc" class="text-[10px] font-bold">Sarcoma botryoides (Hroznovité uspořádání)</text>
+                    </svg>
+                `;
+            } else if (type === "heart_myxoma") {
+                // Srdeční myxom na stopce
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Mezisíňové septum -->
+                        <line x1="200" y1="10" x2="200" y2="40" stroke="#ef4444" stroke-width="8"/>
+                        <!-- Stopka -->
+                        <line x1="200" y1="40" x2="200" y2="60" stroke="#f59e0b" stroke-width="3"/>
+                        <!-- Křehký laločnatý myxom -->
+                        <path d="M 200 60 C 170 70 170 100 200 110 C 230 100 230 70 200 60 Z" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" class="animate-pulse"/>
+                        <text x="120" y="25" fill="#ef4444" class="text-[9px] font-bold">Mezisíňové septum</text>
+                        <text x="215" y="90" fill="#3b82f6" class="text-[10px] font-bold">Myxom na stopce (Hrozí embolizace!)</text>
+                    </svg>
+                `;
+            } else if (type === "azzopardi_visual") {
+                // Azzopardiho fenomén
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Céva -->
+                        <rect x="50" y="45" width="300" height="30" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-width="1"/>
+                        <!-- Inkrustace stěn cévy uvolněným bazofilním chromatinem -->
+                        <line x1="50" y1="45" x2="350" y2="45" stroke="#a855f7" stroke-width="4" stroke-dasharray="4,2"/>
+                        <line x1="50" y1="75" x2="350" y2="75" stroke="#a855f7" stroke-width="4" stroke-dasharray="4,2"/>
+                        <text x="90" y="30" fill="#a855f7" class="text-[10px] font-bold">Azzopardiho fenomén (Tmavá DNA inkrustovaná ve stěně cévy)</text>
+                    </svg>
+                `;
+            } else if (type === "cribriform_gland") {
+                // Kribriformní vzhled (řešeto / švýcarský sýr)
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Solidní shluk buněk s mnoha lumeny -->
+                        <rect x="130" y="25" width="140" height="70" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2" rx="10"/>
+                        <!-- Otvory (řešeto) -->
+                        <circle cx="160" cy="45" r="8" fill="#020617" stroke="#10b981"/>
+                        <circle cx="200" cy="45" r="8" fill="#020617" stroke="#10b981"/>
+                        <circle cx="240" cy="45" r="8" fill="#020617" stroke="#10b981"/>
+                        <circle cx="180" cy="75" r="8" fill="#020617" stroke="#10b981"/>
+                        <circle cx="220" cy="75" r="8" fill="#020617" stroke="#10b981"/>
+                        <text x="110" y="15" fill="#10b981" class="text-[10px] font-bold">Kribriformní struktury (Vzhled řešeta / švýcarského sýru)</text>
+                    </svg>
+                `;
+            } else if (type === "gist_kit") {
+                // KIT (CD117) tyrosinkináza receptory
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Buněčná membrána -->
+                        <line x1="50" y1="60" x2="350" y2="60" stroke="#475569" stroke-width="6"/>
+                        <!-- Receptor -->
+                        <path d="M 200 20 L 200 100" stroke="#ef4444" stroke-width="4"/>
+                        <circle cx="200" cy="20" r="10" fill="#ef4444" class="animate-ping"/>
+                        <circle cx="200" cy="20" r="7" fill="#ef4444"/>
+                        <text x="215" y="30" fill="#ef4444" class="text-[10px] font-bold">KIT (CD117) - Trvalá aktivace proliferace</text>
+                        <text x="60" y="85" fill="#475569" class="text-[9px]">Extracelulárně</text>
+                        <text x="60" y="45" fill="#475569" class="text-[9px]">Intracelulárně</text>
+                    </svg>
+                `;
+            } else if (type === "fap_colon") {
+                // Tisíce polypů ve střevě
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Střevní stěna -->
+                        <line x1="50" y1="90" x2="350" y2="90" stroke="#475569" stroke-width="4"/>
+                        <!-- Četné exofytické polypy -->
+                        <path d="M 80 90 Q 90 60 100 90 M 120 90 Q 135 40 150 90 M 170 90 Q 180 70 190 90 M 210 90 Q 230 30 250 90 M 280 90 Q 290 70 300 90 M 320 90 Q 330 50 340 90" fill="none" stroke="#ef4444" stroke-width="3"/>
+                        <text x="110" y="25" fill="#ef4444" class="text-[10px] font-bold">FAP Syndrom - Střevo doslova poseté adenomy</text>
+                    </svg>
+                `;
+            } else if (type === "panc_head") {
+                // Courvoisierovo znamení u hlavy pankreatu
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Žlučník -->
+                        <circle cx="120" cy="60" r="20" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" class="animate-pulse"/>
+                        <line x1="140" y1="60" x2="220" y2="60" stroke="#10b981" stroke-width="3"/>
+                        <!-- Karcinom hlavy pankreatu -->
+                        <circle cx="240" cy="60" r="25" fill="#ef4444" fill-opacity="0.4" stroke="#ef4444" stroke-width="2"/>
+                        <text x="80" y="105" fill="#10b981" class="text-[10px] font-bold">Hmatný, nebolestivý žlučník</text>
+                        <text x="215" y="25" fill="#ef4444" class="text-[10px] font-bold">Obstrukce žlučovodu v hlavě pankreatu</text>
+                    </svg>
+                `;
+            } else if (type === "rcc_cell") {
+                // Světlá buňka s glykogenem
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <polygon points="170,30 230,30 250,60 230,90 170,90 150,60" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+                        <!-- Opticky prázdná cytoplazma (vymytý glykogen a lipidy) -->
+                        <circle cx="200" cy="60" r="10" fill="#a855f7" stroke="#c084fc" stroke-width="1"/>
+                        <text x="120" y="20" fill="#f59e0b" class="text-[10px] font-bold">Světlobuněčný karcinom ledviny (Grawitz)</text>
+                    </svg>
+                `;
+            } else if (type === "schiller_duval") {
+                // Schillerovo-Duvalovo tělísko
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Volný prostor mikrocysty -->
+                        <circle cx="200" cy="60" r="45" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,2"/>
+                        <!-- Centrální céva -->
+                        <circle cx="200" cy="60" r="10" fill="#ef4444" fill-opacity="0.3" stroke="#ef4444" stroke-width="2"/>
+                        <!-- Nádorový epitel kolem cévy -->
+                        <g fill="#a855f7">
+                            <circle cx="183" cy="48" r="4"/> <circle cx="200" cy="43" r="4"/> <circle cx="217" cy="48" r="4"/>
+                            <circle cx="178" cy="60" r="4"/> <circle cx="222" cy="60" r="4"/>
+                            <circle cx="183" cy="72" r="4"/> <circle cx="200" cy="77" r="4"/> <circle cx="217" cy="72" r="4"/>
+                        </g>
+                        <text x="110" y="10" fill="#a855f7" class="text-[10px] font-bold">Schillerova-Duvalova tělíska (Glomeruloidní struktury)</text>
+                    </svg>
+                `;
+            } else if (type === "fistula_cervix") {
+                // Vesikovaginální píštěl
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Pochva -->
+                        <rect x="50" y="30" width="120" height="25" fill="#eab308" fill-opacity="0.2" stroke="#eab308" stroke-width="1"/>
+                        <!-- Močový měchýř -->
+                        <rect x="50" y="65" width="120" height="25" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+                        <!-- Nádor prorůstající a dělající píštěl -->
+                        <circle cx="170" cy="60" r="15" fill="#ef4444" fill-opacity="0.6"/>
+                        <!-- Proražená stěna -->
+                        <line x1="170" y1="50" x2="170" y2="70" stroke="#ef4444" stroke-width="4" stroke-dasharray="2,2"/>
+                        <text x="115" y="105" fill="#ef4444" class="text-[10px] font-bold">Vesikovaginální píštěl z invaze karcinomu cervixu</text>
+                    </svg>
+                `;
+            } else if (type === "granulosa_cell") {
+                // Call-Exnerova tělíska
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Folikulární uspořádání granulózy s eosinofilní hmotou v centru -->
+                        <circle cx="200" cy="60" r="35" fill="none" stroke="#a855f7" stroke-width="2"/>
+                        <circle cx="200" cy="60" r="10" fill="#ef4444" fill-opacity="0.3"/>
+                        <g fill="#a855f7">
+                            <circle cx="180" cy="45" r="5"/> <circle cx="200" cy="40" r="5"/> <circle cx="220" cy="45" r="5"/>
+                            <circle cx="175" cy="60" r="5"/> <circle cx="225" cy="60" r="5"/>
+                            <circle cx="180" cy="75" r="5"/> <circle cx="200" cy="80" r="5"/> <circle cx="220" cy="75" r="5"/>
+                        </g>
+                        <text x="115" y="20" fill="#a855f7" class="text-[10px] font-bold">Call-Exnerova tělíska (Granulózový tumor)</text>
+                    </svg>
+                `;
+            } else if (type === "lobular_breast") {
+                // Husí pochod lobulárního karcinomu
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Jednořadé řazení buněk (husí pochod) -->
+                        <g fill="#ec4899">
+                            <circle cx="80" cy="60" r="7"/> <circle cx="110" cy="60" r="7"/> <circle cx="140" cy="60" r="7"/>
+                            <circle cx="170" cy="60" r="7"/> <circle cx="200" cy="60" r="7"/> <circle cx="230" cy="60" r="7"/>
+                            <circle cx="260" cy="60" r="7"/> <circle cx="290" cy="60" r="7"/>
+                        </g>
+                        <!-- Naznačení směru lineárního růstu -->
+                        <line x1="60" y1="60" x2="310" y2="60" stroke="#ec4899" stroke-width="1" stroke-dasharray="4,4"/>
+                        <text x="110" y="30" fill="#ec4899" class="text-[10px] font-bold">Husí pochod / řádkování (Lobulární karcinom prsu)</text>
+                        <text x="140" y="95" fill="#f59e0b" class="text-[9px] font-mono">Důsledek ztráty E-cadherinu</text>
+                    </svg>
+                `;
+            } else if (type === "mola_snow") {
+                // Obraz sněžení u mola hydatidózy
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Sněžení (četné drobné cystičky/tečky na UTZ) -->
+                        <g fill="#fff" fill-opacity="0.8">
+                            <circle cx="80" cy="30" r="2"/> <circle cx="120" cy="45" r="4"/> <circle cx="160" cy="20" r="3"/>
+                            <circle cx="200" cy="50" r="5"/> <circle cx="240" cy="35" r="3"/> <circle cx="280" cy="60" r="4"/>
+                            <circle cx="100" cy="70" r="3"/> <circle cx="140" cy="85" r="5"/> <circle cx="180" cy="65" r="2"/>
+                            <circle cx="220" cy="90" r="4"/> <circle cx="260" cy="75" r="3"/> <circle cx="300" cy="85" r="4"/>
+                        </g>
+                        <text x="115" y="15" fill="#fff" class="text-[10px] font-bold">Obraz sněhové bouře na UTZ (Mola completa)</text>
+                    </svg>
+                `;
+            } else if (type === "wilms_tri") {
+                // Wilmsův tumor - trifázická struktura
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Blastém (modré buňky) -->
+                        <g fill="#3b82f6" fill-opacity="0.6">
+                            <circle cx="80" cy="50" r="4"/> <circle cx="95" cy="45" r="4"/> <circle cx="90" cy="60" r="4"/>
+                        </g>
+                        <text x="60" y="30" fill="#3b82f6" class="text-[9px] font-bold">1. Blastém (Blue cells)</text>
+                        
+                        <!-- Primitivní tubuly (epitel) -->
+                        <g stroke="#10b981" fill="none" stroke-width="2">
+                            <circle cx="200" cy="50" r="12"/>
+                        </g>
+                        <text x="160" y="30" fill="#10b981" class="text-[9px] font-bold">2. Epitelové tubuly</text>
+                        
+                        <!-- Mezenchym (vazivo / vřetena) -->
+                        <path d="M 300 40 L 330 50 M 310 60 L 340 70 M 290 70 L 320 80" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                        <text x="270" y="30" fill="#f59e0b" class="text-[9px] font-bold">3. Mezenchym (Vazivo)</text>
+                        
+                        <text x="125" y="110" fill="#3b82f6" class="text-[10px] font-bold">Tripartitní (trifázický) dětský tumor ledviny</text>
+                    </svg>
+                `;
+            } else if (type === "papillary_thyroid") {
+                // Orphan Annie maticová jádra
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Orphan Annie maticové jádro -->
+                        <circle cx="200" cy="60" r="25" fill="none" stroke="#3b82f6" stroke-width="2"/>
+                        <!-- Chromatin na okraji, vnitřek prázdný -->
+                        <circle cx="200" cy="60" r="23" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="2,2"/>
+                        <text x="110" y="20" fill="#3b82f6" class="text-[10px] font-bold">Maticová jádra (Orphan Annie eyes - papilární karcinom)</text>
+                    </svg>
+                `;
+            } else if (type === "men_3p") {
+                // Pravidlo 3P MEN 1
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Tři bubliny 3P -->
+                        <circle cx="100" cy="60" r="25" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="80" y="63" fill="#3b82f6" class="text-[10px] font-bold">Parathyroid</text>
+                        
+                        <circle cx="200" cy="60" r="25" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2"/>
+                        <text x="180" y="63" fill="#10b981" class="text-[10px] font-bold">Pancreas</text>
+                        
+                        <circle cx="300" cy="60" r="25" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="2"/>
+                        <text x="282" y="63" fill="#a855f7" class="text-[10px] font-bold">Pituitary</text>
+                        
+                        <text x="135" y="20" fill="#f59e0b" class="text-[11px] font-bold">MEN 1 (Wernerův syndrom - 3P)</text>
+                    </svg>
+                `;
+            } else if (type === "seborrheic_keratosis") {
+                // Rohové pseudocysty seboroické keratózy
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Ztluštělá epidermis -->
+                        <rect x="50" y="40" width="300" height="50" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="1"/>
+                        <!-- Rohová pseudocysta -->
+                        <circle cx="150" cy="65" r="12" fill="#020617" stroke="#f59e0b" stroke-width="2"/>
+                        <circle cx="150" cy="65" r="8" fill="none" stroke="#f59e0b" stroke-dasharray="2,2"/>
+                        
+                        <circle cx="250" cy="65" r="10" fill="#020617" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="110" y="25" fill="#f59e0b" class="text-[10px] font-bold">Rohové pseudocysty (Seboroická keratóza kůže)</text>
+                    </svg>
+                `;
+            } else if (type === "melanoma_abcde") {
+                // Asymetrie a nepravidelnost melanomu
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Divoká asymetrická kaňka -->
+                        <path d="M 160 40 Q 180 20 220 35 Q 260 50 240 80 Q 200 100 170 85 Q 140 70 160 40 Z" fill="#090d16" stroke="#ef4444" stroke-width="2" class="animate-pulse"/>
+                        <!-- Různobarevné pigmentace uvnitř -->
+                        <circle cx="180" cy="55" r="10" fill="#ef4444" fill-opacity="0.3"/>
+                        <circle cx="210" cy="70" r="15" fill="#bfdbfe" fill-opacity="0.2"/>
+                        <text x="120" y="15" fill="#ef4444" class="text-[10px] font-bold">ABCDE kritéria (Asymetrický, nepravidelný a vícebarevný)</text>
+                    </svg>
+                `;
+            } else if (type === "schwannoma_verocay") {
+                // Verocayova tělíska (Antoni A)
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Šikování jader (palisády) -->
+                        <g fill="#a855f7">
+                            <!-- Řada jader vlevo -->
+                            <ellipse cx="140" cy="35" rx="3" ry="8"/> <ellipse cx="140" cy="55" rx="3" ry="8"/> <ellipse cx="140" cy="75" rx="3" ry="8"/>
+                            <!-- Růžová zóna bez jader vprostřed -->
+                            <rect x="155" y="25" width="30" height="70" fill="#ec4899" fill-opacity="0.1" rx="5"/>
+                            <!-- Řada jader vpravo -->
+                            <ellipse cx="200" cy="35" rx="3" ry="8"/> <ellipse cx="200" cy="55" rx="3" ry="8"/> <ellipse cx="200" cy="75" rx="3" ry="8"/>
+                        </g>
+                        <text x="100" y="15" fill="#c084fc" class="text-[10px] font-bold">Verocayovo tělísko (Palisády jader kolem růžové bezjaderné zóny)</text>
+                    </svg>
+                `;
+            } else if (type === "bone_tumor") {
+                // Kost s Codmanovým trojúhelníkem
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Kost (dlouhá) -->
+                        <path d="M 50 40 L 350 40 Q 380 40 380 60 Q 380 80 350 80 L 50 80 Q 20 80 20 60 Q 20 40 50 40 Z" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+                        <!-- Nádor v kosti (osteosarkom) -->
+                        <path d="M 180 41 Q 210 20 240 41 Z" fill="#ef4444" fill-opacity="0.3"/>
+                        <!-- Codmanův trojúhelník (zvednutý periost) -->
+                        <path d="M 160 40 L 210 15 L 210 40 Z" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round"/>
+                        <line x1="210" y1="15" x2="260" y2="40" stroke="#f59e0b" stroke-width="3"/>
+                        <!-- Trámce a osteoid -->
+                        <line x1="190" y1="50" x2="230" y2="70" stroke="#ef4444" stroke-width="2" stroke-dasharray="2,2"/>
+                        <line x1="220" y1="50" x2="180" y2="70" stroke="#ef4444" stroke-width="2" stroke-dasharray="2,2"/>
+                        <text x="75" y="15" fill="#f59e0b" class="text-[10px] font-bold">Codmanův trojúhelník (nadzdvihnutý periost na kosti)</text>
+                    </svg>
+                `;
+            } else if (type === "brain_metastasis") {
+                // Mozková metastáza s edémem a ring-enhancement
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Rozhraní šedé a bílé hmoty -->
+                        <path d="M 10 30 Q 100 45 200 30 T 390 30" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="4,4"/>
+                        <text x="15" y="20" fill="#94a3b8" class="text-[9px] font-mono">Rozhraní šedé/bílé hmoty</text>
+                        <!-- Perifokální edém -->
+                        <circle cx="200" cy="65" r="35" fill="#38bdf8" fill-opacity="0.1" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,2" class="animate-pulse"/>
+                        <circle cx="200" cy="65" r="28" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-dasharray="3,3"/>
+                        <!-- Ring-enhancing nádorové ložisko -->
+                        <circle cx="200" cy="65" r="16" fill="#0b0f19" stroke="#ef4444" stroke-width="4"/>
+                        <!-- Centrální nekróza -->
+                        <circle cx="200" cy="65" r="8" fill="#1e293b"/>
+                        <text x="235" y="60" fill="#38bdf8" class="text-[10px] font-bold">Perifokální edém</text>
+                        <text x="235" y="75" fill="#ef4444" class="text-[10px] font-bold">Ring-enhancing ložisko</text>
+                    </svg>
+                `;
+            }
+
+            area.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

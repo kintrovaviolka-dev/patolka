@@ -2308,3 +2308,18 @@ body.light-theme .moon-icon { display: block; }
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Styl pro tlačítko "Poslední záchrana" v záhlaví */
+.btn-survival-kit {
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+  text-decoration: none;
+}
+
+.btn-survival-kit:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.35);
+}
+
