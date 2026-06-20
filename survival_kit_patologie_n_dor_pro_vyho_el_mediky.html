@@ -276,6 +276,7 @@
                     <h2 class="text-lg font-extrabold text-slate-100">Taháky a asociace na zkoušku</h2>
                     <p class="text-xs text-slate-400 mt-1">Ty nejdůležitější mnemotechnické karty, co se tě zeptají na
                         ústním.</p>
+                    <div class="text-xs text-purple-400 font-bold mt-2 mono-font" id="cardProgress">Kartička 1 ze 15</div>
 
                     <div class="my-8 flex justify-center">
                         <!-- Interaktivní karta -->
@@ -1322,7 +1323,26 @@
             { front: "Orphan Annie eyes (Maticová jádra)", back: "Papilární karcinom štítné žlázy (chromatin natlačený na okraj jádra, vnitřek je opticky prázdný)." },
             { front: "Codmanův trojúhelník", back: "Osteosarkom (rychlým růstem zvednutý periost z kosti, v úhlu se tvoří reaktivní nová kost)." },
             { front: "Obraz cibulové slupky (Onion skin)", back: "Ewingův sarkom (vrstvené ukládání novotvořené kosti podél diafýzy kosti)." },
-            { front: "Ring-enhancing lesion", back: "Metastáza v mozku (prstencovité sycení kontrastní látky s otokem a tmavým středem nekrózy na CT/MRI)." }
+            { front: "Ring-enhancing lesion", back: "Metastáza v mozku (prstencovité sycení kontrastní látky s otokem a tmavým středem nekrózy na CT/MRI)." },
+            { front: "Reedové-Sternbergovy buňky", back: "Klasický Hodgkinův lymfom (obří buňky se zrcadlovými jádry jako soví oči - CD30+, CD15+)." },
+            { front: "Krukenbergův tumor", back: "Metastáza mucinózního karcinomu (nejčastěji ze žaludku) do ovaria plná buněk pečetního prstence." },
+            { front: "Homer-Wrightovy rozety", back: "Meduloblastom / Neuroblastom (nádorové buňky seřazené do kruhu kolem centrální růžové zóny neuropilu)." },
+            { front: "Flexner-Wintersteinerovy rozety", back: "Retinoblastom (buňky seřazené kolem centrálního prázdného lumen / štěrbiny)." },
+            { front: "Call-Exnerova tělíska", back: "Granulózový tumor ovaria (drobné folikulární dutinky vyplněné eosinofilním materiálem)." },
+            { front: "Charcot-Leydenovy krystaly", back: "Eosinofilní záněty / alergie / astma (krystalické zbytky proteinů rozpadlých eosinofilů)." },
+            { front: "Aničkovovy buňky", back: "Revmatická horečka (aktivované histiocyty s chromatinem uspořádaným jako housenka)." },
+            { front: "Malloryho hyalin", back: "Alkoholické poškození jater / cirhóza (shluky poškozených keratinových intermediárních filament v hepatocytech)." },
+            { front: "Lewyho tělíska", back: "Parkinsonova choroba (eosinofilní intracytoplasmatické inkluze z alfa-synukleinu v neuronech substantia nigra)." },
+            { front: "Bence-Jonesova bílkovina", back: "Mnohočetný myelom (monoklonální volné lehké řetězce imunoglobulinů filtrované do moči)." },
+            { front: "Li-Fraumeni syndrom", back: "Dědičná mutace genu TP53 (autozomálně dominantní náchylnost k sarkomům, ca prsu, leukémiím atd.)." },
+            { front: "GIST (c-KIT / CD117)", back: "Gastrointestinální stromální tumor (vychází z Cajalových buněk, výborná terapeutická odpověď na imatinib)." },
+            { front: "HER2/neu (ErbB2)", back: "Karcinom prsu a žaludku (amplifikace receptorové tyrosinkinázy, léčí se trastuzumabem / Herceptinem)." },
+            { front: "S100 protein", back: "Marker buněk z nervové lišty (pozitivní u melanomu, schwannomu, neurofibromu, histiocytózy z Langerhansových buněk)." },
+            { front: "WT1 gene", back: "Wilmsův tumor / Nefroblastom (nejčastější zhoubný nádor ledvin u dětí)." },
+            { front: "Trousseauův syndrom", back: "Karcinom pankreatu / plic (migrující tromboflebitida v důsledku uvolňování tkáňového faktoru z tumoru)." },
+            { front: "Münchmeyerův syndrom (FOP)", back: "Fibrodysplasia ossificans progressiva (vzácná genetická porucha, kdy se svaly a šlachy mění v kost)." },
+            { front: "Malloryho-Weissův syndrom", back: "Podélné trhliny sliznice gastroesofageálního přechodu po usilovném zvracení (alkoholici, bulimičky)." },
+            { front: "Acanthosis nigricans", back: "Paraneoplastický syndrom / Inzulínová rezistence (tmavé sametové ztluštění kůže, typicky v podpaží či na krku)." }
         ];
 
         // STATE APLIKACE
@@ -1332,6 +1352,10 @@
         let readTopics = new Set(JSON.parse(localStorage.getItem('readTopics') || '[]'));
         let selectedTab = 'study';
         let burnoutLevel = 80;
+
+        // STUDY QUIZ STATE
+        let studyQuizQuestions = [];
+        let currentStudyQuizIndex = 0;
 
         // ARENA STATE
         let playerHp = 100;
@@ -1386,8 +1410,8 @@
                 document.getElementById('advisorEmoji').innerText = mood === "🤯" ? "☠️" : "🩺";
                 document.getElementById('advisorText').innerHTML = `"${advisorComments[advisorKey]}"`;
 
-                // Překreslení výkladu tématu podle úrovně vyhoření
-                applyBurnoutUI();
+                // Překreslení výkladu tématu a úprava délky textu + kvízu podle vyhoření
+                loadTopic(currentTopicIndex, false, true);
             };
             burnoutSlider.dispatchEvent(new Event('input'));
         }
@@ -1520,8 +1544,33 @@
             }
         }
 
+        // PROGRAMMATIC TEXT CONDENSER FOR BURNOUT METER
+        function adjustTextLength(bulletText, level) {
+            if (level < 30) {
+                return bulletText; // Fresh: full text
+            }
+            
+            // Remove text in parentheses/brackets (representing examples/fluff)
+            let condensed = bulletText.replace(/\s*\([^)]*\)/g, "");
+            condensed = condensed.replace(/\s*\[[^\]]*\]/g, "");
+            
+            if (level >= 70) {
+                // Exhausted: only show sentences containing <strong>/<b> tags
+                let sentences = condensed.split(/(?<=\.|\?|!)\s+/);
+                let keySentences = sentences.filter(s => s.includes('<strong>') || s.includes('<b>'));
+                if (keySentences.length === 0) {
+                    return sentences[0] || condensed;
+                }
+                return keySentences.slice(0, 2).join(" ");
+            } else {
+                // Medium: cap at 3 sentences
+                let sentences = condensed.split(/(?<=\.|\?|!)\s+/);
+                return sentences.slice(0, Math.min(3, sentences.length)).join(" ");
+            }
+        }
+
         // LOAD SELECTED TOPIC
-        function loadTopic(index) {
+        function loadTopic(index, shouldScroll = true, fromSlider = false) {
             currentTopicIndex = index;
             const topic = database[index];
 
@@ -1535,7 +1584,8 @@
             topic.lazy.forEach(bullet => {
                 const li = document.createElement('li');
                 li.className = "flex gap-2 items-start";
-                li.innerHTML = `<span class="text-amber-400 mt-0.5">•</span> <span>${bullet}</span>`;
+                let displayBullet = adjustTextLength(bullet, burnoutLevel);
+                li.innerHTML = `<span class="text-amber-400 mt-0.5">•</span> <span>${displayBullet}</span>`;
                 lazyList.appendChild(li);
             });
 
@@ -1548,17 +1598,21 @@
             // Rychlotest
             loadQuiz(topic);
 
-            // Zvýraznění aktivního modulu v levém menu
-            renderModules();
+            if (!fromSlider) {
+                // Zvýraznění aktivního modulu v levém menu
+                renderModules();
 
-            // Vizualizace tématu
-            renderVisual();
+                // Vizualizace tématu
+                renderVisual();
+            }
 
             // Použít aktuální UI podle burnoutu
             applyBurnoutUI();
 
             // Scroll nahoru na study card
-            document.getElementById('studyCard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            if (shouldScroll) {
+                document.getElementById('studyCard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         }
 
         // READ TOPICS PERSISTENCE
@@ -1591,9 +1645,44 @@
             progressStats.innerText = `${readTopics.size}/${database.length} hotovo`;
         }
 
-        // LOAD QUIZ FOR STUDY CARD
+        // LOAD QUIZ FOR STUDY CARD (DYNAMICKÝ PODLE BURNOUTU)
         function loadQuiz(topic) {
-            const q = topic.quiz;
+            // Určení délky testu podle úrovně vyhoření
+            let quizLength = 1;
+            let stressMsg = "";
+            if (burnoutLevel >= 70) {
+                quizLength = 3;
+                stressMsg = " (Mozek v plamenech 🔥 - vyžaduje mini-test 3 otázek k zaškrtnutí!)";
+            } else if (burnoutLevel >= 30) {
+                quizLength = 2;
+                stressMsg = " (Mírná únava 🤨 - mini-test 2 otázek)";
+            } else {
+                quizLength = 1;
+                stressMsg = " (Svěží mozek 🤠 - stačí 1 otázka)";
+            }
+
+            // Sestavení otázek: první je aktuální, ostatní náhodné
+            studyQuizQuestions = [topic.quiz];
+            const otherTopics = database.filter(t => t.id !== topic.id);
+            
+            // Náhodný výběr dalších otázek, abychom jich měli celkem quizLength
+            while (studyQuizQuestions.length < quizLength && otherTopics.length > 0) {
+                const randIndex = Math.floor(Math.random() * otherTopics.length);
+                const randTopic = otherTopics.splice(randIndex, 1)[0];
+                studyQuizQuestions.push(randTopic.quiz);
+            }
+
+            currentStudyQuizIndex = 0;
+            renderStudyQuizQuestion(stressMsg);
+        }
+
+        function renderStudyQuizQuestion(stressMsg) {
+            const q = studyQuizQuestions[currentStudyQuizIndex];
+            const quizTitleEl = document.querySelector('#studyCard h4');
+            if (quizTitleEl) {
+                quizTitleEl.innerHTML = `<span>🎯</span> Rychlý testík na zapamatování - Otázka ${currentStudyQuizIndex + 1} ze ${studyQuizQuestions.length}${stressMsg}`;
+            }
+
             document.getElementById('quizQuestion').innerText = q.q;
 
             const optionsContainer = document.getElementById('quizOptions');
@@ -1611,11 +1700,37 @@
                     if (idx === q.correct) {
                         feedback.innerText = "🏆 Správně! " + q.explain;
                         feedback.className = "mt-3 text-xs font-bold p-2.5 rounded-xl bg-emerald-950/40 text-emerald-400 border border-emerald-500/20";
+                        feedback.classList.remove('hidden');
+
+                        // Disable standard buttons
+                        Array.from(optionsContainer.children).forEach(b => b.disabled = true);
+
+                        // Přidání tlačítka Pokračovat / Dokončit
+                        const nextBtn = document.createElement('button');
+                        nextBtn.className = "mt-3 w-full py-2 bg-purple-600 hover:bg-purple-500 rounded-xl text-xs font-bold text-white transition-all shadow-md";
+                        if (currentStudyQuizIndex < studyQuizQuestions.length - 1) {
+                            nextBtn.innerText = "Pokračovat na další otázku ➡️";
+                            nextBtn.onclick = () => {
+                                currentStudyQuizIndex++;
+                                renderStudyQuizQuestion(stressMsg);
+                            };
+                        } else {
+                            nextBtn.innerText = "Dokončit a označit téma za hotové! 🎉";
+                            nextBtn.onclick = () => {
+                                // Automaticky označit téma jako přečtené, pokud ještě není
+                                const currentTopic = database[currentTopicIndex];
+                                if (!readTopics.has(currentTopic.id)) {
+                                    toggleTopicRead();
+                                }
+                                feedback.innerHTML = "🏆 Skvělé! Splnil jsi celý testík pro toto téma a bylo označeno za hotové.";
+                            };
+                        }
+                        feedback.appendChild(nextBtn);
                     } else {
                         feedback.innerText = "❌ Nesprávně. Zkus to znovu, zkoušející by tě vyhodil.";
                         feedback.className = "mt-3 text-xs font-bold p-2.5 rounded-xl bg-red-950/40 text-red-400 border border-red-500/20";
+                        feedback.classList.remove('hidden');
                     }
-                    feedback.classList.remove('hidden');
                 };
                 optionsContainer.appendChild(btn);
             });
@@ -1654,6 +1769,7 @@
             const card = flashcards[index];
             document.getElementById('cardFrontText').innerText = card.front;
             document.getElementById('cardBackText').innerText = card.back;
+            document.getElementById('cardProgress').innerText = `Kartička ${index + 1} z ${flashcards.length}`;
         }
 
         function flipCard() {
