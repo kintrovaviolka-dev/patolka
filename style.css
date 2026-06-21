@@ -1724,6 +1724,30 @@ body.light-theme .moon-icon { display: block; }
   }
 }
 
+.btn-prep-star {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-muted, #64748b);
+  cursor: pointer;
+  padding: 0.15rem;
+  line-height: 1;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-prep-star:hover {
+  transform: scale(1.2);
+  color: #eab308;
+}
+
+.btn-prep-star.active {
+  color: #eab308;
+  filter: drop-shadow(0 0 4px rgba(234, 179, 8, 0.4));
+}
+
 /* ==========================================
    GEMINI CHATBOT WIDGET STYLES
    ========================================== */

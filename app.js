@@ -1384,6 +1384,31 @@ document.addEventListener("DOMContentLoaded", () => {
   let preparatyFilter = "all";
   let preparatySearchQuery = "";
 
+  let starredPreparaty = JSON.parse(localStorage.getItem("patologie_starred_preparaty")) || [];
+
+  function isPreparatStarred(id) {
+    return starredPreparaty.includes(id);
+  }
+
+  function toggleStarPreparat(id) {
+    const idx = starredPreparaty.indexOf(id);
+    if (idx === -1) {
+      starredPreparaty.push(id);
+    } else {
+      starredPreparaty.splice(idx, 1);
+    }
+    localStorage.setItem("patologie_starred_preparaty", JSON.stringify(starredPreparaty));
+    updateStarredCount();
+    renderPreparatyList();
+  }
+
+  function updateStarredCount() {
+    const countEl = document.getElementById("preparaty-starred-count");
+    if (countEl) {
+      countEl.textContent = starredPreparaty.length;
+    }
+  }
+
   const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() : "";
 
   function findMatchingSlide(question) {
@@ -1436,6 +1461,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtered = window.PREPARATY_DATA.filter(prep => {
       if (preparatyFilter === "zkouskove" && !prep.is_zkouskove) return false;
       if (preparatyFilter === "nezkouskove" && prep.is_zkouskove) return false;
+      if (preparatyFilter === "starred" && !isPreparatStarred(prep.id)) return false;
       
       if (preparatySearchQuery) {
         const normQuery = normalizeString(preparatySearchQuery);
@@ -1454,8 +1480,12 @@ document.addEventListener("DOMContentLoaded", () => {
     filtered.forEach(prep => {
       const card = document.createElement("div");
       card.className = `preparaty-list-card${activePrep && activePrep.id === prep.id ? ' active' : ''}`;
+      const isStarred = isPreparatStarred(prep.id);
       card.innerHTML = `
-        <h4>${escapeHTML(prep.title)}</h4>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--text-primary); line-height: 1.3;">${escapeHTML(prep.title)}</h4>
+          ${isStarred ? '<span class="prep-card-star" style="color: #eab308; font-size: 1.1rem; line-height: 1;" title="Označen k revizi">★</span>' : ''}
+        </div>
         <div class="preparaty-card-meta">
           <span class="prep-badge ${prep.is_zkouskove ? 'zkouskovy' : 'nezkouskovy'}">
             ${prep.is_zkouskove ? 'Zkouškový' : 'Doplňující'}
@@ -1487,6 +1517,14 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       preparatyDetailBadge.textContent = "Doplňující";
       preparatyDetailBadge.className = "prep-badge nezkouskovy";
+    }
+
+    const starBtn = document.getElementById("preparaty-star-btn");
+    if (starBtn) {
+      const isStarred = isPreparatStarred(prep.id);
+      starBtn.textContent = isStarred ? "★" : "☆";
+      starBtn.className = `btn-prep-star${isStarred ? ' active' : ''}`;
+      starBtn.title = isStarred ? "Odebrat z revize" : "Označit k revizi (těžký preparát)";
     }
     
     preparatyDetailDesc.textContent = prep.description || "K tomuto preparátu není k dispozici žádný popis.";
@@ -1549,6 +1587,21 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.style.display = "none";
     }
   };
+
+  const starBtn = document.getElementById("preparaty-star-btn");
+  if (starBtn) {
+    starBtn.addEventListener("click", () => {
+      if (activePrep) {
+        toggleStarPreparat(activePrep.id);
+        const isStarred = isPreparatStarred(activePrep.id);
+        starBtn.textContent = isStarred ? "★" : "☆";
+        starBtn.className = `btn-prep-star${isStarred ? ' active' : ''}`;
+        starBtn.title = isStarred ? "Odebrat z revize" : "Označit k revizi (těžký preparát)";
+      }
+    });
+  }
+
+  updateStarredCount();
 
   if (preparatyOpenBtn) {
     preparatyOpenBtn.addEventListener("click", () => {

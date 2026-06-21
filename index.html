@@ -395,6 +395,7 @@
             <button class="prep-tab active" data-filter="all">Všechny (170)</button>
             <button class="prep-tab" data-filter="zkouskove">Zkouškové (89)</button>
             <button class="prep-tab" data-filter="nezkouskove">Nezkouškové (81)</button>
+            <button class="prep-tab" data-filter="starred" style="display: flex; align-items: center; justify-content: center; gap: 2px;">K revizi ⭐ (<span id="preparaty-starred-count">0</span>)</button>
           </div>
           
           <div class="preparaty-list" id="preparaty-list">
@@ -412,7 +413,10 @@
           <div class="preparaty-viewer-content" id="preparaty-viewer-content" style="display: none;">
             <div class="preparaty-detail-header">
               <div class="preparaty-title-box">
-                <span id="preparaty-detail-badge" class="prep-badge">Zkouškový</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                  <span id="preparaty-detail-badge" class="prep-badge">Zkouškový</span>
+                  <button id="preparaty-star-btn" class="btn-prep-star" aria-label="Označit k revizi" title="Označit k revizi (těžký preparát)">☆</button>
+                </div>
                 <h3 id="preparaty-detail-title">Název preparátu</h3>
               </div>
               <button id="preparaty-link-question-btn" class="btn btn-secondary btn-link-question">
