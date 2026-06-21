@@ -44,7 +44,12 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
         }
@@ -276,7 +281,8 @@
                     <h2 class="text-lg font-extrabold text-slate-100">Taháky a asociace na zkoušku</h2>
                     <p class="text-xs text-slate-400 mt-1">Ty nejdůležitější mnemotechnické karty, co se tě zeptají na
                         ústním.</p>
-                    <div class="text-xs text-purple-400 font-bold mt-2 mono-font" id="cardProgress">Kartička 1 ze 15</div>
+                    <div class="text-xs text-purple-400 font-bold mt-2 mono-font" id="cardProgress">Kartička 1 ze 15
+                    </div>
 
                     <div class="my-8 flex justify-center">
                         <!-- Interaktivní karta -->
@@ -887,7 +893,7 @@
                         "RET protoonkogen"
                     ],
                     correct: 1,
-                    explain: "Přesně! Mutace VHL genu vede k poruše degradace HIF faktoru, což spustí divokou angiogenezi a růst tohoto žlutého cévami nabitého tumoru."
+                    explain: "Přesně! Mutace VHL genu vede k akumulaci HIF-alfa a zvýšené tvorbě VEGF, což pohání masivní novotvorbu cév (angiogenezi) u tohoto vysoce vaskularizovaného nádoru."
                 }
             },
             {
@@ -908,7 +914,7 @@
                     <p><strong>Acinární adenokarcinom prostaty:</strong> Vychází z periferní zóny. Histologicky vykazuje chybění vnější myoepiteliální/bazální vrstvy a uspořádání žlázek těsně na sebe (back-to-back). Gleasonovo skóre sčítá dva nejčastější architektonické vzory (stupně 1-5). Charakteristické jsou osteoplastické (sklerotizující) metastázy do páteře a pánve. PSA slouží jako sérový marker.</p>
                     <p><strong>Germinální nádory varlat:</strong> Seminom (dobře diferencovaný, uniformní buňky se světlou cytoplazmou oddělené vazivovými septy s lymfocyty). Embryonální karcinom (vysoce atypický solidní/alveolární růst s nekrózami). Nádor ze žloutkového váčku (typický pro malé kluky, přítomnost Schiller-Duvalových tělísek a elevace AFP). Choriokarcinom (bifázický syncytio- a cytotrofoblastický tumor s masivním uvolňováním hCG, které vyvolává tyreotoxikózu a gynekomastii). Teratom (zralý, nezralý, monodermální).</p>
                 `,
-                visualType: "schiller_duval",
+                visualType: "schaller_duval",
                 quiz: {
                     q: "Která histologická struktura je patognomická pro dětský nádor ze žloutkového váčku (Yolk sac tumor)?",
                     options: [
@@ -926,11 +932,11 @@
                 title: "Nádory dělohy a děložního hrdla",
                 category: "Gynekologická onkologie",
                 lazy: [
-                    "<strong>Děložní hrdlo:</strong> Prekancerózy jsou <strong>CIN I-III</strong> (cervikální intraepiteliální neoplázie). CIN III je již Carcinoma in situ (CIS).",
-                    "Vzniká v důsledku infekce vysoce rizikovými HPV kmeny 16 a 18. Nejčastěji jde o dlaždicobuněčný karcinom (pod mikroskopem vidíme <strong>koilocyty</strong> - buňky s virovými inkluzemi a světlým dvorcem kolem jádra).",
-                    "Klinika: krvácení mimo cyklus, v pokročilých fázích prorůstá do měchýře nebo konečníku a vytváří píštěle (vesikovaginální, rektovaginální píštěl).",
-                    "<strong>Endometrium:</strong> 1) <strong>Endometriální karcinom</strong> (nejčastější, hormonálně závislý na estrogenu, dobře imituje normální žlázy). 2) <strong>Serózní karcinom</strong> (vzniká v polypu, je agresivní, nezávislý na estrogenu). 3) <strong>Müllerianský nádor</strong> (smíšený epiteliální a mezenchymální tumor z embryonálních zbytků).",
-                    "<strong>Myometrium:</strong> 1) <strong>Leiomyom</strong> (benigní svalový uzel, roste s estrogenem, může zvápenatět na děložní kámen). 2) <strong>Leiomyosarkom</strong> (maligní, vzniká <strong>vždy de novo</strong>, nikdy se nezvrhne ze starého leiomyomu, dává metastázy do plic)."
+                    "<strong>Děložní hrdlo:</strong> Prekancerózy jsou low-grade a high-grade skvamózní intraepiteliální neoplázie (CIN I-III). CIN III je již Carcinoma in situ (CIS).",
+                    "Vzniká v důsledku perzistentní infekce vysoce rizikovými kmeny HPV 16 a 18. Tyto kmeny produkují onkoproteiny **E6** (který inaktivuje a degraduje p53) a **E7** (který inaktivuje retinoblastomový protein Rb). Nejčastěji jde o dlaždicobuněčný karcinom cervixu, pod mikroskopem jsou typické **koilocyty** (buňky s virovými inkluzemi, svraštělým jádrem a projasněným perinukleárním dvorcem).",
+                    "Klinika: Kontaktní krvácení (po styku) a vaginální krvácení. V pokročilých fázích nádor prorůstá a destruuje sousední orgány, což vede k závažným komplikacím, jako je <strong>vesikovaginální píštěl</strong> (únik moči vagínou) nebo <strong>rektovaginální píštěl</strong> (únik stolice vagínou).",
+                    "<strong>Endometrium:</strong> 1) <strong>Endometriální karcinom (Typ I)</strong>: nejčastější, tvoří žlázové struktury, je hormonálně závislý na estrogenu (vlivem neoponovaného hyperestrogenismu při obezitě), mutace genu PTEN. 2) <strong>Serózní karcinom (Typ II)</strong>: vysoce agresivní, vzniká u starších žen v atrofickém endometriu, je estrogen-independentní, tvoří papilární struktury s psammomatózními tělísky, nese mutaci TP53. 3) <strong>Smíšený maligní Müllerianský tumor (Karcinosarkom)</strong>: obsahuje epiteliální i mezenchymální složky.",
+                    "<strong>Myometrium:</strong> 1) <strong>Leiomyom</strong>: velmi častý benigní ohraničený hladkosvalový uzel, je estrogen-dependentní (v těhotenství roste, v menopauze regreduje) a může dystroficky kalcifikovat na tzv. děložní kámen. 2) <strong>Leiomyosarkom</strong>: vysoce zhoubný nádor, který vzniká <strong>vždy de novo</strong> (nikdy se nezvrhne z existujícího leiomyomu!), vykazuje nekrózy, jaderný pleomorfismus a dává časné hematogenní metastázy do plic."
                 ],
                 academic: `
                     <p>Malignity ženského genitálu postihují děložní hrdlo, endometrium a myometrium.</p>
@@ -956,17 +962,13 @@
                 title: "Nádory ovarií",
                 category: "Gynekologická onkologie",
                 lazy: [
-                    "<strong>Epitelové nádory:</strong> Serózní, mucinózní, endometriální. Dělí se na benigní (cystadenomy), borderline a maligní (karcinomy).",
-                    "• <strong>Borderline serózní tumor:</strong> papilární výrůstky bez destruktivní invaze do stroma. Může se rozsekat po peritoneu (neinvazivní implantáty). Pokud začne destruktivně invadovat, je to low-grade serózní karcinom.",
-                    "• <strong>High-grade serózní karcinom:</strong> solidní, agresivní nádor s obřími atypiemi a diseminací po břiše (omentum) a ascitem.",
-                    "• <strong>Mucinózní cystadenom:</strong> obří jednostranné cysty (klidně až 30 cm) vystlané hlenovými buňkami (často vzniká na podkladě Walthardových hnízd).",
-                    "<strong>Sex-cord nádory (ze zárodečných provazců/stromatu):</strong>",
-                    "• <strong>Ovariální fibrom:</strong> benigní, tuhý, bílý.",
-                    "• <strong>Thékom:</strong> produkuje <strong>estrogen</strong> -> hyperplázie endometria.",
-                    "• <strong>Nádor z Leydigových buněk:</strong> žlutý (lipidy), obsahuje v cytoplazmě **Reinkeho krystaly**.",
-                    "• <strong>Nádor z buněk granulózy:</strong> 1) Adultní (produkuje estrogen, spojen s hyperplázií dělohy), 2) Juvenilní (způsobuje předčasnou pseudopubertu u holčiček - pseudopubertas praecox).",
-                    "<strong>Germinální nádory:</strong> <strong>Dysgerminom</strong> (světlé buňky s glykogenem), <strong>Teratom</strong> (zralý - benigní dermoidní cysta s vlasy a zuby; nezralý - maligní; monodermální - <strong>ovariální struma</strong> tvořená tkání štítné žlázy).",
-                    "<strong>Sekundární:</strong> <strong>Krukenbergův tumor</strong> (metastáza z žaludku plná buněk pečetního prstence)."
+                    "<strong>Epitelové nádory:</strong> Nejčastější (serózní, mucinózní, endometrioidní). Dělí se na benigní (cystadenomy), borderline (hraniční) a maligní (karcinomy).",
+                    "• <strong>Borderline serózní tumor:</strong> papilární výrůstky bez destruktivní stromální invaze. Může se rozsekat po peritoneu (neinvazivní peritoneální implantáty). Pokud začne destruktivně invadovat stroma, je to low-grade serózní karcinom.",
+                    "• <strong>High-grade serózní karcinom:</strong> solidní, agresivní nádor s obřími jadernými atypiemi, mutací TP53, masivní diseminací po břišní dutině (omentum) a tvorbou ascitu.",
+                    "• <strong>Mucinózní cystadenom:</strong> obří jednostranné cysty (klidně až 30 cm) vyplněné hlenem, vystlané mucinózními buňkami (často vzniká na podkladě Walthardových hnízd).",
+                    "<strong>Sex-cord stromal (ze zárodečných provazců/stromatu):</strong> 1) <strong>Ovariální fibrom</strong> (benigní, tuhý, bílý). 2) <strong>Thékom</strong> (produkuje estrogen -> hyperplázie endometria). 3) <strong>Leydigův tumor</strong> (žlutý kvůli lipidům, obsahuje tyčinkovité **Reinkeho krystaly** a produkuje androgeny). 4) <strong>Granulózový tumor</strong> (adultní forma produkuje estrogen, spojen s děložním krvácením; juvenilní vyvolává předčasnou pseudopubertu u dětí. Histologicky vykazuje folikuloidní uspořádání s eozinofilním materiátem - **Call-Exnerova tělíska**).",
+                    "<strong>Germinální nádory:</strong> 1) <strong>Dysgerminom</strong> (světlé buňky s glykogenem oddělené vazivovými septy s lymfocyty, ekvivalent seminomu). 2) <strong>Teratom</strong> (zralý je benigní, např. dermoidní cysta s vlasy a zuby; nezralý je maligní a obsahuje neuroektodermální blastém; monodermální teratom **struma ovarii** je tvořen funkční tkání štítné žlázy a může způsobit tyreotoxikózu).",
+                    "<strong>Sekundární (metastatické):</strong> **Krukenbergův tumor** je oboustranná metastáza hlenotvorného adenokarcinomu GIT (nejčastěji žaludku) plná buněk pečetního prstence."
                 ],
                 academic: `
                     <p>Ovariální neoplázie vykazují mimořádnou histologickou pestrost pramenící z komplexní embryogeneze vaječníku.</p>
@@ -993,11 +995,11 @@
                 title: "Nádory prsu",
                 category: "Gynekologická onkologie",
                 lazy: [
-                    "<strong>Benigní:</strong> <strong>Fibroadenom</strong> (nejčastější, bifázický - tvořen epitelem a vazivem. Roste intrakanalikulárně nebo perikanalikulárně, je kulatý, nebolestivý, volně pohyblivý). <strong>Papilom prsu</strong> (intraduktální keříček, roste ve vývodech, vyvolává krvavý sekrét z bradavky).",
-                    "<strong>Prekancerózy (Carcinoma in situ):</strong> Růst je omezen na dukty nebo lobuly, nepronikají přes bazální membránu. Pro rozlišení pomáhá barvení na **E-cadherin**: <strong>Duktální (DCIS)</strong> je E-cadherin pozitivní. <strong>Lobulární (LCIS)</strong> je E-cadherin negativní (buňky ztratily spojení, sypou se).",
-                    "• <strong>DCIS:</strong> hrozí přechodem v invazivní karcinom. Může se šířit uvnitř duktů až na bradavku, kde ničí kůži a způsobuje <strong>Pagetovu chorobu bradavky</strong> (nehojící se strupovatý ekzém).",
-                    "<strong>Invazivní karcinomy prsu:</strong> 1) <strong>Duktální karcinom (NST)</strong>: nejčastější, tvoří žlázky. 2) <strong>Lobulární karcinom</strong>: buňky bez E-cadherinu rostou v řádcích za sebou jako kačenky -> tzv. <strong>husí pochod (řádkování)</strong>.",
-                    "<strong>Mužské prso:</strong> Nemá lobuly! Dochází zde ke <strong>gynekomastii</strong> (zbytnění žlázy z hyperestrogenismu při cirhóze nebo choriokarcinomu varlat s hCG). Maligní karcinom u mužů je téměř vždy invazivní duktální karcinom."
+                    "<strong>Benigní:</strong> 1) <strong>Fibroadenom</strong>: nejčastější benigní tumor mladých žen, bifázický (epitel + stroma), roste intra- nebo perikanalikulárně, je tuhý, ohraničený, nebolestivý a volně pohyblivý. 2) <strong>Intraduktální papilom</strong>: roste keříčkovitě ve velkých mlékovodech a projevuje se serózním až krvavým výtokem z bradavky. 3) <strong>Phylloides tumor</strong>: podobný fibroadenomu, ale má listovitou strukturu a vysoce buněčné stroma (může být benigní, borderline i maligní).",
+                    "<strong>Prekancerózy (Carcinoma in situ):</strong> Růst je omezen na dukty nebo lobuly, nepenetrují bazální membránu. Pro spolehlivé rozlišení slouží barvení na **E-cadherin**: <strong>Duktální (DCIS)</strong> je E-cadherin pozitivní. <strong>Lobulární (LCIS)</strong> je E-cadherin negativní (buňky ztratily soudržnost, sypou se).",
+                    "• <strong>DCIS:</strong> vysoké riziko přechodu v invazivní karcinom. Může se šířit uvnitř duktů až na epidermis dvorce a bradavky, kde způsobuje <strong>Pagetovu chorobu bradavky</strong> (nehojící se ekzematózní ulcerace s fibrinovou krustou).",
+                    "<strong>Invazivní karcinomy:</strong> 1) <strong>Duktální karcinom (NST)</strong>: nejčastější (cca 75%), tvoří žlázové čepy. 2) <strong>Invazivní lobulární karcinom</strong>: buňky postrádají E-cadherin, rostou dyskohezivně a infiltrativně řadí se za sebou v jedné řadě - tzv. <strong>husí pochod (řádkování)</strong> nebo obraz 'indických skautů'.",
+                    "<strong>Patologie mužského prsu:</strong> Mužská žláza neobsahuje lobuly! Může dojít ke <strong>gynekomastii</strong> (zbytnění duktů a stroma vlivem hyperestrogenismu při cirhóze jater či choriokarcinomu varlat produkujícím hCG). Karcinom u mužů je téměř výhradně invazivní duktální karcinom NST."
                 ],
                 academic: `
                     <p>Patologie prsu zahrnuje benigní bifázické léze, neinvazivní intraepiteliální neoplázie a invazivní adenokarcinomy.</p>
@@ -1021,19 +1023,55 @@
             },
             {
                 id: 22,
+                title: "Nádory trofoblastu",
+                category: "Gynekologická onkologie",
+                lazy: [
+                    "<strong>Trofoblast:</strong> Zevní vrstva blastocysty, která dává vznik plodovým obalům a placentě. Zajišťuje nidaci, výživu embrya a produkuje **hCG**.",
+                    "<strong>Mola hydatidosa:</strong> Abnormální proliferace trofoblastu a edém klků. 1) <strong>Kompletní mola</strong>: oplození prázdného vajíčka bez chromozomů 1 nebo 2 spermiemi (genom je 100% otcovský, 46,XX; chybí plod, děloha vyplněna edematózními váčky jako **hrozny vína**, na UZ obraz **sněžení**). 2) <strong>Parciální mola</strong>: oplození normálního vajíčka dvěma spermiemi (triploidie, 69,XXY; přítomen zakrnělý plod, klky jsou částečně normální).",
+                    "<strong>Gestační choriokarcinom:</strong> Vysoce maligní epiteliální nádor s <strong>bifázickou strukturou</strong>: cytotrofoblast + syncytiotrofoblast (obří vícejaderné atypické buňky). Zásadním znakem je <strong>absence choriových klků</strong> (rozdíl oproti mole!). Vzniká transformací po prodělané mole (50 %), po potratu (25 %) nebo po normálním těhotenství (22 %).",
+                    "<strong>Klinické projevy a chování:</strong> Extrémně vysoké hladiny <strong>hCG</strong> (marker úspěšnosti léčby). Vysoké hCG vyvolává zkříženou reakci s TSH receptory -> <strong>tyreotoxikóza</strong>, a stimuluje Leydigovy buňky k tvorbě androgenů s následným přesmykem na estrogeny -> <strong>gynekomastie</strong>.",
+                    "<strong>Metastázování a léčba:</strong> Extrémně rychlá hematogenní invaze a rozsev do <strong>plic</strong> (projevuje se hemoptýzou), vaginy, mozku a jater. Navzdory vysoké zhoubnosti má vynikající citlivost na chemoterapii (metotrexát) s téměř 100% vyléčením.",
+                    "<strong>Non-gestační choriokarcinom:</strong> Vzniká z germinálních buněk varlat či ovarií bez souvislosti s těhotenstvím, má horší prognózu a je poměrně chemo-rezistentní."
+                ],
+                academic: `
+                    <p>Gestační trofoblastická nemoc (GTN) představuje spektrum lézí pramenících z abnormální proliferace buněk trofoblastu po oplození.</p>
+                    <p><strong>Mola hydatidosa (zásněť hroznová):</strong> Rozlišuje se kompletní mola (karyotyp 46,XX, čistě otcovského původu, oplození prázdného vajíčka, vykazuje masivní hydrops bezcévných choriových klků uspořádaných jako hrozny vína a difúzní hyperplázii trofoblastu, plod chybí) a parciální mola (triploidie 69,XXY, oplození normálního oocytu dvěma spermiemi, klky vykazují ložiskový hydrops, plod je přítomen).</p>
+                    <p><strong>Gestační choriokarcinom:</strong> Vysoce zhoubný bifázický nádor složený z pleomorfního cytotrofoblastu a syncytiotrofoblastu. Zásadním znakem je úplná absence choriových klků a přítomnost masivních nekróz a krvácení v důsledku destrukce cévních stěn. Má extrémní afinitu k hematogennímu šíření (plicní metastázy způsobují hemoptýzu). Vysoce reaguje na chemoterapii (MTX).</p>
+                    <p><strong>Non-gestační choriokarcinom:</strong> Diferencuje se v rámci germinálních nádorů gonád, chybí mu souvislost s těhotenstvím a vykazuje horší prognózu a vyšší chemo-rezistenci.</p>
+                    <p><strong>Endokrinní efekty hCG:</strong> Nadměrná sekrece hCG vede k aktivaci TSH receptorů (tyreotoxikóza) a u mužů ke stimulaci Leydigových buněk s rozvojem gynekomastie.</p>
+                `,
+                visualType: "choriocarcinoma",
+                quiz: {
+                    q: "Který zhoubný nádor trofoblastu vzniká po mole, potratu či porodu a extrémně časně metastázuje do plic?",
+                    options: [
+                        "Seminom varlete",
+                        "Endometrioidní karcinom",
+                        "Gestační choriokarcinom",
+                        "Leiomyosarkom"
+                    ],
+                    correct: 2,
+                    explain: "Správně! Gestační choriokarcinom je extrémně agresivní a velmi časně se šíří hematogenně do plic (často se projeví vykašláváním krve - hemoptýzou). Je však výborně léčitelný metotrexátem."
+                }
+            },
+            {
+                id: 23,
                 title: "Lymfomy (Hodgkinův a Non-Hodgkinův lymfom)",
                 category: "Hematopatologie",
                 lazy: [
-                    "<strong>Definice:</strong> Maligní nádory vycházející z <strong>lymfatických buněk</strong> (nejčastěji v uzlinách, ale i extranodálně). Dělí se na Hodgkinův lymfom a Non-Hodgkinovy lymfomy.",
-                    "<strong>Hodgkinův lymfom (HL):</strong> Skládá se z obřích maligních buněk – <strong>Reedové-Sternbergových (RS) buněk</strong> (dvou/vícejaderné buňky s jadérky jako soví oči, vysoce <strong>CD30+ a CD15+</strong>) a jednojaderných <strong>Hodgkinových buněk</strong>. Nádorové buňky tvoří jen 1–3 % masy, zbytek je reaktivní zánětlivé okolí.",
-                    "<strong>Klasifikace HL:</strong> Klasický HL má 4 typy: <strong>Nodulární skleróza</strong> (nejčastější, lakunární buňky, vazivové kolagenní pruhy), <strong>Smíšená buněčnost</strong> (silná vazba na EBV), <strong>Bohatý na lymfocyty</strong> (nejlepší prognóza) a <strong>Lymfocytární deplece</strong> (nejhorší prognóza). Samostatně stojí nodulární lymfocytárně predominantní HL (má <strong>popcorn buňky</strong>, které jsou CD20+).",
-                    "<strong>Non-Hodgkinovy lymfomy (NHL):</strong> Dělí se na B-lymfomy (85 %) a T-lymfomy. Hlavní typy B-lymfomů: <strong>FL (Folikulární)</strong> (low-grade, napodobuje folikuly, t(14;18)), <strong>DLBCL (Difúzní velkobuněčný B-lymfom)</strong> (high-grade, agresivní), <strong>Burkittův lymfom</strong> (t(8;14), obraz <strong>hvězdného nebe</strong> pod mikroskopem).",
-                    "<strong>Klinika:</strong> Projevují se nebolestivým zvětšením uzlin, splenomegalií a systémovými <strong>B-příznaky</strong> (horečka, noční pocení, váhový úbytek). Hodnocení podle <strong>Ann Arbor klasifikace</strong>."
+                    "<strong>Definice:</strong> Maligní neoplázie vycházející z lymfatických buněk (B a T lymfocytů). Vznikají nejčastěji v uzlinách (nodální), ale i mimo ně (extranodální - např. slizniční **MALT lymfom** žaludku spojený s H. pylori, nebo **EATL** lymfom tenkého střeva spojený s celiakií).",
+                    "<strong>Hodgkinův lymfom (HL):</strong> Charakteristický přítomností obřích nádorových buněk - <strong>Reedové-Sternbergových (RS) buněk</strong> (dvou- či vícejaderné buňky s jadérky jako soví oči, imunofenotyp **CD30+ a CD15+**, ale CD45- a CD20-) a jednojaderných **Hodgkinových buněk**. Nádorové buňky tvoří jen 1-3 % masy, zbytek je reaktivní pozadí lymfocytů, plazmocytů a eozinofilů.",
+                    "<strong>Klasifikace HL:</strong> Klasický HL se dělí na 4 typy: 1) <strong>Nodulární skleróza</strong> (nejčastější, lakunární buňky, kolagenní vazivové pruhy rozdělující uzlinu na uzly), 2) <strong>Smíšená buněčnost</strong> (silná vazba na EBV), 3) <strong>Bohatý na lymfocyty</strong> (nejlepší prognóza), 4) <strong>Lymfocytární deplece</strong> (nejhorší prognóza). Zvláštním typem je nodulární lymfocytárně predominantní HL (má 'popcorn cells', které jsou CD20+).",
+                    "<strong>Non-Hodgkinovy lymfomy (NHL):</strong> Dělí se na B-lymfomy (85 %) a T-lymfomy.",
+                    "• <strong>Folikulární lymfom (FL)</strong>: low-grade B-lymfom napodobující lymfatické folikuly, spojen s translokací **t(14;18)** způsobující nadprodukci anti-apoptotického proteinu Bcl-2.",
+                    "• <strong>Difúzní velkobuněčný B-lymfom (DLBCL)</strong>: nejčastější agresivní high-grade B-lymfom dospělých.",
+                    "• <strong>Burkittův lymfom</strong>: vysoce agresivní B-lymfom, translokace **t(8;14)** genu MYC. Vykazuje extrémní proliferaci a apoptózu, což dává pod mikroskopem vzhled **hvězdného nebe** (světlé makrofágy s pohlcenými apoptotickými tělísky tvoří 'hvězdy' v tmavém 'nebi' nádorových blastů).",
+                    "• <strong>Kožní lymfomy</strong>: **Mycosis fungoides** je T-lymfom s epidermotropismem (buňky lezou do epidermis a tvoří Pautrierovy mikroabscesy), v pokročilé leukemické fázi se označuje jako **Sézaryho syndrom**.",
+                    "<strong>Klinika:</strong> Projevují se nebolestivým zvětšením uzlin, hepatosplenomegalií a systémovými **B-příznaky** (horečka, noční pocení, váhový úbytek). Staging se hodnotí dle **Ann Arbor klasifikace** (stadium I-IV)."
                 ],
                 academic: `
                     <p>Maligní lymfomy jsou nádorové proliferace buněk imunitního systému, které vznikají primárně v lymfatických uzlinách (nodální) nebo v mimouzlinových tkáních (extranodální - např. MALT lymfom).</p>
                     <p><strong>Hodgkinův lymfom (HL):</strong> Je charakteristický unicentrickým vznikem a šířením souvisle do sousedních uzlin. Podkladem jsou obří Reedové-Sternbergovy buňky (typicky dvoujaderné s eozinofilními jadérky vzhledu "sovích očí") a jednojaderné Hodgkinovy buňky. Tyto buňky u klasického HL vykazují imunofenotyp CD30+, CD15+, ale chybí jim znaky zralých B-buněk (CD45-, CD20-). RS buňky secernují cytokiny rekrutující reaktivní pozadí lymfocytů, plazmocyty a eozinofily. Typ nodulární sklerózy obsahuje lakunární buňky a kolagenní septa.</p>
-                    <p><strong>Non-Hodgkinovy lymfomy (NHL):</strong> Jsou různorodou skupinou. Folikulární lymfom (FL) vykazuje translokaci t(14;18) s nadprodukcí anti-apoptotického proteinu Bcl-2. Difúzní velkobuněčný B-lymfom (DLBCL) je nejčastější agresivní NHL dospělých. Burkittův lymfom je asociován s translokací t(8;14) genu MYC a vykazuje extrémní proliferační aktivitu s histologickým obrazem "hvězdného nebe" (makrofágy s pohlcenými apoptotickými tělísky tvoří světlé hvězdy v tmavém nebi nádorových B-buněk).</p>
+                    <p><strong>Non-Hodgkinovy lymfomy (NHL):</strong> Jsou různorodou skupinou. Folikulární lymfom (FL) vykazuje translokaci t(14;18) s nadprodukcí anti-apoptotického proteinu Bcl-2. Difúzní velkobuněčný B-lymfom (DLBCL) je nejčastější agresivní NHL dospělých. Burkittův lymfom is asociován s translokací t(8;14) genu MYC a vykazuje extrémní proliferační aktivitu s histologickým obrazem "hvězdného nebe" (makrofágy s pohlcenými apoptotickými tělísky tvoří světlé hvězdy v tmavém nebi nádorových B-buněk).</p>
                     <p><strong>Klinické aspekty:</strong> Hodnocení stadia probíhá podle Ann Arbor klasifikace (stadium I-IV). Přítomnost B-příznaků (horečka, noční pocení, hubnutí) signalizuje uvolňování cytokinů (IL-1, IL-6, TNF-alfa) a zhoršuje prognózu pacienta.</p>
                 `,
                 visualType: "starry_sky",
@@ -1050,12 +1088,47 @@
                 }
             },
             {
-                id: 23,
+                id: 24,
+                title: "Plazmocytární myelom",
+                category: "Hematopatologie",
+                lazy: [
+                    "<strong>Definice:</strong> Mnohočetný myelom (Kahlerova choroba) is maligní nádorové onemocnění z terminálně diferencovaných B-lymfocytů (plazmatických buněk) v kostní dřeni. Charakteristickým rysem je hyperprodukce monoklonálního imunoglobulinu nebo jeho lehkých řetězců (tzv. **paraproteinu** / M-proteinu).",
+                    "<strong>Etiologie a patogeneze:</strong> Genetické aberace postihující gen pro těžký řetězec imunoglobulinu (IGH) a zvýšená stimulace interleukinem 6 (**IL-6**), který je klíčovým růstovým faktorem. Nádorové buňky secernují **RANKL**, což vyvolává neřízenou aktivaci osteoklastů k odbourávání kosti a současně inhibuje novotvorbu kosti (přes DKK1). Výsledkem je masivní **osteolýza** (rozpouštění kostní tkáně).",
+                    "<strong>Kostní léze (punched-out):</strong> V kostech skeletu (lebka, páteř, žebra) nacházíme mnohočetná, ostře ohraničená osteolytická ložiska vypadající jako otvory ve sklenici (obraz **prostříleného plechu**), způsobující kruté bolesti zad a patologické zlomeniny. Solitární ložisko se označuje jako solitární plazmocytom.",
+                    "<strong>Mikroskopie a ledviny:</strong> Kostní dřeň je infiltrována atypickými plazmocyty (excentrická jádra s loukoťovitým chromatinem). Nadbytek lehkých řetězců imunoglobulinů (**Bence-Jonesova bílkovina**) je filtrován do moči, precipituje v distálních tubulech a ucpává je -> vzniká **myelomová nefróza** (myelomová ledvina) s obřími buňkami z cizích těles, což vede k renálnímu selhání.",
+                    "<strong>Klinická manifestace (CRAB):</strong>",
+                    "• <strong>C (Calcium)</strong>: hyperkalcémie z uvolněného vápníku z kostí (únava, zácpa, polyurie, zmatenost).",
+                    "• <strong>R (Renal insufficiency)</strong>: renální selhání z ucpání tubulů paraproteinem (myelomová ledvina).",
+                    "• <strong>A (Anemia)</strong>: chudokrevnost z útlaku krvetvorby v dření (myelofthíza).",
+                    "• <strong>B (Bone lesions)</strong>: osteolytická ložiska kostí a bolesti zad.",
+                    "<strong>Prekurzor:</strong> **MGUS** (monoklonální gamapatie nejasného významu) - stabilní hladina paraproteinu bez příznaků CRAB (ročně cca 1% progreduje do myelomu)."
+                ],
+                academic: `
+                    <p>Mnohočetný myelom (Kahlerova choroba) představuje maligní klonální proliferaci plazmatických buněk v kostní dřeni, doprovázenou sekrecí monoklonálního paraproteinu (M-proteinu).</p>
+                    <p><strong>Patogeneze osteolýzy:</strong> Myelomové buňky aktivují osteoklastogenezi prostřednictvím zvýšené produkce RANKL a inhibují osteoblasty secernováním proteinu DKK1. To vede k rozvoji mnohočetných osteolytických ložisek (vzhled prostříleného plechu) a závažné hyperkalcémii.</p>
+                    <p><strong>Renální postižení (myelomová ledvina):</strong> Volné lehké řetězce (Bence-Jonesova bílkovina) procházejí glomerulární membránou, precipitují v distálních tubulech za vzniku tvrdých odlitků obklopených obřími buňkami, což vede k obstrukční uropatii a renální insuficienci.</p>
+                    <p><strong>MGUS vs Myelom:</strong> Monoklonální gamapatie nejasného významu (MGUS) vykazuje nízkou hladinu paraproteinu a absenci orgánového poškození (pravidlo CRAB).</p>
+                `,
+                visualType: "plasmacytoma",
+                quiz: {
+                    q: "Co znamená zkratka CRAB označující klinické příznaky mnohočetného myelomu?",
+                    options: [
+                        "Cardiac failure, Renal failure, Anemia, Bone pain",
+                        "Calcium elevation (hyperkalcémie), Renal insufficiency (selhání ledvin), Anemia (chudokrevnost), Bone lesions (osteolytická ložiska)",
+                        "Congestive heart, Respiratory distress, Ascites, Bleeding",
+                        "Cellular lysis, Radiotherapy, Alkylating agents, Bence-Jones"
+                    ],
+                    correct: 1,
+                    explain: "Přesně! CRAB označuje hyperkalcémii (z odbourávání kostí), renální selhání (z ucpání tubulů paraproteinem), anémii (z vytlačení krvetvorby) a kostní destrukci s patologickými zlomeninami."
+                }
+            },
+            {
+                id: 25,
                 title: "Nejčastější nádory u dětí",
                 category: "Pediatrická onkologie",
                 lazy: [
                     "<strong>Přehled:</strong> Nejčastější u dětí jsou <strong>leukémie (ALL, AML)</strong> a lymfomy. Druhé jsou nádory CNS (embryonalní, meduloblastom). Z měkkých tkání dominují <strong>rhabdomyosarkomy</strong> a <strong>juvenilní hemangiom</strong>.",
-                    "<strong>Nefroblastom (Wilmsův tumor):</strong> Typický nádor ledviny u dětí (8-15 cm). Skládá se ze 3 složek (tripartitní vzhled): 1) <strong>nediferencovaný blastém</strong> (small blue cells, obří mitotická aktivita), 2) <strong>diferencující se epitel</strong> (primitivní žlázky/tubuly), 3) <strong>mezenchymální stroma</strong> (vazivo, svaly). Prekancerózou jsou **nefrogenní rezidua** (nezralé buňky v ledvině).",
+                    "<strong>Nefroblastom (Wilmsův tumor):</strong> Typický nádor ledviny u dětí (8-15 cm). Skládá se ze 3 složek (tripartitní vzhled): 1) <strong>nediferencovaný blastém</strong> (small blue cells, obří mitotická aktivita), 2) <strong>diferencující se epitel</strong> (primitivní žlázky/tubuly), 3) <strong>mezenchymální stroma</strong> (vazivo, svaly). Prekancerou jsou **nefrogenní rezidua** (nezralé buňky v ledvině).",
                     "<strong>Retinoblastom:</strong> Maligní nádor oka u dětí. Roste z retiny do sklivce (endofyticky), obsahuje nekrózy a vápník. Skládá se ze 'small blue cells', prorůstá podél zrakového nervu přímo do mozku. Projevuje se bílým odleskem zornice (leukokorie).",
                     "<strong>Hepatoblastom:</strong> Nejobvyklejší dětský nádor jater. Spojen s <strong>FAP syndromem</strong>. Dělí se na fetální (trámce s glykogenem) a embryonální (primitivní buňky)."
                 ],
@@ -1079,7 +1152,7 @@
                 }
             },
             {
-                id: 24,
+                id: 26,
                 title: "Nádory nadledvin a štítné žlázy",
                 category: "Endokrinní onkologie",
                 lazy: [
@@ -1093,7 +1166,7 @@
                     "• <strong>Anaplastický:</strong> bleskový zabiják starších lidí (smrt do 5 měsíců udušením/dysfagií)."
                 ],
                 academic: `
-                    <p>Endokrinní onkologie zahrnuje vysoce specifické tumory nadledvin a štítné žlázy.</p>
+                    <p>Endokrinní onkologie zahrnuje vysoce specifческие tumory nadledvin a štítné žlázy.</p>
                     <p><strong>Kůra nadledvin:</strong> Adrenokortikální adenom (žlutý uzlík tvořený spongiocyty bohatými na lipidy, klinicky vyvolává Cushingův syndrom ze zvýšeného kortizolu či Connův syndrom z aldosteronu). Myelolipom (benigní, hormonálně němý tumor z tukové tkáně s ložisky hematopoézy).</p>
                     <p><strong>Dřeň nadledvin:</strong> Feochromocytom (nádor z chromafinních buněk produkující katecholaminy, histologicky tvoří hnízda "Zellballen"; klinicky vyvolává život ohrožující záchvatovitou hypertenzi). Neuroblastom (maligní dětský tumor ze sympatických prekurzorů s přítomností Homer-Wrightových rozet).</p>
                     <p><strong>Štítná žláza:</strong> Papilární karcinom (matná jádra s marginací chromatinu, intranukleární inkluze a psammomatózní tělíska; lymfogenní metastázování). Folikulární karcinom (vykazuje transkapsulární a angioinvazi, hematogenní metastázování). Medulární karcinom (z parafolikulárních C-buněk, produkuje kalcitonin tvořící amyloidní depozita ve stroma). Anaplastický karcinom (extrémně agresivní, nediferencovaný).</p>
@@ -1112,7 +1185,7 @@
                 }
             },
             {
-                id: 25,
+                id: 27,
                 title: "Nádory endokrinního systému (MEN)",
                 category: "Endokrinní onkologie",
                 lazy: [
@@ -1143,7 +1216,7 @@
                 }
             },
             {
-                id: 26,
+                id: 28,
                 title: "Nádory kůže",
                 category: "Dermatopatologie",
                 lazy: [
@@ -1157,7 +1230,7 @@
                     <p><strong>Benigní epiteliální léze:</strong> Seboroická keratóza (verukózní, hyperpigmentovaný uzlík u starších lidí s přítomností rohových pseudocyst). Keratoakantom (rychle rostoucí benigní kráterovitá léze vyplněná keratinem, spontánně regreduje, ale morfologicky imituje spinocelulární karcinom).</p>
                     <p><strong>Prekancerózy:</strong> Aktinická keratóza (vyvolaná UV zářením, vykazuje dysplázii bazální epidermis a hyperkeratózu) a Bowenova choroba (intraepidermální Carcinoma in situ).</p>
                     <p><strong>Maligní léze:</strong> Bazocelulární karcinom (bazofilní buňky, periferní palisádování, ulcus rodens) a spinocelulární karcinom (keratinizující invazivní čepy spinózních buněk).</p>
-                    <p><strong>Fibrohistiocytární tumory:</strong> Dermatofibrom (benigní reaktivní uzlík v dermis) a Dermatofibrosarcoma protuberans (morfologicky charakterizovaný vřetenitými buňkami uspořádanými do rohožovitého/storiformního vzoru).</p>
+                    <p><strong>Fibrohistiocytární tumory:</strong> Dermatofibrom (benigní reaktivní uzlík v dermis) and Dermatofibrosarcoma protuberans (morfologicky charakterizovaný vřetenitými buňkami uspořádanými do rohožovitého/storiformního vzoru).</p>
                 `,
                 visualType: "seborrheic_keratosis",
                 quiz: {
@@ -1173,7 +1246,7 @@
                 }
             },
             {
-                id: 27,
+                id: 29,
                 title: "Melanom",
                 category: "Dermatopatologie",
                 lazy: [
@@ -1193,7 +1266,7 @@
                     <p>Melanom je vysoce maligní, agresivní tumor z melanocytů vykazující rané lymfogenní i hematogenní metastázování.</p>
                     <p><strong>Patogeneze a lokalizace:</strong> Vzniká de novo či malignizací dysplastického névu. Kromě kůže se vyskytuje v uvey oka, sliznicích GIT a na meningách.</p>
                     <p><strong>Kinetika růstu:</strong> Rozlišujeme horizontální (radiální) fázi růstu, která je omezena na epidermis, a vertikální fázi charakterizovanou invazí do dermis s rizikem metastáz.</p>
-                    <p><strong>Klinicko-patologické typy:</strong> SSM (superficiálně se šířící, nejčastější), Lentigo maligna melanom (na obličeji senilní kůže, pomalý průběh), Nodulární melanom (chybí radiální fáze, roste vertikálně, nepříznivá prognóza) a Akrální lentiginózní melanom (dlaně, plosky, subunguálně s Hutchinsonovým znaménkem – pigmentací nehtového valu).</p>
+                    <p><strong>Klinicko-patologické typy:</strong> SSM (superficiálně se šířící, nejčastější), Lentigo maligna melanom (on obličeji senilní kůže, pomalý průběh), Nodulární melanom (chybí radiální fáze, roste vertikálně, nepříznivá prognóza) a Akrální lentiginózní melanom (dlaně, plosky, subunguálně s Hutchinsonovým znaménkem – pigmentací nehtového valu).</p>
                     <p><strong>Staging a klasifikace:</strong> Klasifikace dle Breslowa měří vertikální tloušťku tumoru v milimetrech; je hlavním prognostickým faktorem. Klasifikace dle Clarka hodnotí invazi do anatomických vrstev kůže (I-V). Diagnostické markery v patologii: S100, Melan A, HMB-45 a proliferační marker Ki-67.</p>
                 `,
                 visualType: "melanoma_abcde",
@@ -1210,7 +1283,7 @@
                 }
             },
             {
-                id: 28,
+                id: 30,
                 title: "Nádory periferních nervů a mozku",
                 category: "Neuropatologie",
                 lazy: [
@@ -1220,6 +1293,7 @@
                     "<strong>Meningiom:</strong> Benigní tumor mozkových plen, roste z arachnotelu a lpí na dura mater. Tlačí na mozek (neinvaduje). Mikroskopicky: vírovité uspořádání buněk (**whorls / cibule**) a **psammomatózní tělíska**.",
                     "<strong>Gliomy (Difúzní astrocytom):</strong> 1) Astrocytom grade II (hvězdicovité buňky, gemistocyty). 2) Grade III (anaplastický astrocytom). 3) Grade IV (**Glioblastom** - bleskový zabiják, nekrózy, prorůstá přes corpus callosum do obou hemisfér jako <strong>motýlový nádor</strong>). Lepší prognózu mají pacienti s **mutací IDH1/IDH2**.",
                     "<strong>Oligodendrogliom:</strong> Grade II-III, buňky mají perinukleární vyjasnění (vzhled **volských ok / fried eggs**), vykazují **kodeleci 1p/19q** (skvěle reagují na chemoterapii).",
+                    "<strong>Ependymom:</strong> Vychází z ependymální výstelky komor (zejména IV.) u dětí. Tvoří odlitkový nádor v komoře (způsobí hydrocefalus). Mikroskopicky vykazuje nepravé perivaskulární rozety (obraz leopardí kůže).",
                     "<strong>Meduloblastom:</strong> Super maligní dětský nádor mozečku (grade IV). Skládá se ze 'small blue cells' tvořících řádky nebo rozety."
                 ],
                 academic: `
@@ -1245,12 +1319,40 @@
                 }
             },
             {
-                id: 29,
+                id: 31,
+                title: "Metastatické nádory mozku",
+                category: "Neuropatologie",
+                lazy: [
+                    "<strong>Obecná charakteristika:</strong> Přibližně polovina všech intrakraniálních nádorů jsou metastázy. Primárními zdroji jsou nejčastěji: <strong>karcinom plic, prsu, ledvin (světlobuněčný Grawitz), GIT a maligní melanom</strong>.",
+                    "<strong>Lokalizace a patologie:</strong> Často se jedná o mnohočetná ložiska, která se ukládají na <strong>rozhraní šedé a bílé hmoty</strong> (tam, kde se zužují cévy). Bývají ohraničená a kulovitá, v jejich okolí vzniká výrazný reaktivní <strong>edém mozku</strong>.",
+                    "<strong>Klinika:</strong> Projevují se nitrolební hypertenzí (bolest hlavy, nauzea) a ložiskovými příznaky. Prvním příznakem může být **nově vzniklý epileptický záchvat** u dospělého člověka.",
+                    "<strong>Zobrazování:</strong> Na CT/MRI se typicky zobrazují jako <strong>ring-enhancing lesions</strong> (prstencovitě se sytící prstenec kontrastní látky s tmavým nekrotickým středem)."
+                ],
+                academic: `
+                    <p>Metastatické postižení CNS je velmi časté a představuje přibližně 50 % všech mozkových tumorů u dospělých.</p>
+                    <p><strong>Patogeneze a lokalizace:</strong> Hematogenní rozsev nádorových buněk. Ložiska se typicky zachytávají v terminálním větvení cév na junkci šedé a bílé hmoty hemisfér. Primárním tumorem bývá nejčastěji bronchogenní karcinom, karcinom prsu, světlobuněčný karcinom ledviny, kolorektální karcinom a melanom.</p>
+                    <p><strong>Diagnostické a klinické rysy:</strong> Mnohočetnost a ostré ohraničení ložisek, doprovázené výrazným perifokálním edémem (způsobeným porušením hematoencefalické bariéry). Na zobrazení vykazují typické prstencovité sycení (ring-enhancement) kolem centrální kolkvace/nekrózy.</p>
+                `,
+                visualType: "brain_metastasis",
+                quiz: {
+                    q: "Kde v mozku se nejčastěji zachytávají metastázy a jaký typický obraz vykazují na CT/MRI s kontrastní látkou?",
+                    options: [
+                        "V mozkovém kmeni; obraz motýlovitého gliomu.",
+                        "Na rozhraní šedé a bílé hmoty; obraz prstencovitého sycení (ring-enhancing lesions) s okolním edémem.",
+                        "Uvnitř IV. mozkové komory; obraz odlitkového tumoru.",
+                        "Na meningách; obraz Verocayových tělísek."
+                    ],
+                    correct: 1,
+                    explain: "Správně! Metastatické emboly se zachytávají tam, kde se zužují cévy, což je právě na rozhraní šedé a bílé hmoty. Na CT/MRI pak vidíme prstenec kontrastní látky se stínem edému okolo."
+                }
+            },
+            {
+                id: 32,
                 title: "Nádory kostí",
                 category: "Kostní onkopatologie",
                 lazy: [
                     "<strong>Osteosarkom:</strong> Nejčastější primární zhoubný nádor kosti u mladých lidí. Roste v metafýzách dlouhých kostí (kolem kolene - femur/tibie). Maligní osteoblasty tvoří <strong>nádorový osteoid</strong>. Roste agresivně, ničí trámce kosti, zvedá periost (vzniká tzv. **Codmanův trojúhelník**) a prorůstá do svalů. Často metastazuje do plic.",
-                    "<strong>Ewingův sarkom:</strong> Druhý nejčastější zhoubný dětský nádor kosti. Roste v diafýzách (středu) dlouhých kostí a v pánvi. Skládá se z uniformních 'small blue round cells'. Infiltrace je kašovitá a na řezu <strong>imituje hnis</strong> (připomíná osteomyelitidu!). Způsobuje kruté bolesti a horečky. Rychle tvoří reaktivní vrstvy periostu (obraz **cibulové slupky**).",
+                    "<strong>Ewingův sarkom:</strong> Druhý nejčastější zhoubný dětský nádor kosti. Roste v diafýzách (středu) dlouhých kostí a v pánvi. Skládá se z uniformních 'small blue round cells' (translokace **t(11;22)** EWSR1-FLI1). Infiltrace je kašovitá a na řezu <strong>imituje hnis</strong> (připomíná osteomyelitidu!). Způsobuje kruté bolesti a horečky. Rychle tvoří reaktivní vrstvy periostu (obraz **cibulové slupky**).",
                     "<strong>Chondrosarkom:</strong> Zhoubný nádor z chrupavky (produkuje chrupavčitou matrix). Vyskytuje se spíše u dospělých v kostech trupu a pánve. Dediferencovaný typ je vysoce zhoubný a totálně rezistentní na chemoterapii a radioterapii.",
                     "<strong>Benigní nádory kosti:</strong> <strong>Osteom</strong> (zralá kost na lebce, asociace s Gardnerovým syndromem), <strong>Osteoidní osteom</strong> (vyvolává kruté noční bolesti, které okamžitě ustoupí po aspirinu/salicylátech, na rentgenu ohraničené ložisko s lemem sklerotické kosti), <strong>Osteochondrom</strong> (výrůstek s chrupavčitou čepičkou u kolene na stopce), <strong>Obrovskobuněčný nádor kosti (osteoklastom)</strong> (v epifýzách u dospělých, lokálně agresivní, obsahuje obří mnohojaderné buňky jako osteoklasty)."
                 ],
@@ -1275,13 +1377,13 @@
                 }
             },
             {
-                id: 30,
+                id: 33,
                 title: "Leukémie (Akutní a chronické leukémie)",
                 category: "Hematopatologie",
                 lazy: [
                     "<strong>Definice:</strong> Maligní nádory krvetvorby, které primárně vznikají v <strong>kostní dřeni</strong> a difúzně nahrazují normální krvetvornou tkáň. Nádorové buňky jsou pak vyplavovány do periferní krve.",
                     "<strong>Útlak krvetvorby (Myelofthíza):</strong> Nádorové buňky zaplaví kostní dřeň a vytlačí zdravé kmenové buňky. Výsledkem jsou: 1) <strong>Anémie</strong> (únava, bledost), 2) <strong>Trombocytopenie</strong> (krvácivost, petechie), 3) <strong>Granulocytopenie / neutropenie</strong> (těžké oportunní infekce a sepse).",
-                    "<strong>Akutní leukémie (ALL, AML):</strong> Charakterizované nahromaděním nezralých buněk (<strong>blastů > 20 %</strong> v dření). Rychlý, agresivní průběh. <strong>ALL (Akutní lymfoblastická)</strong> je nejčastější zhoubný nádor u dětí. <strong>AML (Akutní myeloidní)</strong> je typická pro dospělé, v blastech nacházíme <strong>Auerovy tyčinky</strong>.",
+                    "<strong>Akutní leukémie (ALL, AML):</strong> Charakterizované nahromaděním nezralých buněk (<strong>blasti > 20 %</strong> v dření). Rychlý, agresivní průběh. <strong>ALL (Akutní lymfoblastická)</strong> je nejčastější zhoubný nádor u dětí. <strong>AML (Akutní myeloidní)</strong> je typická pro dospělé, v blastech nacházíme <strong>Auerovy tyčinky</strong>.",
                     "<strong>Chronické leukémie (CLL, CML):</strong> Hromadí se zralejší buňky, průběh je pomalý. <strong>CLL (Chronická lymfocytární)</strong> je nejčastější leukémie starých lidí (nádor z B-buněk, nacházíme <strong>Gumprechtovy stíny</strong>). <strong>CML (Chronická myeloidní)</strong> je spojena s <strong>Filadelfským chromozomem t(9;22)</strong> (fúzní gen BCR/ABL zapíná tyrosinkinázu) a projevuje se obří splenomegalií."
                 ],
                 academic: `
@@ -1304,9 +1406,7 @@
                 }
             }
         ];
-
-        // POMOCNÝ FLASHCARD SYSTÉM (Témata převedená na rychlé tahákové kartičky)
-        const flashcards = [
+const flashcards = [
             { front: "Verocayova tělíska", back: "Schwannom (Antoni A zóna - jádra seřazená vedle sebe jako vojáci)." },
             { front: "Azzopardiho fenomén", back: "Malobuněčný karcinom plic (SCLC - rozpadlý bazofilní chromatin nalepený na stěnách cév)." },
             { front: "Schillerova-Duvalova tělíska", back: "Nádor ze žloutkového váčku / Yolk sac tumor (vypadá jako primitivní glomerulus s cévou v centru)." },
@@ -1457,8 +1557,8 @@
                 const isRead = readTopics.has(item.id);
                 const button = document.createElement('button');
                 button.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex justify-between items-center transition-all ${index === currentTopicIndex
-                        ? 'bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-inner'
-                        : 'text-slate-400 hover:bg-slate-800 border border-transparent'
+                    ? 'bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-inner'
+                    : 'text-slate-400 hover:bg-slate-800 border border-transparent'
                     }`;
                 button.onclick = () => loadTopic(index);
 
@@ -1515,8 +1615,8 @@
                     const isRead = readTopics.has(item.id);
                     const button = document.createElement('button');
                     button.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex justify-between items-center transition-all ${index === currentTopicIndex
-                            ? 'bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-inner'
-                            : 'text-slate-400 hover:bg-slate-800 border border-transparent'
+                        ? 'bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-inner'
+                        : 'text-slate-400 hover:bg-slate-800 border border-transparent'
                         }`;
                     button.onclick = () => loadTopic(index);
 
@@ -1547,11 +1647,11 @@
             if (level < 30) {
                 return bulletText; // Fresh: full text
             }
-            
+
             // Remove text in parentheses/brackets (representing examples/fluff)
             let condensed = bulletText.replace(/\s*\([^)]*\)/g, "");
             condensed = condensed.replace(/\s*\[[^\]]*\]/g, "");
-            
+
             if (level >= 70) {
                 // Exhausted: only show sentences containing <strong>/<b> tags
                 let sentences = condensed.split(/(?<=\.|\?|!)\s+/);
@@ -1662,7 +1762,7 @@
             // Sestavení otázek: první je aktuální, ostatní náhodné
             studyQuizQuestions = [topic.quiz];
             const otherTopics = database.filter(t => t.id !== topic.id);
-            
+
             // Náhodný výběr dalších otázek, abychom jich měli celkem quizLength
             while (studyQuizQuestions.length < quizLength && otherTopics.length > 0) {
                 const randIndex = Math.floor(Math.random() * otherTopics.length);
@@ -2400,8 +2500,70 @@
                         <!-- Prázdný střed (hiatus) -->
                         <line x1="250" y1="60" x2="310" y2="60" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
                         <text x="250" y="50" fill="#ef4444" class="text-[10px] font-bold">2. Chybí střední vývojové stupně</text>
+                    </svg>
+                `;
+            } else if (type === "choriocarcinoma") {
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Cytotrofoblast (malé buňky) -->
+                        <g fill="#ec4899" fill-opacity="0.3" stroke="#db2777" stroke-width="1">
+                            <circle cx="120" cy="50" r="7"/> <circle cx="135" cy="45" r="7"/> <circle cx="130" cy="65" r="7"/>
+                            <circle cx="145" cy="55" r="7"/> <circle cx="125" cy="80" r="7"/>
+                        </g>
+                        <!-- Syncytiotrofoblast (obří vícejaderné buňky) -->
+                        <g fill="#ef4444" fill-opacity="0.2" stroke="#dc2626" stroke-width="2">
+                            <path d="M 180 40 Q 230 20 250 60 Q 220 100 180 80 Q 150 70 180 40 Z"/>
+                        </g>
+                        <!-- Vícečetná jádra v syncytiotrofoblastu -->
+                        <g fill="#7f1d1d">
+                            <circle cx="180" cy="55" r="3.5"/> <circle cx="195" cy="65" r="3.5"/>
+                            <circle cx="210" cy="50" r="3.5"/> <circle cx="185" cy="72" r="3.5"/>
+                        </g>
+                        <!-- Hemoragie / krvácení -->
+                        <g fill="#ef4444" fill-opacity="0.6">
+                            <circle cx="270" cy="70" r="10" class="animate-pulse"/>
+                            <circle cx="290" cy="50" r="6"/>
+                            <circle cx="255" cy="80" r="8"/>
+                        </g>
+                        <text x="100" y="20" fill="#ef4444" class="text-[10px] font-bold">Gestační choriokarcinom (Bifázický tumor s hemoragií)</text>
+                        <text x="110" y="105" fill="#f43f5e" class="text-[9px] font-mono">Cytotrofoblast (mononukleární) & Syncytiotrofoblast (vícejaderný)</text>
+                    </svg>
+                `;
+            } else if (type === "plasmacytoma") {
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Plazmocyt s excentrickým jádrem -->
+                        <circle cx="120" cy="60" r="25" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+                        <!-- Excentrické jádro (loukoťovité) -->
+                        <circle cx="132" cy="48" r="9" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1"/>
+                        <line x1="132" y1="39" x2="132" y2="48" stroke="#3b82f6" stroke-width="1.5"/>
+                        <line x1="123" y1="48" x2="132" y2="48" stroke="#3b82f6" stroke-width="1.5"/>
+                        <line x1="126" y1="42" x2="132" y2="48" stroke="#3b82f6" stroke-width="1.5"/>
+                        <line x1="138" y1="42" x2="132" y2="48" stroke="#3b82f6" stroke-width="1.5"/>
                         
-                        <text x="130" y="110" fill="#a855f7" class="text-[10px] font-bold">Hiatus Leukemicus (Akutní leukémie)</text>
+                        <!-- Myelomová nefróza (tubul s odlitkem) -->
+                        <rect x="250" y="35" width="100" height="50" fill="none" stroke="#10b981" stroke-width="2" rx="5"/>
+                        <!-- Tvrdý proteinový odlitek -->
+                        <rect x="260" y="45" width="80" height="30" fill="#ec4899" fill-opacity="0.8" rx="3" class="animate-pulse"/>
+                        
+                        <text x="75" y="20" fill="#3b82f6" class="text-[10px] font-bold">Atypický plazmocyt (Loukoťovité jádro)</text>
+                        <text x="230" y="105" fill="#ec4899" class="text-[10px] font-bold">Myelomová ledvina (Odlitek Bence-Jonesovy bílkoviny)</text>
+                    </svg>
+                `;
+            } else if (type === "brain_metastasis") {
+                html = `
+                    <svg class="w-full h-full" viewBox="0 0 400 120">
+                        <!-- Obrys mozku -->
+                        <path d="M 120 60 C 120 30 150 15 200 15 C 250 15 280 30 280 60 C 280 90 250 105 200 105 C 150 105 120 90 120 60 Z" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="3,3"/>
+                        <!-- Metastáza s prstencovitým sycením (Ring-enhancing lesion) -->
+                        <circle cx="210" cy="55" r="22" fill="#ef4444" fill-opacity="0.1" stroke="#f97316" stroke-width="3" class="animate-ping"/>
+                        <circle cx="210" cy="55" r="22" fill="none" stroke="#ef4444" stroke-width="4"/>
+                        <!-- Tmavý střed nekrózy -->
+                        <circle cx="210" cy="55" r="12" fill="#020617" stroke="#94a3b8" stroke-width="1"/>
+                        <!-- Otok v okolí -->
+                        <circle cx="210" cy="55" r="32" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="2,2"/>
+                        
+                        <text x="110" y="10" fill="#ef4444" class="text-[10px] font-bold">Metastáza v mozku (Ring-enhancing lesion s otokem)</text>
                     </svg>
                 `;
             }
