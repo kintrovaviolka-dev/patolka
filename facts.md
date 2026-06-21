@@ -752,7 +752,7 @@ NÁDORY PLIC
 
 bronchostenotická pneumonie, může se šířit do mediastina a při infiltraci n. phrenicus
 vyvolává nezvladatelnou škytavku), periferní (mohou prorůstat do pleury a hrudní
-stěny), v plicím apexu (=Pancoustův tumor, může infiltrovat krční a hrudní nervy a
+stěny), v plicím apexu (=Pancoastův tumor, může infiltrovat krční a hrudní nervy a
 vést k Hornerově trias – ptóza víčka, mióza, enoftalmus)
 
 Bronchogenní karcinom
@@ -760,7 +760,7 @@ Bronchogenní karcinom
 -  Vzchází z bronchiálního epitelu, spojeno s kouřením
 -  Malobuněčný karcinom (SCLC, ovískový)
 
-o  Nádor je tvořen z Kluchitského buněk (neuroendokrinní buňky) → často
+o  Nádor je tvořen z Kulchitského buněk (neuroendokrinní buňky) → často
 
 vyvolává paraneoplastické projevy (produkce ADH, ACTH, serotoninu, …)
 o  Lambert-Eatonův syndrom (zkřížená reakce, kdy Ab, které se vytvořily proti
@@ -799,7 +799,7 @@ NÁDORY PLEURY
 Solitární fibrózní tumor
 
 -  Border-line tumor, tvořen neuspořádanou proliferací fibroblastů
--  Oválný, exofitický, rostoucí na stopce připevněný k viscerální pleuře (do plíce se jen
+-  Oválný, exofytický, rostoucí na stopce připevněný k viscerální pleuře (do plíce se jen
 
 vtlačuje, tuhý, s pseudocystami
 
@@ -914,7 +914,7 @@ Intestinální typ = buňky připomínají epitel tenkého střeva (tubuly,
 (chronická gastritida → atrofie → intestinální metaplázie → dysplázie
 → adenokarcinom)
 
-o  Metastázují zjm. lymfogenně (Vichrowova uzlina), hematogenně (játra, plíce)
+o  Metastázují zjm. lymfogenně (Virchowova uzlina), hematogenně (játra, plíce)
 
 -  Neuroendokrinní = vznikají z hyperplastických ECL (produkujících histamin) na
 
@@ -1306,7 +1306,7 @@ Karcinomy děložního hrdla
 -
 
 Jsou úzce spjaty s nákazou vysoce rizikovými sérotypy HPV 16, 18, který se nějčastěji
-podílí na rozvoji dlaždicobuněčného karcinomu (roste exofiticky, papilárně
+podílí na rozvoji dlaždicobuněčného karcinomu (roste exofyticky, papilárně
 s ulcerovaným povrchem, ale může i endofyticky a invadovat do stromatu; jsou zde
 patrné buňky s virovými inkluzemi a perinukleárním haló – koilocyty); méně často se
 podílí na rozvojí adenokarcinom (njč. endometriální typ adenokarcinomu)
