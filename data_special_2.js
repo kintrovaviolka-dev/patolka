@@ -41,7 +41,7 @@ const DATA_SPECIAL_2 = [
   },
   {
     id: "spec-27",
-    title: "Idiopathic střevní záněty (IBD)",
+    title: "Idiopatické střevní záněty (IBD)",
     section: "Trávicí systém",
     category: "Speciální",
     keywords: ["Crohn", "kolitida", "ulcerózní", "transmurální", "kryptový", "pannus", "píštěl"],

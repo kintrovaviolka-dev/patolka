@@ -8,7 +8,7 @@ Fyzikální příčiny
 
 Ionizující záření = alfa, beta, gama, neutronové → působí přímo na DNA nebo
 nepřímo ionizací buněk a tvorbou kyslíkových radikálů → každá dávka sebou nese
-riziko vzniku maligní transformace, na základě čehož rozlišujeme dereministické
+riziko vzniku maligní transformace, na základě čehož rozlišujeme deterministické
 účinky (daná dávka způsobuje problémy), stochastické účinky (není uvedena
 konkrétní dávka, ale každé vystavení představuje riziko)
 
@@ -57,7 +57,7 @@ děložního hrdla
 o  EBV = DNA virus, cílové buňky jsou B-lymfocyty → burkittův nebo Hodgkin
 o  HHV-8 = Kaposiho sarkom u AIDS
 o  Hepatitida B a C = přechod do chronicity → cirhóza → hepatocelulární ka.
-o  Virus T-buněčné leukémie = pohlavně přenostný, zaměřen na CD4+ T-lymf.
+o  Virus T-buněčné leukémie = pohlavně přenosný, zaměřen na CD4+ T-lymf.
 
 Genetické příčiny
 
