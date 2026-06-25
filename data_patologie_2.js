@@ -162,7 +162,7 @@ const DATA_PATOLOGIE_2 = [
       etiology: "Kombinace genetického programu (vnitřní faktory) a kumulativního poškození vlivem vnějšího prostředí (oxidační stres, záření, toxiny).",
       pathogenesis: "Teorie stárnutí: 1. Geneticky programované stárnutí - replikační senescence buněk. S každým dělením dochází ke zkracování telomer (koncových částí chromozomů), až buňka dosáhne Hayflickova limitu a přestane se dělit. Enzym telomeráza je aktivní u kmenových a nádorových buněk, u somatických chybí. 2. Teorie volných radikálů (kumulace oxidačního poškození DNA a mitochondrií). 3. Hromadění poškozených proteinů (ztráta proteostázy). Syndrome předčasného stárnutí (např. Wernerův syndrom, Hutchinson-Gilfordova progerie) jsou způsobeny mutacemi genů pro opravu DNA (např. helikázy).",
       macroscopy: "Celková atrofie orgánů (zmenšení mozku, srdce, jater), ztráta elasticity kůže (vrásky), šedivění vlasů (ztráta melanocytů ve folikulech), osteoporóza (řídnutí kostí), sklerotické změny cév.",
-      microscopy: "Atrofie buněk, přítomnost lipofuscinu (perinukleárně). Zmnožení intersticilního kolagenu a ztráta elastických vláken. Akumulace somatických mutací a abnormality v buněčných jádrech.",
+      microscopy: "Atrofie buněk, přítomnost lipofuscinu (perinukleárně). Zmnožení intersticiálního kolagenu a ztráta elastických vláken. Akumulace somatických mutací a abnormality v buněčných jádrech.",
       clinical: "Stárnutí je spojeno s poklesem imunitní obrany (imunosenescence -> vyšší riziko infekcí a nádorů), sníženou adaptací oběhového systému, rozvojem neurodegenerace (Alzheimer) a metabolických poruch. Vede k přirozené smrti selháním homeostázy."
     },
     quiz: [
@@ -501,7 +501,7 @@ const DATA_PATOLOGIE_2 = [
     content: {
       definition: "Zánět (inflammatio) je komplexní obranná a adaptivní reakce organismu s účastí cévního, buněčného a humorálního systému na poškození tkáně, jejímž cílem je eliminovat vyvolávající příčinu, ohraničit poškození a zahájit proces hojení.",
       etiology: "Biologické noxy (bakterie, viry, plísně), fyzikální vlivy (trauma, teplo, chlad, záření), chemické látky (kyseliny, jedy) a imunopatologické reakce (autoimunita, alergie).",
-      pathogenesis: "Základní fáze akutního zánětu: 1. Alterace (poškození buněk a tkáně). 2. Exsudace (vaskulární reakce: vazodilatace a zvýšená propustnost cév vedoucí k úniku tekutiny - exsudátu - a proteinů do intersticilního prostoru). 3. Infiltrace (extravazace/migrace zánětlivých buněk - neutrofilů u akutního zánětu, lymfocytů/makrofágů u chronického). 4. Proliferace (tvorba granulační tkáně za účelem hojení).",
+      pathogenesis: "Základní fáze akutního zánětu: 1. Alterace (poškození buněk a tkáně). 2. Exsudace (vaskulární reakce: vazodilatace a zvýšená propustnost cév vedoucí k úniku tekutiny - exsudátu - a proteinů do intersticiálního prostoru). 3. Infiltrace (extravazace/migrace zánětlivých buněk - neutrofilů u akutního zánětu, lymfocytů/makrofágů u chronického). 4. Proliferace (tvorba granulační tkáně za účelem hojení).",
       macroscopy: "Pět klasických (Celsus-Galenových) příznaků zánětu: 1. Rubor (zarudnutí - aktivní hyperémie), 2. Calor (horko - zvýšený průtok krve a metabolismus ložiska), 3. Tumor (otok - nahromadění exsudátu), 4. Dolor (bolest - dráždění nervových zakončení mediátory zánětu a tlakem exsudátu), 5. Functio laesa (porucha funkce).",
       microscopy: "Mikroskopicky nacházíme dilatované a překrvené cévy, edém intersticia (exsudát), marginaci a diapedézu bílých krvinek cévní stěnou do okolí. U chronického zánětu dominují lymfocyty, plazmatické buňky, makrofágy a novotvořené vazivo.",
       clinical: "Akutní zánět nastupuje rychle a trvá dny až týdny. Pokud se noxu nepodaří eliminovat, zánět přechází do chronického stadia (trvá měsíce až roky), které je charakterizováno současným průběhem poškození, zánětu a hojení (reparace) s jizvením."
@@ -595,7 +595,7 @@ const DATA_PATOLOGIE_2 = [
         explanation: "Exsudát doprovází zánětlivou reakci, kde je poškozená (propustná) cévní stěna, proto obsahuje proteiny (včetně velkého fibrinogenu) a buňky. Transudát vzniká mechanickým filtrováním při neporušené cévní stěně (např. u edému při srdečním selhání), a je proto na bílkoviny chudý."
       },
       {
-        question: "Který plazmatický protein uniká při zánětlivém poškození cév do intersticila, kde polymeruje na nerozpustná eozinofilní (růžová) vlákna?",
+        question: "Který plazmatický protein uniká při zánětlivém poškození cév do intersticia, kde polymeruje na nerozpustná eozinofilní (růžová) vlákna?",
         options: [
           "Albumin",
           "Fibrinogen (mění se na fibrin)",
@@ -729,7 +729,7 @@ const DATA_PATOLOGIE_2 = [
     content: {
       definition: "Hnisavý zánět je forma exsudativního zánětu charakterizovaná tvorbou hnisu (pus) - zakalené, husté tekutiny složené z odumřelých neutrofilů, zkapalněné nekrotické tkáně a bakterií.",
       etiology: "Infekce pyogenními (hnisavými) bakteriemi: Staphylococcus aureus, Streptococcus pyogenes, Neisseria meningitidis/gonorrhoeae, Escherichia coli.",
-      pathogenesis: "Bakterie produkují chemoatraktanty, které lákají obrovské množství neutrofilů. Neutrofily uvolňují své lyzosomální enzymy (myeloperoxidázu, elastázu) do okolí, což vede k enzymatickému zkapalnění (kolikvaci) nekrotické tkáně a bakterií za vzniku hnisu. Hnisavý zánět se dělí na: 1. Ohraničený (absces - nekróza tkáně s tvorbou dutiny vyplněné hnisem), 2. Neohraničený/difuzní (flegmóna - hnisavý zánět šířící se intersticia, typicky v podkoží), 3. Empyém (hromadění hnisu v anatomických dutinách - např. empyém žlučníku, pleury).",
+      pathogenesis: "Bakterie produkují chemoatraktanty, které lákají obrovské množství neutrofilů. Neutrofily uvolňují své lyzosomální enzymy (myeloperoxidázu, elastázu) do okolí, což vede k enzymatickému zkapalnění (kolikvaci) nekrotické tkáně a bakterií za vzniku hnisu. Hnisavý zánět se dělí na: 1. Ohraničený (absces - nekróza tkáně s tvorbou dutiny vyplněné hnisem), 2. Neohraničený/difuzní (flegmóna - hnisavý zánět šířící se intersticiem, typicky v podkoží), 3. Empyém (hromadění hnisu v anatomických dutinách - např. empyém žlučníku, pleury).",
       macroscopy: "Hnis: hustá, viskózní tekutina žlutavé, šedavé nebo zelenavé barvy (způsobené zeleným enzymem myeloperoxidázou v neutrofilech). Absces: dutina s hnisem obklopená pyogenní membránou (cévnaté vazivo). Flegmóna: tkáň je prosáklá žlutozeleným hnisem, neohraničená, měkká, nekróza splývá.",
       microscopy: "Masivní infiltrace neutrofilními granulocyty (segmentovaná jádra), z nichž mnohé vykazují známky rozpadu (karyorexe). Struktura původní tkáně je v místě ložiska zcela zničena kolikvaci. U abscesu je patrná okolní pyogenní membrána (granulační tkáň).",
       clinical: "Hnisavé infekce mají tendenci k celkovým projevům (horečka, leukocytóza v krvi). Abscesy se musí léčit chirurgickým vypuštěním (zásada 'Ubi pus, ibi evacua'), protože antibiotika špatně pronikají do nekrózy. Flegmóna (např. erysipel) se šíří rychle podél fascií a hrozí rozvojem sepse."
@@ -739,7 +739,7 @@ const DATA_PATOLOGIE_2 = [
         question: "Z hlediska ohraničení a šíření hnisavého zánětu ve tkáni, jaký je zásadní rozdíl mezi nově vzniklým abscesem a flegmónou?",
         options: [
           "Absces je způsoben viry, flegmóna bakteriemi",
-          "Absces je ohraničený hnisavý zánět s destrukcí tkáně a tvorbou dutiny; flegmóna je difuzní, neohraničený hnisavý zánět šířící se volně intersticia (např. podkožím)",
+          "Absces je ohraničený hnisavý zánět s destrukcí tkáně a tvorbou dutiny; flegmóna je difuzní, neohraničený hnisavý zánět šířící se volně intersticiem (např. podkožím)",
           "Absces se hojí bez jizev, flegmóna vždy jizvou",
           "Absces postihuje pouze plíce, flegmóna pouze kůži"
         ],
