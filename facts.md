@@ -537,7 +537,7 @@ Lymfoplazmatický lymfom
 
 -  Maligní, nadprodukce monoklonálních IgM → nádorové buňky jsou charakteristické
 
-vznikem Russelových a Duchterových tělísek
+vznikem Russelových a Dutcherových tělísek
 
 Lymfom z marginální zóny
 
@@ -679,7 +679,7 @@ která během 5.-7. roku spontánně mizí
 o  Kavernózní = tvořen dilatovanými krevními cévami, které jsou oddělené
 
 vazivem → kůže, játra → velké hemangiomy mohouzabdržovat trombocyty a
-způsobit relativní trombocytopenii a krvácivé stavy (Kasabach-Meritové sy.)
+způsobit relativní trombocytopenii a krvácivé stavy (Kasabach-Merrittové sy.)
 
 -  Lymfangiom = obdoba hemangiomu
 
@@ -697,7 +697,7 @@ Maligní
 
 -  Low-grade
 
-o  Kasposiho sarkom = vzniká po nákaze HHV-8 zjm. u lidí, kteří trpí AIDS →
+o  Kaposiho sarkom = vzniká po nákaze HHV-8 zjm. u lidí, kteří trpí AIDS →
 mnohočetné hyperpigmentované léze na kůži, sliznicích úst nebo GIT →
 metastazuje do uzlin a pak i do plic
 
@@ -760,7 +760,7 @@ Bronchogenní karcinom
 -  Vzchází z bronchiálního epitelu, spojeno s kouřením
 -  Malobuněčný karcinom (SCLC, ovískový)
 
-o  Nádor je tvořen z Kluchitského buněk (neuroendokrinní buňky) → často
+o  Nádor je tvořen z Kulchitského buněk (neuroendokrinní buňky) → často
 
 vyvolává paraneoplastické projevy (produkce ADH, ACTH, serotoninu, …)
 o  Lambert-Eatonův syndrom (zkřížená reakce, kdy Ab, které se vytvořily proti
@@ -1039,7 +1039,7 @@ Benigní
 
 -  Kavernózní hemangiom = tvořen dilatovanými krevními cévami, které jsou od sebe
 odděleny vazivovými septy → probíhá asymptomaticky (náhodný nález), velké
-hemangiomy mohou zadržovat trombocyty → trombocytopenie (Kasabach-Meritové)
+hemangiomy mohou zadržovat trombocyty → trombocytopenie (Kasabach-Merrittové)
 → většinou se jedná o subkapsulární ložisko, které může prasknout →
 hemoperitoneum
 
@@ -1822,7 +1822,7 @@ infiltrace koria a vertikální růst koleruje s agresivitou nádoru)
 o  Superficiálně šířící se melanom (SSM) = nejčastější, v epidermis jsou patrná
 
 hnízda atypických melanocytů, která se šíří intraepidermálně
-o  Lentigo maligna melanom (Hutschinsonova melanotická skvrna) =
+o  Lentigo maligna melanom (Hutchinsonova melanotická skvrna) =
 
 mikroskopicky se jedná o CIS, který často vzniká v místě poškození UV
 zářením → vyskytuje se zjm. na obličeji starších lidí a v této formě může
