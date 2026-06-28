@@ -1306,10 +1306,10 @@ Karcinomy děložního hrdla
 -
 
 Jsou úzce spjaty s nákazou vysoce rizikovými sérotypy HPV 16, 18, který se nějčastěji
-podílí na rozvoji dlaždicobuněčného karcinomu (roste exofiticky, papilárně
+podílí na rozvoji dlaždicobuněčného karcinomu (roste exofyticky, papilárně
 s ulcerovaným povrchem, ale může i endofyticky a invadovat do stromatu; jsou zde
 patrné buňky s virovými inkluzemi a perinukleárním haló – koilocyty); méně často se
-podílí na rozvojí adenokarcinom (njč. endometriální typ adenokarcinomu)
+podílí na rozvoji adenokarcinomu (njč. endometriální typ adenokarcinomu)
 
 -  Zpočátku probíhají asymptomaticky, ale později se objevuje krvácení mimo cyklus,
 
@@ -1332,7 +1332,7 @@ lymfangiogeneze a extrauterinní šíření
 -  Mucinózní karcinom = mucinózní hlenotvorné buňky tvoří víc jak 50% nádoru
 -  Endometriální karcinom (rizikový faktor – vysoké hladiny estrogenu) = velmi dobře
 
-papodobuje nenádorové endometriální žlázy
+napodobuje nenádorové endometriální žlázy
 
 -  Světlobuněčný karcinom = hluboce invazivní, špatná prognóza
 -  Smíšený epiteliální a mezenchymální = Müllerianský nádor (→vzniká
@@ -1632,7 +1632,7 @@ oxidaci katecholaminů v chromafinních buňkách) → pro tento nádor je
 charakteristická nekontrolovatelná nadprodukce katecholaminů (zjm. noradrenalinu) a
 vznik záchvatovité (paroxysmální) hypertenze (náhle vzniklá hypertenze, kdy
 diastolický TK může dosahovat až 140 mmHg, je život ohrožující a projevuje se
-palpitacemi, pocetím a bolestí hlavy) → mikroskopicky jsou nádorové buňky
+palpitacemi, pocením a bolestí hlavy) → mikroskopicky jsou nádorové buňky
 alveolárně uspořádány, čímž vytváří taková atypická hnízda, která se nazývají jako
 Zellballen; Maligní feochromocytom je větší a má známky lokálního invazivního růstu
 
