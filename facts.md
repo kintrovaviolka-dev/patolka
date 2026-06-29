@@ -8,7 +8,7 @@ Fyzikální příčiny
 
 Ionizující záření = alfa, beta, gama, neutronové → působí přímo na DNA nebo
 nepřímo ionizací buněk a tvorbou kyslíkových radikálů → každá dávka sebou nese
-riziko vzniku maligní transformace, na základě čehož rozlišujeme dereministické
+riziko vzniku maligní transformace, na základě čehož rozlišujeme deterministické
 účinky (daná dávka způsobuje problémy), stochastické účinky (není uvedena
 konkrétní dávka, ale každé vystavení představuje riziko)
 
@@ -42,9 +42,9 @@ měchýř, … → kdysi se využívaly jako barviva margarínů), nitrosaminy/n
 Biologické příčiny
 
 -  Bakterie = H. pylori – adenokarcinom, MALT lymfom
--  Paraziti = schistosoma heamobium (uroteliální karcinom), motolice žlučová
+-  Paraziti = Schistosoma haematobium (uroteliální karcinom), motolice žlučová
 
-(chonagniocelulární adenokarcinom)
+(cholangiocelulární adenokarcinom)
 
 -  Viry = zvyšují účinek telomerázy a tím prodlužují schopnost buňky se dělit a zvyšují
 
@@ -57,7 +57,7 @@ děložního hrdla
 o  EBV = DNA virus, cílové buňky jsou B-lymfocyty → burkittův nebo Hodgkin
 o  HHV-8 = Kaposiho sarkom u AIDS
 o  Hepatitida B a C = přechod do chronicity → cirhóza → hepatocelulární ka.
-o  Virus T-buněčné leukémie = pohlavně přenostný, zaměřen na CD4+ T-lymf.
+o  Virus T-buněčné leukémie = pohlavně přenosný, zaměřen na CD4+ T-lymf.
 
 Genetické příčiny
 
@@ -219,7 +219,7 @@ BENIGNÍ A MALIGNÍ EPITELIÁLNÍ NÁDORY
 -  Benigní léze rostou převážně, exofyticky, nemetastazují, jsou dobře ohraničené,
 
 opouzdřené, adenomy mohou utlačovat okolní tkáň a způsobují tlakovou atrofii a
-fibritozaci, čímž si utváří pouzdro, ale nevykazují žádný infiltrativní růst
+fibrotizaci, čímž si utváří pouzdro, ale nevykazují žádný infiltrativní růst
 
 -  Maligní léze metastazují, nebývají ohraničené, zpočátku rostou exofyticky, ale pak se
 projevuje jejich infiltrativní a invazivní růst do okolních tkání, nízce diferencované
@@ -227,7 +227,7 @@ projevuje jejich infiltrativní a invazivní růst do okolních tkání, nízce 
 3
 
 formy mohou dokonce vypadat jako vřetenobuněčné sarkomy (=sarkomatoidní
-karcinomy), často jsou patrné nekrózy, které se mohou odlučovat a tvoři ulcerace →
+karcinomy), často jsou patrné nekrózy, které se mohou odlučovat a tvoří ulcerace →
 jizvení → stenózy (zjm. jícen)
 
 Dlaždicobuněčný papilom
@@ -260,7 +260,7 @@ místech, kde došlo k metaplastické změně v dlaždicobuněčný epitel (bron
 
 -  Dobře diferencovaný má patrné:
 
-o  Exofytická složka = bazální vrstva buněk je bazofilní a schvrní vrstvy jsou
+o  Exofytická složka = bazální vrstva buněk je bazofilní a svrchní vrstvy jsou
 
 eozinofilnější
 
@@ -273,7 +273,7 @@ v centru čepu dochází k rohovění, tak vznikají keratinové perly
 Bazocelulární karcinom
 
 -  Low-grade = nodulární, superficiální
--  High-grade = mikronodulární, fibroepitelový, ivazivní
+-  High-grade = mikronodulární, fibroepitelový, invazivní
 -  Makroskopicky se prvně projevuje jako uzel, který ulceruje a roste (hlodající vřed –
 
 -
@@ -307,7 +307,7 @@ Adenokarcinom
 -  Medulární = máslo stroma měkký, Skirhus = hojné stroma, tuhý
 -  Dobře diferencované napodobují žlázu, u hůř diferencovaných dochází k splývání
 
-tubulů, mohou se objevit i ostrůvky s kribriformní strukturou, při zhoršení diferenciaci
+tubulů, mohou se objevit i ostrůvky s kribriformní strukturou, při zhoršení diferenciace
 mizí luminizace a nádor roste v solidních čepech (=proces solidifikace) →
 
 4
@@ -483,7 +483,7 @@ HODGKINŮV LYMFOM
 -  Často vzniká v důsledku aktivaci NF-kB (transkripční faktor, který „zachraňuje“
 
 poškozené buňky „crippled cells“ ze zárodečných center, často bývá aktivován EBV)
-→ takhle vznikají Hodgkinovy a Reed-Stenbergovy buňky (2 a více jader, často
+→ takhle vznikají Hodgkinovy a Reed-Sternbergovy buňky (2 a více jader, často
 zrcadlově postavená proti sobě s eozinofilními jadérky, připomínající soví oči)
 
 -  4 podtypy = nodulárně sklerotický, smíšená buněčnost, bohatý na lymfocyty,
@@ -678,8 +678,8 @@ která během 5.-7. roku spontánně mizí
 
 o  Kavernózní = tvořen dilatovanými krevními cévami, které jsou oddělené
 
-vazivem → kůže, játra → velké hemangiomy mohouzabdržovat trombocyty a
-způsobit relativní trombocytopenii a krvácivé stavy (Kasabach-Meritové sy.)
+vazivem → kůže, játra → velké hemangiomy mohou zadržovat trombocyty a
+způsobit relativní trombocytopenii a krvácivé stavy (Kasabach-Merrittové sy.)
 
 -  Lymfangiom = obdoba hemangiomu
 
@@ -691,13 +691,13 @@ cystický hygrom se často objevuje u dětí s Turnerovým syndromem
 
 neuromyoarteriálního glomu (AV-struktury s glomovými buňkami, které se podílí na
 termoregulaci v distálních oblastech prstů, zjm. pod nehtem → kvůli bohaté inervaci
-je velmi boelstivý)
+je velmi bolestivý)
 
 Maligní
 
 -  Low-grade
 
-o  Kasposiho sarkom = vzniká po nákaze HHV-8 zjm. u lidí, kteří trpí AIDS →
+o  Kaposiho sarkom = vzniká po nákaze HHV-8 zjm. u lidí, kteří trpí AIDS →
 mnohočetné hyperpigmentované léze na kůži, sliznicích úst nebo GIT →
 metastazuje do uzlin a pak i do plic
 
@@ -799,7 +799,7 @@ NÁDORY PLEURY
 Solitární fibrózní tumor
 
 -  Border-line tumor, tvořen neuspořádanou proliferací fibroblastů
--  Oválný, exofitický, rostoucí na stopce připevněný k viscerální pleuře (do plíce se jen
+-  Oválný, exofytický, rostoucí na stopce připevněný k viscerální pleuře (do plíce se jen
 
 vtlačuje, tuhý, s pseudocystami
 
@@ -1039,7 +1039,7 @@ Benigní
 
 -  Kavernózní hemangiom = tvořen dilatovanými krevními cévami, které jsou od sebe
 odděleny vazivovými septy → probíhá asymptomaticky (náhodný nález), velké
-hemangiomy mohou zadržovat trombocyty → trombocytopenie (Kasabach-Meritové)
+hemangiomy mohou zadržovat trombocyty → trombocytopenie (Kasabach-Merrittové)
 → většinou se jedná o subkapsulární ložisko, které může prasknout →
 hemoperitoneum
 
@@ -1260,7 +1260,7 @@ nesestouplá varlata (kryptorchismus)
 -  Embryonální karcinom = maligní, tvořen buňkami, které se podobají embryonálním
 
 kmenovým buňkám → jedná se o zvětšující se varle, které může procházet i
-hemoarickými či nekrotickými změnami → mikroskopicky je složen s buněk
+hemoragickými či nekrotickými změnami → mikroskopicky je složen s buněk
 s eozinofilní cytoplazmou a objevují se i četné mitózy
 
 -  Nádor ze žloutkového váčku = je vysoce maligní a jedná se o jeden z nejčastějších
@@ -2036,7 +2036,7 @@ buněčnější, jaderné atypie a vysoká proliferační aktivita)
 -  Solidní masa, která může vyplňovat IV. komoru (=odlitkový nádor) → hydrocefalus
 -  Mikroskopicky je tvořen buňkami s výběžky, které mají tendenci se upínat na stěnu
 
-cév a tvoři perivaskulární rozety (nepravé) → střídání buněčných oblastí
+cév a tvoří perivaskulární rozety (nepravé) → střídání buněčných oblastí
 s pseudorozetami se někdy přirovnává k obrazu leopardí kůže
 
 -  Myxopapilární ependymom = varianta v obalsti conus medullaris a filum terminale
