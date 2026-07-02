@@ -1417,17 +1417,22 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Title match
     for (const prep of window.PREPARATY_DATA) {
-      const normP = normalizeString(prep.title);
+      prep._normTitle = prep._normTitle || normalizeString(prep.title);
+      const normP = prep._normTitle;
       if (normP === normQ || normQ.includes(normP) || normP.includes(normQ)) {
         return prep;
       }
     }
+
+    if (!question._normKeywords) {
+      question._normKeywords = question.keywords.map(normalizeString).filter(kw => kw.length > 3);
+    }
+
     // Keyword match
     for (const prep of window.PREPARATY_DATA) {
-      const normP = normalizeString(prep.title);
-      for (const kw of question.keywords) {
-        const normKw = normalizeString(kw);
-        if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
+      const normP = prep._normTitle;
+      for (const normKw of question._normKeywords) {
+        if (normP === normKw || normP.includes(normKw) || normKw.includes(normP)) {
           return prep;
         }
       }
@@ -1436,17 +1441,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function findMatchingQuestion(prep) {
-    const normP = normalizeString(prep.title);
+    prep._normTitle = prep._normTitle || normalizeString(prep.title);
+    const normP = prep._normTitle;
+
     for (const q of QUESTIONS) {
-      const normQ = normalizeString(q.title);
+      q._normTitle = q._normTitle || normalizeString(q.title);
+      const normQ = q._normTitle;
       if (normQ === normP || normQ.includes(normP) || normP.includes(normQ)) {
         return q;
       }
     }
+
     for (const q of QUESTIONS) {
-      for (const kw of q.keywords) {
-        const normKw = normalizeString(kw);
-        if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
+      if (!q._normKeywords) {
+        q._normKeywords = q.keywords.map(normalizeString).filter(kw => kw.length > 3);
+      }
+      for (const normKw of q._normKeywords) {
+        if (normP === normKw || normP.includes(normKw) || normKw.includes(normP)) {
           return q;
         }
       }
