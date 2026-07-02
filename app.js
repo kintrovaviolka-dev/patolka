@@ -2070,7 +2070,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const errorDiv = document.createElement("div");
       errorDiv.className = "message system";
-      errorDiv.innerHTML = `<div class="message-content">Chyba: ${err.message}</div>`;
+      errorDiv.innerHTML = `<div class="message-content">Chyba: ${escapeHTML(err.message)}</div>`;
       chatbotMessages.appendChild(errorDiv);
       scrollToBottom();
     } finally {
