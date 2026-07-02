@@ -1659,7 +1659,7 @@ Karcinomy ŠŽ
 -  Z parafolikuláních buněk (C-buňky) = medulární
 -  Papilární = nejčastější, mikroskopicky se projevuje buňkami s maticovými jádry, která
 jsou v centru projasněná (chromatin se natlačil na jadernou membránu), také bývají
-patrná psammomatózní tělíska, což jsou vrstvené kacilikace, které v důsledku
+patrná psammomatózní tělíska, což jsou vrstvené kalcifikace, které v důsledku
 odumřených papil nádoru → metastázuje lymfogenně do krčních uzlin
 
 -  Folikulární = pravděpodobně vzniká z folikulárního adenomu, makroskopicky se
@@ -1727,7 +1727,7 @@ hyperplázie nebo adenomu příštítných tělísek), MEN 2B (bez hyperparatyre
 
 NÁDORY KŮŽE
 
--  Kůže je největším orgánem lidského těla a vzhledem ke své ploše a neustálémi
+-  Kůže je největším orgánem lidského těla a vzhledem ke své ploše a neustálému
 
 vystavení okolním vlivům (zjm. UV-záření) je také velmi častým místem výskytu
 nádorových onemocnění
