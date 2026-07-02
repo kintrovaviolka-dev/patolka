@@ -59,7 +59,7 @@ const DATA_ONCO_1 = [
     title: "Prekancerózy a dysplázie",
     section: "Obecná onkologie",
     category: "Onkologie",
-    keywords: ["prekanceróza", "dysplázie", "CIN", "metaplazie", "fakultativní", "obligatorní", "atipie"],
+    keywords: ["prekanceróza", "dysplázie", "CIN", "metaplazie", "fakultativní", "obligatorní", "atypie"],
     content: {
       definition: "Prekanceróza (premaligní léze) je patologický stav tkáně, který vykazuje statisticky významně zvýšené riziko vzniku maligního nádoru. Dysplázie je porucha uspořádání, velikosti a tvaru buněk v rámci tkáně (nejčastěji epitelu), která nepředstavuje invazivní růst.",
       etiology: "Chronické dráždění (chemické, fyzikální), virové infekce (HPV), chronické záněty (ulcerozní kolitida, Barrettův jícen) a genetické predispozice.",
