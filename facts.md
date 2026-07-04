@@ -54,7 +54,7 @@ o  HPV = vysoce rizikové sérotypy 16 a 18 → dlaždicobuněčný karcinom
 
 děložního hrdla
 
-o  EBV = DNA virus, cílové buňky jsou B-lymfocyty → burkittův nebo Hodgkin
+o  EBV = DNA virus, cílové buňky jsou B-lymfocyty → Burkittův lymfom nebo Hodgkinův lymfom
 o  HHV-8 = Kaposiho sarkom u AIDS
 o  Hepatitida B a C = přechod do chronicity → cirhóza → hepatocelulární ka.
 o  Virus T-buněčné leukémie = pohlavně přenosný, zaměřen na CD4+ T-lymf.
