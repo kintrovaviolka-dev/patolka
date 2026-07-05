@@ -615,7 +615,7 @@ stenózy střevního lumen → jinak je zde typický i obraz probíhající v d�
 průkaz na CD3, CD7 a CD103 (velkobuněčné formy i na CD30) → příznaky spojené
 s celiakii (malabsorpční syndrom, hubnutí, nechutenství, průjmy)
 
-Mycosis fungioides/Sérazyho syndrom
+Mycosis fungoides/Sézaryho syndrom
 
 -  Kožní lymfom typický svou velkou afinitou k epidermis (epidermotropismus)
 -  3 fáze = premykotická, mykotických plátů, mykotická
@@ -624,9 +624,9 @@ Mycosis fungioides/Sérazyho syndrom
 v bazálních vrstvách epidermis → ve fázi mykotických plátů se tyto atypickké množí a
 dostávají se více na povrch, kde tvoří puchýřky vyplněné nádorovými buňkami
 (Pautrierovy abscesy) → v mykotické, pozdní fázi se lymfom šíří již v dermis
--  Sérazyho syndrom = agresivnější forma mycosis fungioides s generalizovaným
+-  Sézaryho syndrom = agresivnější forma mycosis fungoides s generalizovaným
 postižením kůže (exofoliativní erytrodermie) → typické je také vyplavování
-nádorových buněk s cerebroformními jádry do periferní krve (=Sérazyho buňky)
+nádorových buněk s cerebroformními jádry do periferní krve (=Sézaryho buňky)
 
 8
 
@@ -1800,7 +1800,7 @@ končetinách
 -  Hemangiomy (kapilární)
 -  Kaposiho sarkom a angiosarkom
 
-Lymfomy – mycosis fungioides/Sérazyho syndrom
+Lymfomy – mycosis fungoides/Sézaryho syndrom
 
 MELANOM
 
