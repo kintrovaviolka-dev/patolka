@@ -2105,16 +2105,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorMsg = document.getElementById("feedback-error-msg");
   const errorBackBtn = document.getElementById("feedback-error-back-btn");
 
-  const escapeHTML = (str) => {
-    if (!str) return "";
-    return str.toString()
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;")
-      .trim();
-  };
 
   if (feedbackFab && feedbackDialog) {
     feedbackFab.addEventListener("click", () => {
@@ -2173,9 +2163,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const feedbackType = escapeHTML(feedbackTypeSelect.value);
-      const feedbackName = escapeHTML(feedbackNameInput.value) || "Anonymní";
-      const feedbackMessage = escapeHTML(feedbackMessageInput.value);
+      const feedbackType = escapeHTML(feedbackTypeSelect.value.trim());
+      const feedbackName = escapeHTML(feedbackNameInput.value.trim()) || "Anonymní";
+      const feedbackMessage = escapeHTML(feedbackMessageInput.value.trim());
 
       if (!feedbackMessage) {
         alert("Zpráva nesmí být prázdná.");
