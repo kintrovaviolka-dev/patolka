@@ -1458,13 +1458,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!window.PREPARATY_DATA) return;
     preparatyList.innerHTML = "";
     
+    const normQuery = preparatySearchQuery ? normalizeString(preparatySearchQuery) : null;
     const filtered = window.PREPARATY_DATA.filter(prep => {
       if (preparatyFilter === "zkouskove" && !prep.is_zkouskove) return false;
       if (preparatyFilter === "nezkouskove" && prep.is_zkouskove) return false;
       if (preparatyFilter === "starred" && !isPreparatStarred(prep.id)) return false;
       
-      if (preparatySearchQuery) {
-        const normQuery = normalizeString(preparatySearchQuery);
+      if (normQuery) {
         const normTitle = normalizeString(prep.title);
         const normDesc = normalizeString(prep.description);
         return normTitle.includes(normQuery) || normDesc.includes(normQuery);
