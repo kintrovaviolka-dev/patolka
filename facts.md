@@ -1659,7 +1659,7 @@ Karcinomy ŠŽ
 -  Z parafolikuláních buněk (C-buňky) = medulární
 -  Papilární = nejčastější, mikroskopicky se projevuje buňkami s maticovými jádry, která
 jsou v centru projasněná (chromatin se natlačil na jadernou membránu), také bývají
-patrná psammomatózní tělíska, což jsou vrstvené kacilikace, které v důsledku
+patrná psammomatózní tělíska, což jsou vrstvené kalcifikace, které v důsledku
 odumřených papil nádoru → metastázuje lymfogenně do krčních uzlin
 
 -  Folikulární = pravděpodobně vzniká z folikulárního adenomu, makroskopicky se
@@ -1972,7 +1972,7 @@ a vyvolat tak hyperplázii kostní hmoty → je dobře ohraničený a dobře ods
 ale může recidivovat → dle WHO se jedná o grade I, ale existuje i anaplastický
 meningiom (g. III) → mikroskopicky je tvořen vřetenitými buňka, které jsou
 uspořádany do svazků a vírových struktur (whorls nebo až onion bulbs), také bývají
-přítomná psamomatózní tělíska (vrstvené kalifikace)
+přítomná psamomatózní tělíska (vrstvené kalcifikace)
 
 Ostatní primární nádory CNS
 

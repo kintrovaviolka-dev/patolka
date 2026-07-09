@@ -4,3 +4,6 @@
 ## 2024-05-18 - Playwright frontend verification artifact cleanup
 **Learning:** Installing playwright during frontend verification dynamically creates `package.json` and `package-lock.json` in a project that strictly doesn't use a package manager. These artifacts were blocked during code review.
 **Action:** When performing Playwright UI verification in this codebase, always clean up the testing artifacts (`package.json`, `package-lock.json`, test scripts, logs) before requesting code review and submitting the patch.
+## 2024-05-18 - Playwright Artifact Cleanup Continues
+**Learning:** Playwright generates screenshots alongside node_modules and package.json when verifying UI. Including these binary artifacts in commits violates code boundaries.
+**Action:** When performing Playwright UI verification in this codebase, ensure you remove screenshots alongside all other test artifacts.
