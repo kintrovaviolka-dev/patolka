@@ -615,7 +615,7 @@ stenózy střevního lumen → jinak je zde typický i obraz probíhající v d�
 průkaz na CD3, CD7 a CD103 (velkobuněčné formy i na CD30) → příznaky spojené
 s celiakii (malabsorpční syndrom, hubnutí, nechutenství, průjmy)
 
-Mycosis fungioides/Sérazyho syndrom
+Mycosis fungoides/Sézaryho syndrom
 
 -  Kožní lymfom typický svou velkou afinitou k epidermis (epidermotropismus)
 -  3 fáze = premykotická, mykotických plátů, mykotická
@@ -624,9 +624,9 @@ Mycosis fungioides/Sérazyho syndrom
 v bazálních vrstvách epidermis → ve fázi mykotických plátů se tyto atypickké množí a
 dostávají se více na povrch, kde tvoří puchýřky vyplněné nádorovými buňkami
 (Pautrierovy abscesy) → v mykotické, pozdní fázi se lymfom šíří již v dermis
--  Sérazyho syndrom = agresivnější forma mycosis fungioides s generalizovaným
+-  Sézaryho syndrom = agresivnější forma mycosis fungoides s generalizovaným
 postižením kůže (exofoliativní erytrodermie) → typické je také vyplavování
-nádorových buněk s cerebroformními jádry do periferní krve (=Sérazyho buňky)
+nádorových buněk s cerebroformními jádry do periferní krve (=Sézaryho buňky)
 
 8
 
@@ -752,7 +752,7 @@ NÁDORY PLIC
 
 bronchostenotická pneumonie, může se šířit do mediastina a při infiltraci n. phrenicus
 vyvolává nezvladatelnou škytavku), periferní (mohou prorůstat do pleury a hrudní
-stěny), v plicím apexu (=Pancoustův tumor, může infiltrovat krční a hrudní nervy a
+stěny), v plicím apexu (=Pancoastův tumor, může infiltrovat krční a hrudní nervy a
 vést k Hornerově trias – ptóza víčka, mióza, enoftalmus)
 
 Bronchogenní karcinom
@@ -914,7 +914,7 @@ Intestinální typ = buňky připomínají epitel tenkého střeva (tubuly,
 (chronická gastritida → atrofie → intestinální metaplázie → dysplázie
 → adenokarcinom)
 
-o  Metastázují zjm. lymfogenně (Vichrowova uzlina), hematogenně (játra, plíce)
+o  Metastázují zjm. lymfogenně (Virchowova uzlina), hematogenně (játra, plíce)
 
 -  Neuroendokrinní = vznikají z hyperplastických ECL (produkujících histamin) na
 
@@ -924,7 +924,7 @@ o  NET I. typu = v důsledku hypergastrinémie při chronické autoimunitní
 
 gastritidě → vznik hyperplastických ECL buněk
 
-o  NET II. typu = hypergastrinémie z G-buněk, zjm. Zollinger-Elissonův sy. (tent
+o  NET II. typu = hypergastrinémie z G-buněk, zjm. Zollinger-Ellisonův sy. (tent
 syndrom vzniká často v důsledku gastrinomu z G-buněk, který produkuje
 nadměrné množství gastrinu)
 
@@ -1800,7 +1800,7 @@ končetinách
 -  Hemangiomy (kapilární)
 -  Kaposiho sarkom a angiosarkom
 
-Lymfomy – mycosis fungioides/Sérazyho syndrom
+Lymfomy – mycosis fungoides/Sézaryho syndrom
 
 MELANOM
 
