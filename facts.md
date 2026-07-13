@@ -86,7 +86,7 @@ grade zahrnuje stupeň I a high-grade zbylé 2 stupně
 
 metaplastické léze (př. dlaždicobuněčná metaplázie v dýchacích cestách nebo
 intestinální metaplázie v jícnu), pokud dráždění stále pokračuje, tak se rozvíjí
-dysplázie a tím pádem prekancerózní stav (př. Baretův jícen → adenokarcinom;
+dysplázie a tím pádem prekancerózní stav (př. Barrettův jícen → adenokarcinom;
 dlaždicobuněčný karcinom v dýchacích cestách)
 
 -  Hyperplastické léze = vznikají zjm. v orgánech, které jsou závislé na hormonální
@@ -882,7 +882,7 @@ o  Maligní
 
 ▪  Dlaždicobuněčný karcinom = vzniká njč. v důsledku kouření, alkohol
 → mikroskopicky se objevují keratinové perly, lymfatické metastázy
-▪  Adenokarcinom = prekancerózou pro jeho vznik je Baretův jícen, který
+▪  Adenokarcinom = prekancerózou pro jeho vznik je Barrettův jícen, který
 vzniká njč. v důsledku refluxní choroby jícnu → mikroskopicky je
 tvořen žlázkami intestinálního typu, které mají zachovanou schopnost
 produkci hlenu
@@ -924,11 +924,11 @@ o  NET I. typu = v důsledku hypergastrinémie při chronické autoimunitní
 
 gastritidě → vznik hyperplastických ECL buněk
 
-o  NET II. typu = hypergastrinémie z G-buněk, zjm. Zollinger-Ellisonův sy. (tent
+o  NET II. typu = hypergastrinémie z G-buněk, zjm. Zollinger-Ellisonův sy. (tento
 syndrom vzniká často v důsledku gastrinomu z G-buněk, který produkuje
 nadměrné množství gastrinu)
 
-o  NET III. typu = bez asociace s atrofickou gastritidou nebo Zoll-El. Sy.
+o  NET III. typu = bez asociace s atrofickou gastritidou nebo Zollinger-Ellisonův sy.
 
 12
 
