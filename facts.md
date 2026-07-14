@@ -1928,7 +1928,7 @@ solidní nádory dětského věku → vzniká z nezralých neuroblastů (bazofil
 výběžků nádorových buněk
 
 -  Metastazuje lymfogenně i hematogenně (zjm. játra a kosti)
--  Má schopnost dozrávat a zmenit se v méně agresviní ganglioneruoblastom nebo
+-  Má schopnost dozrávat a změnit se v méně agresivní ganglioneuroblastom nebo
 
 v zcela benigní ganglioneurom
 
@@ -2049,7 +2049,7 @@ vyskytuje u pacientů se syndromem Li-Fraumeni (dědičné, vyšší riziko mali
 
 METASTATICKÉ NÁDORY MOZKU
 
--  Cca 50% nádorů mozku a míchy jsou metstázy (ka plic, prsu, GIT a ledvin nebo
+-  Cca 50% nádorů mozku a míchy jsou metastázy (ka plic, prsu, GIT a ledvin nebo
 
 -
 
