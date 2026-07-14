@@ -1015,7 +1015,7 @@ nedostatek pohybu; ale také se nádor může vyskytovat v souvislosti s idiopat
 záněty (MC, UC) a genetickými predispozicemi → nádor se rozděluje na pravostranný
 a levostranný
 
-o  Levostranný CRC = rostou endocyticky, ulcerovaně nebo anulárně, čímž
+o  Levostranný CRC = rostou endofyticky, ulcerovaně nebo anulárně, čímž
 
 mohou způsobovat stenózu střevního lumina → projevuje se zácpou, která
 může vyústit až v ileus, tenesmy, bolest v levém hypochondriu; kvůli
@@ -1306,7 +1306,7 @@ Karcinomy děložního hrdla
 -
 
 Jsou úzce spjaty s nákazou vysoce rizikovými sérotypy HPV 16, 18, který se nějčastěji
-podílí na rozvoji dlaždicobuněčného karcinomu (roste exofiticky, papilárně
+podílí na rozvoji dlaždicobuněčného karcinomu (roste exofyticky, papilárně
 s ulcerovaným povrchem, ale může i endofyticky a invadovat do stromatu; jsou zde
 patrné buňky s virovými inkluzemi a perinukleárním haló – koilocyty); méně často se
 podílí na rozvojí adenokarcinom (njč. endometriální typ adenokarcinomu)
@@ -1632,7 +1632,7 @@ oxidaci katecholaminů v chromafinních buňkách) → pro tento nádor je
 charakteristická nekontrolovatelná nadprodukce katecholaminů (zjm. noradrenalinu) a
 vznik záchvatovité (paroxysmální) hypertenze (náhle vzniklá hypertenze, kdy
 diastolický TK může dosahovat až 140 mmHg, je život ohrožující a projevuje se
-palpitacemi, pocetím a bolestí hlavy) → mikroskopicky jsou nádorové buňky
+palpitacemi, pocením a bolestí hlavy) → mikroskopicky jsou nádorové buňky
 alveolárně uspořádány, čímž vytváří taková atypická hnízda, která se nazývají jako
 Zellballen; Maligní feochromocytom je větší a má známky lokálního invazivního růstu
 
