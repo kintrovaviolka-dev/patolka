@@ -760,7 +760,7 @@ Bronchogenní karcinom
 -  Vzchází z bronchiálního epitelu, spojeno s kouřením
 -  Malobuněčný karcinom (SCLC, ovískový)
 
-o  Nádor je tvořen z Kluchitského buněk (neuroendokrinní buňky) → často
+o  Nádor je tvořen z Kulchitského buněk (neuroendokrinní buňky) → často
 
 vyvolává paraneoplastické projevy (produkce ADH, ACTH, serotoninu, …)
 o  Lambert-Eatonův syndrom (zkřížená reakce, kdy Ab, které se vytvořily proti
@@ -1822,7 +1822,7 @@ infiltrace koria a vertikální růst koleruje s agresivitou nádoru)
 o  Superficiálně šířící se melanom (SSM) = nejčastější, v epidermis jsou patrná
 
 hnízda atypických melanocytů, která se šíří intraepidermálně
-o  Lentigo maligna melanom (Hutschinsonova melanotická skvrna) =
+o  Lentigo maligna melanom (Hutchinsonova melanotická skvrna) =
 
 mikroskopicky se jedná o CIS, který často vzniká v místě poškození UV
 zářením → vyskytuje se zjm. na obličeji starších lidí a v této formě může
@@ -1851,7 +1851,7 @@ anatomické hranice kůže a v jaké vrstvě se invazivní komponenta nachází
 
 (Asymmetry), B (border), C (colour), D (diameter >6 mm, 4 mm se už musí sledovat),
 E (elevation – postupný vývoj léze)
-Imunohistopatologie = S100, Melan A, HBM-45, Ki-67 (proliferační marker)
+Imunohistopatologie = S100, Melan A, HMB-45, Ki-67 (proliferační marker)
 
 -
 
