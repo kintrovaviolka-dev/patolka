@@ -8,3 +8,6 @@
 ## 2024-07-11 - Domain-specific terminology rules
 **Learning:** Medical eponyms and terms (like Virchow, Zollinger-Ellison, Sézary, fungoides, Pancoast) are stored not just in JS objects (`data_onco_*.js`), but mirrored directly in reference documents like `facts.md`. Updating just the data file leaves the documentation inconsistent.
 **Action:** Always search globally across both JS data files and markdown files when correcting medical terminology to ensure complete accuracy.
+## 2024-07-17 - Typo correction in medical terminology (makula -> mukokéla)
+**Learning:** Found an incorrect terminology usage where "makula" (a flat skin lesion/spot) was used instead of "mukokéla" (a retention cyst of a minor salivary gland) in both `data_onco_1.js` and `facts.md`.
+**Action:** When correcting medical terms, always consider the physiological context (a cyst in a salivary gland is a mucocele, not a macule). Continue to search both data files and markdown documentation for consistency.
