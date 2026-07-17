@@ -128,7 +128,7 @@ hemoragická pseudocysta)
 který způsobí obstrukci vývodu → hromadění sekretu → dilatace vývodu → tlaková
 atrofie výstelky
 
--  Retenční = aterom (mazová žláza), makula (malá slinná žláza, ret, tváře, spodina úst,
+-  Retenční = aterom (mazová žláza), mukokéla (malá slinná žláza, ret, tváře, spodina úst,
 pokud praskne a uvolní se hlen → makrofágy jen fagocytují a vytvoří se mukofagický
 granulom), comedo (mazová žlázka u vlasového folikulu, černá tečka), Ovula Nabothi
 (vzniká metaplastickým přerůstáním dlaždicového epitelu přes endocervikální žlázku
