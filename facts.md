@@ -37,7 +37,7 @@ detoxikační pochody, zjm. cytochrom P450), patří zde např. aromatické uhlo
 (smog, žvýkací tabák → měkké tkáně; cigaretový kouř → karcinomy plic), azobarviva
 (potíže způsobují v místě své metabolizace – játra; nebo vylučování – ledviny,
 měchýř, … → kdysi se využívaly jako barviva margarínů), nitrosaminy/nitrosamidy
-(pro zvýšení trvanlivosti masa → potencionální kancerogeny pro GIT)
+(pro zvýšení trvanlivosti masa → potenciální kancerogeny pro GIT)
 
 Biologické příčiny
 
@@ -75,7 +75,7 @@ dělíme do 3 stupňů → III. stupeň se dělí ještě nad podtypy A a B, z �
 1
 
 zahrnuje CIS (carcinoma in situ) → Carcinoma in situ se vlastně nejvyšší stupeň
-dysplázie a má charakteri karcinomu, ale stále nedochází k porušení BM a invazi do
+dysplázie a má charakteristiky karcinomu, ale stále nedochází k porušení BM a invazi do
 stromatu → dle lokalizace intraepiteliální neoplázie označujeme např. jako CIN
 (cervikální), PeIN (penilní), VaIN (vaginální), VIN (vulvární), PIN (prostatická), …
 -  V anogenitální oblasti ještě rozlišujeme skvamózní intraepiteliální neoplázie, kde low-
@@ -103,7 +103,7 @@ Hyperplastické procesy
 
 -  Tvorba uzlů (nodulární hyperplázie prostaty), popř. hyperplázie epidermis v okolí
 
-vředu jako pseudoepiteliomatózní hyperplázie epitelu, která připomíná spinocelurlání
+vředu jako pseudoepiteliomatózní hyperplázie epitelu, která připomíná spinocelulární
 karcinom, ale bez jaderných atypií, četné, ale neatypické mitózy)
 
 Hamartom
