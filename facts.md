@@ -729,7 +729,7 @@ i metaplastické osifikaci
 
 -  Další (hemangiom, fibrom, lipom, rhabdomyom)
 
-o  Rhambdomyomy = solitární, bělavé uzly, cytoplazma s vakuloly glykogenu →
+o  Rhabdomyomy = solitární, bělavé uzly, cytoplazma s vakuolami glykogenu →
 
 z cytoplazmy zbývají jen tenké proužky (=pavoukovitý vzhled)
 
@@ -1632,7 +1632,7 @@ oxidaci katecholaminů v chromafinních buňkách) → pro tento nádor je
 charakteristická nekontrolovatelná nadprodukce katecholaminů (zjm. noradrenalinu) a
 vznik záchvatovité (paroxysmální) hypertenze (náhle vzniklá hypertenze, kdy
 diastolický TK může dosahovat až 140 mmHg, je život ohrožující a projevuje se
-palpitacemi, pocetím a bolestí hlavy) → mikroskopicky jsou nádorové buňky
+palpitacemi, pocením a bolestí hlavy) → mikroskopicky jsou nádorové buňky
 alveolárně uspořádány, čímž vytváří taková atypická hnízda, která se nazývají jako
 Zellballen; Maligní feochromocytom je větší a má známky lokálního invazivního růstu
 
@@ -1650,7 +1650,7 @@ Folikulární adenom
 -  Benigní, epiteliální nádor, solitární uzel, který je ohraničený vazivovým pouzdrem
 -
 
-Inkocytární (Hürthleho) adenom = varianta tvořena buňkami s nápadně eozinofilní a
+Onkocytární (Hürthleho) adenom = varianta tvořena buňkami s nápadně eozinofilní a
 granulovanou cytoplazmou (hodně mitochondrií)
 
 Karcinomy ŠŽ
