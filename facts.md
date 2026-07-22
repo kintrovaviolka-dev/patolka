@@ -1632,7 +1632,7 @@ oxidaci katecholaminů v chromafinních buňkách) → pro tento nádor je
 charakteristická nekontrolovatelná nadprodukce katecholaminů (zjm. noradrenalinu) a
 vznik záchvatovité (paroxysmální) hypertenze (náhle vzniklá hypertenze, kdy
 diastolický TK může dosahovat až 140 mmHg, je život ohrožující a projevuje se
-palpitacemi, pocetím a bolestí hlavy) → mikroskopicky jsou nádorové buňky
+palpitacemi, pocením a bolestí hlavy) → mikroskopicky jsou nádorové buňky
 alveolárně uspořádány, čímž vytváří taková atypická hnízda, která se nazývají jako
 Zellballen; Maligní feochromocytom je větší a má známky lokálního invazivního růstu
 
