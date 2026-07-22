@@ -8,3 +8,6 @@
 ## 2024-07-11 - Domain-specific terminology rules
 **Learning:** Medical eponyms and terms (like Virchow, Zollinger-Ellison, Sézary, fungoides, Pancoast) are stored not just in JS objects (`data_onco_*.js`), but mirrored directly in reference documents like `facts.md`. Updating just the data file leaves the documentation inconsistent.
 **Action:** Always search globally across both JS data files and markdown files when correcting medical terminology to ensure complete accuracy.
+## 2024-05-02 - Czech Homonym spellcheck limitations
+**Learning:** Valid Czech homonyms (e.g., 'pocetím'/conception vs 'pocením'/sweating) easily bypass generic spellcheckers but remain contextually incorrect, particularly in medical text.
+**Action:** Audit text manually for context when standard spellchecking passes, specifically focusing on word derivatives.
