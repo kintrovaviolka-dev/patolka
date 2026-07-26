@@ -2068,7 +2068,7 @@ může být prvním příznakem epileptický záchvat
 NÁDORY KOSTÍ
 Osteogenní nádory
 
--  Vznikají nekontrolovatelnou proliferací chondroblastů
+-  Vznikají nekontrolovatelnou proliferací osteoblastů
 -  Osteom = benigní, roste na povrchu dlouhých kostí, které vznikly membránózní
 
 osifikací (zjm. kosti lebky) nebo se nachází ve dřeňové dutině dlouhých kostí, panve a
