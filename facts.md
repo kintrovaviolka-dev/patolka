@@ -1106,13 +1106,13 @@ hypoglykémie (zjm. po hladovění/fyzické námaze), zmatenost až ztráta věd
 hypergastrinémii → hypersekrece HCl → vznik peptických vředů žaludku/duodena →
 objevují se bolesti v souvislosti s jídlem a průjmy
 
--  Glukagom = zvýšená produkce glukagonu → rozvíjí se syndrom, který zahrnuje mírný
+-  Glukagonom = zvýšená produkce glukagonu → rozvíjí se syndrom, který zahrnuje mírný
 
 DM, anémii a migrující erythém
 
 -  VIPom = nadměrná sekrece VIP (vazoaktivní intersticiální peptid) – zvyšuje sekreci
 vody a elektrolytů ve střevě, inhibuje sekreci HCl → vyvolává syndrom WDHA
-(wattery diarrhea, hypokalemia, achlorhydria) → vodnaté průjmy vedoucí
+(watery diarrhea, hypokalemia, achlorhydria) → vodnaté průjmy vedoucí
 k nedostatku K+ a ztrátě HCl
 
 -  Karcinoid = produkce serotoninu → karcinoidový syndrom (viz. níže)
@@ -1822,7 +1822,7 @@ infiltrace koria a vertikální růst koleruje s agresivitou nádoru)
 o  Superficiálně šířící se melanom (SSM) = nejčastější, v epidermis jsou patrná
 
 hnízda atypických melanocytů, která se šíří intraepidermálně
-o  Lentigo maligna melanom (Hutschinsonova melanotická skvrna) =
+o  Lentigo maligna melanom (Hutchinsonova melanotická skvrna) =
 
 mikroskopicky se jedná o CIS, který často vzniká v místě poškození UV
 zářením → vyskytuje se zjm. na obličeji starších lidí a v této formě může
@@ -1851,7 +1851,7 @@ anatomické hranice kůže a v jaké vrstvě se invazivní komponenta nachází
 
 (Asymmetry), B (border), C (colour), D (diameter >6 mm, 4 mm se už musí sledovat),
 E (elevation – postupný vývoj léze)
-Imunohistopatologie = S100, Melan A, HBM-45, Ki-67 (proliferační marker)
+Imunohistopatologie = S100, Melan A, HMB-45, Ki-67 (proliferační marker)
 
 -
 
