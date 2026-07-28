@@ -598,7 +598,7 @@ přežití nádorových buněk → nádorové buňky mají tvar jetelového list
 Extranodální NK/T-lymfom
 
 -  Vzniká v extranodálních lokalizacích – nazofaryng, kůže, varlata
--  Rostou perivaskulárně → invazují do cév → trombotzace → lokální ichémie a
+-  Rostou perivaskulárně → invazují do cév → trombotizace → lokální ischémie a
 
 nekrotizace
 
@@ -619,14 +619,14 @@ Mycosis fungoides/Sézaryho syndrom
 
 -  Kožní lymfom typický svou velkou afinitou k epidermis (epidermotropismus)
 -  3 fáze = premykotická, mykotických plátů, mykotická
--  Z počátku se atypické buňky s cerebroformními jádry vyskytují pouze lineárně
+-  Z počátku se atypické buňky s cerebriformními jádry vyskytují pouze lineárně
 
-v bazálních vrstvách epidermis → ve fázi mykotických plátů se tyto atypickké množí a
+v bazálních vrstvách epidermis → ve fázi mykotických plátů se tyto atypické množí a
 dostávají se více na povrch, kde tvoří puchýřky vyplněné nádorovými buňkami
 (Pautrierovy abscesy) → v mykotické, pozdní fázi se lymfom šíří již v dermis
 -  Sézaryho syndrom = agresivnější forma mycosis fungoides s generalizovaným
-postižením kůže (exofoliativní erytrodermie) → typické je také vyplavování
-nádorových buněk s cerebroformními jádry do periferní krve (=Sézaryho buňky)
+postižením kůže (exfoliativní erytrodermie) → typické je také vyplavování
+nádorových buněk s cerebriformními jádry do periferní krve (=Sézaryho buňky)
 
 8
 
