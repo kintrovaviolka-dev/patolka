@@ -180,7 +180,7 @@ KRITÉRIA BENIGNITY A MALIGNITY
 o  Pleomorfie = velikost a tvar buněk je variabilní
 o  Vyšší N/C poměr = velké jádro k poměru cytoplazmy → př. small blue cells –
 
-meduloblastom, lymfomy, malobuěnčný karcinom plic
+meduloblastom, lymfomy, malobuněčný karcinom plic
 
 o  Anizonukleóza = velikost a tvar jader je variabilní
 o  Hyperchromázie jader = tmavší od nenádorových (hodně hrubého chromatinu)
