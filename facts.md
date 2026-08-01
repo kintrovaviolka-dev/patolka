@@ -180,7 +180,7 @@ KRITÉRIA BENIGNITY A MALIGNITY
 o  Pleomorfie = velikost a tvar buněk je variabilní
 o  Vyšší N/C poměr = velké jádro k poměru cytoplazmy → př. small blue cells –
 
-meduloblastom, lymfomy, malobuěnčný karcinom plic
+meduloblastom, lymfomy, malobuněčný karcinom plic
 
 o  Anizonukleóza = velikost a tvar jader je variabilní
 o  Hyperchromázie jader = tmavší od nenádorových (hodně hrubého chromatinu)
@@ -2071,7 +2071,7 @@ Osteogenní nádory
 -  Vznikají nekontrolovatelnou proliferací osteoblastů
 -  Osteom = benigní, roste na povrchu dlouhých kostí, které vznikly membránózní
 
-osifikací (zjm. kosti lebky) nebo se nachází ve dřeňové dutině dlouhých kostí, panve a
+osifikací (zjm. kosti lebky) nebo se nachází ve dřeňové dutině dlouhých kostí, pánve a
 obratlů → mnohočetný výskyt osteomů se nazývá jako Gardnerův tumor →
 mikroskopicky je tvořen zralou kostní tkání (kompaktní/spongiózní)
 
