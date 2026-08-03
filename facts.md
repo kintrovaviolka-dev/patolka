@@ -977,7 +977,7 @@ přítomné cytologické atypie, tak se již jedná o nádorovou progresi), trad
 
 -  K těmto polypům mohou mít predispozici lidé s polypózami, jako např.
 
-o  Familiární adenomatózní polypóza = AD, mutace APC (tumor-suspensorový
+o  Familiární adenomatózní polypóza = AD, mutace APC (tumor-supresorový
 gen) → dochází k odbrzdění jaderné transkripce těch faktorů, které se podílejí
 na proliferaci → proto se u těchto lidí nachází vícečetné adenomy ve střevě
 o  MUTYH-polypóza = AR, dochází k mutaci MUTYH genu, který kóduje stejný
@@ -1717,7 +1717,7 @@ hyperplázií v několika endokrinních orgánech
 
 -  MEN 1 (Wernerův syndrom) = mutace MEN1 na 11q, který kóduje menin (=tumor-
 
-suspensorový gen) → odbrzdění faktorů způsobující proliferaci
+supresorový gen) → odbrzdění faktorů způsobující proliferaci
 
 -  MEN 2 (Sippleův syndrom) = mutace proonkogenu RET → nález difúzních a
 
