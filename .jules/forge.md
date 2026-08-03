@@ -8,3 +8,7 @@
 ## 2024-07-11 - Domain-specific terminology rules
 **Learning:** Medical eponyms and terms (like Virchow, Zollinger-Ellison, Sézary, fungoides, Pancoast) are stored not just in JS objects (`data_onco_*.js`), but mirrored directly in reference documents like `facts.md`. Updating just the data file leaves the documentation inconsistent.
 **Action:** Always search globally across both JS data files and markdown files when correcting medical terminology to ensure complete accuracy.
+
+## 2026-08-03 - Medical terminology typos (supresor vs suspensor)
+**Learning:** Discovered typos where 'tumor-suspensorový' was incorrectly used instead of 'tumor-supresorový', along with 'opocením' instead of 'pocením'. These represent domain-specific terminology errors.
+**Action:** When updating data, always verify domain-specific terminology like tumor suppressor genes to prevent factually incorrect information from being displayed.
