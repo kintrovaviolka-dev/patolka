@@ -2707,5 +2707,75 @@ dialog::backdrop {
   flex: 1;
 }
 
+/* --- Support Button Styling (Buy me a Monster) --- */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 80px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.support-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.02);
+}
+
+.support-btn:hover {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(52, 211, 153, 0.5);
+  color: #6ee7b7;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
+}
+
+.support-icon {
+  width: 18px;
+  height: 18px;
+  color: #34d399;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.support-btn:hover .support-icon {
+  color: #6ee7b7;
+}
+
 
 
