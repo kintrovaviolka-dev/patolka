@@ -1785,7 +1785,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const contentDiv = document.createElement("div");
     contentDiv.className = "message-content";
-    contentDiv.innerHTML = role === "assistant" ? parseMarkdown(text) : text;
+    contentDiv.innerHTML = role === "assistant" ? parseMarkdown(text) : escapeHTML(text);
     
     messageDiv.appendChild(contentDiv);
     chatbotMessages.appendChild(messageDiv);
