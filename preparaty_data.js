@@ -362,7 +362,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1740831626854,
-    "title": "ARDS dospělých (covid",
+    "title": "ARDS dospělých (covid)",
     "is_zkouskove": false,
     "images": [
       "part5/paste-855bca0903b43d32cc31908e72e2132ac2b83b61.jpg",
@@ -1317,7 +1317,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744012035794,
-    "title": "teratom - struma ovárií)",
+    "title": "Teratom - struma ovárií",
     "is_zkouskove": false,
     "images": [
       "part2/paste-3b6736bdb7fab129a21afab2ba331990ef45ee19.jpg",
@@ -1327,7 +1327,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744012116283,
-    "title": "Granulosa cell tumor)",
+    "title": "Granulosa cell tumor",
     "is_zkouskove": false,
     "images": [
       "part5/paste-96c77e9228bd569911bc4ea8d0e22bf62b790816.jpg",
@@ -1337,7 +1337,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744012240468,
-    "title": "Rhabdomyosarkom embryonální cervix)",
+    "title": "Rhabdomyosarkom embryonální (cervix)",
     "is_zkouskove": false,
     "images": [
       "part6/paste-ba5a6c827e422056491de4a03664cea7ed9965a4.jpg",
@@ -1511,7 +1511,7 @@ const PREPARATY_DATA = [
   },
   {
     "id": 1744313536886,
-    "title": "Mucinózní karcinom (metastáza v plicích))",
+    "title": "Mucinózní karcinom (metastáza v plicích)",
     "is_zkouskove": false,
     "images": [
       "part4/paste-671f3541e0af7e0176a62e583681026c5872f08f.jpg",
