@@ -307,7 +307,7 @@ const DATA_PATOLOGIE_2 = [
   {
     id: "pat-29",
     title: "Trombóza (rozdělení, příčiny vzniku, následky, organizace trombu)",
-    section: "Poruchy oběhu and perfuze",
+    section: "Poruchy oběhu a perfuze",
     keywords: ["trombóza", "trombus", "Virchow", "endotel", "hemostáza", "koagulace", "destičky"],
     content: {
       definition: "Trombóza je patologická intravaskulární koagulace krve zaživa, která vede k tvorbě sraženiny (trombu) a může způsobit částečnou či úplnou obstrukci cévy.",
