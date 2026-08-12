@@ -12,3 +12,6 @@
 ## 2026-08-03 - Medical terminology typos (supresor vs suspensor)
 **Learning:** Discovered typos where 'tumor-suspensorový' was incorrectly used instead of 'tumor-supresorový', along with 'opocením' instead of 'pocením'. These represent domain-specific terminology errors.
 **Action:** When updating data, always verify domain-specific terminology like tumor suppressor genes to prevent factually incorrect information from being displayed.
+## 2024-08-12 - Untranslated English conjunctions in Czech text
+**Learning:** Found several instances where the English conjunction "and" was mistakenly used instead of the Czech "a" in otherwise fully Czech sentences. Valid English medical terms/mnemonics (like "salt-and-pepper") should remain untouched.
+**Action:** When auditing translated or localized content, explicitly check for common English conjunctions or prepositions that may have been missed by generic spellcheckers, while preserving valid English medical acronyms and mnemonics.
