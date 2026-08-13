@@ -12,3 +12,7 @@
 ## 2026-08-03 - Medical terminology typos (supresor vs suspensor)
 **Learning:** Discovered typos where 'tumor-suspensorový' was incorrectly used instead of 'tumor-supresorový', along with 'opocením' instead of 'pocením'. These represent domain-specific terminology errors.
 **Action:** When updating data, always verify domain-specific terminology like tumor suppressor genes to prevent factually incorrect information from being displayed.
+
+## 2026-08-13 - English conjunctions in Czech text
+**Learning:** English conjunctions ('and') were mistakenly used instead of Czech ('a') in the Czech medical data.
+**Action:** Replaced 'and' with the Czech 'a' in `data_onco_1.js`, `data_onco_2.js`, and `data_patologie_2.js`, ensuring valid English acronyms (like Lymphocytic and Histiocytic) were preserved.
