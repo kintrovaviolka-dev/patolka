@@ -16,3 +16,6 @@
 ## 2026-08-13 - English conjunctions in Czech text
 **Learning:** English conjunctions ('and') were mistakenly used instead of Czech ('a') in the Czech medical data.
 **Action:** Replaced 'and' with the Czech 'a' in `data_onco_1.js`, `data_onco_2.js`, and `data_patologie_2.js`, ensuring valid English acronyms (like Lymphocytic and Histiocytic) were preserved.
+## 2024-05-18 - Untranslated English terminology
+**Learning:** Found untranslated English medical terms in the Czech content (e.g. "salt-and-pepper chromatin", "point of no return"). Sometimes they are left in brackets as duplicates.
+**Action:** When updating content, be mindful of redundant English terminology in brackets and remove or translate them to Czech to maintain content consistency.

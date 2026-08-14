@@ -898,7 +898,7 @@ const DATA_ONCO_1 = [
           "Smoldering myelom"
         ],
         correct: 1,
-        explanation: "MGUS (Monoclonal Gammopathy of Undetermined Significance) je stabilní prekurzor myelomu. Nemá žádné klinické projevy orgánového poškození. Ročně jich cca 1 % přechází do manifestního myelomu."
+        explanation: "MGUS (Monoklonální gamapatie nejasného významu) je stabilní prekurzor myelomu. Nemá žádné klinické projevy orgánového poškození. Ročně jich cca 1 % přechází do manifestního myelomu."
       },
       {
         question: "Jaký je hlavní mechanismus vzniku osteolytických ložisek (vzhledu prostříleného plechu) u pacientů s myelomem?",

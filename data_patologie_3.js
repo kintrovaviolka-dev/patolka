@@ -644,7 +644,7 @@ const DATA_PATOLOGIE_3 = [
       pathogenesis: "Poruchou energetického metabolismu buňky klesá aktivita membránových pump, hromadí se voda a ionty. Dystrofie se dělí podle postižené látky na: 1. Parenchymatózní (hydropická, vakuolární - hromadění vody v cytoplasmě), 2. Mukózní (hromadění hlenu - např. u mukoviscidózy), 3. Lipidové (steatóza, lipidózy), 4. Proteinové (hyalinní zkapalnění, amyloidóza), 5. Minerální (patologické kalcifikace, litiáza), 6. Pigmentové poruchy.",
       macroscopy: "Orgány postižené dystrofií bývají zvětšené, těžší, mají napjaté pouzdro a zakalený vzhled na řezu (kalná zbytnění). U pokročilých regresivních změn dochází k atrofii až nekróze orgánu.",
       microscopy: "Hydropická dystrofie: buňky jsou zvětšené, cytoplasma je světlá, opticky prázdná (obsahuje vakuoly vody), jádro je zatlačeno. Hyalinní kapénky: přítomnost jasně růžových (eozinofilních) proteinových kapének v cytoplasmě (např. v buňkách proximálních tubulů ledvin při proteinurii).",
-      clinical: "Dystrofické změny jsou v počátečních stadiích plně reverzibilní. Pokud se odstraní příčina (např. se obnoví dodávka kyslíku), buňka se zotaví. Při překročení bodu zvratu (point of no return) přechází dystrofie v ireversibilní poškození a buňka umírá (nekróza)."
+      clinical: "Dystrofické změny jsou v počátečních stadiích plně reverzibilní. Pokud se odstraní příčina (např. se obnoví dodávka kyslíku), buňka se zotaví. Při překročení bodu zvratu přechází dystrofie v ireversibilní poškození a buňka umírá (nekróza)."
     },
     quiz: [
       {
@@ -659,7 +659,7 @@ const DATA_PATOLOGIE_3 = [
         explanation: "Hydropická dystrofie je nejčasnější odpovědí buňky na poškození (např. mírnou hypoxii). Selhává Na+/K+ pumpa, sodík a voda se hromadí v buňce, která oteče. Po obnovení ATP se voda odčerpá a buňka funguje normálně."
       },
       {
-        question: "Jak definujeme pojem 'bod zvratu' (point of no return) v buněčné patologii, za kterým se reverzibilní poškození buňky mění v nekrózu?",
+        question: "Jak definujeme pojem 'bod zvratu' v buněčné patologii, za kterým se reverzibilní poškození buňky mění v nekrózu?",
         options: [
           "Okamžik, kdy se pacient rozhodne navštívit lékaře",
           "Hranici, za kterou se reverzibilní dystrofie buňky mění v ireversibilní poškození vedoucí nevyhnutelně k nekróze (smrti) buňky",
