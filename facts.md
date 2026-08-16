@@ -382,7 +382,7 @@ o  Pleomorfní = nejagresivnější končetinový nádor
 Vaskulární nádory
 Myxom
 
-NEUROEKTODERMÁLNÍ NÁDORY – viz. nádory periferních nervů
+NEUROEKTODERMÁLNÍ NÁDORY – viz nádory periferních nervů
 
 CARCINOMA IN SITU
 
@@ -1090,7 +1090,7 @@ faktory (kouření, DM, alkohol, hereditární syndromy – stavy, které způso
 chronickou pankreatitidu) → solidní, neohraničený, tuhý, njč. roste na hlavě pankreatu
 a infiltruje ductus choledochus s následným vznikem stenózy → šíří se perineurální do
 peritonea, kde se podílí na rozvoji karcinózy peritonea → metastázuje zjm.
-lymfogenně → většinou je tvořen dobře diferencovanýmí gnadulárními/tubulárními
+lymfogenně → většinou je tvořen dobře diferencovanými glandulárními/tubulárními
 strukturami, které infiltrují pankreatický parenchym → nádorový epitel je plochý
 s kubickými buňkami
 
@@ -1115,7 +1115,7 @@ vody a elektrolytů ve střevě, inhibuje sekreci HCl → vyvolává syndrom WDH
 (watery diarrhea, hypokalemia, achlorhydria) → vodnaté průjmy vedoucí
 k nedostatku K+ a ztrátě HCl
 
--  Karcinoid = produkce serotoninu → karcinoidový syndrom (viz. níže)
+-  Karcinoid = produkce serotoninu → karcinoidový syndrom (viz níže)
 
 NEUROENDOKRINNÍ NÁDORY GIT A PLIC
 
