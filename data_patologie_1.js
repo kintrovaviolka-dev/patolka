@@ -42,7 +42,7 @@ const DATA_PATOLOGIE_1 = [
     id: "pat-2",
     title: "Kadaverózní změny (fyzikální, chemické pochody)",
     section: "Postmortální změny",
-    keywords: ["rigidita", "algor", "livor", "palor", "autolýza", "hniloba", "tous", "cruor"],
+    keywords: ["rigidita", "algor", "livor", "palor", "autolýza", "hniloba", "rigor", "cruor"],
     content: {
       definition: "Kadaverózní (posmrtné) změny jsou fyzikální a chemické pochody, ke kterým dochází v organismu po smrti v důsledku zástavy oběhu, metabolismu a buněčného dýchání.",
       etiology: "Absence dodávky kyslíku a živin, hromadění kyselých metabolitů a aktivace lytických enzymů v buňkách.",
@@ -580,7 +580,7 @@ const DATA_PATOLOGIE_1 = [
       etiology: "Hemosideróza: opakované krevní transfúze, masivní hemolýza (systémová) nebo lokální krvácení (např. hematom, městnání v plicích). Hemochromatóza: autozomálně recesivní mutace genu HFE (způsobuje hyperabsorpci železa ve střevě).",
       pathogenesis: "Nadbytek železa v buňkách přesahuje kapacitu ferritinu, železo se ukládá jako hemosiderin (agregáty ferritinu). Volné železo reaguje Fentonovou reakcí za vzniku extrémně reaktivních hydroxylových radikálů (ROS), které poškozují membrány a stimulují fibrogenezi.",
       macroscopy: "Hemochromatóza: 'bronzový diabetes' - kůže má kovově bronzové zbarvení, játra jsou zvětšená, tuhá, rezavě hnědá a uzlovitá (cirhóza), slinivka je svraštělá a tmavě hnědá, srdce je zvětšené (kardiomyopatie).",
-      microscopy: "Hemosiderin: hrubší, zlatohnědá zrna uložená v cytoplasmě makrofágů (např. siderofágy v plicích) nebo hepatocytů. Prokazuje se Perlovou reakcí (barvení berlínskou modří - hemosiderin reaguje na jasně modrou barvu). U hemochromatózy je patrná vazivová přestavba jater a poškození buněk.",
+      microscopy: "Hemosiderin: hrubší, zlatohnědá zrna uložená v cytoplasmě makrofágů (např. siderofágy v plicích) nebo hepatocytů. Prokazuje se Perlsovou reakcí (barvení berlínskou modří - hemosiderin reaguje na jasně modrou barvu). U hemochromatózy je patrná vazivová přestavba jater a poškození buněk.",
       clinical: "Hemochromatóza se projevuje klasickou triádou: cirhóza jater, bronzová pigmentace kůže a diabetes mellitus (poškození ostrůvků slinivky). Hrozí také srdeční selhání a vysoké riziko rozvoje hepatocelulárního karcinomu."
     },
     quiz: [
@@ -588,7 +588,7 @@ const DATA_PATOLOGIE_1 = [
         question: "Které speciální barvicí metody se používají v histologii k jednoznačnému rozlišení hemosiderinu (obsahujícího železo) od lipofuscinu?",
         options: [
           "Kongočervení",
-          "Perlovou reakcí (barvení berlínskou modří k průkazu Fe3+)",
+          "Perlsovou reakcí (barvení berlínskou modří k průkazu Fe3+)",
           "Barvením podle Ziehl-Neelsena",
           "Sudanovou žlutí"
         ],
@@ -656,7 +656,7 @@ const DATA_PATOLOGIE_1 = [
       etiology: "Poškození jaterního parenchymu: virové hepatitidy (A-E), alkoholické poškození jater, toxické vlivy (paracetamol, jedy hub - faloidin), jaterní cirhóza, vrozené poruchy transportu (Gilbertův, Crigler-Najjarův, Dubin-Johnsonův syndrom).",
       pathogenesis: "Poškozené hepatocyty nedokážou efektivně metabolizovat bilirubin. Dochází k poruše jeho konjugace a/nebo k úniku již konjugovaného bilirubinu z poškozených hepatocytů či žlučových kanálků zpět do krevního oběhu. V krvi je proto zvýšen jak konjugovaný, tak i nekonjugovaný bilirubin.",
       macroscopy: "Kůže a sliznice mají oranžovožlutý až špinavě žlutý odstín (rubínový ikterus). Játra mohou vykazovat změny podle vyvolávající příčiny - zmenšená a svraštělá u cirhózy nebo žlutá a zvětšená u steatózy/hepatitidy.",
-      microscopy: "Přítomnost žlučového pigmentu (cholestáza) - žlučové zátky v dilatovaných žlučových kanálcích (biliární tromby), žlučový pigment v cytoplasmě hepatocytů a Kupfferových buněk. Hnací degenerace (balonová) hepatocytů, ložiskové nekrózy, zánětlivá infiltrace v portálních polích.",
+      microscopy: "Přítomnost žlučového pigmentu (cholestáza) - žlučové zátky v dilatovaných žlučových kanálcích (biliární tromby), žlučový pigment v cytoplasmě hepatocytů a Kupfferových buněk. Hydropická degenerace (balonová) hepatocytů, ložiskové nekrózy, zánětlivá infiltrace v portálních polích.",
       clinical: "V laboratoři je smíšená hyperbilirubinémie, výrazná elevace aminotransferáz (ALT, AST značící lýzu hepatocytů). Moč je tmavá (obsahuje konjugovaný bilirubin, který je rozpustný ve vodě), stolice může být normální nebo mírně světlejší."
     },
     quiz: [

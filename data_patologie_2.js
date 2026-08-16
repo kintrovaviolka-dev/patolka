@@ -408,12 +408,12 @@ const DATA_PATOLOGIE_2 = [
         question: "Který specifický pigment vznikající odbouráním hemoglobinu způsobuje žlutohnědé zbarvení ustupujícího hematomu a jak se mikroskopicky prokazuje?",
         options: [
           "Lipofuscin; barvením Fontanou",
-          "Hemosiderin; Perlovou reakcí (berlínská modř)",
+          "Hemosiderin; Perlsovou reakcí (berlínská modř)",
           "Bilirubin; barvením Sudan",
           "Melanin; IHC průkazem S100"
         ],
         correct: 1,
-        explanation: "Hemosiderin vzniká odbouráváním hemoglobinu uvolněného z rozpadlých erytrocytů v hematomu. Makroskopicky barví tkáň do žlutohněda a mikroskopicky se specificky prokazuje Perlovou reakcí na modro."
+        explanation: "Hemosiderin vzniká odbouráváním hemoglobinu uvolněného z rozpadlých erytrocytů v hematomu. Makroskopicky barví tkáň do žlutohněda a mikroskopicky se specificky prokazuje Perlsovou reakcí na modro."
       }
     ]
   },
