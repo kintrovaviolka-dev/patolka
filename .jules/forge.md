@@ -19,3 +19,7 @@
 ## 2024-05-18 - Untranslated English terminology
 **Learning:** Found untranslated English medical terms in the Czech content (e.g. "salt-and-pepper chromatin", "point of no return"). Sometimes they are left in brackets as duplicates.
 **Action:** When updating content, be mindful of redundant English terminology in brackets and remove or translate them to Czech to maintain content consistency.
+
+## 2024-05-18 - Spelling of viscous and Vasoactive Intestinal Peptide
+**Learning:** Found typo "vizkózní" instead of correct spelling "viskózní", and VIP was incorrectly expanded as "vazoaktivní intersticiální peptid" instead of "intestinální".
+**Action:** When auditing data, double-check medical terminology and common spelling mistakes in Czech like s/z.
