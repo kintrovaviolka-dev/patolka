@@ -19,3 +19,7 @@
 ## 2024-05-18 - Untranslated English terminology
 **Learning:** Found untranslated English medical terms in the Czech content (e.g. "salt-and-pepper chromatin", "point of no return"). Sometimes they are left in brackets as duplicates.
 **Action:** When updating content, be mindful of redundant English terminology in brackets and remove or translate them to Czech to maintain content consistency.
+
+## 2024-07-25 - Domain-specific terminology typos (intersticiální vs intestinální)
+**Learning:** Discovered a typo where VIP (vazoaktivní intestinální peptid) was incorrectly spelled as "vazoaktivní intersticiální peptid". This is a domain-specific error in medical acronyms where similar-sounding words are confused.
+**Action:** Always verify the meaning and spelling of medical acronyms to ensure exact domain correctness, especially where "interstitial" and "intestinal" can be easily interchanged.
