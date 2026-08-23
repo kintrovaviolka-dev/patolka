@@ -1110,7 +1110,7 @@ objevují se bolesti v souvislosti s jídlem a průjmy
 
 DM, anémii a migrující erythém
 
--  VIPom = nadměrná sekrece VIP (vazoaktivní intersticiální peptid) – zvyšuje sekreci
+-  VIPom = nadměrná sekrece VIP (vazoaktivní intestinální peptid) – zvyšuje sekreci
 vody a elektrolytů ve střevě, inhibuje sekreci HCl → vyvolává syndrom WDHA
 (watery diarrhea, hypokalemia, achlorhydria) → vodnaté průjmy vedoucí
 k nedostatku K+ a ztrátě HCl
