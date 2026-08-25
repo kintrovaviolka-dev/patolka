@@ -507,7 +507,7 @@ const DATA_ONCO_2 = [
         question: "Jaký je hlavní klinický příznak karcinomu endometria u starších žen?",
         type: "type-in",
         correct: ["krvácení v postmenopauze", "krvácení po přechodu", "vaginální krvácení"],
-        explanation: "Každé krvácení z rodidel u ženy po menopauze (přechodu) is podezřelé a vyžaduje vyšetření k vyloučení karcinomu endometria."
+        explanation: "Každé krvácení z rodidel u ženy po menopauze (přechodu) je podezřelé a vyžaduje vyšetření k vyloučení karcinomu endometria."
       },
       {
         question: "Jaký benigní stav dělohy je charakterizován přítomností endometriálních žlázek a stroma uvnitř myometria?",
@@ -989,7 +989,7 @@ const DATA_ONCO_2 = [
           "Počet ložisek melaninu v cytoplasmě"
         ],
         correct: 1,
-        explanation: "Breslowova tloušťka v mm is nejsilnějším prediktorem přežití a rizika metastáz. Clarkovo schéma (úroveň I-V) se dnes používá jako doplňkový údaj u tenkých melanomů."
+        explanation: "Breslowova tloušťka v mm je nejsilnějším prediktorem přežití a rizika metastáz. Clarkovo schéma (úroveň I-V) se dnes používá jako doplňkový údaj u tenkých melanomů."
       },
       {
         question: "Jak se liší radiální a vertikální fáze růstu u maligního melanomu z hlediska rizika metastáz?",
