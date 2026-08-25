@@ -203,7 +203,7 @@ const DATA_ONCO_1 = [
         question: "Jak se nazývá zhoubný epiteliální nádor obecně?",
         type: "type-in",
         correct: ["karcinom"],
-        explanation: "Karcinomy are maligní nádory vycházející z epiteliálních tkání a tvoří většinu lidských zhoubných nádorů."
+        explanation: "Karcinomy jsou maligní nádory vycházející z epiteliálních tkání a tvoří většinu lidských zhoubných nádorů."
       },
       {
         question: "Jak se nazývá zhoubný mezenchymální nádor obecně?",
