@@ -23,3 +23,6 @@
 ## 2024-07-25 - Domain-specific terminology typos (intersticiální vs intestinální)
 **Learning:** Discovered a typo where VIP (vazoaktivní intestinální peptid) was incorrectly spelled as "vazoaktivní intersticiální peptid". This is a domain-specific error in medical acronyms where similar-sounding words are confused.
 **Action:** Always verify the meaning and spelling of medical acronyms to ensure exact domain correctness, especially where "interstitial" and "intestinal" can be easily interchanged.
+## 2024-05-18 - Spelling errors in medical pathogenesis
+**Learning:** Found typographical errors "sitmulace" instead of "stimulace" and "simulují" instead of "stimulují" (in the context of stimulating the mammary gland) in `data_onco_2.js` and `facts.md`.
+**Action:** When updating data, always verify domain-specific pathogenesis descriptions for correct terminology to ensure factual accuracy and avoid simple spelling mistakes.

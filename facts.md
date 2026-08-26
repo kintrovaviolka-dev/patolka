@@ -1274,7 +1274,7 @@ produkuje velké množství hCG (jehož hladina je diagnostickým markerem i
 ukazatelem léčby, ale zároveň tyto vysoké hodnoty mohou vyvolat zkříženou reakci
 vůči TSH receptorům a způsobit tyreotoxikózu → zároveň je hCG hormon velmi
 podobný LH, takže dokáže stimulovat Leydigovy buňky k produkci androgenů a tato
-nadměrná produkce následně vede k přesmyku na estrogeny, které simulují mléčnou
+nadměrná produkce následně vede k přesmyku na estrogeny, které stimulují mléčnou
 žlázu a způsobují gynekomastii
 
 -  Teratom = jedná se o tkáně, které vychází z 1 nebo klidně ze všech 3 zárodečných lišt
@@ -1513,7 +1513,7 @@ Patologie mužského prsu
 
 -  Gynekomastie (mužské prso neobsahuje lobuly!!) = vzniká v důsledku hyperestrismu
 (př. při postižení jater, nebo choriokarcinomu varlat, který produkuje nadbytek hCG,
-který je podobný LH → sitmulace Leydigových buněk a přesmyk androgenů a
+který je podobný LH → stimulace Leydigových buněk a přesmyk androgenů a
 estrogen → stimulace růstu prsní žlázy)
 
 -  Karcinom mužského prsu = njč. se jedná o invazivní duktální karcinom (NST)
