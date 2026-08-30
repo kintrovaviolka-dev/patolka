@@ -26,3 +26,7 @@
 ## 2024-05-18 - Spelling errors in medical pathogenesis
 **Learning:** Found typographical errors "sitmulace" instead of "stimulace" and "simulují" instead of "stimulují" (in the context of stimulating the mammary gland) in `data_onco_2.js` and `facts.md`.
 **Action:** When updating data, always verify domain-specific pathogenesis descriptions for correct terminology to ensure factual accuracy and avoid simple spelling mistakes.
+
+## 2026-08-30 - Anglicism Audit: Do not translate mnemonics
+**Learning:** During an anglicism audit, I noticed that English conjunctions like "is" and "and" were accidentally mixed into Czech text. However, valid English mnemonics or abbreviations (e.g., L&H for Lymphocytic and Histiocytic) were also present.
+**Action:** Do not translate valid English mnemonics or acronyms, as this destroys the educational integrity. Only correct stray English words in regular text.
