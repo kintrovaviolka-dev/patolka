@@ -654,8 +654,8 @@ který se sráží v tubulech ledvin a vyvolává vznik myelomové ledviny (nád
 buňky produkují velké množství lehkých řetězců Ig – tzv. Bence-jonesova bílkovina
 → tyto bílkoviny jsou malé a projdou ledvinným filtrem do tubulů, kde se sráží a
 ledvinné kanálky se doslova ucpou, což nakonec vede k renálnímu selhání) → kvůli
-vysoké koncentraci monoklonálního Ig se krev stává více vizkózní a vyvolává
-hypervizkózní syndrom
+vysoké koncentraci monoklonálního Ig se krev stává více viskózní a vyvolává
+hyperviskózní syndrom
 
 -  Klinické projevy = CRAB (C – Ca2+ uvolněný z kostí → únava, zácpa, zmatenost; R
 – renal, vznik myelomové ledviny; A – anemia, myolomové buňky způsobují útlak
