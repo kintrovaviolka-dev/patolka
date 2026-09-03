@@ -30,3 +30,6 @@
 ## 2026-08-30 - Anglicism Audit: Do not translate mnemonics
 **Learning:** During an anglicism audit, I noticed that English conjunctions like "is" and "and" were accidentally mixed into Czech text. However, valid English mnemonics or abbreviations (e.g., L&H for Lymphocytic and Histiocytic) were also present.
 **Action:** Do not translate valid English mnemonics or acronyms, as this destroys the educational integrity. Only correct stray English words in regular text.
+## 2026-09-03 - Typo in viscous terms
+**Learning:** In Czech medical content, ensure 'viscous' and related terms are spelled with an 's' (e.g., 'viskózní', 'hyperviskózní', derived from Latin viscosus) rather than the common typo 'vizkózní' (with a 'z').
+**Action:** Replaced 'vizkózní' and 'hypervizkózní' with 'viskózní' and 'hyperviskózní' in data files to maintain medical accuracy.
