@@ -1411,6 +1411,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() : "";
 
+  // Pre-compute normalized strings for faster lookups
+  QUESTIONS.forEach(q => {
+    q._normTitle = normalizeString(q.title);
+    q._normKeywords = q.keywords ? q.keywords.map(kw => normalizeString(kw)) : [];
+  });
+
   function findMatchingSlide(question) {
     if (!window.PREPARATY_DATA) return null;
     const normQ = normalizeString(question.title);
@@ -1438,16 +1444,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function findMatchingQuestion(prep) {
     const normP = normalizeString(prep.title);
     for (const q of QUESTIONS) {
-      const normQ = normalizeString(q.title);
+      const normQ = q._normTitle;
       if (normQ === normP || normQ.includes(normP) || normP.includes(normQ)) {
         return q;
       }
     }
     for (const q of QUESTIONS) {
-      for (const kw of q.keywords) {
-        const normKw = normalizeString(kw);
-        if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
-          return q;
+      if (q._normKeywords) {
+        for (const normKw of q._normKeywords) {
+          if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
+            return q;
+          }
         }
       }
     }
