@@ -2335,7 +2335,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.gap = "10px";
       btn.style.transition = "var(--transition-fast)";
       
-      btn.innerHTML = `<span style="font-weight: bold; color: var(--color-primary);">${String.fromCharCode(65 + idx)}</span> <span>${opt}</span>`;
+      btn.innerHTML = `<span style="font-weight: bold; color: var(--color-primary);">${String.fromCharCode(65 + idx)}</span> <span>${escapeHTML(opt)}</span>`;
       
       btn.addEventListener("click", () => {
         if (genIsAnswered) return;
