@@ -1413,20 +1413,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function findMatchingSlide(question) {
     if (!window.PREPARATY_DATA) return null;
-    const normQ = normalizeString(question.title);
+    if (question._normTitle === undefined) {
+      question._normTitle = normalizeString(question.title);
+      question._normKeywords = question.keywords.map(kw => normalizeString(kw));
+    }
+    const normQ = question._normTitle;
     
     // Title match
     for (const prep of window.PREPARATY_DATA) {
-      const normP = normalizeString(prep.title);
+      if (prep._normTitle === undefined) prep._normTitle = normalizeString(prep.title);
+      const normP = prep._normTitle;
       if (normP === normQ || normQ.includes(normP) || normP.includes(normQ)) {
         return prep;
       }
     }
     // Keyword match
     for (const prep of window.PREPARATY_DATA) {
-      const normP = normalizeString(prep.title);
-      for (const kw of question.keywords) {
-        const normKw = normalizeString(kw);
+      if (prep._normTitle === undefined) prep._normTitle = normalizeString(prep.title);
+      const normP = prep._normTitle;
+      for (const normKw of question._normKeywords) {
         if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
           return prep;
         }
@@ -1436,16 +1441,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function findMatchingQuestion(prep) {
-    const normP = normalizeString(prep.title);
+    if (prep._normTitle === undefined) prep._normTitle = normalizeString(prep.title);
+    const normP = prep._normTitle;
     for (const q of QUESTIONS) {
-      const normQ = normalizeString(q.title);
+      if (q._normTitle === undefined) q._normTitle = normalizeString(q.title);
+      const normQ = q._normTitle;
       if (normQ === normP || normQ.includes(normP) || normP.includes(normQ)) {
         return q;
       }
     }
     for (const q of QUESTIONS) {
-      for (const kw of q.keywords) {
-        const normKw = normalizeString(kw);
+      if (q._normKeywords === undefined) q._normKeywords = q.keywords.map(kw => normalizeString(kw));
+      for (const normKw of q._normKeywords) {
         if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
           return q;
         }
