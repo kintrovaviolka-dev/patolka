@@ -433,15 +433,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 1. Sloučení databází otázek
-  const QUESTIONS = [
-    ...(window.DATA_PATOLOGIE_1 || []).map(q => ({ ...q, category: "Obecná" })),
-    ...(window.DATA_PATOLOGIE_2 || []).map(q => ({ ...q, category: "Obecná" })),
-    ...(window.DATA_PATOLOGIE_3 || []).map(q => ({ ...q, category: "Obecná" })),
-    ...(window.DATA_SPECIAL_1 || []).map(q => ({ ...q, category: "Speciální" })),
-    ...(window.DATA_SPECIAL_2 || []).map(q => ({ ...q, category: "Speciální" })),
-    ...(window.DATA_ONCO_1 || []).map(q => ({ ...q, category: "Onkologie" })),
-    ...(window.DATA_ONCO_2 || []).map(q => ({ ...q, category: "Onkologie" }))
-  ];
+  const QUESTIONS = [];
+  const addCategory = (data, category) => {
+    if (!data) return;
+    for (let i = 0; i < data.length; i++) {
+      QUESTIONS.push({ ...data[i], category });
+    }
+  };
+
+  addCategory(window.DATA_PATOLOGIE_1, "Obecná");
+  addCategory(window.DATA_PATOLOGIE_2, "Obecná");
+  addCategory(window.DATA_PATOLOGIE_3, "Obecná");
+  addCategory(window.DATA_SPECIAL_1, "Speciální");
+  addCategory(window.DATA_SPECIAL_2, "Speciální");
+  addCategory(window.DATA_ONCO_1, "Onkologie");
+  addCategory(window.DATA_ONCO_2, "Onkologie");
 
   // Ověření, zda se data načetla
   if (QUESTIONS.length === 0) {
