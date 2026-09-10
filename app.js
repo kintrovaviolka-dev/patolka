@@ -1798,7 +1798,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const contentDiv = document.createElement("div");
     contentDiv.className = "message-content";
-    contentDiv.innerHTML = role === "assistant" ? parseMarkdown(text) : escapeHTML(text);
+    contentDiv.innerHTML = role === "assistant" ? DOMPurify.sanitize(parseMarkdown(text)) : escapeHTML(text);
     
     messageDiv.appendChild(contentDiv);
     chatbotMessages.appendChild(messageDiv);
@@ -2050,7 +2050,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const onChunk = (text) => {
         responseText += text;
         if (contentDiv) {
-          contentDiv.innerHTML = parseMarkdown(responseText);
+          contentDiv.innerHTML = DOMPurify.sanitize(parseMarkdown(responseText));
           scrollToBottom();
         }
       };
