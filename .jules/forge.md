@@ -33,3 +33,6 @@
 ## 2026-09-04 - Typographical error viskózní vs vizkózní
 **Learning:** In Czech medical content, ensure 'viscous' and related terms are spelled with an 's' (e.g., 'viskózní', 'hyperviskózní', derived from Latin viscosus) rather than the common typo 'vizkózní' (with a 'z').
 **Action:** When auditing or adding content, always double check the spelling of viskózní/hyperviskózní to ensure they are spelled with 's'.
+## $(date +%Y-%m-%d) - Prevent DOM-based XSS with DOMPurify
+**Learning:** When parsing markdown and rendering it via `innerHTML`, custom manual regex escaping is often insufficient because markdown parsers can produce structures that allow injection (e.g. `javascript:` URIs).
+**Action:** Use an industry-standard library like `DOMPurify` to sanitize the final HTML output immediately before setting `innerHTML`.
