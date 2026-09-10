@@ -403,6 +403,33 @@
     <!-- Firebase / Logic Script -->
     <script>
         // DATABÁZE VŠECH 28 TÉMAT SE VŠEMI KLÍČOVÝMI BODY A DETAILY Z TEXTU UŽIVATELE
+
+        // Pomocná funkce pro bezpečné renderování HTML s ohledem na formátování
+        function escapeHTML(str) {
+            if (str === null || str === undefined) return "";
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function formatBullet(str) {
+            let escaped = escapeHTML(str);
+            return escaped
+              .replace(/&lt;strong&gt;/g, "<strong>")
+              .replace(/&lt;\/strong&gt;/g, "</strong>")
+              .replace(/&lt;b&gt;/g, "<b>")
+              .replace(/&lt;\/b&gt;/g, "</b>")
+              .replace(/&lt;em&gt;/g, "<em>")
+              .replace(/&lt;\/em&gt;/g, "</em>")
+              .replace(/&lt;i&gt;/g, "<i>")
+              .replace(/&lt;\/i&gt;/g, "</i>")
+              .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+              .replace(/\*(.*?)\*/g, "<em>$1</em>");
+        }
+
         const database = [
             {
                 id: 1,
@@ -1683,7 +1710,7 @@ const flashcards = [
                 const li = document.createElement('li');
                 li.className = "flex gap-2 items-start";
                 let displayBullet = adjustTextLength(bullet, burnoutLevel);
-                li.innerHTML = `<span class="text-amber-400 mt-0.5">•</span> <span>${displayBullet}</span>`;
+                li.innerHTML = `<span class="text-amber-400 mt-0.5">•</span> <span>${formatBullet(displayBullet)}</span>`;
                 lazyList.appendChild(li);
             });
 
