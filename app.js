@@ -1415,19 +1415,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() : "";
+const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() : "";
+
+  // Pre-calculate normalized fields to avoid branching in search loops
+  if (QUESTIONS) {
+    QUESTIONS.forEach(q => {
+      q._normTitle = normalizeString(q.title);
+      q._normKeywords = q.keywords ? q.keywords.map(kw => normalizeString(kw)) : [];
+    });
+  }
+
+  if (window.PREPARATY_DATA) {
+    window.PREPARATY_DATA.forEach(p => {
+      p._normTitle = normalizeString(p.title);
+    });
+  }
 
   function findMatchingSlide(question) {
     if (!window.PREPARATY_DATA) return null;
-    if (question._normTitle === undefined) {
-      question._normTitle = normalizeString(question.title);
-      question._normKeywords = question.keywords.map(kw => normalizeString(kw));
-    }
     const normQ = question._normTitle;
     
     // Title match
     for (const prep of window.PREPARATY_DATA) {
-      if (prep._normTitle === undefined) prep._normTitle = normalizeString(prep.title);
       const normP = prep._normTitle;
       if (normP === normQ || normQ.includes(normP) || normP.includes(normQ)) {
         return prep;
@@ -1435,7 +1444,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Keyword match
     for (const prep of window.PREPARATY_DATA) {
-      if (prep._normTitle === undefined) prep._normTitle = normalizeString(prep.title);
       const normP = prep._normTitle;
       for (const normKw of question._normKeywords) {
         if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
@@ -1447,17 +1455,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function findMatchingQuestion(prep) {
-    if (prep._normTitle === undefined) prep._normTitle = normalizeString(prep.title);
     const normP = prep._normTitle;
     for (const q of QUESTIONS) {
-      if (q._normTitle === undefined) q._normTitle = normalizeString(q.title);
       const normQ = q._normTitle;
       if (normQ === normP || normQ.includes(normP) || normP.includes(normQ)) {
         return q;
       }
     }
     for (const q of QUESTIONS) {
-      if (q._normKeywords === undefined) q._normKeywords = q.keywords.map(kw => normalizeString(kw));
       for (const normKw of q._normKeywords) {
         if (normKw.length > 3 && (normP === normKw || normP.includes(normKw) || normKw.includes(normP))) {
           return q;
