@@ -33,3 +33,6 @@
 ## 2026-09-04 - Typographical error viskózní vs vizkózní
 **Learning:** In Czech medical content, ensure 'viscous' and related terms are spelled with an 's' (e.g., 'viskózní', 'hyperviskózní', derived from Latin viscosus) rather than the common typo 'vizkózní' (with a 'z').
 **Action:** When auditing or adding content, always double check the spelling of viskózní/hyperviskózní to ensure they are spelled with 's'.
+## $(date +%Y-%m-%d) - Optimize Eponym Badge Rendering
+**Learning:** In Javascript, doing repeated string template evaluation and DOM escaping (`escapeHTML`) inside a hot mapping loop (`Array.map().join("")`) over static data (like the `EPONYMS_DB`) creates significant overhead when rendering thousands of items.
+**Action:** Pre-calculate static HTML representations as properties on the base static objects (e.g. `ep._badgeHTML`) at initialization to drastically reduce string operations in the render path.
