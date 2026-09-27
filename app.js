@@ -412,6 +412,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
+
+  // Pre-calculate HTML for each eponym to avoid recalculating in hot loops
+  EPONYMS_DB.forEach(ep => {
+    ep._badgeHTML = `<span class="card-eponym-badge" title="${escapeHTML(ep.def)}">${escapeHTML(ep.name)}</span>`;
+  });
+
   // Získání eponymních pojmů pro otázku
   function getEponymsForQuestion(q) {
     if (!q || !q.content) return [];
@@ -680,7 +686,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (eponyms.length > 0) {
         eponymsHTML = `
           <div class="card-eponyms-badges">
-            ${eponyms.map(ep => `<span class="card-eponym-badge" title="${escapeHTML(ep.def)}">${escapeHTML(ep.name)}</span>`).join("")}
+            ${eponyms.map(ep => ep._badgeHTML).join("")}
           </div>
         `;
       }
