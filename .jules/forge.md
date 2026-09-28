@@ -33,3 +33,6 @@
 ## 2026-09-04 - Typographical error viskózní vs vizkózní
 **Learning:** In Czech medical content, ensure 'viscous' and related terms are spelled with an 's' (e.g., 'viskózní', 'hyperviskózní', derived from Latin viscosus) rather than the common typo 'vizkózní' (with a 'z').
 **Action:** When auditing or adding content, always double check the spelling of viskózní/hyperviskózní to ensure they are spelled with 's'.
+## $(date +%Y-%m-%d) - DOM-based XSS Escaping
+**Learning:** Browsers unescape HTML entities (like `&quot;`) back to their literal characters (e.g. `"`) when retrieving `.innerHTML`. Testing literal replacements in a node script is a more straightforward way to unit-test escaping functions than a full Playwright headless test.
+**Action:** Use string matching or programmatic node evaluations for testing text-replacements before falling back to full Playwright tests when verifying basic Markdown or HTML parsing fixes.
