@@ -1690,8 +1690,8 @@ const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(
     { role: "assistant", text: "Ahoj! Jsem tvůj asistent pro **patologii**. Pomůžu ti s makroskopickými i mikroskopickými nálezy, popisy preparátů, klasifikacemi a zkouškovými tématy. Na co se chceš zeptat?" }
   ];
 
-  // Load key from localStorage
-  const getSavedKey = () => localStorage.getItem("gemini_chat_local_key") || "";
+  // Load key from sessionStorage
+  const getSavedKey = () => sessionStorage.getItem("gemini_chat_local_key") || "";
   chatbotApiKeyInput.value = getSavedKey();
 
   // Rate limiting (client-side)
@@ -1727,7 +1727,7 @@ const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(
   chatbotSaveKeyBtn.addEventListener("click", () => {
     const key = chatbotApiKeyInput.value.trim();
     if (key) {
-      localStorage.setItem("gemini_chat_local_key", key);
+      sessionStorage.setItem("gemini_chat_local_key", key);
       alert("API klíč byl uložen do vašeho prohlížeče.");
       chatbotSettingsOverlay.classList.remove("open");
     } else {
@@ -1736,7 +1736,7 @@ const normalizeString = str => str ? str.toLowerCase().normalize("NFD").replace(
   });
 
   chatbotClearKeyBtn.addEventListener("click", () => {
-    localStorage.removeItem("gemini_chat_local_key");
+    sessionStorage.removeItem("gemini_chat_local_key");
     chatbotApiKeyInput.value = "";
     alert("API klíč byl vymazán. Nyní se dotazy posílají přes proxy server.");
   });
