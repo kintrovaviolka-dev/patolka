@@ -437,7 +437,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const addCategory = (data, category) => {
     if (!data) return;
     for (let i = 0; i < data.length; i++) {
-      QUESTIONS.push({ ...data[i], category });
+      const q = { ...data[i], category };
+      // Pre-compute lowercased strings for faster search filtering
+      q._searchTitle = q.title ? q.title.toLowerCase() : "";
+      q._searchSection = q.section ? q.section.toLowerCase() : "";
+      q._searchKeywords = q.keywords ? q.keywords.map(k => k.toLowerCase()) : [];
+      q._searchMicroscopy = (q.content && q.content.microscopy) ? q.content.microscopy.toLowerCase() : "";
+      q._searchMacroscopy = (q.content && q.content.macroscopy) ? q.content.macroscopy.toLowerCase() : "";
+      QUESTIONS.push(q);
     }
   };
 
@@ -628,11 +635,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const filteredQuestions = QUESTIONS.filter(q => {
       // Vyhledávání (titulky, kapitoly, klíčová slova)
-      const matchesSearch = q.title.toLowerCase().includes(activeSearchQuery) || 
-                            q.section.toLowerCase().includes(activeSearchQuery) || 
-                            q.keywords.some(k => k.toLowerCase().includes(activeSearchQuery)) ||
-                            q.content.microscopy.toLowerCase().includes(activeSearchQuery) ||
-                            q.content.macroscopy.toLowerCase().includes(activeSearchQuery);
+      const matchesSearch = q._searchTitle.includes(activeSearchQuery) ||
+                            q._searchSection.includes(activeSearchQuery) ||
+                            q._searchKeywords.some(k => k.includes(activeSearchQuery)) ||
+                            q._searchMicroscopy.includes(activeSearchQuery) ||
+                            q._searchMacroscopy.includes(activeSearchQuery);
       
       // Filtr podle oboru
       const matchesCategory = activeFilterCategory === "all" || q.category === activeFilterCategory;
