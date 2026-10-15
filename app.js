@@ -415,6 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Získání eponymních pojmů pro otázku
   function getEponymsForQuestion(q) {
     if (!q || !q.content) return [];
+    if (q._eponyms !== undefined) return q._eponyms;
     const textToSearch = [
       q.title || "",
       q.section || "",
@@ -425,11 +426,12 @@ document.addEventListener("DOMContentLoaded", () => {
       q.content.macroscopy || "",
       q.content.microscopy || "",
       q.content.clinical || ""
-    ].join(" ").toLowerCase();
+    ].join(" ");
 
-    return EPONYMS_DB.filter(ep => {
+    q._eponyms = EPONYMS_DB.filter(ep => {
       return ep.patterns.some(pattern => pattern.test(textToSearch));
     });
+    return q._eponyms;
   }
 
   // 1. Sloučení databází otázek
