@@ -967,7 +967,7 @@ const DATA_SPECIAL_1 = [
         options: [
           "Barvením Kongočervení",
           "PAS barvením (Periodic Acid-Schiff - barví se intenzivně purpurově/červeně)",
-          "Perlovou reakcí",
+          "Perlsovou reakcí",
           "Ziehl-Neelsenovým barvením"
         ],
         correct: 1,

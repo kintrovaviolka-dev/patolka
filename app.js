@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
       patterns: [/Stokes/i]
     },
     {
-      name: "Zahnovy linie / Zahnova infarkt",
+      name: "Zahnovy linie / Zahnův infarkt",
       def: "Zahnovy linie: střídající se světlé a tmavé vrstvy v intravitálním trombu. Zahnovy infarkty: pseudo-infarkty jater způsobené trombózou v. portae.",
       patterns: [/Zahn/i]
     },
