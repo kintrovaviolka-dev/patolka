@@ -576,7 +576,7 @@ Burkittův lymfom
 -  Dochází k translokaci MYC genu na imunoreceptorový gen (njč. IGH) → dochází
 k nadprodukci MYC proteinu (regulátor transkripce) → nádor roste difúzně a ničí
 okolní tkáň → nádorové buňky jsou bazofilní a kolem jádra se tvoří pouze úzký lem
-cytoplazmy, která je vakualizovaná → zároveň díky absenci BCL-2 zde dochází
+cytoplazmy, která je vakuolizovaná → zároveň díky absenci BCL-2 zde dochází
 k hojným apoptózám, které lákají makrofágy k fagocytóze (makrofágy jsou světlé
 buňky) → vzniká obraz Hvězdného pole (světlé makrofágy v pozadí bazofilních
 nádorových buněk)
@@ -729,7 +729,7 @@ i metaplastické osifikaci
 
 -  Další (hemangiom, fibrom, lipom, rhabdomyom)
 
-o  Rhambdomyomy = solitární, bělavé uzly, cytoplazma s vakuloly glykogenu →
+o  Rhabdomyomy = solitární, bělavé uzly, cytoplazma s vakuoly glykogenu →
 
 z cytoplazmy zbývají jen tenké proužky (=pavoukovitý vzhled)
 
